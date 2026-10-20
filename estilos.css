@@ -172,3 +172,46 @@ footer a:hover{text-decoration:underline;color:#fff}
   .receta-nav{grid-template-columns:1fr;text-align:center}
   .receta-nav-prev,.receta-nav-next{text-align:center}
 }
+/* =====================================================
+   PÁGINAS LEGALES (Sobre mí, Privacidad, Contacto)
+   ===================================================== */
+
+.legal-page{max-width:780px;margin:0 auto;padding:3rem 1.5rem 4rem}
+.legal-page h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2rem,5vw,2.8rem);color:var(--rojo-osc);letter-spacing:-.5px;line-height:1.15;margin-bottom:.5rem}
+.legal-page .legal-subtitle{color:var(--suave);font-size:.95rem;font-style:italic;margin-bottom:2.5rem;padding-bottom:1rem;border-bottom:1px solid var(--borde)}
+.legal-page h2{font-family:'Playfair Display',Georgia,serif;color:var(--rojo-osc);font-size:1.4rem;margin:2.5rem 0 1rem;letter-spacing:-.3px}
+.legal-page h2::before{content:"";display:block;width:35px;height:2px;background:var(--rojo);margin-bottom:.7rem;border-radius:2px}
+.legal-page h3{font-size:1rem;color:var(--azul);margin:1.5rem 0 .5rem;text-transform:none;letter-spacing:0;border:none;padding:0;font-weight:700}
+.legal-page p,.legal-page li{font-size:.96rem;line-height:1.75;color:var(--tinta);margin-bottom:.9rem}
+.legal-page ul,.legal-page ol{padding-left:1.4rem;margin-bottom:1rem}
+.legal-page li{margin-bottom:.4rem}
+.legal-page a{color:var(--rojo);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px}
+.legal-page a:hover{color:var(--rojo-osc)}
+.legal-page strong{color:var(--rojo-osc)}
+.legal-meta{display:flex;gap:.5rem;flex-wrap:wrap;margin:1rem 0 2rem}
+.legal-meta span{background:var(--crema-osc);color:var(--suave);font-size:.75rem;font-weight:500;padding:.3rem .8rem;border-radius:99px;border:1px solid rgba(230,214,193,.6)}
+.legal-box{background:#fff;border:1px solid var(--borde);border-left:3px solid var(--rojo);border-radius:0 10px 10px 0;padding:1.2rem 1.4rem;margin:1.5rem 0;font-size:.92rem;color:var(--suave)}
+.legal-box strong{color:var(--rojo-osc)}
+
+/* Footer con enlaces legales */
+.footer-legal{margin-top:.8rem;font-size:.85rem;display:flex;justify-content:center;gap:.5rem;flex-wrap:wrap}
+.footer-legal a{color:#e6d6c1;text-decoration:none;transition:color .2s}
+.footer-legal a:hover{color:#fff;text-decoration:underline}
+.footer-legal .sep{color:#5a4a40}
+
+/* Formulario de contacto */
+.contacto-form{background:#fff;border:1px solid var(--borde);border-radius:var(--radio);padding:2rem;margin:2rem 0;box-shadow:var(--sombra-md)}
+.contacto-form label{display:block;font-size:.85rem;font-weight:600;color:var(--rojo-osc);margin-bottom:.4rem;text-transform:uppercase;letter-spacing:.06em}
+.contacto-form input,.contacto-form textarea{width:100%;padding:.75rem 1rem;border:2px solid var(--borde);border-radius:10px;font-family:inherit;font-size:.95rem;background:var(--crema);color:var(--tinta);margin-bottom:1.2rem;transition:border-color .2s,box-shadow .2s}
+.contacto-form input:focus,.contacto-form textarea:focus{outline:none;border-color:var(--rojo);background:#fff;box-shadow:0 0 0 4px rgba(176,58,46,.10)}
+.contacto-form textarea{min-height:150px;resize:vertical}
+.contacto-form button{background:var(--rojo);color:#fff;border:none;padding:.85rem 1.8rem;font-size:.95rem;font-weight:600;border-radius:99px;cursor:pointer;transition:background .2s,transform .2s;font-family:inherit}
+.contacto-form button:hover{background:var(--rojo-osc);transform:translateY(-1px)}
+
+/* ===== PÁGINA 404 ===== */
+.pagina-404{max-width:600px;margin:0 auto;padding:5rem 1.5rem;text-align:center}
+.pagina-404 .icono{font-size:5rem;margin-bottom:1rem}
+.pagina-404 h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2rem,6vw,3rem);color:var(--rojo-osc);margin-bottom:1rem}
+.pagina-404 p{color:var(--suave);margin-bottom:2rem;font-size:1.05rem}
+.pagina-404 .btn-volver{display:inline-block;padding:.8rem 1.6rem;background:var(--rojo);color:#fff;text-decoration:none;border-radius:99px;font-weight:600;transition:background .2s,transform .2s}
+.pagina-404 .btn-volver:hover{background:var(--rojo-osc);transform:translateY(-1px)}

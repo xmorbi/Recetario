@@ -138,7 +138,7 @@ function crearPagina(r, i, total, todos) {
   h += relHTML;
   h += nav;
   h += '</main>';
-  h += '<footer><div class="bandera"><i class="azul"></i><i class="blanco"></i><i class="rojo"></i></div><span class="footer-flag"></span><a href="../index.html">Recetario Chileno</a> · Hecho con cariño en Chile</footer>';
+  h += '<footer><div class="bandera"><i class="azul"></i><i class="blanco"></i><i class="rojo"></i></div><span class="footer-flag"></span>Recetario Chileno &middot; Hecho con cari&ntilde;o en Chile<nav class="footer-legal" aria-label="Enlaces legales"><a href="../sobre-mi.html">Sobre m&iacute;</a><span class="sep">&middot;</span><a href="../privacidad.html">Privacidad</a><span class="sep">&middot;</span><a href="../contacto.html">Contacto</a></nav></footer>';
   h += '</body></html>';
   return h;
 }
@@ -181,7 +181,7 @@ function generar() {
     a.href = u; a.download = 'recetas.zip';
     document.body.appendChild(a); a.click(); document.body.removeChild(a);
     setTimeout(function(){ URL.revokeObjectURL(u); }, 1000);
-    log.textContent += 'LISTO. Se descargó recetas.zip\n\nSIGUIENTE:\n1. Extrae la carpeta "recetas" dentro de Intento 2/\n2. git add .\n3. git commit -m "Páginas individuales"\n4. git pull --rebase\n5. git push\n';
+    log.textContent += 'LISTO. Se descargó recetas.zip\n\nSIGUIENTE:\n1. Extrae la carpeta "recetas" dentro de Intento 2/ (reemplaza la existente)\n2. git add .\n3. git commit -m "Actualizar páginas con enlaces legales"\n4. git pull --rebase\n5. git push\n';
     btn.disabled = false;
   }).catch(function(err) {
     log.textContent += '\nERROR: ' + err.message + '\n';

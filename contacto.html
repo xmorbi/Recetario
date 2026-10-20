@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto | Recetario Chileno</title>
+<meta name="description" content="Escríbenos si tienes una receta que compartir, una corrección, una duda o simplemente quieres saludar. Contacto del Recetario Chileno.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://recetariochileno.netlify.app/contacto.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contacto | Recetario Chileno">
+<meta property="og:url" content="https://recetariochileno.netlify.app/contacto.html">
+<meta property="og:locale" content="es_CL">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<div class="bandera"><i class="azul"></i><i class="blanco"></i><i class="rojo"></i></div>
+
+<header class="hero-receta">
+  <div class="hero-receta-inner">
+    <nav class="breadcrumb" aria-label="Migas de pan">
+      <a href="index.html">Inicio</a>
+      <span>›</span>
+      <span class="breadcrumb-current">Contacto</span>
+    </nav>
+    <h1>Contacto</h1>
+  </div>
+</header>
+
+<main class="legal-page">
+
+  <p class="legal-subtitle">¿Tienes una receta, una duda o simplemente quieres saludar? Escríbeme.</p>
+
+  <p>Este recetario crece gracias a las personas que lo leen. Si tienes una receta familiar que crees que debería estar aquí, si encontraste un error, si una preparación no te resultó como esperabas o si simplemente quieres contar tu historia con alguna de estas comidas, me encantaría leerte.</p>
+
+  <h2>Formas de contacto</h2>
+
+  <h3>Formulario</h3>
+
+  <p>Completa el formulario de abajo. Tu mensaje llegará directamente a mi correo. Suelo responder en 2-4 días hábiles.</p>
+
+  <form class="contacto-form" name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/gracias.html">
+    <input type="hidden" name="form-name" value="contacto">
+    <p style="display:none">
+      <label>No completar si eres humano: <input name="bot-field"></label>
+    </p>
+
+    <label for="nombre">Tu nombre</label>
+    <input type="text" id="nombre" name="nombre" required placeholder="¿Cómo te llamas?">
+
+    <label for="email">Tu correo electrónico</label>
+    <input type="email" id="email" name="email" required placeholder="tu@correo.cl">
+
+    <label for="asunto">Asunto</label>
+    <input type="text" id="asunto" name="asunto" placeholder="Receta, corrección, saludo...">
+
+    <label for="mensaje">Mensaje</label>
+    <textarea id="mensaje" name="mensaje" required placeholder="Cuéntame lo que quieras. Si es sobre una receta, dime cuál."></textarea>
+
+    <button type="submit">Enviar mensaje</button>
+  </form>
+
+  <h3>Correo electrónico directo</h3>
+
+  <p>Si prefieres escribir por fuera del formulario, mi correo es: <strong>[tu-correo@ejemplo.cl]</strong></p>
+
+  <h2>Qué tipo de mensajes son bienvenidos</h2>
+
+  <ul>
+    <li><strong>Recetas familiares</strong>: si tienes una receta que no está aquí y quieres compartirla, cuéntame la historia y te digo si la publico (siempre dando el crédito).</li>
+    <li><strong>Correcciones</strong>: si una receta tiene un error, un ingrediente mal escrito o un paso confuso, avísame. Es la mejor forma de mejorar.</li>
+    <li><strong>Variantes regionales</strong>: si tu familia hace la cazuela con algo distinto, quiero saberlo. La cocina chilena es diversa.</li>
+    <li><strong>Sugerencias de recetas</strong>: si quieres que investigue algún plato, dímelo.</li>
+    <li><strong>Colaboraciones</strong>: si tienes un proyecto relacionado con cocina chilena, escríbeme.</li>
+    <li><strong>Prensa o consultas comerciales</strong>: también bienvenidos.</li>
+  </ul>
+
+  <div class="legal-box">
+    <strong>Sobre la privacidad:</strong> tu nombre y correo solo se usan para responderte. No te agrego a ninguna lista, no te envío publicidad, no comparto tus datos con nadie. Para más detalle, consulta la <a href="privacidad.html">Política de Privacidad</a>.
+  </div>
+
+  <h2>Antes de escribir, quizás esto te sirva</h2>
+
+  <ul>
+    <li>¿Buscas una receta específica? Usa el <a href="index.html">buscador del recetario</a> (funciona con o sin tildes).</li>
+    <li>¿No encuentras una receta? Puede que no la haya publicado aún. Escríbeme y considera la sugerencia.</li>
+    <li>¿Tienes problemas con el sitio? Cuéntame qué navegador usas y qué pasó. A veces los celulares viejos tienen limitaciones.</li>
+  </ul>
+
+  <p style="margin-top:2.5rem;font-style:italic;color:var(--suave)">Gracias por tomarte el tiempo de escribir. Leer los mensajes de quienes cocinan con estas recetas es la mejor parte de mantener este sitio.</p>
+
+</main>
+
+<footer>
+  <div class="bandera"><i class="azul"></i><i class="blanco"></i><i class="rojo"></i></div>
+  <span class="footer-flag" aria-label="Bandera de Chile"></span>
+  Recetario Chileno · Hecho con cariño en Chile
+  <nav class="footer-legal" aria-label="Enlaces legales">
+    <a href="sobre-mi.html">Sobre mí</a>
+    <span class="sep">·</span>
+    <a href="privacidad.html">Privacidad</a>
+    <span class="sep">·</span>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+</footer>
+
+</body>
+</html>
