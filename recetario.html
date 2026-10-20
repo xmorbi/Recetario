@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Todas las recetas | Recetario Chileno</title>
+
+<!-- ============ SEO básico ============ -->
+<meta name="description" content="Explora todas las recetas tradicionales chilenas: platos de fondo, sopas, masas, ensaladas y dulces. Buscador y filtros por categoría.">
+<meta name="keywords" content="recetas chilenas, comida chilena, recetario chileno, empanadas de pino, cazuela, pastel de choclo, sopaipillas, dulces chilenos">
+<meta name="author" content="Recetario Chileno">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#7a1b15">
+<link rel="canonical" href="https://recetariochileno.netlify.app/recetario.html">
+
+<!-- ============ Open Graph ============ -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Recetario Chileno">
+<meta property="og:title" content="Todas las recetas | Recetario Chileno">
+<meta property="og:description" content="Explora todas las recetas tradicionales chilenas. Buscador y filtros por categoría.">
+<meta property="og:image" content="https://recetariochileno.netlify.app/img/og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://recetariochileno.netlify.app/recetario.html">
+<meta property="og:locale" content="es_CL">
+
+<!-- ============ Twitter Card ============ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Todas las recetas | Recetario Chileno">
+<meta name="twitter:description" content="Explora todas las recetas tradicionales chilenas. Buscador y filtros por categoría.">
+<meta name="twitter:image" content="https://recetariochileno.netlify.app/img/og-default.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<div class="bandera"><i class="azul"></i><i class="blanco"></i><i class="rojo"></i></div>
+
+<header class="hero-receta">
+  <div class="hero-receta-inner">
+    <a href="index.html" class="btn-volver-inicio">← Volver al inicio</a>
+    <h1>Todas las recetas</h1>
+  </div>
+</header>
+
+<div class="controles">
+  <div class="inner">
+    <div class="buscador-wrap">
+      <svg class="lupa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="11" cy="11" r="7"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input type="text" id="buscador" autocomplete="off" placeholder="Buscar por receta o ingrediente… (ej: choclo, azucar)">
+      <button class="limpiar" id="limpiarBuscador" hidden title="Limpiar búsqueda" aria-label="Limpiar búsqueda">×</button>
+    </div>
+    <button class="filtro activo" data-cat="todas">Todas</button>
+    <button class="filtro" data-cat="principales">Platos de fondo</button>
+    <button class="filtro" data-cat="sopas">Sopas y guisos</button>
+    <button class="filtro" data-cat="panes">Masas y panes</button>
+    <button class="filtro" data-cat="ensaladas">Ensaladas</button>
+    <button class="filtro" data-cat="dulces">Dulces</button>
+  </div>
+</div>
+
+<main>
+  <p class="contador" id="contador" aria-live="polite"></p>
+  <div id="contenedorRecetas"></div>
+  <p class="vacio" id="sinResultados" hidden>
+    No encontramos recetas con ese criterio.<br>
+    <button class="btn-limpiar" id="limpiarVacio">Ver todas las recetas</button>
+  </p>
+</main>
+
+<footer>
+  <div class="bandera"><i class="azul"></i><i class="blanco"></i><i class="rojo"></i></div>
+  <span class="footer-flag" aria-label="Bandera de Chile"></span>
+  Recetario Chileno · Hecho con cariño en Chile
+  <nav class="footer-legal" aria-label="Enlaces legales">
+    <a href="sobre-mi.html">Sobre mí</a>
+    <span class="sep">·</span>
+    <a href="privacidad.html">Privacidad</a>
+    <span class="sep">·</span>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+</footer>
+
+<script src="recetas.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
