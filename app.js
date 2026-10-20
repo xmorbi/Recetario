@@ -21,13 +21,19 @@
   /* ---------- Verificación de datos ---------- */
   if (typeof RECETAS === 'undefined' || !Array.isArray(RECETAS)) {
     console.error('❌ No se encontró el archivo recetas.js o no tiene el formato correcto.');
-    document.getElementById('contenedorRecetas').innerHTML =
-      '<p class="vacio">⚠️ No se pudieron cargar las recetas. Revisa que recetas.js esté en la misma carpeta que index.html.</p>';
+    const contenedorErr = document.getElementById('contenedorRecetas');
+    if (contenedorErr) {
+      contenedorErr.innerHTML = '<p class="vacio">⚠️ No se pudieron cargar las recetas. Revisa que recetas.js esté en la misma carpeta que recetario.html.</p>';
+    }
     return;
   }
 
   /* ---------- Referencias del DOM ---------- */
   const contenedor      = document.getElementById('contenedorRecetas');
+  
+  // Si no estamos en la página del recetario (ej. estamos en el index), no ejecutamos el motor
+  if (!contenedor) return;
+
   const buscador        = document.getElementById('buscador');
   const limpiarBtn      = document.getElementById('limpiarBuscador');
   const limpiarVacio    = document.getElementById('limpiarVacio');
@@ -39,6 +45,13 @@
   let categoriaActiva = 'todas';
   let textoBusqueda   = '';
   let tarjetas         = [];
+
+  // Leer categoría desde URL (?cat=principales, ?cat=dulces, etc.)
+  const urlParams = new URLSearchParams(window.location.search);
+  const catParam = urlParams.get('cat');
+  if (catParam && ['principales', 'sopas', 'panes', 'ensaladas', 'dulces'].includes(catParam)) {
+    categoriaActiva = catParam;
+  }
 
   /* =====================================================
      UTILIDADES
@@ -210,7 +223,7 @@
     return '' +
       '<article class="receta" data-cat="' + escaparAtributo(receta.categoria || 'principales') + '" id="' + id + '">' +
         bloqueImagen +
-        '<h2>' + escaparHtml(receta.titulo) + '</h2>' +
+        '<h2><a href="recetas/' + slug + '.html">' + escaparHtml(receta.titulo) + '</a></h2>' +
         '<div class="meta">' + chips.join('') + '</div>' +
         '<div class="cuerpo">' +
           '<div>' +
@@ -313,32 +326,35 @@
       }
     });
 
-    vacio.hidden = visibles !== 0;
+    if (vacio) vacio.hidden = visibles !== 0;
 
-    contador.innerHTML = '';
-    const chip = document.createElement('span');
-    chip.className = 'chip';
-    if (textoBusqueda) {
-      chip.innerHTML =
-        '🔍 Buscando <strong>«' + escaparHtml(textoBusqueda) + '»</strong>' +
-        ' · <strong>' + visibles + '</strong> ' + (visibles === 1 ? 'receta' : 'recetas');
-    } else {
-      chip.innerHTML =
-        '📖 <strong>' + visibles + '</strong> ' + (visibles === 1 ? 'receta' : 'recetas') +
-        (categoriaActiva !== 'todas' ? ' en esta categoría' : ' en total');
+    if (contador) {
+      contador.innerHTML = '';
+      const chip = document.createElement('span');
+      chip.className = 'chip';
+      if (textoBusqueda) {
+        chip.innerHTML =
+          '🔍 Buscando <strong>«' + escaparHtml(textoBusqueda) + '»</strong>' +
+          ' · <strong>' + visibles + '</strong> ' + (visibles === 1 ? 'receta' : 'recetas');
+      } else {
+        chip.innerHTML =
+          '📖 <strong>' + visibles + '</strong> ' + (visibles === 1 ? 'receta' : 'recetas') +
+          (categoriaActiva !== 'todas' ? ' en esta categoría' : ' en total');
+      }
+      contador.appendChild(chip);
+      contador.classList.remove('flash');
+      void contador.offsetWidth;
+      contador.classList.add('flash');
     }
-    contador.appendChild(chip);
 
-    contador.classList.remove('flash');
-    void contador.offsetWidth;
-    contador.classList.add('flash');
-
-    limpiarBtn.hidden = buscador.value.length === 0;
-    buscador.classList.toggle('con-texto', buscador.value.length > 0);
+    if (limpiarBtn && buscador) {
+      limpiarBtn.hidden = buscador.value.length === 0;
+      buscador.classList.toggle('con-texto', buscador.value.length > 0);
+    }
   }
 
   function resetear() {
-    buscador.value = '';
+    if (buscador) buscador.value = '';
     textoBusqueda = '';
     categoriaActiva = 'todas';
     botones.forEach(function (b) {
@@ -353,28 +369,34 @@
      ===================================================== */
 
   let tipeoTimer = null;
-  buscador.addEventListener('input', function () {
-    textoBusqueda = buscador.value.trim();
-    clearTimeout(tipeoTimer);
-    tipeoTimer = setTimeout(aplicarFiltros, 80);
-  });
+  if (buscador) {
+    buscador.addEventListener('input', function () {
+      textoBusqueda = buscador.value.trim();
+      clearTimeout(tipeoTimer);
+      tipeoTimer = setTimeout(aplicarFiltros, 80);
+    });
 
-  buscador.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') {
+    buscador.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        buscador.value = '';
+        textoBusqueda = '';
+        aplicarFiltros();
+      }
+    });
+  }
+
+  if (limpiarBtn) {
+    limpiarBtn.addEventListener('click', function () {
       buscador.value = '';
       textoBusqueda = '';
+      buscador.focus();
       aplicarFiltros();
-    }
-  });
+    });
+  }
 
-  limpiarBtn.addEventListener('click', function () {
-    buscador.value = '';
-    textoBusqueda = '';
-    buscador.focus();
-    aplicarFiltros();
-  });
-
-  limpiarVacio.addEventListener('click', resetear);
+  if (limpiarVacio) {
+    limpiarVacio.addEventListener('click', resetear);
+  }
 
   botones.forEach(function (boton) {
     boton.addEventListener('click', function () {
@@ -391,10 +413,10 @@
 
   renderizar();
 
-  const lemaEl = document.querySelector('.hero-copy .lema');
-  if (lemaEl) {
-    lemaEl.textContent = RECETAS.length + ' recetas tradicionales';
-  }
+  // Marcar botón activo según la URL
+  botones.forEach(function (b) {
+    b.classList.toggle('activo', b.dataset.cat === categoriaActiva);
+  });
 
   aplicarFiltros();
 })();

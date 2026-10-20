@@ -88,8 +88,12 @@ main{max-width:980px;margin:0 auto;padding:2.5rem 1rem 5rem}
 @media(max-width:720px){.receta-img{height:180px}}
 .receta-img-error{width:100%;height:60px;border-radius:8px;margin-bottom:1.5rem;display:flex;align-items:center;justify-content:center;background:var(--crema-osc);color:var(--suave);font-size:.85rem;font-style:italic;border:1px dashed var(--borde)}
 
+/* TÍTULOS DE LAS TARJETAS Y SUS ENLACES */
 .receta h2{font-family:'Playfair Display',Georgia,serif;color:var(--rojo-osc);font-size:1.7rem;line-height:1.2;letter-spacing:-.3px;margin-bottom:.2rem}
+.receta h2 a{color:inherit;text-decoration:none;transition:color .2s ease}
+.receta h2 a:hover{color:var(--rojo);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
 .receta h2::after{content:"";display:block;width:40px;height:2px;background:var(--acento);margin-top:.7rem;border-radius:2px}
+
 .meta{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0 1.8rem}
 .meta span{background:var(--crema-osc);color:var(--suave);font-size:.75rem;font-weight:500;padding:.35rem .85rem;border-radius:99px;border:1px solid rgba(230,214,193,.6)}
 .cuerpo{display:grid;grid-template-columns:1fr 1.5fr;gap:2.5rem;align-items:start}
@@ -129,6 +133,10 @@ footer{background:linear-gradient(180deg,var(--tinta) 0%,#1a1512 100%);color:#c9
 footer .bandera{max-width:140px;margin:0 auto 1.2rem;border-radius:4px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.3)}
 .footer-flag{display:inline-block;width:22px;height:15px;vertical-align:-2px;margin-right:.5rem;border-radius:2px;background:linear-gradient(to bottom,#fff 50%,#d52b1e 50%);position:relative;box-shadow:0 1px 2px rgba(0,0,0,.3)}
 .footer-flag::before{content:"";position:absolute;top:0;left:0;width:33%;height:50%;background:#0039a6}
+.footer-legal{margin-top:.8rem;font-size:.85rem;display:flex;justify-content:center;gap:.5rem;flex-wrap:wrap}
+.footer-legal a{color:#e6d6c1;text-decoration:none;transition:color .2s}
+.footer-legal a:hover{color:#fff;text-decoration:underline}
+.footer-legal .sep{color:#5a4a40}
 
 @media print{.controles,footer,.bandera,.dato,.hero-mountains,.hero-flag-wrap{display:none}.hero{padding:1rem;background:#fff}.hero::before{display:none}.receta{box-shadow:none;border:1px solid #ddd;page-break-inside:avoid;transform:none}.receta::before{background:var(--acento)}body{background:#fff}}
 
@@ -164,14 +172,15 @@ footer .bandera{max-width:140px;margin:0 auto 1.2rem;border-radius:4px;overflow:
 .recetas-relacionadas a{display:inline-block;padding:.4rem .9rem;background:var(--crema-osc);border-radius:99px;color:var(--tinta);text-decoration:none;font-size:.85rem;transition:background .2s,color .2s}
 .recetas-relacionadas a:hover{background:var(--rojo);color:#fff}
 
-/* Footer con enlace en páginas de receta */
-footer a{color:#e6d6c1;text-decoration:none}
-footer a:hover{text-decoration:underline;color:#fff}
+/* Botón "volver al inicio" */
+.btn-volver-inicio{display:inline-flex;align-items:center;gap:.5rem;padding:.55rem 1.2rem;background:#fff;border:1.5px solid var(--borde);border-radius:99px;color:var(--rojo);text-decoration:none;font-size:.85rem;font-weight:500;margin-bottom:1rem;transition:background .2s,border-color .2s}
+.btn-volver-inicio:hover{background:var(--crema-osc);border-color:var(--rojo)}
 
 @media(max-width:640px){
   .receta-nav{grid-template-columns:1fr;text-align:center}
   .receta-nav-prev,.receta-nav-next{text-align:center}
 }
+
 /* =====================================================
    PÁGINAS LEGALES (Sobre mí, Privacidad, Contacto)
    ===================================================== */
@@ -193,12 +202,6 @@ footer a:hover{text-decoration:underline;color:#fff}
 .legal-box{background:#fff;border:1px solid var(--borde);border-left:3px solid var(--rojo);border-radius:0 10px 10px 0;padding:1.2rem 1.4rem;margin:1.5rem 0;font-size:.92rem;color:var(--suave)}
 .legal-box strong{color:var(--rojo-osc)}
 
-/* Footer con enlaces legales */
-.footer-legal{margin-top:.8rem;font-size:.85rem;display:flex;justify-content:center;gap:.5rem;flex-wrap:wrap}
-.footer-legal a{color:#e6d6c1;text-decoration:none;transition:color .2s}
-.footer-legal a:hover{color:#fff;text-decoration:underline}
-.footer-legal .sep{color:#5a4a40}
-
 /* Formulario de contacto */
 .contacto-form{background:#fff;border:1px solid var(--borde);border-radius:var(--radio);padding:2rem;margin:2rem 0;box-shadow:var(--sombra-md)}
 .contacto-form label{display:block;font-size:.85rem;font-weight:600;color:var(--rojo-osc);margin-bottom:.4rem;text-transform:uppercase;letter-spacing:.06em}
@@ -208,10 +211,53 @@ footer a:hover{text-decoration:underline;color:#fff}
 .contacto-form button{background:var(--rojo);color:#fff;border:none;padding:.85rem 1.8rem;font-size:.95rem;font-weight:600;border-radius:99px;cursor:pointer;transition:background .2s,transform .2s;font-family:inherit}
 .contacto-form button:hover{background:var(--rojo-osc);transform:translateY(-1px)}
 
-/* ===== PÁGINA 404 ===== */
+/* ===== PÁGINA 404 / GRACIAS ===== */
 .pagina-404{max-width:600px;margin:0 auto;padding:5rem 1.5rem;text-align:center}
 .pagina-404 .icono{font-size:5rem;margin-bottom:1rem}
 .pagina-404 h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2rem,6vw,3rem);color:var(--rojo-osc);margin-bottom:1rem}
 .pagina-404 p{color:var(--suave);margin-bottom:2rem;font-size:1.05rem}
 .pagina-404 .btn-volver{display:inline-block;padding:.8rem 1.6rem;background:var(--rojo);color:#fff;text-decoration:none;border-radius:99px;font-weight:600;transition:background .2s,transform .2s}
 .pagina-404 .btn-volver:hover{background:var(--rojo-osc);transform:translateY(-1px)}
+
+/* =====================================================
+   LANDING PAGE (PORTADA)
+   ===================================================== */
+
+.landing-intro{max-width:880px;margin:0 auto;padding:3rem 1.2rem 2rem;text-align:center}
+.landing-intro h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.6rem,4vw,2.2rem);color:var(--rojo-osc);letter-spacing:-.3px;margin-bottom:.7rem;line-height:1.2}
+.landing-intro p{color:var(--suave);font-size:1.02rem;max-width:560px;margin:0 auto;font-style:italic}
+
+.categorias-grid{max-width:1000px;margin:0 auto;padding:0 1.2rem 1rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem}
+
+.categoria-card{--cat-color:#b03a2e;position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--borde);border-radius:var(--radio);padding:2rem 1.8rem 1.7rem;text-decoration:none;color:var(--tinta);box-shadow:var(--sombra-md);overflow:hidden;transition:transform .3s ease,box-shadow .3s ease;min-height:220px}
+.categoria-card::before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,var(--cat-color) 0%,color-mix(in srgb,var(--cat-color) 60%,#fff) 100%)}
+.categoria-card:hover{transform:translateY(-4px);box-shadow:var(--sombra-lg)}
+.categoria-card:hover .categoria-arrow{transform:translateX(6px)}
+
+.categoria-card[data-cat="principales"]{--cat-color:#b03a2e}
+.categoria-card[data-cat="sopas"]{--cat-color:#b86f1e}
+.categoria-card[data-cat="panes"]{--cat-color:#8b5a2b}
+.categoria-card[data-cat="ensaladas"]{--cat-color:#4a7c59}
+.categoria-card[data-cat="dulces"]{--cat-color:#a8466f}
+
+.categoria-emoji{font-size:2.6rem;line-height:1;margin-bottom:1rem;filter:saturate(.9)}
+.categoria-nombre{font-family:'Playfair Display',Georgia,serif;font-size:1.5rem;color:var(--rojo-osc);letter-spacing:-.3px;line-height:1.15;margin-bottom:.4rem}
+.categoria-count{font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--cat-color);margin-bottom:.9rem}
+.categoria-desc{font-size:.9rem;color:var(--suave);line-height:1.5;flex:1;margin-bottom:1rem}
+.categoria-arrow{align-self:flex-end;font-size:1.1rem;color:var(--cat-color);font-weight:700;transition:transform .3s ease}
+
+.landing-todas{max-width:1000px;margin:1.8rem auto 0;padding:0 1.2rem 3rem;text-align:center}
+.landing-todas-btn{display:inline-flex;align-items:center;gap:.7rem;padding:1rem 2.2rem;background:linear-gradient(135deg,var(--rojo) 0%,var(--rojo-osc) 100%);color:#fff;text-decoration:none;border-radius:99px;font-weight:600;font-size:1rem;box-shadow:0 6px 20px rgba(176,58,46,.30);transition:transform .2s,box-shadow .2s}
+.landing-todas-btn:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(176,58,46,.40)}
+
+.landing-destacado{max-width:1000px;margin:2rem auto 3rem;padding:2rem 1.8rem;background:linear-gradient(135deg,#fdf3e3 0%,#fbeed7 100%);border-left:4px solid var(--dorado);border-radius:0 var(--radio) var(--radio) 0;text-align:center}
+.landing-destacado p{font-size:.98rem;color:var(--suave);font-style:italic;max-width:620px;margin:0 auto;line-height:1.7}
+.landing-destacado p strong{color:var(--rojo-osc);font-style:normal}
+
+@media(max-width:640px){
+  .categorias-grid{padding:0 1rem 1rem;gap:1rem}
+  .categoria-card{padding:1.6rem 1.4rem;min-height:200px}
+  .categoria-nombre{font-size:1.3rem}
+  .categoria-emoji{font-size:2.2rem}
+  .landing-intro{padding:2rem 1rem 1.5rem}
+}
