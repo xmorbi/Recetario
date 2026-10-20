@@ -1029,5 +1029,532 @@ const RECETAS = [
     ],
     dato: 'El charqui es carne seca y salada; si no lo encuentras, puedes usar carne ahumada.'
   }
+,
+
+  /* ============ 36. POROTOS CON RIENDAS ============ */
+  {
+    titulo: 'Porotos con riendas',
+    categoria: 'principales',
+    imagen: '',
+    tiempo: '50 min + remojo',
+    porciones: '6 personas',
+    dificultad: 'fácil',
+    tecnica: 'Olla',
+    ingredientes: [
+      '500 g de porotos secos (pueden ser pinto, blanco o burro)',
+      '300 g de zapallo camote en cubos',
+      '1 cebolla picada fina',
+      '2 dientes de ajo picados',
+      '1 longaniza en rodajas (opcional, pero tradicional)',
+      '1/2 paquete de tallarines o espaguetis',
+      '1 cucharadita de orégano',
+      '1/2 cucharadita de comino',
+      '1 cucharadita de ají de color',
+      'Sal y pimienta al gusto',
+      'Aceite para el sofrito'
+    ],
+    pasos: [
+      'La noche anterior, deja los porotos remojando en abundante agua fría. Al día siguiente, escúrrelos y enjuágalos.',
+      'En una olla grande, pon los porotos con agua fresca que los cubra por unos 3 dedos. Agrega el zapallo en cubos y cocina a fuego medio hasta que los porotos estén blandos (unos 30-40 minutos).',
+      'Mientras se cocinan los porotos, prepara el sofrito: en una sartén con un poco de aceite, sofríe la cebolla, el ajo y la longaniza hasta que doren. Agrega el orégano, comino y ají de color, y revuelve un minuto más.',
+      'Incorpora el sofrito a la olla de porotos y mezcla bien. Ajusta la sal y pimienta.',
+      'Agrega los tallarines (puedes partirlos por la mitad para que sean más fáciles de comer) y cocina por 8 a 10 minutos más, hasta que la pasta esté al dente y el caldo haya espesado.',
+      'Sirve bien caliente en platos hondos, con un chorrito de aceite crudo por encima si te gusta.'
+    ],
+    dato: 'El nombre "riendas" nace en el campo chileno: antiguamente se usaban tiras de cuero de cerdo que, al cocinarse, parecían las riendas de los caballos. Con el tiempo, la ciudad las reemplazó por tallarines, pero el nombre se mantuvo.'
+  },
+
+/* ============ 37. CARBONADA ============ */
+  {
+    titulo: 'Carbonada',
+    categoria: 'principales',
+    imagen: '',
+    tiempo: '50 min',
+    porciones: '6 personas',
+    dificultad: 'fácil',
+    tecnica: 'Olla',
+    ingredientes: [
+      '500 g de posta de vacuno picada en cubos',
+      '2 cucharadas de aceite',
+      '1 cebolla picada en cubitos',
+      '1/4 de pimentón rojo picado',
+      '2 papas medianas en cubos',
+      '1 zanahoria en rodajas',
+      '1 taza de zapallo en cubos',
+      '1 choclo desgranado',
+      '1/2 taza de arroz',
+      '1 litro de agua caliente o caldo de carne',
+      'Sal, pimienta, orégano, comino y ají de color'
+    ],
+    pasos: [
+      'Calienta el aceite en una olla grande. Agrega la carne y séllala hasta que dore por todos lados.',
+      'Incorpora la cebolla, el pimentón y los condimentos (ají de color, orégano, comino, sal y pimienta). Sofríe por 5 minutos.',
+      'Vierte el agua o caldo caliente, tapa y cocina a fuego medio por 20 minutos.',
+      'Agrega las papas, la zanahoria, el zapallo y el choclo. Cocina por 15 minutos más.',
+      'Añade el arroz y cocina hasta que los granos estén tiernos y las verduras blandas (unos 15 minutos).',
+      'Rectifica la sal y sirve caliente en platos hondos.'
+    ],
+    dato: 'La carbonada es un guiso de invierno por excelencia. Su nombre proviene de "carbón", porque antiguamente se cocinaba en ollas de barro sobre brasas.'
+  },
+
+  /* ============ 38. CHORRILLANA ============ */
+  {
+    titulo: 'Chorrillana',
+    categoria: 'principales',
+    imagen: '',
+    tiempo: '40 min',
+    porciones: '3 a 4 personas',
+    dificultad: 'fácil',
+    tecnica: 'Sartén',
+    ingredientes: [
+      '800 g de papas cortadas en bastones (para freír)',
+      '400 g de posta negra o lomo cortado en tiras finas',
+      '2 cebollas cortadas en pluma',
+      '2 huevos',
+      'Aceite para freír',
+      'Sal y pimienta al gusto',
+      'Salsa de tomate o ketchup (opcional)'
+    ],
+    pasos: [
+      'FrÍe las papas en abundante aceite caliente hasta que estén doradas y crujientes. Escurre sobre papel absorbente y reserva.',
+      'En una sartén grande, sofríe la cebolla en un poco de aceite hasta que esté transparente y ligeramente dorada. Retira y reserva.',
+      'En la misma sartén, sube el fuego y saltea la carne en tiras con sal y pimienta hasta que esté cocida y dorada.',
+      'Para montar, coloca las papas fritas en la base de una fuente grande o sartén. Encima distribuye la carne y luego la cebolla sofrita.',
+      'Fríe los huevos y colócalos encima de la preparación. Sirve inmediatamente para compartir.'
+    ],
+    dato: 'El nombre "chorrillana" proviene del barrio de Chorrillos en Valparaíso, donde se dice que nació este plato en la década de 1970.'
+  },
+
+  /* ============ 39. BISTEC A LO POBRE ============ */
+  {
+    titulo: 'Bistec a lo pobre',
+    categoria: 'principales',
+    imagen: '',
+    tiempo: '40 min',
+    porciones: '2 personas',
+    dificultad: 'fácil',
+    tecnica: 'Sartén',
+    ingredientes: [
+      '2 bistecs de lomo liso o vetado (aprox. 200 g cada uno)',
+      '3 papas medianas cortadas en bastones',
+      '1 cebolla grande cortada en pluma',
+      '2 huevos',
+      'Aceite para freír',
+      '1 diente de ajo picado',
+      'Sal y pimienta al gusto'
+    ],
+    pasos: [
+      'Sazona los bistecs con sal, pimienta y ajo. Déjalos reposar mientras preparas el resto.',
+      'FrÍe las papas en bastones en abundante aceite caliente hasta que estén doradas. Escurre y reserva.',
+      'En una sartén, sofríe la cebolla en un poco de aceite hasta que esté caramelizada. Retira y reserva.',
+      'En la misma sartén, sube el fuego y cocina los bistecs a la plancha o sartén por 2-3 minutos por lado, o hasta el punto deseado.',
+      'Fríe los huevos (uno por persona).',
+      'Para servir, coloca el bistec en el plato, cúbrelo con la cebolla y acompaña con las papas fritas y el huevo frito encima.'
+    ],
+    dato: 'El "a lo pobre" no se refiere a la falta de dinero, sino a la abundancia de acompañamientos (papas, cebolla y huevo) que hacen que el plato parezca "de pobres" por lo sencillo de sus ingredientes.'
+  },
+
+  /* ============ 40. SALCHIPAPAS ============ */
+  {
+    titulo: 'Salchipapas',
+    categoria: 'principales',
+    imagen: '',
+    tiempo: '25 min',
+    porciones: '4 personas',
+    dificultad: 'muy fácil',
+    tecnica: 'Fritura',
+    ingredientes: [
+      '4 papas grandes cortadas en bastones',
+      '6 salchichas de buena calidad',
+      'Aceite para freír',
+      'Ketchup, mayonesa o mostaza al gusto'
+    ],
+    pasos: [
+      'Pela y corta las papas en bastones. Lava bien para quitar el almidón y sécalas.',
+      'FrÍe las papas en abundante aceite caliente hasta que estén doradas y crujientes. Escurre y sala al gusto.',
+      'Corta las salchichas en rodajas o en trozos y fríelas en una sartén hasta que estén doradas.',
+      'Mezcla las papas fritas con las salchichas o sirve las salchichas encima de las papas.',
+      'Acompaña con tus salsas favoritas.'
+    ],
+    dato: 'Es el plato favorito de los niños y también un clásico de las picadas chilenas. Puedes agregar queso derretido encima para una versión aún más contundente.'
+  },
+
+  /* ============ 41. CARNE MECHADA ============ */
+  {
+    titulo: 'Carne mechada',
+    categoria: 'principales',
+    imagen: '',
+    tiempo: '2 h 30 min',
+    porciones: '4 a 6 personas',
+    dificultad: 'media',
+    tecnica: 'Olla',
+    ingredientes: [
+      '1 kg de posta negra o pollo ganso (corte para mechar)',
+      '1 zanahoria grande en bastones',
+      '2 cebollas cortadas en pluma',
+      '2 dientes de ajo',
+      '1 pimentón rojo en tiras',
+      '1 taza de vino tinto (opcional)',
+      '1 taza de caldo de carne',
+      'Aceite, sal, pimienta, orégano y comino'
+    ],
+    pasos: [
+      'Sazona la carne con sal, pimienta y comino. En una olla grande, sella la carne en aceite caliente hasta que dore por todos lados.',
+      'Agrega la cebolla, el ajo y el pimentón. Sofríe por unos minutos.',
+      'Incorpora el vino tinto (si usas) y deja evaporar un poco. Luego agrega el caldo de carne y los bastones de zanahoria.',
+      'Tapa la olla y cocina a fuego lento por 2 horas, hasta que la carne se deshaga fácilmente con un tenedor.',
+      'Retira la carne, desmenúzala con dos tenedores y devuélvela a la olla para que se mezcle con la salsa.',
+      'Sirve con puré, arroz o en un sándwich.'
+    ],
+    dato: 'La carne mechada es la base del clásico sándwich chileno "barros luco" (con queso) o "barros jarpa". Aprovecha la salsa para humedecer el pan.'
+  },
+
+  /* ============ 42. MACHAS A LA PARMESANA ============ */
+  {
+    titulo: 'Machas a la parmesana',
+    categoria: 'principales',
+    imagen: '',
+    tiempo: '20 min',
+    porciones: '4 personas (como entrada)',
+    dificultad: 'fácil',
+    tecnica: 'Horno',
+    ingredientes: [
+      '20 machas frescas con sus conchas (o 1 lata de machas al natural)',
+      '100 g de queso parmesano rallado',
+      '50 g de mantequilla',
+      '1/2 taza de vino blanco seco',
+      'Jugo de 1/2 limón',
+      'Pimienta negra al gusto',
+      'Sal (si es necesario)'
+    ],
+    pasos: [
+      'Si usas machas frescas, lávalas bien y ábrelas. Reserva la carne y las conchas. Precalienta el horno a 180 °C.',
+      'Coloca las conchas de macha en una bandeja para horno. Si usas machas en conserva, colócalas en conchas o en ramequines.',
+      'Pon una macha (o un trozo) en cada concha. Rocía con un poco de vino blanco y jugo de limón, y añade una nuez de mantequilla sobre cada una.',
+      'Cubre generosamente con queso parmesano rallado y un toque de pimienta negra.',
+      'Hornea por 5 a 8 minutos, hasta que el queso esté derretido y ligeramente dorado. Sirve inmediatamente.'
+    ],
+    dato: 'Las machas son un marisco endémico de las costas chilenas. Su sabor es dulce y salino, por lo que el queso parmesano realza su sabor sin opacarlo.'
+  },
+
+  /* ============ 43. LOCOS CON MAYONESA ============ */
+  {
+    titulo: 'Locos con mayonesa',
+    categoria: 'principales',
+    imagen: '',
+    tiempo: '1 h 15 min',
+    porciones: '4 personas',
+    dificultad: 'media',
+    tecnica: 'Olla',
+    ingredientes: [
+      '4 locos frescos (o 1 lata de locos)',
+      '1 taza de mayonesa casera o de buen calidad',
+      '1/2 cebolla morada picada en cubos muy pequeños',
+      '1 cucharada de cilantro fresco picado',
+      'Jugo de 1 limón',
+      'Sal y pimienta al gusto',
+      'Lechuga para acompañar'
+    ],
+    pasos: [
+      'Si usas locos frescos, lávalos y cocínalos en agua hirviendo con sal por 40-50 minutos, hasta que estén tiernos. Deja enfriar en el agua de cocción.',
+      'Retira los locos, córtalos en rodajas o trozos y reserva.',
+      'En un bol, mezcla la mayonesa con la cebolla morada, el cilantro y el jugo de limón. Salpimenta al gusto.',
+      'Sirve los locos sobre una cama de lechuga y cúbrelos con la mayonesa preparada.',
+      'También puedes mezclar los locos directamente con la salsa y servir como cóctel.'
+    ],
+    dato: 'El loco es un caracol marino muy preciado en Chile. Se suele servir en ocasiones especiales como fiestas patrias o celebraciones familiares.'
+  },
+
+  /* ============ 44. PAILA MARINA ============ */
+  {
+    titulo: 'Paila marina',
+    categoria: 'sopas',
+    imagen: '',
+    tiempo: '45 min',
+    porciones: '4 personas',
+    dificultad: 'media',
+    tecnica: 'Olla',
+    ingredientes: [
+      '500 g de pescado blanco (congrio, merluza) en trozos',
+      '250 g de choritos (mejillones) con concha',
+      '250 g de almejas con concha',
+      '1 taza de camarones pelados',
+      '1 cebolla picada fina',
+      '2 dientes de ajo picados',
+      '1 pimentón rojo en cubos',
+      '2 tomates pelados y picados',
+      '1/2 taza de vino blanco',
+      '1 litro de caldo de pescado',
+      'Aceite, sal, pimienta, ají de color y orégano'
+    ],
+    pasos: [
+      'En una olla grande, sofríe la cebolla, el ajo y el pimentón en aceite hasta que estén transparentes.',
+      'Agrega el tomate, el ají de color, orégano, sal y pimienta. Cocina por 5 minutos.',
+      'Vierte el vino blanco y el caldo de pescado. Lleva a ebullición.',
+      'Incorpora los choritos y las almejas. Tapa y cocina hasta que se abran (unos 5 minutos).',
+      'Agrega los trozos de pescado y los camarones. Cocina por 5-7 minutos más, hasta que el pescado esté cocido.',
+      'Rectifica la sal y sirve caliente en platos hondos o en una paila de greda.'
+    ],
+    dato: 'La paila marina se sirve tradicionalmente en una paila de greda, que mantiene el calor por más tiempo. Es ideal para compartir en invierno.'
+  },
+
+  /* ============ 45. PESCADO FRITO ============ */
+  {
+    titulo: 'Pescado frito',
+    categoria: 'principales',
+    imagen: '',
+    tiempo: '30 min',
+    porciones: '4 personas',
+    dificultad: 'fácil',
+    tecnica: 'Fritura',
+    ingredientes: [
+      '4 filetes de pescado blanco (merluza, reineta o congrio)',
+      '1 taza de harina',
+      '1 cucharadita de polvos de hornear',
+      '1 huevo',
+      '1/2 taza de agua o cerveza fría',
+      'Sal, pimienta y orégano al gusto',
+      'Aceite para freír',
+      'Limón para servir'
+    ],
+    pasos: [
+      'Sazona los filetes de pescado con sal, pimienta y orégano. Déjalos reposar por 10 minutos.',
+      'Prepara la mezcla para el batido: en un bol, mezcla la harina, los polvos de hornear, el huevo y el agua o cerveza hasta obtener una consistencia espesa pero fluida.',
+      'Calienta abundante aceite en una sartén honda o freidora a unos 180 °C.',
+      'Pasa cada filete por la mezcla, dejando que escurra el exceso, y fríe en el aceite caliente por 3-4 minutos por lado, hasta que estén dorados y crujientes.',
+      'Escurre sobre papel absorbente y sirve con rodajas de limón y ensalada a la chilena.'
+    ],
+    dato: 'La cerveza fría en el batido le da una textura extra crujiente al pescado frito. Es un secreto de cocina muy popular.'
+  },
+
+  /* ============ 46. CORVINA AL HORNO ============ */
+  {
+    titulo: 'Corvina al horno',
+    categoria: 'principales',
+    imagen: '',
+    tiempo: '40 min',
+    porciones: '2 personas',
+    dificultad: 'fácil',
+    tecnica: 'Horno',
+    ingredientes: [
+      '2 filetes de corvina (o lubina) de unos 200 g cada uno',
+      '1 cebolla en rodajas',
+      '1 tomate en rodajas',
+      '2 dientes de ajo laminados',
+      '1/2 taza de vino blanco',
+      '2 cucharadas de aceite de oliva',
+      'Sal, pimienta y tomillo al gusto',
+      'Rodajas de limón'
+    ],
+    pasos: [
+      'Precalienta el horno a 180 °C.',
+      'En una fuente para horno, coloca una base de cebolla y tomate en rodajas. Coloca los filetes de corvina encima.',
+      'Sazona con sal, pimienta y tomillo. Distribuye el ajo laminado sobre el pescado.',
+      'Rocía con el vino blanco y el aceite de oliva. Coloca unas rodajas de limón encima.',
+      'Hornea por 20-25 minutos, hasta que el pescado esté cocido y se desmenuce fácilmente con un tenedor.',
+      'Sirve con papas cocidas o arroz.'
+    ],
+    dato: 'La corvina es un pescado muy versátil. Al hornearla con vino blanco y limón, su carne se mantiene jugosa y absorbe todos los sabores.'
+  },
+
+  /* ============ 47. SALMÓN AL HORNO ============ */
+  {
+    titulo: 'Salmón al horno',
+    categoria: 'principales',
+    imagen: '',
+    tiempo: '25 min',
+    porciones: '2 personas',
+    dificultad: 'muy fácil',
+    tecnica: 'Horno',
+    ingredientes: [
+      '2 filetes de salmón fresco (aprox. 200 g cada uno)',
+      '2 cucharadas de aceite de oliva',
+      'Jugo de 1 limón',
+      '2 dientes de ajo picados',
+      'Sal y pimienta al gusto',
+      'Perejil fresco picado',
+      'Rodajas de limón'
+    ],
+    pasos: [
+      'Precalienta el horno a 200 °C. Forra una bandeja con papel de horno.',
+      'Coloca los filetes de salmón en la bandeja. Sazona con sal, pimienta y ajo picado.',
+      'Rocía con el aceite de oliva y el jugo de limón. Coloca rodajas de limón encima.',
+      'Hornea por 12-15 minutos, dependiendo del grosor del filete, hasta que el salmón esté cocido pero aún jugoso.',
+      'Espolvorea con perejil fresco y sirve con ensalada o papas al horno.'
+    ],
+    dato: 'El salmón chileno es famoso por su calidad. No necesitas muchos ingredientes para que quede delicioso; el limón y el ajo son suficientes.'
+  },
+
+  /* ============ 48. SALSA AMERICANA ============ */
+  {
+    titulo: 'Salsa americana',
+    categoria: 'ensaladas',
+    imagen: '',
+    tiempo: '15 min',
+    porciones: '1 taza',
+    dificultad: 'muy fácil',
+    tecnica: 'Sin cocción',
+    ingredientes: [
+      '6 cebollitas perla encurtidas',
+      '2 zanahorias encurtidas en rodajas',
+      '2 pepinillos encurtidos',
+      '1/2 taza de mayonesa',
+      '1 cucharada de ketchup',
+      '1 cucharadita de mostaza',
+      'Sal y pimienta al gusto'
+    ],
+    pasos: [
+      'Escurre bien las cebollitas, las zanahorias y los pepinillos. Pícalos en trozos muy pequeños.',
+      'En un bol, mezcla la mayonesa, el ketchup y la mostaza hasta integrar.',
+      'Incorpora los encurtidos picados y mezcla bien. Salpimenta al gusto.',
+      'Refrigera por al menos 30 minutos para que los sabores se mezclen antes de servir.',
+      'Sirve como acompañamiento de carnes, papas fritas o completos.'
+    ],
+    dato: 'A pesar de su nombre, la salsa americana es un clásico chileno. Se usa mucho en las hamburguesas y completos para darles un toque ácido y crujiente.'
+  },
+
+  /* ============ 49. PEBRE CHILENO ============ */
+  {
+    titulo: 'Pebre chileno',
+    categoria: 'ensaladas',
+    imagen: '',
+    tiempo: '15 min',
+    porciones: '4 personas',
+    dificultad: 'muy fácil',
+    tecnica: 'Sin cocción',
+    ingredientes: [
+      '1 tomate grande maduro, picado en cubos pequeños',
+      '1 cebolla mediana, picada en cubos pequeños',
+      '1 diente de ajo picado muy fino',
+      '3 cucharadas de perejil fresco picado',
+      '3 cucharadas de cilantro fresco picado',
+      '1 trozo de ají verde picado (opcional)',
+      '2 cucharadas de aceite de oliva',
+      '1 cucharada de vinagre de vino tinto',
+      'Sal y pimienta al gusto'
+    ],
+    pasos: [
+      'Pica todos los ingredientes en cubos muy pequeños y uniformes.',
+      'En un bol, mezcla el tomate, la cebolla, el ajo, el perejil, el cilantro y el ají.',
+      'Condimenta con el aceite de oliva, el vinagre, la sal y la pimienta. Mezcla bien.',
+      'Deja reposar por al menos 15 minutos para que los sabores se integren.',
+      'Sirve con pan amasado, marraqueta o como acompañamiento de carnes.'
+    ],
+    dato: 'El pebre es el acompañamiento más popular de la mesa chilena. Se sirve en todas las casas, especialmente en las once y en los asados.'
+  },
+
+  /* ============ 50. MARRAQUETA ============ */
+  {
+    titulo: 'Marraqueta',
+    categoria: 'panes',
+    imagen: '',
+    tiempo: '2 h 30 min',
+    porciones: '4 panes',
+    dificultad: 'media',
+    tecnica: 'Horno',
+    ingredientes: [
+      '1 kg de harina sin polvos de hornear',
+      '600 ml de agua a temperatura ambiente',
+      '20 g de sal',
+      '15 g de levadura granulada',
+      '1 cucharadita de azúcar (opcional)'
+    ],
+    pasos: [
+      'Disuelve la levadura y el azúcar en un poco de agua tibia. Deja reposar por 15 minutos hasta que espume.',
+      'En un bol grande, mezcla la harina con la sal. Agrega la levadura disuelta y el resto del agua. Amasa hasta obtener una masa suave y elástica.',
+      'Cubre la masa y deja levar en un lugar cálido por 1 hora, o hasta que doble su volumen.',
+      'Divide la masa en 4 porciones. Forma bolas y luego aplánalas ligeramente. Haz un corte profundo en el centro de cada pan.',
+      'Coloca los panes en una bandeja enharinada y deja levar por 30 minutos más. Precalienta el horno a 220 °C.',
+      'Hornea por 20-25 minutos, hasta que estén dorados y suenen huecos al golpear la base.'
+    ],
+    dato: 'La marraqueta es el pan más consumido en Chile. Su corte característico permite separarla en cuatro "marraquetas" para compartir.'
+  },
+
+  /* ============ 51. HALLULLA ============ */
+  {
+    titulo: 'Hallulla',
+    categoria: 'panes',
+    imagen: '',
+    tiempo: '2 h',
+    porciones: '6 panes',
+    dificultad: 'media',
+    tecnica: 'Horno',
+    ingredientes: [
+      '500 g de harina',
+      '150 ml de leche tibia',
+      '10 g de levadura seca',
+      '1 1/2 cucharaditas de sal',
+      '80 g de manteca vegetal',
+      '1 cucharadita de azúcar (opcional)'
+    ],
+    pasos: [
+      'Activa la levadura en la leche tibia con el azúcar. Deja reposar por 10 minutos.',
+      'Mezcla la harina con la sal. Agrega la levadura con la leche y la manteca. Amasa hasta que la masa esté suave y no se pegue.',
+      'Deja levar tapada por 1 hora, hasta que doble su volumen.',
+      'Divide la masa en 6 bollos. Estira cada uno en forma de disco plano de aproximadamente 1 cm de grosor.',
+      'Coloca en una bandeja engrasada y deja levar por 30 minutos más. Precalienta el horno a 200 °C.',
+      'Hornea por 15-20 minutos, hasta que estén doradas. Sirve tibias.'
+    ],
+    dato: 'La hallulla es un pan redondo y plano, ideal para sándwiches. Su textura es más suave y compacta que la marraqueta.'
+  },
+
+  /* ============ 52. SOPAIPILLAS PASADAS ============ */
+  {
+    titulo: 'Sopaipillas pasadas',
+    categoria: 'panes',
+    imagen: '',
+    tiempo: '45 min',
+    porciones: '20 unidades',
+    dificultad: 'fácil',
+    tecnica: 'Fritura',
+    ingredientes: [
+      'Masa: 500 g de harina',
+      'Masa: 300 g de zapallo cocido y molido',
+      'Masa: 100 g de manteca derretida',
+      'Masa: 1 cdta de sal y 1 cdta de polvos de hornear',
+      'Masa: Aceite para freír',
+      'Chancaca: 250 g de chancaca',
+      'Chancaca: ½ taza de agua',
+      'Chancaca: 1 rama de canela',
+      'Chancaca: Cáscara de 1 naranja',
+      'Chancaca: 2 clavos de olor'
+    ],
+    pasos: [
+      'Mezcla el zapallo, la harina, la sal y los polvos de hornear. Agrega la manteca y amasa hasta obtener una masa suave.',
+      'Reposa 20 min, estira a 5 mm y corta discos de 8 cm. Pincha con un tenedor y fríe en aceite caliente hasta dorar.',
+      'Aparte, hierve la chancaca con el agua, la canela, la cáscara de naranja y los clavos hasta formar un almíbar.',
+      'Baña las sopaipillas recién fritas con el almíbar caliente y sirve.'
+    ],
+    dato: 'Se sirven tibias, cuando el almíbar todavía está brillante y pegajoso. Es el dulce perfecto para un día de lluvia.'
+  },
+
+  /* ============ 53. PRIETAS ============ */
+  {
+    titulo: 'Prietas',
+    categoria: 'principales',
+    imagen: '',
+    tiempo: '1 h 30 min',
+    porciones: '4 personas',
+    dificultad: 'media',
+    tecnica: 'Olla',
+    ingredientes: [
+      '4 prietas (morcillas) frescas',
+      '1 cebolla picada en pluma',
+      '2 dientes de ajo picados',
+      '1 hoja de laurel',
+      '1 cucharada de orégano',
+      'Aceite para freír',
+      'Sal y pimienta al gusto',
+      'Papas cocidas o puré para acompañar'
+    ],
+    pasos: [
+      'Pincha las prietas con un tenedor para que no exploten durante la cocción.',
+      'En una olla con agua hirviendo, cocina las prietas por 10-15 minutos con una hoja de laurel. Escurre y corta en rodajas gruesas.',
+      'En una sartén con un poco de aceite, sofríe la cebolla y el ajo hasta que estén dorados. Agrega el orégano.',
+      'Incorpora las rodajas de prieta y fríelas por unos minutos de cada lado hasta que estén doradas y crujientes por fuera.',
+      'Sirve caliente con papas cocidas, puré o ensalada.'
+    ],
+    dato: 'La prieta es un embutido de sangre de cerdo típico de la zona sur de Chile. Se suele consumir en fiestas patrias y en invierno.'
+  }
 
 ];
