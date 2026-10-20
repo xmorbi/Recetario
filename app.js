@@ -12,7 +12,7 @@
      ===================================================== */
   const SITE_CONFIG = {
     nombre: 'Recetario Chileno',
-    urlBase: 'https://recetariochileno.cl',       // ← TU DOMINIO REAL (sin / al final)
+    urlBase: 'recetariochileno.netlify.app',       // ← TU DOMINIO REAL (sin / al final)
     autor: 'Recetario Chileno',                    // ← Tu nombre o el del sitio
     imagenDefault: 'img/og-default.jpg',           // ← Imagen 1200×630 para redes sociales
     fechaPublicacion: '2025-01-15'                 // ← Fecha de publicación original
