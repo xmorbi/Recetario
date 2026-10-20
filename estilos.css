@@ -1,0 +1,130 @@
+/* =================================================================
+   ESTILOS.CSS — Apariencia del recetario
+   ⚠️  NO EDITES ESTE ARCHIVO A MENOS QUE QUIERAS CAMBIAR EL DISEÑO.
+   Para agregar o cambiar recetas, edita recetas.js
+   ================================================================= */
+
+:root{
+  --rojo:#b03a2e;
+  --rojo-osc:#7a1b15;
+  --azul:#1f3a5f;
+  --dorado:#c8963e;
+  --crema:#fdf8f0;
+  --crema-osc:#f6ecdd;
+  --arena:#f2e6d6;
+  --borde:#e6d6c1;
+  --tinta:#2b2320;
+  --suave:#6f6257;
+  --radio:16px;
+  --sombra-sm:0 1px 3px rgba(90,60,30,.08);
+  --sombra-md:0 4px 16px rgba(90,60,30,.08);
+  --sombra-lg:0 12px 32px rgba(90,60,30,.14);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--crema);color:var(--tinta);font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+
+.bandera{height:6px;display:flex;position:relative;overflow:hidden}
+.bandera i{flex:1}
+.bandera .azul{background:var(--azul)}
+.bandera .blanco{background:#fff}
+.bandera .rojo{background:var(--rojo)}
+
+/* ===== HERO ===== */
+.hero{position:relative;padding:3.5rem 1.2rem 220px;text-align:center;background:radial-gradient(circle at 15% 0%,rgba(200,150,62,.12),transparent 50%),radial-gradient(circle at 85% 100%,rgba(176,58,46,.10),transparent 50%),linear-gradient(180deg,#fefaf3 0%,var(--crema) 100%);overflow:hidden;border-bottom:1px solid var(--borde)}
+.hero::before{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(-45deg,transparent 0 22px,rgba(176,58,46,.025) 22px 23px);pointer-events:none;z-index:0}
+.hero-mountains{position:absolute;bottom:0;left:0;width:100%;height:200px;pointer-events:none;z-index:1}
+.hero-inner{position:relative;z-index:2;max-width:880px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:2.5rem;flex-wrap:wrap}
+.hero-flag-wrap{display:flex;flex-direction:column;align-items:center;gap:.9rem}
+.hero-flag-caption{font-size:.7rem;text-transform:uppercase;letter-spacing:.24em;color:var(--rojo);font-weight:600}
+.bandera-chile{position:relative;width:140px;aspect-ratio:3/2;background:linear-gradient(to bottom,#ffffff 50%,#d52b1e 50%);border-radius:8px;box-shadow:0 12px 28px rgba(122,27,21,.18),0 4px 10px rgba(0,0,0,.08),inset 0 0 0 1px rgba(0,0,0,.05);overflow:hidden;flex-shrink:0;transform:rotate(-2deg);transition:transform .4s cubic-bezier(.2,.7,.3,1.4)}
+.bandera-chile:hover{transform:rotate(0) scale(1.04)}
+.bandera-chile::before{content:"";position:absolute;top:0;left:0;width:33.333%;height:50%;background:#0039a6}
+.bandera-chile .estrella{position:absolute;top:25%;left:16.666%;width:24%;aspect-ratio:1;transform:translate(-50%,-50%);background:#ffffff;clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
+.hero-copy{text-align:center;min-width:0}
+.hero-eyebrow{font-size:.72rem;text-transform:uppercase;letter-spacing:.24em;color:var(--suave);margin-bottom:.6rem;font-weight:600}
+.hero-copy h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2.3rem,6vw,3.6rem);color:var(--rojo-osc);letter-spacing:-1px;line-height:1.05;font-weight:700;margin:0;text-shadow:0 1px 0 rgba(255,255,255,.5)}
+.hero-copy .sub{color:var(--suave);margin-top:.9rem;font-size:1.08rem;max-width:480px;margin-left:auto;margin-right:auto;font-style:italic}
+.hero-copy .lema{display:inline-flex;align-items:center;gap:.7rem;margin-top:1.4rem;font-size:.78rem;text-transform:uppercase;letter-spacing:.22em;color:var(--rojo);font-weight:600;padding:.5rem 1.2rem;background:#fff;border:1px solid var(--borde);border-radius:99px;box-shadow:var(--sombra-sm)}
+.hero-copy .lema::before,.hero-copy .lema::after{content:"✦";color:var(--dorado);font-size:.9rem;letter-spacing:0}
+@media(max-width:640px){.hero{padding:2.5rem 1rem 150px}.hero-inner{gap:1.5rem;flex-direction:column}.bandera-chile{width:110px;transform:none}.hero-mountains{height:140px}}
+
+/* ===== CONTROLES ===== */
+.controles{position:sticky;top:0;z-index:10;background:rgba(253,248,240,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--borde);padding:1rem;box-shadow:0 2px 8px rgba(90,60,30,.03)}
+.controles .inner{max-width:980px;margin:0 auto;display:flex;gap:.7rem;flex-wrap:wrap;align-items:center}
+.buscador-wrap{position:relative;flex:1 1 280px;display:flex;align-items:center}
+.buscador-wrap .lupa{position:absolute;left:1.1rem;width:19px;height:19px;color:#a89a8c;pointer-events:none;transition:color .2s,transform .2s}
+.buscador-wrap:focus-within .lupa{color:var(--rojo);transform:scale(1.1)}
+.buscador-wrap #buscador{flex:1;width:100%;padding:.9rem 2.8rem .9rem 2.9rem;border:2px solid var(--borde);border-radius:99px;font-size:.95rem;font-family:inherit;background:#fff;outline:none;color:var(--tinta);box-shadow:inset 0 1px 3px rgba(90,60,30,.04);transition:border-color .25s,box-shadow .25s,background .25s}
+.buscador-wrap #buscador::placeholder{color:#b3a89e}
+.buscador-wrap #buscador:focus{border-color:var(--rojo);box-shadow:inset 0 1px 3px rgba(90,60,30,.04),0 0 0 5px rgba(176,58,46,.10);background:#fffdf8}
+.buscador-wrap #buscador.con-texto{background:#fffdf8}
+.limpiar{position:absolute;right:.55rem;width:30px;height:30px;border-radius:50%;border:none;background:var(--arena);color:var(--suave);font-size:1.15rem;font-weight:700;line-height:1;cursor:pointer;display:grid;place-items:center;transition:background .2s,color .2s,transform .2s}
+.limpiar:hover{background:var(--rojo);color:#fff;transform:scale(1.1) rotate(90deg)}
+.limpiar[hidden]{display:none}
+.filtro{font-family:inherit;font-size:.85rem;font-weight:500;padding:.65rem 1.1rem;border-radius:99px;cursor:pointer;border:1.5px solid var(--borde);background:#fff;color:var(--suave);box-shadow:var(--sombra-sm);transition:all .2s ease}
+.filtro:hover{border-color:var(--rojo);color:var(--rojo);transform:translateY(-1px);box-shadow:0 3px 8px rgba(176,58,46,.12)}
+.filtro.activo{background:linear-gradient(135deg,var(--rojo) 0%,var(--rojo-osc) 100%);border-color:var(--rojo-osc);color:#fff;box-shadow:0 4px 12px rgba(176,58,46,.28)}
+
+/* ===== MAIN ===== */
+main{max-width:980px;margin:0 auto;padding:2.5rem 1rem 5rem}
+.contador{font-size:.9rem;margin-bottom:1.8rem;min-height:2rem;display:flex;align-items:center;gap:.6rem;flex-wrap:wrap}
+.contador .chip{display:inline-flex;align-items:center;gap:.45rem;background:#fff;border:1px solid var(--borde);padding:.45rem 1rem;border-radius:99px;font-size:.83rem;color:var(--tinta);box-shadow:var(--sombra-sm)}
+.contador .chip strong{color:var(--rojo);font-weight:600}
+.contador.flash{animation:flashContador .45s ease}
+@keyframes flashContador{from{opacity:.3;transform:translateY(-3px)}to{opacity:1;transform:none}}
+
+/* ===== TARJETAS DE RECETA ===== */
+.receta{--acento:var(--rojo);position:relative;background:#fff;border:1px solid var(--borde);border-radius:var(--radio);padding:2rem 2rem 1.9rem;margin-bottom:2rem;box-shadow:var(--sombra-md);overflow:hidden;transition:transform .3s ease,box-shadow .3s ease}
+.receta::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--acento) 0%,color-mix(in srgb,var(--acento) 60%,#fff) 100%)}
+.receta:hover{transform:translateY(-3px);box-shadow:var(--sombra-lg)}
+.receta[hidden]{display:none}
+.receta[data-cat="principales"]{--acento:#b03a2e}
+.receta[data-cat="sopas"]{--acento:#b86f1e}
+.receta[data-cat="panes"]{--acento:#8b5a2b}
+.receta[data-cat="ensaladas"]{--acento:#4a7c59}
+.receta[data-cat="dulces"]{--acento:#a8466f}
+
+/* Imagen de la receta (solo aparece si tiene foto) */
+.receta-img{width:100%;height:240px;object-fit:cover;border-radius:10px;margin-bottom:1.5rem;display:block;background:var(--crema-osc)}
+@media(max-width:720px){.receta-img{height:180px}}
+.receta-img-error{width:100%;height:60px;border-radius:8px;margin-bottom:1.5rem;display:flex;align-items:center;justify-content:center;background:var(--crema-osc);color:var(--suave);font-size:.85rem;font-style:italic;border:1px dashed var(--borde)}
+
+.receta h2{font-family:'Playfair Display',Georgia,serif;color:var(--rojo-osc);font-size:1.7rem;line-height:1.2;letter-spacing:-.3px;margin-bottom:.2rem}
+.receta h2::after{content:"";display:block;width:40px;height:2px;background:var(--acento);margin-top:.7rem;border-radius:2px}
+.meta{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0 1.8rem}
+.meta span{background:var(--crema-osc);color:var(--suave);font-size:.75rem;font-weight:500;padding:.35rem .85rem;border-radius:99px;border:1px solid rgba(230,214,193,.6)}
+.cuerpo{display:grid;grid-template-columns:1fr 1.5fr;gap:2.5rem;align-items:start}
+@media(max-width:720px){.cuerpo{grid-template-columns:1fr;gap:1.8rem}}
+h3{font-size:.72rem;text-transform:uppercase;letter-spacing:.16em;color:var(--azul);margin-bottom:1rem;font-weight:700;padding-bottom:.4rem;border-bottom:1px solid var(--crema-osc)}
+
+.ingredientes{list-style:none;font-size:.94rem}
+.ingredientes li{margin-bottom:.55rem}
+.ingredientes label{display:flex;gap:.65rem;cursor:pointer;align-items:flex-start;padding:.3rem .4rem;border-radius:8px;transition:background .15s}
+.ingredientes label:hover{background:var(--crema)}
+.ingredientes input{margin-top:.35rem;width:16px;height:16px;accent-color:var(--acento);cursor:pointer;flex-shrink:0;transition:transform .15s}
+.ingredientes input:checked{transform:scale(1.1)}
+.ingredientes input:checked + span{text-decoration:line-through;color:#b5a99e;transition:color .3s}
+
+.preparacion{list-style:none;counter-reset:paso;font-size:.94rem}
+.preparacion li{counter-increment:paso;position:relative;padding-left:2.9rem;margin-bottom:1rem}
+.preparacion li:last-child{margin-bottom:0}
+.preparacion li::before{content:counter(paso);position:absolute;left:0;top:-.05rem;width:2rem;height:2rem;border-radius:50%;background:linear-gradient(135deg,var(--acento) 0%,color-mix(in srgb,var(--acento) 70%,#000) 100%);color:#fff;font-size:.85rem;font-weight:700;display:grid;place-items:center;box-shadow:0 3px 8px color-mix(in srgb,var(--acento) 30%,transparent)}
+
+.dato{position:relative;margin-top:1.6rem;padding:1rem 1.2rem 1rem 1.3rem;background:linear-gradient(135deg,#fdf3e3 0%,#fbeed7 100%);border-left:3px solid var(--acento);border-radius:0 10px 10px 0;font-size:.88rem;color:var(--suave);font-style:italic}
+.dato strong{color:var(--rojo-osc);font-style:normal;font-weight:700}
+
+.receta mark{background:linear-gradient(180deg,transparent 40%,#ffe58a 40%);color:inherit;padding:0 .1em;border-radius:2px;font-weight:600;transition:background .3s}
+.receta.aparecer{animation:aparecerReceta .4s cubic-bezier(.2,.7,.3,1)}
+@keyframes aparecerReceta{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+.vacio{text-align:center;color:var(--suave);font-style:italic;padding:4rem 1rem}
+.vacio::before{content:"🍽️";display:block;font-size:3.5rem;margin-bottom:1rem;opacity:.6}
+.vacio .btn-limpiar{margin-top:1.4rem;padding:.75rem 1.6rem;border:2px solid var(--rojo);background:transparent;color:var(--rojo);border-radius:99px;font-family:inherit;font-weight:600;font-size:.9rem;cursor:pointer;transition:all .2s;font-style:normal}
+.vacio .btn-limpiar:hover{background:var(--rojo);color:#fff;transform:translateY(-2px);box-shadow:0 6px 16px rgba(176,58,46,.25)}
+
+footer{background:linear-gradient(180deg,var(--tinta) 0%,#1a1512 100%);color:#c9bbb0;text-align:center;padding:2.5rem 1rem;font-size:.85rem;letter-spacing:.02em}
+footer .bandera{max-width:140px;margin:0 auto 1.2rem;border-radius:4px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.footer-flag{display:inline-block;width:22px;height:15px;vertical-align:-2px;margin-right:.5rem;border-radius:2px;background:linear-gradient(to bottom,#fff 50%,#d52b1e 50%);position:relative;box-shadow:0 1px 2px rgba(0,0,0,.3)}
+.footer-flag::before{content:"";position:absolute;top:0;left:0;width:33%;height:50%;background:#0039a6}
+
+@media print{.controles,footer,.bandera,.dato,.hero-mountains,.hero-flag-wrap{display:none}.hero{padding:1rem;background:#fff}.hero::before{display:none}.receta{box-shadow:none;border:1px solid #ddd;page-break-inside:avoid;transform:none}.receta::before{background:var(--acento)}body{background:#fff}}
