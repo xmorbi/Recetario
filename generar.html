@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<title>Generador de páginas de recetas</title>
+<style>
+  body{font-family:system-ui,sans-serif;max-width:760px;margin:40px auto;padding:20px;line-height:1.6;background:#fdf8f0;color:#2b2320}
+  h1{color:#7a1b15;font-size:1.6rem}
+  button{padding:14px 28px;font-size:16px;font-weight:600;cursor:pointer;background:#b03a2e;color:#fff;border:none;border-radius:8px}
+  button:hover{background:#7a1b15}
+  button:disabled{background:#999;cursor:not-allowed}
+  #log{background:#fff;border:1px solid #e6d6c1;padding:16px;margin-top:20px;white-space:pre-wrap;font-family:monospace;font-size:13px;border-radius:8px;max-height:400px;overflow-y:auto}
+</style>
+</head>
+<body>
+
+<h1>Generador de páginas individuales</h1>
+<p>Haz clic en el botón para descargar <strong>recetas.zip</strong>.</p>
+
+<button id="btnGenerar">Generar recetas</button>
+<div id="log">Esperando...</div>
+
+<script src="jszip.min.js"></script>
+<script src="recetas.js"></script>
+<script>
+var URL_BASE = 'https://recetariochileno.netlify.app';
+
+function slugify(t) {
+  return String(t).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+    .replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
+}
+function esc(s) {
+  return String(s).replace(/[&<>"']/g, function(c) {
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+  });
+}
+function tiempoISO(t) {
+  if (!t) return 'PT60M';
+  var x = String(t).toLowerCase(), h = 0, m = 0;
+  var hm = x.match(/(\d+)\s*h/), mm = x.match(/(\d+)\s*min/);
+  if (hm) h = parseInt(hm[1], 10);
+  if (mm) m = parseInt(mm[1], 10);
+  if (h === 0 && m === 0) return 'PT60M';
+  var s = 'PT';
+  if (h > 0) s += h + 'H';
+  if (m > 0) s += m + 'M';
+  return s;
+}
+function catLegible(c) {
+  var m = {'principales':'Plato principal','sopas':'Sopa','panes':'Pan','ensaladas':'Ensalada','dulces':'Postre'};
+  return m[c] || 'Plato principal';
+}
+
+function crearPagina(r, i, total, todos) {
+  var slug = slugify(r.titulo);
+  var url = URL_BASE + '/recetas/' + slug + '.html';
+  var img = (r.imagen && r.imagen.trim() !== '') ? URL_BASE + '/' + r.imagen.replace(/^\.\.\//,'') : URL_BASE + '/img/og-default.jpg';
+
+  var schema = JSON.stringify({
+    "@context":"https://schema.org/","@type":"Recipe","name":r.titulo,"image":[img],
+    "author":{"@type":"Organization","name":"Recetario Chileno"},
+    "datePublished":"2025-01-15",
+    "description":"Receta tradicional chilena de " + r.titulo + ".",
+    "recipeCuisine":"Chilena","recipeCategory":catLegible(r.categoria),
+    "totalTime":tiempoISO(r.tiempo),"recipeYield":r.porciones || "4 porciones",
+    "recipeIngredient":r.ingredientes || [],
+    "recipeInstructions":(r.pasos || []).map(function(p, idx) {
+      return {"@type":"HowToStep","position":idx+1,"text":p};
+    })
+  });
+  var bread = JSON.stringify({
+    "@context":"https://schema.org","@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Inicio","item":URL_BASE+"/"},
+      {"@type":"ListItem","position":2,"name":"Recetas","item":URL_BASE+"/"},
+      {"@type":"ListItem","position":3,"name":r.titulo,"item":url}
+    ]
+  });
+
+  var ing = (r.ingredientes || []).map(function(x) {
+    return '<li><label><input type="checkbox"><span>' + esc(x) + '</span></label></li>';
+  }).join('');
+  var pasos = (r.pasos || []).map(function(x) { return '<li>' + esc(x) + '</li>'; }).join('');
+  var dato = r.dato ? '<p class="dato"><strong>Dato:</strong> ' + esc(r.dato) + '</p>' : '';
+
+  var chips = '';
+  if (r.tiempo) chips += '<span>' + esc(r.tiempo) + '</span>';
+  if (r.porciones) chips += '<span>' + esc(r.porciones) + '</span>';
+  if (r.dificultad) chips += '<span>Dificultad: ' + esc(r.dificultad) + '</span>';
+  if (r.tecnica) chips += '<span>' + esc(r.tecnica) + '</span>';
+
+  var prev = i > 0 ? todos[i-1] : null;
+  var next = i < total-1 ? todos[i+1] : null;
+  var nav = '<nav class="receta-nav">';
+  nav += prev ? '<a href="' + slugify(prev.titulo) + '.html" class="receta-nav-prev">&larr; ' + esc(prev.titulo) + '</a>' : '<span></span>';
+  nav += '<a href="../index.html" class="receta-nav-index">Todas las recetas</a>';
+  nav += next ? '<a href="' + slugify(next.titulo) + '.html" class="receta-nav-next">' + esc(next.titulo) + ' &rarr;</a>' : '<span></span>';
+  nav += '</nav>';
+
+  var rels = todos.filter(function(x, j) { return j !== i && x.categoria === r.categoria; }).slice(0,3);
+  var relHTML = '';
+  if (rels.length > 0) {
+    relHTML = '<aside class="recetas-relacionadas"><h3>Recetas relacionadas</h3><ul>';
+    rels.forEach(function(x) {
+      relHTML += '<li><a href="' + slugify(x.titulo) + '.html">' + esc(x.titulo) + '</a></li>';
+    });
+    relHTML += '</ul></aside>';
+  }
+
+  var h = '<!DOCTYPE html><html lang="es-CL"><head>';
+  h += '<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">';
+  h += '<title>' + esc(r.titulo) + ' | Recetario Chileno</title>';
+  h += '<meta name="description" content="' + esc('Receta chilena de ' + r.titulo + '. Ingredientes y preparación paso a paso.') + '">';
+  h += '<meta name="robots" content="index,follow">';
+  h += '<link rel="canonical" href="' + url + '">';
+  h += '<meta property="og:type" content="article">';
+  h += '<meta property="og:title" content="' + esc(r.titulo) + ' | Recetario Chileno">';
+  h += '<meta property="og:description" content="' + esc('Receta chilena de ' + r.titulo) + '">';
+  h += '<meta property="og:image" content="' + img + '">';
+  h += '<meta property="og:url" content="' + url + '">';
+  h += '<meta property="og:locale" content="es_CL">';
+  h += '<meta name="twitter:card" content="summary_large_image">';
+  h += '<link rel="stylesheet" href="../estilos.css">';
+  h += '<script type="application/ld+json">' + schema + '<\/script>';
+  h += '<script type="application/ld+json">' + bread + '<\/script>';
+  h += '</head><body>';
+  h += '<div class="bandera"><i class="azul"></i><i class="blanco"></i><i class="rojo"></i></div>';
+  h += '<header class="hero-receta"><div class="hero-receta-inner">';
+  h += '<nav class="breadcrumb"><a href="../index.html">Inicio</a> &rsaquo; <a href="../index.html">Recetas</a> &rsaquo; <span class="breadcrumb-current">' + esc(r.titulo) + '</span></nav>';
+  h += '<h1>' + esc(r.titulo) + '</h1>';
+  h += '<div class="meta">' + chips + '</div>';
+  h += '</div></header>';
+  h += '<main class="receta-page"><article class="receta" data-cat="' + esc(r.categoria || 'principales') + '">';
+  h += '<div class="cuerpo">';
+  h += '<div><h3>' + esc(r.tituloIngredientes || 'Ingredientes') + '</h3><ul class="ingredientes">' + ing + '</ul></div>';
+  h += '<div><h3>Preparación</h3><ol class="preparacion">' + pasos + '</ol>' + dato + '</div>';
+  h += '</div></article>';
+  h += relHTML;
+  h += nav;
+  h += '</main>';
+  h += '<footer><div class="bandera"><i class="azul"></i><i class="blanco"></i><i class="rojo"></i></div><span class="footer-flag"></span><a href="../index.html">Recetario Chileno</a> · Hecho con cariño en Chile</footer>';
+  h += '</body></html>';
+  return h;
+}
+
+function generar() {
+  var log = document.getElementById('log');
+  var btn = document.getElementById('btnGenerar');
+  btn.disabled = true;
+  log.textContent = 'Iniciando...\n';
+
+  if (typeof JSZip === 'undefined') {
+    log.textContent += '\nNo se cargó JSZip.\n\nSOLUCIÓN:\n1. Descarga https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js\n2. Guárdalo como jszip.min.js en esta carpeta\n3. Recarga la página\n';
+    btn.disabled = false;
+    return;
+  }
+  log.textContent += 'OK: JSZip cargado\n';
+
+  if (typeof RECETAS === 'undefined' || !Array.isArray(RECETAS)) {
+    log.textContent += '\nNo se cargó recetas.js. Verifica que esté en la misma carpeta.\n';
+    btn.disabled = false;
+    return;
+  }
+  log.textContent += 'OK: ' + RECETAS.length + ' recetas\n\n';
+
+  var zip = new JSZip();
+  var carpeta = zip.folder('recetas');
+  var total = RECETAS.length;
+
+  RECETAS.forEach(function(r, i) {
+    var slug = slugify(r.titulo);
+    carpeta.file(slug + '.html', crearPagina(r, i, total, RECETAS));
+    log.textContent += 'OK ' + (i+1) + '/' + total + '  ' + slug + '.html\n';
+  });
+
+  log.textContent += '\nEmpaquetando ZIP...\n';
+  zip.generateAsync({ type: 'blob' }).then(function(blob) {
+    log.textContent += 'OK: ZIP (' + Math.round(blob.size/1024) + ' KB)\n\n';
+    var u = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = u; a.download = 'recetas.zip';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(function(){ URL.revokeObjectURL(u); }, 1000);
+    log.textContent += 'LISTO. Se descargó recetas.zip\n\nSIGUIENTE:\n1. Extrae la carpeta "recetas" dentro de Intento 2/\n2. git add .\n3. git commit -m "Páginas individuales"\n4. git pull --rebase\n5. git push\n';
+    btn.disabled = false;
+  }).catch(function(err) {
+    log.textContent += '\nERROR: ' + err.message + '\n';
+    btn.disabled = false;
+  });
+}
+
+document.getElementById('btnGenerar').addEventListener('click', generar);
+</script>
+
+</body>
+</html>

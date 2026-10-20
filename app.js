@@ -12,10 +12,10 @@
      ===================================================== */
   const SITE_CONFIG = {
     nombre: 'Recetario Chileno',
-    urlBase: 'recetariochileno.netlify.app',       // ← TU DOMINIO REAL (sin / al final)
-    autor: 'Recetario Chileno',                    // ← Tu nombre o el del sitio
-    imagenDefault: 'img/og-default.jpg',           // ← Imagen 1200×630 para redes sociales
-    fechaPublicacion: '2025-01-15'                 // ← Fecha de publicación original
+    urlBase: 'https://recetariochileno.netlify.app',
+    autor: 'Recetario Chileno',
+    imagenDefault: 'img/og-default.jpg',
+    fechaPublicacion: '2025-01-15'
   };
 
   /* ---------- Verificación de datos ---------- */
@@ -76,7 +76,7 @@
     return String(s).replace(/"/g, '&quot;').replace(/'/g, '&#39;');
   }
 
-  /* Convierte "1 h 30 min" → "PT1H30M" (formato ISO 8601 que exige Schema.org) */
+  /* Convierte "1 h 30 min" → "PT1H30M" */
   function parseTiempo(texto) {
     if (!texto) return 'PT60M';
     const t = String(texto).toLowerCase();
@@ -92,7 +92,15 @@
     return iso;
   }
 
-  /* Traduce la categoría interna a una legible para Google */
+  /* Genera un slug URL-safe: "Empanadas de pino" → "empanadas-de-pino" */
+  function slugify(text) {
+    return String(text).toLowerCase()
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '');
+  }
+
+  /* Categoría legible para Google */
   function mapearCategoria(cat) {
     const mapa = {
       'principales': 'Plato principal',
@@ -104,7 +112,7 @@
     return mapa[cat] || 'Plato principal';
   }
 
-  /* Devuelve la URL absoluta de una imagen */
+  /* URL absoluta de imagen */
   function imagenAbsoluta(ruta) {
     if (!ruta) return SITE_CONFIG.urlBase + '/' + SITE_CONFIG.imagenDefault;
     if (/^https?:\/\//.test(ruta)) return ruta;
@@ -112,7 +120,7 @@
   }
 
   /* =====================================================
-     SCHEMA.ORG — Inyección de datos estructurados
+     SCHEMA.ORG
      ===================================================== */
 
   function inyectarSchemaReceta(receta) {
@@ -125,14 +133,8 @@
       "@type": "Recipe",
       "name": receta.titulo,
       "image": [imagenAbsoluta(rutaImagen)],
-      "author": {
-        "@type": "Organization",
-        "name": SITE_CONFIG.autor
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": SITE_CONFIG.nombre
-      },
+      "author": { "@type": "Organization", "name": SITE_CONFIG.autor },
+      "publisher": { "@type": "Organization", "name": SITE_CONFIG.nombre },
       "datePublished": SITE_CONFIG.fechaPublicacion,
       "description": "Receta tradicional chilena de " + receta.titulo +
                      (receta.dato ? '. ' + receta.dato : '.'),
@@ -142,11 +144,7 @@
       "recipeYield": receta.porciones || "4 porciones",
       "recipeIngredient": receta.ingredientes || [],
       "recipeInstructions": (receta.pasos || []).map(function (paso, i) {
-        return {
-          "@type": "HowToStep",
-          "position": i + 1,
-          "text": paso
-        };
+        return { "@type": "HowToStep", "position": i + 1, "text": paso };
       })
     };
 
@@ -177,6 +175,7 @@
 
   function crearTarjeta(receta, indice) {
     const id = 'receta-' + indice;
+    const slug = slugify(receta.titulo);
 
     let bloqueImagen = '';
     if (receta.imagen && receta.imagen.trim() !== '') {
@@ -224,6 +223,7 @@
             datoHTML +
           '</div>' +
         '</div>' +
+        '<a class="receta-cta" href="recetas/' + slug + '.html">Ver página completa →</a>' +
       '</article>';
   }
 
@@ -236,17 +236,15 @@
     contenedor.innerHTML = html;
     tarjetas = Array.from(contenedor.querySelectorAll('.receta'));
 
-    // Inyectar un Schema Recipe por cada receta (en <head>)
     RECETAS.forEach(function (receta) {
       inyectarSchemaReceta(receta);
     });
 
-    // Inyectar Schema del sitio una sola vez
     inyectarSchemaSitio();
   }
 
   /* =====================================================
-     RESALTADO DE COINCIDENCIAS
+     RESALTADO
      ===================================================== */
 
   function limpiarResaltados(root) {
