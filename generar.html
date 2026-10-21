@@ -123,6 +123,9 @@ function crearPagina(r, i, total, todos) {
   h += '<meta property="og:url" content="' + url + '">';
   h += '<meta property="og:locale" content="es_CL">';
   h += '<meta name="twitter:card" content="summary_large_image">';
+  h += '<link rel="preconnect" href="https://fonts.googleapis.com">';
+  h += '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>';
+  h += '<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">';
   h += '<link rel="stylesheet" href="../estilos.css">';
   h += '<script type="application/ld+json">' + schema + '<\/script>';
   h += '<script type="application/ld+json">' + bread + '<\/script>';
@@ -130,7 +133,6 @@ function crearPagina(r, i, total, todos) {
   h += '<!-- Google Tag Manager (noscript) --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXH425KQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!-- End Google Tag Manager (noscript) -->';
   h += '<div class="bandera"><i class="azul"></i><i class="blanco"></i><i class="rojo"></i></div>';
 
-  // Menú principal (con buscador)
   h += '<header class="site-nav"><div class="site-nav-inner">';
   h += '<a href="../index.html" class="site-nav-logo" aria-label="Recetario Chileno — Inicio"><div class="marca-logo"><span class="estrella"></span></div><span class="marca-texto">Recetario Chileno</span></a>';
   h += '<button class="site-nav-toggle" aria-label="Abrir menú" aria-expanded="false"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>';
@@ -234,7 +236,7 @@ function generar() {
     a.href = u; a.download = 'recetas.zip';
     document.body.appendChild(a); a.click(); document.body.removeChild(a);
     setTimeout(function(){ URL.revokeObjectURL(u); }, 1000);
-    log.textContent += 'LISTO. Se descargó recetas.zip\n\nSIGUIENTE:\n1. Extrae la carpeta "recetas" dentro de Intento 2/ (reemplaza la existente)\n2. git add .\n3. git commit -m "Buscador en nav"\n4. git pull --rebase\n5. git push\n';
+    log.textContent += 'LISTO. Se descargó recetas.zip\n\nSIGUIENTE:\n1. Extrae la carpeta "recetas" dentro de Intento 2/ (reemplaza la existente)\n2. git add .\n3. git commit -m "F1: tipografía Fraunces + Inter"\n4. git pull --rebase\n5. git push\n';
     btn.disabled = false;
   }).catch(function(err) {
     log.textContent += '\nERROR: ' + err.message + '\n';

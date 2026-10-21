@@ -17,9 +17,11 @@
   --sombra-sm:0 1px 3px rgba(90,60,30,.08);
   --sombra-md:0 4px 16px rgba(90,60,30,.08);
   --sombra-lg:0 12px 32px rgba(90,60,30,.14);
+  --fuente-titulos:'Fraunces', Georgia, 'Playfair Display', serif;
+  --fuente-texto:'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--crema);color:var(--tinta);font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+body{background:var(--crema);color:var(--tinta);font-family:var(--fuente-texto);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
 
 .bandera{height:6px;display:flex;position:relative;overflow:hidden}
 .bandera i{flex:1}
@@ -40,7 +42,7 @@ body{background:var(--crema);color:var(--tinta);font-family:'Inter',system-ui,-a
 .bandera-chile .estrella{position:absolute;top:25%;left:16.666%;width:24%;aspect-ratio:1;transform:translate(-50%,-50%);background:#ffffff;clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
 .hero-copy{text-align:center;min-width:0}
 .hero-eyebrow{font-size:.72rem;text-transform:uppercase;letter-spacing:.24em;color:var(--suave);margin-bottom:.6rem;font-weight:600}
-.hero-copy h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2.3rem,6vw,3.6rem);color:var(--rojo-osc);letter-spacing:-1px;line-height:1.05;font-weight:700;margin:0;text-shadow:0 1px 0 rgba(255,255,255,.5)}
+.hero-copy h1{font-family:var(--fuente-titulos);font-size:clamp(2.3rem,6vw,3.6rem);color:var(--rojo-osc);letter-spacing:-1px;line-height:1.05;font-weight:700;margin:0;text-shadow:0 1px 0 rgba(255,255,255,.5)}
 .hero-copy .sub{color:var(--suave);margin-top:.9rem;font-size:1.08rem;max-width:480px;margin-left:auto;margin-right:auto;font-style:italic}
 .hero-copy .lema{display:inline-flex;align-items:center;gap:.7rem;margin-top:1.4rem;font-size:.78rem;text-transform:uppercase;letter-spacing:.22em;color:var(--rojo);font-weight:600;padding:.5rem 1.2rem;background:#fff;border:1px solid var(--borde);border-radius:99px;box-shadow:var(--sombra-sm)}
 .hero-copy .lema::before,.hero-copy .lema::after{content:"✦";color:var(--dorado);font-size:.9rem;letter-spacing:0}
@@ -93,7 +95,7 @@ main{max-width:980px;margin:0 auto;padding:2.5rem 1rem 5rem}
 .receta-img{width:100%;height:240px;object-fit:cover;border-radius:10px;margin-bottom:1.5rem;display:block;background:var(--crema-osc)}
 .receta-img-error{width:100%;height:60px;border-radius:8px;margin-bottom:1.5rem;display:flex;align-items:center;justify-content:center;background:var(--crema-osc);color:var(--suave);font-size:.85rem;font-style:italic;border:1px dashed var(--borde)}
 
-.receta h2{font-family:'Playfair Display',Georgia,serif;color:var(--rojo-osc);font-size:1.7rem;line-height:1.2;letter-spacing:-.3px;margin-bottom:.2rem}
+.receta h2{font-family:var(--fuente-titulos);color:var(--rojo-osc);font-size:1.7rem;line-height:1.2;letter-spacing:-.3px;margin-bottom:.2rem;font-weight:700}
 .receta h2 a{color:inherit;text-decoration:none;transition:color .2s ease}
 .receta h2 a:hover{color:var(--rojo);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
 .receta h2::after{content:"";display:block;width:40px;height:2px;background:var(--acento);margin-top:.7rem;border-radius:2px}
@@ -156,7 +158,7 @@ footer .bandera{max-width:140px;margin:0 auto 1.2rem;border-radius:4px;overflow:
 .marca-logo{position:relative;width:32px;aspect-ratio:3/2;background:linear-gradient(to bottom,#ffffff 50%,#d52b1e 50%);border-radius:4px;box-shadow:0 2px 6px rgba(122,27,21,.2);overflow:hidden}
 .marca-logo::before{content:"";position:absolute;top:0;left:0;width:33.333%;height:50%;background:#0039a6}
 .marca-logo .estrella{position:absolute;top:25%;left:16.666%;width:24%;aspect-ratio:1;transform:translate(-50%,-50%);background:#ffffff;clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
-.marca-texto{font-family:'Playfair Display',Georgia,serif;font-size:1.5rem;font-weight:700;letter-spacing:-.5px}
+.marca-texto{font-family:var(--fuente-titulos);font-size:1.5rem;font-weight:700;letter-spacing:-.5px}
 
 .hero-receta{padding:2rem 1.2rem 2.5rem;text-align:center;background:linear-gradient(180deg,#fefaf3 0%,var(--crema) 100%);border-bottom:1px solid var(--borde)}
 .hero-receta-inner{max-width:880px;margin:0 auto}
@@ -164,7 +166,7 @@ footer .bandera{max-width:140px;margin:0 auto 1.2rem;border-radius:4px;overflow:
 .breadcrumb a{color:var(--rojo);text-decoration:none}
 .breadcrumb a:hover{text-decoration:underline}
 .breadcrumb-current{color:var(--suave)}
-.hero-receta h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.8rem,5vw,2.8rem);color:var(--rojo-osc);letter-spacing:-.5px;line-height:1.15;margin-bottom:1rem}
+.hero-receta h1{font-family:var(--fuente-titulos);font-size:clamp(1.8rem,5vw,2.8rem);color:var(--rojo-osc);letter-spacing:-.5px;line-height:1.15;margin-bottom:1rem;font-weight:700}
 .hero-receta .meta{justify-content:center;margin:0}
 
 .receta-page{max-width:900px;margin:0 auto;padding:2.5rem 1rem 4rem}
@@ -207,9 +209,9 @@ footer .bandera{max-width:140px;margin:0 auto 1.2rem;border-radius:4px;overflow:
    PÁGINAS LEGALES
    ===================================================== */
 .legal-page{max-width:780px;margin:0 auto;padding:3rem 1.5rem 4rem}
-.legal-page h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2rem,5vw,2.8rem);color:var(--rojo-osc);letter-spacing:-.5px;line-height:1.15;margin-bottom:.5rem}
+.legal-page h1{font-family:var(--fuente-titulos);font-size:clamp(2rem,5vw,2.8rem);color:var(--rojo-osc);letter-spacing:-.5px;line-height:1.15;margin-bottom:.5rem;font-weight:700}
 .legal-page .legal-subtitle{color:var(--suave);font-size:.95rem;font-style:italic;margin-bottom:2.5rem;padding-bottom:1rem;border-bottom:1px solid var(--borde)}
-.legal-page h2{font-family:'Playfair Display',Georgia,serif;color:var(--rojo-osc);font-size:1.4rem;margin:2.5rem 0 1rem;letter-spacing:-.3px}
+.legal-page h2{font-family:var(--fuente-titulos);color:var(--rojo-osc);font-size:1.4rem;margin:2.5rem 0 1rem;letter-spacing:-.3px;font-weight:700}
 .legal-page h2::before{content:"";display:block;width:35px;height:2px;background:var(--rojo);margin-bottom:.7rem;border-radius:2px}
 .legal-page h3{font-size:1rem;color:var(--azul);margin:1.5rem 0 .5rem;text-transform:none;letter-spacing:0;border:none;padding:0;font-weight:700}
 .legal-page p,.legal-page li{font-size:.96rem;line-height:1.75;color:var(--tinta);margin-bottom:.9rem}
@@ -233,7 +235,7 @@ footer .bandera{max-width:140px;margin:0 auto 1.2rem;border-radius:4px;overflow:
 
 .pagina-404{max-width:600px;margin:0 auto;padding:5rem 1.5rem;text-align:center}
 .pagina-404 .icono{font-size:5rem;margin-bottom:1rem}
-.pagina-404 h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2rem,6vw,3rem);color:var(--rojo-osc);margin-bottom:1rem}
+.pagina-404 h1{font-family:var(--fuente-titulos);font-size:clamp(2rem,6vw,3rem);color:var(--rojo-osc);margin-bottom:1rem;font-weight:700}
 .pagina-404 p{color:var(--suave);margin-bottom:2rem;font-size:1.05rem}
 .pagina-404 .btn-volver{display:inline-block;padding:.8rem 1.6rem;background:var(--rojo);color:#fff;text-decoration:none;border-radius:99px;font-weight:600;transition:background .2s,transform .2s}
 .pagina-404 .btn-volver:hover{background:var(--rojo-osc);transform:translateY(-1px)}
@@ -242,7 +244,7 @@ footer .bandera{max-width:140px;margin:0 auto 1.2rem;border-radius:4px;overflow:
    LANDING PAGE (PORTADA)
    ===================================================== */
 .landing-intro{max-width:880px;margin:0 auto;padding:3rem 1.2rem 2rem;text-align:center}
-.landing-intro h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.6rem,4vw,2.2rem);color:var(--rojo-osc);letter-spacing:-.3px;margin-bottom:.7rem;line-height:1.2}
+.landing-intro h2{font-family:var(--fuente-titulos);font-size:clamp(1.6rem,4vw,2.2rem);color:var(--rojo-osc);letter-spacing:-.3px;margin-bottom:.7rem;line-height:1.2;font-weight:700}
 .landing-intro p{color:var(--suave);font-size:1.02rem;max-width:560px;margin:0 auto;font-style:italic}
 
 .categorias-grid{max-width:1000px;margin:0 auto;padding:0 1.2rem 1rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem}
@@ -259,7 +261,7 @@ footer .bandera{max-width:140px;margin:0 auto 1.2rem;border-radius:4px;overflow:
 .categoria-card[data-cat="dulces"]{--cat-color:#a8466f}
 
 .categoria-emoji{font-size:2.6rem;line-height:1;margin-bottom:1rem;filter:saturate(.9)}
-.categoria-nombre{font-family:'Playfair Display',Georgia,serif;font-size:1.5rem;color:var(--rojo-osc);letter-spacing:-.3px;line-height:1.15;margin-bottom:.4rem}
+.categoria-nombre{font-family:var(--fuente-titulos);font-size:1.5rem;color:var(--rojo-osc);letter-spacing:-.3px;line-height:1.15;margin-bottom:.4rem;font-weight:700}
 .categoria-count{font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--cat-color);margin-bottom:.9rem}
 .categoria-desc{font-size:.9rem;color:var(--suave);line-height:1.5;flex:1;margin-bottom:1rem}
 .categoria-arrow{align-self:flex-end;font-size:1.1rem;color:var(--cat-color);font-weight:700;transition:transform .3s ease}
@@ -287,7 +289,7 @@ footer .bandera{max-width:140px;margin:0 auto 1.2rem;border-radius:4px;overflow:
 .site-nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.65rem 1.2rem}
 .site-nav-logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--rojo-osc);flex-shrink:0}
 .site-nav-logo .marca-logo{width:28px;flex-shrink:0}
-.site-nav-logo .marca-texto{font-family:'Playfair Display',Georgia,serif;font-size:1.15rem;font-weight:700;letter-spacing:-.3px;white-space:nowrap}
+.site-nav-logo .marca-texto{font-family:var(--fuente-titulos);font-size:1.15rem;font-weight:700;letter-spacing:-.3px;white-space:nowrap}
 .site-nav-links{display:flex;gap:.25rem;flex-wrap:wrap;align-items:center}
 .site-nav-links a{color:var(--tinta);text-decoration:none;font-size:.9rem;font-weight:500;padding:.5rem .9rem;border-radius:99px;transition:background .2s,color .2s;white-space:nowrap}
 .site-nav-links a:hover{background:var(--crema-osc);color:var(--rojo)}
@@ -295,7 +297,6 @@ footer .bandera{max-width:140px;margin:0 auto 1.2rem;border-radius:4px;overflow:
 .site-nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:.5rem;color:var(--rojo-osc);border-radius:8px;transition:background .2s}
 .site-nav-toggle:hover{background:var(--crema-osc)}
 
-/* Buscador del menú (siempre visible) */
 .nav-search{position:relative;display:flex;align-items:center;flex:0 1 180px;min-width:140px;margin-right:.4rem}
 .nav-search-icon{position:absolute;left:.7rem;width:14px;height:14px;color:#a89a8c;pointer-events:none;transition:color .2s;z-index:1}
 .nav-search:focus-within .nav-search-icon{color:var(--rojo)}
