@@ -157,6 +157,14 @@ h3{font-size:.72rem;text-transform:uppercase;letter-spacing:.16em;color:var(--az
 .btn-imprimir:hover{background:var(--rojo);color:#fff;transform:translateY(-2px);box-shadow:0 6px 16px rgba(176,58,46,.25)}
 .btn-imprimir-receta{margin-bottom:1.5rem}
 
+/* Botón Modo Cocina */
+.btn-modo-cocina{display:inline-flex;align-items:center;gap:.45rem;padding:.7rem 1.3rem;background:var(--rojo-osc);color:#fff;border:1.5px solid var(--rojo-osc);border-radius:99px;font-family:inherit;font-size:.85rem;font-weight:600;cursor:pointer;transition:background .2s,transform .2s,box-shadow .2s}
+.btn-modo-cocina svg{width:15px;height:15px;flex-shrink:0}
+.btn-modo-cocina:hover{background:var(--rojo);border-color:var(--rojo);transform:translateY(-2px);box-shadow:0 6px 16px rgba(176,58,46,.35)}
+
+/* Wrapper para botones de acción en página individual */
+.receta-acciones-top{display:flex;gap:.8rem;flex-wrap:wrap;margin-bottom:1.5rem}
+
 .vacio{text-align:center;color:var(--suave);font-style:italic;padding:4rem 1rem}
 .vacio-icon{display:block;margin:0 auto 1rem;width:3.5rem;height:3.5rem;color:var(--suave);opacity:.55}
 .vacio .btn-limpiar{margin-top:1.4rem;padding:.75rem 1.6rem;border:2px solid var(--rojo);background:transparent;color:var(--rojo);border-radius:99px;font-family:inherit;font-weight:600;font-size:.9rem;cursor:pointer;transition:all .2s;font-style:normal}
@@ -357,6 +365,186 @@ footer .bandera{max-width:140px;margin:0 auto 1.2rem;border-radius:4px;overflow:
 }
 
 /* =====================================================
+   MODO COCINA — overlay fullscreen
+   ===================================================== */
+.mc-overlay{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  background:linear-gradient(135deg,#1a0f0a 0%,#2b1810 100%);
+  color:#fdf8f0;
+  display:flex;
+  flex-direction:column;
+  padding:1rem;
+  overflow:hidden;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .3s ease;
+}
+.mc-overlay.abierto{opacity:1;pointer-events:auto}
+body.mc-bloqueado{overflow:hidden}
+
+.mc-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:1rem;
+  padding:.5rem .5rem 1rem;
+  border-bottom:1px solid rgba(255,255,255,.15);
+  flex-shrink:0;
+}
+.mc-titulo{
+  font-family:var(--fuente-titulos);
+  font-size:clamp(1.2rem,3vw,1.7rem);
+  color:#fdf8f0;
+  font-weight:700;
+  line-height:1.2;
+  margin:0;
+  flex:1;
+}
+.mc-cerrar{
+  background:rgba(255,255,255,.10);
+  border:1px solid rgba(255,255,255,.20);
+  color:#fdf8f0;
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  cursor:pointer;
+  display:grid;
+  place-items:center;
+  flex-shrink:0;
+  transition:background .2s;
+}
+.mc-cerrar:hover{background:rgba(255,255,255,.20)}
+.mc-cerrar:focus-visible{outline:2px solid #e8b54a;outline-offset:2px}
+
+.mc-ingredientes{
+  margin-top:1rem;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:12px;
+  flex-shrink:0;
+}
+.mc-ingredientes summary{
+  padding:1rem 1.2rem;
+  cursor:pointer;
+  font-weight:600;
+  font-size:1rem;
+  color:#fdf8f0;
+  list-style:none;
+  display:flex;
+  align-items:center;
+  gap:.5rem;
+}
+.mc-ingredientes summary::-webkit-details-marker{display:none}
+.mc-ingredientes summary::after{
+  content:'▾';
+  margin-left:auto;
+  transition:transform .2s;
+  color:#e8b54a;
+  font-size:1.1rem;
+}
+.mc-ingredientes[open] summary::after{transform:rotate(180deg)}
+.mc-ing-lista{
+  list-style:none;
+  padding:0 1.2rem 1rem;
+  margin:0;
+  font-size:1.05rem;
+  line-height:1.6;
+  max-height:30vh;
+  overflow-y:auto;
+}
+.mc-ing-lista li{
+  padding:.5rem 0;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.mc-ing-lista li:last-child{border-bottom:none}
+
+.mc-contenido{
+  flex:1;
+  overflow-y:auto;
+  margin-top:1rem;
+  padding:1rem;
+  scroll-behavior:smooth;
+}
+.mc-paso{display:none;text-align:center;padding:2rem 1rem}
+.mc-paso.activo{display:block;animation:mcFadeIn .3s ease}
+@keyframes mcFadeIn{
+  from{opacity:0;transform:translateY(10px)}
+  to{opacity:1;transform:none}
+}
+.mc-paso-num{
+  font-size:.85rem;
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  color:#e8b54a;
+  font-weight:700;
+  margin-bottom:1.2rem;
+}
+.mc-paso-texto{
+  font-family:var(--fuente-texto);
+  font-size:clamp(1.3rem,3vw,1.9rem);
+  line-height:1.5;
+  color:#fdf8f0;
+  max-width:42ch;
+  margin:0 auto;
+  font-weight:500;
+}
+
+.mc-nav{
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  gap:1rem;
+  align-items:center;
+  padding:1rem .5rem .5rem;
+  border-top:1px solid rgba(255,255,255,.15);
+  flex-shrink:0;
+}
+.mc-nav button{
+  padding:1rem 1.4rem;
+  border-radius:99px;
+  font-family:inherit;
+  font-size:1rem;
+  font-weight:700;
+  cursor:pointer;
+  border:none;
+  transition:transform .2s,background .2s,opacity .2s;
+}
+.mc-prev{
+  background:rgba(255,255,255,.10);
+  color:#fdf8f0;
+  justify-self:start;
+}
+.mc-prev:hover:not(:disabled){background:rgba(255,255,255,.20);transform:translateY(-2px)}
+.mc-prev:disabled{opacity:.35;cursor:not-allowed}
+.mc-next{
+  background:var(--rojo);
+  color:#fff;
+  justify-self:end;
+}
+.mc-next:hover{background:var(--rojo-osc);transform:translateY(-2px)}
+.mc-next.mc-terminar{background:#4a7c59}
+.mc-next.mc-terminar:hover{background:#3d6449}
+.mc-contador{
+  font-size:1.05rem;
+  font-weight:700;
+  color:#e8b54a;
+  min-width:60px;
+  text-align:center;
+  font-variant-numeric:tabular-nums;
+}
+
+@media(max-width:640px){
+  .mc-overlay{padding:.5rem}
+  .mc-titulo{font-size:1.1rem}
+  .mc-nav{grid-template-columns:auto 1fr auto;padding:.8rem .3rem .3rem}
+  .mc-nav button{padding:.9rem 1rem;font-size:.9rem}
+  .mc-prev span,.mc-next span{display:none}
+  .mc-paso-texto{font-size:1.3rem}
+  .mc-paso{padding:1rem .5rem}
+}
+
+/* =====================================================
    IMPRESIÓN
    ===================================================== */
 @media print {
@@ -378,7 +566,9 @@ footer .bandera{max-width:140px;margin:0 auto 1.2rem;border-radius:4px;overflow:
   .breadcrumb,
   .btn-imprimir,
   .btn-imprimir-receta,
+  .btn-modo-cocina,
   .receta-acciones,
+  .receta-acciones-top,
   .receta-cta,
   .btn-volver-inicio,
   .receta-nav,
@@ -396,6 +586,7 @@ footer .bandera{max-width:140px;margin:0 auto 1.2rem;border-radius:4px;overflow:
   .legal-meta,
   .contacto-form,
   #sinResultados,
+  #modo-cocina,
   .contador,
   .meta-icon,
   .categoria-icon,

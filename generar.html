@@ -30,7 +30,8 @@ var ICONS = {
   porciones: '<svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2v6a3 3 0 0 0 6 0V2"/><path d="M8 11v11"/><path d="M20 2c-2 3-3 6-3 9h3v11"/></svg>',
   dificultad: '<svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>',
   tecnica: '<svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>',
-  imprimir: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>'
+  imprimir: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>',
+  chef: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"/><line x1="6" y1="17" x2="18" y2="17"/></svg>'
 };
 
 function slugify(t) {
@@ -84,6 +85,13 @@ function crearPagina(r, i, total, todos) {
       {"@type":"ListItem","position":3,"name":r.titulo,"item":url}
     ]
   });
+
+  var recetaJSON = JSON.stringify({
+    titulo: r.titulo,
+    categoria: r.categoria || 'principales',
+    ingredientes: r.ingredientes || [],
+    pasos: r.pasos || []
+  }).replace(/<\/script/g, '<\\/script');
 
   var ing = (r.ingredientes || []).map(function(x) {
     return '<li><label><input type="checkbox"><span>' + esc(x) + '</span></label></li>';
@@ -174,7 +182,10 @@ function crearPagina(r, i, total, todos) {
   h += '</div></header>';
 
   h += '<main class="receta-page">';
+  h += '<div class="receta-acciones-top">';
   h += '<button type="button" class="btn-imprimir btn-imprimir-receta" onclick="window.print()" aria-label="Imprimir esta receta">' + ICONS.imprimir + '<span>Imprimir receta</span></button>';
+  h += '<button type="button" class="btn-modo-cocina" aria-label="Abrir modo cocina">' + ICONS.chef + '<span>Modo cocina</span></button>';
+  h += '</div>';
   h += '<article class="receta" data-cat="' + esc(r.categoria || 'principales') + '">';
 
   var bloqueImagen = '';
@@ -202,6 +213,8 @@ function crearPagina(r, i, total, todos) {
   h += nav;
   h += '</main>';
   h += '<footer><div class="bandera"><i class="azul"></i><i class="blanco"></i><i class="rojo"></i></div><span class="footer-flag"></span>Recetario Chileno &middot; Hecho con cari&ntilde;o en Chile<nav class="footer-legal" aria-label="Enlaces legales"><a href="../sobre-mi.html">Sobre m&iacute;</a><span class="sep">&middot;</span><a href="../privacidad.html">Privacidad</a><span class="sep">&middot;</span><a href="../contacto.html">Contacto</a></nav></footer>';
+  h += '<script type="application/json" id="receta-data">' + recetaJSON + '<\/script>';
+  h += '<script src="../modo-cocina.js" defer><\/script>';
   h += '</body></html>';
   return h;
 }
@@ -244,7 +257,7 @@ function generar() {
     a.href = u; a.download = 'recetas.zip';
     document.body.appendChild(a); a.click(); document.body.removeChild(a);
     setTimeout(function(){ URL.revokeObjectURL(u); }, 1000);
-    log.textContent += 'LISTO. Se descargó recetas.zip\n\nSIGUIENTE:\n1. Extrae la carpeta "recetas" dentro de Intento 2/ (reemplaza la existente)\n2. git add .\n3. git commit -m "F2: iconos SVG en chips y categorías"\n4. git pull --rebase\n5. git push\n';
+    log.textContent += 'LISTO. Se descargó recetas.zip\n\nSIGUIENTE:\n1. Extrae la carpeta "recetas" dentro de Intento 2/ (reemplaza la existente)\n2. git add .\n3. git commit -m "F4: modo cocina"\n4. git pull --rebase\n5. git push\n';
     btn.disabled = false;
   }).catch(function(err) {
     log.textContent += '\nERROR: ' + err.message + '\n';

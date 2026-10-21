@@ -13,7 +13,7 @@
     fechaPublicacion: '2025-01-15'
   };
 
-  /* ---------- ICONOS (SVG inline, Phosphor/Lucide-style bold) ---------- */
+  /* ---------- ICONOS (SVG inline, bold) ---------- */
   var ICONS = {
     clock: '<svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>',
     porciones: '<svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2v6a3 3 0 0 0 6 0V2"/><path d="M8 11v11"/><path d="M20 2c-2 3-3 6-3 9h3v11"/></svg>',
@@ -157,8 +157,8 @@
     if (!cont) return;
     if (typeof RECETAS === 'undefined' || !Array.isArray(RECETAS) || RECETAS.length === 0) return;
 
-    var dia = Math.floor(Date.now() / 86400000);       // días desde epoch
-    var indice = dia % RECETAS.length;                  // rotación diaria determinística
+    var dia = Math.floor(Date.now() / 86400000);
+    var indice = dia % RECETAS.length;
     var r = RECETAS[indice];
     var slug = slugify(r.titulo);
     var img = r.imagen && r.imagen.trim() !== '' ? r.imagen : '';
@@ -244,6 +244,7 @@
         '</div>' +
         '<div class="receta-acciones">' +
           '<a class="receta-cta" href="recetas/' + slug + '.html">Ver página completa →</a>' +
+          '<button type="button" class="btn-modo-cocina" data-index="' + indice + '" aria-label="Abrir modo cocina">' + ICONS.chef + '<span>Modo cocina</span></button>' +
           '<button type="button" class="btn-imprimir" aria-label="Imprimir esta receta">' + ICONS.imprimir + '<span>Imprimir</span></button>' +
         '</div>' +
       '</article>';
@@ -393,7 +394,7 @@
   }
 
   /* =====================================================
-     PORTADA: receta destacada (independiente del listado)
+     PORTADA: receta destacada
      ===================================================== */
   renderizarDestacada();
 
@@ -461,12 +462,24 @@
   });
 
   contenedor.addEventListener('click', function (e) {
-    var btn = e.target.closest('.btn-imprimir');
-    if (!btn) return;
-    var tarjeta = btn.closest('.receta');
-    if (!tarjeta) return;
-    e.preventDefault();
-    imprimirTarjeta(tarjeta);
+    // Modo cocina
+    var btnMc = e.target.closest('.btn-modo-cocina');
+    if (btnMc) {
+      e.preventDefault();
+      var idx = parseInt(btnMc.dataset.index, 10);
+      if (window.ModoCocina && !isNaN(idx) && RECETAS[idx]) {
+        window.ModoCocina.abrir(RECETAS[idx]);
+      }
+      return;
+    }
+    // Imprimir
+    var btnImp = e.target.closest('.btn-imprimir');
+    if (btnImp) {
+      var tarjeta = btnImp.closest('.receta');
+      if (!tarjeta) return;
+      e.preventDefault();
+      imprimirTarjeta(tarjeta);
+    }
   });
 
   /* ---------- Arranque ---------- */
