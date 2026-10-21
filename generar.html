@@ -129,15 +129,22 @@ function crearPagina(r, i, total, todos) {
   h += '</head><body>';
   h += '<!-- Google Tag Manager (noscript) --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXH425KQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!-- End Google Tag Manager (noscript) -->';
   h += '<div class="bandera"><i class="azul"></i><i class="blanco"></i><i class="rojo"></i></div>';
-  
+
+  // Menú principal
+  h += '<header class="site-nav"><div class="site-nav-inner">';
+  h += '<a href="../index.html" class="site-nav-logo" aria-label="Recetario Chileno — Inicio"><div class="marca-logo"><span class="estrella"></span></div><span class="marca-texto">Recetario Chileno</span></a>';
+  h += '<button class="site-nav-toggle" aria-label="Abrir menú" aria-expanded="false"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>';
+  h += '<nav class="site-nav-links" aria-label="Navegación principal">';
+  h += '<a href="../index.html">Inicio</a>';
+  h += '<a href="../recetario.html" class="activo">Recetas</a>';
+  h += '<a href="../guias.html">Guías</a>';
+  h += '<a href="../sobre-mi.html">Sobre mí</a>';
+  h += '<a href="../contacto.html">Contacto</a>';
+  h += '</nav></div></header>';
+
   var catActual = r.categoria || 'principales';
-  
+
   h += '<header class="hero-receta">';
-  h += '<a href="../index.html" class="header-marca">';
-  h += '<div class="marca-logo"><span class="estrella"></span></div>';
-  h += '<span class="marca-texto">Recetario Chileno</span>';
-  h += '</a>';
-  
   h += '<div class="hero-receta-inner">';
   h += '<nav class="breadcrumb"><a href="../index.html">Inicio</a> &rsaquo; <a href="../recetario.html">Recetas</a> &rsaquo; <span class="breadcrumb-current">' + esc(r.titulo) + '</span></nav>';
   h += '<h1>' + esc(r.titulo) + '</h1>';
@@ -146,33 +153,30 @@ function crearPagina(r, i, total, todos) {
   h += '<a href="../recetario.html" class="filtro ' + (catActual==='todas'?'activo':'') + '">Todas</a>';
   h += '<a href="../recetario.html?cat=principales" class="filtro ' + (catActual==='principales'?'activo':'') + '">Platos de fondo</a>';
   h += '<a href="../recetario.html?cat=sopas" class="filtro ' + (catActual==='sopas'?'activo':'') + '">Sopas y guisos</a>';
-  h += '<a href="../recetario.html?cat=panes" class="filtro ' + (catActual==='panes'?'activo':'') + '">Masas y panes</a>';
-  h += '<a href="../recetario.html?cat=ensaladas" class="filtro ' + (catActual==='ensaladas'?'activo':'') + '">Ensaladas</a>';
+  h += '<a href="../recetario.html?cat=panes" class="filtro ' + (catActual==='panes'?'activo':'') + '">Masas y horneados</a>';
+  h += '<a href="../recetario.html?cat=ensaladas" class="filtro ' + (catActual==='ensaladas'?'activo':'') + '">Ensaladas y picoteo</a>';
   h += '<a href="../recetario.html?cat=dulces" class="filtro ' + (catActual==='dulces'?'activo':'') + '">Dulces</a>';
   h += '</div>';
   h += '</div></header>';
-  
+
   h += '<main class="receta-page">';
   h += '<button type="button" class="btn-imprimir btn-imprimir-receta" onclick="window.print()" aria-label="Imprimir esta receta">🖨️ Imprimir receta</button>';
   h += '<article class="receta" data-cat="' + esc(r.categoria || 'principales') + '">';
-  
+
   var bloqueImagen = '';
   if (r.imagen && r.imagen.trim() !== '') {
     bloqueImagen = '<img class="receta-img" src="../' + esc(r.imagen) + '" alt="' + esc(r.titulo) + '" loading="eager">';
   }
   h += bloqueImagen;
-  
+
   h += '<div class="cuerpo">';
   h += '<div><h3>' + esc(r.tituloIngredientes || 'Ingredientes') + '</h3><ul class="ingredientes">' + ing + '</ul></div>';
   h += '<div><h3>Preparación</h3><ol class="preparacion">' + pasos + '</ol>' + dato + '</div>';
   h += '</div></article>';
 
-  // ==========================================
-  // BOTÓN DE COMPARTIR EN WHATSAPP
-  // ==========================================
   var msjWA = 'Mira esta receta de ' + r.titulo + ' en Recetario Chileno: ' + url;
   var linkWA = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(msjWA);
-  
+
   h += '<div class="compartir-receta">';
   h += '<span>¿Te gustó esta receta?</span>';
   h += '<a href="' + linkWA + '" target="_blank" rel="noopener" class="btn-whatsapp">';
@@ -226,7 +230,7 @@ function generar() {
     a.href = u; a.download = 'recetas.zip';
     document.body.appendChild(a); a.click(); document.body.removeChild(a);
     setTimeout(function(){ URL.revokeObjectURL(u); }, 1000);
-    log.textContent += 'LISTO. Se descargó recetas.zip\n\nSIGUIENTE:\n1. Extrae la carpeta "recetas" dentro de Intento 2/ (reemplaza la existente)\n2. git add .\n3. git commit -m "Agregar botón de imprimir en recetas individuales"\n4. git pull --rebase\n5. git push\n';
+    log.textContent += 'LISTO. Se descargó recetas.zip\n\nSIGUIENTE:\n1. Extrae la carpeta "recetas" dentro de Intento 2/ (reemplaza la existente)\n2. git add .\n3. git commit -m "Menú principal + buscador portada + categorías"\n4. git pull --rebase\n5. git push\n';
     btn.disabled = false;
   }).catch(function(err) {
     log.textContent += '\nERROR: ' + err.message + '\n';

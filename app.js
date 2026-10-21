@@ -18,6 +18,23 @@
     fechaPublicacion: '2025-01-15'
   };
 
+  /* ---------- Nav toggle (todas las páginas) ---------- */
+  (function initNavToggle() {
+    var toggle = document.querySelector('.site-nav-toggle');
+    var links  = document.querySelector('.site-nav-links');
+    if (!toggle || !links) return;
+    toggle.addEventListener('click', function () {
+      var open = links.classList.toggle('abierto');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    links.addEventListener('click', function (e) {
+      if (e.target.closest('a')) {
+        links.classList.remove('abierto');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+
   /* ---------- Verificación de datos ---------- */
   if (typeof RECETAS === 'undefined' || !Array.isArray(RECETAS)) {
     console.error('❌ No se encontró el archivo recetas.js o no tiene el formato correcto.');
@@ -51,6 +68,13 @@
   const catParam = urlParams.get('cat');
   if (catParam && ['principales', 'sopas', 'panes', 'ensaladas', 'dulces'].includes(catParam)) {
     categoriaActiva = catParam;
+  }
+
+  // Leer búsqueda desde URL (?buscar=choclo)
+  const buscarParam = urlParams.get('buscar');
+  if (buscarParam && buscarParam.trim() !== '') {
+    textoBusqueda = buscarParam.trim();
+    if (buscador) buscador.value = textoBusqueda;
   }
 
   /* =====================================================
@@ -264,24 +288,19 @@
      ===================================================== */
 
   function imprimirTarjeta(tarjeta) {
-    // Marcar SOLO esta tarjeta para imprimir
     document.querySelectorAll('.receta').forEach(function (t) {
       t.classList.remove('imprimir-esta');
     });
     tarjeta.classList.add('imprimir-esta');
     document.body.classList.add('modo-impresion');
 
-    // Limpiar clases después de imprimir
     var limpiar = function () {
       document.body.classList.remove('modo-impresion');
       tarjeta.classList.remove('imprimir-esta');
       window.removeEventListener('afterprint', limpiar);
     };
     window.addEventListener('afterprint', limpiar);
-
     window.print();
-
-    // Respaldo para navegadores que no disparan afterprint
     setTimeout(limpiar, 2000);
   }
 
@@ -436,7 +455,6 @@
     });
   });
 
-  // Delegación de eventos: un solo listener para el botón "Imprimir" de cada tarjeta
   contenedor.addEventListener('click', function (e) {
     var btn = e.target.closest('.btn-imprimir');
     if (!btn) return;
@@ -452,7 +470,6 @@
 
   renderizar();
 
-  // Marcar botón activo según la URL
   botones.forEach(function (b) {
     b.classList.toggle('activo', b.dataset.cat === categoriaActiva);
   });

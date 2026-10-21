@@ -2,30 +2,15 @@
 <html lang="es-CL">
 <head>
 <meta charset="UTF-8">
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KXH425KQ');</script>
-<!-- End Google Tag Manager -->
-
-<!-- Google tag (gtag.js) -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KXH425KQ');</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PCNBDPPXXYP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-PCNBDPPXXYP');
-</script>
-
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-PCNBDPPXXYP');</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Recetario Chileno · Sabores de casa</title>
 <meta name="description" content="Las mejores recetas tradicionales chilenas explicadas paso a paso. Explora por categoría: platos de fondo, sopas, masas, ensaladas y dulces.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#7a1b15">
 <link rel="canonical" href="https://recetariochileno.netlify.app/index.html">
-
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Recetario Chileno">
 <meta property="og:title" content="Recetario Chileno · Sabores de casa">
@@ -40,12 +25,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXH425KQ"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXH425KQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="bandera"><i class="azul"></i><i class="blanco"></i><i class="rojo"></i></div>
+
+<!-- NUEVO: menú principal -->
+<header class="site-nav">
+  <div class="site-nav-inner">
+    <a href="index.html" class="site-nav-logo" aria-label="Recetario Chileno — Inicio">
+      <div class="marca-logo"><span class="estrella"></span></div>
+      <span class="marca-texto">Recetario Chileno</span>
+    </a>
+    <button class="site-nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <nav class="site-nav-links" aria-label="Navegación principal">
+      <a href="index.html" class="activo">Inicio</a>
+      <a href="recetario.html">Recetas</a>
+      <a href="guias.html">Guías</a>
+      <a href="sobre-mi.html">Sobre mí</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </div>
+</header>
 
 <header class="hero">
   <svg class="hero-mountains" viewBox="0 0 1440 260" preserveAspectRatio="none" aria-hidden="true">
@@ -71,6 +73,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h1>Recetario Chileno</h1>
       <p class="sub">Sabores de casa, de la cocina de la abuela a tu mesa</p>
       <div class="lema">Recetas tradicionales</div>
+
+      <!-- NUEVO: buscador en portada -->
+      <form class="hero-search" action="recetario.html" method="get" role="search">
+        <svg class="hero-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input type="search" name="buscar" placeholder="Buscar receta o ingrediente…" aria-label="Buscar recetas" autocomplete="off">
+        <button type="submit">Buscar</button>
+      </form>
     </div>
   </div>
 </header>
@@ -99,7 +110,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <a class="categoria-card" data-cat="panes" href="recetario.html?cat=panes">
     <span class="categoria-emoji" aria-hidden="true">🥖</span>
-    <span class="categoria-nombre">Masas y panes</span>
+    <span class="categoria-nombre">Masas y horneados</span>
     <span class="categoria-count" data-count-cat="panes">7 recetas</span>
     <span class="categoria-desc">Sopaipillas, pan amasado, humitas, empanadas de queso y todo lo que sale del horno.</span>
     <span class="categoria-arrow" aria-hidden="true">→</span>
@@ -107,9 +118,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <a class="categoria-card" data-cat="ensaladas" href="recetario.html?cat=ensaladas">
     <span class="categoria-emoji" aria-hidden="true">🥗</span>
-    <span class="categoria-nombre">Ensaladas</span>
+    <span class="categoria-nombre">Ensaladas y picoteo</span>
     <span class="categoria-count" data-count-cat="ensaladas">6 recetas</span>
-    <span class="categoria-desc">Ensalada chilena, rusa, tomática y chancho en piedra para acompañar cualquier comida.</span>
+    <span class="categoria-desc">Ensalada chilena, rusa, chancho en piedra y todo lo que se sirve para picar o acompañar.</span>
     <span class="categoria-arrow" aria-hidden="true">→</span>
   </a>
 
@@ -121,7 +132,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span class="categoria-arrow" aria-hidden="true">→</span>
   </a>
 
-  <!-- NUEVA TARJETA: GUÍAS -->
   <a class="categoria-card" href="guias.html" style="--cat-color:#2c3e50;">
     <span class="categoria-emoji" aria-hidden="true">📖</span>
     <span class="categoria-nombre">Guías de Cocina</span>
@@ -154,6 +164,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer>
 
 <script src="recetas.js"></script>
+<script src="app.js"></script>
 <script>
 (function () {
   if (typeof RECETAS === 'undefined' || !Array.isArray(RECETAS)) return;
