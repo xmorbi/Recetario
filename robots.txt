@@ -1,4 +1,31 @@
+# ==========================================
+# ROBOTS.TXT - Recetario Chileno
+# ==========================================
+
+# 1. Reglas generales para todos los motores de búsqueda
 User-agent: *
 Allow: /
 
+# Bloquear la herramienta interna de generación de páginas
+Disallow: /generar.html
+
+# 2. Ubicación del mapa del sitio
 Sitemap: https://recetariochileno.netlify.app/sitemap.xml
+
+# 3. Permisos explícitos para rastreadores de Inteligencia Artificial
+# Esto permite que ChatGPT, Claude y Perplexity citen tu sitio
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
