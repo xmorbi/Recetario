@@ -181,7 +181,7 @@ const RECETAS = [
   /* ============ 6. HUMITAS ============ */
   {
     titulo: 'Humitas',
-    categoria: 'panes',
+    categoria: 'principales',
     imagen: '',
     tiempo: '80 min',
     porciones: '8 unidades',
