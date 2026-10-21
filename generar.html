@@ -68,10 +68,12 @@ function crearPagina(r, i, total, todos) {
       return {"@type":"HowToStep","position":idx+1,"text":p};
     })
   });
+  
+  // BREADCRUMB ACTUALIZADO CON .HTML EN INICIO Y RECETAS
   var bread = JSON.stringify({
     "@context":"https://schema.org","@type":"BreadcrumbList",
     "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Inicio","item":URL_BASE+"/"},
+      {"@type":"ListItem","position":1,"name":"Inicio","item":URL_BASE+"/index.html"},
       {"@type":"ListItem","position":2,"name":"Recetas","item":URL_BASE+"/recetario.html"},
       {"@type":"ListItem","position":3,"name":r.titulo,"item":url}
     ]
@@ -210,7 +212,7 @@ function generar() {
     a.href = u; a.download = 'recetas.zip';
     document.body.appendChild(a); a.click(); document.body.removeChild(a);
     setTimeout(function(){ URL.revokeObjectURL(u); }, 1000);
-    log.textContent += 'LISTO. Se descargó recetas.zip\n\nSIGUIENTE:\n1. Extrae la carpeta "recetas" dentro de Intento 2/ (reemplaza la existente)\n2. git add .\n3. git commit -m "Agregar cabecera de marca en recetas"\n4. git pull --rebase\n5. git push\n';
+    log.textContent += 'LISTO. Se descargó recetas.zip\n\nSIGUIENTE:\n1. Extrae la carpeta "recetas" dentro de Intento 2/ (reemplaza la existente)\n2. git add .\n3. git commit -m "Unificar URLs con .html"\n4. git pull --rebase\n5. git push\n';
     btn.disabled = false;
   }).catch(function(err) {
     log.textContent += '\nERROR: ' + err.message + '\n';

@@ -9,6 +9,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-KXH425KQ');</script>
 <!-- End Google Tag Manager -->
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PCNBDPPXXYP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PCNBDPPXXYP');
+</script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contacto | Recetario Chileno</title>
 <meta name="description" content="Escríbenos si tienes una receta que compartir, una corrección, una duda o simplemente quieres saludar. Contacto del Recetario Chileno.">
@@ -32,6 +42,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="bandera"><i class="azul"></i><i class="blanco"></i><i class="rojo"></i></div>
 
 <header class="hero-receta">
+  <a href="index.html" class="header-marca">
+    <div class="marca-logo"><span class="estrella"></span></div>
+    <span class="marca-texto">Recetario Chileno</span>
+  </a>
   <div class="hero-receta-inner">
     <nav class="breadcrumb" aria-label="Migas de pan">
       <a href="index.html">Inicio</a>
@@ -77,7 +91,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <h3>Correo electrónico directo</h3>
 
-  <p>Si prefieres escribir por fuera del formulario, mi correo es: <strong>[morbidan@gmail.com]</strong></p>
+  <p>Si prefieres escribir por fuera del formulario, mi correo es: <strong id="correo-protegido">cargando...</strong></p>
 
   <h2>Qué tipo de mensajes son bienvenidos</h2>
 
@@ -118,6 +132,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="contacto.html">Contacto</a>
   </nav>
 </footer>
+
+<script>
+// Este script arma el correo letra por letra para que los bots no lo lean
+(function() {
+  // ⚠️ REEMPLAZA ESTO POR TU CORREO REAL (pero escrito al revés)
+  // Por ejemplo, si tu correo es "hola@recetario.cl", escríbelo como "lc.oiratecer@aloh"
+  var correoInvertido = "lc.oiratecer@aloh"; 
+  
+  var correoReal = correoInvertido.split('').reverse().join('');
+  var elemento = document.getElementById('correo-protegido');
+  if (elemento) {
+    var enlace = document.createElement('a');
+    enlace.href = "mailto:" + correoReal;
+    enlace.textContent = correoReal;
+    enlace.style.color = "var(--rojo)";
+    elemento.innerHTML = "";
+    elemento.appendChild(enlace);
+  }
+})();
+</script>
 
 </body>
 </html>
