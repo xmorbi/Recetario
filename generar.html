@@ -152,7 +152,9 @@ function crearPagina(r, i, total, todos) {
   h += '</div>';
   h += '</div></header>';
   
-  h += '<main class="receta-page"><article class="receta" data-cat="' + esc(r.categoria || 'principales') + '">';
+  h += '<main class="receta-page">';
+  h += '<button type="button" class="btn-imprimir btn-imprimir-receta" onclick="window.print()" aria-label="Imprimir esta receta">🖨️ Imprimir receta</button>';
+  h += '<article class="receta" data-cat="' + esc(r.categoria || 'principales') + '">';
   
   var bloqueImagen = '';
   if (r.imagen && r.imagen.trim() !== '') {
@@ -224,7 +226,7 @@ function generar() {
     a.href = u; a.download = 'recetas.zip';
     document.body.appendChild(a); a.click(); document.body.removeChild(a);
     setTimeout(function(){ URL.revokeObjectURL(u); }, 1000);
-    log.textContent += 'LISTO. Se descargó recetas.zip\n\nSIGUIENTE:\n1. Extrae la carpeta "recetas" dentro de Intento 2/ (reemplaza la existente)\n2. git add .\n3. git commit -m "Agregar botón de WhatsApp"\n4. git pull --rebase\n5. git push\n';
+    log.textContent += 'LISTO. Se descargó recetas.zip\n\nSIGUIENTE:\n1. Extrae la carpeta "recetas" dentro de Intento 2/ (reemplaza la existente)\n2. git add .\n3. git commit -m "Agregar botón de imprimir en recetas individuales"\n4. git pull --rebase\n5. git push\n';
     btn.disabled = false;
   }).catch(function(err) {
     log.textContent += '\nERROR: ' + err.message + '\n';
