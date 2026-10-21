@@ -30,7 +30,7 @@
 
   /* ---------- Referencias del DOM ---------- */
   const contenedor      = document.getElementById('contenedorRecetas');
-  
+
   // Si no estamos en la página del recetario (ej. estamos en el index), no ejecutamos el motor
   if (!contenedor) return;
 
@@ -202,7 +202,7 @@
 
     const chips = [];
     if (receta.tiempo)     chips.push('<span>⏱ ' + escaparHtml(receta.tiempo) + '</span>');
-    if (receta.porciones)  chips.push('<span>🍽 ' + escaparHtml(receta.porciones) + '</span>');
+    if (receta.porciones)  chips.push('<span>🍽️ ' + escaparHtml(receta.porciones) + '</span>');
     if (receta.dificultad) chips.push('<span>Dificultad: ' + escaparHtml(receta.dificultad) + '</span>');
     if (receta.tecnica)    chips.push('<span>' + escaparHtml(receta.tecnica) + '</span>');
 
@@ -236,7 +236,10 @@
             datoHTML +
           '</div>' +
         '</div>' +
-        '<a class="receta-cta" href="recetas/' + slug + '.html">Ver página completa →</a>' +
+        '<div class="receta-acciones">' +
+          '<a class="receta-cta" href="recetas/' + slug + '.html">Ver página completa →</a>' +
+          '<button type="button" class="btn-imprimir" aria-label="Imprimir esta receta">🖨️ Imprimir</button>' +
+        '</div>' +
       '</article>';
   }
 
@@ -254,6 +257,32 @@
     });
 
     inyectarSchemaSitio();
+  }
+
+  /* =====================================================
+     IMPRIMIR RECETA
+     ===================================================== */
+
+  function imprimirTarjeta(tarjeta) {
+    // Marcar SOLO esta tarjeta para imprimir
+    document.querySelectorAll('.receta').forEach(function (t) {
+      t.classList.remove('imprimir-esta');
+    });
+    tarjeta.classList.add('imprimir-esta');
+    document.body.classList.add('modo-impresion');
+
+    // Limpiar clases después de imprimir
+    var limpiar = function () {
+      document.body.classList.remove('modo-impresion');
+      tarjeta.classList.remove('imprimir-esta');
+      window.removeEventListener('afterprint', limpiar);
+    };
+    window.addEventListener('afterprint', limpiar);
+
+    window.print();
+
+    // Respaldo para navegadores que no disparan afterprint
+    setTimeout(limpiar, 2000);
   }
 
   /* =====================================================
@@ -405,6 +434,16 @@
       categoriaActiva = boton.dataset.cat;
       aplicarFiltros();
     });
+  });
+
+  // Delegación de eventos: un solo listener para el botón "Imprimir" de cada tarjeta
+  contenedor.addEventListener('click', function (e) {
+    var btn = e.target.closest('.btn-imprimir');
+    if (!btn) return;
+    var tarjeta = btn.closest('.receta');
+    if (!tarjeta) return;
+    e.preventDefault();
+    imprimirTarjeta(tarjeta);
   });
 
   /* =====================================================
