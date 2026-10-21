@@ -1,21 +1,25 @@
 /* =================================================================
    APP.JS — Motor del recetario con Schema.org y SEO
-   ⚠️  NO EDITES EL RESTO DE ESTE ARCHIVO.
-   Solo configura el bloque SITE_CONFIG de abajo.
    ================================================================= */
 
 (function () {
   'use strict';
 
-  /* =====================================================
-     ⚙️ CONFIGURACIÓN DEL SITIO — EDITA ESTOS VALORES
-     ===================================================== */
   const SITE_CONFIG = {
     nombre: 'Recetario Chileno',
     urlBase: 'https://recetariochileno.netlify.app',
     autor: 'Recetario Chileno',
     imagenDefault: 'img/og-default.jpg',
     fechaPublicacion: '2025-01-15'
+  };
+
+  /* ---------- ICONOS (SVG inline, Phosphor/Lucide-style bold) ---------- */
+  var ICONS = {
+    clock: '<svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>',
+    porciones: '<svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2v6a3 3 0 0 0 6 0V2"/><path d="M8 11v11"/><path d="M20 2c-2 3-3 6-3 9h3v11"/></svg>',
+    dificultad: '<svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>',
+    tecnica: '<svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>',
+    imprimir: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>'
   };
 
   /* ---------- Nav toggle (todas las páginas) ---------- */
@@ -37,7 +41,7 @@
 
   /* ---------- Verificación de datos ---------- */
   if (typeof RECETAS === 'undefined' || !Array.isArray(RECETAS)) {
-    console.error('❌ No se encontró el archivo recetas.js o no tiene el formato correcto.');
+    console.error('No se encontró el archivo recetas.js o no tiene el formato correcto.');
     const contenedorErr = document.getElementById('contenedorRecetas');
     if (contenedorErr) {
       contenedorErr.innerHTML = '<p class="vacio">⚠️ No se pudieron cargar las recetas. Revisa que recetas.js esté en la misma carpeta que recetario.html.</p>';
@@ -46,45 +50,36 @@
   }
 
   /* ---------- Referencias del DOM ---------- */
-  const contenedor      = document.getElementById('contenedorRecetas');
-
-  // Si no estamos en la página del recetario (ej. estamos en el index), no ejecutamos el motor
+  const contenedor = document.getElementById('contenedorRecetas');
   if (!contenedor) return;
 
-  const buscador        = document.getElementById('buscador');
-  const limpiarBtn      = document.getElementById('limpiarBuscador');
-  const limpiarVacio    = document.getElementById('limpiarVacio');
-  const vacio           = document.getElementById('sinResultados');
-  const contador        = document.getElementById('contador');
-  const botones         = Array.from(document.querySelectorAll('.filtro'));
+  const buscador     = document.getElementById('buscador');
+  const limpiarBtn   = document.getElementById('limpiarBuscador');
+  const limpiarVacio = document.getElementById('limpiarVacio');
+  const vacio        = document.getElementById('sinResultados');
+  const contador     = document.getElementById('contador');
+  const botones      = Array.from(document.querySelectorAll('.filtro'));
 
-  /* ---------- Estado ---------- */
   let categoriaActiva = 'todas';
   let textoBusqueda   = '';
-  let tarjetas         = [];
+  let tarjetas        = [];
 
-  // Leer categoría desde URL (?cat=principales, ?cat=dulces, etc.)
   const urlParams = new URLSearchParams(window.location.search);
   const catParam = urlParams.get('cat');
   if (catParam && ['principales', 'sopas', 'panes', 'ensaladas', 'dulces'].includes(catParam)) {
     categoriaActiva = catParam;
   }
 
-  // Leer búsqueda desde URL (?buscar=choclo)
   const buscarParam = urlParams.get('buscar');
   if (buscarParam && buscarParam.trim() !== '') {
     textoBusqueda = buscarParam.trim();
     if (buscador) buscador.value = textoBusqueda;
   }
 
-  /* =====================================================
-     UTILIDADES
-     ===================================================== */
-
+  /* ---------- Utilidades ---------- */
   function quitarAcentos(str) {
     return String(str).normalize('NFD').replace(/[\u0300-\u036f]/g, '');
   }
-
   function buildRegex(termino) {
     const norm = quitarAcentos(termino);
     let pattern = '';
@@ -102,18 +97,14 @@
     }
     return pattern ? new RegExp(pattern, 'gi') : null;
   }
-
   function escaparHtml(s) {
     return String(s).replace(/[&<>"']/g, function (c) {
       return { '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c];
     });
   }
-
   function escaparAtributo(s) {
     return String(s).replace(/"/g, '&quot;').replace(/'/g, '&#39;');
   }
-
-  /* Convierte "1 h 30 min" → "PT1H30M" */
   function parseTiempo(texto) {
     if (!texto) return 'PT60M';
     const t = String(texto).toLowerCase();
@@ -128,16 +119,12 @@
     if (minutos > 0) iso += minutos + 'M';
     return iso;
   }
-
-  /* Genera un slug URL-safe: "Empanadas de pino" → "empanadas-de-pino" */
   function slugify(text) {
     return String(text).toLowerCase()
       .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
       .replace(/[^a-z0-9]+/g, '-')
       .replace(/^-+|-+$/g, '');
   }
-
-  /* Categoría legible para Google */
   function mapearCategoria(cat) {
     const mapa = {
       'principales': 'Plato principal',
@@ -148,18 +135,13 @@
     };
     return mapa[cat] || 'Plato principal';
   }
-
-  /* URL absoluta de imagen */
   function imagenAbsoluta(ruta) {
     if (!ruta) return SITE_CONFIG.urlBase + '/' + SITE_CONFIG.imagenDefault;
     if (/^https?:\/\//.test(ruta)) return ruta;
     return SITE_CONFIG.urlBase + '/' + ruta.replace(/^\//, '');
   }
 
-  /* =====================================================
-     SCHEMA.ORG
-     ===================================================== */
-
+  /* ---------- Schema.org ---------- */
   function inyectarSchemaReceta(receta) {
     const rutaImagen = receta.imagen && receta.imagen.trim() !== ''
       ? receta.imagen
@@ -190,7 +172,6 @@
     script.textContent = JSON.stringify(schema);
     document.head.appendChild(script);
   }
-
   function inyectarSchemaSitio() {
     const schema = {
       "@context": "https://schema.org/",
@@ -206,10 +187,7 @@
     document.head.appendChild(script);
   }
 
-  /* =====================================================
-     CONSTRUCTOR DE TARJETAS
-     ===================================================== */
-
+  /* ---------- Constructor de tarjetas ---------- */
   function crearTarjeta(receta, indice) {
     const id = 'receta-' + indice;
     const slug = slugify(receta.titulo);
@@ -220,15 +198,15 @@
         '<img class="receta-img" src="' + escaparAtributo(receta.imagen) + '" ' +
         'alt="' + escaparAtributo(receta.titulo) + ' - Receta chilena" ' +
         'loading="lazy" ' +
-        'onerror="this.style.display=\'none\';this.insertAdjacentHTML(\'afterend\',\'<div class=&quot;receta-img-error&quot;>📷 Foto no encontrada: ' +
+        'onerror="this.style.display=\'none\';this.insertAdjacentHTML(\'afterend\',\'<div class=&quot;receta-img-error&quot;>Foto no encontrada: ' +
         escaparAtributo(receta.imagen) + '</div>\')">';
     }
 
     const chips = [];
-    if (receta.tiempo)     chips.push('<span>⏱ ' + escaparHtml(receta.tiempo) + '</span>');
-    if (receta.porciones)  chips.push('<span>🍽️ ' + escaparHtml(receta.porciones) + '</span>');
-    if (receta.dificultad) chips.push('<span>Dificultad: ' + escaparHtml(receta.dificultad) + '</span>');
-    if (receta.tecnica)    chips.push('<span>' + escaparHtml(receta.tecnica) + '</span>');
+    if (receta.tiempo)     chips.push('<span>' + ICONS.clock + escaparHtml(receta.tiempo) + '</span>');
+    if (receta.porciones)  chips.push('<span>' + ICONS.porciones + escaparHtml(receta.porciones) + '</span>');
+    if (receta.dificultad) chips.push('<span>' + ICONS.dificultad + 'Dificultad: ' + escaparHtml(receta.dificultad) + '</span>');
+    if (receta.tecnica)    chips.push('<span>' + ICONS.tecnica + escaparHtml(receta.tecnica) + '</span>');
 
     const ingredientesHTML = (receta.ingredientes || []).map(function (ing) {
       return '<li><label><input type="checkbox"><span>' + escaparHtml(ing) + '</span></label></li>';
@@ -262,15 +240,12 @@
         '</div>' +
         '<div class="receta-acciones">' +
           '<a class="receta-cta" href="recetas/' + slug + '.html">Ver página completa →</a>' +
-          '<button type="button" class="btn-imprimir" aria-label="Imprimir esta receta">🖨️ Imprimir</button>' +
+          '<button type="button" class="btn-imprimir" aria-label="Imprimir esta receta">' + ICONS.imprimir + '<span>Imprimir</span></button>' +
         '</div>' +
       '</article>';
   }
 
-  /* =====================================================
-     RENDERIZAR
-     ===================================================== */
-
+  /* ---------- Renderizar ---------- */
   function renderizar() {
     const html = RECETAS.map(crearTarjeta).join('');
     contenedor.innerHTML = html;
@@ -283,10 +258,7 @@
     inyectarSchemaSitio();
   }
 
-  /* =====================================================
-     IMPRIMIR RECETA
-     ===================================================== */
-
+  /* ---------- Imprimir ---------- */
   function imprimirTarjeta(tarjeta) {
     document.querySelectorAll('.receta').forEach(function (t) {
       t.classList.remove('imprimir-esta');
@@ -304,10 +276,7 @@
     setTimeout(limpiar, 2000);
   }
 
-  /* =====================================================
-     RESALTADO
-     ===================================================== */
-
+  /* ---------- Resaltado ---------- */
   function limpiarResaltados(root) {
     root.querySelectorAll('mark').forEach(function (m) {
       const padre = m.parentNode;
@@ -315,7 +284,6 @@
       padre.normalize();
     });
   }
-
   function resaltar(root, regex) {
     if (!regex) return;
     const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
@@ -347,10 +315,7 @@
     });
   }
 
-  /* =====================================================
-     FILTRADO + FEEDBACK
-     ===================================================== */
-
+  /* ---------- Filtrado + feedback ---------- */
   function aplicarFiltros() {
     let visibles = 0;
     const normBusqueda = quitarAcentos(textoBusqueda).toLowerCase();
@@ -382,11 +347,11 @@
       chip.className = 'chip';
       if (textoBusqueda) {
         chip.innerHTML =
-          '🔍 Buscando <strong>«' + escaparHtml(textoBusqueda) + '»</strong>' +
+          'Buscando <strong>«' + escaparHtml(textoBusqueda) + '»</strong>' +
           ' · <strong>' + visibles + '</strong> ' + (visibles === 1 ? 'receta' : 'recetas');
       } else {
         chip.innerHTML =
-          '📖 <strong>' + visibles + '</strong> ' + (visibles === 1 ? 'receta' : 'recetas') +
+          '<strong>' + visibles + '</strong> ' + (visibles === 1 ? 'receta' : 'recetas') +
           (categoriaActiva !== 'todas' ? ' en esta categoría' : ' en total');
       }
       contador.appendChild(chip);
@@ -400,7 +365,6 @@
       buscador.classList.toggle('con-texto', buscador.value.length > 0);
     }
   }
-
   function resetear() {
     if (buscador) buscador.value = '';
     textoBusqueda = '';
@@ -412,10 +376,7 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  /* =====================================================
-     EVENTOS
-     ===================================================== */
-
+  /* ---------- Eventos ---------- */
   let tipeoTimer = null;
   if (buscador) {
     buscador.addEventListener('input', function () {
@@ -423,7 +384,6 @@
       clearTimeout(tipeoTimer);
       tipeoTimer = setTimeout(aplicarFiltros, 80);
     });
-
     buscador.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') {
         buscador.value = '';
@@ -432,7 +392,6 @@
       }
     });
   }
-
   if (limpiarBtn) {
     limpiarBtn.addEventListener('click', function () {
       buscador.value = '';
@@ -441,11 +400,9 @@
       aplicarFiltros();
     });
   }
-
   if (limpiarVacio) {
     limpiarVacio.addEventListener('click', resetear);
   }
-
   botones.forEach(function (boton) {
     boton.addEventListener('click', function () {
       botones.forEach(function (b) { b.classList.remove('activo'); });
@@ -464,15 +421,10 @@
     imprimirTarjeta(tarjeta);
   });
 
-  /* =====================================================
-     ARRANQUE
-     ===================================================== */
-
+  /* ---------- Arranque ---------- */
   renderizar();
-
   botones.forEach(function (b) {
     b.classList.toggle('activo', b.dataset.cat === categoriaActiva);
   });
-
   aplicarFiltros();
 })();

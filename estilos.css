@@ -7,6 +7,7 @@
   --rojo-osc:#7a1b15;
   --azul:#1f3a5f;
   --dorado:#c8963e;
+  --terracota:#c4643a;
   --crema:#fdf8f0;
   --crema-osc:#f6ecdd;
   --arena:#f2e6d6;
@@ -28,6 +29,9 @@ body{background:var(--crema);color:var(--tinta);font-family:var(--fuente-texto);
 .bandera .azul{background:var(--azul)}
 .bandera .blanco{background:#fff}
 .bandera .rojo{background:var(--rojo)}
+
+/* ===== ICONOS GENÉRICOS ===== */
+.meta-icon{width:14px;height:14px;flex-shrink:0;display:inline-block;vertical-align:-2px}
 
 /* ===== HERO (LANDING) ===== */
 .hero{position:relative;padding:3.5rem 1.2rem 220px;text-align:center;background:radial-gradient(circle at 15% 0%,rgba(200,150,62,.12),transparent 50%),radial-gradient(circle at 85% 100%,rgba(176,58,46,.10),transparent 50%),linear-gradient(180deg,#fefaf3 0%,var(--crema) 100%);overflow:hidden;border-bottom:1px solid var(--borde)}
@@ -101,7 +105,7 @@ main{max-width:980px;margin:0 auto;padding:2.5rem 1rem 5rem}
 .receta h2::after{content:"";display:block;width:40px;height:2px;background:var(--acento);margin-top:.7rem;border-radius:2px}
 
 .meta{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0 1.8rem}
-.meta span{background:var(--crema-osc);color:var(--suave);font-size:.75rem;font-weight:500;padding:.35rem .85rem;border-radius:99px;border:1px solid rgba(230,214,193,.6)}
+.meta span{display:inline-flex;align-items:center;gap:.35rem;background:var(--crema-osc);color:var(--suave);font-size:.75rem;font-weight:500;padding:.35rem .85rem;border-radius:99px;border:1px solid rgba(230,214,193,.6)}
 .cuerpo{display:grid;grid-template-columns:1fr 1.5fr;gap:2.5rem;align-items:start}
 @media(max-width:720px){.cuerpo{grid-template-columns:1fr;gap:1.8rem}}
 h3{font-size:.72rem;text-transform:uppercase;letter-spacing:.16em;color:var(--azul);margin-bottom:1rem;font-weight:700;padding-bottom:.4rem;border-bottom:1px solid var(--crema-osc)}
@@ -132,11 +136,12 @@ h3{font-size:.72rem;text-transform:uppercase;letter-spacing:.16em;color:var(--az
 .receta-acciones{display:flex;gap:.8rem;flex-wrap:wrap;align-items:center;margin-top:1.5rem;align-self:flex-start}
 
 .btn-imprimir{display:inline-flex;align-items:center;gap:.45rem;padding:.7rem 1.3rem;background:#fff;color:var(--rojo);border:1.5px solid var(--rojo);border-radius:99px;font-family:inherit;font-size:.85rem;font-weight:600;cursor:pointer;transition:background .2s,color .2s,transform .2s,box-shadow .2s}
+.btn-imprimir svg{width:15px;height:15px;flex-shrink:0}
 .btn-imprimir:hover{background:var(--rojo);color:#fff;transform:translateY(-2px);box-shadow:0 6px 16px rgba(176,58,46,.25)}
 .btn-imprimir-receta{margin-bottom:1.5rem}
 
 .vacio{text-align:center;color:var(--suave);font-style:italic;padding:4rem 1rem}
-.vacio::before{content:"🍽️";display:block;font-size:3.5rem;margin-bottom:1rem;opacity:.6}
+.vacio-icon{display:block;margin:0 auto 1rem;width:3.5rem;height:3.5rem;color:var(--suave);opacity:.55}
 .vacio .btn-limpiar{margin-top:1.4rem;padding:.75rem 1.6rem;border:2px solid var(--rojo);background:transparent;color:var(--rojo);border-radius:99px;font-family:inherit;font-weight:600;font-size:.9rem;cursor:pointer;transition:all .2s;font-style:normal}
 .vacio .btn-limpiar:hover{background:var(--rojo);color:#fff;transform:translateY(-2px);box-shadow:0 6px 16px rgba(176,58,46,.25)}
 
@@ -253,6 +258,7 @@ footer .bandera{max-width:140px;margin:0 auto 1.2rem;border-radius:4px;overflow:
 .categoria-card::before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,var(--cat-color) 0%,color-mix(in srgb,var(--cat-color) 60%,#fff) 100%)}
 .categoria-card:hover{transform:translateY(-4px);box-shadow:var(--sombra-lg)}
 .categoria-card:hover .categoria-arrow{transform:translateX(6px)}
+.categoria-card:hover .categoria-icon{transform:scale(1.05)}
 
 .categoria-card[data-cat="principales"]{--cat-color:#b03a2e}
 .categoria-card[data-cat="sopas"]{--cat-color:#b86f1e}
@@ -260,7 +266,10 @@ footer .bandera{max-width:140px;margin:0 auto 1.2rem;border-radius:4px;overflow:
 .categoria-card[data-cat="ensaladas"]{--cat-color:#4a7c59}
 .categoria-card[data-cat="dulces"]{--cat-color:#a8466f}
 
-.categoria-emoji{font-size:2.6rem;line-height:1;margin-bottom:1rem;filter:saturate(.9)}
+/* Icono de categoría con efecto duotone (círculo terracota + trazo burdeos) */
+.categoria-icon{display:flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:50%;background:color-mix(in srgb, var(--terracota) 22%, var(--crema));color:var(--rojo-osc);margin-bottom:1rem;flex-shrink:0;transition:transform .3s ease}
+.categoria-icon svg{width:32px;height:32px}
+
 .categoria-nombre{font-family:var(--fuente-titulos);font-size:1.5rem;color:var(--rojo-osc);letter-spacing:-.3px;line-height:1.15;margin-bottom:.4rem;font-weight:700}
 .categoria-count{font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--cat-color);margin-bottom:.9rem}
 .categoria-desc{font-size:.9rem;color:var(--suave);line-height:1.5;flex:1;margin-bottom:1rem}
@@ -278,7 +287,8 @@ footer .bandera{max-width:140px;margin:0 auto 1.2rem;border-radius:4px;overflow:
   .categorias-grid{padding:0 1rem 1rem;gap:1rem}
   .categoria-card{padding:1.6rem 1.4rem;min-height:200px}
   .categoria-nombre{font-size:1.3rem}
-  .categoria-emoji{font-size:2.2rem}
+  .categoria-icon{width:56px;height:56px}
+  .categoria-icon svg{width:28px;height:28px}
   .landing-intro{padding:2rem 1rem 1.5rem}
 }
 
@@ -320,7 +330,7 @@ footer .bandera{max-width:140px;margin:0 auto 1.2rem;border-radius:4px;overflow:
    ===================================================== */
 .hero-search{position:relative;display:flex;align-items:center;gap:.3rem;max-width:520px;margin:1.6rem auto 0;background:#fff;border:2px solid var(--borde);border-radius:99px;padding:.3rem .35rem .3rem 1rem;box-shadow:var(--sombra-md);transition:border-color .2s,box-shadow .2s}
 .hero-search:focus-within{border-color:var(--rojo);box-shadow:0 0 0 5px rgba(176,58,46,.10)}
-.hero-search-icon{width:18px;height:18px;color:#a89a8c;flex-shrink:0}
+.hero-search-icon{width:18px;height:18px;color:#a89a8c;flex-shrink:0;stroke-width:2.5}
 .hero-search input{flex:1;border:none;background:transparent;padding:.7rem .4rem;font-size:.95rem;font-family:inherit;outline:none;color:var(--tinta);min-width:0}
 .hero-search input::placeholder{color:#b3a89e}
 .hero-search button{background:var(--rojo);color:#fff;border:none;padding:.65rem 1.2rem;border-radius:99px;font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;transition:background .2s;flex-shrink:0}
@@ -373,7 +383,10 @@ footer .bandera{max-width:140px;margin:0 auto 1.2rem;border-radius:4px;overflow:
   .legal-meta,
   .contacto-form,
   #sinResultados,
-  .contador {
+  .contador,
+  .meta-icon,
+  .categoria-icon,
+  .vacio-icon {
     display: none !important;
   }
 
