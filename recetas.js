@@ -11,17 +11,7 @@
 
    CÓMO AGREGAR UNA FOTO:
    1. Guarda la imagen dentro de la carpeta "img/"
-      por ejemplo: img/mi-empanada.jpg
-   2. En la receta, cambia  imagen: '',  por  imagen: 'img/mi-empanada.jpg',
-   3. Recarga la página.
-
-   SI NO HAY FOTO: deja  imagen: ''  y aparecerá sin imagen (sin error).
-
-   REGLAS BÁSICAS:
-   - Cada receta va entre { } y separada por coma.
-   - Los textos van entre comillas simples: 'así'.
-   - Los ingredientes y pasos son listas: 'uno', 'otro', 'otro'
-   - Si un texto tiene comillas simples dentro, escríbelas como \'
+   2. En la receta, cambia  imagen: '',  por  imagen: 'img/tu-foto.jpg',
    ================================================================= */
 
 const RECETAS = [
@@ -649,10 +639,8 @@ const RECETAS = [
       'Chancaca: 2 clavos de olor'
     ],
     pasos: [
-      'Mezcla el zapallo, la harina, la sal y los polvos de hornear.',
-      'Agrega la manteca y amasa hasta obtener una masa suave.',
-      'Reposa 20 min, estira a 5 mm y corta discos de 8 cm.',
-      'Pincha con un tenedor y fríe en aceite caliente hasta dorar.',
+      'Mezcla el zapallo, la harina, la sal y los polvos de hornear. Agrega la manteca y amasa hasta obtener una masa suave.',
+      'Reposa 20 min, estira a 5 mm y corta discos de 8 cm. Pincha con un tenedor y fríe en aceite caliente hasta dorar.',
       'Aparte, hierve la chancaca con el agua, la canela, la cáscara de naranja y los clavos hasta formar un almíbar.',
       'Baña las sopaipillas recién fritas con el almíbar caliente y sirve.'
     ],
@@ -1028,14 +1016,13 @@ const RECETAS = [
       'Sirve caliente.'
     ],
     dato: 'El charqui es carne seca y salada; si no lo encuentras, puedes usar carne ahumada.'
-  }
-,
+  },
 
   /* ============ 36. POROTOS CON RIENDAS ============ */
   {
     titulo: 'Porotos con riendas',
     categoria: 'principales',
-    imagen: 'img/porotos-con-riendas.png',
+    imagen: '',
     tiempo: '50 min + remojo',
     porciones: '6 personas',
     dificultad: 'fácil',
@@ -1064,7 +1051,7 @@ const RECETAS = [
     dato: 'El nombre "riendas" nace en el campo chileno: antiguamente se usaban tiras de cuero de cerdo que, al cocinarse, parecían las riendas de los caballos. Con el tiempo, la ciudad las reemplazó por tallarines, pero el nombre se mantuvo.'
   },
 
-/* ============ 37. CARBONADA ============ */
+  /* ============ 37. CARBONADA ============ */
   {
     titulo: 'Carbonada',
     categoria: 'principales',
@@ -1498,7 +1485,7 @@ const RECETAS = [
     dato: 'La hallulla es un pan redondo y plano, ideal para sándwiches. Su textura es más suave y compacta que la marraqueta.'
   },
 
-  /* ============ 52. SOPAIPILLAS PASADAS ============ */
+  /* ============ 52. SOPAIPILLAS PASADAS (2da versión) ============ */
   {
     titulo: 'Sopaipillas pasadas',
     categoria: 'panes',
@@ -1555,6 +1542,70 @@ const RECETAS = [
       'Sirve caliente con papas cocidas, puré o ensalada.'
     ],
     dato: 'La prieta es un embutido de sangre de cerdo típico de la zona sur de Chile. Se suele consumir en fiestas patrias y en invierno.'
+  },
+
+  /* ============ 54. CALZONES ROTOS ============ */
+  {
+    titulo: 'Calzones rotos',
+    categoria: 'dulces',
+    imagen: '',
+    tiempo: '40 min',
+    porciones: '20 unidades',
+    dificultad: 'fácil',
+    tecnica: 'Fritura',
+    ingredientes: [
+      '500 g de harina sin polvos de hornear',
+      '150 g de azúcar',
+      '100 g de mantequilla o manteca a temperatura ambiente',
+      '2 huevos',
+      '1 cucharadita de polvos de hornear',
+      'Ralladura de 1 limón o naranja',
+      '1 cucharadita de esencia de vainilla',
+      'Aceite para freír',
+      'Azúcar flor para espolvorear'
+    ],
+    pasos: [
+      'En un bol grande, bate la mantequilla con el azúcar hasta obtener una crema. Agrega los huevos uno a uno y la vainilla.',
+      'Incorpora la harina cernida junto con los polvos de hornear y la ralladura de limón. Mezcla hasta formar una masa suave que no se pegue en las manos.',
+      'Envuelve la masa en film o un paño y déjala reposar en el refrigerador por 30 minutos.',
+      'Estira la masa sobre una superficie enharinada hasta que tenga unos 5 mm de grosor. Corta rectángulos de aproximadamente 5x10 cm.',
+      'Haz un corte longitudinal en el centro de cada rectángulo y pasa uno de los extremos por el agujero para formar la clásica trenza retorcida.',
+      'Calienta abundante aceite a fuego medio (unos 170°C). Fríe los calzones hasta que estén dorados por ambos lados.',
+      'Escurre sobre papel absorbente y espolvorea generosamente con azúcar flor mientras aún están tibios.'
+    ],
+    dato: 'Se llaman "rotos" porque justamente tienen una forma irregular y rasgada. Se comen tradicionalmente en las tardes de lluvia con un té caliente.'
+  },
+
+  /* ============ 55. BROWNIES CON CACAO ============ */
+  {
+    titulo: 'Brownies con cacao',
+    categoria: 'dulces',
+    imagen: '',
+    tiempo: '45 min',
+    porciones: '12 porciones',
+    dificultad: 'fácil',
+    tecnica: 'Horno',
+    ingredientes: [
+      '200 g de chocolate amargo o cobertura (o 100 g de cacao en polvo)',
+      '150 g de mantequilla',
+      '200 g de azúcar',
+      '3 huevos',
+      '100 g de harina sin polvos de hornear',
+      '1 cucharadita de esencia de vainilla',
+      '1 pizca de sal',
+      '100 g de nueces picadas (opcional)'
+    ],
+    pasos: [
+      'Precalienta el horno a 180 °C. Engrasa y enharina un molde cuadrado de unos 20x20 cm.',
+      'Derrite la mantequilla junto con el chocolate a baño María o en el microondas (con cuidado de no quemarlo). Si usas cacao en polvo, mézclalo con la mantequilla derretida.',
+      'En otro bol, bate los huevos con el azúcar hasta que estén espumosos y hayan duplicado un poco su volumen. Agrega la vainilla.',
+      'Incorpora la mezcla de chocolate derretido a los huevos y mezcla suavemente con una espátula.',
+      'Agrega la harina cernida con la sal y mezcla con movimientos envolventes solo hasta que no queden grumos. No sobrebatas, o los brownies quedarán duros.',
+      'Si usas nueces, incorpóralas ahora. Vierte la mezcla en el molde y alisa la superficie.',
+      'Hornea por 20 a 25 minutos. Para saber si están listos, inserta un palillo: debe salir con algunas migas húmedas pegadas (no completamente limpio, así queda húmedo por dentro).',
+      'Deja enfriar completamente en el molde antes de cortar en cuadrados.'
+    ],
+    dato: 'Para un brownie extra húmedo y fudgy, deja el centro un poco crudo. Si prefieres un brownie más tipo bizcocho, hornéalo 5 minutos más.'
   }
 
 ];
