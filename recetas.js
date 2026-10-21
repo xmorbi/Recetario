@@ -1035,7 +1035,7 @@ const RECETAS = [
   {
     titulo: 'Porotos con riendas',
     categoria: 'principales',
-    imagen: '',
+    imagen: 'img/porotos-con-riendas.png',
     tiempo: '50 min + remojo',
     porciones: '6 personas',
     dificultad: 'fácil',
