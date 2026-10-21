@@ -19,7 +19,8 @@
     porciones: '<svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2v6a3 3 0 0 0 6 0V2"/><path d="M8 11v11"/><path d="M20 2c-2 3-3 6-3 9h3v11"/></svg>',
     dificultad: '<svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>',
     tecnica: '<svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>',
-    imprimir: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>'
+    imprimir: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>',
+    chef: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"/><line x1="6" y1="17" x2="18" y2="17"/></svg>'
   };
 
   /* ---------- Nav toggle (todas las páginas) ---------- */
@@ -38,43 +39,6 @@
       }
     });
   })();
-
-  /* ---------- Verificación de datos ---------- */
-  if (typeof RECETAS === 'undefined' || !Array.isArray(RECETAS)) {
-    console.error('No se encontró el archivo recetas.js o no tiene el formato correcto.');
-    const contenedorErr = document.getElementById('contenedorRecetas');
-    if (contenedorErr) {
-      contenedorErr.innerHTML = '<p class="vacio">⚠️ No se pudieron cargar las recetas. Revisa que recetas.js esté en la misma carpeta que recetario.html.</p>';
-    }
-    return;
-  }
-
-  /* ---------- Referencias del DOM ---------- */
-  const contenedor = document.getElementById('contenedorRecetas');
-  if (!contenedor) return;
-
-  const buscador     = document.getElementById('buscador');
-  const limpiarBtn   = document.getElementById('limpiarBuscador');
-  const limpiarVacio = document.getElementById('limpiarVacio');
-  const vacio        = document.getElementById('sinResultados');
-  const contador     = document.getElementById('contador');
-  const botones      = Array.from(document.querySelectorAll('.filtro'));
-
-  let categoriaActiva = 'todas';
-  let textoBusqueda   = '';
-  let tarjetas        = [];
-
-  const urlParams = new URLSearchParams(window.location.search);
-  const catParam = urlParams.get('cat');
-  if (catParam && ['principales', 'sopas', 'panes', 'ensaladas', 'dulces'].includes(catParam)) {
-    categoriaActiva = catParam;
-  }
-
-  const buscarParam = urlParams.get('buscar');
-  if (buscarParam && buscarParam.trim() !== '') {
-    textoBusqueda = buscarParam.trim();
-    if (buscador) buscador.value = textoBusqueda;
-  }
 
   /* ---------- Utilidades ---------- */
   function quitarAcentos(str) {
@@ -187,6 +151,46 @@
     document.head.appendChild(script);
   }
 
+  /* ---------- Receta destacada (portada) ---------- */
+  function renderizarDestacada() {
+    var cont = document.getElementById('recetaDestacada');
+    if (!cont) return;
+    if (typeof RECETAS === 'undefined' || !Array.isArray(RECETAS) || RECETAS.length === 0) return;
+
+    var dia = Math.floor(Date.now() / 86400000);       // días desde epoch
+    var indice = dia % RECETAS.length;                  // rotación diaria determinística
+    var r = RECETAS[indice];
+    var slug = slugify(r.titulo);
+    var img = r.imagen && r.imagen.trim() !== '' ? r.imagen : '';
+
+    var chips = [];
+    if (r.tiempo)     chips.push('<span>' + ICONS.clock + escaparHtml(r.tiempo) + '</span>');
+    if (r.porciones)  chips.push('<span>' + ICONS.porciones + escaparHtml(r.porciones) + '</span>');
+    if (r.dificultad) chips.push('<span>' + ICONS.dificultad + 'Dificultad: ' + escaparHtml(r.dificultad) + '</span>');
+
+    var mediaHTML;
+    if (img) {
+      mediaHTML = '<div class="receta-destacada-media"><img src="' + escaparAtributo(img) + '" alt="' + escaparAtributo(r.titulo) + '" loading="lazy"></div>';
+    } else {
+      mediaHTML = '<div class="receta-destacada-media"><div class="sin-foto">' + escaparHtml(r.titulo) + '</div></div>';
+    }
+
+    var descripcion = r.dato ? escaparHtml(r.dato) : 'Una receta tradicional chilena explicada paso a paso.';
+
+    cont.innerHTML =
+      '<p class="receta-destacada-eyebrow">Receta destacada del día</p>' +
+      '<a class="receta-destacada" href="recetas/' + slug + '.html">' +
+        mediaHTML +
+        '<div class="receta-destacada-body">' +
+          '<span class="receta-destacada-tag">' + ICONS.chef + 'Para hoy</span>' +
+          '<h2>' + escaparHtml(r.titulo) + '</h2>' +
+          '<p>' + descripcion + '</p>' +
+          '<div class="meta">' + chips.join('') + '</div>' +
+          '<span class="receta-destacada-cta">Ver receta completa →</span>' +
+        '</div>' +
+      '</a>';
+  }
+
   /* ---------- Constructor de tarjetas ---------- */
   function crearTarjeta(receta, indice) {
     const id = 'receta-' + indice;
@@ -245,7 +249,7 @@
       '</article>';
   }
 
-  /* ---------- Renderizar ---------- */
+  /* ---------- Renderizar listado ---------- */
   function renderizar() {
     const html = RECETAS.map(crearTarjeta).join('');
     contenedor.innerHTML = html;
@@ -376,7 +380,51 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  /* ---------- Eventos ---------- */
+  /* =====================================================
+     VERIFICACIÓN DE DATOS
+     ===================================================== */
+  if (typeof RECETAS === 'undefined' || !Array.isArray(RECETAS)) {
+    console.error('No se encontró el archivo recetas.js o no tiene el formato correcto.');
+    var contenedorErr = document.getElementById('contenedorRecetas');
+    if (contenedorErr) {
+      contenedorErr.innerHTML = '<p class="vacio">No se pudieron cargar las recetas. Revisa que recetas.js esté en la misma carpeta que recetario.html.</p>';
+    }
+    return;
+  }
+
+  /* =====================================================
+     PORTADA: receta destacada (independiente del listado)
+     ===================================================== */
+  renderizarDestacada();
+
+  /* =====================================================
+     LISTADO: si no estamos en recetario.html, salimos
+     ===================================================== */
+  const contenedor = document.getElementById('contenedorRecetas');
+  if (!contenedor) return;
+
+  const buscador     = document.getElementById('buscador');
+  const limpiarBtn   = document.getElementById('limpiarBuscador');
+  const limpiarVacio = document.getElementById('limpiarVacio');
+  const vacio        = document.getElementById('sinResultados');
+  const contador     = document.getElementById('contador');
+  const botones      = Array.from(document.querySelectorAll('.filtro'));
+
+  let categoriaActiva = 'todas';
+  let textoBusqueda   = '';
+  let tarjetas        = [];
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const catParam = urlParams.get('cat');
+  if (catParam && ['principales', 'sopas', 'panes', 'ensaladas', 'dulces'].includes(catParam)) {
+    categoriaActiva = catParam;
+  }
+  const buscarParam = urlParams.get('buscar');
+  if (buscarParam && buscarParam.trim() !== '') {
+    textoBusqueda = buscarParam.trim();
+    if (buscador) buscador.value = textoBusqueda;
+  }
+
   let tipeoTimer = null;
   if (buscador) {
     buscador.addEventListener('input', function () {

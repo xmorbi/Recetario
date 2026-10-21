@@ -55,26 +55,8 @@
 </header>
 
 <header class="hero">
-  <svg class="hero-mountains" viewBox="0 0 1440 260" preserveAspectRatio="none" aria-hidden="true">
-    <defs>
-      <linearGradient id="mtnFar" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="8%" stop-color="#eef3f8"/><stop offset="45%" stop-color="#d4e0eb"/><stop offset="100%" stop-color="#c5d2df"/></linearGradient>
-      <linearGradient id="mtnMid" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e8eff5"/><stop offset="20%" stop-color="#c5d2df"/><stop offset="100%" stop-color="#98abbe"/></linearGradient>
-      <linearGradient id="mtnNear" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#8ba0b1"/><stop offset="100%" stop-color="#5f7486"/></linearGradient>
-    </defs>
-    <circle cx="1120" cy="40" r="180" fill="#ffe4b3" opacity="0.18"/>
-    <circle cx="1120" cy="40" r="100" fill="#ffe9c2" opacity="0.28"/>
-    <circle cx="1120" cy="40" r="50" fill="#fff1d4" opacity="0.55"/>
-    <path d="M0,260 L0,160 L40,148 L90,175 L140,135 L200,160 L260,118 L320,148 L380,112 L440,150 L500,125 L560,158 L620,130 L680,160 L740,125 L800,155 L860,130 L920,160 L980,120 L1040,150 L1100,125 L1160,155 L1220,130 L1280,158 L1340,138 L1400,158 L1440,150 L1440,260 Z" fill="url(#mtnFar)"/>
-    <path d="M0,260 L0,198 L60,180 L140,212 L220,188 L310,215 L390,182 L480,215 L560,188 L640,215 L720,182 L800,212 L880,192 L960,220 L1040,188 L1120,212 L1200,192 L1280,215 L1360,192 L1440,210 L1440,260 Z" fill="url(#mtnMid)"/>
-    <path d="M0,260 L0,230 L100,218 L210,238 L320,220 L440,240 L560,222 L680,240 L800,224 L920,242 L1040,224 L1160,242 L1280,226 L1400,240 L1440,232 L1440,260 Z" fill="url(#mtnNear)"/>
-  </svg>
   <div class="hero-inner">
-    <div class="hero-flag-wrap">
-      <div class="bandera-chile" role="img" aria-label="Bandera de Chile"><span class="estrella" aria-hidden="true"></span></div>
-      <span class="hero-flag-caption">Hecho en Chile</span>
-    </div>
     <div class="hero-copy">
-      <p class="hero-eyebrow">Cocina tradicional</p>
       <h1>Recetario Chileno</h1>
       <p class="sub">Sabores de casa, de la cocina de la abuela a tu mesa</p>
       <div class="lema">Recetas tradicionales</div>
@@ -89,6 +71,9 @@
     </div>
   </div>
 </header>
+
+<!-- Receta destacada del día (se rellena desde app.js) -->
+<section class="receta-destacada-section" id="recetaDestacada"></section>
 
 <section class="landing-intro">
   <h2>¿Qué se te antoja cocinar hoy?</h2>
