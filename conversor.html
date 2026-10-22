@@ -40,13 +40,13 @@
       <a href="recetario.html">Recetas</a>
       <a href="guias.html">Guías</a>
       <a href="guia-conservacion.html">Conservación</a>
-      
-      <!-- Menú Herramientas: Conversor activo -->
-      <details class="dropdown-tools" open>
-        <summary style="background:var(--crema-osc);color:var(--rojo);">Herramientas ▾</summary>
+
+      <!-- Menú Herramientas (sin open, sin estilos inline) -->
+      <details class="dropdown-tools">
+        <summary>Herramientas ▾</summary>
         <div class="dropdown-menu">
           <a href="calculadora.html">Calculadora</a>
-          <a href="conversor.html" style="background:var(--crema-osc);color:var(--rojo);font-weight:700;">Conversor</a>
+          <a href="conversor.html">Conversor</a>
         </div>
       </details>
 
@@ -67,7 +67,7 @@
 
 <main class="legal-page">
   <div class="calc-container">
-    
+
     <!-- SELECTOR DE TIPO DE CONVERSIÓN -->
     <div class="calc-group">
       <label for="tipo-conversion">¿Qué quieres convertir?</label>
@@ -140,17 +140,17 @@
 
     <div class="calc-faq">
       <h2>Preguntas frecuentes sobre medidas</h2>
-      
+
       <details>
         <summary>¿Cuántos gramos tiene una taza de harina?</summary>
         <div class="faq-content">Una taza estándar de harina sin polvos de hornear pesa aproximadamente 120 gramos. Si la harina está muy compactada o tamizada, el peso puede variar entre 110g y 140g.</div>
       </details>
-      
+
       <details>
         <summary>¿Cuánto es una libra en kilos?</summary>
         <div class="faq-content">Una libra equivale a 453,592 gramos, o aproximadamente 0,45 kilos. Cuando en las recetas antiguas dice "media libra", se refiere a unos 225 gramos.</div>
       </details>
-      
+
       <details>
         <summary>¿Cuántos ml tiene una cucharada?</summary>
         <div class="faq-content">Una cucharada sopera estándar contiene aproximadamente 15 mililitros de líquido. Una cucharadita de té contiene 5 mililitros.</div>
@@ -172,5 +172,6 @@
 
 <script src="conversor.js"></script>
 <script src="lista-compras.js"></script>
+<script src="app.js"></script>
 </body>
 </html>

@@ -42,6 +42,59 @@
     });
   })();
 
+  /* ---------- Dropdown Herramientas ---------- */
+  (function initDropdownHerramientas() {
+    var dropdowns = document.querySelectorAll('.dropdown-tools');
+    if (!dropdowns.length) return;
+
+    // Cerrar al hacer clic fuera
+    document.addEventListener('click', function (e) {
+      dropdowns.forEach(function (d) {
+        if (d.open && !d.contains(e.target)) d.open = false;
+      });
+    });
+
+    // Cerrar con Escape
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        dropdowns.forEach(function (d) { d.open = false; });
+      }
+    });
+
+    // Cerrar al hacer clic en un enlace del menú
+    dropdowns.forEach(function (d) {
+      d.querySelectorAll('.dropdown-menu a').forEach(function (a) {
+        a.addEventListener('click', function () { d.open = false; });
+      });
+    });
+
+    // Marcar automáticamente la página activa
+    var path = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+    dropdowns.forEach(function (d) {
+      var tieneActivo = false;
+      d.querySelectorAll('.dropdown-menu a').forEach(function (a) {
+        var href = (a.getAttribute('href') || '').toLowerCase();
+        if (href === path) {
+          a.classList.add('activo');
+          a.setAttribute('aria-current', 'page');
+          tieneActivo = true;
+        }
+      });
+      if (tieneActivo) d.classList.add('tools-activo');
+    });
+
+    // Evitar que .site-nav-links (overflow-x:auto) recorte el dropdown abierto
+    var navLinks = document.querySelector('.site-nav-links');
+    if (navLinks) {
+      dropdowns.forEach(function (d) {
+        d.addEventListener('toggle', function () {
+          var anyOpen = navLinks.querySelector('.dropdown-tools[open]');
+          navLinks.classList.toggle('dropdown-abierto', !!anyOpen);
+        });
+      });
+    }
+  })();
+
   /* ---------- Utilidades ---------- */
   function quitarAcentos(str) {
     return String(str).normalize('NFD').replace(/[\u0300-\u036f]/g, '');
@@ -139,7 +192,7 @@
     script.textContent = JSON.stringify(schema);
     document.head.appendChild(script);
   }
-  
+
   function inyectarSchemaSitio() {
     const schema = {
       "@context": "https://schema.org/",
@@ -305,7 +358,7 @@
 
     inyectarSchemaSitio();
     inyectarSchemaItemList(); // Inyectar el carrusel para Google
-    
+
     // Inicializar estado visual de los botones de favoritos
     if (window.Favoritos) window.Favoritos.actualizar();
   }
@@ -382,9 +435,9 @@
       const coincideCat = categoriaActiva === 'todas' || tarjeta.dataset.cat === categoriaActiva;
       const textoCompleto = tarjeta.textContent + ' ' + (tarjeta.dataset.tags || '');
       const textoLimpio = quitarAcentos(textoCompleto).toLowerCase();
-      
+
       const coincideTxt = !normBusqueda || textoLimpio.indexOf(normBusqueda) !== -1;
-      
+
       // Lógica de relevancia de despensa (Puntuación)
       let scoreDespensa = 0;
       if (ingredientesDespensa.length > 0) {
@@ -420,14 +473,14 @@
 
     // 4. Ocultar todas y mostrar las visibles en orden
     tarjetas.forEach(t => t.hidden = true);
-    
+
     visiblesArr.forEach(e => {
       e.tarjeta.hidden = false;
       if (regexResaltado) resaltar(e.tarjeta, regexResaltado);
       e.tarjeta.classList.remove('aparecer');
       void e.tarjeta.offsetWidth;
       e.tarjeta.classList.add('aparecer');
-      
+
       // Mover al final del contenedor (esto reordena el DOM)
       contenedor.appendChild(e.tarjeta);
     });
@@ -444,18 +497,18 @@
       contador.innerHTML = '';
       const chip = document.createElement('span');
       chip.className = 'chip';
-      
+
       let textoChip = '';
       if (textoBusqueda) textoChip += 'Buscando <strong>«' + escaparHtml(textoBusqueda) + '»</strong> · ';
       if (ingredientesDespensa.length > 0) textoChip += 'Filtro despensa (' + ingredientesDespensa.length + ') · ';
-      
+
       textoChip += '<strong>' + visibles + '</strong> ' + (visibles === 1 ? 'receta' : 'recetas');
       if (categoriaActiva !== 'todas' && !textoBusqueda && ingredientesDespensa.length === 0) {
         textoChip += ' en esta categoría';
       } else if (!textoBusqueda && ingredientesDespensa.length === 0) {
         textoChip += ' en total';
       }
-      
+
       chip.innerHTML = textoChip;
       contador.appendChild(chip);
       contador.classList.remove('flash');
@@ -588,8 +641,8 @@
      LÓGICA DE LA DESPENSA (MODAL)
      ===================================================== */
   const despensaIngredientesList = [
-    'huevo', 'harina', 'carne', 'pollo', 'papa', 'arroz', 'tomate', 
-    'cebolla', 'queso', 'pan', 'leche', 'mantequilla', 'choclo', 
+    'huevo', 'harina', 'carne', 'pollo', 'papa', 'arroz', 'tomate',
+    'cebolla', 'queso', 'pan', 'leche', 'mantequilla', 'choclo',
     'zapallo', 'pasta', 'atún', 'limón'
   ];
 
@@ -602,7 +655,7 @@
 
   if (btnDespensa && modalDespensa) {
     // Renderizar chips
-    listaDespensa.innerHTML = despensaIngredientesList.map(ing => 
+    listaDespensa.innerHTML = despensaIngredientesList.map(ing =>
       `<button type="button" class="chip-despensa" data-ing="${ing}">${ing}</button>`
     ).join('');
 
@@ -628,7 +681,7 @@
       if (!chip) return;
       chip.classList.toggle('activo');
       const ing = chip.dataset.ing;
-      
+
       if (chip.classList.contains('activo')) {
         if (!ingredientesDespensa.includes(ing)) ingredientesDespensa.push(ing);
       } else {
