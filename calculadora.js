@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const resultadoDiv = document.getElementById('resultado');
   const notaDiv = document.getElementById('nota');
 
+  if (!ingredienteSelect) return; // Si no estamos en la página de la calculadora, salimos.
+
   // Datos de porciones por persona (en gramos)
   const porciones = {
     carne: { base: 380, unidad: 'g', nota: 'Para un asado con acompañamientos. Sube a 500g si es el plato principal.' },
