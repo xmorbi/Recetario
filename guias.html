@@ -32,7 +32,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:locale" content="es_CL">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
@@ -43,11 +43,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="bandera"><i class="azul"></i><i class="blanco"></i><i class="rojo"></i></div>
 
+<!-- Menú principal -->
+<header class="site-nav">
+  <div class="site-nav-inner">
+    <a href="index.html" class="site-nav-logo" aria-label="Recetario Chileno — Inicio">
+      <div class="marca-logo"><span class="estrella"></span></div>
+      <span class="marca-texto">Recetario Chileno</span>
+    </a>
+    <button class="site-nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <nav class="site-nav-links" aria-label="Navegación principal">
+      <form class="nav-search" action="recetario.html" method="get" role="search">
+        <svg class="nav-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input type="search" name="buscar" placeholder="Buscar receta…" aria-label="Buscar recetas" autocomplete="off">
+      </form>
+      <a href="index.html">Inicio</a>
+      <a href="recetario.html">Recetas</a>
+      <a href="guias.html" class="activo">Guías</a>
+      <a href="sobre-mi.html">Sobre mí</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </div>
+</header>
+
 <header class="hero-receta">
-  <a href="index.html" class="header-marca">
-    <div class="marca-logo"><span class="estrella"></span></div>
-    <span class="marca-texto">Recetario Chileno</span>
-  </a>
   <div class="hero-receta-inner">
     <nav class="breadcrumb" aria-label="Migas de pan">
       <a href="index.html">Inicio</a> <span>›</span> <span class="breadcrumb-current">Guías de Cocina</span>
@@ -61,100 +83,121 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="categorias-grid">
     
     <!-- Guía 1 -->
-    <a class="categoria-card" href="guias/cortes-de-carne-cazuela.html" style="--cat-color:#b03a2e;">
-      <span class="categoria-emoji">🍲</span>
-      <span class="categoria-nombre">Cortes de carne para Cazuela</span>
+    <div class="categoria-card" style="--cat-color:#b03a2e;">
+      <span class="categoria-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9h20"/><path d="M4 9v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9"/><path d="M8 9V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v3"/><path d="M9 5v4M15 5v4"/></svg></span>
+      <a href="guias/cortes-de-carne-cazuela.html" class="categoria-nombre" style="text-decoration:none;">Cortes de carne para Cazuela</a>
       <span class="categoria-desc">Descubre qué cortes de vacuno son los ideales para que tu cazuela quede jugosa y con un caldo perfecto.</span>
-      <span class="categoria-arrow">→</span>
-    </a>
+      <div class="guia-recetas-cruce">
+        <strong>Receta asociada:</strong> <a href="recetas/cazuela-de-vacuno.html">Cazuela de vacuno</a>
+      </div>
+      <a href="guias/cortes-de-carne-cazuela.html" class="categoria-arrow">Leer guía →</a>
+    </div>
 
     <!-- Guía 2 -->
-    <a class="categoria-card" href="guias/cortes-de-carne-parrilla.html" style="--cat-color:#b86f1e;">
-      <span class="categoria-emoji">🥩</span>
-      <span class="categoria-nombre">Cortes de carne para Parrilla</span>
+    <div class="categoria-card" style="--cat-color:#b86f1e;">
+      <span class="categoria-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15c0-4 4-7 8-7s8 3 8 7v1a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-1z"/><path d="M8 12l1 3M12 11v4M16 12l-1 3"/></svg></span>
+      <a href="guias/cortes-de-carne-parrilla.html" class="categoria-nombre" style="text-decoration:none;">Cortes de carne para Parrilla</a>
       <span class="categoria-desc">Lomo vetado, liso, entraña o costillar. Aprende cuál elegir para un asado inolvidable.</span>
-      <span class="categoria-arrow">→</span>
-    </a>
+      <div class="guia-recetas-cruce">
+        <strong>Recetas asociadas:</strong> <a href="recetas/pollo-asado.html">Pollo asado</a>, <a href="recetas/chorrillana.html">Chorrillana</a>
+      </div>
+      <a href="guias/cortes-de-carne-parrilla.html" class="categoria-arrow">Leer guía →</a>
+    </div>
 
     <!-- Guía 3 -->
-    <a class="categoria-card" href="guias/como-elegir-un-choclo.html" style="--cat-color:#4a7c59;">
-      <span class="categoria-emoji">🌽</span>
-      <span class="categoria-nombre">Cómo elegir un buen choclo</span>
+    <div class="categoria-card" style="--cat-color:#4a7c59;">
+      <span class="categoria-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13c0-3 1-6 3-7 2 1 4 1 6 0s4-1 6 0c2 1 3 4 3 7a7 7 0 0 1-7 7"/><path d="M2 13c3-2 8-3 15-2"/></svg></span>
+      <a href="guias/como-elegir-un-choclo.html" class="categoria-nombre" style="text-decoration:none;">Cómo elegir un buen choclo</a>
       <span class="categoria-desc">Trucos infalibles para saber si un choclo está tierno, dulce y en su punto exacto de maduración.</span>
-      <span class="categoria-arrow">→</span>
-    </a>
+      <div class="guia-recetas-cruce">
+        <strong>Recetas asociadas:</strong> <a href="recetas/pastel-de-choclo.html">Pastel de choclo</a>, <a href="recetas/humitas.html">Humitas</a>, <a href="recetas/porotos-granados.html">Porotos granados</a>
+      </div>
+      <a href="guias/como-elegir-un-choclo.html" class="categoria-arrow">Leer guía →</a>
+    </div>
 
     <!-- Guía 4 -->
-    <a class="categoria-card" href="guias/como-hacer-arroz-tostador.html" style="--cat-color:#c8963e;">
-      <span class="categoria-emoji">🍚</span>
-      <span class="categoria-nombre">Cómo hacer arroz tostador</span>
+    <div class="categoria-card" style="--cat-color:#c8963e;">
+      <span class="categoria-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"/><path d="M4 16c1 0 1.5-.5 2-1s1-1 2-1 1.5.5 2 1 1 1 2 1 1.5-.5 2-1 1-1 2-1 1.5.5 2 1 1 1 2 1"/></svg></span>
+      <a href="guias/como-hacer-arroz-tostador.html" class="categoria-nombre" style="text-decoration:none;">Cómo hacer arroz tostador</a>
       <span class="categoria-desc">El secreto del arroz graneado chileno. Aprende a tostarlo para que quede suelto, dorado y con un sabor increíble.</span>
-      <span class="categoria-arrow">→</span>
-    </a>
+      <a href="guias/como-hacer-arroz-tostador.html" class="categoria-arrow">Leer guía →</a>
+    </div>
 
     <!-- Guía 5 -->
-    <a class="categoria-card" href="guias/como-elegir-una-buena-palta.html" style="--cat-color:#4a7c59;">
-      <span class="categoria-emoji">🥑</span>
-      <span class="categoria-nombre">Cómo elegir una buena palta</span>
+    <div class="categoria-card" style="--cat-color:#4a7c59;">
+      <span class="categoria-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/><path d="M12 6a6 6 0 0 0-6 6c0 2 1 4 3 5"/></svg></span>
+      <a href="guias/como-elegir-una-buena-palta.html" class="categoria-nombre" style="text-decoration:none;">Cómo elegir una buena palta</a>
       <span class="categoria-desc">El truco del tallo, el color y la textura exacta para no comprar nunca más una palta negra o dura.</span>
-      <span class="categoria-arrow">→</span>
-    </a>
+      <a href="guias/como-elegir-una-buena-palta.html" class="categoria-arrow">Leer guía →</a>
+    </div>
 
     <!-- Guía 6 -->
-    <a class="categoria-card" href="guias/como-evitar-que-la-carne-quede-seca.html" style="--cat-color:#b03a2e;">
-      <span class="categoria-emoji">🥩</span>
-      <span class="categoria-nombre">Cómo evitar que la carne quede seca</span>
+    <div class="categoria-card" style="--cat-color:#b03a2e;">
+      <span class="categoria-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></span>
+      <a href="guias/como-evitar-que-la-carne-quede-seca.html" class="categoria-nombre" style="text-decoration:none;">Cómo evitar que la carne quede seca</a>
       <span class="categoria-desc">Sellar, reposar y controlar la temperatura. Los 4 secretos para una carne siempre jugosa.</span>
-      <span class="categoria-arrow">→</span>
-    </a>
+      <div class="guia-recetas-cruce">
+        <strong>Recetas asociadas:</strong> <a href="recetas/carne-mechada.html">Carne mechada</a>, <a href="recetas/bistec-a-lo-pobre.html">Bistec a lo pobre</a>
+      </div>
+      <a href="guias/como-evitar-que-la-carne-quede-seca.html" class="categoria-arrow">Leer guía →</a>
+    </div>
 
     <!-- Guía 7 -->
-    <a class="categoria-card" href="guias/que-color-de-pimenton-elegir.html" style="--cat-color:#b86f1e;">
-      <span class="categoria-emoji">🫑</span>
-      <span class="categoria-nombre">¿Qué color de pimentón elegir?</span>
+    <div class="categoria-card" style="--cat-color:#b86f1e;">
+      <span class="categoria-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg></span>
+      <a href="guias/que-color-de-pimenton-elegir.html" class="categoria-nombre" style="text-decoration:none;">¿Qué color de pimentón elegir?</a>
       <span class="categoria-desc">Del verde amargo al rojo dulce. Descubre qué pimentón usar para sofritos, ensaladas o parrilla.</span>
-      <span class="categoria-arrow">→</span>
-    </a>
+      <a href="guias/que-color-de-pimenton-elegir.html" class="categoria-arrow">Leer guía →</a>
+    </div>
 
     <!-- Guía 8 -->
-    <a class="categoria-card" href="guias/como-encender-carbon-parrilla.html" style="--cat-color:#7a1b15;">
-      <span class="categoria-emoji">🔥</span>
-      <span class="categoria-nombre">Cómo encender el carbón</span>
+    <div class="categoria-card" style="--cat-color:#7a1b15;">
+      <span class="categoria-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></span>
+      <a href="guias/como-encender-carbon-parrilla.html" class="categoria-nombre" style="text-decoration:none;">Cómo encender el carbón</a>
       <span class="categoria-desc">La chimenea, la pirámide y el momento exacto para poner la carne en la parrilla.</span>
-      <span class="categoria-arrow">→</span>
-    </a>
+      <div class="guia-recetas-cruce">
+        <strong>Receta asociada:</strong> <a href="recetas/pollo-asado.html">Pollo asado</a>
+      </div>
+      <a href="guias/como-encender-carbon-parrilla.html" class="categoria-arrow">Leer guía →</a>
+    </div>
 
     <!-- Guía 9 -->
-    <a class="categoria-card" href="guias/como-saber-si-los-mariscos-estan-frescos.html" style="--cat-color:#1f3a5f;">
-      <span class="categoria-emoji">🦪</span>
-      <span class="categoria-nombre">Cómo saber si los mariscos están frescos</span>
+    <div class="categoria-card" style="--cat-color:#1f3a5f;">
+      <span class="categoria-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+      <a href="guias/como-saber-si-los-mariscos-estan-frescos.html" class="categoria-nombre" style="text-decoration:none;">Cómo saber si los mariscos están frescos</a>
       <span class="categoria-desc">El olor, el tacto y el truco de la concha. Aprende a no equivocarte en la feria.</span>
-      <span class="categoria-arrow">→</span>
-    </a>
+      <div class="guia-recetas-cruce">
+        <strong>Recetas asociadas:</strong> <a href="recetas/paila-marina.html">Paila marina</a>, <a href="recetas/machas-a-la-parmesana.html">Machas a la parmesana</a>, <a href="recetas/locos-con-mayonesa.html">Locos con mayonesa</a>
+      </div>
+      <a href="guias/como-saber-si-los-mariscos-estan-frescos.html" class="categoria-arrow">Leer guía →</a>
+    </div>
 
     <!-- Guía 10 -->
-    <a class="categoria-card" href="guias/con-que-vino-acompanar-cada-plato.html" style="--cat-color:#a8466f;">
-      <span class="categoria-emoji">🍷</span>
-      <span class="categoria-nombre">Con qué vino acompañar cada plato</span>
+    <div class="categoria-card" style="--cat-color:#a8466f;">
+      <span class="categoria-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2h8l1 10H7L8 2z"/><path d="M7 12v7a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-7"/></svg></span>
+      <a href="guias/con-que-vino-acompanar-cada-plato.html" class="categoria-nombre" style="text-decoration:none;">Con qué vino acompañar cada plato</a>
       <span class="categoria-desc">El maridaje perfecto para la cazuela, las empanadas y los mariscos chilenos.</span>
-      <span class="categoria-arrow">→</span>
-    </a>
+      <a href="guias/con-que-vino-acompanar-cada-plato.html" class="categoria-arrow">Leer guía →</a>
+    </div>
 
     <!-- Guía 11 -->
-    <a class="categoria-card" href="guias/como-hacer-que-el-pan-suba.html" style="--cat-color:#8b5a2b;">
-      <span class="categoria-emoji">🍞</span>
-      <span class="categoria-nombre">Cómo hacer que el pan suba</span>
+    <div class="categoria-card" style="--cat-color:#8b5a2b;">
+      <span class="categoria-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15c0-4 4-7 8-7s8 3 8 7v1a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-1z"/><path d="M8 12l1 3M12 11v4M16 12l-1 3"/></svg></span>
+      <a href="guias/como-hacer-que-el-pan-suba.html" class="categoria-nombre" style="text-decoration:none;">Cómo hacer que el pan suba</a>
       <span class="categoria-desc">El secreto de la levadura y la temperatura para un pan amasado esponjoso.</span>
-      <span class="categoria-arrow">→</span>
-    </a>
+      <div class="guia-recetas-cruce">
+        <strong>Recetas asociadas:</strong> <a href="recetas/pan-amasado.html">Pan amasado</a>, <a href="recetas/hallulla.html">Hallulla</a>, <a href="recetas/marraqueta.html">Marraqueta</a>
+      </div>
+      <a href="guias/como-hacer-que-el-pan-suba.html" class="categoria-arrow">Leer guía →</a>
+    </div>
 
     <!-- Guía 12 -->
-    <a class="categoria-card" href="guias/como-picar-cebolla-sin-llorar.html" style="--cat-color:#4a7c59;">
-      <span class="categoria-emoji">🧅</span>
-      <span class="categoria-nombre">Cómo picar cebolla sin llorar</span>
+    <div class="categoria-card" style="--cat-color:#4a7c59;">
+      <span class="categoria-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/><path d="M12 6a6 6 0 0 0-6 6c0 2 1 4 3 5"/></svg></span>
+      <a href="guias/como-picar-cebolla-sin-llorar.html" class="categoria-nombre" style="text-decoration:none;">Cómo picar cebolla sin llorar</a>
       <span class="categoria-desc">El truco del frío, el cuchillo afilado y la técnica para no derramar ni una lágrima.</span>
-      <span class="categoria-arrow">→</span>
-    </a>
+      <a href="guias/como-picar-cebolla-sin-llorar.html" class="categoria-arrow">Leer guía →</a>
+    </div>
 
   </div>
 </main>
@@ -169,5 +212,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="contacto.html">Contacto</a>
   </nav>
 </footer>
+
+<script>
+  // Script para el menú hamburguesa en móvil
+  (function () {
+    var toggle = document.querySelector('.site-nav-toggle');
+    var links  = document.querySelector('.site-nav-links');
+    if (!toggle || !links) return;
+    toggle.addEventListener('click', function () {
+      var open = links.classList.toggle('abierto');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    links.addEventListener('click', function (e) {
+      if (e.target.closest('a')) {
+        links.classList.remove('abierto');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+</script>
 </body>
 </html>

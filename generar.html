@@ -31,7 +31,31 @@ var ICONS = {
   dificultad: '<svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>',
   tecnica: '<svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>',
   imprimir: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>',
-  chef: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"/><line x1="6" y1="17" x2="18" y2="17"/></svg>'
+  chef: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"/><line x1="6" y1="17" x2="18" y2="17"/></svg>',
+  libro: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>'
+};
+
+// =====================================================
+// TABLA DE CRUCES: RECETA -> GUÍA
+// =====================================================
+var GUIAS = {
+  'pastel-de-choclo': { titulo: 'Cómo elegir un buen choclo', url: '../guias/como-elegir-un-choclo.html' },
+  'humitas': { titulo: 'Cómo elegir un buen choclo', url: '../guias/como-elegir-un-choclo.html' },
+  'porotos-granados': { titulo: 'Cómo elegir un buen choclo', url: '../guias/como-elegir-un-choclo.html' },
+  
+  'pan-amasado': { titulo: 'Cómo hacer que el pan suba', url: '../guias/como-hacer-que-el-pan-suba.html' },
+  'hallulla': { titulo: 'Cómo hacer que el pan suba', url: '../guias/como-hacer-que-el-pan-suba.html' },
+  'marraqueta': { titulo: 'Cómo hacer que el pan suba', url: '../guias/como-hacer-que-el-pan-suba.html' },
+  
+  'paila-marina': { titulo: 'Cómo saber si los mariscos están frescos', url: '../guias/como-saber-si-los-mariscos-estan-frescos.html' },
+  'machas-a-la-parmesana': { titulo: 'Cómo saber si los mariscos están frescos', url: '../guias/como-saber-si-los-mariscos-estan-frescos.html' },
+  'locos-con-mayonesa': { titulo: 'Cómo saber si los mariscos están frescos', url: '../guias/como-saber-si-los-mariscos-estan-frescos.html' },
+  
+  'carne-mechada': { titulo: 'Cómo evitar que la carne quede seca', url: '../guias/como-evitar-que-la-carne-quede-seca.html' },
+  'bistec-a-lo-pobre': { titulo: 'Cómo evitar que la carne quede seca', url: '../guias/como-evitar-que-la-carne-quede-seca.html' },
+  
+  'pollo-asado': { titulo: 'Cómo encender el carbón', url: '../guias/como-encender-carbon-parrilla.html' },
+  'chorrillana': { titulo: 'Cortes de carne para Parrilla', url: '../guias/cortes-de-carne-parrilla.html' }
 };
 
 function slugify(t) {
@@ -134,6 +158,19 @@ function crearPagina(r, i, total, todos) {
     tagsHTML += '</div>';
   }
 
+  // INYECCIÓN DEL CRUCE A LA GUÍA
+  var guiaHTML = '';
+  var guiaAsociada = GUIAS[slug];
+  if (guiaAsociada) {
+    guiaHTML = '<div class="receta-guia-box">' +
+      '<div class="guia-icon">' + ICONS.libro + '</div>' +
+      '<div class="guia-texto">' +
+        '<span class="guia-eyebrow">Guía recomendada</span>' +
+        '<a href="' + guiaAsociada.url + '">' + esc(guiaAsociada.titulo) + ' →</a>' +
+      '</div>' +
+    '</div>';
+  }
+
   var h = '<!DOCTYPE html><html lang="es-CL"><head>';
   h += '<meta charset="UTF-8">';
   h += '<!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({\'gtm.start\':new Date().getTime(),event:\'gtm.js\'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!=\'dataLayer\'?\'&l=\'+l:\'\';j.async=true;j.src=\'https://www.googletagmanager.com/gtm.js?id=\'+i+dl;f.parentNode.insertBefore(j,f);})(window,document,\'script\',\'dataLayer\',\'GTM-KXH425KQ\');<\/script><!-- End Google Tag Manager -->';
@@ -211,6 +248,7 @@ function crearPagina(r, i, total, todos) {
   h += '</div></article>';
 
   h += tagsHTML;
+  h += guiaHTML; // <-- INYECTAMOS LA GUÍA AQUÍ
 
   var msjWA = 'Mira esta receta de ' + r.titulo + ' en Recetario Chileno: ' + url;
   var linkWA = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(msjWA);
@@ -270,7 +308,7 @@ function generar() {
     a.href = u; a.download = 'recetas.zip';
     document.body.appendChild(a); a.click(); document.body.removeChild(a);
     setTimeout(function(){ URL.revokeObjectURL(u); }, 1000);
-    log.textContent += 'LISTO. Se descargó recetas.zip\n\nSIGUIENTE:\n1. Extrae la carpeta "recetas" dentro de Intento 2/ (reemplaza la existente)\n2. git add .\n3. git commit -m "F5: Etiquetas y busqueda"\n4. git pull --rebase\n5. git push\n';
+    log.textContent += 'LISTO. Se descargó recetas.zip\n\nSIGUIENTE:\n1. Extrae la carpeta "recetas" dentro de Intento 2/ (reemplaza la existente)\n2. git add .\n3. git commit -m "F6: Cruces entre recetas y guias"\n4. git pull --rebase\n5. git push\n';
     btn.disabled = false;
   }).catch(function(err) {
     log.textContent += '\nERROR: ' + err.message + '\n';

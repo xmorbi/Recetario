@@ -565,6 +565,100 @@ body.mc-bloqueado{overflow:hidden}
 }
 
 /* =====================================================
+   CRUCES: RECETA <-> GUÍA
+   ===================================================== */
+.receta-guia-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: linear-gradient(135deg, #fff 0%, #fdf8f0 100%);
+  border: 1px solid var(--borde);
+  border-left: 4px solid var(--dorado);
+  padding: 1.2rem;
+  border-radius: 0 var(--radio) var(--radio) 0;
+  margin-top: 1.5rem;
+  box-shadow: var(--sombra-sm);
+}
+.guia-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--crema-osc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--rojo-osc);
+  flex-shrink: 0;
+}
+.guia-icon svg {
+  width: 20px;
+  height: 20px;
+}
+.guia-texto {
+  display: flex;
+  flex-direction: column;
+}
+.guia-eyebrow {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--suave);
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+.guia-texto a {
+  font-family: var(--fuente-titulos);
+  color: var(--rojo-osc);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.guia-texto a:hover {
+  color: var(--rojo);
+  text-decoration: underline;
+}
+
+/* Cruces dentro de la página de guías */
+.guia-recetas-cruce {
+  background: var(--crema);
+  padding: 0.8rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  border: 1px dashed var(--borde);
+}
+.guia-recetas-cruce strong {
+  color: var(--rojo-osc);
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.guia-recetas-cruce a {
+  color: var(--azul);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  transition: color 0.2s;
+}
+.guia-recetas-cruce a:hover {
+  color: var(--rojo);
+}
+
+/* Ajuste para que los enlaces de las tarjetas de guías no tengan subrayado azul por defecto */
+.categoria-card .categoria-nombre {
+  text-decoration: none !important;
+  color: var(--rojo-osc) !important;
+}
+.categoria-card .categoria-nombre:hover {
+  color: var(--rojo) !important;
+}
+
+/* =====================================================
    IMPRESIÓN
    ===================================================== */
 @media print {
@@ -591,6 +685,8 @@ body.mc-bloqueado{overflow:hidden}
   .receta-acciones-top,
   .receta-cta,
   .receta-tags,
+  .receta-guia-box,
+  .guia-recetas-cruce,
   .btn-volver-inicio,
   .receta-nav,
   .recetas-relacionadas,
