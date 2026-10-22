@@ -168,6 +168,36 @@ function crearPagina(r, i, total, todos) {
     '</div>';
   }
 
+  // INYECCIÓN DE ERRORES COMUNES Y TIPS
+  var erroresHTML = '';
+  if (r.errores && r.errores.length > 0) {
+    erroresHTML = '<div class="errores-box">' +
+      '<h3>Errores comunes y cómo evitarlos</h3>' +
+      '<ul class="errores-lista">';
+    
+    r.errores.forEach(function(e) {
+      erroresHTML += '<li>' +
+        '<strong class="error">' + esc(e.error) + '</strong>' +
+        '<span class="solucion">' + esc(e.solucion) + '</span>' +
+      '</li>';
+    });
+    
+    erroresHTML += '</ul>';
+    
+    // Añadir Tips Universales
+    erroresHTML += '<div class="tips-universales">' +
+      '<h4>Tips Universales de Cocina</h4>' +
+      '<ul>' +
+        '<li><strong>El reposo de la carne:</strong> Deja reposar la carne 5 a 10 minutos antes de cortarla. Esto permite que los jugos se redistribuyan y quede mucho más jugosa.</li>' +
+        '<li><strong>El atemperado:</strong> Saca la carne del refrigerador 30 minutos antes de cocinarla para que se cocine de manera uniforme.</li>' +
+        '<li><strong>El truco del ácido:</strong> Si un plato sabe soso, agrégale unas gotas de limón o vinagre antes de añadir más sal. El ácido despierta los sabores.</li>' +
+        '<li><strong>No laves el pollo crudo:</strong> Lavarlo esparce bacterias por la cocina. El calor de la cocción se encarga de eliminarlas.</li>' +
+        '<li><strong>El arte de probar:</strong> Prueba la comida en cada etapa. Ajusta la sal y los aliños según tu paladar y el de tu familia.</li>' +
+      '</ul>' +
+    '</div>' +
+    '</div>';
+  }
+
   var h = '<!DOCTYPE html><html lang="es-CL"><head>';
   h += '<meta charset="UTF-8">';
   h += '<!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({\'gtm.start\':new Date().getTime(),event:\'gtm.js\'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!=\'dataLayer\'?\'&l=\'+l:\'\';j.async=true;j.src=\'https://www.googletagmanager.com/gtm.js?id=\'+i+dl;f.parentNode.insertBefore(j,f);})(window,document,\'script\',\'dataLayer\',\'GTM-KXH425KQ\');<\/script><!-- End Google Tag Manager -->';
@@ -230,7 +260,6 @@ function crearPagina(r, i, total, todos) {
 
   h += '<main class="receta-page">';
   
-  // ACCIONES Y ESTRELLAS
   h += '<div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-bottom:1.5rem;">';
   
   h += '<div class="receta-acciones-top" style="margin-bottom:0;">';
@@ -239,7 +268,6 @@ function crearPagina(r, i, total, todos) {
   h += '<button type="button" class="btn-favorito" data-slug="' + slug + '" aria-label="Guardar en favoritos">' + ICONS.corazon + '</button>'; 
   h += '</div>';
 
-  // CONTENEDOR DE ESTRELLAS
   h += '<div class="rating-container" data-slug="' + slug + '">';
   h += '<div class="rating-stars">';
   for(var s=1; s<=5; s++) {
@@ -249,7 +277,7 @@ function crearPagina(r, i, total, todos) {
   h += '<span class="rating-text">Califica esta receta</span>';
   h += '</div>';
 
-  h += '</div>'; // Fin flex wrapper
+  h += '</div>';
 
   h += '<article class="receta" data-cat="' + esc(r.categoria || 'principales') + '">';
 
@@ -265,6 +293,9 @@ function crearPagina(r, i, total, todos) {
   h += '</div>';
   h += '<div><h3>Preparación</h3><ol class="preparacion">' + pasos + '</ol>' + dato + '</div>';
   h += '</div></article>';
+
+  // AQUÍ INYECTAMOS LA CAJA DE ERRORES
+  h += erroresHTML;
 
   h += tagsHTML;
   h += guiaHTML;
@@ -288,7 +319,7 @@ function crearPagina(r, i, total, todos) {
   h += '<script src="../modo-cocina.js" defer><\/script>';
   h += '<script src="../favoritos.js" defer><\/script>'; 
   h += '<script src="../lista-compras.js" defer><\/script>';
-  h += '<script src="../estrellas.js" defer><\/script>'; // NUEVO SCRIPT
+  h += '<script src="../estrellas.js" defer><\/script>';
   h += '</body></html>';
   return h;
 }
@@ -331,7 +362,7 @@ function generar() {
     a.href = u; a.download = 'recetas.zip';
     document.body.appendChild(a); a.click(); document.body.removeChild(a);
     setTimeout(function(){ URL.revokeObjectURL(u); }, 1000);
-    log.textContent += 'LISTO. Se descargó recetas.zip\n\nSIGUIENTE:\n1. Extrae la carpeta "recetas" dentro de Intento 2/ (reemplaza la existente)\n2. git add .\n3. git commit -m "Fase 4: Calificaciones"\n4. git push\n';
+    log.textContent += 'LISTO. Se descargó recetas.zip\n\nSIGUIENTE:\n1. Extrae la carpeta "recetas" dentro de Intento 2/ (reemplaza la existente)\n2. git add .\n3. git commit -m "Errores y tips agregados"\n4. git push\n';
     btn.disabled = false;
   }).catch(function(err) {
     log.textContent += '\nERROR: ' + err.message + '\n';

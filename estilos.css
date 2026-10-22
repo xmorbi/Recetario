@@ -1198,6 +1198,111 @@ body.mc-bloqueado{overflow:hidden}
 }
 
 /* =====================================================
+   ERRORES COMUNES Y TIPS UNIVERSALES
+   ===================================================== */
+.errores-box {
+  background: #fff9f2;
+  border: 1px solid #f0d9b5;
+  border-left: 5px solid #d97706;
+  border-radius: var(--radio);
+  padding: 1.8rem;
+  margin-top: 2.5rem;
+  box-shadow: var(--sombra-sm);
+}
+
+.errores-box h3 {
+  font-family: var(--fuente-titulos);
+  color: #b45309;
+  font-size: 1.3rem;
+  margin-bottom: 1.2rem;
+  border-bottom: none;
+  padding-bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.errores-box h3::before {
+  content: "⚠️";
+  font-size: 1.5rem;
+}
+
+.errores-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.errores-lista li {
+  margin-bottom: 1.2rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.errores-lista li:last-child {
+  margin-bottom: 0;
+}
+
+.errores-lista strong.error {
+  color: #9a3412;
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+}
+
+.errores-lista span.solucion {
+  color: var(--tinta);
+  display: block;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.errores-lista span.solucion::before {
+  content: "👉";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 0.9rem;
+}
+
+.tips-universales {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px dashed #f0d9b5;
+}
+
+.tips-universales h4 {
+  font-family: var(--fuente-titulos);
+  color: #b45309;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.tips-universales h4::before {
+  content: "🌟";
+}
+
+.tips-universales ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tips-universales li {
+  font-size: 0.88rem;
+  color: var(--suave);
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
+}
+
+.tips-universales li strong {
+  color: var(--rojo-osc);
+}
+
+/* =====================================================
    IMPRESIÓN
    ===================================================== */
 @media print {
@@ -1229,6 +1334,7 @@ body.mc-bloqueado{overflow:hidden}
   .btn-despensa,
   .modal-despensa-overlay,
   .rating-container,
+  .errores-box,
   .receta-acciones,
   .receta-acciones-top,
   .receta-cta,
