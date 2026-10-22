@@ -163,7 +163,7 @@ h3{font-size:.72rem;text-transform:uppercase;letter-spacing:.16em;color:var(--az
 .btn-modo-cocina:hover{background:var(--rojo);border-color:var(--rojo);transform:translateY(-2px);box-shadow:0 6px 16px rgba(176,58,46,.35)}
 
 /* Wrapper para botones de acción en página individual */
-.receta-acciones-top{display:flex;gap:.8rem;flex-wrap:wrap;margin-bottom:1.5rem}
+.receta-acciones-top{display:flex;gap:.8rem;flex-wrap:wrap;margin-bottom:1.5rem;align-items:center}
 
 .vacio{text-align:center;color:var(--suave);font-style:italic;padding:4rem 1rem}
 .vacio-icon{display:block;margin:0 auto 1rem;width:3.5rem;height:3.5rem;color:var(--suave);opacity:.55}
@@ -659,6 +659,46 @@ body.mc-bloqueado{overflow:hidden}
 }
 
 /* =====================================================
+   FAVORITOS (CORAZÓN) Y PÁGINA MIS RECETAS
+   ===================================================== */
+.btn-favorito {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background: #fff;
+  color: var(--suave);
+  border: 1.5px solid var(--borde);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  padding: 0;
+}
+.btn-favorito svg {
+  width: 18px;
+  height: 18px;
+}
+.btn-favorito:hover {
+  border-color: var(--rojo);
+  color: var(--rojo);
+  transform: scale(1.1);
+}
+.btn-favorito.activo {
+  color: var(--rojo);
+  border-color: var(--rojo);
+  background: #fdf3e3;
+}
+
+/* Listado de favoritos en "Mis recetas" */
+.recetas-grid-favoritos {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* =====================================================
    IMPRESIÓN
    ===================================================== */
 @media print {
@@ -681,6 +721,7 @@ body.mc-bloqueado{overflow:hidden}
   .btn-imprimir,
   .btn-imprimir-receta,
   .btn-modo-cocina,
+  .btn-favorito,
   .receta-acciones,
   .receta-acciones-top,
   .receta-cta,

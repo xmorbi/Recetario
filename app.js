@@ -248,6 +248,9 @@
           '<a class="receta-cta" href="recetas/' + slug + '.html">Ver página completa →</a>' +
           '<button type="button" class="btn-modo-cocina" data-index="' + indice + '" aria-label="Abrir modo cocina">' + ICONS.chef + '<span>Modo cocina</span></button>' +
           '<button type="button" class="btn-imprimir" aria-label="Imprimir esta receta">' + ICONS.imprimir + '<span>Imprimir</span></button>' +
+          '<button type="button" class="btn-favorito" data-slug="' + slug + '" aria-label="Guardar en favoritos">' +
+            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>' +
+          '</button>' +
         '</div>' +
       '</article>';
   }
@@ -263,6 +266,9 @@
     });
 
     inyectarSchemaSitio();
+    
+    // Inicializar estado visual de los botones de favoritos
+    if (window.Favoritos) window.Favoritos.actualizar();
   }
 
   /* ---------- Imprimir ---------- */
@@ -332,8 +338,6 @@
       limpiarResaltados(tarjeta);
 
       const coincideCat = categoriaActiva === 'todas' || tarjeta.dataset.cat === categoriaActiva;
-      
-      // Búsqueda mejorada: busca en el texto visible Y en los tags ocultos
       const textoCompleto = tarjeta.textContent + ' ' + (tarjeta.dataset.tags || '');
       const coincideTxt = !normBusqueda ||
         quitarAcentos(textoCompleto).toLowerCase().indexOf(normBusqueda) !== -1;
@@ -408,7 +412,11 @@
      LISTADO: si no estamos en recetario.html, salimos
      ===================================================== */
   const contenedor = document.getElementById('contenedorRecetas');
-  if (!contenedor) return;
+  if (!contenedor) {
+    // Exponer la función para favoritos.js incluso si no estamos en el listado
+    window.crearTarjetaGlobal = crearTarjeta;
+    return;
+  }
 
   const buscador     = document.getElementById('buscador');
   const limpiarBtn   = document.getElementById('limpiarBuscador');
@@ -491,4 +499,7 @@
     b.classList.toggle('activo', b.dataset.cat === categoriaActiva);
   });
   aplicarFiltros();
+
+  // Exponer para favoritos.js
+  window.crearTarjetaGlobal = crearTarjeta;
 })();
