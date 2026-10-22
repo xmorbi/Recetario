@@ -227,13 +227,18 @@ footer .bandera{max-width:140px;margin:0 auto 1.2rem;border-radius:4px;overflow:
 }
 
 /* =====================================================
-   BOTÓN DE COMPARTIR EN WHATSAPP
+   BOTONES DE COMPARTIR (WHATSAPP Y PINTEREST)
    ===================================================== */
 .compartir-receta{display:flex;align-items:center;justify-content:center;gap:1rem;margin-top:2.5rem;padding:1.5rem;background:#fff;border:1px solid var(--borde);border-radius:var(--radio);flex-wrap:wrap;text-align:center}
-.compartir-receta span{font-weight:600;color:var(--tinta);font-size:1.05rem}
+.compartir-receta span{font-weight:600;color:var(--tinta);font-size:1.05rem;width:100%; margin-bottom:0.5rem;}
+
 .btn-whatsapp{display:inline-flex;align-items:center;gap:.6rem;background:#25D366;color:#fff;padding:.8rem 1.6rem;border-radius:99px;text-decoration:none;font-weight:700;font-size:.95rem;box-shadow:0 4px 12px rgba(37,211,102,.3);transition:transform .2s,background .2s,box-shadow .2s}
 .btn-whatsapp:hover{background:#128C7E;transform:translateY(-2px);box-shadow:0 6px 16px rgba(37,211,102,.4)}
 .btn-whatsapp svg{width:20px;height:20px;fill:currentColor}
+
+.btn-pinterest{display:inline-flex;align-items:center;gap:.6rem;background:#E60023;color:#fff;padding:.8rem 1.6rem;border-radius:99px;text-decoration:none;font-weight:700;font-size:.95rem;box-shadow:0 4px 12px rgba(230,0,35,.3);transition:transform .2s,background .2s,box-shadow .2s}
+.btn-pinterest:hover{background:#ad081b;transform:translateY(-2px);box-shadow:0 6px 16px rgba(230,0,35,.4)}
+.btn-pinterest svg{width:20px;height:20px;fill:currentColor}
 
 /* =====================================================
    PÁGINAS LEGALES
