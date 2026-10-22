@@ -1,5 +1,5 @@
 /* =================================================================
-   ESTILOS.CSS — Apariencia del recetario
+   ESTILOS.CSS — Apariencia del recetario (Completo)
    ================================================================= */
 
 :root{
@@ -756,6 +756,225 @@ body.mc-bloqueado{overflow:hidden}
 .calc-recetas-cruce a:hover { background: var(--rojo); color: #fff; border-color: var(--rojo); transform: translateY(-2px); box-shadow: 0 4px 8px rgba(176,58,46,0.2); }
 
 /* =====================================================
+   LISTA DE COMPRAS (CARRITO FLOTANTE)
+   ===================================================== */
+/* Botón flotante */
+.shopping-fab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 8000;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--rojo);
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 16px rgba(176,58,46,0.4);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, background 0.2s;
+}
+.shopping-fab:hover { background: var(--rojo-osc); transform: scale(1.05); }
+.shopping-fab svg { width: 28px; height: 28px; }
+
+.shopping-badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  background: #e8b54a;
+  color: #1a0f0a;
+  font-size: 0.75rem;
+  font-weight: 800;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--crema);
+}
+
+/* Panel Lateral */
+.shopping-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 8001;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.shopping-overlay.abierto { opacity: 1; pointer-events: auto; }
+
+.shopping-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  z-index: 8002;
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  box-shadow: -4px 0 24px rgba(0,0,0,0.1);
+}
+.shopping-panel.abierto { transform: translateX(0); }
+
+.shopping-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 1.5rem;
+  border-bottom: 1px solid var(--borde);
+  background: var(--crema-osc);
+}
+.shopping-header h2 {
+  font-family: var(--fuente-titulos);
+  color: var(--rojo-osc);
+  font-size: 1.3rem;
+  margin: 0;
+}
+.shopping-close {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--suave);
+  cursor: pointer;
+  padding: 0.5rem;
+  line-height: 1;
+}
+
+.shopping-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem 1.5rem;
+}
+
+.shop-group { margin-bottom: 1.5rem; }
+.shop-group-done h3 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--suave);
+  margin-bottom: 0.8rem;
+  border-bottom: 1px dashed var(--borde);
+  padding-bottom: 0.3rem;
+}
+
+.shop-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--crema);
+}
+.shop-item-done .shop-text {
+  text-decoration: line-through;
+  color: var(--suave);
+  opacity: 0.6;
+}
+
+.shop-check {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid var(--borde);
+  background: #fff;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+.shop-item-done .shop-check {
+  background: #4a7c59;
+  border-color: #4a7c59;
+}
+
+.shop-text {
+  flex: 1;
+  font-size: 0.95rem;
+  color: var(--tinta);
+  line-height: 1.4;
+}
+
+.shop-del {
+  background: transparent;
+  border: none;
+  color: #d1c4b8;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.3rem;
+  transition: color 0.2s;
+}
+.shop-del:hover { color: var(--rojo); }
+
+.shopping-footer {
+  padding: 1.2rem 1.5rem;
+  border-top: 1px solid var(--borde);
+  background: var(--crema);
+}
+.btn-vaciar {
+  width: 100%;
+  padding: 0.8rem;
+  background: transparent;
+  border: 2px solid var(--rojo);
+  color: var(--rojo);
+  font-family: inherit;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-vaciar:hover { background: var(--rojo); color: #fff; }
+
+/* Botones en la receta para añadir ingredientes */
+.btn-add-ing {
+  background: transparent;
+  border: 1px solid var(--borde);
+  border-radius: 4px;
+  color: var(--suave);
+  padding: 0.2rem 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+.btn-add-ing:hover { border-color: var(--rojo); color: var(--rojo); background: var(--crema); }
+
+.btn-add-all {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--crema-osc);
+  border: 1px solid var(--borde);
+  color: var(--rojo-osc);
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  width: 100%;
+  transition: all 0.2s;
+}
+.btn-add-all:hover { background: var(--rojo); color: #fff; border-color: var(--rojo); }
+
+@media(max-width: 640px) {
+  .shopping-fab { bottom: 15px; right: 15px; width: 54px; height: 54px; }
+}
+
+/* =====================================================
    IMPRESIÓN
    ===================================================== */
 @media print {
@@ -779,6 +998,11 @@ body.mc-bloqueado{overflow:hidden}
   .btn-imprimir-receta,
   .btn-modo-cocina,
   .btn-favorito,
+  .btn-add-ing,
+  .btn-add-all,
+  .shopping-fab,
+  .shopping-overlay,
+  .shopping-panel,
   .receta-acciones,
   .receta-acciones-top,
   .receta-cta,

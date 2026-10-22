@@ -35,25 +35,18 @@ var ICONS = {
   corazon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>'
 };
 
-// =====================================================
-// TABLA DE CRUCES: RECETA -> GUÍA
-// =====================================================
 var GUIAS = {
   'pastel-de-choclo': { titulo: 'Cómo elegir un buen choclo', url: '../guias/como-elegir-un-choclo.html' },
   'humitas': { titulo: 'Cómo elegir un buen choclo', url: '../guias/como-elegir-un-choclo.html' },
   'porotos-granados': { titulo: 'Cómo elegir un buen choclo', url: '../guias/como-elegir-un-choclo.html' },
-  
   'pan-amasado': { titulo: 'Cómo hacer que el pan suba', url: '../guias/como-hacer-que-el-pan-suba.html' },
   'hallulla': { titulo: 'Cómo hacer que el pan suba', url: '../guias/como-hacer-que-el-pan-suba.html' },
   'marraqueta': { titulo: 'Cómo hacer que el pan suba', url: '../guias/como-hacer-que-el-pan-suba.html' },
-  
   'paila-marina': { titulo: 'Cómo saber si los mariscos están frescos', url: '../guias/como-saber-si-los-mariscos-estan-frescos.html' },
   'machas-a-la-parmesana': { titulo: 'Cómo saber si los mariscos están frescos', url: '../guias/como-saber-si-los-mariscos-estan-frescos.html' },
   'locos-con-mayonesa': { titulo: 'Cómo saber si los mariscos están frescos', url: '../guias/como-saber-si-los-mariscos-estan-frescos.html' },
-  
   'carne-mechada': { titulo: 'Cómo evitar que la carne quede seca', url: '../guias/como-evitar-que-la-carne-quede-seca.html' },
   'bistec-a-lo-pobre': { titulo: 'Cómo evitar que la carne quede seca', url: '../guias/como-evitar-que-la-carne-quede-seca.html' },
-  
   'pollo-asado': { titulo: 'Cómo encender el carbón', url: '../guias/como-encender-carbon-parrilla.html' },
   'chorrillana': { titulo: 'Cortes de carne para Parrilla', url: '../guias/cortes-de-carne-parrilla.html' }
 };
@@ -87,7 +80,6 @@ function catLegible(c) {
 function crearPagina(r, i, total, todos) {
   var slug = slugify(r.titulo);
   var url = URL_BASE + '/recetas/' + slug + '.html';
-  // Si no hay imagen, usamos la default para Pinterest
   var img = (r.imagen && r.imagen.trim() !== '') ? URL_BASE + '/' + r.imagen.replace(/^\.\.\//,'') : URL_BASE + '/img/og-default.jpg';
 
   var tagsStr = (r.tags || []).join(', ');
@@ -123,8 +115,12 @@ function crearPagina(r, i, total, todos) {
   }).replace(/<\/script/g, '<\\/script');
 
   var ing = (r.ingredientes || []).map(function(x) {
-    return '<li><label><input type="checkbox"><span>' + esc(x) + '</span></label></li>';
+    return '<li style="display:flex; justify-content:space-between; align-items:flex-start; gap:10px; margin-bottom:0.8rem;">' +
+      '<label style="flex:1;"><input type="checkbox"><span>' + esc(x) + '</span></label>' +
+      '<button type="button" class="btn-add-ing" data-ing="' + esc(x) + '" aria-label="Añadir a lista de compras">+</button>' +
+    '</li>';
   }).join('');
+
   var pasos = (r.pasos || []).map(function(x) { return '<li>' + esc(x) + '</li>'; }).join('');
   var dato = r.dato ? '<p class="dato"><strong>Dato:</strong> ' + esc(r.dato) + '</p>' : '';
 
@@ -159,7 +155,6 @@ function crearPagina(r, i, total, todos) {
     tagsHTML += '</div>';
   }
 
-  // INYECCIÓN DEL CRUCE A LA GUÍA
   var guiaHTML = '';
   var guiaAsociada = GUIAS[slug];
   if (guiaAsociada) {
@@ -210,6 +205,7 @@ function crearPagina(r, i, total, todos) {
   h += '<a href="../recetario.html" class="activo">Recetas</a>';
   h += '<a href="../guias.html">Guías</a>';
   h += '<a href="../calculadora.html">Calculadora</a>';
+  h += '<a href="../conversor.html">Conversor</a>'; // NUEVO ENLACE
   h += '<a href="../mis-recetas.html">Mis recetas</a>';
   h += '<a href="../sobre-mi.html">Sobre nosotros</a>';
   h += '</nav></div></header>';
@@ -246,30 +242,24 @@ function crearPagina(r, i, total, todos) {
   h += bloqueImagen;
 
   h += '<div class="cuerpo">';
-  h += '<div><h3>' + esc(r.tituloIngredientes || 'Ingredientes') + '</h3><ul class="ingredientes">' + ing + '</ul></div>';
+  h += '<div><h3>' + esc(r.tituloIngredientes || 'Ingredientes') + '</h3><ul class="ingredientes">' + ing + '</ul>';
+  h += '<button type="button" class="btn-add-all" data-index="' + i + '">Añadir todos los ingredientes</button>';
+  h += '</div>';
   h += '<div><h3>Preparación</h3><ol class="preparacion">' + pasos + '</ol>' + dato + '</div>';
   h += '</div></article>';
 
   h += tagsHTML;
   h += guiaHTML;
 
-  // Enlaces de compartir
   var msjWA = 'Mira esta receta de ' + r.titulo + ' en Recetario Chileno: ' + url;
   var linkWA = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(msjWA);
-
   var msjPin = 'Receta chilena: ' + r.titulo + ' | Recetario Chileno';
   var linkPin = 'https://pinterest.com/pin/create/button/?url=' + encodeURIComponent(url) + '&media=' + encodeURIComponent(img) + '&description=' + encodeURIComponent(msjPin);
 
   h += '<div class="compartir-receta">';
   h += '<span>¿Te gustó esta receta?</span>';
-  h += '<a href="' + linkWA + '" target="_blank" rel="noopener" class="btn-whatsapp">';
-  h += '<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>';
-  h += 'Compartir por WhatsApp</a>';
-  
-  h += '<a href="' + linkPin + '" target="_blank" rel="noopener" class="btn-pinterest">';
-  h += '<svg viewBox="0 0 24 24"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.951-7.252 4.195 0 7.454 2.988 7.454 6.978 0 4.169-2.626 7.525-6.282 7.525-1.226 0-2.379-.637-2.774-1.39l-.756 2.882c-.272 1.049-1.009 2.361-1.505 3.166 1.131.346 2.333.535 3.577.535 6.621 0 11.987-5.367 11.987-11.987C24.007 5.367 18.641 0 12.017 0z"/></svg>';
-  h += 'Guardar en Pinterest</a>';
-  
+  h += '<a href="' + linkWA + '" target="_blank" rel="noopener" class="btn-whatsapp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Compartir por WhatsApp</a>';
+  h += '<a href="' + linkPin + '" target="_blank" rel="noopener" class="btn-pinterest"><svg viewBox="0 0 24 24"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.951-7.252 4.195 0 7.454 2.988 7.454 6.978 0 4.169-2.626 7.525-6.282 7.525-1.226 0-2.379-.637-2.774-1.39l-.756 2.882c-.272 1.049-1.009 2.361-1.505 3.166 1.131.346 2.333.535 3.577.535 6.621 0 11.987-5.367 11.987-11.987C24.007 5.367 18.641 0 12.017 0z"/></svg>Guardar en Pinterest</a>';
   h += '</div>';
 
   h += relHTML;
@@ -279,6 +269,7 @@ function crearPagina(r, i, total, todos) {
   h += '<script type="application/json" id="receta-data">' + recetaJSON + '<\/script>';
   h += '<script src="../modo-cocina.js" defer><\/script>';
   h += '<script src="../favoritos.js" defer><\/script>'; 
+  h += '<script src="../lista-compras.js" defer><\/script>';
   h += '</body></html>';
   return h;
 }
@@ -321,7 +312,7 @@ function generar() {
     a.href = u; a.download = 'recetas.zip';
     document.body.appendChild(a); a.click(); document.body.removeChild(a);
     setTimeout(function(){ URL.revokeObjectURL(u); }, 1000);
-    log.textContent += 'LISTO. Se descargó recetas.zip\n\nSIGUIENTE:\n1. Extrae la carpeta "recetas" dentro de Intento 2/ (reemplaza la existente)\n2. git add .\n3. git commit -m "F10: Boton Pinterest"\n4. git push\n';
+    log.textContent += 'LISTO. Se descargó recetas.zip\n\nSIGUIENTE:\n1. Extrae la carpeta "recetas" dentro de Intento 2/ (reemplaza la existente)\n2. git add .\n3. git commit -m "F12: Conversor de medidas"\n4. git push\n';
     btn.disabled = false;
   }).catch(function(err) {
     log.textContent += '\nERROR: ' + err.message + '\n';
