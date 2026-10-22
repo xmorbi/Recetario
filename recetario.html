@@ -2,23 +2,9 @@
 <html lang="es-CL">
 <head>
 <meta charset="UTF-8">
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KXH425KQ');</script>
-<!-- End Google Tag Manager -->
-
-<!-- Google tag (gtag.js) -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KXH425KQ');</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PCNBDPPXXYP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-PCNBDPPXXYP');
-</script>
-
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-PCNBDPPXXYP');</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Todas las recetas | Recetario Chileno</title>
 <meta name="description" content="Explora todas las recetas tradicionales chilenas: platos de fondo, sopas, masas, ensaladas y dulces. Buscador y filtros por categoría.">
@@ -36,14 +22,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXH425KQ"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXH425KQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="bandera"><i class="azul"></i><i class="blanco"></i><i class="rojo"></i></div>
 
-<!-- Menú principal -->
 <header class="site-nav">
   <div class="site-nav-inner">
     <a href="index.html" class="site-nav-logo" aria-label="Recetario Chileno — Inicio">
@@ -87,6 +69,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <input type="text" id="buscador" autocomplete="off" placeholder="Buscar por receta o ingrediente… (ej: choclo, azucar)">
       <button class="limpiar" id="limpiarBuscador" hidden title="Limpiar búsqueda" aria-label="Limpiar búsqueda">×</button>
     </div>
+    
+    <!-- NUEVO BOTÓN DE DESPENSA -->
+    <button type="button" class="btn-despensa" id="btnDespensa">
+      🥕 ¿Qué tengo en el refri?
+    </button>
+
     <button class="filtro activo" data-cat="todas">Todas</button>
     <button class="filtro" data-cat="principales">Platos de fondo</button>
     <button class="filtro" data-cat="sopas">Sopas y guisos</button>
@@ -120,11 +108,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </nav>
 </footer>
 
-<!-- Scripts -->
+<!-- MODAL DE LA DESPENSA -->
+<div class="modal-despensa-overlay" id="modalDespensa">
+  <div class="modal-despensa">
+    <div class="modal-header">
+      <h2>¿Qué tienes en la cocina?</h2>
+      <button type="button" class="modal-close" id="cerrarDespensa" aria-label="Cerrar">✕</button>
+    </div>
+    <p class="modal-desc">Selecciona los ingredientes que tengas a mano y te mostraremos qué recetas puedes cocinar hoy.</p>
+    
+    <div class="despensa-grid" id="listaDespensa">
+      <!-- Los ingredientes se inyectan con JS -->
+    </div>
+
+    <div class="modal-footer">
+      <button type="button" class="btn-limpiar-despensa" id="limpiarDespensa">Limpiar</button>
+      <button type="button" class="btn-aplicar-despensa" id="aplicarDespensa">Ver recetas</button>
+    </div>
+  </div>
+</div>
+
 <script src="recetas.js"></script>
 <script src="modo-cocina.js"></script>
 <script src="favoritos.js"></script>
 <script src="app.js"></script>
-
+<script src="lista-compras.js"></script>
 </body>
 </html>

@@ -20,7 +20,8 @@
     dificultad: '<svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>',
     tecnica: '<svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>',
     imprimir: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>',
-    chef: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"/><line x1="6" y1="17" x2="18" y2="17"/></svg>'
+    chef: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"/><line x1="6" y1="17" x2="18" y2="17"/></svg>',
+    corazon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>'
   };
 
   /* ---------- Nav toggle (todas las páginas) ---------- */
@@ -329,46 +330,95 @@
   }
 
   /* ---------- Filtrado + feedback ---------- */
+  let ingredientesDespensa = []; // Estado de la despensa
+
   function aplicarFiltros() {
     let visibles = 0;
     const normBusqueda = quitarAcentos(textoBusqueda).toLowerCase();
     const regexResaltado = textoBusqueda ? buildRegex(textoBusqueda) : null;
 
-    tarjetas.forEach(function (tarjeta) {
+    // 1. Calcular estado y puntuación de cada tarjeta
+    const estadoTarjetas = tarjetas.map(tarjeta => {
       limpiarResaltados(tarjeta);
 
       const coincideCat = categoriaActiva === 'todas' || tarjeta.dataset.cat === categoriaActiva;
       const textoCompleto = tarjeta.textContent + ' ' + (tarjeta.dataset.tags || '');
-      const coincideTxt = !normBusqueda ||
-        quitarAcentos(textoCompleto).toLowerCase().indexOf(normBusqueda) !== -1;
+      const textoLimpio = quitarAcentos(textoCompleto).toLowerCase();
       
-      const mostrar = coincideCat && coincideTxt;
-
-      tarjeta.hidden = !mostrar;
-      if (mostrar) {
-        visibles++;
-        if (regexResaltado) resaltar(tarjeta, regexResaltado);
-        tarjeta.classList.remove('aparecer');
-        void tarjeta.offsetWidth;
-        tarjeta.classList.add('aparecer');
+      const coincideTxt = !normBusqueda || textoLimpio.indexOf(normBusqueda) !== -1;
+      
+      // Lógica de relevancia de despensa (Puntuación)
+      let scoreDespensa = 0;
+      if (ingredientesDespensa.length > 0) {
+        ingredientesDespensa.forEach(ing => {
+          if (textoLimpio.indexOf(quitarAcentos(ing).toLowerCase()) !== -1) {
+            scoreDespensa++;
+          }
+        });
       }
+
+      // Si hay ingredientes seleccionados, la receta debe tener al menos 1
+      const coincideDespensa = ingredientesDespensa.length === 0 || scoreDespensa > 0;
+
+      return {
+        tarjeta,
+        mostrar: coincideCat && coincideTxt && coincideDespensa,
+        scoreDespensa
+      };
     });
 
+    // 2. Filtrar las que se van a mostrar
+    const visiblesArr = estadoTarjetas.filter(e => e.mostrar);
+    visibles = visiblesArr.length;
+
+    // 3. Ordenar
+    if (ingredientesDespensa.length > 0) {
+      // Ordenar por puntuación de mayor a menor (más ingredientes de la despensa = más arriba)
+      visiblesArr.sort((a, b) => b.scoreDespensa - a.scoreDespensa);
+    } else {
+      // Si no hay filtro de despensa, mantener el orden original
+      visiblesArr.sort((a, b) => tarjetas.indexOf(a.tarjeta) - tarjetas.indexOf(b.tarjeta));
+    }
+
+    // 4. Ocultar todas y mostrar las visibles en orden
+    tarjetas.forEach(t => t.hidden = true);
+    
+    visiblesArr.forEach(e => {
+      e.tarjeta.hidden = false;
+      if (regexResaltado) resaltar(e.tarjeta, regexResaltado);
+      e.tarjeta.classList.remove('aparecer');
+      void e.tarjeta.offsetWidth;
+      e.tarjeta.classList.add('aparecer');
+      
+      // Mover al final del contenedor (esto reordena el DOM)
+      contenedor.appendChild(e.tarjeta);
+    });
+
+    // Mover las tarjetas ocultas al final para no interrumpir el orden visual
+    tarjetas.forEach(t => {
+      if (t.hidden) contenedor.appendChild(t);
+    });
+
+    // 5. Actualizar UI
     if (vacio) vacio.hidden = visibles !== 0;
 
     if (contador) {
       contador.innerHTML = '';
       const chip = document.createElement('span');
       chip.className = 'chip';
-      if (textoBusqueda) {
-        chip.innerHTML =
-          'Buscando <strong>«' + escaparHtml(textoBusqueda) + '»</strong>' +
-          ' · <strong>' + visibles + '</strong> ' + (visibles === 1 ? 'receta' : 'recetas');
-      } else {
-        chip.innerHTML =
-          '<strong>' + visibles + '</strong> ' + (visibles === 1 ? 'receta' : 'recetas') +
-          (categoriaActiva !== 'todas' ? ' en esta categoría' : ' en total');
+      
+      let textoChip = '';
+      if (textoBusqueda) textoChip += 'Buscando <strong>«' + escaparHtml(textoBusqueda) + '»</strong> · ';
+      if (ingredientesDespensa.length > 0) textoChip += 'Filtro despensa (' + ingredientesDespensa.length + ') · ';
+      
+      textoChip += '<strong>' + visibles + '</strong> ' + (visibles === 1 ? 'receta' : 'recetas');
+      if (categoriaActiva !== 'todas' && !textoBusqueda && ingredientesDespensa.length === 0) {
+        textoChip += ' en esta categoría';
+      } else if (!textoBusqueda && ingredientesDespensa.length === 0) {
+        textoChip += ' en total';
       }
+      
+      chip.innerHTML = textoChip;
       contador.appendChild(chip);
       contador.classList.remove('flash');
       void contador.offsetWidth;
@@ -380,10 +430,13 @@
       buscador.classList.toggle('con-texto', buscador.value.length > 0);
     }
   }
+
   function resetear() {
     if (buscador) buscador.value = '';
     textoBusqueda = '';
     categoriaActiva = 'todas';
+    ingredientesDespensa = [];
+    document.querySelectorAll('.chip-despensa').forEach(c => c.classList.remove('activo'));
     botones.forEach(function (b) {
       b.classList.toggle('activo', b.dataset.cat === 'todas');
     });
@@ -413,7 +466,6 @@
      ===================================================== */
   const contenedor = document.getElementById('contenedorRecetas');
   if (!contenedor) {
-    // Exponer la función para favoritos.js incluso si no estamos en el listado
     window.crearTarjetaGlobal = crearTarjeta;
     return;
   }
@@ -494,6 +546,72 @@
     }
   });
 
+  /* =====================================================
+     LÓGICA DE LA DESPENSA (MODAL)
+     ===================================================== */
+  const despensaIngredientesList = [
+    'huevo', 'harina', 'carne', 'pollo', 'papa', 'arroz', 'tomate', 
+    'cebolla', 'queso', 'pan', 'leche', 'mantequilla', 'choclo', 
+    'zapallo', 'pasta', 'atún', 'limón'
+  ];
+
+  const modalDespensa = document.getElementById('modalDespensa');
+  const btnDespensa = document.getElementById('btnDespensa');
+  const cerrarDespensa = document.getElementById('cerrarDespensa');
+  const listaDespensa = document.getElementById('listaDespensa');
+  const btnLimpiarDespensa = document.getElementById('limpiarDespensa');
+  const btnAplicarDespensa = document.getElementById('aplicarDespensa');
+
+  if (btnDespensa && modalDespensa) {
+    // Renderizar chips
+    listaDespensa.innerHTML = despensaIngredientesList.map(ing => 
+      `<button type="button" class="chip-despensa" data-ing="${ing}">${ing}</button>`
+    ).join('');
+
+    // Abrir modal
+    btnDespensa.addEventListener('click', () => {
+      modalDespensa.classList.add('abierto');
+      document.body.style.overflow = 'hidden';
+    });
+
+    // Cerrar modal
+    const cerrarModal = () => {
+      modalDespensa.classList.remove('abierto');
+      document.body.style.overflow = '';
+    };
+    cerrarDespensa.addEventListener('click', cerrarModal);
+    modalDespensa.addEventListener('click', (e) => {
+      if (e.target === modalDespensa) cerrarModal();
+    });
+
+    // Toggle de ingredientes
+    listaDespensa.addEventListener('click', (e) => {
+      const chip = e.target.closest('.chip-despensa');
+      if (!chip) return;
+      chip.classList.toggle('activo');
+      const ing = chip.dataset.ing;
+      
+      if (chip.classList.contains('activo')) {
+        if (!ingredientesDespensa.includes(ing)) ingredientesDespensa.push(ing);
+      } else {
+        ingredientesDespensa = ingredientesDespensa.filter(i => i !== ing);
+      }
+    });
+
+    // Limpiar todo
+    btnLimpiarDespensa.addEventListener('click', () => {
+      ingredientesDespensa = [];
+      listaDespensa.querySelectorAll('.chip-despensa').forEach(c => c.classList.remove('activo'));
+    });
+
+    // Aplicar filtros y cerrar
+    btnAplicarDespensa.addEventListener('click', () => {
+      aplicarFiltros();
+      cerrarModal();
+    });
+  }
+
+  /* ---------- Arranque ---------- */
   renderizar();
   botones.forEach(function (b) {
     b.classList.toggle('activo', b.dataset.cat === categoriaActiva);

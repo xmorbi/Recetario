@@ -975,6 +975,229 @@ body.mc-bloqueado{overflow:hidden}
 }
 
 /* =====================================================
+   FILTRO POR DESPENSA (MODAL)
+   ===================================================== */
+.btn-despensa {
+  font-family: inherit;
+  font-size: .85rem;
+  font-weight: 700;
+  padding: .65rem 1.1rem;
+  border-radius: 99px;
+  cursor: pointer;
+  border: 1.5px solid var(--dorado);
+  background: linear-gradient(135deg, #fdf3e3 0%, #fbeed7 100%);
+  color: var(--rojo-osc);
+  box-shadow: var(--sombra-sm);
+  transition: all .2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.btn-despensa:hover {
+  background: var(--dorado);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(200, 150, 62, 0.4);
+}
+
+/* Modal Overlay */
+.modal-despensa-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.modal-despensa-overlay.abierto {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Modal Box */
+.modal-despensa {
+  background: #fff;
+  border-radius: var(--radio);
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 48px rgba(0,0,0,0.3);
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+.modal-despensa-overlay.abierto .modal-despensa {
+  transform: translateY(0);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--borde);
+}
+.modal-header h2 {
+  font-family: var(--fuente-titulos);
+  color: var(--rojo-osc);
+  font-size: 1.4rem;
+  margin: 0;
+}
+.modal-close {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--suave);
+  cursor: pointer;
+  padding: 0.5rem;
+}
+.modal-close:hover { color: var(--rojo); }
+
+.modal-desc {
+  padding: 1rem 1.5rem;
+  font-size: 0.95rem;
+  color: var(--suave);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Grid de Ingredientes */
+.despensa-grid {
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.chip-despensa {
+  background: var(--crema);
+  border: 1px solid var(--borde);
+  padding: 0.6rem 1.2rem;
+  border-radius: 99px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: var(--tinta);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.chip-despensa::before {
+  content: '+';
+  font-weight: 700;
+  color: var(--suave);
+}
+.chip-despensa.activo {
+  background: var(--rojo);
+  border-color: var(--rojo-osc);
+  color: #fff;
+}
+.chip-despensa.activo::before {
+  content: '✓';
+  color: #fff;
+}
+
+/* Footer del Modal */
+.modal-footer {
+  padding: 1.5rem;
+  border-top: 1px solid var(--borde);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.btn-limpiar-despensa {
+  background: transparent;
+  border: none;
+  color: var(--suave);
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.btn-limpiar-despensa:hover { color: var(--rojo); }
+
+.btn-aplicar-despensa {
+  background: var(--rojo);
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 99px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+  flex: 1;
+  max-width: 200px;
+}
+.btn-aplicar-despensa:hover { background: var(--rojo-osc); }
+
+/* =====================================================
+   CALIFICACIONES CON ESTRELLAS
+   ===================================================== */
+.rating-container {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+  padding: 0.8rem 1rem;
+  background: var(--crema-osc);
+  border-radius: 99px;
+  width: fit-content;
+  border: 1px solid var(--borde);
+}
+
+.rating-stars {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.rating-star {
+  cursor: pointer;
+  color: #d1c4b8; /* Color grisáceo cuando no está seleccionada */
+  transition: color 0.2s, transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rating-star svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+}
+
+/* Estado Hover y Activo */
+.rating-star.hover,
+.rating-star.activa {
+  color: var(--dorado);
+  transform: scale(1.15);
+}
+
+.rating-star.activa svg {
+  fill: var(--dorado);
+}
+
+.rating-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--suave);
+  min-width: 130px;
+}
+
+/* =====================================================
    IMPRESIÓN
    ===================================================== */
 @media print {
@@ -1003,6 +1226,9 @@ body.mc-bloqueado{overflow:hidden}
   .shopping-fab,
   .shopping-overlay,
   .shopping-panel,
+  .btn-despensa,
+  .modal-despensa-overlay,
+  .rating-container,
   .receta-acciones,
   .receta-acciones-top,
   .receta-cta,

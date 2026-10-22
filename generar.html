@@ -32,7 +32,8 @@ var ICONS = {
   tecnica: '<svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>',
   imprimir: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>',
   chef: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"/><line x1="6" y1="17" x2="18" y2="17"/></svg>',
-  corazon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>'
+  corazon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>',
+  estrella: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>'
 };
 
 var GUIAS = {
@@ -205,7 +206,7 @@ function crearPagina(r, i, total, todos) {
   h += '<a href="../recetario.html" class="activo">Recetas</a>';
   h += '<a href="../guias.html">Guías</a>';
   h += '<a href="../calculadora.html">Calculadora</a>';
-  h += '<a href="../conversor.html">Conversor</a>'; // NUEVO ENLACE
+  h += '<a href="../conversor.html">Conversor</a>';
   h += '<a href="../mis-recetas.html">Mis recetas</a>';
   h += '<a href="../sobre-mi.html">Sobre nosotros</a>';
   h += '</nav></div></header>';
@@ -228,11 +229,28 @@ function crearPagina(r, i, total, todos) {
   h += '</div></header>';
 
   h += '<main class="receta-page">';
-  h += '<div class="receta-acciones-top">';
+  
+  // ACCIONES Y ESTRELLAS
+  h += '<div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-bottom:1.5rem;">';
+  
+  h += '<div class="receta-acciones-top" style="margin-bottom:0;">';
   h += '<button type="button" class="btn-imprimir btn-imprimir-receta" onclick="window.print()" aria-label="Imprimir esta receta">' + ICONS.imprimir + '<span>Imprimir receta</span></button>';
   h += '<button type="button" class="btn-modo-cocina" aria-label="Abrir modo cocina">' + ICONS.chef + '<span>Modo cocina</span></button>';
   h += '<button type="button" class="btn-favorito" data-slug="' + slug + '" aria-label="Guardar en favoritos">' + ICONS.corazon + '</button>'; 
   h += '</div>';
+
+  // CONTENEDOR DE ESTRELLAS
+  h += '<div class="rating-container" data-slug="' + slug + '">';
+  h += '<div class="rating-stars">';
+  for(var s=1; s<=5; s++) {
+    h += '<span class="rating-star" data-value="' + s + '">' + ICONS.estrella + '</span>';
+  }
+  h += '</div>';
+  h += '<span class="rating-text">Califica esta receta</span>';
+  h += '</div>';
+
+  h += '</div>'; // Fin flex wrapper
+
   h += '<article class="receta" data-cat="' + esc(r.categoria || 'principales') + '">';
 
   var bloqueImagen = '';
@@ -270,6 +288,7 @@ function crearPagina(r, i, total, todos) {
   h += '<script src="../modo-cocina.js" defer><\/script>';
   h += '<script src="../favoritos.js" defer><\/script>'; 
   h += '<script src="../lista-compras.js" defer><\/script>';
+  h += '<script src="../estrellas.js" defer><\/script>'; // NUEVO SCRIPT
   h += '</body></html>';
   return h;
 }
@@ -312,7 +331,7 @@ function generar() {
     a.href = u; a.download = 'recetas.zip';
     document.body.appendChild(a); a.click(); document.body.removeChild(a);
     setTimeout(function(){ URL.revokeObjectURL(u); }, 1000);
-    log.textContent += 'LISTO. Se descargó recetas.zip\n\nSIGUIENTE:\n1. Extrae la carpeta "recetas" dentro de Intento 2/ (reemplaza la existente)\n2. git add .\n3. git commit -m "F12: Conversor de medidas"\n4. git push\n';
+    log.textContent += 'LISTO. Se descargó recetas.zip\n\nSIGUIENTE:\n1. Extrae la carpeta "recetas" dentro de Intento 2/ (reemplaza la existente)\n2. git add .\n3. git commit -m "Fase 4: Calificaciones"\n4. git push\n';
     btn.disabled = false;
   }).catch(function(err) {
     log.textContent += '\nERROR: ' + err.message + '\n';
