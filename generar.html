@@ -184,16 +184,41 @@ function crearPagina(r, i, total, todos) {
     
     erroresHTML += '</ul>';
     
-    // Añadir Tips Universales
     erroresHTML += '<div class="tips-universales">' +
       '<h4>Tips Universales de Cocina</h4>' +
       '<ul>' +
-        '<li><strong>El reposo de la carne:</strong> Deja reposar la carne 5 a 10 minutos antes de cortarla. Esto permite que los jugos se redistribuyan y quede mucho más jugosa.</li>' +
-        '<li><strong>El atemperado:</strong> Saca la carne del refrigerador 30 minutos antes de cocinarla para que se cocine de manera uniforme.</li>' +
-        '<li><strong>El truco del ácido:</strong> Si un plato sabe soso, agrégale unas gotas de limón o vinagre antes de añadir más sal. El ácido despierta los sabores.</li>' +
-        '<li><strong>No laves el pollo crudo:</strong> Lavarlo esparce bacterias por la cocina. El calor de la cocción se encarga de eliminarlas.</li>' +
-        '<li><strong>El arte de probar:</strong> Prueba la comida en cada etapa. Ajusta la sal y los aliños según tu paladar y el de tu familia.</li>' +
+        '<li><strong>El reposo de la carne:</strong> Deja reposar la carne 5 a 10 minutos antes de cortarla para que los jugos se redistribuyan y quede más jugosa.</li>' +
+        '<li><strong>El atemperado:</strong> Saca la carne del refrigerador 30 minutos antes de cocinarla para una cocción uniforme.</li>' +
+        '<li><strong>El truco del ácido:</strong> Si un plato sabe soso, agrégale unas gotas de limón o vinagre antes de añadir más sal.</li>' +
+        '<li><strong>No laves el pollo crudo:</strong> Lavarlo esparce bacterias por la cocina. El calor de la cocción las elimina.</li>' +
+        '<li><strong>El arte de probar:</strong> Prueba la comida en cada etapa y ajusta la sal y los aliños según tu paladar.</li>' +
       '</ul>' +
+    '</div>' +
+    '</div>';
+  }
+
+  // INYECCIÓN DE CONSERVACIÓN
+  var conservacionHTML = '';
+  if (r.conservacion) {
+    conservacionHTML = '<div class="conservacion-box">' +
+      '<h3>Conservación y Recalentado</h3>' +
+      '<div class="conservacion-grid">';
+      
+    if (r.conservacion.nevera) {
+      conservacionHTML += '<div class="conservacion-item"><strong>Nevera</strong>' + esc(r.conservacion.nevera) + '</div>';
+    }
+    if (r.conservacion.congelador) {
+      conservacionHTML += '<div class="conservacion-item"><strong>Congelador</strong>' + esc(r.conservacion.congelador) + '</div>';
+    }
+    if (r.conservacion.recalentar) {
+      conservacionHTML += '<div class="conservacion-item full-width"><strong>Recalentar</strong>' + esc(r.conservacion.recalentar) + '</div>';
+    }
+    
+    conservacionHTML += '</div>';
+    
+    // Enlace a la guía completa
+    conservacionHTML += '<div style="margin-top:1rem; font-size:0.85rem; text-align:right;">' +
+      '<a href="../guia-conservacion.html" style="color:#0369a1; text-decoration:underline; font-weight:600;">Ver guía completa de conservación →</a>' +
     '</div>' +
     '</div>';
   }
@@ -235,6 +260,7 @@ function crearPagina(r, i, total, todos) {
   h += '<a href="../index.html">Inicio</a>';
   h += '<a href="../recetario.html" class="activo">Recetas</a>';
   h += '<a href="../guias.html">Guías</a>';
+  h += '<a href="../guia-conservacion.html">Conservación</a>';
   h += '<a href="../calculadora.html">Calculadora</a>';
   h += '<a href="../conversor.html">Conversor</a>';
   h += '<a href="../mis-recetas.html">Mis recetas</a>';
@@ -294,8 +320,8 @@ function crearPagina(r, i, total, todos) {
   h += '<div><h3>Preparación</h3><ol class="preparacion">' + pasos + '</ol>' + dato + '</div>';
   h += '</div></article>';
 
-  // AQUÍ INYECTAMOS LA CAJA DE ERRORES
   h += erroresHTML;
+  h += conservacionHTML; // INYECTAMOS LA CAJA DE CONSERVACIÓN AQUÍ
 
   h += tagsHTML;
   h += guiaHTML;
@@ -362,7 +388,7 @@ function generar() {
     a.href = u; a.download = 'recetas.zip';
     document.body.appendChild(a); a.click(); document.body.removeChild(a);
     setTimeout(function(){ URL.revokeObjectURL(u); }, 1000);
-    log.textContent += 'LISTO. Se descargó recetas.zip\n\nSIGUIENTE:\n1. Extrae la carpeta "recetas" dentro de Intento 2/ (reemplaza la existente)\n2. git add .\n3. git commit -m "Errores y tips agregados"\n4. git push\n';
+    log.textContent += 'LISTO. Se descargó recetas.zip\n\nSIGUIENTE:\n1. Extrae la carpeta "recetas" dentro de Intento 2/ (reemplaza la existente)\n2. git add .\n3. git commit -m "Conservacion y recalentado"\n4. git push\n';
     btn.disabled = false;
   }).catch(function(err) {
     log.textContent += '\nERROR: ' + err.message + '\n';

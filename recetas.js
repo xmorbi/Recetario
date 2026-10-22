@@ -44,7 +44,12 @@ const RECETAS = [
       { error: 'La cebolla pica demasiado', solucion: 'Lávala con sal y déjala remojando en agua fría por unos minutos. Otra opción es dejarla reposar en agua hirviendo un par de minutos antes de sofreírla.' },
       { error: 'Masa seca o quebradiza', solucion: 'Amasar en exceso la masa desarrolla el gluten y la vuelve dura. Amasa solo hasta que los ingredientes se integren.' },
       { error: 'Exceso de relleno', solucion: 'Poner demasiado pino impide que el repulgue cierre bien. Usa dos cucharadas generosas por empanada y deja un borde libre.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 3 días cocidas en un recipiente hermético.',
+      congelador: 'Hasta 3 meses. Se pueden congelar crudas (armadas) o cocidas.',
+      recalentar: 'Si están crudas: hornear directo del congelador a 180°C por 35-40 min. Si están cocidas: horno o air fryer por 5-10 min. Evita el microondas.'
+    }
   },
 
   /* ============ 2. PASTEL DE CHOCLO ============ */
@@ -81,7 +86,12 @@ const RECETAS = [
       { error: 'Pasta de choclo aguada', solucion: 'El choclo suelta mucha agua al cocinarse. Cocina la pasta a fuego bajo hasta que espese y se despegue del fondo de la olla.' },
       { error: 'Falta de sabor en el pino', solucion: 'Sofríe bien la cebolla, condimenta con comino y ají de color, y deja que el pino repose para que se concentren los sabores.' },
       { error: 'El pastel se hunde o queda crudo', solucion: 'No abras la puerta del horno durante los primeros 20 minutos. El cambio brusco de temperatura hace que el pastel se hunda.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 2 días. Cúbrelo con film para que no absorba olores.',
+      congelador: 'No recomendado. La pasta de choclo tiende a cortarse y las papas pierden textura.',
+      recalentar: 'En el horno a 180°C por 15 minutos para que recupere la costra dorada.'
+    }
   },
 
   /* ============ 3. CAZUELA DE VACUNO ============ */
@@ -116,7 +126,12 @@ const RECETAS = [
       { error: 'Caldo turbio', solucion: 'Si el agua hierve demasiado fuerte, la grasa y las impurezas se emulsionan. Retira la espuma los primeros minutos y mantén un hervor suave.' },
       { error: 'Verduras deshechas', solucion: 'Agrega los ingredientes por tandas: primero la carne, luego zanahoria, después papas y zapallo, y al final el choclo y el arroz.' },
       { error: 'Sabor soso (Falta de Reacción de Maillard)', solucion: 'Dora muy bien la carne en aceite caliente antes de agregar el agua. Esa costra marrón es puro sabor que se transferirá al caldo.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 3 días en un recipiente hermético.',
+      congelador: 'Hasta 2 meses. Idealmente congela sin papas, ya que se ponen aguadas al descongelar.',
+      recalentar: 'A fuego lento en la olla, añadiendo un poco de agua o caldo para evitar que se seque.'
+    }
   },
 
   /* ============ 4. CHARQUICÁN ============ */
@@ -150,7 +165,12 @@ const RECETAS = [
       { error: 'Puré en vez de guiso', solucion: 'Majarlo demasiado. Usa un tenedor y aplasta suavemente. El charquicán debe tener textura rústica, con trozos visibles.' },
       { error: 'Sabor plano', solucion: 'El charquicán es un plato de campo, necesita aliños generosos. Prueba y ajusta la sal antes de servir.' },
       { error: 'Falta de Umami', solucion: 'Agrega una pizca de GMS o pica finamente un par de champiñones. Levantan el sabor de forma increíble sin notarse.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 3 días en recipiente hermético.',
+      congelador: 'Hasta 2 meses.',
+      recalentar: 'A fuego lento en la olla. Si está muy espeso, agrega un chorrito de agua o leche.'
+    }
   },
 
   /* ============ 5. POROTOS GRANADOS ============ */
@@ -183,7 +203,12 @@ const RECETAS = [
     errores: [
       { error: 'Porotos duros', solucion: 'Agregar sal al principio endurece la piel. Agrega la sal solo cuando los porotos estén blandos. (Tip extra: una pizca de bicarbonato los ablanda, pero cambia un poco el sabor).' },
       { error: 'Caldo desabrido', solucion: 'El sofrito de cebolla con ají de color y comino es la base. Debe sofreírse hasta que la cebolla esté bien dorada y aromática.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 4 días en su propio caldo y recipiente hermético.',
+      congelador: 'Hasta 3 meses en porciones con un poco de caldo.',
+      recalentar: 'A fuego lento en la olla. Si está muy espeso, añade un poco de agua.'
+    }
   },
 
   /* ============ 6. HUMITAS ============ */
@@ -216,7 +241,12 @@ const RECETAS = [
     errores: [
       { error: 'Humitas secas', solucion: 'El choclo utilizado no es lo suficientemente tierno. Agrega un chorrito de leche y una cucharada extra de mantequilla a la mezcla.' },
       { error: 'Se desarman al hervir', solucion: 'Asegúrate de amarrar las hojas firme, pero sin apretar demasiado para que el vapor circule.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 3 días cocidas con su hoja.',
+      congelador: 'Hasta 3 meses, bien envueltas en film.',
+      recalentar: 'Al vapor o en el microondas por 2-3 minutos (con un poco de agua para que no se sequen).'
+    }
   },
 
   /* ============ 7. SOPAIPILLAS ============ */
@@ -250,7 +280,12 @@ const RECETAS = [
     errores: [
       { error: 'Sopaipillas duras', solucion: 'Amasar de más la masa o usar un zapallo muy fibroso. Amasa solo hasta unir y asegúrate de que el zapallo esté bien molido.' },
       { error: 'No se inflan', solucion: 'El aceite no está a la temperatura correcta. Debe estar a fuego medio (aprox. 170°C). Si está muy caliente, se doran por fuera y quedan crudas por dentro.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'A temperatura ambiente 2 días. En frío se ponen duras.',
+      congelador: 'Hasta 3 meses en bolsa hermética.',
+      recalentar: 'En horno o air fryer a 180°C por 5 minutos para recuperar la textura.'
+    }
   },
 
   /* ============ 8. PAN AMASADO ============ */
@@ -283,7 +318,12 @@ const RECETAS = [
       { error: 'Pan duro como piedra', solucion: 'El exceso de harina o un mal amasado hacen que el pan quede duro. No agregues toda la harina de golpe; la masa debe quedar suave. Amasa por al menos 10 minutos.' },
       { error: 'Levadura muerta', solucion: 'Usar agua demasiado caliente (más de 40°C) mata la levadura. El agua debe estar tibia al tacto.' },
       { error: 'Horno seco', solucion: 'Coloca una fuente con agua caliente en el fondo del horno mientras horneas. El vapor mantiene la masa húmeda, permite que suba y evita que quede seca.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'No guardar en frío. A temperatura ambiente 2 días en bolsa de tela o papel.',
+      congelador: 'Hasta 3 meses en bolsa hermética.',
+      recalentar: 'Rocía un poco de agua y hornea a 180°C por 5 minutos.'
+    }
   },
 
   /* ============ 9. LECHE ASADA ============ */
@@ -315,7 +355,12 @@ const RECETAS = [
     errores: [
       { error: 'Textura con burbujas (como esponja)', solucion: 'Batir demasiado los huevos incorpora aire. Bate suavemente solo hasta integrar y cuela la mezcla antes de ponerla en el molde.' },
       { error: 'Caramelo amargo', solucion: 'El azúcar se pasó de cocción. Retira el caramelo del fuego cuando tenga un color ámbar claro (dorado).' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 3 días en un recipiente hermético o cubierto con film.',
+      congelador: 'No recomendado, la textura del huevo se estropea.',
+      recalentar: 'Se consume fría. Si la quieres tibia, sácala de la nevera 15 minutos antes.'
+    }
   },
 
   /* ============ 10. MOTE CON HUESILLO ============ */
@@ -346,7 +391,12 @@ const RECETAS = [
     errores: [
       { error: 'Huesillos duros', solucion: 'No remojarlos la noche anterior. Si se te olvidó, cocínalos en agua fría y deja reposar. Usa siempre el líquido del remojo para el jugo.' },
       { error: 'Mote pastoso y sin jugo', solucion: 'Mezclar el mote con los huesillos y el jugo antes de servir. Mezcla solo al momento de servir en el vaso para evitar que absorba todo el líquido.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 3 días. Mantén el mote y el jugo en recipientes separados.',
+      congelador: 'No recomendado, el mote se cristaliza.',
+      recalentar: 'Se consume bien frío. No requiere recalentamiento.'
+    }
   },
 
   /* ============ 11. CAZUELA DE AVE ============ */
@@ -383,7 +433,12 @@ const RECETAS = [
       { error: 'Pollo crudo o sin sabor', solucion: 'No sellar el pollo antes de hervirlo. Dóralo en aceite por ambos lados antes de agregar el agua. Esto asegura la cocción y le da más sabor al caldo.' },
       { error: 'Arroz pasado', solucion: 'Revolver después de agregar el arroz. Una vez que agregues el arroz en la superficie, no lo revuelvas. Tápalo y déjalo cocinar al vapor.' },
       { error: 'Caldo soso', solucion: 'Aplica la Reacción de Maillard dorando bien el pollo al principio para crear una capa de sabor profundo.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 3 días en recipiente hermético.',
+      congelador: 'Hasta 2 meses (idealmente sin papas).',
+      recalentar: 'A fuego lento añadiendo un poco de agua o caldo.'
+    }
   },
 
   /* ============ 12. CAZUELA DE CERDO ============ */
@@ -418,7 +473,12 @@ const RECETAS = [
     errores: [
       { error: 'Carne dura y seca', solucion: 'El cerdo se seca rápido si se cocina muy fuerte. Usa un corte con algo de grasa y cocina a fuego muy bajo por al menos 1 hora.' },
       { error: 'Caldo demasiado grasiento', solucion: 'A mitad de la cocción, con una cuchara, retira la capa de grasa que flota en la superficie del caldo.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 3 días en recipiente hermético.',
+      congelador: 'Hasta 2 meses (idealmente sin papas).',
+      recalentar: 'A fuego lento en la olla con un poco de caldo.'
+    }
   },
 
   /* ============ 13. PANTRUCAS ============ */
@@ -456,7 +516,12 @@ const RECETAS = [
       { error: 'Pantrucas duras', solucion: 'Masa muy gruesa o exceso de harina. Estira la masa muy fina (2-3 mm).' },
       { error: 'Pantrucas resbalosas', solucion: 'Cocinar la masa por demasiado tiempo. Agrega las pantrucas al caldo hirviendo y cocínalas por solo 5-7 minutos.' },
       { error: 'Se rompen al revolver', solucion: 'Revolver bruscamente. Usa una cuchara de madera y movimientos suaves.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 3 días en recipiente hermético.',
+      congelador: 'Hasta 2 meses (sin papas).',
+      recalentar: 'En olla a fuego lento con un poco de agua para que no se espese demasiado.'
+    }
   },
 
   /* ============ 14. TOMATICÁN ============ */
@@ -490,7 +555,12 @@ const RECETAS = [
       { error: 'Queda como una sopa aguada', solucion: 'No dejar que los tomates se cocinen lo suficiente. Usa tomates maduros y cocina a fuego lento tapado 20-30 minutos. Si queda líquido, destapa y reduce.' },
       { error: 'Sabor amargo o ácido', solucion: 'Usar tomates verdes o de mala calidad. Usa tomates maduros y dulces. Si están ácidos, agrega una pizca de azúcar.' },
       { error: 'Falta de profundidad de sabor', solucion: 'No dorar bien la carne al principio. Sella la carne en tiras a fuego alto antes de agregar las verduras.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 3 días en recipiente hermético.',
+      congelador: 'Hasta 2 meses.',
+      recalentar: 'A fuego lento en una olla, moviendo de vez en cuando.'
+    }
   },
 
   /* ============ 15. POROTOS CON MAZAMORRA ============ */
@@ -523,7 +593,12 @@ const RECETAS = [
     errores: [
       { error: 'Mazamorra sin sabor', solucion: 'No licuar el choclo con la albahaca. La gracia es el aroma que le da la albahaca fresca al choclo.' },
       { error: 'Porotos duros', solucion: 'Agregar sal al principio. Añade la sal solo cuando los porotos ya estén completamente blandos. (Tip extra: una pizca de bicarbonato los ablanda, pero cambia un poco el sabor).' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 3 días en recipiente hermético.',
+      congelador: 'Hasta 2 meses.',
+      recalentar: 'A fuego lento añadiendo un poco de agua.'
+    }
   },
 
   /* ============ 16. AJIACO CHILENO ============ */
@@ -555,7 +630,12 @@ const RECETAS = [
     errores: [
       { error: 'Papas deshechas y caldo espeso', solucion: 'Usar papas que se deshacen fácilmente. Usa papas de las que se mantienen firmes al cocinar y agrégalas al final.' },
       { error: 'Sabor plano', solucion: 'No dorar bien los aliños. Haz un buen sofrito con la cebolla, el ajo, el pimentón y los condimentos.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 3 días en recipiente hermético.',
+      congelador: 'Hasta 2 meses (idealmente sin papas).',
+      recalentar: 'A fuego lento con un poco de caldo.'
+    }
   },
 
   /* ============ 17. CALDILLO DE CONGRIO ============ */
@@ -591,7 +671,12 @@ const RECETAS = [
       { error: 'El pescado se deshace', solucion: 'Hervir el caldo vigorosamente después de agregar el congrio. Baja el fuego al mínimo y cocina pochado por no más de 8-10 minutos.' },
       { error: 'Caldo turbio y amargo', solucion: 'Hervir las espinas y la cabeza a fuego fuerte. Usa fuego lento y retira la espuma que sube a la superficie.' },
       { error: 'Sabor plano', solucion: 'No usar la cabeza y espinas para hacer el caldo. Ese caldo es el que le da la profundidad al plato.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 2 días máximo. Al ser pescado, es muy perecedero.',
+      congelador: 'Hasta 2 meses, idealmente sin papas.',
+      recalentar: 'A fuego muy suave, evitando hervir para que el pescado no se deshaga.'
+    }
   },
 
   /* ============ 18. TOMÁTICA ============ */
@@ -623,7 +708,12 @@ const RECETAS = [
     errores: [
       { error: 'Ensalada aguada', solucion: 'Salar los tomates con mucha anticipación. Pélalos y sólalos justo antes de servir.' },
       { error: 'Sabor muy fuerte a ajo', solucion: 'Picar el ajo en trozos grandes. Pícalo muy fino y aplástalo con el lado del cuchillo para que se integre.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 2 días en recipiente hermético.',
+      congelador: 'No recomendado, pierde textura.',
+      recalentar: 'Se consume fresca.'
+    }
   },
 
   /* ============ 19. ENSALADA A LA CHILENA ============ */
@@ -652,7 +742,12 @@ const RECETAS = [
     errores: [
       { error: 'Ensalada aguada al servir', solucion: 'No salar los tomates con anticipación. Usa un colador para que boten el exceso de agua antes de mezclar.' },
       { error: 'Cebolla muy fuerte', solucion: 'Córtala en pluma fina y remójala en agua fría por al menos 10 minutos. Esto le quita el picor.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 2 días. Se recomienda consumir el mismo día.',
+      congelador: 'No recomendado.',
+      recalentar: 'Se consume fresca.'
+    }
   },
 
   /* ============ 20. ENSALADA RUSA CHILENA ============ */
@@ -685,7 +780,12 @@ const RECETAS = [
     errores: [
       { error: 'Textura pastosa', solucion: 'Usar papas que se deshacen o cocinarlas demasiado. Usa papas firmes, cuécelas con cáscara y déjalas enfriar.' },
       { error: 'Mayonesa cortada o aguada', solucion: 'Mezclar los ingredientes cuando aún están calientes. Todos los ingredientes deben estar fríos al incorporar la mayonesa.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 3 días en recipiente hermético.',
+      congelador: 'No recomendado, la mayonesa se corta y las papas se aguadas.',
+      recalentar: 'Se consume fría.'
+    }
   },
 
   /* ============ 21. CHANCHO EN PIEDRA ============ */
@@ -717,7 +817,12 @@ const RECETAS = [
     errores: [
       { error: 'Queda como una sopa de tomate', solucion: 'Usar tomates acuosos. Pélalos y bota el exceso de agua y semillas antes de incorporarlos.' },
       { error: 'Sabor amargo o excesivamente picante', solucion: 'Licuar los ingredientes o usar la parte blanca del ají. Hazlo en mortero y limpia bien los ajíes.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 3 días en frasco de vidrio cerrado.',
+      congelador: 'No recomendado, pierde textura el tomate.',
+      recalentar: 'Se consume a temperatura ambiente o frío.'
+    }
   },
 
   /* ============ 22. SOPAIPILLAS PASADAS ============ */
@@ -752,7 +857,12 @@ const RECETAS = [
     errores: [
       { error: 'Chancaca quemada', solucion: 'Hervir la chancaca a fuego alto sin cuidado. Derrítela a fuego bajo para que no amargue.' },
       { error: 'Sopaipillas frías al bañar', solucion: 'Bañarlas cuando ya están frías. El almíbar debe estar caliente y las sopaipillas recién fritas.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 2 días en recipiente hermético.',
+      congelador: 'Hasta 2 meses sin el almíbar. Congela las sopaipillas fritas y luego prepara el almíbar al servir.',
+      recalentar: 'En horno o air fryer por 5 minutos. Luego bañar con almíbar caliente.'
+    }
   },
 
   /* ============ 23. EMPANADAS DE QUESO ============ */
@@ -787,7 +897,12 @@ const RECETAS = [
     errores: [
       { error: 'El queso se sale', solucion: 'El queso se derrite y escapa por bordes mal sellados. Haz un repulgue firme y pincha la masa para que salga el vapor.' },
       { error: 'Masa dura o elástica', solucion: 'Estirar toda la masa de una vez y volver a amasar los recortes. Estira porciones individuales.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 3 días cocidas.',
+      congelador: 'Hasta 3 meses crudas (armadas) o cocidas.',
+      recalentar: 'Horno o air fryer por 5-10 minutos. Evita el microondas.'
+    }
   },
 
   /* ============ 24. ARROZ CON LECHE ============ */
@@ -819,7 +934,12 @@ const RECETAS = [
     errores: [
       { error: 'Se pega en la olla', solucion: 'No revolver con frecuencia o usar fuego muy alto. Cocina a fuego bajo y revuelve constantemente raspando el fondo.' },
       { error: 'Granos duros', solucion: 'El arroz no se cocinó lo suficiente. Usa arroz de grano corto y cocínalo por al menos 30-40 minutos.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 3 días en recipiente hermético.',
+      congelador: 'No recomendado, el arroz se cristaliza y la leche se separa.',
+      recalentar: 'En olla a fuego bajo con un chorrito de leche fresca, revolviendo constantemente.'
+    }
   },
 
   /* ============ 25. SOPONES O MACHOS AHOGADOS ============ */
@@ -851,7 +971,12 @@ const RECETAS = [
     errores: [
       { error: 'Se deshacen en el caldo', solucion: 'La masa está muy blanda o no se batió bien la clara. Bate la clara a punto de nieve y asegúrate de que la masa sea espesa.' },
       { error: 'Sopones crudos por dentro', solucion: 'La masa es muy grande o el caldo no está hirviendo. Haz porciones del tamaño de una cuchara sopera.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 2 días en recipiente hermético.',
+      congelador: 'No recomendado, la masa pierde textura.',
+      recalentar: 'A fuego lento en una olla con el caldo.'
+    }
   },
 
   /* ============ 26. POLLO ARVEJADO ============ */
@@ -884,7 +1009,12 @@ const RECETAS = [
     errores: [
       { error: 'Arvejas descoloridas y pasadas', solucion: 'Agregar las arvejas al principio. Añádelas solo en los últimos 5 minutos de cocción para que mantengan su color y textura.' },
       { error: 'Pollo seco', solucion: 'Cocinar los trutros enteros por demasiado tiempo. Dora el pollo, prepara la salsa y devuélvelo a la olla para que se cocine en su punto.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 3 días en recipiente hermético.',
+      congelador: 'Hasta 2 meses.',
+      recalentar: 'A fuego lento en la olla con un poco de caldo.'
+    }
   },
 
   /* ============ 27. POLLO AL JUGO ============ */
@@ -916,7 +1046,12 @@ const RECETAS = [
     errores: [
       { error: 'Pollo insípido y pálido', solucion: 'Hervir el pollo directamente sin dorarlo. Sella el pollo en aceite caliente hasta que la piel esté dorada para darle sabor.' },
       { error: 'Caldo sin cuerpo', solucion: 'No dejar reducir el líquido. Cuando el pollo esté cocido, retíralo y deja reducir el caldo hasta que tenga consistencia de salsa.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 3 días en recipiente hermético.',
+      congelador: 'Hasta 2 meses.',
+      recalentar: 'A fuego lento, bañando el pollo con su propia salsa.'
+    }
   },
 
   /* ============ 28. POLLO ASADO ============ */
@@ -948,7 +1083,12 @@ const RECETAS = [
     errores: [
       { error: 'Piel pálida y blanda', solucion: 'Hornear el pollo húmedo o a temperatura muy baja. Seca muy bien el pollo y hornea a temperatura alta (200°C) los primeros minutos.' },
       { error: 'Pechuga seca', solucion: 'El tiempo de cocción es excesivo. Cubre las pechugas con papel aluminio a mitad de cocción para que no se sequen.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 3 días en recipiente hermético.',
+      congelador: 'Hasta 3 meses (desmenuzado o en porciones).',
+      recalentar: 'Horno o air fryer a 180°C por 10 minutos para que la piel recupere textura.'
+    }
   },
 
   /* ============ 29. CARNE AL JUGO CON PURÉ ============ */
@@ -983,7 +1123,12 @@ const RECETAS = [
     errores: [
       { error: 'Carne dura', solucion: 'Usar un corte inadecuado o no cocinar el tiempo suficiente. Usa tapapecho, asiento o posta y cocina lento por 1 a 1.5 horas.' },
       { error: 'Puré con grumos', solucion: 'Batir las papas calientes con leche fría. Usa leche tibia y mantequilla a temperatura ambiente.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 3 días por separado (carne y puré).',
+      congelador: 'La carne hasta 2 meses. El puré no se recomienda congelar.',
+      recalentar: 'La carne a fuego lento. El puré en microondas con un poco de leche.'
+    }
   },
 
   /* ============ 30. PAJARITOS DULCES ============ */
@@ -1020,7 +1165,12 @@ const RECETAS = [
     errores: [
       { error: 'Merengue que llora (suelta agua)', solucion: 'Colocar el merengue en un ambiente húmedo o usar claras muy frías. Usa claras a temperatura ambiente y asegúrate de que la masa esté 100% fría.' },
       { error: 'Masa cruda en el centro', solucion: 'Hornear a temperatura muy alta. Hornea a fuego medio (180°C) para que se cocine por dentro sin quemarse.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'A temperatura ambiente 2 días. En frío el merengue se humedece.',
+      congelador: 'No recomendado, el merengue se estropea.',
+      recalentar: 'A temperatura ambiente.'
+    }
   },
 
   /* ============ 31. CHILENITOS ============ */
@@ -1055,7 +1205,12 @@ const RECETAS = [
     errores: [
       { error: 'Masa blanda o elástica', solucion: 'Amasar demasiado la masa. Mezcla solo hasta integrar. Si la amasas mucho, se encoge en el horno.' },
       { error: 'Se desarman al rellenar', solucion: 'El merengue o la masa no están firmes. Arma los chilenitos cuando las tapas estén completamente frías.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'A temperatura ambiente 2 días. En frío el merengue se humedece.',
+      congelador: 'No recomendado, el merengue se estropea.',
+      recalentar: 'A temperatura ambiente.'
+    }
   },
 
   /* ============ 32. EMPOLVADOS ============ */
@@ -1088,7 +1243,12 @@ const RECETAS = [
     errores: [
       { error: 'Quedan planos (sin volumen)', solucion: 'Batir mal las claras o incorporar la harina bruscamente. Bate a punto de nieve firme y usa movimientos envolventes.' },
       { error: 'Se pegan al papel', solucion: 'No usar papel mantequilla. Usa siempre papel de horno, no engrases la bandeja.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 3 días en recipiente hermético, separados por papel.',
+      congelador: 'No recomendado, el merengue se humedece.',
+      recalentar: 'A temperatura ambiente.'
+    }
   },
 
   /* ============ 33. COLEGIAL ============ */
@@ -1121,7 +1281,12 @@ const RECETAS = [
     dato: 'Es la receta perfecta para aprovechar el pan de días anteriores.',
     errores: [
       { error: 'Queda seco como una piedra', solucion: 'No usar suficiente líquido o hornearlo sin protección. Pon un recipiente con agua en el horno para generar vapor y cubre con aluminio a mitad de horneado.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 3 días en recipiente hermético.',
+      congelador: 'Hasta 2 meses en porciones.',
+      recalentar: 'En horno a 180°C por 10 minutos, o en microondas con un poco de leche.'
+    }
   },
 
   /* ============ 34. EMPANADAS DE PERA ============ */
@@ -1154,7 +1319,12 @@ const RECETAS = [
     errores: [
       { error: 'El relleno se sale o queda aguado', solucion: 'Usar el relleno caliente al armar. El dulce de pera debe estar completamente frío y espeso antes de rellenar.' },
       { error: 'Masa dura', solucion: 'No dejar reposar la masa. Debe reposar en frío al menos 30 minutos antes de estirarla.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 3 días cocidas.',
+      congelador: 'Hasta 3 meses (crudas o cocidas).',
+      recalentar: 'Horno o air fryer a 180°C por 5-8 minutos.'
+    }
   },
 
   /* ============ 35. VALDIVIANO ============ */
@@ -1187,7 +1357,12 @@ const RECETAS = [
     errores: [
       { error: 'Plato excesivamente salado', solucion: 'El charqui es muy salado. Remójalo en agua fría la noche anterior o hiérvelo un par de veces botando el agua. Prueba la sal al final.' },
       { error: 'Papas deshechas', solucion: 'Agrega las papas en cubos medianos al final y cocínalas por 15-20 minutos.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 3 días en recipiente hermético.',
+      congelador: 'Hasta 2 meses.',
+      recalentar: 'A fuego lento en una olla con un poco de agua.'
+    }
   },
 
   /* ============ 36. POROTOS CON RIENDAS ============ */
@@ -1225,7 +1400,12 @@ const RECETAS = [
     errores: [
       { error: 'Porotos duros', solucion: 'Agregar sal o ingredientes ácidos al principio. Cocina los porotos en agua sola y agrega la sal al final. (Tip extra: el bicarbonato ablanda, pero cambia el sabor).' },
       { error: 'Pasta pasada', solucion: 'Agregar los tallarines y dejarlos hervir mucho tiempo. Agrégalos en los últimos 8-10 minutos de cocción.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 3 días en recipiente hermético.',
+      congelador: 'Hasta 2 meses. La pasta puede ablandarse un poco al descongelar.',
+      recalentar: 'A fuego lento con un poco de agua.'
+    }
   },
 
   /* ============ 37. CARBONADA ============ */
@@ -1264,7 +1444,12 @@ const RECETAS = [
       { error: 'Queda como una sopa líquida', solucion: 'No espesar el guiso. Cuando el zapallo esté blando, aplasta 3 o 4 trozos con el cucharón y revuelve.' },
       { error: 'Sabor avinagrado o extraño', solucion: 'El choclo o el vino utilizado no son de buena calidad. Usa ingredientes frescos y vino de buena calidad.' },
       { error: 'Carne dura', solucion: 'No cocinar el tiempo suficiente a fuego lento. Cocina por al menos 40-50 minutos.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 3 días en recipiente hermético.',
+      congelador: 'Hasta 2 meses (idealmente sin papas).',
+      recalentar: 'A fuego lento con un poco de caldo.'
+    }
   },
 
   /* ============ 38. CHORRILLANA ============ */
@@ -1297,7 +1482,12 @@ const RECETAS = [
     errores: [
       { error: 'Papas blandas', solucion: 'No secar bien las papas antes de freír. Lávalas y sécalas muy bien con un paño para que queden crujientes.' },
       { error: 'Carne dura', solucion: 'Cocinar la carne en tiras por demasiado tiempo. Saltéalos a fuego muy alto y por poco tiempo para que queden jugosos.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'No recomendado, las papas se ablandan y el huevo se estropea.',
+      congelador: 'No recomendado.',
+      recalentar: 'Se consume recién hecha.'
+    }
   },
 
   /* ============ 39. BISTEC A LO POBRE ============ */
@@ -1331,7 +1521,12 @@ const RECETAS = [
     errores: [
       { error: 'Carne seca y dura', solucion: 'Poner la carne directo del refrigerador a la sartén. Saca los bistecs 20 minutos antes para que estén a temperatura ambiente.' },
       { error: 'Papas y carne frías', solucion: 'No coordinar los tiempos. Fríe las papas primero y mantenlas calientes en el horno, luego cocina la carne y por último los huevos.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'No recomendado, se pierde la textura de las papas y el huevo.',
+      congelador: 'No recomendado.',
+      recalentar: 'Se consume recién hecho.'
+    }
   },
 
   /* ============ 40. SALCHIPAPAS ============ */
@@ -1361,7 +1556,12 @@ const RECETAS = [
     errores: [
       { error: 'Papas blandas o grasosas', solucion: 'Freír a temperatura muy baja. Haz doble fritura: una a fuego medio para cocinarlas y otra a fuego alto antes de servir para que doren.' },
       { error: 'Salchichas insípidas', solucion: 'Hervirlas o freírlas enteras. Córtalas en rodajas y sofríelas con un poquito de cebolla hasta que estén doradas por los bordes.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'No recomendado, las papas se ablandan.',
+      congelador: 'No recomendado.',
+      recalentar: 'Se consume recién hecha.'
+    }
   },
 
   /* ============ 41. CARNE MECHADA ============ */
@@ -1397,7 +1597,12 @@ const RECETAS = [
       { error: 'Carne seca y dura', solucion: 'Elegir un corte demasiado magro o cocinar a fuego fuerte. Usa posta negra o pollo ganso y cocina a fuego muy lento por 2 horas.' },
       { error: 'Deshebrar mal la carne', solucion: 'Picarla con cuchillo en lugar de deshebrarla con tenedores. Usa dos tenedores para separar las fibras en hebras largas.' },
       { error: 'Carne nadando en salsa', solucion: 'Agregar demasiado líquido durante la cocción. Agrega solo el líquido justo para cubrir la mitad de la carne.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 4 días en recipiente hermético.',
+      congelador: 'Hasta 3 meses en porciones con un poco de salsa.',
+      recalentar: 'En olla a fuego lento con su salsa, o en microondas con un poco de caldo.'
+    }
   },
 
   /* ============ 42. MACHAS A LA PARMESANA ============ */
@@ -1431,7 +1636,12 @@ const RECETAS = [
       { error: 'Textura chiclosa (como chicle)', solucion: 'No aplastar la lengua de la macha antes de cocinarla. Aplánala suavemente con el dorso de un cuchillo antes de ponerla en la fuente.' },
       { error: 'Sabor a arena', solucion: 'No limpiar bien las machas. Lávalas bajo el chorro de agua fría y golpéalas suavemente para que boten la arena.' },
       { error: 'Queso quemado y machas recocidas', solucion: 'Hornear por demasiado tiempo o a temperatura muy baja. Usa el broiler o grill del horno a temperatura alta.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 2 días. Consumir idealmente al momento.',
+      congelador: 'Hasta 1 mes (solo la carne de la macha, sin el queso).',
+      recalentar: 'Horno a 180°C por 3-5 minutos, solo hasta que el queso se derrita.'
+    }
   },
 
   /* ============ 43. LOCOS CON MAYONESA ============ */
@@ -1464,7 +1674,12 @@ const RECETAS = [
     errores: [
       { error: 'Locos duros (como caucho)', solucion: 'Cocinar los locos por mucho tiempo o a fuego fuerte. Cocínalos por no más de 40-45 minutos y déjalos enfriar en su propio caldo.' },
       { error: 'Mayonesa aguada', solucion: 'Usar una mayonesa muy líquida o no escurrir bien la cebolla. Usa mayonesa espesa y escurre la cebolla morada antes de mezclar.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 2 días. Se recomienda consumir el mismo día.',
+      congelador: 'No recomendado, la mayonesa se corta.',
+      recalentar: 'Se consume bien frío.'
+    }
   },
 
   /* ============ 44. PAILA MARINA ============ */
@@ -1503,7 +1718,12 @@ const RECETAS = [
       { error: 'Mariscos gomosos y duros', solucion: 'Cocinar los mariscos por demasiado tiempo. Agrega los mariscos en etapas y cocina el pescado y camarones en los últimos 3-5 minutos.' },
       { error: 'Caldo soso o sin brillo', solucion: 'Usar un vino de mala calidad o no lavar bien los mariscos. Usa un vino que te guste tomar y lava muy bien los mariscos con concha.' },
       { error: 'Mariscos congelados y gomosos', solucion: 'No descongelarlos correctamente. Descongela en el refrigerador la noche anterior.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 2 días máximo. Al ser mariscos, es muy perecedero.',
+      congelador: 'Hasta 2 meses (idealmente sin papas).',
+      recalentar: 'A fuego muy suave, evitando hervir para que los mariscos no se endurezcan.'
+    }
   },
 
   /* ============ 45. PESCADO FRITO ============ */
@@ -1537,7 +1757,12 @@ const RECETAS = [
     errores: [
       { error: 'Empanizado que se cae o queda grasoso', solucion: 'El pescado está muy húmedo o el aceite no está caliente. Seca los filetes con papel absorbente y asegúrate de que el aceite esté a 180°C.' },
       { error: 'Pescado crudo por dentro y quemado por fuera', solucion: 'Fuego demasiado alto. Regula el fuego a medio para que el pescado se cocine por dentro sin quemarse.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 2 días en recipiente hermético.',
+      congelador: 'No recomendado, el empanizado pierde textura.',
+      recalentar: 'Horno o air fryer a 180°C por 5-8 minutos para recuperar la crocancia.'
+    }
   },
 
   /* ============ 46. CORVINA AL HORNO ============ */
@@ -1572,7 +1797,12 @@ const RECETAS = [
     errores: [
       { error: 'Pescado seco', solucion: 'Hornearlo por demasiado tiempo. Los filetes se cocinan rápido. Con 15-20 minutos a 180°C es suficiente.' },
       { error: 'Se pega al papel o a la fuente', solucion: 'No usar suficiente base grasa. Usa una base de cebolla y tomate o rocía bien el fondo con aceite de oliva.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 2 días en recipiente hermético.',
+      congelador: 'Hasta 1 mes.',
+      recalentar: 'Horno a 150°C por 10 minutos, con un poco de mantequilla o limón para que no se seque.'
+    }
   },
 
   /* ============ 47. SALMÓN AL HORNO ============ */
@@ -1605,7 +1835,12 @@ const RECETAS = [
     errores: [
       { error: 'Salmón se deshace o queda seco', solucion: 'Cocinar más de 12-15 minutos. El salmón no necesita mucho tiempo y debe quedar rosado por dentro.' },
       { error: 'Sabor demasiado fuerte', solucion: 'No usar ácido (limón). Rocía generosamente con jugo de limón antes de hornear para equilibrar el sabor.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 2 días en recipiente hermético.',
+      congelador: 'Hasta 2 meses.',
+      recalentar: 'Horno a 150°C por 10 minutos o microondas con cuidado para que no se seque.'
+    }
   },
 
   /* ============ 48. SALSA AMERICANA ============ */
@@ -1638,7 +1873,12 @@ const RECETAS = [
     errores: [
       { error: 'Salsa aguada o con trozos muy grandes', solucion: 'No escurrir bien los encurtidos o picarlos de forma irregular. Escúrrelos perfectamente y pícalos en cubos milimétricos.' },
       { error: 'Sabor desequilibrado', solucion: 'Abusar del ketchup o la mostaza. La base es la mayonesa; el ketchup y la mostaza se agregan solo para dar un toque de color y acidez.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 3 días en frasco de vidrio cerrado.',
+      congelador: 'No recomendado, la mayonesa se corta.',
+      recalentar: 'Se consume fría.'
+    }
   },
 
   /* ============ 49. PEBRE CHILENO ============ */
@@ -1674,7 +1914,12 @@ const RECETAS = [
       { error: 'La cebolla pica demasiado', solucion: 'Si no se trata, su sabor crudo y fuerte opaca al resto. Pícala finamente y déjala en un colador bajo el chorro de agua fría, o remójala en agua con hielo por 10 minutos.' },
       { error: 'Textura aguada (sopa)', solucion: 'Usar procesadora de alimentos o licuadora. Pica todo a cuchillo, con paciencia, en cubos muy pequeños. El pebre debe tener consistencia.' },
       { error: 'Sabor desequilibrado', solucion: 'No ajustar la acidez o el picante. Prueba y ajusta poco a poco el limón (o vinagre) y el ají.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 3 días en frasco de vidrio cerrado. Soltará agua, escúrrelo antes de servir.',
+      congelador: 'No recomendado, el tomate y la cebolla pierden textura.',
+      recalentar: 'Se consume frío o a temperatura ambiente.'
+    }
   },
 
   /* ============ 50. MARRAQUETA ============ */
@@ -1707,7 +1952,12 @@ const RECETAS = [
       { error: 'Pan macizo y pesado', solucion: 'Amasar poco (no se desarrolla el gluten) o usar levadura vencida. Amasa con energía por al menos 10-15 minutos hasta que la masa esté elástica.' },
       { error: 'Se despega o se abre mal el corte', solucion: 'No hacer el corte profundo antes de hornear o enharinar en exceso. Haz el corte justo antes de meter al horno.' },
       { error: 'Horno seco', solucion: 'Coloca una fuente con agua caliente en el horno para generar vapor y que las marraquetas crezcan correctamente.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Nunca en frío (se endurece). A temperatura ambiente 2 días en bolsa de tela.',
+      congelador: 'Hasta 3 meses en bolsa hermética.',
+      recalentar: 'Rocía un poco de agua y hornea a 180°C por 5 minutos.'
+    }
   },
 
   /* ============ 51. HALLULLA ============ */
@@ -1741,7 +1991,12 @@ const RECETAS = [
       { error: 'Pan duro y pesado', solucion: 'Amasado insuficiente o levadura vieja. Amasa con energía por al menos 10 minutos y usa levadura fresca.' },
       { error: 'Se aplana en el horno', solucion: 'No dejar levar lo suficiente antes de hornear. Deja que los discos leven por 30 minutos en un lugar cálido.' },
       { error: 'Horno seco', solucion: 'Coloca una fuente con agua caliente en el horno para mantener la humedad y evitar que el pan se seque.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Nunca en frío. A temperatura ambiente 2 días en bolsa de tela.',
+      congelador: 'Hasta 3 meses en bolsa hermética.',
+      recalentar: 'Rocía un poco de agua y hornea a 180°C por 5 minutos.'
+    }
   },
 
   /* ============ 52. SOPAIPILLAS PASADAS (2da versión) ============ */
@@ -1776,7 +2031,12 @@ const RECETAS = [
     errores: [
       { error: 'Chancaca quemada', solucion: 'Hervir la chancaca a fuego alto sin cuidado. Derrítela a fuego bajo para que no amargue.' },
       { error: 'Sopaipillas frías al bañar', solucion: 'Bañarlas cuando ya están frías. El almíbar debe estar caliente y las sopaipillas recién fritas.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 2 días en recipiente hermético.',
+      congelador: 'Hasta 2 meses sin el almíbar. Congela las sopaipillas fritas y luego prepara el almíbar al servir.',
+      recalentar: 'En horno o air fryer por 5 minutos. Luego bañar con almíbar caliente.'
+    }
   },
 
   /* ============ 53. PRIETAS ============ */
@@ -1810,7 +2070,12 @@ const RECETAS = [
     errores: [
       { error: 'Prietas explotadas', solucion: 'Ponerlas a freír directamente sin cocinarlas previamente o no pincharlas. Hiérvelas primero y pínchalas varias veces.' },
       { error: 'Textura gomosa', solucion: 'Freírlas a fuego muy alto. Fríelas a fuego medio para que se doren por fuera pero mantengan su textura suave.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 3 días en recipiente hermético.',
+      congelador: 'Hasta 2 meses, idealmente ya cocidas.',
+      recalentar: 'En sartén a fuego medio para que recuperen la textura crujiente.'
+    }
   },
 
   /* ============ 54. CALZONES ROTOS ============ */
@@ -1847,7 +2112,12 @@ const RECETAS = [
     errores: [
       { error: 'Masa dura o elástica', solucion: 'Trabajar demasiado la masa o usar mantequilla fría. Usa mantequilla a temperatura ambiente y mezcla solo hasta integrar.' },
       { error: 'Se desinflan o quedan aceitosos', solucion: 'El aceite no está a la temperatura adecuada (muy frío). Mantén la masa en frío y usa aceite a fuego medio (170°C).' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'A temperatura ambiente 2 días en recipiente hermético.',
+      congelador: 'Hasta 2 meses en bolsa hermética.',
+      recalentar: 'Horno o air fryer a 180°C por 5 minutos.'
+    }
   },
 
   /* ============ 55. BROWNIES CON CACAO ============ */
@@ -1884,7 +2154,12 @@ const RECETAS = [
     errores: [
       { error: 'Quedan secos como un queque', solucion: 'Sobrebatir la mezcla o hornear de más. Mezcla la harina con espátula solo hasta que desaparezca y hornea solo 20-25 minutos.' },
       { error: 'Se queman por abajo', solucion: 'Usar una bandeja muy oscura o muy fina. Usa un molde de vidrio o metal claro. Si tienes moldes oscuros, baja la temperatura a 170°C.' }
-    ]
+    ],
+    conservacion: {
+      nevera: 'Hasta 4 días en recipiente hermético.',
+      congelador: 'Hasta 3 meses, cortados en cuadrados y bien envueltos.',
+      recalentar: 'Microondas por 15 segundos para que recuperen la textura fudgy.'
+    }
   }
 
 ];
