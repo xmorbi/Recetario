@@ -21,7 +21,8 @@
     tecnica: '<svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>',
     imprimir: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>',
     chef: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"/><line x1="6" y1="17" x2="18" y2="17"/></svg>',
-    corazon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>'
+    corazon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>',
+    libro: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>'
   };
 
   /* ---------- Nav toggle (todas las páginas) ---------- */
@@ -138,6 +139,7 @@
     script.textContent = JSON.stringify(schema);
     document.head.appendChild(script);
   }
+  
   function inyectarSchemaSitio() {
     const schema = {
       "@context": "https://schema.org/",
@@ -148,6 +150,41 @@
       "description": "Recetario chileno con las mejores recetas tradicionales explicadas paso a paso."
     };
     const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(schema);
+    document.head.appendChild(script);
+  }
+
+  // NUEVO: Schema ItemList para el carrusel en Google
+  function inyectarSchemaItemList() {
+    // Solo tomamos las primeras 20 recetas para no sobrecargar el código
+    var items = RECETAS.slice(0, 20).map(function(receta, index) {
+      var slug = slugify(receta.titulo);
+      var url = SITE_CONFIG.urlBase + '/recetas/' + slug + '.html';
+      var img = receta.imagen && receta.imagen.trim() !== ''
+        ? imagenAbsoluta(receta.imagen)
+        : SITE_CONFIG.urlBase + '/' + SITE_CONFIG.imagenDefault;
+
+      return {
+        "@type": "ListItem",
+        "position": index + 1,
+        "item": {
+          "@type": "Recipe",
+          "name": receta.titulo,
+          "image": img,
+          "url": url
+        }
+      };
+    });
+
+    var schema = {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Recetas Chilenas Tradicionales",
+      "itemListElement": items
+    };
+
+    var script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(schema);
     document.head.appendChild(script);
@@ -267,6 +304,7 @@
     });
 
     inyectarSchemaSitio();
+    inyectarSchemaItemList(); // Inyectar el carrusel para Google
     
     // Inicializar estado visual de los botones de favoritos
     if (window.Favoritos) window.Favoritos.actualizar();

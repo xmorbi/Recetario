@@ -1414,6 +1414,28 @@ body.mc-bloqueado{overflow:hidden}
 }
 
 /* =====================================================
+   RESPUESTA RÁPIDA (AEO - Búsqueda por Voz)
+   ===================================================== */
+.resumen-aeo {
+  background: #fff;
+  border-left: 4px solid var(--rojo);
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--tinta);
+  border-radius: 0 var(--radio) var(--radio) 0;
+  box-shadow: var(--sombra-sm);
+}
+
+.resumen-aeo strong {
+  color: var(--rojo-osc);
+  font-weight: 700;
+  display: inline-block;
+  margin-right: 0.3rem;
+}
+
+/* =====================================================
    IMPRESIÓN
    ===================================================== */
 @media print {
@@ -1447,6 +1469,7 @@ body.mc-bloqueado{overflow:hidden}
   .rating-container,
   .errores-box,
   .conservacion-box,
+  .resumen-aeo,
   .guia-conservacion-item,
   .receta-acciones,
   .receta-acciones-top,
