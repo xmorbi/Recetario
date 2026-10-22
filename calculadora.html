@@ -3,31 +3,53 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Calculadora de Porciones | Recetario Chileno</title>
-<meta name="description" content="Calcula cuánta carne, arroz o papas necesitas por persona para tus recetas y asados. Evita desperdicios y cocina la cantidad exacta.">
+<!-- TÍTULO OPTIMIZADO PARA GOOGLE -->
+<title>Calculadora de Porciones: Carne, Harina y Carbón por Persona | Recetario Chileno</title>
+<meta name="description" content="¿Cuánta carne por persona? ¿Cuánta harina para pan? ¿Cuánto carbón para el asado? Usa nuestra calculadora gratuita y cocina la cantidad exacta sin desperdicios.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://recetariochileno.netlify.app/calculadora.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="estilos.css">
-<style>
-  /* Estilos específicos para la calculadora */
-  .calc-container { max-width: 600px; margin: 2rem auto; padding: 2rem; background: #fff; border-radius: var(--radio); box-shadow: var(--sombra-md); border: 1px solid var(--borde); }
-  .calc-group { margin-bottom: 1.5rem; }
-  .calc-group label { display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--rojo-osc); }
-  .calc-group select, .calc-group input { width: 100%; padding: 0.8rem; border: 2px solid var(--borde); border-radius: 8px; font-size: 1rem; font-family: inherit; background: var(--crema); color: var(--tinta); outline: none; transition: border-color 0.2s; }
-  .calc-group select:focus, .calc-group input:focus { border-color: var(--rojo); background: #fff; }
-  .calc-result { background: var(--crema-osc); padding: 2rem 1.5rem; border-radius: var(--radio); text-align: center; margin-top: 2rem; border-left: 4px solid var(--dorado); }
-  .calc-result-label { font-size: 0.85rem; color: var(--suave); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; margin-bottom: 0.5rem; }
-  .calc-result-number { font-size: 3rem; font-family: var(--fuente-titulos); font-weight: 900; color: var(--rojo-osc); line-height: 1; }
-  .calc-note { font-size: 0.9rem; color: var(--suave); margin-top: 1rem; font-style: italic; }
-</style>
+
+<!-- Schema.org para las Preguntas Frecuentes (SEO) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánta harina necesito para hacer pan para 3 personas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La proporción estándar es de 200 gramos de harina por persona. Para 3 personas necesitas 600 gramos de harina, 300 ml de agua tibia, 30 gramos de levadura fresca y 10 gramos de sal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánta carne calcular por persona para un asado?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Para un asado chileno, se calculan entre 350 y 400 gramos de carne cruda por adulto si hay acompañamientos. Si la carne es el plato principal, sube a 500 gramos. Los niños comen aproximadamente 200 gramos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto carbón necesito para asar X kilos de carne?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La regla general es usar 1 kilo de carbón por cada kilo de carne para un asado tradicional de 1 a 2 horas. Si el asado es rápido (pollo, chorizos), puedes usar 0.5 kilos por kilo de carne. Siempre ten un 20% extra de reserva."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <div class="bandera"><i class="azul"></i><i class="blanco"></i><i class="rojo"></i></div>
 
-<!-- Menú principal -->
 <header class="site-nav">
   <div class="site-nav-inner">
     <a href="index.html" class="site-nav-logo" aria-label="Recetario Chileno — Inicio">
@@ -59,32 +81,128 @@
     <nav class="breadcrumb" aria-label="Migas de pan">
       <a href="index.html">Inicio</a> <span>›</span> <span class="breadcrumb-current">Calculadora</span>
     </nav>
-    <h1>Calculadora de Porciones</h1>
-    <p class="sub" style="color:var(--suave); font-style:italic; margin-top:1rem;">Ingredientes precisos para tus recetas, sin desperdicios.</p>
+    <h1>Calculadora de Porciones y Cantidades</h1>
+    <p class="sub" style="color:var(--suave); font-style:italic; margin-top:1rem;">Calcula la cantidad exacta de comida para tus invitados.</p>
   </div>
 </header>
 
 <main class="legal-page">
   <div class="calc-container">
+    
+    <!-- SELECTOR AMPLIADO CON CATEGORÍAS -->
     <div class="calc-group">
       <label for="ingrediente">¿Qué vas a cocinar?</label>
       <select id="ingrediente">
-        <option value="carne">Carne (Asado, parrillada)</option>
-        <option value="arroz">Arroz (Crudo)</option>
-        <option value="papa">Papa (Cruda)</option>
-        <option value="pasta">Pasta (Cruda)</option>
+        <optgroup label="Carnes y Pescados">
+          <option value="carne_asado">Carne para Asado (Vacuno)</option>
+          <option value="carne_guiso">Carne para Guiso (Vacuno)</option>
+          <option value="pollo">Pollo (Trutros o Pechuga)</option>
+          <option value="cerdo">Cerdo (Pulpa o Chuletas)</option>
+          <option value="pescado">Pescado (Filetes)</option>
+        </optgroup>
+        <optgroup label="Panadería y Masas">
+          <option value="harina">Harina (Para hacer pan)</option>
+          <option value="pan">Pan (Marraqueta)</option>
+          <option value="pasta">Pasta o Fideos (Crudos)</option>
+        </optgroup>
+        <optgroup label="Carbohidratos y Granos">
+          <option value="arroz">Arroz (Crudo)</option>
+          <option value="papa">Papa (Cruda)</option>
+          <option value="legumbres">Legumbres (Porotos, Lentejas)</option>
+        </optgroup>
+        <optgroup label="Verduras">
+          <option value="choclo">Choclo (Para pastel/humitas)</option>
+          <option value="zapallo">Zapallo (Para guisos)</option>
+          <option value="tomate">Tomate (Para ensaladas)</option>
+        </optgroup>
+        <optgroup label="Parrilla">
+          <option value="carbon">Carbón (Para el asado)</option>
+        </optgroup>
       </select>
+    </div>
+
+    <div class="calc-group" id="contexto-group">
+      <label>¿Es el plato principal o un acompañamiento?</label>
+      <div class="toggle-group">
+        <label>
+          <input type="radio" name="contexto" value="principal" checked>
+          <span>Plato principal</span>
+        </label>
+        <label>
+          <input type="radio" name="contexto" value="guarnicion">
+          <span>Acompañamiento</span>
+        </label>
+      </div>
     </div>
     
     <div class="calc-group">
-      <label for="personas">Número de comensales (adultos)</label>
-      <input type="number" id="personas" value="4" min="1" max="50">
+      <label>Número de comensales</label>
+      <div class="steppers-row">
+        <div>
+          <div style="font-size:0.85rem; color:var(--suave); margin-bottom:0.4rem; font-weight:600;">Adultos</div>
+          <div class="stepper">
+            <button type="button" id="menos-adultos" aria-label="Restar adulto">−</button>
+            <div class="num" id="num-adultos">4</div>
+            <button type="button" id="mas-adultos" aria-label="Sumar adulto">+</button>
+          </div>
+        </div>
+        <div>
+          <div style="font-size:0.85rem; color:var(--suave); margin-bottom:0.4rem; font-weight:600;">Niños</div>
+          <div class="stepper">
+            <button type="button" id="menos-ninos" aria-label="Restar niño">−</button>
+            <div class="num" id="num-ninos">0</div>
+            <button type="button" id="mas-ninos" aria-label="Sumar niño">+</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="calc-result">
-      <div class="calc-result-label">Cantidad recomendada</div>
+      <div class="calc-result-label">Cantidad total recomendada</div>
       <div class="calc-result-number" id="resultado">---</div>
       <div class="calc-note" id="nota"></div>
+    </div>
+  </div>
+
+  <!-- BLOQUE DINÁMICO DE RECETAS RECOMENDADAS -->
+  <div class="calc-seo-content">
+    <div class="calc-recetas-cruce" id="recetas-recomendadas">
+      <h3>Recetas recomendadas para este ingrediente</h3>
+      <div class="recetas-tags" id="lista-recetas">
+        <!-- Se llena con JS -->
+      </div>
+    </div>
+
+    <!-- TEXTOS SEO: RESPUESTAS DIRECTAS -->
+    <h2 style="margin-top:3rem;">Respuestas rápidas a tus dudas</h2>
+    
+    <div class="faq-item">
+      <h3 style="font-family:var(--fuente-titulos); color:var(--rojo-osc); font-size:1.2rem; margin-top:1.5rem;">¿Cuánta harina necesito para hacer pan para 3 personas?</h3>
+      <p>La proporción estándar es de <strong>200 gramos de harina por persona</strong>. Por lo tanto, para 3 personas necesitarás <strong>600 gramos de harina</strong>. A esto le corresponden 300 ml de agua tibia, 30 gramos de levadura fresca y 10 gramos de sal. Si vas a hacer pan amasado o marraqueta, esta es la medida exacta para que queden esponjosos.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3 style="font-family:var(--fuente-titulos); color:var(--rojo-osc); font-size:1.2rem; margin-top:1.5rem;">¿Cuánta carne calcular por persona para un asado?</h3>
+      <p>Para un asado chileno, la regla general es calcular <strong>entre 350 y 400 gramos de carne cruda por adulto</strong> si hay acompañamientos (ensaladas, papas, pan). Si la carne es el único plato fuerte, se recomienda subir a <strong>500 gramos</strong>. Para los niños, calcula aproximadamente 200 gramos. Siempre es mejor comprar un poco de más, ya que la carne pierde peso al cocinarse.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3 style="font-family:var(--fuente-titulos); color:var(--rojo-osc); font-size:1.2rem; margin-top:1.5rem;">¿Cuánto carbón necesito para asar X kilos de carne?</h3>
+      <p>La regla más usada es <strong>1 kilo de carbón por cada 1 kilo de carne</strong> para un asado tradicional de 1 a 2 horas. Si el asado es rápido (como pollo o chorizos), puedes usar 0.5 kilos por kilo de carne. Recuerda siempre tener un 20% extra de reserva, ya que el viento o la lluvia pueden hacer que el carbón se consuma más rápido.</p>
+    </div>
+
+    <div class="calc-faq">
+      <h2>Preguntas frecuentes sobre porciones</h2>
+      
+      <details>
+        <summary>¿Cuánto arroz crudo por persona?</summary>
+        <div class="faq-content">Para un plato principal (como arroz con pollo), se calculan 90 gramos de arroz crudo por persona. Si es para guarnición, 60 gramos es más que suficiente, ya que el arroz duplica su tamaño al cocinarse.</div>
+      </details>
+      
+      <details>
+        <summary>¿Cuánta papa cocinar por persona?</summary>
+        <div class="faq-content">Para acompañar un plato, calcula 250 gramos de papa cruda por persona. Si vas a hacer un puré como plato principal, sube a 350 gramos. Siempre es mejor pelar unas papas extra.</div>
+      </details>
     </div>
   </div>
 </main>

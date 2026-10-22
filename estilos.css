@@ -691,12 +691,64 @@ body.mc-bloqueado{overflow:hidden}
   background: #fdf3e3;
 }
 
-/* Listado de favoritos en "Mis recetas" */
 .recetas-grid-favoritos {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
+
+/* =====================================================
+   CALCULADORA DE PORCIONES
+   ===================================================== */
+.calc-container { max-width: 600px; margin: 2rem auto; padding: 2rem; background: #fff; border-radius: var(--radio); box-shadow: var(--sombra-md); border: 1px solid var(--borde); }
+.calc-group { margin-bottom: 1.8rem; }
+.calc-group > label { display: block; font-weight: 700; margin-bottom: 0.8rem; color: var(--rojo-osc); font-size: 1.05rem; }
+
+/* Select */
+.calc-group select { width: 100%; padding: 0.9rem; border: 2px solid var(--borde); border-radius: 8px; font-size: 1rem; font-family: inherit; background: var(--crema); color: var(--tinta); outline: none; transition: border-color 0.2s; appearance: none; }
+.calc-group select:focus { border-color: var(--rojo); background: #fff; }
+
+/* Toggle (Principal / Guarnición) */
+.toggle-group { display: flex; gap: 0.5rem; background: var(--crema-osc); padding: 0.4rem; border-radius: 8px; border: 1px solid var(--borde); }
+.toggle-group label { flex: 1; text-align: center; cursor: pointer; margin: 0; font-weight: 500; font-size: 0.9rem; }
+.toggle-group input[type="radio"] { display: none; }
+.toggle-group span { display: block; padding: 0.6rem; border-radius: 6px; color: var(--suave); transition: all 0.2s; }
+.toggle-group input[type="radio"]:checked + span { background: #fff; color: var(--rojo-osc); box-shadow: 0 2px 4px rgba(0,0,0,0.05); font-weight: 700; }
+
+/* Steppers (+ / -) */
+.steppers-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.stepper { display: flex; align-items: center; justify-content: space-between; background: var(--crema); border: 2px solid var(--borde); border-radius: 8px; padding: 0.3rem; }
+.stepper button { width: 40px; height: 40px; border-radius: 6px; border: none; background: #fff; color: var(--rojo-osc); font-size: 1.5rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1); transition: background 0.2s, transform 0.1s; }
+.stepper button:hover { background: var(--crema-osc); }
+.stepper button:active { transform: scale(0.95); }
+.stepper .num { font-size: 1.3rem; font-weight: 700; color: var(--tinta); width: 40px; text-align: center; }
+
+/* Resultado */
+.calc-result { background: var(--crema-osc); padding: 2rem 1.5rem; border-radius: var(--radio); text-align: center; margin-top: 2rem; border-left: 4px solid var(--dorado); }
+.calc-result-label { font-size: 0.85rem; color: var(--suave); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; margin-bottom: 0.5rem; }
+.calc-result-number { font-size: 3.5rem; font-family: var(--fuente-titulos); font-weight: 900; color: var(--rojo-osc); line-height: 1; }
+.calc-note { font-size: 0.9rem; color: var(--suave); margin-top: 1rem; font-style: italic; }
+
+/* SEO, FAQ y Recetas */
+.calc-seo-content { max-width: 600px; margin: 3rem auto; color: var(--tinta); }
+.calc-seo-content h2 { font-family: var(--fuente-titulos); color: var(--rojo-osc); font-size: 1.6rem; margin-bottom: 1rem; }
+.calc-seo-content p { margin-bottom: 1rem; line-height: 1.7; font-size: 1rem; }
+
+.calc-faq { margin-top: 2rem; }
+.calc-faq details { background: #fff; border: 1px solid var(--borde); border-radius: 8px; margin-bottom: 0.8rem; overflow: hidden; }
+.calc-faq summary { padding: 1rem 1.2rem; font-weight: 600; cursor: pointer; color: var(--rojo-osc); list-style: none; display: flex; justify-content: space-between; align-items: center; transition: background 0.2s; }
+.calc-faq summary:hover { background: var(--crema-osc); }
+.calc-faq summary::-webkit-details-marker { display: none; }
+.calc-faq summary::after { content: '+'; font-size: 1.5rem; color: var(--rojo); line-height: 1; }
+.calc-faq details[open] summary::after { content: '−'; }
+.calc-faq .faq-content { padding: 0 1.2rem 1.2rem; color: var(--suave); font-size: 0.95rem; line-height: 1.6; }
+
+.calc-recetas-cruce { margin-top: 2rem; padding: 1.5rem; background: var(--crema-osc); border-left: 4px solid var(--dorado); border-radius: 0 var(--radio) var(--radio) 0; }
+.calc-recetas-cruce h3 { font-size: 1rem; margin-bottom: 0.8rem; color: var(--rojo-osc); border: none; padding: 0; }
+.calc-recetas-cruce p { margin-bottom: 1rem; font-size: 0.9rem; }
+.calc-recetas-cruce .recetas-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.calc-recetas-cruce a { background: #fff; color: var(--rojo); padding: 0.5rem 1rem; border-radius: 99px; text-decoration: none; font-size: 0.85rem; font-weight: 600; border: 1px solid var(--borde); transition: all 0.2s; }
+.calc-recetas-cruce a:hover { background: var(--rojo); color: #fff; border-color: var(--rojo); transform: translateY(-2px); box-shadow: 0 4px 8px rgba(176,58,46,0.2); }
 
 /* =====================================================
    IMPRESIÓN
@@ -749,7 +801,9 @@ body.mc-bloqueado{overflow:hidden}
   .meta-icon,
   .categoria-icon,
   .vacio-icon,
-  .receta-destacada-section {
+  .receta-destacada-section,
+  .calc-container,
+  .calc-seo-content {
     display: none !important;
   }
 
