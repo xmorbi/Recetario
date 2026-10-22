@@ -123,6 +123,7 @@
                      (receta.dato ? '. ' + receta.dato : '.'),
       "recipeCuisine": "Chilena",
       "recipeCategory": mapearCategoria(receta.categoria),
+      "keywords": (receta.tags || []).join(', '),
       "totalTime": parseTiempo(receta.tiempo),
       "recipeYield": receta.porciones || "4 porciones",
       "recipeIngredient": receta.ingredientes || [],
@@ -195,6 +196,7 @@
   function crearTarjeta(receta, indice) {
     const id = 'receta-' + indice;
     const slug = slugify(receta.titulo);
+    const tagsStr = (receta.tags || []).join(' ');
 
     let bloqueImagen = '';
     if (receta.imagen && receta.imagen.trim() !== '') {
@@ -227,7 +229,7 @@
     const tituloIngredientes = receta.tituloIngredientes || 'Ingredientes';
 
     return '' +
-      '<article class="receta" data-cat="' + escaparAtributo(receta.categoria || 'principales') + '" id="' + id + '">' +
+      '<article class="receta" data-cat="' + escaparAtributo(receta.categoria || 'principales') + '" data-tags="' + escaparAtributo(tagsStr) + '" id="' + id + '">' +
         bloqueImagen +
         '<h2><a href="recetas/' + slug + '.html">' + escaparHtml(receta.titulo) + '</a></h2>' +
         '<div class="meta">' + chips.join('') + '</div>' +
@@ -330,8 +332,12 @@
       limpiarResaltados(tarjeta);
 
       const coincideCat = categoriaActiva === 'todas' || tarjeta.dataset.cat === categoriaActiva;
+      
+      // Búsqueda mejorada: busca en el texto visible Y en los tags ocultos
+      const textoCompleto = tarjeta.textContent + ' ' + (tarjeta.dataset.tags || '');
       const coincideTxt = !normBusqueda ||
-        quitarAcentos(tarjeta.textContent).toLowerCase().indexOf(normBusqueda) !== -1;
+        quitarAcentos(textoCompleto).toLowerCase().indexOf(normBusqueda) !== -1;
+      
       const mostrar = coincideCat && coincideTxt;
 
       tarjeta.hidden = !mostrar;
@@ -462,7 +468,6 @@
   });
 
   contenedor.addEventListener('click', function (e) {
-    // Modo cocina
     var btnMc = e.target.closest('.btn-modo-cocina');
     if (btnMc) {
       e.preventDefault();
@@ -472,7 +477,6 @@
       }
       return;
     }
-    // Imprimir
     var btnImp = e.target.closest('.btn-imprimir');
     if (btnImp) {
       var tarjeta = btnImp.closest('.receta');
@@ -482,7 +486,6 @@
     }
   });
 
-  /* ---------- Arranque ---------- */
   renderizar();
   botones.forEach(function (b) {
     b.classList.toggle('activo', b.dataset.cat === categoriaActiva);

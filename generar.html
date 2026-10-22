@@ -65,12 +65,15 @@ function crearPagina(r, i, total, todos) {
   var url = URL_BASE + '/recetas/' + slug + '.html';
   var img = (r.imagen && r.imagen.trim() !== '') ? URL_BASE + '/' + r.imagen.replace(/^\.\.\//,'') : URL_BASE + '/img/og-default.jpg';
 
+  var tagsStr = (r.tags || []).join(', ');
+
   var schema = JSON.stringify({
     "@context":"https://schema.org/","@type":"Recipe","name":r.titulo,"image":[img],
     "author":{"@type":"Organization","name":"Recetario Chileno"},
     "datePublished":"2025-01-15",
     "description":"Receta tradicional chilena de " + r.titulo + ".",
     "recipeCuisine":"Chilena","recipeCategory":catLegible(r.categoria),
+    "keywords": tagsStr,
     "totalTime":tiempoISO(r.tiempo),"recipeYield":r.porciones || "4 porciones",
     "recipeIngredient":r.ingredientes || [],
     "recipeInstructions":(r.pasos || []).map(function(p, idx) {
@@ -90,7 +93,8 @@ function crearPagina(r, i, total, todos) {
     titulo: r.titulo,
     categoria: r.categoria || 'principales',
     ingredientes: r.ingredientes || [],
-    pasos: r.pasos || []
+    pasos: r.pasos || [],
+    tags: r.tags || []
   }).replace(/<\/script/g, '<\\/script');
 
   var ing = (r.ingredientes || []).map(function(x) {
@@ -121,6 +125,13 @@ function crearPagina(r, i, total, todos) {
       relHTML += '<li><a href="' + slugify(x.titulo) + '.html">' + esc(x.titulo) + '</a></li>';
     });
     relHTML += '</ul></aside>';
+  }
+
+  var tagsHTML = '';
+  if (r.tags && r.tags.length > 0) {
+    tagsHTML = '<div class="receta-tags">';
+    r.tags.forEach(function(t) { tagsHTML += '<span class="tag">#' + esc(t) + '</span>'; });
+    tagsHTML += '</div>';
   }
 
   var h = '<!DOCTYPE html><html lang="es-CL"><head>';
@@ -199,6 +210,8 @@ function crearPagina(r, i, total, todos) {
   h += '<div><h3>Preparación</h3><ol class="preparacion">' + pasos + '</ol>' + dato + '</div>';
   h += '</div></article>';
 
+  h += tagsHTML;
+
   var msjWA = 'Mira esta receta de ' + r.titulo + ' en Recetario Chileno: ' + url;
   var linkWA = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(msjWA);
 
@@ -257,7 +270,7 @@ function generar() {
     a.href = u; a.download = 'recetas.zip';
     document.body.appendChild(a); a.click(); document.body.removeChild(a);
     setTimeout(function(){ URL.revokeObjectURL(u); }, 1000);
-    log.textContent += 'LISTO. Se descargó recetas.zip\n\nSIGUIENTE:\n1. Extrae la carpeta "recetas" dentro de Intento 2/ (reemplaza la existente)\n2. git add .\n3. git commit -m "F4: modo cocina"\n4. git pull --rebase\n5. git push\n';
+    log.textContent += 'LISTO. Se descargó recetas.zip\n\nSIGUIENTE:\n1. Extrae la carpeta "recetas" dentro de Intento 2/ (reemplaza la existente)\n2. git add .\n3. git commit -m "F5: Etiquetas y busqueda"\n4. git pull --rebase\n5. git push\n';
     btn.disabled = false;
   }).catch(function(err) {
     log.textContent += '\nERROR: ' + err.message + '\n';

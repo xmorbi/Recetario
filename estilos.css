@@ -445,7 +445,7 @@ body.mc-bloqueado{overflow:hidden}
   font-size:1.1rem;
 }
 .mc-ingredientes[open] summary::after{transform:rotate(180deg)}
-.mc-ing-lista{
+.mc-ing-list{
   list-style:none;
   padding:0 1.2rem 1rem;
   margin:0;
@@ -454,11 +454,11 @@ body.mc-bloqueado{overflow:hidden}
   max-height:30vh;
   overflow-y:auto;
 }
-.mc-ing-lista li{
+.mc-ing-list li{
   padding:.5rem 0;
   border-bottom:1px solid rgba(255,255,255,.08);
 }
-.mc-ing-lista li:last-child{border-bottom:none}
+.mc-ing-list li:last-child{border-bottom:none}
 
 .mc-contenido{
   flex:1;
@@ -545,6 +545,26 @@ body.mc-bloqueado{overflow:hidden}
 }
 
 /* =====================================================
+   ETIQUETAS VISUALES (TAGS)
+   ===================================================== */
+.receta-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+.receta-tags .tag {
+  font-size: .7rem;
+  color: var(--suave);
+  background: var(--crema-osc);
+  padding: .2rem .6rem;
+  border-radius: 99px;
+  border: 1px solid var(--borde);
+  text-transform: lowercase;
+}
+
+/* =====================================================
    IMPRESIÓN
    ===================================================== */
 @media print {
@@ -570,6 +590,7 @@ body.mc-bloqueado{overflow:hidden}
   .receta-acciones,
   .receta-acciones-top,
   .receta-cta,
+  .receta-tags,
   .btn-volver-inicio,
   .receta-nav,
   .recetas-relacionadas,

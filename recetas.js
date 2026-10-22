@@ -1,17 +1,5 @@
 /* =================================================================
    RECETAS.JS — Los datos de tu recetario
-   =================================================================
-
-   👉 ESTE ES EL ÚNICO ARCHIVO QUE DEBES EDITAR.
-
-   CÓMO AGREGAR UNA RECETA NUEVA:
-   1. Copia un bloque { ... } completo (desde { hasta },)
-   2. Pégalo al final, antes del ];
-   3. Cambia los textos que quieras.
-
-   CÓMO AGREGAR UNA FOTO:
-   1. Guarda la imagen dentro de la carpeta "img/"
-   2. En la receta, cambia  imagen: '',  por  imagen: 'img/tu-foto.jpg',
    ================================================================= */
 
 const RECETAS = [
@@ -20,6 +8,7 @@ const RECETAS = [
   {
     titulo: 'Empanadas de pino',
     categoria: 'principales',
+    tags: ['empanada', 'horno', 'pino', 'plato principal', 'fiestas patrias'],
     imagen: '',
     tiempo: '90 min + reposo',
     porciones: '12 unidades',
@@ -56,6 +45,7 @@ const RECETAS = [
   {
     titulo: 'Pastel de choclo',
     categoria: 'principales',
+    tags: ['choclo', 'horno', 'plato principal', 'tradicional', 'verano'],
     imagen: '',
     tiempo: '75 min',
     porciones: '6 personas',
@@ -87,6 +77,7 @@ const RECETAS = [
   {
     titulo: 'Cazuela de vacuno',
     categoria: 'principales',
+    tags: ['cazuela', 'sopa', 'olla', 'invierno', 'plato principal', 'vacuno'],
     imagen: '',
     tiempo: '70 min',
     porciones: '4 a 6 personas',
@@ -116,6 +107,7 @@ const RECETAS = [
   {
     titulo: 'Charquicán',
     categoria: 'principales',
+    tags: ['charquican', 'olla', 'plato principal', 'invierno', 'papas', 'verduras'],
     imagen: '',
     tiempo: '40 min',
     porciones: '4 personas',
@@ -144,6 +136,7 @@ const RECETAS = [
   {
     titulo: 'Porotos granados',
     categoria: 'principales',
+    tags: ['porotos', 'verano', 'choclo', 'plato principal', 'tradicional', 'vegetariano'],
     imagen: '',
     tiempo: '50 min',
     porciones: '6 personas',
@@ -172,6 +165,7 @@ const RECETAS = [
   {
     titulo: 'Humitas',
     categoria: 'principales',
+    tags: ['humita', 'choclo', 'horno', 'olla', 'plato principal', 'vegetariano'],
     imagen: '',
     tiempo: '80 min',
     porciones: '8 unidades',
@@ -200,6 +194,7 @@ const RECETAS = [
   {
     titulo: 'Sopaipillas',
     categoria: 'panes',
+    tags: ['sopaipilla', 'fritura', 'invierno', 'pan', 'merienda', 'once'],
     imagen: '',
     tiempo: '45 min',
     porciones: '20 unidades',
@@ -229,6 +224,7 @@ const RECETAS = [
   {
     titulo: 'Pan amasado',
     categoria: 'panes',
+    tags: ['pan', 'horno', 'masa', 'desayuno', 'once'],
     imagen: '',
     tiempo: '60 min',
     porciones: '12 panes',
@@ -256,6 +252,7 @@ const RECETAS = [
   {
     titulo: 'Leche asada',
     categoria: 'dulces',
+    tags: ['postre', 'dulce', 'horno', 'leche', 'tradicional'],
     imagen: '',
     tiempo: '70 min',
     porciones: '6 personas',
@@ -283,6 +280,7 @@ const RECETAS = [
   {
     titulo: 'Mote con huesillo',
     categoria: 'dulces',
+    tags: ['postre', 'dulce', 'verano', 'bebida', 'tradicional'],
     imagen: '',
     tiempo: '40 min + frío',
     porciones: '6 vasos',
@@ -309,6 +307,7 @@ const RECETAS = [
   {
     titulo: 'Cazuela de ave',
     categoria: 'sopas',
+    tags: ['cazuela', 'sopa', 'olla', 'invierno', 'pollo'],
     imagen: '',
     tiempo: '2 h',
     porciones: '6 personas',
@@ -340,6 +339,7 @@ const RECETAS = [
   {
     titulo: 'Cazuela de cerdo',
     categoria: 'sopas',
+    tags: ['cazuela', 'sopa', 'olla', 'invierno', 'cerdo'],
     imagen: '',
     tiempo: '1 h 30 min',
     porciones: '4 a 6 personas',
@@ -370,6 +370,7 @@ const RECETAS = [
   {
     titulo: 'Pantrucas',
     categoria: 'sopas',
+    tags: ['sopa', 'olla', 'invierno', 'masa', 'vacuno'],
     imagen: '',
     tiempo: '50 min',
     porciones: '4 personas',
@@ -402,6 +403,7 @@ const RECETAS = [
   {
     titulo: 'Tomaticán',
     categoria: 'principales',
+    tags: ['tomatican', 'olla', 'plato principal', 'tomate', 'verano'],
     imagen: '',
     tiempo: '30 min',
     porciones: '4 personas',
@@ -430,6 +432,7 @@ const RECETAS = [
   {
     titulo: 'Porotos con mazamorra',
     categoria: 'principales',
+    tags: ['porotos', 'choclo', 'plato principal', 'tradicional', 'verano'],
     imagen: '',
     tiempo: '50 min',
     porciones: '4 personas',
@@ -458,6 +461,7 @@ const RECETAS = [
   {
     titulo: 'Ajiaco chileno',
     categoria: 'sopas',
+    tags: ['ajiaco', 'sopa', 'olla', 'carne', 'papas'],
     imagen: '',
     tiempo: '40 min',
     porciones: '4 personas',
@@ -485,6 +489,7 @@ const RECETAS = [
   {
     titulo: 'Caldillo de congrio',
     categoria: 'sopas',
+    tags: ['caldillo', 'sopa', 'pescado', 'marisco', 'olla'],
     imagen: '',
     tiempo: '50 min',
     porciones: '4 personas',
@@ -515,6 +520,7 @@ const RECETAS = [
   {
     titulo: 'Tomática',
     categoria: 'ensaladas',
+    tags: ['ensalada', 'tomate', 'fresca', 'acompañamiento', 'verano'],
     imagen: '',
     tiempo: '15 min',
     porciones: '4 personas',
@@ -542,6 +548,7 @@ const RECETAS = [
   {
     titulo: 'Ensalada a la chilena',
     categoria: 'ensaladas',
+    tags: ['ensalada', 'tomate', 'cebolla', 'fresca', 'acompañamiento', 'tradicional'],
     imagen: '',
     tiempo: '15 min',
     porciones: '5 personas',
@@ -566,6 +573,7 @@ const RECETAS = [
   {
     titulo: 'Ensalada rusa chilena',
     categoria: 'ensaladas',
+    tags: ['ensalada', 'papas', 'mayonesa', 'fresca', 'acompañamiento'],
     imagen: '',
     tiempo: '30 min + frío',
     porciones: '6 personas',
@@ -594,6 +602,7 @@ const RECETAS = [
   {
     titulo: 'Chancho en piedra',
     categoria: 'ensaladas',
+    tags: ['picoteo', 'salsa', 'tomate', 'acompañamiento', 'merienda', 'ensalada', 'tradicional'],
     imagen: '',
     tiempo: '20 min',
     porciones: '6 personas',
@@ -621,6 +630,7 @@ const RECETAS = [
   {
     titulo: 'Sopaipillas pasadas',
     categoria: 'panes',
+    tags: ['sopaipilla', 'dulce', 'chancaca', 'invierno', 'merienda', 'once'],
     imagen: '',
     tiempo: '45 min',
     porciones: '20 unidades',
@@ -651,6 +661,7 @@ const RECETAS = [
   {
     titulo: 'Empanadas de queso',
     categoria: 'panes',
+    tags: ['empanada', 'horno', 'queso', 'picoteo', 'fritura', 'vegetariano'],
     imagen: '',
     tiempo: '60 min',
     porciones: '12 unidades',
@@ -681,6 +692,7 @@ const RECETAS = [
   {
     titulo: 'Arroz con leche',
     categoria: 'dulces',
+    tags: ['postre', 'dulce', 'olla', 'arroz', 'leche', 'tradicional'],
     imagen: '',
     tiempo: '50 min',
     porciones: '6 personas',
@@ -708,6 +720,7 @@ const RECETAS = [
   {
     titulo: 'Sopones o machos ahogados',
     categoria: 'sopas',
+    tags: ['sopa', 'caldo', 'masa', 'olla', 'invierno'],
     imagen: '',
     tiempo: '30 min',
     porciones: '4 personas',
@@ -735,6 +748,7 @@ const RECETAS = [
   {
     titulo: 'Pollo arvejado',
     categoria: 'principales',
+    tags: ['pollo', 'guiso', 'olla', 'arvejas', 'plato principal'],
     imagen: '',
     tiempo: '60 min',
     porciones: '4 personas',
@@ -763,6 +777,7 @@ const RECETAS = [
   {
     titulo: 'Pollo al jugo',
     categoria: 'principales',
+    tags: ['pollo', 'olla', 'plato principal', 'guiso'],
     imagen: '',
     tiempo: '45 min',
     porciones: '4 personas',
@@ -790,6 +805,7 @@ const RECETAS = [
   {
     titulo: 'Pollo asado',
     categoria: 'principales',
+    tags: ['pollo', 'horno', 'plato principal', 'domingo', 'asado'],
     imagen: '',
     tiempo: '1 h 30 min',
     porciones: '4 a 6 personas',
@@ -817,6 +833,7 @@ const RECETAS = [
   {
     titulo: 'Carne al jugo con puré',
     categoria: 'principales',
+    tags: ['carne', 'olla', 'plato principal', 'pure', 'guiso', 'vacuno'],
     imagen: '',
     tiempo: '1 h 30 min',
     porciones: '4 personas',
@@ -847,6 +864,7 @@ const RECETAS = [
   {
     titulo: 'Pajaritos dulces',
     categoria: 'dulces',
+    tags: ['pan', 'dulce', 'horno', 'merienda', 'once', 'masa'],
     imagen: '',
     tiempo: '1 h',
     porciones: '12 unidades',
@@ -879,6 +897,7 @@ const RECETAS = [
   {
     titulo: 'Chilenitos',
     categoria: 'dulces',
+    tags: ['dulce', 'postre', 'horno', 'manjar', 'tradicional', 'once'],
     imagen: '',
     tiempo: '50 min',
     porciones: '20 unidades',
@@ -909,6 +928,7 @@ const RECETAS = [
   {
     titulo: 'Empolvados',
     categoria: 'dulces',
+    tags: ['dulce', 'postre', 'horno', 'manjar', 'once'],
     imagen: '',
     tiempo: '40 min',
     porciones: '20 unidades',
@@ -937,6 +957,7 @@ const RECETAS = [
   {
     titulo: 'Colegial (budín de pan)',
     categoria: 'dulces',
+    tags: ['dulce', 'postre', 'horno', 'pan', 'reposteria'],
     imagen: '',
     tiempo: '1 h 30 min',
     porciones: '6 personas',
@@ -966,6 +987,7 @@ const RECETAS = [
   {
     titulo: 'Empanadas de pera',
     categoria: 'dulces',
+    tags: ['dulce', 'empanada', 'horno', 'postre', 'pera'],
     imagen: '',
     tiempo: '1 h + remojo',
     porciones: '12 unidades',
@@ -994,6 +1016,7 @@ const RECETAS = [
   {
     titulo: 'Valdiviano',
     categoria: 'sopas',
+    tags: ['sopa', 'charqui', 'olla', 'invierno', 'plato principal'],
     imagen: '',
     tiempo: '40 min',
     porciones: '4 personas',
@@ -1022,6 +1045,7 @@ const RECETAS = [
   {
     titulo: 'Porotos con riendas',
     categoria: 'principales',
+    tags: ['porotos', 'pasta', 'olla', 'plato principal', 'tradicional'],
     imagen: '',
     tiempo: '50 min + remojo',
     porciones: '6 personas',
@@ -1055,6 +1079,7 @@ const RECETAS = [
   {
     titulo: 'Carbonada',
     categoria: 'principales',
+    tags: ['guiso', 'olla', 'carne', 'verduras', 'plato principal', 'invierno'],
     imagen: '',
     tiempo: '50 min',
     porciones: '6 personas',
@@ -1088,6 +1113,7 @@ const RECETAS = [
   {
     titulo: 'Chorrillana',
     categoria: 'principales',
+    tags: ['picoteo', 'carne', 'papas fritas', 'huevo', 'compartir', 'plato principal'],
     imagen: '',
     tiempo: '40 min',
     porciones: '3 a 4 personas',
@@ -1116,6 +1142,7 @@ const RECETAS = [
   {
     titulo: 'Bistec a lo pobre',
     categoria: 'principales',
+    tags: ['carne', 'papas fritas', 'huevo', 'sarten', 'plato principal'],
     imagen: '',
     tiempo: '40 min',
     porciones: '2 personas',
@@ -1145,6 +1172,7 @@ const RECETAS = [
   {
     titulo: 'Salchipapas',
     categoria: 'principales',
+    tags: ['picoteo', 'papas fritas', 'salchicha', 'fritura', 'compartir', 'plato principal'],
     imagen: '',
     tiempo: '25 min',
     porciones: '4 personas',
@@ -1170,6 +1198,7 @@ const RECETAS = [
   {
     titulo: 'Carne mechada',
     categoria: 'principales',
+    tags: ['carne', 'olla', 'plato principal', 'sandwich', 'guiso', 'vacuno'],
     imagen: '',
     tiempo: '2 h 30 min',
     porciones: '4 a 6 personas',
@@ -1200,6 +1229,7 @@ const RECETAS = [
   {
     titulo: 'Machas a la parmesana',
     categoria: 'principales',
+    tags: ['marisco', 'horno', 'entrada', 'queso', 'picoteo'],
     imagen: '',
     tiempo: '20 min',
     porciones: '4 personas (como entrada)',
@@ -1228,6 +1258,7 @@ const RECETAS = [
   {
     titulo: 'Locos con mayonesa',
     categoria: 'principales',
+    tags: ['marisco', 'frio', 'entrada', 'mayonesa', 'picoteo'],
     imagen: '',
     tiempo: '1 h 15 min',
     porciones: '4 personas',
@@ -1256,6 +1287,7 @@ const RECETAS = [
   {
     titulo: 'Paila marina',
     categoria: 'sopas',
+    tags: ['marisco', 'pescado', 'sopa', 'olla', 'caldo'],
     imagen: '',
     tiempo: '45 min',
     porciones: '4 personas',
@@ -1289,6 +1321,7 @@ const RECETAS = [
   {
     titulo: 'Pescado frito',
     categoria: 'principales',
+    tags: ['pescado', 'fritura', 'plato principal', 'sarten'],
     imagen: '',
     tiempo: '30 min',
     porciones: '4 personas',
@@ -1318,6 +1351,7 @@ const RECETAS = [
   {
     titulo: 'Corvina al horno',
     categoria: 'principales',
+    tags: ['pescado', 'horno', 'plato principal', 'sano'],
     imagen: '',
     tiempo: '40 min',
     porciones: '2 personas',
@@ -1348,6 +1382,7 @@ const RECETAS = [
   {
     titulo: 'Salmón al horno',
     categoria: 'principales',
+    tags: ['pescado', 'horno', 'plato principal', 'sano'],
     imagen: '',
     tiempo: '25 min',
     porciones: '2 personas',
@@ -1376,6 +1411,7 @@ const RECETAS = [
   {
     titulo: 'Salsa americana',
     categoria: 'ensaladas',
+    tags: ['salsa', 'picoteo', 'acompañamiento', 'frio'],
     imagen: '',
     tiempo: '15 min',
     porciones: '1 taza',
@@ -1404,6 +1440,7 @@ const RECETAS = [
   {
     titulo: 'Pebre chileno',
     categoria: 'ensaladas',
+    tags: ['salsa', 'picoteo', 'acompañamiento', 'fresco', 'tradicional', 'ensalada'],
     imagen: '',
     tiempo: '15 min',
     porciones: '4 personas',
@@ -1434,6 +1471,7 @@ const RECETAS = [
   {
     titulo: 'Marraqueta',
     categoria: 'panes',
+    tags: ['pan', 'horno', 'masa', 'desayuno', 'once', 'tradicional'],
     imagen: '',
     tiempo: '2 h 30 min',
     porciones: '4 panes',
@@ -1461,6 +1499,7 @@ const RECETAS = [
   {
     titulo: 'Hallulla',
     categoria: 'panes',
+    tags: ['pan', 'horno', 'masa', 'desayuno', 'once'],
     imagen: '',
     tiempo: '2 h',
     porciones: '6 panes',
@@ -1489,6 +1528,7 @@ const RECETAS = [
   {
     titulo: 'Sopaipillas pasadas',
     categoria: 'panes',
+    tags: ['sopaipilla', 'dulce', 'chancaca', 'invierno', 'merienda', 'once'],
     imagen: '',
     tiempo: '45 min',
     porciones: '20 unidades',
@@ -1519,6 +1559,7 @@ const RECETAS = [
   {
     titulo: 'Prietas',
     categoria: 'principales',
+    tags: ['prieta', 'morcilla', 'olla', 'sarten', 'plato principal'],
     imagen: '',
     tiempo: '1 h 30 min',
     porciones: '4 personas',
@@ -1548,6 +1589,7 @@ const RECETAS = [
   {
     titulo: 'Calzones rotos',
     categoria: 'dulces',
+    tags: ['dulce', 'fritura', 'invierno', 'once', 'merienda', 'reposteria'],
     imagen: '',
     tiempo: '40 min',
     porciones: '20 unidades',
@@ -1580,6 +1622,7 @@ const RECETAS = [
   {
     titulo: 'Brownies con cacao',
     categoria: 'dulces',
+    tags: ['dulce', 'postre', 'horno', 'chocolate', 'reposteria'],
     imagen: '',
     tiempo: '45 min',
     porciones: '12 porciones',
@@ -1607,5 +1650,4 @@ const RECETAS = [
     ],
     dato: 'Para un brownie extra húmedo y fudgy, deja el centro un poco crudo. Si prefieres un brownie más tipo bizcocho, hornéalo 5 minutos más.'
   }
-
 ];
