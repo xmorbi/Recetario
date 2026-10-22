@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de Porciones | Recetario Chileno</title>
+<meta name="description" content="Calcula cuánta carne, arroz o papas necesitas por persona para tus recetas y asados. Evita desperdicios y cocina la cantidad exacta.">
+<!-- Incluye aquí tus fuentes y el CSS de tu sitio -->
+<link rel="stylesheet" href="estilos.css">
+<style>
+  /* Estilos específicos para la calculadora (puedes moverlos a estilos.css) */
+  .calc-container { max-width: 600px; margin: 2rem auto; padding: 2rem; background: #fff; border-radius: var(--radio); box-shadow: var(--sombra-md); }
+  .calc-group { margin-bottom: 1.5rem; }
+  .calc-group label { display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--rojo-osc); }
+  .calc-group select, .calc-group input { width: 100%; padding: 0.8rem; border: 1px solid var(--borde); border-radius: 8px; font-size: 1rem; }
+  .calc-result { background: var(--crema-osc); padding: 1.5rem; border-radius: var(--radio); text-align: center; margin-top: 2rem; border-left: 4px solid var(--dorado); }
+  .calc-result-number { font-size: 2.5rem; font-family: var(--fuente-titulos); font-weight: 700; color: var(--rojo-osc); line-height: 1; }
+  .calc-result-label { font-size: 0.9rem; color: var(--suave); text-transform: uppercase; letter-spacing: 0.1em; }
+  .calc-note { font-size: 0.85rem; color: var(--suave); margin-top: 0.5rem; font-style: italic; }
+</style>
+</head>
+<body>
+  <!-- Aquí va tu header con el menú de navegación, igual que en las otras páginas -->
+  <header class="site-nav">...</header>
+
+  <main class="legal-page">
+    <h1>Calculadora de Porciones</h1>
+    <p class="legal-subtitle">Ingredientes precisos para tus recetas, sin desperdicios.</p>
+    
+    <div class="calc-container">
+      <div class="calc-group">
+        <label for="ingrediente">¿Qué vas a cocinar?</label>
+        <select id="ingrediente">
+          <option value="carne">Carne (Asado, parrillada)</option>
+          <option value="arroz">Arroz (Crudo)</option>
+          <option value="papa">Papa (Cruda)</option>
+          <option value="pasta">Pasta (Cruda)</option>
+        </select>
+      </div>
+      
+      <div class="calc-group">
+        <label for="personas">Número de comensales (adultos)</label>
+        <input type="number" id="personas" value="4" min="1" max="50">
+      </div>
+
+      <div class="calc-result">
+        <div class="calc-result-label">Cantidad recomendada</div>
+        <div class="calc-result-number" id="resultado">---</div>
+        <div class="calc-note" id="nota"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Aquí va tu footer -->
+  <footer>...</footer>
+
+  <script src="calculadora.js"></script>
+</body>
+</html>
