@@ -2,6 +2,9 @@
 <html lang="es-CL">
 <head>
 <meta charset="UTF-8">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KXH425KQ');</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PCNBDPPXXYP"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-PCNBDPPXXYP');</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Calculadora de Porciones: Carne, Harina y Carbón por Persona | Recetario Chileno</title>
 <meta name="description" content="¿Cuánta carne por persona? ¿Cuánta harina para pan? ¿Cuánto carbón para el asado? Usa nuestra calculadora gratuita y cocina la cantidad exacta sin desperdicios.">
@@ -11,42 +14,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="estilos.css">
-
-<!-- Schema.org para las Preguntas Frecuentes (SEO) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Cuánta harina necesito para hacer pan para 3 personas?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "La proporción estándar es de 200 gramos de harina por persona. Para 3 personas necesitas 600 gramos de harina, 300 ml de agua tibia, 30 gramos de levadura fresca y 10 gramos de sal."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Cuánta carne calcular por persona para un asado?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Para un asado chileno, se calculan entre 350 y 400 gramos de carne cruda por adulto si hay acompañamientos. Si la carne es el plato principal, sube a 500 gramos. Los niños comen aproximadamente 200 gramos."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Cuánto carbón necesito para asar X kilos de carne?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "La regla general es usar 1 kilo de carbón por cada kilo de carne para un asado tradicional de 1 a 2 horas. Si el asado es rápido (pollo, chorizos), puedes usar 0.5 kilos por kilo de carne. Siempre ten un 20% extra de reserva."
-      }
-    }
-  ]
-}
-</script>
 </head>
 <body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXH425KQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
 <div class="bandera"><i class="azul"></i><i class="blanco"></i><i class="rojo"></i></div>
 
 <header class="site-nav">
@@ -68,10 +39,18 @@
       <a href="index.html">Inicio</a>
       <a href="recetario.html">Recetas</a>
       <a href="guias.html">Guías</a>
-      <a href="calculadora.html" class="activo">Calculadora</a>
-      <a href="conversor.html">Conversor</a>
+      <a href="guia-conservacion.html">Conservación</a>
+      
+      <!-- Menú Herramientas: Calculadora activa -->
+      <details class="dropdown-tools" open>
+        <summary style="background:var(--crema-osc);color:var(--rojo);">Herramientas ▾</summary>
+        <div class="dropdown-menu">
+          <a href="calculadora.html" style="background:var(--crema-osc);color:var(--rojo);font-weight:700;">Calculadora</a>
+          <a href="conversor.html">Conversor</a>
+        </div>
+      </details>
+
       <a href="mis-recetas.html">Mis recetas</a>
-      <a href="sobre-mi.html">Sobre nosotros</a>
     </nav>
   </div>
 </header>
@@ -89,7 +68,6 @@
 <main class="legal-page">
   <div class="calc-container">
     
-    <!-- SELECTOR AMPLIADO CON CATEGORÍAS -->
     <div class="calc-group">
       <label for="ingrediente">¿Qué vas a cocinar?</label>
       <select id="ingrediente">
@@ -164,7 +142,6 @@
     </div>
   </div>
 
-  <!-- BLOQUE DINÁMICO DE RECETAS RECOMENDADAS -->
   <div class="calc-seo-content">
     <div class="calc-recetas-cruce" id="recetas-recomendadas">
       <h3>Recetas recomendadas para este ingrediente</h3>
@@ -173,7 +150,6 @@
       </div>
     </div>
 
-    <!-- TEXTOS SEO: RESPUESTAS DIRECTAS -->
     <h2 style="margin-top:3rem;">Respuestas rápidas a tus dudas</h2>
     
     <div class="faq-item">
@@ -220,6 +196,6 @@
 
 <script src="calculadora.js"></script>
 <script src="app.js"></script>
-<script src="lista-compras.js"></script> <!-- Lista de compras -->
+<script src="lista-compras.js"></script>
 </body>
 </html>

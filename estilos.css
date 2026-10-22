@@ -20,15 +20,30 @@
   --sombra-lg:0 12px 32px rgba(90,60,30,.14);
   --fuente-titulos:'Fraunces', Georgia, 'Playfair Display', serif;
   --fuente-texto:'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  
+  /* Nuevas variables para unificar contenedores */
+  --max-width: 1000px;
+  --pad-x: 1rem;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--crema);color:var(--tinta);font-family:var(--fuente-texto);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+body{background:var(--crema);color:var(--tinta);font-family:var(--fuente-texto);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
 
 .bandera{height:6px;display:flex;position:relative;overflow:hidden}
 .bandera i{flex:1}
 .bandera .azul{background:var(--azul)}
 .bandera .blanco{background:#fff}
 .bandera .rojo{background:var(--rojo)}
+
+/* ===== CONTENEDOR UNIFICADO ===== */
+/* Aplica a todas las secciones principales para alinear el borde izquierdo */
+.container-unified {
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--pad-x);
+  padding-right: var(--pad-x);
+  width: 100%;
+}
 
 /* ===== ICONOS GENÉRICOS ===== */
 .meta-icon{width:14px;height:14px;flex-shrink:0;display:inline-block;vertical-align:-2px}
@@ -44,7 +59,7 @@ body{background:var(--crema);color:var(--tinta);font-family:var(--fuente-texto);
 @media(max-width:640px){.hero{padding:3rem 1rem 3rem}}
 
 /* ===== RECETA DESTACADA ===== */
-.receta-destacada-section{max-width:1000px;margin:0 auto;padding:3rem 1.2rem 1rem}
+.receta-destacada-section{max-width: var(--max-width); margin:0 auto; padding:3rem var(--pad-x) 1rem;}
 .receta-destacada-eyebrow{font-size:.72rem;text-transform:uppercase;letter-spacing:.24em;color:var(--suave);font-weight:600;text-align:center;margin-bottom:1rem}
 .receta-destacada{position:relative;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);background:#fff;border:1px solid var(--borde);border-radius:var(--radio);box-shadow:var(--sombra-lg);overflow:hidden;text-decoration:none;color:var(--tinta);transition:transform .3s ease,box-shadow .3s ease}
 .receta-destacada:hover{transform:translateY(-4px);box-shadow:0 20px 48px rgba(90,60,30,.20)}
@@ -70,8 +85,8 @@ body{background:var(--crema);color:var(--tinta);font-family:var(--fuente-texto);
 }
 
 /* ===== CONTROLES ===== */
-.controles{position:sticky;top:0;z-index:10;background:rgba(253,248,240,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--borde);padding:1rem;box-shadow:0 2px 8px rgba(90,60,30,.03)}
-.controles .inner{max-width:980px;margin:0 auto;display:flex;gap:.7rem;flex-wrap:wrap;align-items:center}
+.controles{position:sticky;top:0;z-index:10;background:rgba(253,248,240,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--borde);padding:1rem 0;box-shadow:0 2px 8px rgba(90,60,30,.03)}
+.controles .inner{max-width: var(--max-width); margin:0 auto; padding:0 var(--pad-x); display:flex;gap:.7rem;flex-wrap:wrap;align-items:center;}
 .buscador-wrap{position:relative;flex:1 1 280px;display:flex;align-items:center}
 .buscador-wrap .lupa{position:absolute;left:1.1rem;width:19px;height:19px;color:#a89a8c;pointer-events:none;transition:color .2s,transform .2s}
 .buscador-wrap:focus-within .lupa{color:var(--rojo);transform:scale(1.1)}
@@ -87,7 +102,7 @@ body{background:var(--crema);color:var(--tinta);font-family:var(--fuente-texto);
 .filtro.activo{background:linear-gradient(135deg,var(--rojo) 0%,var(--rojo-osc) 100%);border-color:var(--rojo-osc);color:#fff;box-shadow:0 4px 12px rgba(176,58,46,.28)}
 
 /* ===== MAIN ===== */
-main{max-width:980px;margin:0 auto;padding:2.5rem 1rem 5rem}
+main{max-width: var(--max-width); margin:0 auto; padding:2.5rem var(--pad-x) 5rem;}
 .contador{font-size:.9rem;margin-bottom:1.8rem;min-height:2rem;display:flex;align-items:center;gap:.6rem;flex-wrap:wrap}
 .contador .chip{display:inline-flex;align-items:center;gap:.45rem;background:#fff;border:1px solid var(--borde);padding:.45rem 1rem;border-radius:99px;font-size:.83rem;color:var(--tinta);box-shadow:var(--sombra-sm)}
 .contador .chip strong{color:var(--rojo);font-weight:600}
@@ -191,7 +206,7 @@ footer .bandera{max-width:140px;margin:0 auto 1.2rem;border-radius:4px;overflow:
 .marca-texto{font-family:var(--fuente-titulos);font-size:1.5rem;font-weight:700;letter-spacing:-.5px}
 
 .hero-receta{padding:2rem 1.2rem 2.5rem;text-align:center;background:linear-gradient(180deg,#fefaf3 0%,var(--crema) 100%);border-bottom:1px solid var(--borde)}
-.hero-receta-inner{max-width:880px;margin:0 auto}
+.hero-receta-inner{max-width: var(--max-width); margin:0 auto; padding:0 var(--pad-x);}
 .breadcrumb{font-size:.85rem;color:var(--suave);margin-bottom:1rem;display:flex;justify-content:center;gap:.5rem;flex-wrap:wrap}
 .breadcrumb a{color:var(--rojo);text-decoration:none}
 .breadcrumb a:hover{text-decoration:underline}
@@ -199,9 +214,9 @@ footer .bandera{max-width:140px;margin:0 auto 1.2rem;border-radius:4px;overflow:
 .hero-receta h1{font-family:var(--fuente-titulos);font-size:clamp(1.8rem,5vw,2.8rem);color:var(--rojo-osc);letter-spacing:-.5px;line-height:1.15;margin-bottom:1rem;font-weight:700}
 .hero-receta .meta{justify-content:center;margin:0}
 
-.receta-page{max-width:900px;margin:0 auto;padding:2.5rem 1rem 4rem}
+.receta-page{max-width: var(--max-width); margin:0 auto; padding:2.5rem var(--pad-x) 4rem;}
 .receta-page .receta{display:block !important;padding:2rem}
-.receta-page .receta-img{width:100%;height:auto;max-height:450px;object-fit:cover;margin-bottom:2rem}
+.receta-page .receta-img{width:100%;height:auto;max-height:400px;object-fit:cover;margin-bottom:2rem}
 
 .controles-receta{display:flex;justify-content:center;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem}
 
@@ -282,7 +297,7 @@ footer .bandera{max-width:140px;margin:0 auto 1.2rem;border-radius:4px;overflow:
 .landing-intro h2{font-family:var(--fuente-titulos);font-size:clamp(1.6rem,4vw,2.2rem);color:var(--rojo-osc);letter-spacing:-.3px;margin-bottom:.7rem;line-height:1.2;font-weight:700}
 .landing-intro p{color:var(--suave);font-size:1.02rem;max-width:560px;margin:0 auto;font-style:italic}
 
-.categorias-grid{max-width:1000px;margin:0 auto;padding:0 1.2rem 1rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem}
+.categorias-grid{max-width: var(--max-width); margin:0 auto; padding:0 var(--pad-x) 1rem; display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem}
 
 .categoria-card{--cat-color:#b03a2e;position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--borde);border-radius:var(--radio);padding:2rem 1.8rem 1.7rem;text-decoration:none;color:var(--tinta);box-shadow:var(--sombra-md);overflow:hidden;transition:transform .3s ease,box-shadow .3s ease;min-height:220px}
 .categoria-card::before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,var(--cat-color) 0%,color-mix(in srgb,var(--cat-color) 60%,#fff) 100%)}
@@ -304,11 +319,11 @@ footer .bandera{max-width:140px;margin:0 auto 1.2rem;border-radius:4px;overflow:
 .categoria-desc{font-size:.9rem;color:var(--suave);line-height:1.5;flex:1;margin-bottom:1rem}
 .categoria-arrow{align-self:flex-end;font-size:1.1rem;color:var(--cat-color);font-weight:700;transition:transform .3s ease}
 
-.landing-todas{max-width:1000px;margin:1.8rem auto 0;padding:0 1.2rem 3rem;text-align:center}
+.landing-todas{max-width: var(--max-width); margin:1.8rem auto 0; padding:0 var(--pad-x) 3rem; text-align:center;}
 .landing-todas-btn{display:inline-flex;align-items:center;gap:.7rem;padding:1rem 2.2rem;background:linear-gradient(135deg,var(--rojo) 0%,var(--rojo-osc) 100%);color:#fff;text-decoration:none;border-radius:99px;font-weight:600;font-size:1rem;box-shadow:0 6px 20px rgba(176,58,46,.30);transition:transform .2s,box-shadow .2s}
 .landing-todas-btn:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(176,58,46,.40)}
 
-.landing-destacado{max-width:1000px;margin:2rem auto 3rem;padding:2rem 1.8rem;background:linear-gradient(135deg,#fdf3e3 0%,#fbeed7 100%);border-left:4px solid var(--dorado);border-radius:0 var(--radio) var(--radio) 0;text-align:center}
+.landing-destacado{max-width: var(--max-width); margin:2rem auto 3rem; padding:2rem 1.8rem; background:linear-gradient(135deg,#fdf3e3 0%,#fbeed7 100%);border-left:4px solid var(--dorado);border-radius:0 var(--radio) var(--radio) 0;text-align:center}
 .landing-destacado p{font-size:.98rem;color:var(--suave);font-style:italic;max-width:620px;margin:0 auto;line-height:1.7}
 .landing-destacado p strong{color:var(--rojo-osc);font-style:normal}
 
@@ -322,14 +337,34 @@ footer .bandera{max-width:140px;margin:0 auto 1.2rem;border-radius:4px;overflow:
 }
 
 /* =====================================================
-   SITE NAV (menú principal)
+   SITE NAV (menú principal) - UNIFICADO Y EN UNA FILA
    ===================================================== */
 .site-nav{position:relative;z-index:50;background:#fff;border-bottom:1px solid var(--borde);box-shadow:0 1px 3px rgba(90,60,30,.04)}
-.site-nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.65rem 1.2rem}
+.site-nav-inner{
+  max-width: var(--max-width); 
+  margin:0 auto; 
+  padding:.65rem var(--pad-x); 
+  display:flex; 
+  align-items:center; 
+  justify-content:space-between; 
+  flex-wrap:nowrap; /* Forzar una sola fila */
+  gap:1rem;
+}
 .site-nav-logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--rojo-osc);flex-shrink:0}
 .site-nav-logo .marca-logo{width:28px;flex-shrink:0}
 .site-nav-logo .marca-texto{font-family:var(--fuente-titulos);font-size:1.15rem;font-weight:700;letter-spacing:-.3px;white-space:nowrap}
-.site-nav-links{display:flex;gap:.25rem;flex-wrap:wrap;align-items:center}
+
+.site-nav-links{
+  display:flex;
+  gap:.25rem;
+  flex-wrap:nowrap; /* Forzar una sola fila */
+  align-items:center;
+  overflow-x:auto; /* Permitir scroll horizontal si no cabe */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.site-nav-links::-webkit-scrollbar { display: none; } /* Chrome, Safari y Opera */
+
 .site-nav-links a{color:var(--tinta);text-decoration:none;font-size:.9rem;font-weight:500;padding:.5rem .9rem;border-radius:99px;transition:background .2s,color .2s;white-space:nowrap}
 .site-nav-links a:hover{background:var(--crema-osc);color:var(--rojo)}
 .site-nav-links a.activo{background:var(--rojo);color:#fff}
@@ -343,12 +378,31 @@ footer .bandera{max-width:140px;margin:0 auto 1.2rem;border-radius:4px;overflow:
 .nav-search input:focus{border-color:var(--rojo);background:#fff;box-shadow:0 0 0 3px rgba(176,58,46,.10)}
 .nav-search input::placeholder{color:#b3a89e}
 
+/* MENÚ DESPLEGABLE HERRAMIENTAS */
+.dropdown-tools { position: relative; display: inline-block; }
+.dropdown-tools summary {
+  list-style: none; cursor: pointer; color: var(--tinta); font-size: .9rem; font-weight: 500;
+  padding: .5rem .9rem; border-radius: 99px; transition: background .2s, color .2s;
+  white-space: nowrap; display: flex; align-items: center; gap: 0.3rem;
+}
+.dropdown-tools summary::-webkit-details-marker { display: none; }
+.dropdown-tools summary:hover, .dropdown-tools[open] summary { background: var(--crema-osc); color: var(--rojo); }
+.dropdown-menu {
+  position: absolute; top: 100%; left: 0; background: #fff; border: 1px solid var(--borde);
+  border-radius: 12px; box-shadow: var(--sombra-md); min-width: 160px; padding: 0.5rem 0;
+  z-index: 100; display: flex; flex-direction: column;
+}
+.dropdown-menu a { padding: 0.6rem 1.2rem; border-radius: 0; font-size: 0.9rem; text-align: left; justify-content: flex-start;}
+.dropdown-menu a:hover { background: var(--crema-osc); }
+
 @media(max-width:768px){
-  .site-nav-inner{padding:.6rem 1rem;flex-wrap:wrap}
+  .site-nav-inner{padding:.6rem 1rem; }
   .site-nav-toggle{display:inline-flex;align-items:center;justify-content:center}
-  .site-nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;align-items:stretch;padding:.5rem;border-bottom:1px solid var(--borde);box-shadow:0 8px 24px rgba(90,60,30,.12)}
+  .site-nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;align-items:stretch;padding:.5rem;border-bottom:1px solid var(--borde);box-shadow:0 8px 24px rgba(90,60,30,.12); overflow-x: hidden;}
   .site-nav-links.abierto{display:flex}
   .site-nav-links a{padding:.8rem 1rem;text-align:center;border-radius:8px}
+  .dropdown-tools summary { padding: .8rem 1rem; text-align: center; justify-content: center; }
+  .dropdown-menu { position: static; box-shadow: none; border: none; padding: 0; background: var(--crema); }
   .nav-search{flex:1 1 100%;min-width:0;margin:0 0 .5rem}
   .nav-search input{padding:.75rem 1rem .75rem 2.3rem;font-size:.95rem}
   .nav-search-icon{left:1rem;width:16px;height:16px}
@@ -1201,8 +1255,8 @@ body.mc-bloqueado{overflow:hidden}
    ERRORES COMUNES Y TIPS UNIVERSALES
    ===================================================== */
 .errores-box {
-  background: #fff9f2;
-  border: 1px solid #f0d9b5;
+  background: #fff;
+  border: 1px solid var(--borde);
   border-left: 5px solid #d97706;
   border-radius: var(--radio);
   padding: 1.8rem;
@@ -1234,7 +1288,7 @@ body.mc-bloqueado{overflow:hidden}
 }
 
 .errores-lista li {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.5rem;
   font-size: 0.95rem;
   line-height: 1.6;
 }
@@ -1246,7 +1300,7 @@ body.mc-bloqueado{overflow:hidden}
 .errores-lista strong.error {
   color: #9a3412;
   display: block;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.4rem;
   font-size: 1rem;
 }
 
@@ -1268,7 +1322,7 @@ body.mc-bloqueado{overflow:hidden}
 .tips-universales {
   margin-top: 2rem;
   padding-top: 1.5rem;
-  border-top: 1px dashed #f0d9b5;
+  border-top: 1px dashed var(--borde);
 }
 
 .tips-universales h4 {
@@ -1306,8 +1360,8 @@ body.mc-bloqueado{overflow:hidden}
    CONSERVACIÓN Y RECALENTADO
    ===================================================== */
 .conservacion-box {
-  background: #f0f7fa;
-  border: 1px solid #bce3ed;
+  background: #fff;
+  border: 1px solid var(--borde);
   border-left: 5px solid #0284c7;
   border-radius: var(--radio);
   padding: 1.8rem;
@@ -1348,10 +1402,10 @@ body.mc-bloqueado{overflow:hidden}
 }
 
 .conservacion-item {
-  background: #fff;
+  background: var(--crema);
   padding: 1rem;
   border-radius: 8px;
-  border: 1px solid #d0e9f1;
+  border: 1px solid var(--borde);
   font-size: 0.9rem;
   line-height: 1.5;
 }
@@ -1500,7 +1554,8 @@ body.mc-bloqueado{overflow:hidden}
   .vacio-icon,
   .receta-destacada-section,
   .calc-container,
-  .calc-seo-content {
+  .calc-seo-content,
+  .dropdown-tools {
     display: none !important;
   }
 
