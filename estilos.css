@@ -1682,3 +1682,8 @@ body.mc-bloqueado{overflow:hidden}
 
   .receta + .receta { page-break-before: always; break-before: page; }
 }
+/* =====================================================
+   CATEGORÍA BEBIDAS
+   ===================================================== */
+.receta[data-cat="bebidas"]{--acento:#6a4c93}
+.categoria-card[data-cat="bebidas"]{--cat-color:#6a4c93}

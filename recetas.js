@@ -85,7 +85,7 @@ const RECETAS = [
     errores: [
       { error: 'Pasta de choclo aguada', solucion: 'El choclo suelta mucha agua al cocinarse. Cocina la pasta a fuego bajo hasta que espese y se despegue del fondo de la olla.' },
       { error: 'Falta de sabor en el pino', solucion: 'Sofríe bien la cebolla, condimenta con comino y ají de color, y deja que el pino repose para que se concentren los sabores.' },
-      { error: 'El pastel se hunde o queda crudo', solucion: 'No abras la puerta del horno durante los primeros 20 minutos. El cambio brusco de temperatura hace que el pastel se hunda.' }
+      { error: 'El pastel queda crudo en el centro', solucion: 'No abras la puerta del horno durante los primeros 20 minutos: el cambio brusco de temperatura corta la cocción. Si al pinchar el centro aún está líquido, tapa con papel aluminio y hornea 5-10 minutos más a 180 °C.' }
     ],
     conservacion: {
       nevera: 'Hasta 2 días. Cúbrelo con film para que no absorba olores.',
@@ -157,7 +157,7 @@ const RECETAS = [
       'Hierve papas y zapallo en agua con sal hasta que estén blandos. Reserva un poco del agua.',
       'Sofríe la cebolla en otra olla. Agrega la carne y condimenta.',
       'Incorpora el choclo o las arvejas y cocina 5 minutos.',
-      'Agrega las papas y el zapallo escurridos. Majan la mezcla con un tenedor.',
+      'Agrega las papas y el zapallo escurridos. Maja la mezcla con un tenedor.',
       'Sirve con un huevo frito encima.'
     ],
     dato: 'El nombre viene del quechua charquicán, por el charqui, carne seca y salada.',
@@ -214,7 +214,7 @@ const RECETAS = [
   /* ============ 6. HUMITAS ============ */
   {
     titulo: 'Humitas',
-    categoria: 'principales',
+    categoria: 'panes',
     tags: ['humita', 'choclo', 'horno', 'olla', 'plato principal', 'vegetariano'],
     imagen: 'img/Humitas.jpg',
     tiempo: '80 min',
@@ -316,7 +316,7 @@ const RECETAS = [
     dato: 'El secreto está en amasar con paciencia. Poco amasado da pan duro.',
     errores: [
       { error: 'Pan duro como piedra', solucion: 'El exceso de harina o un mal amasado hacen que el pan quede duro. No agregues toda la harina de golpe; la masa debe quedar suave. Amasa por al menos 10 minutos.' },
-      { error: 'Levadura muerta', solucion: 'Usar agua demasiado caliente (más de 40°C) mata la levadura. El agua debe estar tibia al tacto.' },
+      { error: 'El pan no sube', solucion: 'Los polvos de hornear pueden estar vencidos. Revisa la fecha antes de usarlos y guárdalos en un lugar seco y cerrado.' },
       { error: 'Horno seco', solucion: 'Coloca una fuente con agua caliente en el fondo del horno mientras horneas. El vapor mantiene la masa húmeda, permite que suba y evita que quede seca.' }
     ],
     conservacion: {
@@ -706,7 +706,7 @@ const RECETAS = [
     ],
     dato: 'Sirve como acompañamiento de carnes asadas, arroz o puré.',
     errores: [
-      { error: 'Ensalada aguada', solucion: 'Salar los tomates con mucha anticipación. Pélalos y sólalos justo antes de servir.' },
+      { error: 'Ensalada aguada', solucion: 'Salar los tomates con mucha anticipación. Pélalos y sálalos justo antes de servir.' },
       { error: 'Sabor muy fuerte a ajo', solucion: 'Picar el ajo en trozos grandes. Pícalo muy fino y aplástalo con el lado del cuchillo para que se integre.' }
     ],
     conservacion: {
@@ -1074,7 +1074,7 @@ const RECETAS = [
     ],
     pasos: [
       'Mezcla la mostaza, el caldo disuelto, el vinagre, el agua y el aceite.',
-      'Embadurna el pollo por dentro y por fuera. Marina al menos 3 horas (mejor toda la noche).',
+      'Embadurna el pollo por dentro y por fuera. Marina al menos 3 horas (mejor toda la noche) siempre en el refrigerador, nunca a temperatura ambiente.',
       'Precalienta el horno a 200 °C.',
       'Hornea 1 hora a 1 hora 15 min, bañándolo con su jugo cada 20 min.',
       'Deja reposar 10 min antes de cortar.'
@@ -1365,7 +1365,7 @@ const RECETAS = [
     }
   },
 
-  /* ============ 36. POROTOS CON RIENDAS ============ */
+   /* ============ 36. POROTOS CON RIENDAS ============ */
   {
     titulo: 'Porotos con riendas',
     categoria: 'principales',
@@ -1396,7 +1396,7 @@ const RECETAS = [
       'Agrega los tallarines (puedes partirlos por la mitad para que sean más fáciles de comer) y cocina por 8 a 10 minutos más, hasta que la pasta esté al dente y el caldo haya espesado.',
       'Sirve bien caliente en platos hondos, con un chorrito de aceite crudo por encima si te gusta.'
     ],
-    dato: 'El nombre "riendas" nace en el campo chileno: antiguamente se usaban tiras de cuero de cerdo que, al cocinarse, parecían las riendas de los caballos. Con el tiempo, la ciudad las reemplazó por tallarines, pero el nombre se mantuvo.',
+    dato: 'Según la tradición popular, el nombre "riendas" viene del campo chileno: antiguamente se usaban tiras de cuero de cerdo que, al cocinarse, parecían las riendas de los caballos. Con el tiempo, la ciudad las reemplazó por tallarines, pero el nombre se mantuvo.',
     errores: [
       { error: 'Porotos duros', solucion: 'Agregar sal o ingredientes ácidos al principio. Cocina los porotos en agua sola y agrega la sal al final. (Tip extra: el bicarbonato ablanda, pero cambia el sabor).' },
       { error: 'Pasta pasada', solucion: 'Agregar los tallarines y dejarlos hervir mucho tiempo. Agrégalos en los últimos 8-10 minutos de cocción.' }
@@ -1472,7 +1472,7 @@ const RECETAS = [
       'Salsa de tomate o ketchup (opcional)'
     ],
     pasos: [
-      'FrÍe las papas en abundante aceite caliente hasta que estén doradas y crujientes. Escurre sobre papel absorbente y reserva.',
+      'Fríe las papas en abundante aceite caliente hasta que estén doradas y crujientes. Escurre sobre papel absorbente y reserva.',
       'En una sartén grande, sofríe la cebolla en un poco de aceite hasta que esté transparente y ligeramente dorada. Retira y reserva.',
       'En la misma sartén, sube el fuego y saltea la carne en tiras con sal y pimienta hasta que esté cocida y dorada.',
       'Para montar, coloca las papas fritas en la base de una fuente grande o sartén. Encima distribuye la carne y luego la cebolla sofrita.',
@@ -1511,13 +1511,13 @@ const RECETAS = [
     ],
     pasos: [
       'Sazona los bistecs con sal, pimienta y ajo. Déjalos reposar mientras preparas el resto.',
-      'FrÍe las papas en bastones en abundante aceite caliente hasta que estén doradas. Escurre y reserva.',
+      'Fríe las papas en bastones en abundante aceite caliente hasta que estén doradas. Escurre y reserva.',
       'En una sartén, sofríe la cebolla en un poco de aceite hasta que esté caramelizada. Retira y reserva.',
       'En la misma sartén, sube el fuego y cocina los bistecs a la plancha o sartén por 2-3 minutos por lado, o hasta el punto deseado.',
       'Fríe los huevos (uno por persona).',
       'Para servir, coloca el bistec en el plato, cúbrelo con la cebolla y acompaña con las papas fritas y el huevo frito encima.'
     ],
-    dato: 'El "a lo pobre" no se refiere a la falta de dinero, sino a la abundancia de acompañamientos (papas, cebolla y huevo) que hacen que el plato parezca "de pobres" por lo sencillo de sus ingredientes.',
+    dato: 'Existen varias versiones sobre el origen del nombre "a lo pobre". La más difundida es que la carne se sirve con una guarnición sencilla y abundante (papas, cebolla y huevo) que en otros tiempos era considerada "pobre" frente a la carne.',
     errores: [
       { error: 'Carne seca y dura', solucion: 'Poner la carne directo del refrigerador a la sartén. Saca los bistecs 20 minutos antes para que estén a temperatura ambiente.' },
       { error: 'Papas y carne frías', solucion: 'No coordinar los tiempos. Fríe las papas primero y mantenlas calientes en el horno, luego cocina la carne y por último los huevos.' }
@@ -1547,7 +1547,7 @@ const RECETAS = [
     ],
     pasos: [
       'Pela y corta las papas en bastones. Lava bien para quitar el almidón y sécalas.',
-      'FrÍe las papas en abundante aceite caliente hasta que estén doradas y crujientes. Escurre y sala al gusto.',
+      'Fríe las papas en abundante aceite caliente hasta que estén doradas y crujientes. Escurre y sala al gusto.',
       'Corta las salchichas en rodajas o en trozos y fríelas en una sartén hasta que estén doradas.',
       'Mezcla las papas fritas con las salchichas o sirve las salchichas encima de las papas.',
       'Acompaña con tus salsas favoritas.'
@@ -1631,7 +1631,7 @@ const RECETAS = [
       'Cubre generosamente con queso parmesano rallado y un toque de pimienta negra.',
       'Hornea por 5 a 8 minutos, hasta que el queso esté derretido y ligeramente dorado. Sirve inmediatamente.'
     ],
-    dato: 'Las machas son un marisco endémico de las costas chilenas. Su sabor es dulce y salino, por lo que el queso parmesano realza su sabor sin opacarlo.',
+    dato: 'La macha es un marisco típico de las costas chileno-peruanas. Su sabor es dulce y salino, por lo que el queso parmesano realza su sabor sin opacarlo.',
     errores: [
       { error: 'Textura chiclosa (como chicle)', solucion: 'No aplastar la lengua de la macha antes de cocinarla. Aplánala suavemente con el dorso de un cuchillo antes de ponerla en la fuente.' },
       { error: 'Sabor a arena', solucion: 'No limpiar bien las machas. Lávalas bajo el chorro de agua fría y golpéalas suavemente para que boten la arena.' },
@@ -1999,47 +1999,7 @@ const RECETAS = [
     }
   },
 
-  /* ============ 52. SOPAIPILLAS PASADAS (2da versión) ============ */
-  {
-    titulo: 'Sopaipillas pasadas',
-    categoria: 'panes',
-    tags: ['sopaipilla', 'dulce', 'chancaca', 'invierno', 'merienda', 'once'],
-    imagen: 'img/Sopaipillas-pasadas.jpg',
-    tiempo: '45 min',
-    porciones: '20 unidades',
-    dificultad: 'fácil',
-    tecnica: 'Fritura',
-    ingredientes: [
-      'Masa: 500 g de harina',
-      'Masa: 300 g de zapallo cocido y molido',
-      'Masa: 100 g de manteca derretida',
-      'Masa: 1 cdta de sal y 1 cdta de polvos de hornear',
-      'Masa: Aceite para freír',
-      'Chancaca: 250 g de chancaca',
-      'Chancaca: ½ taza de agua',
-      'Chancaca: 1 rama de canela',
-      'Chancaca: Cáscara de 1 naranja',
-      'Chancaca: 2 clavos de olor'
-    ],
-    pasos: [
-      'Mezcla el zapallo, la harina, la sal y los polvos de hornear. Agrega la manteca y amasa hasta obtener una masa suave.',
-      'Reposa 20 min, estira a 5 mm y corta discos de 8 cm. Pincha con un tenedor y fríe en aceite caliente hasta dorar.',
-      'Aparte, hierve la chancaca con el agua, la canela, la cáscara de naranja y los clavos hasta formar un almíbar.',
-      'Baña las sopaipillas recién fritas con el almíbar caliente y sirve.'
-    ],
-    dato: 'Se sirven tibias, cuando el almíbar todavía está brillante y pegajoso. Es el dulce perfecto para un día de lluvia.',
-    errores: [
-      { error: 'Chancaca quemada', solucion: 'Hervir la chancaca a fuego alto sin cuidado. Derrítela a fuego bajo para que no amargue.' },
-      { error: 'Sopaipillas frías al bañar', solucion: 'Bañarlas cuando ya están frías. El almíbar debe estar caliente y las sopaipillas recién fritas.' }
-    ],
-    conservacion: {
-      nevera: 'Hasta 2 días en recipiente hermético.',
-      congelador: 'Hasta 2 meses sin el almíbar. Congela las sopaipillas fritas y luego prepara el almíbar al servir.',
-      recalentar: 'En horno o air fryer por 5 minutos. Luego bañar con almíbar caliente.'
-    }
-  },
-
-  /* ============ 53. PRIETAS ============ */
+  /* ============ 52. PRIETAS ============ */
   {
     titulo: 'Prietas',
     categoria: 'principales',
@@ -2078,7 +2038,7 @@ const RECETAS = [
     }
   },
 
-  /* ============ 54. CALZONES ROTOS ============ */
+  /* ============ 53. CALZONES ROTOS ============ */
   {
     titulo: 'Calzones rotos',
     categoria: 'dulces',
@@ -2120,7 +2080,7 @@ const RECETAS = [
     }
   },
 
-  /* ============ 55. BROWNIES CON CACAO ============ */
+  /* ============ 54. BROWNIES CON CACAO ============ */
   {
     titulo: 'Brownies con cacao',
     categoria: 'dulces',
@@ -2159,6 +2119,546 @@ const RECETAS = [
       nevera: 'Hasta 4 días en recipiente hermético.',
       congelador: 'Hasta 3 meses, cortados en cuadrados y bien envueltos.',
       recalentar: 'Microondas por 15 segundos para que recuperen la textura fudgy.'
+    }
+  },
+
+  /* ============ 55. TERREMOTO ============ */
+  {
+    titulo: 'Terremoto',
+    categoria: 'bebidas',
+    tags: ['bebida', 'alcohol', 'pipeño', 'fiestas patrias', 'verano', 'tradicional'],
+    imagen: '',
+    tiempo: '5 min',
+    porciones: '1 vaso',
+    dificultad: 'muy fácil',
+    tecnica: 'Sin cocción',
+    ingredientes: [
+      'Vino pipeño (o vino blanco dulce joven), bien helado',
+      '2 bolas de helado de piña',
+      '1 chorrito de granadina (para dar color)',
+      'Opcional: 1 chorrito de fernet (versión "con afán")'
+    ],
+    pasos: [
+      'Saca el pipeño y el helado de piña del frío justo antes de servir; ambos deben estar muy helados.',
+      'Pon 2 bolas de helado de piña en un vaso alto.',
+      'Vierte el pipeño hasta casi llenar el vaso, dejando espacio para la espuma.',
+      'Añade un chorrito de granadina para darle el color rosado característico.',
+      'Sirve inmediatamente con cuchara larga o bombilla. Se toma rápido, antes de que el helado se derrita.'
+    ],
+    dato: 'Según la tradición, el nombre nació en Santiago en la década de 1980: la mezcla de pipeño, helado de piña y granadina era tan fuerte que "movía la tierra". El pipeño es un vino blanco joven y dulce, típico del sur de Chile. Existen otras versiones sobre su origen exacto.',
+    errores: [
+      { error: 'Se siente "aguado" o sin fuerza', solucion: 'Usar pipeño de baja graduación o demasiado helado. Sirve el helado al final, con el pipeño ya frío, para que no se derrita rápido.' },
+      { error: 'Demasiado dulce o empalagoso', solucion: 'Exagerar con la granadina o el helado. Con 2 bolas y un chorrito de granadina basta. El pipeño debe sentirse.' },
+      { error: 'Se sirve tibio', solucion: 'No helar el pipeño con anticipación. Deja la botella en el congelador 20 min antes de servir (sin llegar a congelarse).' }
+    ],
+    conservacion: {
+      nevera: 'Se consume al momento. El terremoto no se guarda.',
+      congelador: 'No aplica.',
+      recalentar: 'No aplica. Siempre se sirve helado.'
+    }
+  },
+
+  /* ============ 56. TERREMOTO INFANTIL ============ */
+  {
+    titulo: 'Terremoto infantil',
+    categoria: 'bebidas',
+    tags: ['bebida', 'sin alcohol', 'niños', 'fiestas patrias', 'verano', 'tradicional'],
+    imagen: '',
+    tiempo: '5 min',
+    porciones: '1 vaso',
+    dificultad: 'muy fácil',
+    tecnica: 'Sin cocción',
+    ingredientes: [
+      'Bebida blanca (Sprite, 7Up o Canada Dry), bien helada',
+      '2 bolas de helado de piña',
+      '1 chorrito de granadina'
+    ],
+    pasos: [
+      'Pon 2 bolas de helado de piña en un vaso alto.',
+      'Vierte la bebida blanca bien helada hasta casi llenar el vaso.',
+      'Añade un chorrito de granadina para el color rosado.',
+      'Sirve inmediatamente con cuchara o bombilla.'
+    ],
+    dato: 'Es la misma fiesta que el terremoto, pero sin pipeño. Ideal para que los niños también tengan su "trago" en Fiestas Patrias. El nombre puede ser "terremoto sin", "temblorcito" o simplemente "terremoto infantil".',
+    errores: [
+      { error: 'Pierde el color rosado', solucion: 'No agregar la granadina. Es la que da el color característico. Un chorrito pequeño basta.' },
+      { error: 'El helado se derrite muy rápido', solucion: 'No enfriar bien el vaso. Guarda los vasos en el congelador 10 minutos antes de servir.' }
+    ],
+    conservacion: {
+      nevera: 'Se consume al momento.',
+      congelador: 'No aplica.',
+      recalentar: 'No aplica. Siempre se sirve helado.'
+    }
+  },
+
+  /* ============ 57. COLA DE MONO ============ */
+  {
+    titulo: 'Cola de mono',
+    categoria: 'bebidas',
+    tags: ['bebida', 'alcohol', 'café', 'navidad', 'invierno', 'tradicional'],
+    imagen: '',
+    tiempo: '20 min + enfriado',
+    porciones: '6 a 8 vasos',
+    dificultad: 'fácil',
+    tecnica: 'Olla',
+    ingredientes: [
+      '1 litro de leche entera',
+      '3 cucharadas de café instantáneo (o 1 taza de café pasado fuerte)',
+      '1 rama de canela',
+      '3 clavos de olor',
+      '½ taza de azúcar (ajustar al gusto)',
+      '1 cucharadita de esencia de vainilla',
+      '½ taza de aguardiente (o pisco)',
+      'Ralladura de ½ naranja (opcional)'
+    ],
+    pasos: [
+      'En una olla, calienta la leche con la canela, los clavos de olor y la ralladura de naranja. No dejes que hierva.',
+      'Disuelve el café instantáneo en un poco de leche caliente aparte y luego viértelo a la olla.',
+      'Agrega el azúcar y revuelve hasta disolver. Prueba y ajusta el dulzor.',
+      'Retira del fuego, añade la vainilla y deja enfriar por completo.',
+      'Cuando esté tibio, agrega el aguardiente. Mezcla bien.',
+      'Refrigera por al menos 3 horas antes de servir. Sirve bien frío, con hielo si prefieres, y una pizca de canela molida encima.'
+    ],
+    dato: 'Su nombre nace de la broma: "Cola de Mono" era el apodo de Pedro Montt, presidente de Chile a principios del siglo XX, porque usaba un traje negro y caminaba muy recto. La bebida se servía en su casa y quedó con su apodo.',
+    errores: [
+      { error: 'Sabor a café amargo o quemado', solucion: 'Usar café ya hervido o dejar que la leche hierva con el café. Calienta sin llegar a ebullición y usa café instantáneo de buena calidad.' },
+      { error: 'Se corta la leche', solucion: 'Hervir la leche o agregar el aguardiente en caliente. Deja enfriar la leche antes de añadir el alcohol.' },
+      { error: 'Sabe muy fuerte a alcohol', solucion: 'Agregar el aguardiente en caliente. Añádelo cuando la mezcla esté tibia y ajusta la cantidad al gusto.' }
+    ],
+    conservacion: {
+      nevera: 'Hasta 5 días en botella de vidrio tapada. Agítala antes de servir.',
+      congelador: 'No recomendado, la leche se separa.',
+      recalentar: 'Se consume frío o tibio. Si la quieres tibia, calienta suavemente sin hervir.'
+    }
+  },
+
+  /* ============ 58. COLA DE MONO INFANTIL ============ */
+  {
+    titulo: 'Cola de mono infantil',
+    categoria: 'bebidas',
+    tags: ['bebida', 'sin alcohol', 'niños', 'café', 'navidad', 'invierno'],
+    imagen: '',
+    tiempo: '20 min + enfriado',
+    porciones: '6 a 8 vasos',
+    dificultad: 'fácil',
+    tecnica: 'Olla',
+    ingredientes: [
+      '1 litro de leche entera',
+      '2 cucharadas de café instantáneo descafeinado',
+      '1 rama de canela',
+      '2 clavos de olor',
+      '½ taza de azúcar (ajustar al gusto)',
+      '1 cucharadita de esencia de vainilla',
+      '1 cucharadita de esencia de ron sin alcohol (opcional, para dar aroma)',
+      'Ralladura de ½ naranja (opcional)'
+    ],
+    pasos: [
+      'En una olla, calienta la leche con la canela, los clavos y la ralladura de naranja. No dejes que hierva.',
+      'Disuelve el café descafeinado en un poco de leche caliente aparte y viértelo a la olla.',
+      'Agrega el azúcar y revuelve hasta disolver.',
+      'Retira del fuego, añade la vainilla y la esencia de ron si usas. Deja enfriar.',
+      'Refrigera por al menos 3 horas. Sirve bien frío con una pizca de canela molida encima.'
+    ],
+    dato: 'La versión sin alcohol del clásico navideño. El café descafeinado y la esencia de ron (que no contiene alcohol, solo el aroma) permiten que los niños también disfruten de la tradición.',
+    errores: [
+      { error: 'Sabe muy aguada o sin gracia', solucion: 'Usar poca leche o no dejar infusionar las especias. Deja reposar la leche con las especias por al menos 10 minutos antes de colar.' },
+      { error: 'Demasiado café', solucion: 'Exagerar con el café instantáneo. Con 2 cucharadas es suficiente; el café descafeinado no debe dominar sobre la leche y las especias.' }
+    ],
+    conservacion: {
+      nevera: 'Hasta 5 días en botella de vidrio tapada. Agítala antes de servir.',
+      congelador: 'No recomendado, la leche se separa.',
+      recalentar: 'Se consume fría o tibia. Si la quieres tibia, calienta suavemente sin hervir.'
+    }
+  },
+
+  /* ============ 59. MELVIN (MELÓN CON VINO) ============ */
+  {
+    titulo: 'Melvin (melón con vino)',
+    categoria: 'bebidas',
+    tags: ['bebida', 'alcohol', 'melón', 'verano', 'tradicional'],
+    imagen: '',
+    tiempo: '20 min + maceración',
+    porciones: '4 a 6 personas',
+    dificultad: 'fácil',
+    tecnica: 'Sin cocción',
+    ingredientes: [
+      '1 melón tuna (o calameño) grande, bien maduro',
+      '1 botella de vino blanco (Chardonnay, Sauvignon Blanc o pipeño), bien helado',
+      '3 cucharadas de azúcar (ajustar al dulzor del melón)',
+      'Hielo',
+      'Opcional: hojas de menta fresca, jengibre rallado'
+    ],
+    pasos: [
+      'Corta el melón por la mitad a lo largo. Retira las semillas con una cuchara.',
+      'Con una cuchara, ahueca ligeramente la pulpa para hacer espacio para el vino.',
+      'Espolvorea el azúcar dentro de las mitades y deja reposar 15 minutos para que el melón suelte su jugo.',
+      'Rellena con el vino blanco bien helado. Añade hielo y, si quieres, menta o jengibre.',
+      'Sirve con cuchara y popote o bombilla. Se come el melón y se bebe el vino.'
+    ],
+    dato: 'El Melvin se popularizó en bares de Santiago en la década de 1980. Según la tradición, su nombre remite a un personaje bohemio de la época, aunque la historia exacta no está del todo documentada. El melón tuna es el que da el mejor sabor: carnoso, dulce y aromático.',
+    errores: [
+      { error: 'Sabe muy alcohólico o fuerte', solucion: 'Usar vino muy fuerte o no azucarar el melón. Usa un vino blanco joven y dulce, y deja macerar el melón con azúcar antes de agregar el vino.' },
+      { error: 'El melón queda insípido', solucion: 'Usar un melón poco maduro. Elige un melón tuna que huela dulce y ceda ligeramente al presionar la base.' },
+      { error: 'Se derrite todo muy rápido', solucion: 'No enfriar el melón y el vino con anticipación. Deja el melón en el refrigerador 2 horas antes de servir.' }
+    ],
+    conservacion: {
+      nevera: 'Hasta 2 días en recipiente cerrado. El melón se pone blando.',
+      congelador: 'No recomendado, el melón pierde textura.',
+      recalentar: 'Se consume bien frío.'
+    }
+  },
+
+  /* ============ 60. MELÓN CON JUGO (INFANTIL) ============ */
+  {
+    titulo: 'Melón con jugo (versión infantil)',
+    categoria: 'bebidas',
+    tags: ['bebida', 'sin alcohol', 'niños', 'melón', 'verano', 'fruta'],
+    imagen: '',
+    tiempo: '15 min + maceración',
+    porciones: '4 a 6 personas',
+    dificultad: 'muy fácil',
+    tecnica: 'Sin cocción',
+    ingredientes: [
+      '1 melón tuna (o calameño) grande, bien maduro',
+      '2 tazas de jugo de uva blanco o bebida blanca, bien helado',
+      '2 cucharadas de azúcar (opcional, según el dulzor del melón)',
+      'Hielo',
+      'Opcional: hojas de menta fresca'
+    ],
+    pasos: [
+      'Corta el melón por la mitad y retira las semillas.',
+      'Ahueca ligeramente la pulpa con una cuchara.',
+      'Espolvorea el azúcar dentro de las mitades y deja reposar 10 minutos.',
+      'Rellena con el jugo de uva o bebida blanca bien helada. Añade hielo y menta si usas.',
+      'Sirve con cuchara. Se come el melón y se bebe el jugo.'
+    ],
+    dato: 'La versión sin alcohol del Melvin. También se conoce como "melón dulce" o "melón para niños". Es perfecta para las tardes de verano y para que los más chicos también tengan su trago de temporada.',
+    errores: [
+      { error: 'Queda muy ácido o sin gracia', solucion: 'Usar jugo de uva muy ácido o poca azúcar. Prefiere jugo de uva blanco (dulce) y ajusta el azúcar al melón.' },
+      { error: 'El melón no suelta jugo', solucion: 'No espolvorear azúcar. El azúcar hace que el melón suelte su jugo y se mezcle con el líquido.' }
+    ],
+    conservacion: {
+      nevera: 'Hasta 2 días en recipiente cerrado.',
+      congelador: 'No recomendado, el melón pierde textura.',
+      recalentar: 'Se consume bien frío.'
+    }
+  },
+
+  /* ============ 61. NAVEGADO ============ */
+  {
+    titulo: 'Navegado',
+    categoria: 'bebidas',
+    tags: ['bebida', 'alcohol', 'vino', 'invierno', 'caliente', 'tradicional'],
+    imagen: '',
+    tiempo: '15 min',
+    porciones: '4 vasos',
+    dificultad: 'muy fácil',
+    tecnica: 'Olla',
+    ingredientes: [
+      '1 botella de vino tinto (Cabernet Sauvignon, Merlot o vino de la zona), de buena calidad',
+      '2 naranjas en rodajas (con cáscara bien lavada)',
+      '1 rama de canela',
+      '3 clavos de olor',
+      '3 cucharadas de azúcar (ajustar al gusto)',
+      'Opcional: 1 chorrito de pisco o aguardiente'
+    ],
+    pasos: [
+      'En una olla, pon el vino tinto con las rodajas de naranja, la canela y los clavos de olor.',
+      'Calienta a fuego muy bajo. No dejes que hierva: el alcohol se evapora y el vino se amarga.',
+      'Cuando esté caliente, añade el azúcar y revuelve hasta disolver.',
+      'Prueba y ajusta el dulzor y las especias. Si quieres, añade un chorrito de pisco.',
+      'Cuela si prefieres y sirve caliente en vasos o tazas. Decora con una rodaja de naranja.'
+    ],
+    dato: 'El navegado es la bebida de invierno chilena por excelencia, típica de las tardes frías y lluviosas. Se llama así porque "navega" entre el vino y las especias. En el sur se le agrega a veces un chorrito de aguardiente para "espantar el frío".',
+    errores: [
+      { error: 'Sabe a alcohol evaporado o amargo', solucion: 'Hervir el vino. Calienta a fuego muy bajo y retira antes de que hierva. El vino debe estar caliente, no hirviendo.' },
+      { error: 'Demasiado dulce o especiado', solucion: 'Exagerar con el azúcar, la canela o los clavos. Empieza con menos y ajusta al gusto. Las especias deben sentirse, no dominar.' },
+      { error: 'Sabe a vino barato', solucion: 'Usar vino de mala calidad. Usa un vino que te gustaría tomar solo; si no te gusta, tampoco sabrá bien caliente.' }
+    ],
+    conservacion: {
+      nevera: 'Hasta 2 días en botella cerrada. Recalienta suavemente antes de servir.',
+      congelador: 'No recomendado.',
+      recalentar: 'A fuego muy bajo, sin hervir, hasta que esté caliente.'
+    }
+  },
+
+  /* ============ 62. NAVEGADO INFANTIL ============ */
+  {
+    titulo: 'Navegado infantil',
+    categoria: 'bebidas',
+    tags: ['bebida', 'sin alcohol', 'niños', 'invierno', 'caliente', 'jugo'],
+    imagen: '',
+    tiempo: '15 min',
+    porciones: '4 tazas',
+    dificultad: 'muy fácil',
+    tecnica: 'Olla',
+    ingredientes: [
+      '1 litro de jugo de uva (blanco o tinto, sin azúcar añadida)',
+      '2 naranjas en rodajas (con cáscara bien lavada)',
+      '1 rama de canela',
+      '3 clavos de olor',
+      '2 cucharadas de azúcar (opcional, ajustar al dulzor del jugo)',
+      'Opcional: 1 cucharadita de esencia de ron sin alcohol'
+    ],
+    pasos: [
+      'En una olla, pon el jugo de uva con las rodajas de naranja, la canela y los clavos de olor.',
+      'Calienta a fuego bajo, sin dejar que hierva.',
+      'Cuando esté caliente, añade el azúcar si es necesario y revuelve hasta disolver.',
+      'Prueba y ajusta. Si quieres, añade la esencia de ron sin alcohol para dar aroma.',
+      'Cuela si prefieres y sirve caliente en tazas. Decora con una rodaja de naranja.'
+    ],
+    dato: 'La versión sin alcohol del navegado. El jugo de uva caliente con especias es una bebida reconfortante para los niños en invierno, y les permite participar de la tradición familiar sin alcohol.',
+    errores: [
+      { error: 'Sabe muy ácido o sin gracia', solucion: 'Usar jugo de uva muy ácido o no añadir azúcar. Prefiere jugo de uva natural y ajusta el azúcar al gusto.' },
+      { error: 'Las especias dominan demasiado', solucion: 'Exagerar con la canela o los clavos. Usa una rama de canela y 3 clavos; si quedan muy fuertes, retíralos antes de servir.' }
+    ],
+    conservacion: {
+      nevera: 'Hasta 2 días en botella cerrada. Recalienta suavemente antes de servir.',
+      congelador: 'No recomendado.',
+      recalentar: 'A fuego bajo, sin hervir, hasta que esté caliente.'
+    }
+  },
+
+  /* ============ 63. PAN DE PASCUA ============ */
+  {
+    titulo: 'Pan de Pascua',
+    categoria: 'dulces',
+    tags: ['navidad', 'dulce', 'horno', 'frutas', 'tradicional', 'pan'],
+    imagen: '',
+    tiempo: '1 h 30 min + reposo',
+    porciones: '1 molde grande (12 porciones)',
+    dificultad: 'media',
+    tecnica: 'Horno',
+    ingredientes: [
+      '500 g de harina sin polvos de hornear',
+      '200 g de mantequilla a temperatura ambiente',
+      '200 g de azúcar',
+      '4 huevos',
+      '1 cucharadita de polvos de hornear',
+      '250 g de frutas confitadas picadas (naranja, limón, cereza)',
+      '150 g de pasas remojadas en ron o pisco',
+      '100 g de nueces picadas',
+      '1 cucharadita de canela molida',
+      '½ cucharadita de clavo de olor molido',
+      '½ cucharadita de jengibre molido',
+      'Ralladura de 1 naranja y 1 limón',
+      '1 cucharadita de esencia de vainilla',
+      '½ taza de leche si es necesario',
+      'Azúcar flor para decorar'
+    ],
+    pasos: [
+      'Remoja las pasas en ron o pisco al menos 2 horas antes. Escurre y reserva.',
+      'Bate la mantequilla con el azúcar hasta obtener una crema. Agrega los huevos uno a uno.',
+      'Añade la vainilla, las ralladuras de naranja y limón, y las especias.',
+      'Incorpora la harina cernida con los polvos de hornear, mezclando suavemente.',
+      'Agrega las frutas confitadas, las pasas y las nueces. Si la masa está muy seca, añade leche cucharada a cucharada.',
+      'Vierte la mezcla en un molde engrasado y enharinado. Hornea a 170 °C por 50-60 minutos.',
+      'Deja enfriar, desmolda y espolvorea con azúcar flor antes de servir.'
+    ],
+    dato: 'El Pan de Pascua llega a Chile con la tradición alemana. Antiguamente se horneaba en grandes cantidades y se guardaba hasta por semanas, porque el alcohol y las frutas confitadas lo conservaban. Es el rey de la mesa navideña.',
+    errores: [
+      { error: 'Queda seco como piedra', solucion: 'Hornearlo demasiado o no remojar las pasas. Hornea con un recipiente de agua en el horno para generar vapor, y no excedas los 60 minutos.' },
+      { error: 'Las frutas se van al fondo', solucion: 'No enharinar las frutas. Pásalas por un poco de harina antes de incorporarlas para que se distribuyan parejo.' },
+      { error: 'No sube o queda crudo en el centro', solucion: 'Horno muy caliente o molde muy hondo. Hornea a 170°C (no más) y usa un molde de no más de 20 cm de alto.' }
+    ],
+    conservacion: {
+      nevera: 'Hasta 2 semanas envuelto en papel mantequilla y aluminio en un lugar fresco.',
+      congelador: 'Hasta 3 meses, bien envuelto.',
+      recalentar: 'A temperatura ambiente. Si lo quieres tibio, horno a 150°C por 10 minutos.'
+    }
+  },
+
+  /* ============ 64. CAMARONES AL PIL PIL ============ */
+  {
+    titulo: 'Camarones al Pil Pil',
+    categoria: 'principales',
+    tags: ['marisco', 'camarones', 'sarten', 'ajo', 'plato principal'],
+    imagen: '',
+    tiempo: '25 min',
+    porciones: '4 personas (como entrada o plato principal)',
+    dificultad: 'fácil',
+    tecnica: 'Sartén',
+    ingredientes: [
+      '500 g de camarones (frescos o congelados, pelados)',
+      '6 dientes de ajo laminados',
+      '½ taza de aceite de oliva',
+      '1 ají verde o merkén al gusto',
+      '½ taza de vino blanco',
+      '1 cucharada de perejil fresco picado',
+      'Sal y pimienta',
+      'Pan amasado o marraqueta para acompañar'
+    ],
+    pasos: [
+      'Calienta el aceite de oliva en una sartén grande a fuego medio.',
+      'Agrega los ajos laminados y sofríe hasta que estén dorados (no quemados). Retira y reserva.',
+      'Sube el fuego, agrega los camarones y saltéalos por 2-3 minutos hasta que cambien de color.',
+      'Vierte el vino blanco y deja evaporar el alcohol por 1-2 minutos.',
+      'Agrega el ají o merkén, sal y pimienta. Revuelve.',
+      'Devuelve los ajos a la sartén, añade el perejil y sirve inmediatamente con pan.'
+    ],
+    dato: 'El "Pil Pil" es una técnica de origen vasco que consiste en emulsionar el aceite con el jugo de los camarones moviendo la sartén en círculos. Cuanto más muevas, más espesa queda la salsa. En Chile se sirve con pan amasado para "limpiar" el plato.',
+    errores: [
+      { error: 'Camarones duros o gomosos', solucion: 'Cocinarlos por demasiado tiempo. Los camarones están listos en 2-3 minutos; en cuanto cambian de color, retíralos del fuego.' },
+      { error: 'Ajos quemados y amargos', solucion: 'Sofreírlos a fuego muy alto. Dora los ajos a fuego medio y retíralos antes de que se quemen. Vuelven al final.' },
+      { error: 'Salsa aguada', solucion: 'No emulsionar bien el aceite. Mueve la sartén en círculos mientras cocinas, para que el aceite se mezcle con el jugo de los camarones.' }
+    ],
+    conservacion: {
+      nevera: 'Hasta 2 días en recipiente hermético.',
+      congelador: 'No recomendado, los camarones pierden textura.',
+      recalentar: 'A fuego bajo por 3-5 minutos, moviendo suavemente para no romper la emulsión.'
+    }
+  },
+
+  /* ============ 65. LECHE NEVADA ============ */
+  {
+    titulo: 'Leche nevada',
+    categoria: 'dulces',
+    tags: ['postre', 'dulce', 'leche', 'frio', 'tradicional', 'huevo'],
+    imagen: '',
+    tiempo: '40 min + frío',
+    porciones: '6 personas',
+    dificultad: 'media',
+    tecnica: 'Olla',
+    ingredientes: [
+      '1 litro de leche entera',
+      '4 huevos (separar claras y yemas)',
+      '150 g de azúcar',
+      '1 rama de canela',
+      '1 cucharadita de esencia de vainilla',
+      '2 cucharadas de maicena',
+      'Canela molida para servir'
+    ],
+    pasos: [
+      'Calienta la leche con la canela en rama sin que hierva.',
+      'Bate las yemas con el azúcar hasta que estén pálidas. Añade la maicena y mezcla.',
+      'Vierte un poco de leche caliente sobre las yemas (templar) y luego devuelve todo a la olla.',
+      'Cocina a fuego bajo, revolviendo constantemente, hasta que espese (unos 5-7 minutos). No dejes que hierva.',
+      'Retira la canela, añade la vainilla y vierte en un molde o en copas individuales.',
+      'Bate las claras a punto de nieve con un poco de azúcar. Cocínalas en la leche caliente (o al baño María) por cucharadas, hasta que cuajen. Colócalas encima del postre.',
+      'Refrigera al menos 3 horas. Sirve con canela molida encima.'
+    ],
+    dato: 'La "nieve" son las claras batidas que flotan sobre la crema de leche. Es un postre de origen español que en Chile se volvió clásico de las once y de las celebraciones familiares.',
+    errores: [
+      { error: 'La crema se corta', solucion: 'Hervir la mezcla o no templar las yemas. Cocina a fuego bajo y agrega la leche caliente a las yemas de a poco, sin dejar de batir.' },
+      { error: 'La crema no espesa', solucion: 'No cocinar el tiempo suficiente o usar poca maicena. Cocina hasta que cubra la cuchara y añade 1 cucharada extra de maicena si es necesario.' },
+      { error: 'Las claras se deshacen', solucion: 'Cocinarlas en leche hirviendo o no batirlas bien. Bate a punto de nieve firme y cocínalas en leche muy caliente pero sin hervir.' }
+    ],
+    conservacion: {
+      nevera: 'Hasta 3 días en recipiente hermético o copas cubiertas con film.',
+      congelador: 'No recomendado, la crema se separa.',
+      recalentar: 'Se consume bien fría.'
+    }
+  },
+
+  /* ============ 66. CHICHA ============ */
+  {
+    titulo: 'Chicha',
+    categoria: 'bebidas',
+    tags: ['bebida', 'alcohol', 'uva', 'fiestas patrias', 'tradicional', 'fermentada'],
+    imagen: '',
+    tiempo: '15 min + 10 días de fermentación',
+    porciones: '4 litros',
+    dificultad: 'media',
+    tecnica: 'Fermentación',
+    ingredientes: [
+      '4 kg de uva país o uva de mesa bien madura',
+      '2 litros de agua hervida (fría)',
+      '1 kg de azúcar (ajustar al dulzor de la uva)',
+      '1 rama de canela (opcional)',
+      '1 puñado de pasas (opcional, para acelerar la fermentación)'
+    ],
+    pasos: [
+      'Lava bien las uvas y sepáralas de los tallos.',
+      'En un recipiente grande de vidrio o barro (bien limpio y seco), pon las uvas y machácalas ligeramente con las manos o un pisón.',
+      'Agrega el agua hervida fría y el azúcar. Revuelve hasta disolver.',
+      'Añade la canela y las pasas si usas.',
+      'Tapa con un paño limpio o gasa (no hermético) y deja fermentar en un lugar oscuro y fresco por 7 a 10 días, revolviendo una vez al día.',
+      'Cuando el líquido deje de burbujear y tenga olor a vino, cuela con un paño fino o filtro de café.',
+      'Envasa en botellas de vidrio bien limpias, tapa y deja reposar 2 días más antes de servir. Sirve bien fría.'
+    ],
+    dato: 'La chicha es la bebida de Fiestas Patrias por excelencia. Llegó a Chile con los españoles y se volvió parte de la tradición criolla. Cada familia tiene su receta: con más azúcar, con canela, con pasas. La versión sin fermentar es la "chicha dulce", que es simplemente el jugo de uva antes de fermentar.',
+    errores: [
+      { error: 'No fermenta (queda dulce)', solucion: 'Usar uvas muy limpias (sin levadura natural en la cáscara) o un recipiente estéril. Deja las uvas sin lavar en exceso o agrega un puñado de pasas para aportar levaduras naturales.' },
+      { error: 'Se avinagra o se echa a perder', solucion: 'Dejar fermentar demasiado tiempo o en un lugar caluroso. Fermenta en un lugar fresco y oscuro, y cuela en cuanto deje de burbujear.' },
+      { error: 'Sabe muy fuerte a alcohol', solucion: 'Dejar fermentar demasiado o agregar mucha azúcar. Prueba a los 7 días: si ya tiene sabor a vino suave, cuélala.' }
+    ],
+    conservacion: {
+      nevera: 'Hasta 2 semanas en botellas cerradas en el refrigerador. Una vez abierta, consumir en 3-4 días.',
+      congelador: 'No recomendado, la fermentación se detiene pero pierde textura.',
+      recalentar: 'Se consume bien fría. No se recalienta.'
+    }
+  },
+
+  /* ============ 67. PISCOLA ============ */
+  {
+    titulo: 'Piscola',
+    categoria: 'bebidas',
+    tags: ['bebida', 'alcohol', 'pisco', 'cóctel', 'tradicional', 'verano'],
+    imagen: '',
+    tiempo: '5 min',
+    porciones: '1 vaso',
+    dificultad: 'muy fácil',
+    tecnica: 'Sin cocción',
+    ingredientes: [
+      '1 medida de pisco (40 ml aprox.)',
+      'Bebida cola bien helada (Coca-Cola, Pepsi o similar)',
+      'Hielo en cubos',
+      'Opcional: rodaja de limón'
+    ],
+    pasos: [
+      'Llena un vaso alto con hielo.',
+      'Vierte el pisco sobre el hielo.',
+      'Completa con la bebida cola bien helada.',
+      'Revuelve suavemente con una cuchara larga.',
+      'Decora con una rodaja de limón si quieres. Sirve inmediatamente.'
+    ],
+    dato: 'La piscola es el trago más popular de Chile, especialmente en verano y en las fondas. Se dice que nació en los años 70 en Valparaíso, y desde entonces compite con el terremoto como el cóctel nacional. La proporción varía: desde 1:3 (suave) hasta 1:1 (fuerte, "con afán").',
+    errores: [
+      { error: 'Sabe muy fuerte o "quema"', solucion: 'Usar mucho pisco o bebida cola caliente. Usa una proporción de 1:3 (una medida de pisco por tres de cola) y hielo abundante.' },
+      { error: 'Se siente aguado o sin gracia', solucion: 'Usar demasiado hielo o bebida cola de mala calidad. Usa hielo en cubos grandes (se derrite más lento) y una bebida cola de buena calidad.' },
+      { error: 'No está frío', solucion: 'No enfriar el pisco ni la bebida cola. Deja ambos en el refrigerador al menos 2 horas antes de servir.' }
+    ],
+    conservacion: {
+      nevera: 'Se consume al momento.',
+      congelador: 'No aplica.',
+      recalentar: 'No aplica. Siempre se sirve helado.'
+    }
+  },
+
+  /* ============ 68. BORGOÑA ============ */
+  {
+    titulo: 'Borgoña',
+    categoria: 'bebidas',
+    tags: ['bebida', 'alcohol', 'vino', 'frutillas', 'verano', 'tradicional'],
+    imagen: '',
+    tiempo: '15 min + maceración',
+    porciones: '6 vasos',
+    dificultad: 'muy fácil',
+    tecnica: 'Sin cocción',
+    ingredientes: [
+      '1 botella de vino tinto (Cabernet Sauvignon, Merlot o vino de la zona), bien helado',
+      '500 g de frutillas frescas, lavadas y sin tallo',
+      '3 cucharadas de azúcar (ajustar al gusto)',
+      'Hielo',
+      'Opcional: hojas de menta fresca'
+    ],
+    pasos: [
+      'Lava bien las frutillas y córtalas por la mitad.',
+      'En una jarra grande, pon las frutillas y espolvorea el azúcar. Deja reposar 15 minutos para que suelten su jugo.',
+      'Vierte el vino tinto bien helado sobre las frutillas.',
+      'Añade hielo y, si quieres, menta fresca.',
+      'Sirve inmediatamente en vasos altos, con algunas frutillas en cada vaso.'
+    ],
+    dato: 'La borgoña es el ponche criollo por excelencia de la zona central de Chile. Se dice que nació en Talca, donde las frutillas son famosas. Es la bebida obligada en las fondas y en las celebraciones de primavera y verano. Su "versión clara" es el Clery, hecho con vino blanco.',
+    errores: [
+      { error: 'Sabe muy ácida o sin gracia', solucion: 'Usar frutillas poco maduras o no azucarar. Usa frutillas bien maduras y deja macerar con azúcar antes de agregar el vino.' },
+      { error: 'Las frutillas se deshacen', solucion: 'Dejar macerar demasiado tiempo o usar frutillas muy blandas. Macera solo 15-20 minutos antes de servir.' },
+      { error: 'Sabe muy fuerte a alcohol', solucion: 'Usar un vino muy fuerte o no enfriarlo. Usa un vino tinto joven y frutal, bien helado, y ajusta la cantidad de azúcar.' }
+    ],
+    conservacion: {
+      nevera: 'Hasta 2 días en jarra cerrada. Las frutillas se ponen blandas.',
+      congelador: 'No recomendado, las frutillas pierden textura.',
+      recalentar: 'Se consume bien frío.'
     }
   }
 

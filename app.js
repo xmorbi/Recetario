@@ -47,28 +47,24 @@
     var dropdowns = document.querySelectorAll('.dropdown-tools');
     if (!dropdowns.length) return;
 
-    // Cerrar al hacer clic fuera
     document.addEventListener('click', function (e) {
       dropdowns.forEach(function (d) {
         if (d.open && !d.contains(e.target)) d.open = false;
       });
     });
 
-    // Cerrar con Escape
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') {
         dropdowns.forEach(function (d) { d.open = false; });
       }
     });
 
-    // Cerrar al hacer clic en un enlace del menú
     dropdowns.forEach(function (d) {
       d.querySelectorAll('.dropdown-menu a').forEach(function (a) {
         a.addEventListener('click', function () { d.open = false; });
       });
     });
 
-    // Marcar automáticamente la página activa
     var path = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
     dropdowns.forEach(function (d) {
       var tieneActivo = false;
@@ -83,7 +79,6 @@
       if (tieneActivo) d.classList.add('tools-activo');
     });
 
-    // Evitar que .site-nav-links (overflow-x:auto) recorte el dropdown abierto
     var navLinks = document.querySelector('.site-nav-links');
     if (navLinks) {
       dropdowns.forEach(function (d) {
@@ -144,13 +139,18 @@
       .replace(/[^a-z0-9]+/g, '-')
       .replace(/^-+|-+$/g, '');
   }
+  // [CAMBIO] Exponer slugify para páginas que no tienen #contenedorRecetas
+  // (ej. mis-recetas.html) y necesitan buscar recetas por slug.
+  window.slugifyGlobal = slugify;
+
   function mapearCategoria(cat) {
     const mapa = {
       'principales': 'Plato principal',
       'sopas': 'Sopa',
       'panes': 'Pan',
       'ensaladas': 'Ensalada',
-      'dulces': 'Postre'
+      'dulces': 'Postre',
+      'bebidas': 'Bebida'
     };
     return mapa[cat] || 'Plato principal';
   }
@@ -208,9 +208,7 @@
     document.head.appendChild(script);
   }
 
-  // NUEVO: Schema ItemList para el carrusel en Google
   function inyectarSchemaItemList() {
-    // Solo tomamos las primeras 20 recetas para no sobrecargar el código
     var items = RECETAS.slice(0, 20).map(function(receta, index) {
       var slug = slugify(receta.titulo);
       var url = SITE_CONFIG.urlBase + '/recetas/' + slug + '.html';
@@ -357,9 +355,8 @@
     });
 
     inyectarSchemaSitio();
-    inyectarSchemaItemList(); // Inyectar el carrusel para Google
+    inyectarSchemaItemList();
 
-    // Inicializar estado visual de los botones de favoritos
     if (window.Favoritos) window.Favoritos.actualizar();
   }
 
@@ -380,6 +377,8 @@
     window.print();
     setTimeout(limpiar, 2000);
   }
+  // [CAMBIO] Exponer imprimirTarjeta para mis-recetas.html
+  window.imprimirTarjetaGlobal = imprimirTarjeta;
 
   /* ---------- Resaltado ---------- */
   function limpiarResaltados(root) {
@@ -421,14 +420,13 @@
   }
 
   /* ---------- Filtrado + feedback ---------- */
-  let ingredientesDespensa = []; // Estado de la despensa
+  let ingredientesDespensa = [];
 
   function aplicarFiltros() {
     let visibles = 0;
     const normBusqueda = quitarAcentos(textoBusqueda).toLowerCase();
     const regexResaltado = textoBusqueda ? buildRegex(textoBusqueda) : null;
 
-    // 1. Calcular estado y puntuación de cada tarjeta
     const estadoTarjetas = tarjetas.map(tarjeta => {
       limpiarResaltados(tarjeta);
 
@@ -438,7 +436,6 @@
 
       const coincideTxt = !normBusqueda || textoLimpio.indexOf(normBusqueda) !== -1;
 
-      // Lógica de relevancia de despensa (Puntuación)
       let scoreDespensa = 0;
       if (ingredientesDespensa.length > 0) {
         ingredientesDespensa.forEach(ing => {
@@ -448,7 +445,6 @@
         });
       }
 
-      // Si hay ingredientes seleccionados, la receta debe tener al menos 1
       const coincideDespensa = ingredientesDespensa.length === 0 || scoreDespensa > 0;
 
       return {
@@ -458,20 +454,15 @@
       };
     });
 
-    // 2. Filtrar las que se van a mostrar
     const visiblesArr = estadoTarjetas.filter(e => e.mostrar);
     visibles = visiblesArr.length;
 
-    // 3. Ordenar
     if (ingredientesDespensa.length > 0) {
-      // Ordenar por puntuación de mayor a menor (más ingredientes de la despensa = más arriba)
       visiblesArr.sort((a, b) => b.scoreDespensa - a.scoreDespensa);
     } else {
-      // Si no hay filtro de despensa, mantener el orden original
       visiblesArr.sort((a, b) => tarjetas.indexOf(a.tarjeta) - tarjetas.indexOf(b.tarjeta));
     }
 
-    // 4. Ocultar todas y mostrar las visibles en orden
     tarjetas.forEach(t => t.hidden = true);
 
     visiblesArr.forEach(e => {
@@ -480,17 +471,13 @@
       e.tarjeta.classList.remove('aparecer');
       void e.tarjeta.offsetWidth;
       e.tarjeta.classList.add('aparecer');
-
-      // Mover al final del contenedor (esto reordena el DOM)
       contenedor.appendChild(e.tarjeta);
     });
 
-    // Mover las tarjetas ocultas al final para no interrumpir el orden visual
     tarjetas.forEach(t => {
       if (t.hidden) contenedor.appendChild(t);
     });
 
-    // 5. Actualizar UI
     if (vacio) vacio.hidden = visibles !== 0;
 
     if (contador) {
@@ -574,7 +561,7 @@
 
   const urlParams = new URLSearchParams(window.location.search);
   const catParam = urlParams.get('cat');
-  if (catParam && ['principales', 'sopas', 'panes', 'ensaladas', 'dulces'].includes(catParam)) {
+  if (catParam && ['principales', 'sopas', 'panes', 'ensaladas', 'dulces', 'bebidas'].includes(catParam)) {
     categoriaActiva = catParam;
   }
   const buscarParam = urlParams.get('buscar');
@@ -654,18 +641,15 @@
   const btnAplicarDespensa = document.getElementById('aplicarDespensa');
 
   if (btnDespensa && modalDespensa) {
-    // Renderizar chips
     listaDespensa.innerHTML = despensaIngredientesList.map(ing =>
       `<button type="button" class="chip-despensa" data-ing="${ing}">${ing}</button>`
     ).join('');
 
-    // Abrir modal
     btnDespensa.addEventListener('click', () => {
       modalDespensa.classList.add('abierto');
       document.body.style.overflow = 'hidden';
     });
 
-    // Cerrar modal
     const cerrarModal = () => {
       modalDespensa.classList.remove('abierto');
       document.body.style.overflow = '';
@@ -675,7 +659,6 @@
       if (e.target === modalDespensa) cerrarModal();
     });
 
-    // Toggle de ingredientes
     listaDespensa.addEventListener('click', (e) => {
       const chip = e.target.closest('.chip-despensa');
       if (!chip) return;
@@ -689,13 +672,11 @@
       }
     });
 
-    // Limpiar todo
     btnLimpiarDespensa.addEventListener('click', () => {
       ingredientesDespensa = [];
       listaDespensa.querySelectorAll('.chip-despensa').forEach(c => c.classList.remove('activo'));
     });
 
-    // Aplicar filtros y cerrar
     btnAplicarDespensa.addEventListener('click', () => {
       aplicarFiltros();
       cerrarModal();
@@ -709,6 +690,5 @@
   });
   aplicarFiltros();
 
-  // Exponer para favoritos.js
   window.crearTarjetaGlobal = crearTarjeta;
 })();

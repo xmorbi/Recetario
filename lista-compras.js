@@ -16,7 +16,6 @@
 
   // --- CREACIÓN DE LA INTERFAZ (FAB + PANEL) ---
   function crearInterfaz() {
-    // Si ya existe (por si acaso), no hacemos nada
     if (document.getElementById('shopping-fab')) return;
 
     // 1. Botón Flotante (FAB)
@@ -38,7 +37,7 @@
     const overlay = document.createElement('div');
     overlay.id = 'shopping-overlay';
     overlay.className = 'shopping-overlay';
-    
+
     const panel = document.createElement('aside');
     panel.id = 'shopping-panel';
     panel.className = 'shopping-panel';
@@ -57,7 +56,6 @@
     document.body.appendChild(overlay);
     document.body.appendChild(panel);
 
-    // Eventos de abrir/cerrar
     fab.addEventListener('click', abrirPanel);
     document.getElementById('shopping-close').addEventListener('click', cerrarPanel);
     overlay.addEventListener('click', cerrarPanel);
@@ -72,18 +70,17 @@
 
   function agregarItem(texto) {
     const textoLimpio = texto.trim();
-    // Evitar duplicados exactos
+    if (!textoLimpio) return;
     const existe = lista.find(item => item.texto.toLowerCase() === textoLimpio.toLowerCase());
     if (existe) {
-      // Si existe y ya estaba comprado, lo desmarcamos
       if (existe.comprado) {
         existe.comprado = false;
         guardar();
       }
-      abrirPanel(); // Mostramos el panel para que vea que ya está
+      abrirPanel();
       return;
     }
-    
+
     lista.push({
       id: Date.now().toString() + Math.random().toString(36).substr(2, 5),
       texto: textoLimpio,
@@ -119,34 +116,30 @@
     const content = document.getElementById('shopping-content');
     if (!badge || !content) return;
 
-    // Actualizar el globito rojo
     const pendientes = lista.filter(i => !i.comprado).length;
     badge.textContent = pendientes;
     badge.style.display = lista.length === 0 ? 'none' : 'flex';
 
-    // Renderizar la lista
     if (lista.length === 0) {
       content.innerHTML = '<p style="text-align:center;color:var(--suave);margin-top:2rem;font-style:italic;">Tu lista está vacía.<br>Agrega ingredientes desde las recetas.</p>';
       return;
     }
 
-    // Agrupar por estado
     const pendientesHTML = lista.filter(i => !i.comprado).map(crearItemHTML).join('');
     const compradosHTML = lista.filter(i => i.comprado).map(crearItemHTML).join('');
 
     let html = '';
     if (pendientesHTML) html += `<div class="shop-group">${pendientesHTML}</div>`;
     if (compradosHTML) html += `<div class="shop-group shop-group-done"><h3>Comprados</h3>${compradosHTML}</div>`;
-    
+
     content.innerHTML = html;
 
-    // Agregar eventos a los botones recién creados
     content.querySelectorAll('.shop-check').forEach(btn => {
       btn.addEventListener('click', () => toggleComprado(btn.dataset.id));
     });
     content.querySelectorAll('.shop-del').forEach(btn => {
       btn.addEventListener('click', (e) => {
-        e.stopPropagation(); // Evitar que se marque como comprado al borrar
+        e.stopPropagation();
         eliminarItem(btn.dataset.id);
       });
     });
@@ -165,26 +158,31 @@
   }
 
   function abrirPanel() {
-    document.getElementById('shopping-panel').classList.add('abierto');
-    document.getElementById('shopping-overlay').classList.add('abierto');
-    document.body.style.overflow = 'hidden'; // Evitar scroll de fondo
+    const panel = document.getElementById('shopping-panel');
+    const overlay = document.getElementById('shopping-overlay');
+    if (!panel || !overlay) return;
+    panel.classList.add('abierto');
+    overlay.classList.add('abierto');
+    document.body.style.overflow = 'hidden';
   }
 
   function cerrarPanel() {
-    document.getElementById('shopping-panel').classList.remove('abierto');
-    document.getElementById('shopping-overlay').classList.remove('abierto');
+    const panel = document.getElementById('shopping-panel');
+    const overlay = document.getElementById('shopping-overlay');
+    if (!panel || !overlay) return;
+    panel.classList.remove('abierto');
+    overlay.classList.remove('abierto');
     document.body.style.overflow = '';
   }
 
-  // --- EVENTOS GLOBALES (Capturar clics en botones "+") ---
+  // --- EVENTOS GLOBALES (delegación) ---
   document.addEventListener('click', function(e) {
-    // Botón individual
+    // Botón individual "+"
     const btnAdd = e.target.closest('.btn-add-ing');
     if (btnAdd) {
       e.preventDefault();
       const texto = btnAdd.dataset.ing;
       if (texto) agregarItem(texto);
-      // Efecto visual rápido
       const originalText = btnAdd.textContent;
       btnAdd.textContent = '✓';
       btnAdd.style.color = 'var(--rojo)';
@@ -201,13 +199,38 @@
     const btnAddAll = e.target.closest('.btn-add-all');
     if (btnAddAll) {
       e.preventDefault();
-      const recetaIndex = btnAddAll.dataset.index;
-      // Asumimos que RECETAS es global (viene de recetas.js)
-      if (typeof RECETAS !== 'undefined' && RECETAS[recetaIndex]) {
-        const ings = RECETAS[recetaIndex].ingredientes || [];
+
+      let ings = null;
+
+      // 1) Páginas individuales de receta: leer desde #receta-data
+      //    (es el bloque <script type="application/json"> que genera
+      //    generar.html y que también usa modo-cocina.js)
+      const dataEl = document.getElementById('receta-data');
+      if (dataEl) {
+        try {
+          const receta = JSON.parse(dataEl.textContent);
+          if (receta && Array.isArray(receta.ingredientes)) {
+            ings = receta.ingredientes;
+          }
+        } catch (err) {
+          // JSON inválido, seguimos al fallback
+        }
+      }
+
+      // 2) Fallback: listado del recetario (RECETAS + data-index)
+      if (!ings) {
+        const recetaIndex = btnAddAll.dataset.index;
+        if (typeof RECETAS !== 'undefined' && RECETAS[recetaIndex]) {
+          ings = RECETAS[recetaIndex].ingredientes || [];
+        }
+      }
+
+      if (ings && ings.length > 0) {
         ings.forEach(ing => agregarItem(ing));
         btnAddAll.textContent = '¡Añadidos!';
-        setTimeout(() => { btnAddAll.textContent = 'Añadir todos los ingredientes'; }, 2000);
+        setTimeout(() => {
+          btnAddAll.textContent = 'Añadir todos los ingredientes';
+        }, 2000);
       }
     }
   });

@@ -23,13 +23,23 @@
   // Alternar favorito
   function toggleFavorito(slug) {
     let favs = getFavoritos();
-    if (favs.includes(slug)) {
+    const estabaFavorito = favs.includes(slug);
+
+    if (estabaFavorito) {
       favs = favs.filter(s => s !== slug); // Quitar
     } else {
       favs.push(slug); // Agregar
     }
     setFavoritos(favs);
     actualizarBotones();
+
+    // Si estamos en la página "Mis recetas" y se quitó un favorito,
+    // re-renderizar el listado para que la tarjeta desaparezca al instante.
+    const contenedorFavs = document.getElementById('contenedorFavoritos');
+    if (contenedorFavs && estabaFavorito && !favs.includes(slug)) {
+      renderizarMisRecetas(contenedorFavs);
+    }
+
     return favs.includes(slug);
   }
 
@@ -41,8 +51,7 @@
       const isFav = favs.includes(slug);
       btn.classList.toggle('activo', isFav);
       btn.setAttribute('aria-label', isFav ? 'Quitar de favoritos' : 'Guardar en favoritos');
-      
-      // Cambiar el SVG (corazón vacío vs lleno)
+
       if (isFav) {
         btn.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>';
       } else {
@@ -63,7 +72,7 @@
   // Inicializar cuando el DOM esté listo
   document.addEventListener('DOMContentLoaded', () => {
     actualizarBotones();
-    
+
     // Si estamos en la página "Mis Recetas", renderizar el listado
     const contenedorFavs = document.getElementById('contenedorFavoritos');
     if (contenedorFavs && typeof RECETAS !== 'undefined') {
@@ -85,11 +94,9 @@
       return;
     }
 
-    // Reutilizamos la función crearTarjeta de app.js si existe, si no, creamos una básica
     if (typeof window.crearTarjetaGlobal === 'function') {
       contenedor.innerHTML = recetasFavs.map((r, i) => window.crearTarjetaGlobal(r, i)).join('');
     } else {
-      // Fallback simple
       contenedor.innerHTML = recetasFavs.map(r => `
         <article class="receta">
           <h2><a href="recetas/${slugify(r.titulo)}.html">${r.titulo}</a></h2>
@@ -99,8 +106,7 @@
         </article>
       `).join('');
     }
-    
-    // Volver a enlazar los botones para que muestren el corazón lleno
+
     if (window.Favoritos) window.Favoritos.actualizar();
   }
 

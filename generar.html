@@ -37,6 +37,51 @@ var ICONS = {
   libro: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>'
 };
 
+var TIPS_POR_CATEGORIA = {
+  principales: [
+    'Deja reposar la carne 5 a 10 minutos antes de cortarla para que los jugos se redistribuyan y quede más jugosa.',
+    'Saca la carne del refrigerador 30 minutos antes de cocinarla para una cocción uniforme.',
+    'No laves el pollo crudo: lavarlo esparce bacterias por la cocina. El calor de la cocción las elimina.',
+    'Prueba la comida en cada etapa y ajusta la sal y los aliños según tu paladar.',
+    'Si un plato sabe soso, agrégale unas gotas de limón o vinagre antes de añadir más sal.'
+  ],
+  sopas: [
+    'Retira la espuma que sube a la superficie al inicio de la cocción: así el caldo queda limpio y sin impurezas.',
+    'Agrega las verduras por tandas según su dureza: primero las más firmes, al final las más blandas.',
+    'Mantén un hervor suave, nunca fuerte: el caldo turbio y la carne dura vienen de hervir a borbotones.',
+    'Prueba la comida en cada etapa y ajusta la sal y los aliños según tu paladar.',
+    'Si un plato sabe soso, agrégale unas gotas de limón o vinagre antes de añadir más sal.'
+  ],
+  panes: [
+    'Amasa con paciencia: el gluten se desarrolla con el trabajo y es lo que da elasticidad a la masa.',
+    'Usa agua tibia al tacto, nunca caliente: el calor fuerte mata la levadura o los polvos de hornear.',
+    'Coloca una fuente con agua en el horno mientras horneas: el vapor ayuda a que el pan suba y no se seque.',
+    'Deja levar la masa en un lugar cálido y sin corrientes de aire, tapada con un paño limpio.',
+    'Prueba la comida en cada etapa y ajusta la sal y los aliños según tu paladar.'
+  ],
+  ensaladas: [
+    'Sala los tomates justo antes de servir: si los salas mucho antes, sueltan agua y la ensalada queda aguada.',
+    'Remoja la cebolla en agua fría 10 minutos para quitarle el picor sin perder su textura.',
+    'Pica los ingredientes en tamaños similares para que cada bocado tenga todos los sabores.',
+    'Si un plato sabe soso, agrégale unas gotas de limón o vinagre antes de añadir más sal.',
+    'Prueba la comida en cada etapa y ajusta la sal y los aliños según tu paladar.'
+  ],
+  dulces: [
+    'Pesa los ingredientes: en repostería las proporciones son clave, no se puede improvisar como en un guiso.',
+    'Usa huevos a temperatura ambiente: se baten mejor y aportan más aire a las masas.',
+    'Precalienta siempre el horno antes de meter el molde: los cambios bruscos de temperatura arruinan los batidos.',
+    'No abras el horno durante los primeros minutos: la masa puede bajarse y quedar chata.',
+    'Deja enfriar los dulces antes de desmoldar o cortar: así se asientan y no se rompen.'
+  ],
+  bebidas: [
+    'Enfría bien los vasos antes de servir: guarda las copas 10 minutos en el congelador.',
+    'Usa hielo en cubos grandes: se derriten más lento y no aguadizan la bebida.',
+    'Prueba y ajusta el dulzor al final: cada fruta y cada vino tienen su propio nivel de azúcar.',
+    'Para bebidas calientes, calienta a fuego bajo: hervir el alcohol o el café los vuelve amargos.',
+    'Sirve de inmediato: la mayoría de estas bebidas pierden su gracia si se guardan mucho tiempo.'
+  ]
+};
+
 var GUIAS = {
   'pastel-de-choclo': { titulo: 'Cómo elegir un buen choclo', url: '../guias/como-elegir-un-choclo.html' },
   'humitas': { titulo: 'Cómo elegir un buen choclo', url: '../guias/como-elegir-un-choclo.html' },
@@ -75,7 +120,7 @@ function tiempoISO(t) {
   return s;
 }
 function catLegible(c) {
-  var m = {'principales':'Plato principal','sopas':'Sopa','panes':'Pan','ensaladas':'Ensalada','dulces':'Postre'};
+  var m = {'principales':'Plato principal','sopas':'Sopa','panes':'Pan','ensaladas':'Ensalada','dulces':'Postre','bebidas':'Bebida'};
   return m[c] || 'Plato principal';
 }
 
@@ -169,42 +214,41 @@ function crearPagina(r, i, total, todos) {
     '</div>';
   }
 
-  // INYECCIÓN DE ERRORES COMUNES Y TIPS
   var erroresHTML = '';
   if (r.errores && r.errores.length > 0) {
     erroresHTML = '<div class="errores-box">' +
       '<h3>Errores comunes y cómo evitarlos</h3>' +
       '<ul class="errores-lista">';
-    
+
     r.errores.forEach(function(e) {
       erroresHTML += '<li>' +
         '<strong class="error">' + esc(e.error) + '</strong>' +
         '<span class="solucion">' + esc(e.solucion) + '</span>' +
       '</li>';
     });
-    
+
     erroresHTML += '</ul>';
-    
-    erroresHTML += '<div class="tips-universales">' +
-      '<h4>Tips Universales de Cocina</h4>' +
-      '<ul>' +
-        '<li><strong>El reposo de la carne:</strong> Deja reposar la carne 5 a 10 minutos antes de cortarla para que los jugos se redistribuyan y quede más jugosa.</li>' +
-        '<li><strong>El atemperado:</strong> Saca la carne del refrigerador 30 minutos antes de cocinarla para una cocción uniforme.</li>' +
-        '<li><strong>El truco del ácido:</strong> Si un plato sabe soso, agrégale unas gotas de limón o vinagre antes de añadir más sal.</li>' +
-        '<li><strong>No laves el pollo crudo:</strong> Lavarlo esparce bacterias por la cocina. El calor de la cocción las elimina.</li>' +
-        '<li><strong>El arte de probar:</strong> Prueba la comida en cada etapa y ajusta la sal y los aliños según tu paladar.</li>' +
-      '</ul>' +
-    '</div>' +
-    '</div>';
+
+    var tipsCategoria = TIPS_POR_CATEGORIA[r.categoria] || TIPS_POR_CATEGORIA.principales;
+    if (tipsCategoria && tipsCategoria.length > 0) {
+      erroresHTML += '<div class="tips-universales">' +
+        '<h4>Tips para ' + esc(catLegible(r.categoria).toLowerCase()) + '</h4>' +
+        '<ul>';
+      tipsCategoria.forEach(function(tip) {
+        erroresHTML += '<li>' + esc(tip) + '</li>';
+      });
+      erroresHTML += '</ul></div>';
+    }
+
+    erroresHTML += '</div>';
   }
 
-  // INYECCIÓN DE CONSERVACIÓN
   var conservacionHTML = '';
   if (r.conservacion) {
     conservacionHTML = '<div class="conservacion-box">' +
       '<h3>Conservación y Recalentado</h3>' +
       '<div class="conservacion-grid">';
-      
+
     if (r.conservacion.nevera) {
       conservacionHTML += '<div class="conservacion-item"><strong>Nevera</strong>' + esc(r.conservacion.nevera) + '</div>';
     }
@@ -214,28 +258,26 @@ function crearPagina(r, i, total, todos) {
     if (r.conservacion.recalentar) {
       conservacionHTML += '<div class="conservacion-item full-width"><strong>Recalentar</strong>' + esc(r.conservacion.recalentar) + '</div>';
     }
-    
+
     conservacionHTML += '</div>';
-    
+
     conservacionHTML += '<div style="margin-top:1rem; font-size:0.85rem; text-align:right;">' +
       '<a href="../guia-conservacion.html" style="color:#0369a1; text-decoration:underline; font-weight:600;">Ver guía completa de conservación →</a>' +
     '</div>' +
     '</div>';
   }
 
-  // NUEVO: RESPUESTA RÁPIDA (AEO)
   var resumenTexto = '';
   if (r.resumen) {
     resumenTexto = esc(r.resumen);
   } else {
-    // Generación automática inteligente
     var ingPrincipales = (r.ingredientes || []).slice(0, 3).map(function(x) {
       return x.split(':').pop().trim();
     }).join(', ');
-    
+
     resumenTexto = 'Para preparar ' + esc(r.titulo) + ' necesitas ' + esc(ingPrincipales) + '. ' +
-                   'Es una receta de dificultad ' + esc(r.dificultad || 'fácil') + 
-                   ' que toma ' + esc(r.tiempo || 'un tiempo') + 
+                   'Es una receta de dificultad ' + esc(r.dificultad || 'fácil') +
+                   ' que toma ' + esc(r.tiempo || 'un tiempo') +
                    ' y rinde ' + esc(r.porciones || '4 porciones') + '.';
   }
 
@@ -269,7 +311,6 @@ function crearPagina(r, i, total, todos) {
   h += '<!-- Google Tag Manager (noscript) --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXH425KQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!-- End Google Tag Manager (noscript) -->';
   h += '<div class="bandera"><i class="azul"></i><i class="blanco"></i><i class="rojo"></i></div>';
 
-  // NUEVO HEADER UNIFICADO
   h += '<header class="site-nav"><div class="site-nav-inner">';
   h += '<a href="../index.html" class="site-nav-logo" aria-label="Recetario Chileno — Inicio"><div class="marca-logo"><span class="estrella"></span></div><span class="marca-texto">Recetario Chileno</span></a>';
   h += '<button class="site-nav-toggle" aria-label="Abrir menú" aria-expanded="false"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>';
@@ -290,37 +331,25 @@ function crearPagina(r, i, total, todos) {
   h += '</div>';
   h += '</details>';
   h += '<a href="../mis-recetas.html">Mis recetas</a>';
-  // SE QUITÓ SOBRE NOSOTROS DEL HEADER
   h += '</nav></div></header>';
-
-  var catActual = r.categoria || 'principales';
 
   h += '<header class="hero-receta">';
   h += '<div class="hero-receta-inner">';
   h += '<nav class="breadcrumb"><a href="../index.html">Inicio</a> &rsaquo; <a href="../recetario.html">Recetas</a> &rsaquo; <span class="breadcrumb-current">' + esc(r.titulo) + '</span></nav>';
   h += '<h1>' + esc(r.titulo) + '</h1>';
   h += '<div class="meta">' + chips + '</div>';
-  h += '<div class="controles-receta">';
-  h += '<a href="../recetario.html" class="filtro ' + (catActual==='todas'?'activo':'') + '">Todas</a>';
-  h += '<a href="../recetario.html?cat=principales" class="filtro ' + (catActual==='principales'?'activo':'') + '">Platos de fondo</a>';
-  h += '<a href="../recetario.html?cat=sopas" class="filtro ' + (catActual==='sopas'?'activo':'') + '">Sopas y guisos</a>';
-  h += '<a href="../recetario.html?cat=panes" class="filtro ' + (catActual==='panes'?'activo':'') + '">Masas y horneados</a>';
-  h += '<a href="../recetario.html?cat=ensaladas" class="filtro ' + (catActual==='ensaladas'?'activo':'') + '">Ensaladas y picoteo</a>';
-  h += '<a href="../recetario.html?cat=dulces" class="filtro ' + (catActual==='dulces'?'activo':'') + '">Dulces</a>';
-  h += '</div>';
   h += '</div></header>';
 
   h += '<main class="receta-page">';
-  
-  // Inyectar Respuesta Rápida (AEO) Justo antes del cuerpo
+
   h += resumenHTML;
 
   h += '<div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-bottom:1.5rem;">';
-  
+
   h += '<div class="receta-acciones-top" style="margin-bottom:0;">';
   h += '<button type="button" class="btn-imprimir btn-imprimir-receta" onclick="window.print()" aria-label="Imprimir esta receta">' + ICONS.imprimir + '<span>Imprimir receta</span></button>';
   h += '<button type="button" class="btn-modo-cocina" aria-label="Abrir modo cocina">' + ICONS.chef + '<span>Modo cocina</span></button>';
-  h += '<button type="button" class="btn-favorito" data-slug="' + slug + '" aria-label="Guardar en favoritos">' + ICONS.corazon + '</button>'; 
+  h += '<button type="button" class="btn-favorito" data-slug="' + slug + '" aria-label="Guardar en favoritos">' + ICONS.corazon + '</button>';
   h += '</div>';
 
   h += '<div class="rating-container" data-slug="' + slug + '">';
@@ -369,13 +398,13 @@ function crearPagina(r, i, total, todos) {
   h += relHTML;
   h += nav;
   h += '</main>';
-  
-  // NUEVO FOOTER CON SOBRE NOSOTROS
+
   h += '<footer><div class="bandera"><i class="azul"></i><i class="blanco"></i><i class="rojo"></i></div><span class="footer-flag"></span>Recetario Chileno &middot; Hecho con cari&ntilde;o en Chile<nav class="footer-legal" aria-label="Enlaces legales"><a href="../sobre-mi.html">Sobre nosotros</a><span class="sep">&middot;</span><a href="../privacidad.html">Privacidad</a><span class="sep">&middot;</span><a href="../contacto.html">Contacto</a></nav></footer>';
-  
+
   h += '<script type="application/json" id="receta-data">' + recetaJSON + '<\/script>';
+  h += '<script src="../nav.js" defer><\/script>';
   h += '<script src="../modo-cocina.js" defer><\/script>';
-  h += '<script src="../favoritos.js" defer><\/script>'; 
+  h += '<script src="../favoritos.js" defer><\/script>';
   h += '<script src="../lista-compras.js" defer><\/script>';
   h += '<script src="../estrellas.js" defer><\/script>';
   h += '</body></html>';
@@ -420,7 +449,7 @@ function generar() {
     a.href = u; a.download = 'recetas.zip';
     document.body.appendChild(a); a.click(); document.body.removeChild(a);
     setTimeout(function(){ URL.revokeObjectURL(u); }, 1000);
-    log.textContent += 'LISTO. Se descargó recetas.zip\n\nSIGUIENTE:\n1. Extrae la carpeta "recetas" dentro de Intento 2/ (reemplaza la existente)\n2. git add .\n3. git commit -m "Header unificado"\n4. git push\n';
+    log.textContent += 'LISTO. Se descargó recetas.zip\n\nSIGUIENTE:\n1. Extrae la carpeta "recetas" dentro de la raíz\n2. git add .\n3. git commit -m "nav.js en recetas + fix add-all"\n4. git push\n';
     btn.disabled = false;
   }).catch(function(err) {
     log.textContent += '\nERROR: ' + err.message + '\n';

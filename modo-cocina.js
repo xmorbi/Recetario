@@ -38,7 +38,7 @@
       '</header>' +
       '<details class="mc-ingredientes">' +
         '<summary>Ingredientes (<span class="mc-ing-count">0</span>)</summary>' +
-        '<ul class="mc-ing-lista"></ul>' +
+        '<ul class="mc-ing-list"></ul>' +
       '</details>' +
       '<div class="mc-contenido"></div>' +
       '<nav class="mc-nav" aria-label="Navegación de pasos">' +
@@ -81,7 +81,7 @@
 
     var ings = receta.ingredientes || [];
     ov.querySelector('.mc-ing-count').textContent = ings.length;
-    ov.querySelector('.mc-ing-lista').innerHTML = ings.map(function (x) {
+    ov.querySelector('.mc-ing-list').innerHTML = ings.map(function (x) {
       return '<li>' + escaparHtml(x) + '</li>';
     }).join('');
 
