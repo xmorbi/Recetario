@@ -4,7 +4,8 @@ import { getCollection } from 'astro:content';
 const { 
   title = 'Recetario Chileno', 
   description = 'Las mejores recetas tradicionales chilenas explicadas paso a paso.',
-  canonicalURL = Astro.url,
+  // Centralización: canonical explícito con Astro.site, sin query params.
+  canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://recetariochileno.netlify.app'),
   activePage = '',
   noindex = false
 } = Astro.props;
@@ -71,6 +72,11 @@ const recetasNavJSON = JSON.stringify(recetasNav);
     };
   </script>
 
+  <!-- Centralización de dominio: exponer el origin a los scripts del cliente -->
+  <script is:inline define:vars={{ SITE_ORIGIN: Astro.site?.origin || '' }}>
+    window.__SITE_URL = SITE_ORIGIN;
+  </script>
+
   <link rel="stylesheet" href="/estilos.css">
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
@@ -129,14 +135,14 @@ const recetasNavJSON = JSON.stringify(recetasNav);
     Recetario Chileno · Hecho con cariño en Chile
     <nav class="footer-legal" aria-label="Enlaces legales">
       <a href="/sobre-mi/">Sobre nosotros</a><span class="sep">·</span>
-      <a href="/privacidad.html">Privacidad</a><span class="sep">·</span>
+      <a href="/privacidad/">Privacidad</a><span class="sep">·</span>
       <a href="/contacto/">Contacto</a>
     </nav>
   </footer>
 
   <div id="cookie-banner" class="cookie-banner" hidden>
     <div class="cookie-content">
-      <p>🍪 Utilizamos cookies propias y de terceros para analizar el tráfico y mejorar tu experiencia. Al hacer clic en "Aceptar", aceptas su uso. Más info en nuestra <a href="/privacidad.html">Política de Privacidad</a>.</p>
+      <p>🍪 Utilizamos cookies propias y de terceros para analizar el tráfico y mejorar tu experiencia. Al hacer clic en "Aceptar", aceptas su uso. Más info en nuestra <a href="/privacidad/">Política de Privacidad</a>.</p>
       <button id="btn-aceptar-cookies" class="btn-cookie">Aceptar</button>
     </div>
   </div>

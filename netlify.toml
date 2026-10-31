@@ -1,0 +1,39 @@
+# ==========================================
+# netlify.toml — Recetario Chileno
+# ==========================================
+#
+# Redirects 301: URLs viejas .html → nuevas URLs limpias con trailing slash.
+#
+# ⚠️ Cada redirect asume que el .astro correspondiente YA está deployado.
+# El commit que crea los .astro debe incluir este netlify.toml.
+
+# ✅ privacidad.html → privacidad.astro (Fase 6)
+[[redirects]]
+  from = "/privacidad.html"
+  to = "/privacidad/"
+  status = 301
+  force = true
+
+# ✅ sobre-mi.html → sobre-mi.astro (Fase 7c)
+[[redirects]]
+  from = "/sobre-mi.html"
+  to = "/sobre-mi/"
+  status = 301
+  force = true
+
+# ✅ contacto.html → contacto.astro (Fase 7d)
+[[redirects]]
+  from = "/contacto.html"
+  to = "/contacto/"
+  status = 301
+  force = true
+
+# ✅ gracias.html → gracias.astro (Fase 7e)
+# Nota: el form de contacto ahora postea a /gracias/ (no /gracias.html),
+# así que este redirect solo cubre hits directos de viejos backlinks.
+# Los POST de Netlify Forms van a /gracias/ y no se ven afectados.
+[[redirects]]
+  from = "/gracias.html"
+  to = "/gracias/"
+  status = 301
+  force = true

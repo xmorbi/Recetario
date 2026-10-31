@@ -1555,3 +1555,41 @@ body.mc-bloqueado{overflow:hidden}
     box-shadow: 0 0 0 2px #e8b54a, 0 6px 20px rgba(232, 181, 74, 0.18);
   }
 }
+
+/* =========================================
+   ADVERTENCIA DE SEGURIDAD (RECETAS)
+   ========================================= */
+.advertencia-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background-color: #fff3cd;
+  border: 1px solid #ffc107;
+  border-left: 6px solid #ffc107;
+  border-radius: var(--radio);
+  padding: 1.25rem;
+  margin: 0 0 2rem 0;
+  color: #664d03;
+  box-shadow: var(--sombra-sm);
+}
+
+.advertencia-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.advertencia-texto {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.advertencia-texto strong {
+  font-weight: 700;
+}
+
+/* Modo Oscuro */
+[data-theme="dark"] .advertencia-box {
+  background-color: rgba(255, 193, 7, 0.15);
+  border-color: #ffc107;
+  color: #ffda6a;
+}

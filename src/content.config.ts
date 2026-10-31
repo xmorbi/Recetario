@@ -1,44 +1,25 @@
-import { defineCollection } from 'astro:content';
+import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
-import { z } from 'astro/zod';
 
 const recetas = defineCollection({
-  // El "loader" le dice a Astro que busque todos los archivos .json en la carpeta
+  // En Astro 5, le decimos que busque todos los .json en la carpeta recetas
   loader: glob({ pattern: '**/*.json', base: './src/content/recetas' }),
   schema: z.object({
     titulo: z.string(),
-    categoria: z.string(),
-    tags: z.array(z.string()).optional(),
+    categoria: z.string().default('principales'),
+    tags: z.array(z.string()).optional().nullable(),
     imagen: z.string().nullable().optional(),
-    tiempo: z.string().optional(),
-    porciones: z.string().optional(),
-    dificultad: z.string().optional(),
-    tecnica: z.string().optional(),
-    ingredientes: z.array(z.string()),
-    pasos: z.array(z.string()),
-    dato: z.string().nullable().optional(),
-    
-    // MAGIA: Si "errores" es un string, lo convierte en un array válido
-    errores: z.preprocess((val) => {
-      if (typeof val === 'string') return [{ error: val, solucion: 'Ninguna.' }];
-      return val;
-    }, z.array(
-      z.object({
-        error: z.string(),
-        solucion: z.string()
-      })
-    ).optional()),
-    
-    // MAGIA: Si "conservacion" es un string, lo convierte en un objeto válido
-    conservacion: z.preprocess((val) => {
-      if (typeof val === 'string') return { refrigerador: val };
-      return val;
-    }, z.object({
-      refrigerador: z.string().optional(),
-      congelador: z.string().optional(),
-      recalentar: z.string().optional()
-    }).optional()),
-  }),
+    tiempo: z.string().optional().nullable(),
+    porciones: z.string().optional().nullable(),
+    dificultad: z.string().optional().nullable(),
+    tecnica: z.string().optional().nullable(),
+    ingredientes: z.array(z.string()).default([]),
+    pasos: z.array(z.string()).default([]),
+    dato: z.string().optional().nullable(),
+    advertencia: z.string().optional().nullable(),
+    errores: z.any().optional().nullable(),
+    conservacion: z.any().optional().nullable()
+  })
 });
 
 export const collections = { recetas };

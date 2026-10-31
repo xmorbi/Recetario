@@ -1,9 +1,12 @@
 (function () {
   'use strict';
 
+  // Centralización de dominio: window.__SITE_URL lo inyecta Layout.astro en <head>.
+  // Fallback hardcodeado por si el script se carga en un contexto aislado
+  // (tests, storybook, etc.). replace(/\/$/, '') normaliza trailing slash.
   const SITE_CONFIG = {
     nombre: 'Recetario Chileno',
-    urlBase: 'https://recetariochileno.netlify.app',
+    urlBase: (window.__SITE_URL || 'https://recetariochileno.netlify.app').replace(/\/$/, ''),
     // FASE 4C (deuda D6): ruta absoluta. Antes era relativa y desde /recetas/{slug}/ habría resuelto mal.
     imagenDefault: '/img/og-default.jpg'
   };
