@@ -1,0 +1,47 @@
+{
+  "titulo": "Ajiaco chileno",
+  "categoria": "sopas",
+  "tags": [
+    "ajiaco",
+    "sopa",
+    "olla",
+    "carne",
+    "papas"
+  ],
+  "imagen": null,
+  "tiempo": "40 min",
+  "porciones": "4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "500 g de carne asada (vacuno, cerdo o pollo)",
+    "4 papas medianas en cubos",
+    "1 cebolla grande, 2 dientes de ajo, 1 zanahoria",
+    "1 pimentón, orégano, ají de color, comino",
+    "1 L de caldo de carne",
+    "Sal, pimienta, ají seco (opcional)"
+  ],
+  "pasos": [
+    "Sofríe la cebolla, zanahoria, pimentón y ajo en aceite.",
+    "Agrega la carne asada en trozos y las papas.",
+    "Condimenta con orégano, ají de color, comino, sal y pimienta.",
+    "Cubre con el caldo y cocina hasta que las papas estén tiernas.",
+    "Rectifica la sal y sirve caliente."
+  ],
+  "dato": "Es la receta perfecta para reutilizar la carne del asado del día anterior. El ajiaco es un guiso de olla que en Chile se hace en invierno y se sirve con pan para \"mojar\".",
+  "errores": [
+    {
+      "error": "Las papas se me deshicieron y el caldo quedó espeso",
+      "solucion": "Usaste papas que se deshacen fácilmente. Usa papas de las que se mantienen firmes al cocinar y agrégalas al final, para que se cocinen sin deshacerse."
+    },
+    {
+      "error": "El ajiaco me quedó con sabor plano",
+      "solucion": "No doraste bien los aliños. Haz un buen sofrito con la cebolla, el ajo, el pimentón y los condimentos antes de agregar el caldo."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días en recipiente hermético.",
+    "congelador": "Hasta 2 meses (idealmente sin papas).",
+    "recalentar": "A fuego lento con un poco de caldo."
+  }
+}

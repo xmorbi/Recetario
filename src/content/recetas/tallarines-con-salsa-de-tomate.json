@@ -1,0 +1,56 @@
+{
+  "titulo": "Tallarines con salsa de tomate",
+  "categoria": "principales",
+  "tags": [
+    "pasta",
+    "tallarines",
+    "tomate",
+    "salsa",
+    "simple",
+    "cotidiano"
+  ],
+  "imagen": null,
+  "tiempo": "30 min",
+  "porciones": "4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "500 g de tallarines",
+    "1 kg de tomates maduros (o 1 tarro de 400 g de tomates pelados)",
+    "1 cebolla picada",
+    "2 dientes de ajo picados",
+    "3 cucharadas (45 ml) de aceite de oliva",
+    "1 cucharadita (5 g) de azúcar",
+    "Hojas de albahaca fresca",
+    "50 g de queso parmesano o mantecoso rallado",
+    "Sal y pimienta"
+  ],
+  "pasos": [
+    "Pon el aceite de oliva a calentar en una olla y sofríe la cebolla y el ajo hasta que estén transparentes.",
+    "Agrega los tomates pelados y picados (o el tarro). Condimenta con sal, pimienta y azúcar.",
+    "Cocina la salsa a fuego medio-bajo por 15-20 minutos, hasta que espese. Mientras la salsa se cocina, pon a hervir abundante agua con sal en otra olla.",
+    "Cuando el agua esté hirviendo, cocina los tallarines según las instrucciones del paquete (8-12 minutos). Revuelve los primeros minutos para que no se peguen.",
+    "Cuando la salsa esté lista, agrega la albahaca fresca y prueba el punto de sal.",
+    "Escurre los tallarines y mézclalos con la salsa. Sirve con el queso rallado por encima."
+  ],
+  "dato": "Los tallarines con salsa de tomate son el plato de pasta más simple y cotidiano de Chile. La salsa de tomate casera es la base de muchas recetas. El azúcar equilibra la acidez del tomate, y la albahaca fresca le da el toque final. El secreto para que no queden fríos es empezar por la salsa: mientras hierve, se cocina la pasta.",
+  "errores": [
+    {
+      "error": "La salsa me quedó ácida",
+      "solucion": "Usaste tomates muy verdes o no agregaste azúcar. Una cucharadita de azúcar equilibra la acidez."
+    },
+    {
+      "error": "Los tallarines se me pegaron",
+      "solucion": "No revolviste o cocinaste en poca agua. Usa abundante agua (1 L por cada 100 g de pasta) y revuelve los primeros minutos."
+    },
+    {
+      "error": "Los tallarines se me pasaron esperando la salsa",
+      "solucion": "Coordinaste mal los tiempos. Prepara primero la salsa y deja que hierva, y recién ahí cocina la pasta. Así ambos quedan listos al mismo tiempo."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días en recipiente hermético.",
+    "congelador": "La salsa se puede congelar hasta 2 meses. Los tallarines no.",
+    "recalentar": "Sartén a fuego medio 3 minutos."
+  }
+}

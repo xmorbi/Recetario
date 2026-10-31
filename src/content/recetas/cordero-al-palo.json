@@ -1,0 +1,60 @@
+{
+  "titulo": "Cordero al palo",
+  "categoria": "principales",
+  "tags": [
+    "cordero",
+    "asado",
+    "patagonia",
+    "fuego",
+    "tradicional",
+    "magallanes",
+    "parrilla"
+  ],
+  "imagen": null,
+  "tiempo": "5 h",
+  "porciones": "8 a 10 personas",
+  "dificultad": "difícil",
+  "tecnica": "Fuego abierto",
+  "ingredientes": [
+    "1 cordero entero (10-12 kg) o 1 pierna grande (3-4 kg)",
+    "3 cucharadas (45 g) de sal gruesa",
+    "2 cucharadas de merkén",
+    "1 cucharada de orégano seco",
+    "1 cucharada de pimienta negra molida",
+    "4 dientes de ajo machacados",
+    "Leña de roble o espino (o carbón de leña)",
+    "1 palo largo de madera dura (o hierro) para ensartar",
+    "Alambre o cordel para atar"
+  ],
+  "pasos": [
+    "Prepara el fuego: enciende la leña en un hoyo poco profundo o en un asador. Necesitas brasas abundantes y parejas. La leña de roble o espino da el mejor sabor.",
+    "Sazona el cordero generosamente por dentro y por fuera con sal, merkén, orégano, pimienta y ajo. La sal debe cubrir toda la superficie.",
+    "Ensarta el cordero en el palo largo, de la cabeza a la cola si es entero. Ata las patas y las costillas con alambre o cordel para que no se muevan.",
+    "Coloca el palo sobre el fuego, a unos 30-40 cm de las brasas. El cordero debe girar lentamente para cocinarse parejo.",
+    "Cocina por 4-5 horas, girando constantemente. La clave es la paciencia: el cordero se cocina por irradiación del calor, no directamente sobre las llamas.",
+    "A medida que se cocine, la piel se va dorando y crujiendo. Si algún punto se dora demasiado rápido, mueve las brasas o sube el palo.",
+    "Está listo cuando la carne se separa del hueso fácilmente y la piel está crujiente y dorada.",
+    "Retira del fuego, deja reposar 15 minutos y corta en presas. Sirve con papas cocidas o ensalada a la chilena."
+  ],
+  "dato": "El cordero al palo es el plato más emblemático de la Patagonia chilena (Magallanes y Aysén). En Puerto Natales y Punta Arenas es tradición ofrecerlo en las fondas y en las fiestas. La técnica es de origen tehuelche y mapuche: la carne se ensarta en un palo y se cocina junto al fuego, nunca directamente sobre él. La leña de roble o espino (también llamada \"leña de la Patagonia\") es la que da el sabor ahumado característico.",
+  "advertencia": "Trabajar con fuego abierto y un cordero de 10-12 kg es peligroso. Usa guantes gruesos, calzado cerrado y mantén a niños y mascotas alejados del fuego. El palo debe estar bien asegurado para que no gire solo. Ten a mano un extintor o manguera por si el fuego se descontrola.",
+  "errores": [
+    {
+      "error": "El cordero me quedó crudo por dentro y quemado por fuera",
+      "solucion": "El fuego estaba demasiado fuerte o el palo muy cerca de las brasas. El cordero se cocina por irradiación: el palo debe estar a 30-40 cm de las brasas, y el fuego debe ser constante pero no intenso."
+    },
+    {
+      "error": "La carne me quedó seca",
+      "solucion": "Usaste un cordero sin grasa o cocinaste demasiado rápido. Usa cordero con algo de grasa (los corderos magallánicos son naturalmente magros pero tienen grasa). Cocina lentamente, sin apuro."
+    },
+    {
+      "error": "El cordero se me quemó y supo amargo",
+      "solucion": "La piel tenía mucha grasa que goteaba sobre las brasas y hacía llama. Mantén las brasas parejas y retira la grasa que gotea si hace mucha llama."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días en recipiente hermético.",
+    "congelador": "Hasta 2 meses, en porciones.",
+    "recalentar": "Horno o parrilla a 180 °C por 15 minutos para que recupere la textura."
+  }
+}

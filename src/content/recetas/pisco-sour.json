@@ -1,0 +1,55 @@
+{
+  "titulo": "Pisco Sour",
+  "categoria": "bebidas",
+  "tags": [
+    "pisco",
+    "cóctel",
+    "tradicional",
+    "clásico",
+    "fiestas patrias",
+    "verano"
+  ],
+  "imagen": null,
+  "tiempo": "5 min",
+  "porciones": "1 vaso",
+  "dificultad": "fácil",
+  "tecnica": "Coctelería",
+  "ingredientes": [
+    "3 partes de pisco (40° o más, que te guste tomar solo)",
+    "1 parte de jugo de limón de Pica recién exprimido",
+    "1 parte de jarabe de goma (o 2 cucharaditas de azúcar flor)",
+    "1 clara de huevo por cada 2 vasos",
+    "Hielo en cubos",
+    "3-4 gotas de amargo de Angostura por vaso",
+    "Opcional: canela en polvo para decorar"
+  ],
+  "pasos": [
+    "Enfría la coctelera y los vasos 10 minutos en el congelador. Un pisco sour tibio no es un pisco sour.",
+    "Pon en la coctelera: pisco, jugo de limón, jarabe de goma, la clara de huevo y 4-5 cubos de hielo.",
+    "Primero agita en seco (sin hielo) por 10 segundos. Esto airea la clara y es lo que crea la espuma.",
+    "Agrega el hielo y agita de nuevo 15 segundos hasta que la coctelera escarche y se empañe.",
+    "Cuela con colador doble en un vaso helado, sin hielo dentro del vaso.",
+    "Añade 3-4 gotas de amargo de Angostura sobre la espuma. Se dibuja solo.",
+    "Decora con una pizca de canela si quieres. Sirve de inmediato."
+  ],
+  "dato": "La proporción clásica chilena es 3:1:1 (pisco:limón:azúcar). En Perú es más dulce, 4:1:2. La disputa por el origen del pisco sour es uno de los debates gastronómicos más largos de Sudamérica. Chile celebra su \"Día Nacional del Pisco Sour\" el primer sábado de febrero.",
+  "errores": [
+    {
+      "error": "No sale la espuma",
+      "solucion": "Batir en seco sin hielo primero. Esto es CLAVE: la clara necesita aire antes de enfriarse."
+    },
+    {
+      "error": "Sabe muy ácido o desequilibrado",
+      "solucion": "Ajustar la cantidad de limón o de jarabe según la acidez de los limones. Los limones varían mucho de un día a otro; prueba y ajusta."
+    },
+    {
+      "error": "Sabe a \"medicina\"",
+      "solucion": "Usar un pisco demasiado barato o muy joven. Elige uno de 40° que te guste tomar solo."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Se consume al momento. No se guarda.",
+    "congelador": "No aplica.",
+    "recalentar": "No aplica."
+  }
+}

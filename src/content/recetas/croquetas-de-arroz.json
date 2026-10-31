@@ -1,0 +1,51 @@
+{
+  "titulo": "Croquetas de Arroz",
+  "categoria": "principales",
+  "tags": [
+    "croquetas de arroz",
+    "arroz",
+    "champiñones",
+    "fritura",
+    "arroces"
+  ],
+  "imagen": null,
+  "tiempo": "40 min",
+  "porciones": "4 a 6 personas",
+  "dificultad": "media",
+  "tecnica": "Fritura",
+  "ingredientes": [
+    "1 1/2 taza (300 g) de arroz graneado, ya cocido y frío",
+    "150 g de champiñones",
+    "2 huevos",
+    "1 taza (100 g) de pan rallado",
+    "Jugo de 1/2 limón",
+    "2 cucharadas de perejil picado",
+    "1 taza (250 ml) de aceite para freír",
+    "Sal",
+    "Pimienta"
+  ],
+  "pasos": [
+    "Mezclar el arroz graneado frío con los champiñones salteados y cortados en tiritas.",
+    "Aliñar con sal, jugo de limón, pimienta y perejil.",
+    "Formar croquetas, pasar por huevo batido y luego por pan rallado.",
+    "Refrigerar 20 minutos para que firmen y no se desarmen al freír.",
+    "Freír en aceite caliente (170-180 °C) hasta dorar por ambos lados.",
+    "Servir acompañadas de ensaladas y espolvoreadas con perejil picado."
+  ],
+  "dato": "El arroz debe estar graneado, firme y frío para que las croquetas mantengan la forma. Es una receta típica de aprovechamiento: sobra arroz del almuerzo y al día siguiente se transforma en croquetas.",
+  "errores": [
+    {
+      "error": "Las croquetas se me desarman al freír",
+      "solucion": "La mezcla estaba muy húmeda o el arroz estaba caliente. Usa arroz graneado frío, refrigera la mezcla 20 minutos antes de formar las croquetas y usa suficiente pan rallado para ligar."
+    },
+    {
+      "error": "Las croquetas me quedaron aceitosas",
+      "solucion": "El aceite no estaba caliente. Fríe a 170-180 °C: si el aceite está tibio, la croqueta absorbe grasa y queda pesada."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "2 días",
+    "congelador": "Se pueden congelar ya formadas y freír directamente.",
+    "recalentar": "Horno o freidora de aire a 180 °C por 5-8 minutos."
+  }
+}

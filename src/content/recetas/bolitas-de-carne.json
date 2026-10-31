@@ -1,0 +1,48 @@
+{
+  "titulo": "Bolitas de Carne",
+  "categoria": "principales",
+  "tags": [
+    "bolitas de carne",
+    "carne molida",
+    "fritura",
+    "aperitivo",
+    "cóctel"
+  ],
+  "imagen": null,
+  "tiempo": "25 min",
+  "porciones": "4 a 6 personas",
+  "dificultad": "fácil",
+  "tecnica": "Fritura",
+  "ingredientes": [
+    "300 g de carne molida",
+    "1/2 cebolla",
+    "1/2 marraqueta",
+    "1/4 taza de leche",
+    "1 huevo",
+    "Sal (a gusto)",
+    "Perejil o cilantro",
+    "Aceite para freír"
+  ],
+  "pasos": [
+    "Mezclar la carne con el huevo, la cebolla picada en cuadritos finos y la verdura.",
+    "Aliñar.",
+    "Agregar el pan previamente remojado en la leche y bien escurrido.",
+    "Formar bolitas y freír en aceite caliente (170-180 °C).",
+    "Servir calientes o frías."
+  ],
+  "dato": "Remojar la marraqueta en leche y escurrirla bien antes de incorporarla evita que las bolitas queden secas.",
+  "errores": [
+    {
+      "error": "Las bolitas se me desarman al freír",
+      "solucion": "La mezcla está muy húmeda o le falta ligazón. Agrega un poco más de pan remojado o un huevo extra, y refrigera 15 minutos antes de freír."
+    },
+    {
+      "error": "Las bolitas me quedaron aceitosas",
+      "solucion": "El aceite no estaba caliente. Fríe a 170-180 °C: si el aceite está tibio, la bolita absorbe grasa y queda pesada."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "2 días",
+    "recalentar": "En horno o sartén."
+  }
+}

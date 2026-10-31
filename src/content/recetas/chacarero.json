@@ -1,0 +1,54 @@
+{
+  "titulo": "Chacarero",
+  "categoria": "sandwiches",
+  "tags": [
+    "sándwich",
+    "callejero",
+    "chacarero",
+    "porotos verdes",
+    "vacuno",
+    "almuerzo"
+  ],
+  "imagen": null,
+  "tiempo": "25 min",
+  "porciones": "2 sándwiches",
+  "dificultad": "fácil",
+  "tecnica": "Plancha",
+  "ingredientes": [
+    "2 panes amasados individuales (o 2 marraquetas pequeñas)",
+    "300 g de churrasco de vacuno (posta, lomo o asiento) en 2 filetes",
+    "1 taza (150 g) de porotos verdes cocidos y escurridos",
+    "2 tomates maduros en rodajas",
+    "1 ají verde sin semillas, en tiras finas (opcional)",
+    "Mayonesa casera o de buena calidad",
+    "Sal, pimienta y aceite"
+  ],
+  "pasos": [
+    "Cocina los porotos verdes en agua con sal hirviendo por 5-7 minutos. Deben quedar tiernos pero firmes. Escurre y reserva.",
+    "Sazona los filetes con sal y pimienta. Calienta una plancha o sartén a fuego alto con un poco de aceite.",
+    "Sella la carne 2-3 minutos por lado. Debe quedar dorada por fuera y jugosa por dentro. Retira y deja reposar.",
+    "Calienta los panes cortados por la mitad, 1 minuto por lado en la misma plancha.",
+    "Arma: pan, carne, porotos verdes, tomate, ají (si usas), y mayonesa en línea.",
+    "Sirve inmediatamente, apretando ligeramente el sándwich con la mano para que se compacte."
+  ],
+  "dato": "El chacarero nació en la Vega Central de Santiago, el mercado de abastos más grande de la capital. Los porotos verdes son lo distintivo: ningún otro sándwich del mundo los usa como ingrediente principal. Hay dos escuelas sobre el ají: los que dicen que es esencial y los que lo consideran opcional.",
+  "errores": [
+    {
+      "error": "Los porotos verdes me quedaron duros o pasados",
+      "solucion": "Los cocinaste demasiado o muy poco. 5-7 minutos exactos: deben quedar tiernos pero firmes. Si están duros, la textura arruina el bocado."
+    },
+    {
+      "error": "La carne me quedó seca",
+      "solucion": "La cocinaste por demasiado tiempo. Un churrasco delgado se hace en 2-3 minutos por lado a fuego alto."
+    },
+    {
+      "error": "El sándwich me quedó aguado",
+      "solucion": "Los porotos verdes tenían agua o el tomate estaba muy maduro. Escurre muy bien los porotos y seca el tomate con papel absorbente."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "No se guarda armado. Los componentes se guardan hasta 3 días.",
+    "congelador": "No aplica.",
+    "recalentar": "La carne y el pan se recalentan. Los vegetales, no."
+  }
+}

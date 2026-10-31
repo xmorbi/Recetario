@@ -1,0 +1,49 @@
+{
+  "titulo": "Chuletas de cerdo",
+  "categoria": "principales",
+  "tags": [
+    "cerdo",
+    "chuleta",
+    "sartén",
+    "plancha",
+    "plato principal",
+    "cotidiano"
+  ],
+  "imagen": null,
+  "tiempo": "25 min",
+  "porciones": "4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Sartén o plancha",
+  "ingredientes": [
+    "4 chuletas de cerdo (lomo o centro) de 1,5 cm de grosor",
+    "2 dientes de ajo machacados",
+    "1 cucharadita de orégano",
+    "1 cucharadita de ají de color",
+    "Sal y pimienta",
+    "2 cucharadas (30 ml) de aceite",
+    "Opcional: jugo de 1/2 limón"
+  ],
+  "pasos": [
+    "Sazona las chuletas con ajo, orégano, ají de color, sal y pimienta. Déjalas reposar 15 minutos.",
+    "Calienta el aceite en una sartén o plancha a fuego medio-alto.",
+    "Cocina las chuletas 3-4 minutos por lado, hasta que estén doradas y cocidas por dentro.",
+    "Si quieres, rocía con jugo de limón al final.",
+    "Deja reposar 3 minutos antes de servir. Acompaña con papas o ensalada."
+  ],
+  "dato": "Las chuletas de cerdo son el plato de día de semana chileno. Se hacen a la plancha o sartén en menos de 25 minutos. El ají de color y el orégano les dan el sabor de casa.",
+  "errores": [
+    {
+      "error": "Las chuletas me quedaron secas",
+      "solucion": "Las cocinaste demasiado. La chuleta de cerdo se hace en 3-4 minutos por lado; si la dejas más, se seca."
+    },
+    {
+      "error": "Las chuletas me quedaron crudas por dentro",
+      "solucion": "El fuego estaba muy alto. Cocina a fuego medio para que se cocinen parejo sin quemarse por fuera."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 2 días en recipiente hermético.",
+    "congelador": "No recomendado, pierden jugosidad.",
+    "recalentar": "Sartén a fuego medio 1 minuto por lado."
+  }
+}

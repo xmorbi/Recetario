@@ -1,0 +1,40 @@
+{
+  "titulo": "Huevos Revueltos con Palta y Queso",
+  "categoria": "once",
+  "tags": [
+    "huevos revueltos",
+    "palta",
+    "queso",
+    "keto",
+    "desayuno",
+    "low carb"
+  ],
+  "imagen": null,
+  "tiempo": "10 min",
+  "porciones": "1 persona",
+  "dificultad": "fácil",
+  "tecnica": "Sartén",
+  "ingredientes": [
+    "2 huevos",
+    "1/2 palta madura",
+    "60 g de queso fresco o semiduro",
+    "1 cucharadita de aceite de oliva",
+    "Sal y pimienta a gusto"
+  ],
+  "pasos": [
+    "Batir ligeramente los huevos en un bol con una pizca de sal y pimienta.",
+    "Calentar el aceite de oliva en una sartén antiadherente a fuego medio-bajo.",
+    "Verter los huevos y revolver suavemente con una espátula hasta que cuajen pero queden cremosos.",
+    "Servir los huevos en un plato y acompañar con la palta cortada en cubos o pisada y el queso en trozos."
+  ],
+  "dato": "La palta aporta grasas saludables y el queso suma proteína y calcio, convirtiendo este plato en un desayuno keto completo. Puedes usar queso de cabra, mantecoso o mozzarella.",
+  "errores": [
+    {
+      "error": "Huevos secos",
+      "solucion": "Cocina a fuego lento y retira del calor cuando aún estén ligeramente húmedos; el calor residual termina de cocinarlos."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Servir de inmediato. No se recomienda guardar huevos revueltos."
+  }
+}

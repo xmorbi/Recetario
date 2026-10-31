@@ -1,0 +1,51 @@
+{
+  "titulo": "Tortilla de Champiñones",
+  "categoria": "once",
+  "tags": [
+    "tortilla de champiñones",
+    "huevos",
+    "champiñones",
+    "sartén",
+    "tortilla",
+    "huevos"
+  ],
+  "imagen": null,
+  "tiempo": "20 min",
+  "porciones": "4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Sartén",
+  "ingredientes": [
+    "200 g de champiñones",
+    "8 huevos",
+    "1 diente de ajo",
+    "2 cucharadas de mantequilla",
+    "2 cucharaditas de aceite",
+    "Perejil",
+    "Sal",
+    "Pimienta"
+  ],
+  "pasos": [
+    "Limpiar los champiñones, picarlos y ponerlos a fuego suave en olla tapada sin agua.",
+    "Calentar el aceite y la mantequilla en una sartén.",
+    "Poner a freír el ajo picado fino, el perejil picado y los champiñones aliñados con sal y pimienta.",
+    "Batir los huevos y vaciarlos en la sartén.",
+    "Revolver rápido para que se integren bien los ingredientes.",
+    "Mover la tortilla y despegar los bordes a medida que se cuece.",
+    "Cuando esté dorada se dobla. Servir bien caliente."
+  ],
+  "dato": "Cocinar los champiñones tapados y sin agua concentra su sabor y evita que suelten líquido en la tortilla.",
+  "errores": [
+    {
+      "error": "Tortilla aguada",
+      "solucion": "Cocina los champiñones hasta que pierdan su agua antes de agregar los huevos; si sueltan mucho líquido, escúrrelos."
+    },
+    {
+      "error": "Tortilla que se pega",
+      "solucion": "Usa una sartén antiadherente y suficiente aceite y mantequilla; mueve la sartén para despegar los bordes."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Servir de inmediato",
+    "recalentar": "Se puede recalentar en sartén a fuego suave."
+  }
+}

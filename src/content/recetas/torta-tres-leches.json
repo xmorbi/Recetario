@@ -1,0 +1,56 @@
+{
+  "titulo": "Torta tres leches",
+  "categoria": "dulces",
+  "tags": [
+    "torta",
+    "tres leches",
+    "dulce",
+    "horno",
+    "cumpleaños",
+    "reposteria"
+  ],
+  "imagen": null,
+  "tiempo": "1 h + frío",
+  "porciones": "12 porciones",
+  "dificultad": "media",
+  "tecnica": "Horno",
+  "ingredientes": [
+    "Bizcocho: 5 huevos",
+    "Bizcocho: 200 g de azúcar",
+    "Bizcocho: 200 g de harina",
+    "Bizcocho: 1 cucharadita de polvos de hornear",
+    "Bizcocho: 1 cucharadita de vainilla",
+    "Mezcla de tres leches: 1 tarro de leche condensada (397 g)",
+    "Mezcla de tres leches: 1 tarro de leche evaporada (354 ml)",
+    "Mezcla de tres leches: 1 taza de crema",
+    "Cubierta: 300 ml de crema para batir",
+    "Cubierta: 3 cucharadas de azúcar flor",
+    "Cubierta: canela en polvo (opcional)"
+  ],
+  "pasos": [
+    "Precalienta el horno a 180 °C. Engrasa un molde rectangular.",
+    "Bate los huevos con el azúcar hasta que estén pálidos y espumosos. Agrega la vainilla.",
+    "Incorpora la harina cernida con los polvos de hornear con movimientos envolventes.",
+    "Vierte en el molde y hornea 25-30 minutos. Deja enfriar.",
+    "Mezcla la leche condensada, evaporada y crema.",
+    "Pincha el bizcocho con un tenedor y vierte la mezcla de tres leches lentamente, dejando que absorba.",
+    "Refrigera al menos 4 horas (mejor toda la noche).",
+    "Bate la crema con el azúcar y cubre la torta. Espolvorea canela si quieres."
+  ],
+  "dato": "La torta tres leches es de origen latinoamericano y en Chile se volvió clásica de cumpleaños y celebraciones. Se llama así por las tres leches que la empapan: condensada, evaporada y crema. Es una torta húmeda y dulce, que se sirve bien fría.",
+  "errores": [
+    {
+      "error": "Bizcocho no absorbe la leche",
+      "solucion": "No dejes de pinchar el bizcocho ni viertas la leche de golpe; pincha con un tenedor y vierte de a poco, dejando que absorba."
+    },
+    {
+      "error": "Queda muy dulce o empalagosa",
+      "solucion": "No uses más leche condensada de la indicada ni sirvas sin contraste; mantén la proporción de 1 tarro de cada leche y sirve con crema batida sin azúcar."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 4 días en recipiente hermético.",
+    "congelador": "No recomendado, la crema se corta.",
+    "recalentar": "Se consume fría."
+  }
+}

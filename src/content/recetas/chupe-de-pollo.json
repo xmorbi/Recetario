@@ -1,0 +1,58 @@
+{
+  "titulo": "Chupe de pollo",
+  "categoria": "sopas",
+  "tags": [
+    "pollo",
+    "chupe",
+    "sopa",
+    "olla",
+    "comfort",
+    "casero"
+  ],
+  "imagen": null,
+  "tiempo": "50 min",
+  "porciones": "4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "1 pollo trozado (o 4 trutros, 1 kg aprox.)",
+    "4 papas medianas en cubos",
+    "1 cebolla grande picada",
+    "2 dientes de ajo picados",
+    "1 pimentón rojo en cubos",
+    "2 tomates maduros picados",
+    "1 taza (250 ml) de crema o leche evaporada",
+    "1 taza (100 g) de pan rallado",
+    "100 g de queso parmesano o mantecoso rallado",
+    "2 cucharadas (30 g) de mantequilla",
+    "Sal, pimienta, orégano y merkén"
+  ],
+  "pasos": [
+    "Cocina el pollo en agua con sal por 20 minutos. Retira, desmenuza la carne y reserva el caldo.",
+    "Sofríe la cebolla, el ajo y el pimentón en mantequilla hasta que estén transparentes. Agrega el tomate y condimenta.",
+    "Añade las papas y el caldo de pollo (unos 2 litros). Cocina 15 minutos hasta que las papas estén tiernas.",
+    "Incorpora el pollo desmenuzado y la crema. Cocina 5 minutos más.",
+    "Reparte en pailas de greda individuales o en una fuente para horno.",
+    "Espolvorea pan rallado y queso por encima. Gratina 5 minutos en el horno a 200 °C, hasta dorar."
+  ],
+  "dato": "El chupe de pollo es la comida de casa chilena por excelencia. Se hace cuando alguien está resfriado, cuando hace frío, o cuando hay que alimentar a mucha gente. Es una adaptación del chupe andino (que originalmente se hacía con papa y queso).",
+  "errores": [
+    {
+      "error": "El chupe me quedó aguado",
+      "solucion": "No agregaste suficiente pan rallado o no dejaste reducir. El chupe debe tener consistencia de guiso espeso. Agrega más pan rallado o deja reducir destapado 5 minutos."
+    },
+    {
+      "error": "El pollo me quedó seco",
+      "solucion": "Lo cocinaste demasiado. El pollo se desmenuza cuando está cocido, en 20 minutos. No lo dejes más."
+    },
+    {
+      "error": "El chupe me quedó con sabor plano",
+      "solucion": "No condimentaste bien. El chupe necesita sal, pimienta, orégano y merkén. Prueba y ajusta antes de gratinar."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días en recipiente hermético.",
+    "congelador": "Hasta 2 meses, idealmente sin papas.",
+    "recalentar": "A fuego lento en la olla, agregando un poco de caldo si espesa demasiado."
+  }
+}

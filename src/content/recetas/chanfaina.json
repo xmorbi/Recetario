@@ -1,0 +1,59 @@
+{
+  "titulo": "Chanfaina",
+  "categoria": "principales",
+  "tags": [
+    "chanfaina",
+    "olla",
+    "popular",
+    "tradicional",
+    "invierno",
+    "cordero"
+  ],
+  "imagen": null,
+  "tiempo": "1 h 30 min",
+  "porciones": "4 personas",
+  "dificultad": "media",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "500 g de menudencias de cordero (hígado, corazón, pulmón, riñón)",
+    "1 cebolla grande picada fina",
+    "3 dientes de ajo picados",
+    "1 pimentón rojo en cubos",
+    "2 tomates maduros picados",
+    "2 papas medianas en cubos",
+    "1 cucharadita de ají de color",
+    "1 cucharadita de orégano",
+    "1 hoja de laurel",
+    "1 taza (250 ml) de caldo de cordero o agua",
+    "Sal, pimienta y aceite"
+  ],
+  "pasos": [
+    "Lava bien las menudencias. Córtalas en trozos pequeños y uniformes.",
+    "Sofríe la cebolla y el ajo en aceite hasta que estén transparentes.",
+    "Agrega el pimentón y el tomate. Cocina 5 minutos hasta que se deshaga el tomate.",
+    "Incorpora las menudencias y dóralas ligeramente. Condimenta con ají de color, orégano, sal y pimienta.",
+    "Vierte el caldo, agrega el laurel y las papas. Cocina a fuego lento 30-40 minutos hasta que las papas estén tiernas.",
+    "Rectifica la sal y sirve caliente con arroz o pan."
+  ],
+  "dato": "La chanfaina es un plato de origen español que en Chile se volvió tradición campesina, especialmente en la zona central y sur. Se prepara con las menudencias del cordero que se faenaba en el campo. Antiguamente era un plato de \"aprovechamiento\": no se botaba nada del animal. Hoy es un plato de invierno muy apreciado por quienes crecieron comiéndolo.",
+  "advertencia": "Lava muy bien las menudencias con agua y limón antes de cocinar. El hígado y el riñón son los que tienen sabor más intenso, así que lávalos varias veces hasta que el agua salga clara.",
+  "errores": [
+    {
+      "error": "Las menudencias me quedaron duras",
+      "solucion": "Las cocinaste poco tiempo o a fuego muy alto. Las menudencias necesitan cocción lenta. Si están duras, sigue cocinando 15-20 minutos más."
+    },
+    {
+      "error": "La chanfaina me quedó con sabor demasiado fuerte",
+      "solucion": "No lavaste bien las menudencias. Lava varias veces con agua y limón antes de cocinar. El hígado y el riñón son los que tienen sabor más intenso."
+    },
+    {
+      "error": "El guiso me quedó aguado",
+      "solucion": "No dejaste reducir el caldo. Si queda muy líquido, destapa y deja reducir 10 minutos a fuego medio."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días en recipiente hermético.",
+    "congelador": "Hasta 2 meses.",
+    "recalentar": "A fuego lento en la olla, agregando un poco de caldo si espesa demasiado."
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "titulo": "Pebre chileno",
+  "categoria": "ensaladas",
+  "tags": [
+    "salsa",
+    "picoteo",
+    "acompañamiento",
+    "fresco",
+    "tradicional",
+    "ensalada"
+  ],
+  "imagen": "img/Pebre-chileno.jpg",
+  "tiempo": "15 min",
+  "porciones": "4 personas",
+  "dificultad": "muy fácil",
+  "tecnica": "Sin cocción",
+  "ingredientes": [
+    "1 tomate grande maduro, picado en cubos pequeños",
+    "1 cebolla mediana, picada en cubos pequeños",
+    "1 diente de ajo picado muy fino",
+    "3 cucharadas de perejil fresco picado",
+    "3 cucharadas de cilantro fresco picado",
+    "1 trozo de ají verde picado (opcional)",
+    "2 cucharadas de aceite de oliva",
+    "Sal y pimienta al gusto"
+  ],
+  "pasos": [
+    "Pica todos los ingredientes en cubos muy pequeños y uniformes.",
+    "En un bol, mezcla el tomate, la cebolla, el ajo, el perejil, el cilantro y el ají.",
+    "Condimenta con el aceite de oliva, la sal y la pimienta. Mezcla bien.",
+    "Deja reposar por al menos 15 minutos para que los sabores se integren.",
+    "Sirve con pan amasado, marraqueta o como acompañamiento de carnes."
+  ],
+  "dato": "El pebre es el acompañamiento más popular de la mesa chilena. Se sirve en todas las casas, especialmente en las once y en los asados.",
+  "errores": [
+    {
+      "error": "La cebolla pica demasiado",
+      "solucion": "No dejes la cebolla cruda sin tratar; pícala finamente y déjala en un colador bajo el chorro de agua fría, o remójala en agua con hielo por 10 minutos."
+    },
+    {
+      "error": "Textura aguada (sopa)",
+      "solucion": "No uses procesadora ni licuadora; pica todo a cuchillo, con paciencia, en cubos muy pequeños para mantener la consistencia."
+    },
+    {
+      "error": "Sabor desequilibrado",
+      "solucion": "No sirvas sin ajustar la acidez ni el picante; prueba y ajusta poco a poco el limón y el ají."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días en frasco de vidrio cerrado. Soltará agua, escúrrelo antes de servir.",
+    "congelador": "No recomendado, el tomate y la cebolla pierden textura.",
+    "recalentar": "Se consume frío o a temperatura ambiente."
+  }
+}

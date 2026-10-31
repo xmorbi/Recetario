@@ -1,0 +1,46 @@
+{
+  "titulo": "Ensalada de betarraga",
+  "categoria": "ensaladas",
+  "tags": [
+    "ensalada",
+    "betarraga",
+    "fresca",
+    "acompañamiento",
+    "vegetariano"
+  ],
+  "imagen": null,
+  "tiempo": "10 min + cocción",
+  "porciones": "4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Fresca",
+  "ingredientes": [
+    "2 betarragas medianas cocidas",
+    "1 cebolla morada pequeña",
+    "2 cucharadas (30 ml) de aceite de oliva",
+    "1 cucharada (15 ml) de vinagre",
+    "Sal y pimienta",
+    "Cilantro fresco picado (opcional)"
+  ],
+  "pasos": [
+    "Cuece las betarragas en agua con sal hasta que estén tiernas (30-40 minutos). Pélalas y córtalas en cubos.",
+    "Corta la cebolla morada en pluma fina y remójala en agua fría 10 minutos. Escurre.",
+    "Mezcla la betarraga con la cebolla, el aceite, el vinagre, sal y pimienta.",
+    "Agrega cilantro picado si quieres. Sirve fría."
+  ],
+  "dato": "La ensalada de betarraga es un clásico de la mesa chilena, sobre todo en invierno. Se hace con betarraga cocida, cebolla morada y aceite de oliva. La betarraga tiñe todo de rojo, así que no te asustes si la cebolla queda rosada.",
+  "errores": [
+    {
+      "error": "La betarraga me quedó dura",
+      "solucion": "No la cocinaste el tiempo suficiente. La betarraga necesita 30-40 minutos de cocción. Pincha con un cuchillo para verificar."
+    },
+    {
+      "error": "La cebolla me quedó muy fuerte",
+      "solucion": "No la remojaste en agua fría. El agua le quita el picor sin perder textura."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 2 días en recipiente hermético.",
+    "congelador": "No recomendado.",
+    "recalentar": "Se consume fría."
+  }
+}

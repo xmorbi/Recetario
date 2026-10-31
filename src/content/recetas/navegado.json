@@ -1,0 +1,52 @@
+{
+  "titulo": "Navegado",
+  "categoria": "bebidas",
+  "tags": [
+    "bebida",
+    "alcohol",
+    "vino",
+    "invierno",
+    "caliente",
+    "tradicional"
+  ],
+  "imagen": null,
+  "tiempo": "15 min",
+  "porciones": "4 vasos",
+  "dificultad": "muy fácil",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "1 botella de vino tinto (Cabernet Sauvignon, Merlot o vino de la zona), de buena calidad",
+    "2 naranjas en rodajas (con cáscara bien lavada)",
+    "1 rama de canela",
+    "3 clavos de olor",
+    "3 cucharadas de azúcar (ajustar al gusto)",
+    "Opcional: 1 chorrito de pisco o aguardiente"
+  ],
+  "pasos": [
+    "En una olla, pon el vino tinto con las rodajas de naranja, la canela y los clavos de olor.",
+    "Calienta a fuego muy bajo. No dejes que hierva: el alcohol se evapora y el vino se amarga.",
+    "Cuando esté caliente, añade el azúcar y revuelve hasta disolver.",
+    "Prueba y ajusta el dulzor y las especias. Si quieres, añade un chorrito de pisco.",
+    "Cuela si prefieres y sirve caliente en vasos o tazas. Decora con una rodaja de naranja."
+  ],
+  "dato": "El navegado es la bebida de invierno chilena por excelencia, típica de las tardes frías y lluviosas. Se llama así porque \"navega\" entre el vino y las especias. En el sur se le agrega a veces un chorrito de aguardiente para \"espantar el frío\".",
+  "errores": [
+    {
+      "error": "Sabe a alcohol evaporado o amargo",
+      "solucion": "Hervir el vino. Calienta a fuego muy bajo y retira antes de que hierva. El vino debe estar caliente, no hirviendo."
+    },
+    {
+      "error": "Demasiado dulce o especiado",
+      "solucion": "Exagerar con el azúcar, la canela o los clavos. Empieza con menos y ajusta al gusto. Las especias deben sentirse, no dominar."
+    },
+    {
+      "error": "Sabe a vino barato",
+      "solucion": "Usar vino de mala calidad. Usa un vino que te gustaría tomar solo; si no te gusta, tampoco sabrá bien caliente."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 2 días en botella cerrada. Recalienta suavemente antes de servir.",
+    "congelador": "No recomendado.",
+    "recalentar": "A fuego muy bajo, sin hervir, hasta que esté caliente."
+  }
+}

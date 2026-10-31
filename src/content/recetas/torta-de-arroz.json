@@ -1,0 +1,50 @@
+{
+  "titulo": "Torta de Arroz",
+  "categoria": "principales",
+  "tags": [
+    "torta de arroz",
+    "arroz",
+    "hígados de pollo",
+    "jamón",
+    "pickles",
+    "arroces"
+  ],
+  "imagen": null,
+  "tiempo": "1 h 15 min",
+  "porciones": "6 a 8 personas",
+  "dificultad": "media",
+  "tecnica": "Olla y armado",
+  "ingredientes": [
+    "3 tazas de arroz",
+    "1/2 kg de hígados de pollo",
+    "1 bolsa de pickles",
+    "1/2 kg de jamón planchado",
+    "1/2 taza de mayonesa",
+    "1 cucharada de perejil picado",
+    "Aceite",
+    "Sal",
+    "Pimienta",
+    "Palta",
+    "Pimiento",
+    "Aceitunas para decorar"
+  ],
+  "pasos": [
+    "Cocer el arroz en abundante agua con sal, escurrir, enjuagar con agua caliente y enfriar.",
+    "Picar el jamón y los pickles finos.",
+    "Cocer los hígados y luego saltearlos en un poco de aceite y aliños.",
+    "Molerlos bien y mezclarlos con la mitad de los pickles, perejil y 1 cucharada de mayonesa.",
+    "Mezclar el arroz con la mayonesa y el resto de los pickles. Aliñar y sazonar.",
+    "Poner una capa de arroz en una fuente redonda, cubrir con los hígados molidos y completar la otra capa de la torta con el resto del arroz.",
+    "Decorar con redondelas de palta, aceitunas y tiritas de pimiento asado y pelado."
+  ],
+  "dato": "El arroz se enjuaga con agua caliente después de cocido para eliminar el almidón y que quede suelto.",
+  "errores": [
+    {
+      "error": "Torta que se desarma",
+      "solucion": "Presiona bien cada capa de arroz y refrigera 30 minutos antes de desmoldar."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Mantener refrigerada hasta 2 días. Decorar con palta al momento de servir."
+  }
+}

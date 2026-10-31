@@ -1,0 +1,55 @@
+{
+  "titulo": "Pastel de choclo",
+  "categoria": "principales",
+  "tags": [
+    "choclo",
+    "horno",
+    "plato principal",
+    "tradicional",
+    "verano"
+  ],
+  "imagen": "img/Pastel-de-choclo.jpg",
+  "tiempo": "75 min",
+  "porciones": "6 personas",
+  "dificultad": "media",
+  "tecnica": "Horno",
+  "ingredientes": [
+    "6 choclos grandes rallados (o 1 kg de choclo congelado)",
+    "1 taza de leche",
+    "1 cucharada de mantequilla",
+    "Albahaca fresca picada",
+    "500 g de carne picada",
+    "2 cebollas picadas finas",
+    "Comino, ají de color, sal y pimienta",
+    "3 huevos duros, 12 aceitunas, 50 g de pasas",
+    "1 cucharada de azúcar para gratinar"
+  ],
+  "pasos": [
+    "Prepara el pino como para las empanadas: sofríe la cebolla, agrega la carne y condimenta.",
+    "Cocina el choclo rallado con la leche y la mantequilla a fuego bajo por 15 minutos hasta que espese.",
+    "Agrega la albahaca picada y sal a la pasta de choclo.",
+    "En una fuente de greda, extiende el pino. Reparte el huevo duro, las aceitunas y las pasas.",
+    "Cubre con la pasta de choclo y espolvorea azúcar por encima.",
+    "Hornea a 200 °C por 25 a 30 minutos hasta que la superficie esté dorada."
+  ],
+  "dato": "El azúcar forma esa costra dorada que contrasta con el relleno salado. Algunos prefieren la pasta con hollejo (más rústica) y otros la cuelan para una textura más fina; es una elección personal, no un error.",
+  "errores": [
+    {
+      "error": "Pasta de choclo aguada",
+      "solucion": "El choclo suelta mucha agua al cocinarse. Cocina la pasta a fuego bajo hasta que espese y se despegue del fondo de la olla."
+    },
+    {
+      "error": "Falta de sabor en el pino",
+      "solucion": "Sofríe bien la cebolla, condimenta con comino y ají de color, y deja que el pino repose para que se concentren los sabores."
+    },
+    {
+      "error": "El pastel queda crudo en el centro",
+      "solucion": "No abras la puerta del horno durante los primeros 20 minutos: el cambio brusco de temperatura corta la cocción. Si al pinchar el centro aún está líquido, tapa con papel aluminio y hornea 5-10 minutos más a 180 °C."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 2 días. Cúbrelo con papel plástico para que no absorba olores.",
+    "congelador": "No recomendado. La pasta de choclo tiende a cortarse y las papas pierden textura.",
+    "recalentar": "En el horno a 180°C por 15 minutos para que recupere la costra dorada."
+  }
+}

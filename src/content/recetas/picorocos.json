@@ -1,0 +1,47 @@
+{
+  "titulo": "Picorocos",
+  "categoria": "mar",
+  "tags": [
+    "picoroco",
+    "marisco",
+    "chiloé",
+    "patrimonio",
+    "sur",
+    "tradicional"
+  ],
+  "imagen": null,
+  "tiempo": "30 min",
+  "porciones": "4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "8 picorocos frescos",
+    "1 cebolla en pluma",
+    "2 dientes de ajo",
+    "1 hoja de laurel",
+    "Sal",
+    "Mayonesa casera o pebre para acompañar"
+  ],
+  "pasos": [
+    "Lava bien los picorocos bajo el chorro de agua fría.",
+    "En una olla grande, pon agua con sal, la cebolla, el ajo y el laurel. Lleva a hervor.",
+    "Cocina los picorocos 15-20 minutos, hasta que la concha se abra ligeramente.",
+    "Retira y sirve calientes, con mayonesa o pebre. Se come la carne que está dentro de la concha, con un tenedor o una pinza."
+  ],
+  "dato": "El picoroco es un crustáceo endémico de la costa de Chiloé, conocido como \"cangrejo pigmeo\" o \"balano gigante\". Su carne es dulce y jugosa, parecida a la del centollo. Es uno de los mariscos más preciados del sur de Chile y solo se encuentra en la zona de Chiloé y Guaitecas.",
+  "errores": [
+    {
+      "error": "Se pasan de cocción",
+      "solucion": "Cocinarlos demasiado tiempo. Los picorocos se hacen en 15-20 minutos. Si los dejas más, la carne se endurece."
+    },
+    {
+      "error": "Saben a \"mar viejo\"",
+      "solucion": "Usar picorocos que no están frescos. Deben estar vivos al momento de cocinar (la concha se cierra si los tocas)."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 2 días cocidos en recipiente hermético.",
+    "congelador": "No recomendado, la carne pierde textura.",
+    "recalentar": "Al vapor 3-5 minutos o en microondas 1 minuto."
+  }
+}

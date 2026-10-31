@@ -1,0 +1,53 @@
+{
+  "titulo": "Arroz con Panitas de Pollo",
+  "categoria": "principales",
+  "tags": [
+    "arroz con panitas de pollo",
+    "arroz",
+    "panitas",
+    "pollo",
+    "crema",
+    "arroces"
+  ],
+  "imagen": null,
+  "tiempo": "50 min",
+  "porciones": "4 a 6 personas",
+  "dificultad": "media",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "2 tazas de arroz",
+    "1 taza de panitas",
+    "1/2 kg de arvejitas cocidas",
+    "1/2 kg de queso mantecoso",
+    "4 yemas",
+    "4 cucharadas colmadas de crema",
+    "2 cucharadas de maicena",
+    "3 cucharadas de aceite",
+    "1 ramita de apio",
+    "1 cucharada de mantequilla",
+    "1 diente de ajo",
+    "Sal",
+    "Pimienta"
+  ],
+  "pasos": [
+    "Freír el arroz con el diente de ajo y sal.",
+    "Agregar la ramita de apio y el agua hirviendo.",
+    "Cocer a fuego lento unos 20 minutos.",
+    "Freír las panitas en mantequilla aliñadas con sal y pimienta.",
+    "Agregar las arvejitas, revolver y luego incorporar esta preparación al arroz.",
+    "Batir las yemas con la maicena, añadir la crema, diluir en 1 taza de agua caliente y poner a fuego suave revolviendo constantemente hasta que espese.",
+    "Agregar el queso cortado en trocitos y dejar que se funda sin que hierva.",
+    "Servir el arroz bañado con esta salsa."
+  ],
+  "dato": "La salsa debe espesar pero no hervir una vez que se agrega el queso, para que no se corte.",
+  "errores": [
+    {
+      "error": "Salsa cortada",
+      "solucion": "Baja el fuego antes de agregar la crema y las yemas; no dejes que hierva."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "2 días",
+    "recalentar": "A fuego lento."
+  }
+}

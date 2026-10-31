@@ -1,0 +1,55 @@
+{
+  "titulo": "Berlines",
+  "categoria": "dulces",
+  "tags": [
+    "berlines",
+    "fritura",
+    "dulce",
+    "once",
+    "merienda",
+    "reposteria"
+  ],
+  "imagen": null,
+  "tiempo": "1 h 30 min + levado",
+  "porciones": "12 unidades",
+  "dificultad": "media",
+  "tecnica": "Fritura",
+  "ingredientes": [
+    "500 g de harina",
+    "10 g de levadura granulada",
+    "150 ml de leche tibia",
+    "80 g de azúcar",
+    "2 huevos",
+    "100 g de mantequilla a temperatura ambiente",
+    "1 pizca de sal",
+    "Aceite para freír",
+    "Manjar o mermelada para rellenar",
+    "Azúcar granulada para espolvorear"
+  ],
+  "pasos": [
+    "Activa la levadura en la leche tibia con una cucharadita de azúcar. Reposa 10 minutos.",
+    "Mezcla la harina con el azúcar y la sal. Agrega los huevos, la mantequilla y la levadura. Amasa hasta obtener una masa suave.",
+    "Deja levar tapada 1 hora, hasta que doble su volumen.",
+    "Forma bolitas de unos 60 g y colócalas en una bandeja enharinada. Deja levar 30 minutos más.",
+    "Fríe en abundante aceite a 170 °C, 2-3 minutos por lado, hasta que estén doradas.",
+    "Escurre sobre papel absorbente. Cuando estén tibias, rellena con manjar o mermelada con una manga o jeringa.",
+    "Pasa por azúcar granulada y sirve."
+  ],
+  "dato": "Los berlines son el dulce frito favorito de la once chilena. Se hacen con masa de levadura, se fríen y se rellenan con manjar. Son primos de los donuts, pero más esponjosos. En Chile se venden en las panaderías y se comen en la once o en las celebraciones.",
+  "advertencia": "Fríe a 170 °C: si el aceite está muy caliente, los berlines se doran por fuera y quedan crudos por dentro. Si está muy frío, absorben grasa.",
+  "errores": [
+    {
+      "error": "Los berlines me quedaron duros",
+      "solucion": "Amasaste de menos o no los dejaste levar lo suficiente. La masa necesita levar 1 hora + 30 minutos para quedar esponjosa."
+    },
+    {
+      "error": "Los berlines me quedaron aceitosos",
+      "solucion": "El aceite no estaba caliente. Fríe a 170 °C para que se cocinen por dentro sin absorber aceite."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "A temperatura ambiente 2 días en recipiente hermético.",
+    "congelador": "Hasta 2 meses, sin rellenar.",
+    "recalentar": "Horno o freidora de aire a 180 °C por 5 minutos."
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "titulo": "Puré de Garbanzos",
+  "categoria": "ensaladas",
+  "tags": [
+    "puré de garbanzos",
+    "garbanzos",
+    "legumbres",
+    "vegano",
+    "acompañamiento",
+    "guarnición",
+    "chileno"
+  ],
+  "imagen": null,
+  "tiempo": "45 min (más remojo de 12 horas)",
+  "porciones": "4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Olla y licuadora",
+  "ingredientes": [
+    "2 tazas de garbanzos secos (aprox. 400 g)",
+    "3 cucharadas de aceite de oliva",
+    "Jugo de 2 limones",
+    "1 cucharada de pasta de ajo (o 2 dientes de ajo machacados)",
+    "1 cucharadita de canela en polvo",
+    "1 cucharadita de pimienta negra",
+    "1 taza del agua de cocción de los garbanzos (aproximadamente)",
+    "Sal al gusto",
+    "Pimentón dulce y perejil o cilantro fresco para decorar"
+  ],
+  "pasos": [
+    "La noche anterior, lavar los garbanzos y dejarlos en remojo en abundante agua (mínimo 12 horas).",
+    "Al día siguiente, escurrir el agua de remojo y enjuagar bien los garbanzos.",
+    "Cocer los garbanzos en una olla con agua fresca (que los cubra) hasta que estén muy blandos, aproximadamente 30 a 40 minutos. Reservar 1 taza del líquido de cocción.",
+    "Escurrir los garbanzos cocidos y colocarlos en la licuadora o procesadora de alimentos.",
+    "Agregar el aceite de oliva, el jugo de limón, la pasta de ajo, la canela, la pimienta y la sal.",
+    "Procesar, agregando poco a poco el agua de cocción reservada, hasta obtener un puré homogéneo y cremoso. Ajustar la sal si es necesario.",
+    "Servir en un plato hondo, rociar con un chorrito de aceite de oliva y espolvorear pimentón dulce y perejil o cilantro picado."
+  ],
+  "dato": "La canela en polvo es el toque secreto de muchas recetas chilenas de puré de garbanzos; le aporta un aroma cálido y sutil que lo diferencia del hummus tradicional. Se sirve como acompañamiento de carnes asadas, pollo o como parte de un almuerzo vegetariano.",
+  "errores": [
+    {
+      "error": "Puré con grumos o seco",
+      "solucion": "Agrega el agua de cocción de a poco mientras licúas. Si queda muy espeso, añade más líquido; si queda muy líquido, déjalo reposar en el refrigerador para que tome cuerpo."
+    },
+    {
+      "error": "Sabor plano",
+      "solucion": "Rectifica la sal y el limón antes de servir. El puré debe tener un equilibrio entre el sabor neutro del garbanzo y la acidez del limón."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Guardar en un recipiente hermético en el refrigerador hasta por 4 días",
+    "congelador": "Se puede congelar hasta por 2 meses."
+  }
+}

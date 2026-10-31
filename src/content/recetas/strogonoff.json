@@ -1,0 +1,49 @@
+{
+  "titulo": "Strogonoff",
+  "categoria": "principales",
+  "tags": [
+    "strogonoff",
+    "lomo liso",
+    "crema",
+    "páprika",
+    "carnes"
+  ],
+  "imagen": null,
+  "tiempo": "25 min",
+  "porciones": "4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Sartén",
+  "ingredientes": [
+    "1/2 kg de lomo liso",
+    "1 cebolla mediana",
+    "3/4 taza de crema fresca",
+    "3 cucharadas de mantequilla",
+    "Páprika",
+    "Ají de color",
+    "Sal",
+    "Pimienta"
+  ],
+  "pasos": [
+    "Limpiar la carne, quitar telas y grasas, lavar, dejar estilar.",
+    "Picar la cebolla en cuadros finos.",
+    "Cortar el lomo en láminas delgadas, freírlas en la mitad de la mantequilla caliente.",
+    "Agregar sal, pimienta y páprika, cocinar a fuego suave.",
+    "Calentar el resto de la mantequilla y freír la cebolla, incorporarla a la preparación anterior junto con la crema.",
+    "Calentar cuidando que no hierva la salsa.",
+    "Rectificar la sal, añadir un poco de ají de color y servir muy caliente."
+  ],
+  "dato": "La crema no debe hervir una vez incorporada, porque se corta. Calienta a fuego suave y revuelve constantemente.",
+  "errores": [
+    {
+      "error": "Salsa cortada",
+      "solucion": "Baja el fuego antes de agregar la crema y no dejes que hierva; revuelve suavemente."
+    },
+    {
+      "error": "Carne seca",
+      "solucion": "Corta el lomo en láminas delgadas y cocínalo rápido a fuego medio-alto; el lomo se seca si se cocina demasiado."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Servir de inmediato. 1 día pero la crema pierde textura al recalentar."
+  }
+}

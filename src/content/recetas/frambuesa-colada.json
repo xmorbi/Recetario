@@ -1,0 +1,43 @@
+{
+  "titulo": "Frambuesa Colada",
+  "categoria": "bebidas",
+  "tags": [
+    "frambuesa colada",
+    "ron",
+    "ron coco",
+    "piña",
+    "frambuesa",
+    "crema de leche",
+    "tragos"
+  ],
+  "imagen": null,
+  "tiempo": "5 min",
+  "porciones": "1 persona",
+  "dificultad": "fácil",
+  "tecnica": "Licuadora",
+  "ingredientes": [
+    "1/10 de ron blanco (25 ml)",
+    "2/10 de ron coco (50 ml)",
+    "1/10 de pulpa de piña (25 ml)",
+    "2/10 de pulpa de frambuesa (50 ml)",
+    "1/10 de crema de leche (25 ml)",
+    "Azúcar",
+    "Hielo",
+    "Frutillas y hojas de menta para decorar"
+  ],
+  "pasos": [
+    "Colocar todos los ingredientes en la juguera y licuarlos hasta conseguir una consistencia homogénea.",
+    "Servir en copa grande.",
+    "Decorar con frutillas y hojas de menta."
+  ],
+  "dato": "Las medidas están expresadas en décimos de la capacidad total de la copa; puedes escalarlas según el tamaño de la copa o la cantidad de porciones. La frambuesa colada es una variante chilena de la piña colada, con frambuesa en vez de piña como protagonista.",
+  "errores": [
+    {
+      "error": "El trago me quedó con textura muy líquida",
+      "solucion": "Agrega más hielo o pulpa de frambuesa y licúa de nuevo hasta lograr una consistencia cremosa."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Servir de inmediato para evitar que la crema y las pulpas se separen."
+  }
+}

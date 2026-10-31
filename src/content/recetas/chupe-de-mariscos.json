@@ -1,0 +1,62 @@
+{
+  "titulo": "Chupe de mariscos",
+  "categoria": "mar",
+  "tags": [
+    "marisco",
+    "sopa",
+    "olla",
+    "invierno",
+    "contundente",
+    "tradicional"
+  ],
+  "imagen": null,
+  "tiempo": "50 min",
+  "porciones": "4 personas",
+  "dificultad": "media",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "500 g de mariscos variados (choritos, almejas, camarones, machas)",
+    "300 g de pescado blanco (congrio, merluza) en trozos",
+    "4 papas medianas en cubos",
+    "1 cebolla grande picada fina",
+    "2 dientes de ajo picados",
+    "1 pimentón rojo en cubos",
+    "2 tomates maduros en cubos",
+    "1 taza (250 ml) de vino blanco",
+    "1 L de caldo de pescado",
+    "1 taza (250 ml) de crema (o leche evaporada)",
+    "2 cucharadas (30 g) de mantequilla",
+    "Pan rallado y queso parmesano para gratinar",
+    "Sal, pimienta, merkén y orégano"
+  ],
+  "pasos": [
+    "Sofríe la cebolla, el ajo y el pimentón en mantequilla hasta que estén transparentes.",
+    "Agrega los tomates y condimenta con sal, pimienta, merkén y orégano. Cocina 5 minutos.",
+    "Vierte el vino blanco y deja evaporar el alcohol, unos 2 minutos.",
+    "Agrega el caldo y las papas. Cocina 15 minutos hasta que las papas estén casi tiernas.",
+    "Incorpora los mariscos, el pescado y la crema. Cocina 5-7 minutos más, solo hasta que los mariscos se abran.",
+    "Reparte en pailas de greda individuales o en una fuente para horno.",
+    "Espolvorea pan rallado y queso parmesano por encima. Gratina 3-5 minutos en el horno a 200 °C, hasta dorar."
+  ],
+  "dato": "El chupe es una preparación de origen andino que en Chile se volvió plato de mariscos. La versión chilena es más espesa que la peruana y siempre lleva papas. En el sur de Chile se hace con mariscos locales (cholgas, choritos, picorocos). En las pailas de greda el calor se mantiene por más tiempo.",
+  "advertencia": "Descarta los mariscos que estén abiertos antes de cocinar y los que no se abran durante la cocción. Los mariscos deben oler a mar, no a pescado fuerte. Si usas congelados, descongélalos en el refrigerador la noche anterior.",
+  "errores": [
+    {
+      "error": "Los mariscos me quedaron gomosos",
+      "solucion": "Los cocinaste demasiado. Los mariscos se hacen en 5-7 minutos. Si los dejas más, se endurecen como caucho."
+    },
+    {
+      "error": "El chupe me quedó aguado",
+      "solucion": "No dejaste reducir o usaste poco pan rallado. El chupe debe tener consistencia de guiso espeso. Si queda líquido, agrega más pan rallado o deja reducir unos minutos destapado."
+    },
+    {
+      "error": "El chupe me supo a \"pescado viejo\"",
+      "solucion": "Usaste mariscos que no estaban frescos. Los mariscos deben oler a mar, no a pescado fuerte. Si usas congelados, descongela en el refrigerador la noche anterior."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 2 días en recipiente hermético. Al ser mariscos, es muy perecedero.",
+    "congelador": "Hasta 2 meses, idealmente sin papas.",
+    "recalentar": "A fuego muy suave, agregando un poco de caldo si espesa demasiado."
+  }
+}

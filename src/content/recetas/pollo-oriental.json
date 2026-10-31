@@ -1,0 +1,55 @@
+{
+  "titulo": "Pollo Oriental",
+  "categoria": "principales",
+  "tags": [
+    "pollo oriental",
+    "pollo",
+    "almendras",
+    "champiñones",
+    "verduras",
+    "aves"
+  ],
+  "imagen": null,
+  "tiempo": "1 h 15 min",
+  "porciones": "4 a 6 personas",
+  "dificultad": "media",
+  "tecnica": "Olla y sartén",
+  "ingredientes": [
+    "1 pollo",
+    "1/4 kg de porotitos verdes",
+    "1 zanahoria",
+    "3 dientes de ajo",
+    "1 cebolla",
+    "1/4 taza de champiñones",
+    "1 taza de almendras",
+    "1 1/4 taza de caldo",
+    "1/4 taza de vino blanco",
+    "3 cucharadas rasas de maicena",
+    "1 ramito de verduras surtidas",
+    "Aceite",
+    "Sal",
+    "Pimienta"
+  ],
+  "pasos": [
+    "Limpiar, lavar y cocer el pollo en agua con sal y verduras surtidas.",
+    "Una vez que esté blando quitar la piel y los huesos con cuidado y cortar la carne en tiritas finas.",
+    "Limpiar los porotitos y rasgarlos.",
+    "Cortar la zanahoria en tiras finas y la cebolla en juliana.",
+    "Calentar el aceite, dorar las almendras peladas y partidas, retirarlas y freír en el mismo aceite las verduras picadas.",
+    "Freír aparte los champiñones y añadirlos a la preparación anterior junto a las almendras.",
+    "Agregar el vino, la maicena disuelta en agua fría y 1 1/2 taza de caldo.",
+    "Sazonar, aliñar con pimienta y dejar en cocción a fuego suave 5 a 10 minutos.",
+    "Servir con arroz."
+  ],
+  "dato": "La maicena disuelta en agua fría evita que se formen grumos al espesar la salsa.",
+  "errores": [
+    {
+      "error": "Salsa con grumos",
+      "solucion": "Disuelve la maicena en agua fría antes de incorporarla y revuelve constantemente."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "2 días",
+    "recalentar": "A fuego lento."
+  }
+}

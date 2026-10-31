@@ -1,0 +1,50 @@
+{
+  "titulo": "Torta de milhojas",
+  "categoria": "dulces",
+  "tags": [
+    "torta",
+    "milhojas",
+    "manjar",
+    "reposteria",
+    "cumpleaños",
+    "dulce"
+  ],
+  "imagen": null,
+  "tiempo": "1 h 30 min",
+  "porciones": "12 porciones",
+  "dificultad": "alta",
+  "tecnica": "Horno",
+  "ingredientes": [
+    "500 g de harina",
+    "250 g de mantequilla fría",
+    "100 ml de agua fría",
+    "1 pizca de sal",
+    "1 huevo para pintar",
+    "500 g de manjar",
+    "Azúcar flor para espolvorear"
+  ],
+  "pasos": [
+    "Mezcla la harina con la sal. Agrega la mantequilla fría en cubos y trabaja con los dedos hasta que quede como arena. Añade el agua fría y amasa hasta formar una masa lisa. Refrigera 1 hora.",
+    "Estira la masa muy fina y corta discos del tamaño del molde. Necesitas 6 discos.",
+    "Pincha cada disco con un tenedor, pinta con el huevo batido y hornea a 180 °C por 10-12 minutos, hasta que estén dorados. Deja enfriar.",
+    "Arma la torta: disco, capa de manjar, disco, capa de manjar, hasta terminar con un disco.",
+    "Espolvorea azúcar flor generosamente por encima.",
+    "Refrigera al menos 2 horas antes de cortar."
+  ],
+  "dato": "La torta de milhojas es la torta de cumpleaños y de celebraciones chilenas por excelencia. Se hace con masa de hojaldre y manjar. La clave está en estirar la masa muy fina y hornear los discos hasta que estén bien dorados y crujientes.",
+  "errores": [
+    {
+      "error": "Masa blanda o elástica",
+      "solucion": "No amases de más ni uses mantequilla caliente; usa mantequilla fría y amasa solo hasta integrar."
+    },
+    {
+      "error": "Se desarma al cortar",
+      "solucion": "No cortes la torta sin reposo en frío; refrigérala al menos 2 horas antes de cortar para que el manjar se asiente."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días en recipiente hermético.",
+    "congelador": "No recomendado, el manjar se estropea.",
+    "recalentar": "A temperatura ambiente."
+  }
+}

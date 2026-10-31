@@ -1,0 +1,53 @@
+{
+  "titulo": "Ensalada César",
+  "categoria": "ensaladas",
+  "tags": [
+    "ensalada césar",
+    "pollo",
+    "lechuga",
+    "parmesano",
+    "crutones",
+    "ensalada"
+  ],
+  "imagen": null,
+  "tiempo": "30 min",
+  "porciones": "2 a 4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Hervido y mezcla",
+  "ingredientes": [
+    "1 pechuga de pollo",
+    "200 g de lechuga",
+    "100 g de queso parmesano rallado grueso",
+    "2 rebanadas de pan frío",
+    "1 cucharada (15 g) de mostaza",
+    "1 cucharada (15 g) de mayonesa",
+    "1 cucharada (15 ml) de vinagre",
+    "2 cucharadas (30 ml) de aceite",
+    "Jugo de limón",
+    "Sal",
+    "Pimienta"
+  ],
+  "pasos": [
+    "Cocer la pechuga en agua con sal hasta que esté cocida. Dejar enfriar y cortarla en trozos pequeños.",
+    "Lavar muy bien la lechuga y picarla en trozos.",
+    "Freír el pan cortado en cubos y reservar.",
+    "Preparar el aderezo: mezclar la mayonesa, la mostaza, el aceite, el vinagre, el jugo de limón, sal y pimienta. Revolver hasta integrar.",
+    "Colocar la lechuga en una fuente y encima el pollo.",
+    "Rociar con el aderezo y al momento de servir agregar los crutones (pan frito) y el queso rallado.",
+    "Servir frío."
+  ],
+  "dato": "La ensalada César es de origen mexicano (fue creada en Tijuana en los años 20), pero en Chile se volvió un clásico de restaurantes y casas. Lleva lechuga, pollo, parmesano y crutones, con un aderezo cremoso a base de mayonesa y mostaza. Agrega los crutones al final para que mantengan su crocancia.",
+  "errores": [
+    {
+      "error": "La lechuga me quedó marchita",
+      "solucion": "Lava la lechuga con agua fría y sécala bien antes de aliñar; aliña justo antes de servir."
+    },
+    {
+      "error": "El pollo me quedó seco",
+      "solucion": "Cuece la pechuga en agua con sal y verduras, y córtala cuando esté tibia para que conserve su jugosidad."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Consumir el mismo día. Los crutones se agregan al momento de servir."
+  }
+}

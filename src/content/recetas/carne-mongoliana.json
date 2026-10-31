@@ -1,0 +1,48 @@
+{
+  "titulo": "Carne Mongoliana",
+  "categoria": "principales",
+  "tags": [
+    "carne mongoliana",
+    "lomo",
+    "ají verde",
+    "cebollines",
+    "salsa de soja",
+    "carnes"
+  ],
+  "imagen": null,
+  "tiempo": "20 min",
+  "porciones": "4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Wok o sartén",
+  "ingredientes": [
+    "750 g de lomo o filete",
+    "1 ají verde grande",
+    "4 cebollines",
+    "1 cucharada (15 ml) de aceite",
+    "2 cucharadas (30 ml) de salsa de soja",
+    "Sal",
+    "Pimienta"
+  ],
+  "pasos": [
+    "Cortar la carne en trozos pequeños.",
+    "Limpiar los cebollines y picarlos en trozos; limpiar el ají y cortarlo en tiras.",
+    "Dorar la carne en el aceite previamente calentado en un wok o sartén amplia, evitando que se seque.",
+    "Agregar los cebollines, el ají, sal y pimienta y revolver muy bien.",
+    "Un minuto antes de servir agregar la salsa de soja."
+  ],
+  "dato": "El wok o sartén debe estar bien caliente para sellar la carne rápido y que quede jugosa; la salsa de soja se agrega al final para que no se queme. Es una receta de origen cantones que en Chile se adoptó como plato de día de semana.",
+  "advertencia": "El ají verde puede variar mucho en picante. Prueba un trozo antes de usar el entero, y lávate las manos después de manipularlo.",
+  "errores": [
+    {
+      "error": "La carne me quedó seca",
+      "solucion": "Cocina a fuego alto y rápido; el lomo se seca si se cocina demasiado."
+    },
+    {
+      "error": "Las verduras me quedaron pasadas",
+      "solucion": "Agrega los cebollines y el ají al final y saltéalos solo hasta que estén tiernos pero crujientes."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Servir de inmediato. 1 día."
+  }
+}

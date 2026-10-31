@@ -1,0 +1,58 @@
+{
+  "titulo": "Goulasch",
+  "categoria": "principales",
+  "tags": [
+    "goulasch",
+    "posta de paleta",
+    "ají de color",
+    "tomate",
+    "guiso",
+    "carnes"
+  ],
+  "imagen": null,
+  "tiempo": "1 h 30 min",
+  "porciones": "6 a 8 personas",
+  "dificultad": "media",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "1 1/2 kg de posta de paleta",
+    "2 cebollas",
+    "4 tomates maduros",
+    "2 cucharadas de zanahoria rallada",
+    "Una pizca de ají de color",
+    "Tomillo",
+    "1 hoja de laurel",
+    "2 dientes de ajo",
+    "Aceite",
+    "Sal",
+    "Pimienta"
+  ],
+  "pasos": [
+    "Limpiar la carne, quitar las telas, grasas y cortar en cubos de 3 cm.",
+    "Lavar y dejar estilar.",
+    "Cortar las cebollas en pluma.",
+    "Calentar un poco de aceite en una cacerola y freír la cebolla con la zanahoria y los ajos.",
+    "Añadir la carne, sazonar con sal, pimienta, ají de color y tomillo.",
+    "Revolver con cuchara de madera para impregnar los ingredientes, cuidando de dorar en forma pareja la carne.",
+    "Dejar en cocción a fuego suave.",
+    "Pelar los tomates, pasarlos por el cedazo y agregar a la cacerola junto con el laurel.",
+    "Rectificar la sal y cocinar hasta que la carne esté blanda y la salsa espesa.",
+    "Acompañar con papas cocidas."
+  ],
+  "dato": "El ají de color es el sello del goulasch; úsalo con moderación para que no amargue y agrégalo junto con la carne para que se impregne bien. Es un guiso de origen húngaro que en Chile se adoptó como plato de invierno.",
+  "errores": [
+    {
+      "error": "La salsa me quedó aguada",
+      "solucion": "Cocina destapado los últimos 15 minutos para que reduzca, o agrega un poco de harina disuelta en agua fría."
+    },
+    {
+      "error": "La carne me quedó dura",
+      "solucion": "Mantén el fuego lento y el tiempo suficiente; la paleta necesita cocción prolongada para ablandar."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "3 días",
+    "recalentar": "A fuego lento",
+    "congelador": "Se puede congelar hasta 2 meses."
+  }
+}

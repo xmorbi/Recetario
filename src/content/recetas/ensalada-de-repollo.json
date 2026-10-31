@@ -1,0 +1,48 @@
+{
+  "titulo": "Ensalada de repollo",
+  "categoria": "ensaladas",
+  "tags": [
+    "ensalada",
+    "repollo",
+    "fresca",
+    "acompañamiento",
+    "vegetariano",
+    "economico"
+  ],
+  "imagen": null,
+  "tiempo": "10 min",
+  "porciones": "4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Fresca",
+  "ingredientes": [
+    "1/2 repollo mediano",
+    "1 zanahoria rallada",
+    "2 cucharadas (30 ml) de aceite",
+    "1 cucharada (15 ml) de vinagre",
+    "Sal y pimienta",
+    "Jugo de limón (opcional)"
+  ],
+  "pasos": [
+    "Corta el repollo en tiras finas. Lávalo y escúrrelo bien.",
+    "Ralla la zanahoria.",
+    "Mezcla el repollo con la zanahoria.",
+    "Condimenta con aceite, vinagre, sal y pimienta. Si quieres, agrega jugo de limón.",
+    "Sirve fría."
+  ],
+  "dato": "La ensalada de repollo es la ensalada más económica de la cocina chilena. Se hace con repollo y zanahoria, y se condimenta con aceite y vinagre. Es crocante y fresca, y acompaña muy bien las carnes y los guisos.",
+  "errores": [
+    {
+      "error": "La ensalada me quedó muy dura",
+      "solucion": "No cortaste el repollo bien fino. El repollo debe cortarse en tiras muy finas para que sea fácil de comer."
+    },
+    {
+      "error": "La ensalada me quedó con sabor muy fuerte",
+      "solucion": "No condimentaste con suficiente limón o vinagre. El ácido suaviza el sabor del repollo."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 2 días en recipiente hermético.",
+    "congelador": "No recomendado.",
+    "recalentar": "Se consume fría."
+  }
+}

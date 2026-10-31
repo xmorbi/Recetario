@@ -1,0 +1,39 @@
+{
+  "titulo": "Ponche",
+  "categoria": "bebidas",
+  "tags": [
+    "ponche",
+    "aguardiente",
+    "canela",
+    "culén",
+    "caramelo",
+    "tragos"
+  ],
+  "imagen": null,
+  "tiempo": "20 min",
+  "porciones": "6 a 8 personas",
+  "dificultad": "fácil",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "Azúcar quemada",
+    "Agua",
+    "Aguardiente",
+    "Palos de canela o culén"
+  ],
+  "pasos": [
+    "Dorar el azúcar hasta lograr la consistencia de un caramelo.",
+    "Hervir el agua con los palos de canela o culén.",
+    "Vaciar sobre el caramelo.",
+    "Una vez que se ha disuelto y enfriado bien, agregar el aguardiente."
+  ],
+  "dato": "Agregar el aguardiente cuando la mezcla esté fría evita que el alcohol se evapore y conserva el aroma de la canela o culén.",
+  "errores": [
+    {
+      "error": "Caramelo amargo",
+      "solucion": "Dora el azúcar a fuego medio y retíralo apenas tome color; si se quema demasiado, aporta amargor."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Se puede guardar embotellado en un lugar fresco y oscuro por varias semanas."
+  }
+}

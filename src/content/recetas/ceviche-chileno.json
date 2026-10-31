@@ -1,0 +1,55 @@
+{
+  "titulo": "Ceviche chileno",
+  "categoria": "mar",
+  "tags": [
+    "ceviche",
+    "pescado",
+    "marisco",
+    "fresco",
+    "verano",
+    "tradicional"
+  ],
+  "imagen": null,
+  "tiempo": "20 min + frío",
+  "porciones": "4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Sin cocción",
+  "ingredientes": [
+    "500 g de pescado blanco fresco (reineta, corvina, lenguado o merluza)",
+    "Jugo de 4-5 limones de Pica (o limón sutil)",
+    "1 cebolla morada grande",
+    "1 ají verde sin semillas, picado fino (opcional)",
+    "1 taza de cilantro fresco picado",
+    "Sal y pimienta",
+    "Opcional: 1 cucharada de aceite de oliva"
+  ],
+  "pasos": [
+    "Corta el pescado en cubos de 1,5 cm. Debe estar muy fresco: si tiene olor fuerte, no sirve.",
+    "Sala el pescado con sal y pimienta y déjalo reposar 5 minutos.",
+    "Corta la cebolla en pluma muy fina y remójala en agua fría 10 minutos. Escurre muy bien.",
+    "Exprime los limones y cuela el jugo. Debe ser suficiente para cubrir el pescado.",
+    "Mezcla el pescado con el jugo de limón. Refrigera 10-15 minutos: el pescado se \"cocina\" en el ácido.",
+    "Escurre el exceso de jugo, agrega la cebolla, el ají, el cilantro y el aceite. Mezcla suavemente.",
+    "Rectifica la sal. Sirve frío, con pan amasado, galletas de soda o marraqueta."
+  ],
+  "dato": "El ceviche chileno es distinto del peruano: usa más cebolla, menos ají, y a veces lleva aceite de oliva. El pescado no se \"cocina\" tanto: el limón actúa 10-15 minutos, no horas. El limón de Pica (del oasis de Pica, en Tarapacá) es el más aromático de Chile. Chile tiene 4.300 km de costa: el ceviche no es solo peruano.",
+  "errores": [
+    {
+      "error": "Pescado deshecho",
+      "solucion": "Usar un pescado poco firme o dejar demasiado tiempo en el limón. Usa pescado blanco firme (reineta, corvina) y no más de 15 minutos de limón."
+    },
+    {
+      "error": "Sabe muy ácido",
+      "solucion": "Usar demasiado limón o dejarlo demasiado tiempo. Prueba a los 10 minutos: si ya está cocinado, escurre el jugo y sirve."
+    },
+    {
+      "error": "Cebolla muy picante",
+      "solucion": "No remojar la cebolla. El agua fría le quita el picor sin perder textura. Escurre muy bien antes de agregar."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 1 día. El pescado se sigue \"cocinando\" en el limón: no lo guardes mucho.",
+    "congelador": "No recomendado. La textura cambia completamente.",
+    "recalentar": "Se consume bien frío."
+  }
+}

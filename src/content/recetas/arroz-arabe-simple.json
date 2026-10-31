@@ -1,0 +1,50 @@
+{
+  "titulo": "Arroz Árabe Simple",
+  "categoria": "principales",
+  "tags": [
+    "arroz árabe simple",
+    "arroz",
+    "fideos",
+    "pasas",
+    "curry",
+    "arroces"
+  ],
+  "imagen": null,
+  "tiempo": "30 min",
+  "porciones": "4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "1 1/2 taza (300 g) de arroz",
+    "1/2 taza (50 g) de fideos cabellos de ángel cortos",
+    "1 diente de ajo pelado",
+    "1/2 taza (80 g) de pasas rubias",
+    "3 tazas (750 ml) de agua hirviendo",
+    "Sal",
+    "Pimienta",
+    "Aceite",
+    "1 cucharadita de curry (opcional)"
+  ],
+  "pasos": [
+    "En una olla con un poco de aceite, freír el ajo y los cabellos de ángel hasta que estén dorados.",
+    "Agregar el arroz y sofreír hasta que esté cristalino, sin dorarse.",
+    "Agregar las pasas, sal, curry y el agua hirviendo.",
+    "Tapar la olla, poner un tostador de pan (difusor metálico) sobre la hornilla y dejar a fuego lento por 15 minutos. El tostador ayuda a distribuir el calor parejo y evita que el arroz se pegue.",
+    "Apagar el fuego y dejar reposar sin abrir por 10 minutos antes de servir."
+  ],
+  "dato": "El arroz debe quedar cristalino al sofreírse: así absorbe mejor el líquido y queda suelto. El tostador de pan es un clásico de las cocinas chilenas: se usa para tostar pan, pero también como difusor de calor para cocinar arroz y otros guisos a fuego suave.",
+  "errores": [
+    {
+      "error": "El arroz me quedó pasado o pegado",
+      "solucion": "No revolviste bien o lo cocinaste a fuego muy alto. No revuelvas durante la cocción y respeta el reposo tapado de 10 minutos para que se termine de cocinar al vapor."
+    },
+    {
+      "error": "Los fideos se me quemaron",
+      "solucion": "Los freíste a fuego muy alto. Dóralos a fuego medio, revolviendo constantemente, y retíralos antes de que se quemen."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "2 días",
+    "recalentar": "Al vapor o en microondas con un poco de agua."
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "titulo": "Pollo rebozado estilo KFC",
+  "categoria": "principales",
+  "tags": [
+    "pollo",
+    "rebozado",
+    "fritura",
+    "crujiente",
+    "estilo kfc",
+    "plato principal"
+  ],
+  "imagen": null,
+  "tiempo": "40 min + marinado",
+  "porciones": "4 personas",
+  "dificultad": "media",
+  "tecnica": "Fritura",
+  "ingredientes": [
+    "8 presas de pollo (muslos, trutros o alitas)",
+    "2 tazas de harina",
+    "1 cucharada de sal",
+    "1 cucharadita de pimienta negra",
+    "1 cucharadita de páprika",
+    "1 cucharadita de ajo en polvo",
+    "1 cucharadita de cebolla en polvo",
+    "1 cucharadita de orégano seco",
+    "1 cucharadita de polvos de hornear",
+    "2 huevos",
+    "1 taza de leche",
+    "Aceite para freír"
+  ],
+  "pasos": [
+    "Marina el pollo en la leche con sal y pimienta por al menos 2 horas en el refrigerador.",
+    "Mezcla la harina con la sal, pimienta, páprika, ajo en polvo, cebolla en polvo, orégano y polvos de hornear.",
+    "Pasa cada presa de pollo por la mezcla de harina, luego por huevo batido y de nuevo por la harina, apretando bien para que se pegue.",
+    "Calienta abundante aceite a 170 °C (fuego medio).",
+    "Fríe las presas 15-20 minutos, dando vuelta, hasta que estén doradas y cocidas por dentro.",
+    "Escurre sobre papel absorbente y sirve calientes."
+  ],
+  "dato": "El pollo rebozado estilo KFC es el favorito de los niños chilenos. La clave está en el doble empanizado (harina, huevo, harina) y en el aceite a temperatura media para que se cocine por dentro sin quemarse. Los polvos de hornear en la harina lo dejan más crujiente.",
+  "errores": [
+    {
+      "error": "Queda crudo por dentro",
+      "solucion": "Aceite muy caliente o presas muy gruesas. Fríe a 170 °C y pincha la parte más gruesa para verificar."
+    },
+    {
+      "error": "El rebozado se cae",
+      "solucion": "No apretar bien la harina o el pollo muy húmedo. Pasa el pollo por harina, huevo y harina de nuevo, apretando bien cada capa."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 2 días en recipiente hermético.",
+    "congelador": "No recomendado, el rebozado pierde textura.",
+    "recalentar": "Horno o freidora de aire a 180 °C por 8-10 minutos."
+  }
+}

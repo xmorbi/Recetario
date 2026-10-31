@@ -1,0 +1,55 @@
+{
+  "titulo": "Cazuela de ave",
+  "categoria": "principales",
+  "tags": [
+    "cazuela",
+    "sopa",
+    "olla",
+    "invierno",
+    "pollo"
+  ],
+  "imagen": "img/Cazuela-de-Ave-01.JPG",
+  "tiempo": "2 h",
+  "porciones": "6 personas",
+  "dificultad": "fácil",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "6 trutros de pollo sin piel",
+    "1 zanahoria en rodajas + 1 rallada",
+    "1/2 pimentón rojo en tiras",
+    "6 papas peladas",
+    "6 trozos de zapallo",
+    "6 trozos de choclo",
+    "1 taza (150 g) de porotos verdes picados",
+    "1/2 taza (100 g) de arroz",
+    "Sal, pimienta, orégano",
+    "1 L de agua caliente"
+  ],
+  "pasos": [
+    "Dora el pollo en aceite 5 min por lado en una olla grande.",
+    "Agrega la zanahoria, el pimentón, sal, pimienta y orégano. Saltea 5 min.",
+    "Vierte el agua caliente y cocina a fuego lento.",
+    "A los 30 min, añade las papas, el zapallo y el choclo.",
+    "Encima pon los porotos verdes y el arroz sin revolver. Cocina hasta que todo esté tierno."
+  ],
+  "dato": "El secreto está en no revolver después de agregar el arroz. La cazuela de ave es plato de invierno chileno por excelencia, y cada casa tiene su orden de agregar las verduras.",
+  "errores": [
+    {
+      "error": "El pollo me quedó crudo o sin sabor",
+      "solucion": "No sellaste el pollo antes de hervirlo. Dóralo en aceite por ambos lados antes de agregar el agua: eso asegura la cocción y le da más sabor al caldo."
+    },
+    {
+      "error": "El arroz se me pasó",
+      "solucion": "Revolviste después de agregar el arroz. Una vez que lo pongas en la superficie, no lo revuelvas: tápalo y déjalo cocinar al vapor."
+    },
+    {
+      "error": "El caldo me quedó soso",
+      "solucion": "No doraste bien el pollo al principio. Dora bien el pollo: esa costra dorada es la que le da sabor profundo al caldo."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días en recipiente hermético.",
+    "congelador": "Hasta 2 meses (idealmente sin papas).",
+    "recalentar": "A fuego lento añadiendo un poco de agua o caldo."
+  }
+}

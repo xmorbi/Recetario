@@ -1,0 +1,56 @@
+{
+  "titulo": "Pie de limón",
+  "categoria": "dulces",
+  "tags": [
+    "postre",
+    "pie",
+    "limón",
+    "horno",
+    "clásico",
+    "reposteria"
+  ],
+  "imagen": null,
+  "tiempo": "1 h + frío",
+  "porciones": "8 porciones",
+  "dificultad": "media",
+  "tecnica": "Horno",
+  "ingredientes": [
+    "Masa: 200 g de galletas de champaña o de agua",
+    "Masa: 100 g de mantequilla derretida",
+    "Relleno: 1 tarro de leche condensada (397 g)",
+    "Relleno: 3 yemas de huevo",
+    "Relleno: ½ taza de jugo de limón recién exprimido",
+    "Relleno: 1 cucharadita de ralladura de limón",
+    "Merengue: 3 claras de huevo",
+    "Merengue: ½ taza de azúcar"
+  ],
+  "pasos": [
+    "Tritura las galletas y mézclalas con la mantequilla derretida. Presiona en el fondo y bordes de un molde para pie.",
+    "Hornea la base a 180 °C por 10 minutos. Deja enfriar.",
+    "Bate las yemas con la leche condensada, el jugo y la ralladura de limón hasta que espese.",
+    "Vierte el relleno sobre la base fría.",
+    "Bate las claras con el azúcar hasta que formen un merengue firme.",
+    "Cubre el pie con el merengue y dora en el horno a 200 °C por 5-8 minutos, hasta que el merengue esté dorado.",
+    "Refrigera al menos 4 horas antes de servir."
+  ],
+  "dato": "El pie de limón es un clásico de la repostería chilena, especialmente en las casas de la zona central. Llegó con la influencia inglesa y se adaptó con limones chilenos. Se hace con leche condensada, lo que le da esa textura cremosa. Es el postre favorito de muchas familias en cumpleaños y once.",
+  "errores": [
+    {
+      "error": "El relleno no espesa",
+      "solucion": "No batir lo suficiente o usar limones muy grandes. Bate hasta que la mezcla espese visiblemente. El ácido del limón \"cocina\" las yemas y espesa la mezcla."
+    },
+    {
+      "error": "El merengue llora (suelta agua)",
+      "solucion": "No sellar bien el merengue con la base. Extiende el merengue hasta los bordes de la masa, tocándola, para que no se forme agua entre el relleno y el merengue."
+    },
+    {
+      "error": "Base blanda",
+      "solucion": "No hornear la base antes de rellenar. La base debe hornearse 10 minutos para que quede firme."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días en recipiente hermético.",
+    "congelador": "No recomendado, el merengue se estropea.",
+    "recalentar": "Se consume frío."
+  }
+}

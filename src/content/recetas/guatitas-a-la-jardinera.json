@@ -1,0 +1,56 @@
+{
+  "titulo": "Guatitas a la jardinera",
+  "categoria": "principales",
+  "tags": [
+    "guatitas",
+    "jardinera",
+    "verduras",
+    "olla",
+    "tradicional",
+    "invierno"
+  ],
+  "imagen": null,
+  "tiempo": "2 h",
+  "porciones": "4 personas",
+  "dificultad": "media",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "1 kg de guatitas de vacuno (mondongo)",
+    "2 cebollas grandes picadas finas",
+    "4 dientes de ajo picados",
+    "2 zanahorias en cubos",
+    "1 taza de arvejas",
+    "1 taza de choclo desgranado",
+    "1 pimentón rojo en cubos",
+    "2 tomates maduros picados",
+    "1 cucharadita de ají de color",
+    "1 cucharadita de orégano",
+    "1 hoja de laurel",
+    "Agua o caldo para cubrir",
+    "Sal, pimienta y aceite"
+  ],
+  "pasos": [
+    "Lava muy bien las guatitas con agua fría y limón varias veces, hasta que el agua salga clara.",
+    "Cocínalas en agua hirviendo con laurel y un chorrito de vinagre por 1 hora y media, hasta que estén tiernas. Escurre y corta en tiras.",
+    "En otra olla, sofríe la cebolla, el ajo, la zanahoria y el pimentón hasta que estén tiernos.",
+    "Agrega el tomate, el ají de color y el orégano. Cocina 5 minutos.",
+    "Incorpora las guatitas, las arvejas y el choclo. Cubre con agua o caldo y cocina a fuego lento 30 minutos.",
+    "Condimenta con sal y pimienta. Sirve caliente con arroz o papas."
+  ],
+  "dato": "Las guatitas a la jardinera son la versión con verduras de las guatitas. Se llaman \"a la jardinera\" por la mezcla de verduras: arvejas, choclo, zanahoria y pimentón. Es un plato de invierno muy completo y rendidor.",
+  "errores": [
+    {
+      "error": "Olor fuerte",
+      "solucion": "No lavar bien las guatitas. Lávalas varias veces con agua y limón hasta que el agua salga clara."
+    },
+    {
+      "error": "Verduras deshechas",
+      "solucion": "Agregar todas las verduras al principio. Agrega las arvejas y el choclo al final para que mantengan su textura."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días en recipiente hermético.",
+    "congelador": "Hasta 2 meses.",
+    "recalentar": "A fuego lento con un poco de agua o caldo."
+  }
+}

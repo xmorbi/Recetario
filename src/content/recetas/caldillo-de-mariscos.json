@@ -1,0 +1,55 @@
+{
+  "titulo": "Caldillo de mariscos",
+  "categoria": "mar",
+  "tags": [
+    "caldillo",
+    "marisco",
+    "sopa",
+    "olla",
+    "costa",
+    "invierno"
+  ],
+  "imagen": null,
+  "tiempo": "35 min",
+  "porciones": "4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "500 g de mariscos variados (choritos, almejas, camarones)",
+    "200 g de pescado blanco en trozos",
+    "3 papas medianas en cubos",
+    "1 cebolla grande picada",
+    "2 dientes de ajo picados",
+    "1 pimentón rojo en cubos",
+    "2 tomates maduros picados",
+    "1 zanahoria en rodajas",
+    "1,5 L de caldo de pescado",
+    "1/2 taza (125 ml) de vino blanco",
+    "Sal, pimienta, orégano y merkén"
+  ],
+  "pasos": [
+    "Sofríe la cebolla, el ajo y el pimentón hasta que estén transparentes.",
+    "Agrega el tomate y la zanahoria. Condimenta y cocina 5 minutos.",
+    "Vierte el vino blanco y deja evaporar.",
+    "Añade el caldo y las papas. Cocina 15 minutos.",
+    "Incorpora los mariscos y el pescado. Cocina 5-7 minutos más.",
+    "Sirve caliente con perejil fresco y pan."
+  ],
+  "dato": "El caldillo de mariscos es más liviano que la paila marina: menos ingredientes, más caldo, y se sirve como sopa. Es típico de las caletas de la costa chilena y se come con pan para \"mojar\".",
+  "advertencia": "Descarta los mariscos que estén abiertos antes de cocinar y los que no se abran durante la cocción. Los mariscos deben oler a mar, no a pescado fuerte.",
+  "errores": [
+    {
+      "error": "Los mariscos me quedaron gomosos",
+      "solucion": "Los cocinaste demasiado. Los mariscos se hacen en 5-7 minutos."
+    },
+    {
+      "error": "El caldo me quedó soso",
+      "solucion": "Usaste agua en vez de caldo de pescado. El caldo de pescado le da la profundidad que necesita."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 2 días en recipiente hermético.",
+    "congelador": "Hasta 2 meses, idealmente sin papas.",
+    "recalentar": "A fuego muy suave, evitando hervir."
+  }
+}

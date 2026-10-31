@@ -1,0 +1,47 @@
+{
+  "titulo": "Papas al horno",
+  "categoria": "principales",
+  "tags": [
+    "papa",
+    "horno",
+    "acompañamiento",
+    "simple",
+    "vegetariano"
+  ],
+  "imagen": null,
+  "tiempo": "45 min",
+  "porciones": "4 personas",
+  "dificultad": "muy fácil",
+  "tecnica": "Horno",
+  "ingredientes": [
+    "6 papas medianas",
+    "3 cucharadas de aceite de oliva",
+    "1 cucharadita de sal gruesa",
+    "1 cucharadita de pimentón (opcional)",
+    "1 cucharadita de romero o tomillo (opcional)"
+  ],
+  "pasos": [
+    "Precalienta el horno a 200 °C.",
+    "Lava bien las papas y córtalas en gajos o cubos. No las peles si quieres que queden más crujientes.",
+    "Mezcla las papas con el aceite, la sal, el pimentón y las hierbas.",
+    "Extiéndelas en una bandeja para horno en una sola capa.",
+    "Hornea 30-40 minutos, dando vuelta a mitad de cocción, hasta que estén doradas y crujientes.",
+    "Sirve como acompañamiento de carnes o pollo."
+  ],
+  "dato": "Las papas al horno son el acompañamiento más versátil de la cocina chilena. Se hacen con aceite de oliva, sal y las hierbas que tengas. Son más sanas que las fritas y quedan igual de ricas.",
+  "errores": [
+    {
+      "error": "Quedan blandas",
+      "solucion": "No precalentar el horno o ponerlas muy juntas. Precalienta bien el horno y extiéndelas en una sola capa."
+    },
+    {
+      "error": "Se pegan a la bandeja",
+      "solucion": "No usar suficiente aceite. Unta bien la bandeja o usa papel de horno."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días en recipiente hermético.",
+    "congelador": "No recomendado.",
+    "recalentar": "Horno o freidora de aire a 180 °C por 5-8 minutos."
+  }
+}

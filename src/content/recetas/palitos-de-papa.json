@@ -1,0 +1,47 @@
+{
+  "titulo": "Palitos de Papas",
+  "categoria": "ensaladas",
+  "tags": [
+    "palitos de papas",
+    "papas",
+    "horno",
+    "aperitivo",
+    "cóctel"
+  ],
+  "imagen": null,
+  "tiempo": "40 min",
+  "porciones": "4 a 6 personas",
+  "dificultad": "media",
+  "tecnica": "Horno",
+  "ingredientes": [
+    "1 taza de harina",
+    "4 papas medianas (cocidas)",
+    "1 cucharada de mantequilla",
+    "1 huevo",
+    "1 cucharada de queso rallado",
+    "1 cucharadita de polvos de hornear",
+    "2 cucharadas rasas de leche en polvo",
+    "Sal",
+    "Pimienta"
+  ],
+  "pasos": [
+    "Moler bien las papas y batirlas con la mantequilla.",
+    "Añadir de a poco la harina, polvos de hornear, leche y 1/2 cucharadita de sal.",
+    "Unir bien los ingredientes y agregar la yema y el queso.",
+    "Extender la masa en superficie enharinada y cortar tiras de unos 10 cm de largo por 1,5 de ancho.",
+    "Poner los palitos en lata enmantequillada y enharinada.",
+    "Pintar con clara de huevo batida y espolvorearlos con sal y pimienta.",
+    "Dejar en horno caliente 20 minutos más o menos."
+  ],
+  "dato": "El PDF no indica temperatura exacta; se recomienda horno medio (180 °C) hasta que estén dorados.",
+  "errores": [
+    {
+      "error": "Palitos que se desarman",
+      "solucion": "Asegúrate de que la masa esté bien unida y no demasiado húmeda; si es necesario, añade un poco más de harina."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "2 días",
+    "recalentar": "En horno suave."
+  }
+}

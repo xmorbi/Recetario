@@ -1,0 +1,47 @@
+{
+  "titulo": "Ensalada Tropical",
+  "categoria": "ensaladas",
+  "tags": [
+    "ensalada tropical",
+    "piña",
+    "naranja",
+    "manzana",
+    "lechuga",
+    "mayonesa",
+    "ensalada de frutas"
+  ],
+  "imagen": null,
+  "tiempo": "1 h 20 min (incluye reposo)",
+  "porciones": "4 a 6 personas",
+  "dificultad": "fácil",
+  "tecnica": "Sin cocción",
+  "ingredientes": [
+    "1 lechuga",
+    "2 naranjas medianas",
+    "1/2 piña",
+    "2 manzanas",
+    "1/2 taza (125 g) de mayonesa delgada (mezclada con un poco de jugo de limón)",
+    "2 cucharadas (30 g) de crema"
+  ],
+  "pasos": [
+    "Lavar bien la lechuga y cortarla en trozos pequeños.",
+    "Pelar las naranjas y separar los gajos.",
+    "Pelar las manzanas y picarlas en cubos pequeños.",
+    "Picar la piña en cubos y dejar reposando con jugo de limón por 1 hora.",
+    "Unir todos los ingredientes, revolver con la mayonesa sazonada y la crema."
+  ],
+  "dato": "La mayonesa delgada se prepara mezclando mayonesa con un poco de jugo de limón o agua. El reposo de la piña con limón suaviza su acidez. Es una ensalada de frutas típica de las celebraciones chilenas, sobre todo en verano.",
+  "errores": [
+    {
+      "error": "La ensalada me quedó aguada",
+      "solucion": "Escurre bien la piña y las naranjas antes de mezclar; agrega la mayonesa justo antes de servir."
+    },
+    {
+      "error": "Las manzanas se me oxidaron",
+      "solucion": "Rocía los cubos de manzana con jugo de limón inmediatamente después de cortarlos."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Consumir el mismo día. Las frutas pierden textura con el tiempo."
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "titulo": "Queque de zanahoria",
+  "categoria": "dulces",
+  "tags": [
+    "queque",
+    "zanahoria",
+    "horno",
+    "once",
+    "dulce",
+    "reposteria"
+  ],
+  "imagen": null,
+  "tiempo": "1 h",
+  "porciones": "10 porciones",
+  "dificultad": "fácil",
+  "tecnica": "Horno",
+  "ingredientes": [
+    "3 zanahorias medianas ralladas",
+    "3 huevos",
+    "200 g de azúcar",
+    "150 ml de aceite",
+    "200 g de harina",
+    "1 cucharadita de polvos de hornear",
+    "1 cucharadita de bicarbonato",
+    "1 cucharadita de canela",
+    "1 pizca de sal",
+    "½ taza de nueces picadas (opcional)"
+  ],
+  "pasos": [
+    "Precalienta el horno a 180 °C. Engrasa un molde de queque.",
+    "Bate los huevos con el azúcar hasta que estén espumosos. Agrega el aceite y mezcla.",
+    "Incorpora la zanahoria rallada.",
+    "Añade la harina cernida con los polvos de hornear, el bicarbonato, la canela y la sal. Mezcla con movimientos envolventes.",
+    "Si usas nueces, incorpóralas. Vierte en el molde.",
+    "Hornea 45-50 minutos, hasta que un palillo salga limpio."
+  ],
+  "dato": "El queque de zanahoria es el queque de once chileno más querido después del de plátano. Es húmedo, especiado con canela y muy fácil de hacer. Se puede cubrir con un glaseado de queso crema para una versión más elegante.",
+  "errores": [
+    {
+      "error": "Queda seco",
+      "solucion": "Hornear de más o no usar suficiente aceite. El aceite es clave para la humedad del queque de zanahoria."
+    },
+    {
+      "error": "Sabe a harina",
+      "solucion": "No mezclar bien la harina o usar poca canela. La canela y la zanahoria son las protagonistas del sabor."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 4 días en recipiente hermético.",
+    "congelador": "Hasta 2 meses, en porciones.",
+    "recalentar": "A temperatura ambiente o tibio en microondas 15 segundos."
+  }
+}

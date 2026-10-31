@@ -1,0 +1,591 @@
+=== Reporte de conservación ===
+Modo: APLICADO
+Corregidos: 103   ·   Saltados: 0   ·   Errores: 0
+
+📄 anticuchos.json
+   ANTES:  Se pueden preparar con anticipación y mantener en el refrigerador hasta 1 día; asar al momento de servir.
+   DESPUÉS:
+     • refrigerador: Se pueden preparar con anticipación y mantener en el refrigerador hasta 1 día. Asar al momento de servir.
+
+📄 arroz-a-la-valenciana.json
+   ANTES:  Guardar en refrigerador hasta 2 días; recalentar con un poco de caldo o agua.
+   DESPUÉS:
+     • refrigerador: 2 días
+     • recalentar: Con un poco de caldo o agua.
+
+📄 arroz-arabe-simple.json
+   ANTES:  Guardar en refrigerador hasta 2 días; recalentar al vapor o en microondas con un poco de agua.
+   DESPUÉS:
+     • refrigerador: 2 días
+     • recalentar: Al vapor o en microondas con un poco de agua.
+
+📄 arroz-chaufan.json
+   ANTES:  Guardar en refrigerador hasta 2 días; recalentar en sartén con un poco de aceite.
+   DESPUÉS:
+     • refrigerador: 2 días
+     • recalentar: En sartén con un poco de aceite.
+
+📄 arroz-con-alcachofas.json
+   ANTES:  Guardar en refrigerador hasta 2 días; recalentar a fuego lento.
+   DESPUÉS:
+     • refrigerador: 2 días
+     • recalentar: A fuego lento.
+
+📄 arroz-con-atun.json
+   ANTES:  Guardar en refrigerador hasta 2 días; recalentar a fuego lento con un poco de agua.
+   DESPUÉS:
+     • refrigerador: 2 días
+     • recalentar: A fuego lento con un poco de agua.
+
+📄 arroz-con-choritos.json
+   ANTES:  Guardar en refrigerador hasta 24 horas; recalentar a fuego lento con un poco de agua.
+   DESPUÉS:
+     • refrigerador: 24 horas
+     • recalentar: A fuego lento con un poco de agua.
+
+📄 arroz-con-panitas-de-pollo.json
+   ANTES:  Guardar en refrigerador hasta 2 días; recalentar a fuego lento.
+   DESPUÉS:
+     • refrigerador: 2 días
+     • recalentar: A fuego lento.
+
+📄 arroz-con-salsa-de-verduras-al-curry.json
+   ANTES:  Guardar en refrigerador hasta 2 días; recalentar a fuego lento.
+   DESPUÉS:
+     • refrigerador: 2 días
+     • recalentar: A fuego lento.
+
+📄 betarragas-rellenas.json
+   ANTES:  Se pueden preparar con anticipación y mantener en el refrigerador tapadas hasta el momento de servir.
+   DESPUÉS:
+     • refrigerador: Se pueden preparar con anticipación y mantener en el refrigerador tapadas hasta el momento de servir.
+
+📄 bocados-de-queso.json
+   ANTES:  Guardar en un recipiente hermético hasta 3 días; recalentar en horno suave antes de servir.
+   DESPUÉS:
+     • refrigerador: 3 días
+     • recalentar: En horno suave antes de servir.
+
+📄 bolitas-de-carne.json
+   ANTES:  Se pueden guardar en el refrigerador hasta 2 días y recalentar en horno o sartén.
+   DESPUÉS:
+     • refrigerador: 2 días
+     • recalentar: En horno o sartén.
+
+📄 bolitas-de-queso.json
+   ANTES:  Se pueden congelar ya formadas y freír directamente; o guardar en refrigerador hasta 2 días.
+   DESPUÉS:
+     • congelador: Se pueden congelar ya formadas y freír directamente
+     • refrigerador: 2 días.
+
+📄 budin-de-queso-y-huevo.json
+   ANTES:  Guardar en refrigerador hasta 3 días. Recalentar en horno suave o microondas.
+   DESPUÉS:
+     • refrigerador: 3 días
+     • recalentar: En horno suave o microondas.
+
+📄 carne-mongoliana.json
+   ANTES:  Servir de inmediato; se puede guardar en refrigerador hasta 1 día.
+   DESPUÉS:
+     • refrigerador: Servir de inmediato. 1 día.
+
+📄 carpaccio-de-salmon.json
+   ANTES:  Servir de inmediato; el pescado crudo no se conserva bien una vez aliñado.
+   DESPUÉS:
+     • refrigerador: Servir de inmediato. El pescado crudo no se conserva bien una vez aliñado.
+
+📄 carpaccio-de-vacuno.json
+   ANTES:  Servir de inmediato; el carpaccio no se conserva bien una vez macerado.
+   DESPUÉS:
+     • refrigerador: Servir de inmediato. El carpaccio no se conserva bien una vez macerado.
+
+📄 chaparritas.json
+   ANTES:  Guardar en refrigerador hasta 3 días. Recalentar en horno suave o air fryer para recuperar la textura de la masa. También se pueden congelar ya horneadas y recalentar directamente.
+   DESPUÉS:
+     • refrigerador: 3 días
+     • recalentar: En horno suave o air fryer para recuperar la textura de la masa. Directamente.
+     • congelador: También se pueden congelar ya horneadas
+
+📄 clavo-oxidado.json
+   ANTES:  Servir de inmediato; no se recomienda guardar preparado.
+   DESPUÉS:
+     • refrigerador: Servir de inmediato. No se recomienda guardar preparado.
+
+📄 coctel-a-la-chilena.json
+   ANTES:  Servir de inmediato; la leche condensada y el jugo tienden a separarse si se deja reposar.
+   DESPUÉS:
+     • refrigerador: Servir de inmediato. La leche condensada y el jugo tienden a separarse si se deja reposar.
+
+📄 confites-de-coco.json
+   ANTES:  Guardar en recipiente hermético hasta 5 días.
+   DESPUÉS:
+     • refrigerador: 5 días.
+
+📄 confites-de-nueces.json
+   ANTES:  Guardar en recipiente hermético hasta 1 semana.
+   DESPUÉS:
+     • refrigerador: 1 semana.
+
+📄 crema-de-acelgas.json
+   ANTES:  Se puede guardar en el refrigerador hasta 2 días; recalentar a fuego lento añadiendo un poco de caldo si espesa demasiado.
+   DESPUÉS:
+     • refrigerador: 2 días
+     • recalentar: A fuego lento añadiendo un poco de caldo si espesa demasiado.
+
+📄 crema-de-arvejas.json
+   ANTES:  Guardar en refrigerador hasta 3 días; se puede congelar hasta 2 meses.
+   DESPUÉS:
+     • refrigerador: 3 días
+     • congelador: Se puede congelar hasta 2 meses.
+
+📄 crema-de-choclo.json
+   ANTES:  Guardar en refrigerador hasta 2 días; recalentar a fuego lento sin dejar hervir.
+   DESPUÉS:
+     • refrigerador: 2 días
+     • recalentar: A fuego lento sin dejar hervir.
+
+📄 crema-de-pollo.json
+   ANTES:  Guardar en refrigerador hasta 2 días; recalentar a fuego lento. El arroz tiende a absorber el caldo, así que puede necesitar un poco más de líquido al recalentar.
+   DESPUÉS:
+     • refrigerador: 2 días
+     • recalentar: A fuego lento. El arroz tiende a absorber el caldo, así que puede necesitar un poco más de líquido al recalentar.
+
+📄 crema-de-tomates-con-albahaca.json
+   ANTES:  Guardar en refrigerador hasta 3 días; se puede congelar hasta 2 meses.
+   DESPUÉS:
+     • refrigerador: 3 días
+     • congelador: Se puede congelar hasta 2 meses.
+
+📄 crema-de-zapallo.json
+   ANTES:  Guardar en refrigerador hasta 3 días; recalentar a fuego lento.
+   DESPUÉS:
+     • refrigerador: 3 días
+     • recalentar: A fuego lento.
+
+📄 croquetas-de-arroz.json
+   ANTES:  Se pueden congelar ya formadas y freír directamente; o guardar en refrigerador hasta 2 días.
+   DESPUÉS:
+     • congelador: Se pueden congelar ya formadas y freír directamente
+     • refrigerador: 2 días.
+
+📄 croquetas-de-lentejas.json
+   ANTES:  Guardar en refrigerador hasta 3 días. Se pueden congelar ya formadas y cocinar directamente.
+   DESPUÉS:
+     • refrigerador: 3 días
+     • congelador: Se pueden congelar ya formadas y cocinar directamente.
+
+📄 croquetas-de-pollo.json
+   ANTES:  Se pueden congelar ya formadas y freír directamente; o guardar en refrigerador hasta 2 días.
+   DESPUÉS:
+     • congelador: Se pueden congelar ya formadas y freír directamente
+     • refrigerador: 2 días.
+
+📄 croquetas-sabrosas.json
+   ANTES:  Guardar en refrigerador hasta 2 días; recalentar en horno suave.
+   DESPUÉS:
+     • refrigerador: 2 días
+     • recalentar: En horno suave.
+
+📄 cuadritos-de-aji-con-queso.json
+   ANTES:  Guardar en refrigerador hasta 5 días. Recalentar en microondas o horno suave.
+   DESPUÉS:
+     • refrigerador: 5 días
+     • recalentar: En microondas o horno suave.
+
+📄 curry-de-lentejas.json
+   ANTES:  Guardar en refrigerador hasta 4 días. Se puede congelar hasta 2 meses. Recalentar a fuego lento con un poco de agua o caldo, ya que espesa al enfriarse.
+   DESPUÉS:
+     • refrigerador: 4 días
+     • congelador: Se puede congelar hasta 2 meses
+     • recalentar: A fuego lento con un poco de agua o caldo, ya que espesa al enfriarse.
+
+📄 daiquiri.json
+   ANTES:  Servir de inmediato.
+   DESPUÉS:
+     • refrigerador: Servir de inmediato.
+
+📄 empanadas-de-pino-veganas.json
+   ANTES:  Las empanadas crudas se pueden congelar hasta por 2 meses. Una vez horneadas, guardar en refrigerador hasta 3 días y recalentar en horno suave.
+   DESPUÉS:
+     • congelador: Las empanadas crudas se pueden congelar hasta por 2 meses
+     • refrigerador: Una vez horneadas, guardar en refrigerador hasta 3 días
+     • recalentar: En horno suave.
+
+📄 ensalada-cesar.json
+   ANTES:  Mantener refrigerada y consumir el mismo día; los crutones se agregan al momento de servir.
+   DESPUÉS:
+     • refrigerador: Consumir el mismo día. Los crutones se agregan al momento de servir.
+
+📄 ensalada-de-apio-con-nueces-waldorf.json
+   ANTES:  Mantener refrigerada y consumir el mismo día; las manzanas y el apio pierden textura con el tiempo.
+   DESPUÉS:
+     • refrigerador: Consumir el mismo día. Las manzanas y el apio pierden textura con el tiempo.
+
+📄 ensalada-de-arroz.json
+   ANTES:  Mantener refrigerada hasta 2 días; agregar los langostinos al momento de servir.
+   DESPUÉS:
+     • refrigerador: Mantener refrigerada hasta 2 días. Agregar los langostinos al momento de servir.
+
+📄 ensalada-de-cochayuyo.json
+   ANTES:  Mantener refrigerada hasta 2 días; aliñar justo antes de servir para que no se ablande.
+   DESPUÉS:
+     • refrigerador: Mantener refrigerada hasta 2 días. Aliñar justo antes de servir para que no se ablande.
+
+📄 ensalada-de-diguenes.json
+   ANTES:  Consumir el mismo día; los hongos frescos pierden textura rápidamente.
+   DESPUÉS:
+     • refrigerador: Consumir el mismo día. Los hongos frescos pierden textura rápidamente.
+
+📄 ensalada-de-fideos-con-palta-y-quesillo.json
+   ANTES:  Guardar en refrigerador hasta 2 días en un recipiente hermético. La palta y el tomate pierden textura con el tiempo, así que se recomienda consumir el mismo día. Si se guarda, agregar la palta al momento de servir.
+   DESPUÉS:
+     • refrigerador: 2 días en un recipiente hermético. La palta y el tomate pierden textura con el tiempo, así que se recomienda consumir el mismo día. Si se guarda, agregar la palta al momento de servir.
+
+📄 ensalada-de-pencas.json
+   ANTES:  Mantener refrigerada y consumir el mismo día; las pencas pierden textura con el tiempo.
+   DESPUÉS:
+     • refrigerador: Consumir el mismo día. Las pencas pierden textura con el tiempo.
+
+📄 ensalada-tropical.json
+   ANTES:  Mantener refrigerada y consumir el mismo día; las frutas pierden textura con el tiempo.
+   DESPUÉS:
+     • refrigerador: Consumir el mismo día. Las frutas pierden textura con el tiempo.
+
+📄 entrada-de-lengua.json
+   ANTES:  Se puede guardar en el refrigerador hasta 2 días; servir fría o a temperatura ambiente.
+   DESPUÉS:
+     • refrigerador: 2 días. Servir fría o a temperatura ambiente.
+
+📄 escalopas-de-pollo.json
+   ANTES:  Guardar en refrigerador hasta 2 días; recalentar en horno suave.
+   DESPUÉS:
+     • refrigerador: 2 días
+     • recalentar: En horno suave.
+
+📄 esparragos-con-salsa-de-queso.json
+   ANTES:  Servir de inmediato; la salsa no se conserva bien recalentada.
+   DESPUÉS:
+     • refrigerador: Servir de inmediato
+     • recalentar: La salsa no se conserva bien recalentada.
+
+📄 esparragos-gratinados.json
+   ANTES:  Servir de inmediato; se puede recalentar en horno suave.
+   DESPUÉS:
+     • refrigerador: Servir de inmediato
+     • recalentar: Se puede recalentar en horno suave.
+
+📄 estofado-al-vino-tinto.json
+   ANTES:  Guardar en refrigerador hasta 3 días; recalentar a fuego lento. Se puede congelar hasta 2 meses.
+   DESPUÉS:
+     • refrigerador: 3 días
+     • recalentar: A fuego lento
+     • congelador: Se puede congelar hasta 2 meses.
+
+📄 estofado-con-alcachofas.json
+   ANTES:  Guardar en refrigerador hasta 2 días; recalentar a fuego lento.
+   DESPUÉS:
+     • refrigerador: 2 días
+     • recalentar: A fuego lento.
+
+📄 falafel.json
+   ANTES:  Se pueden congelar crudos ya formados y freír directamente. Una vez fritos, guardar en refrigerador hasta 3 días y recalentar en horno o air fryer para recuperar la crocancia.
+   DESPUÉS:
+     • congelador: Se pueden congelar crudos ya formados y freír directamente
+     • refrigerador: Una vez fritos, guardar en refrigerador hasta 3 días
+     • recalentar: En horno o air fryer para recuperar la crocancia.
+
+📄 fondos-de-alcachofa-rellenos.json
+   ANTES:  Se pueden preparar con unas horas de anticipación y mantener refrigerados.
+   DESPUÉS:
+     • refrigerador: Se pueden preparar con unas horas de anticipación y mantener refrigerados.
+
+📄 frambuesa-colada.json
+   ANTES:  Servir de inmediato para evitar que la crema y las pulpas se separen.
+   DESPUÉS:
+     • refrigerador: Servir de inmediato para evitar que la crema y las pulpas se separen.
+
+📄 fritos-de-arroz.json
+   ANTES:  Servir de inmediato; se pueden recalentar en horno suave.
+   DESPUÉS:
+     • refrigerador: Servir de inmediato
+     • recalentar: Se pueden recalentar en horno suave.
+
+📄 frittata-de-jamon-hongos-y-espinaca.json
+   ANTES:  Guardar en refrigerador hasta 2 días. Recalentar en sartén o microondas.
+   DESPUÉS:
+     • refrigerador: 2 días
+     • recalentar: En sartén o microondas.
+
+📄 gazpacho.json
+   ANTES:  Guardar en refrigerador hasta 2 días. No congelar, porque las verduras pierden textura.
+   DESPUÉS:
+     • refrigerador: 2 días. No congelar, porque las verduras pierden textura.
+
+📄 goulasch.json
+   ANTES:  Guardar en refrigerador hasta 3 días; recalentar a fuego lento. Se puede congelar hasta 2 meses.
+   DESPUÉS:
+     • refrigerador: 3 días
+     • recalentar: A fuego lento
+     • congelador: Se puede congelar hasta 2 meses.
+
+📄 hamburguesas-de-pollo.json
+   ANTES:  Se pueden congelar crudas ya formadas; o guardar en refrigerador hasta 2 días.
+   DESPUÉS:
+     • congelador: Se pueden congelar crudas ya formadas
+     • refrigerador: 2 días.
+
+📄 huevos-a-la-copa.json
+   ANTES:  Servir de inmediato; los huevos pasados por agua no se conservan bien una vez pelados.
+   DESPUÉS:
+     • refrigerador: Servir de inmediato. Los huevos pasados por agua no se conservan bien una vez pelados.
+
+📄 huevos-envueltos-en-carne.json
+   ANTES:  Guardar en refrigerador hasta 2 días; recalentar en horno suave.
+   DESPUÉS:
+     • refrigerador: 2 días
+     • recalentar: En horno suave.
+
+📄 huevos-revueltos-con-palta-y-queso.json
+   ANTES:  Servir de inmediato. No se recomienda guardar huevos revueltos.
+   DESPUÉS:
+     • refrigerador: Servir de inmediato. No se recomienda guardar huevos revueltos.
+
+📄 huevos-revueltos-con-tomate.json
+   ANTES:  Servir de inmediato; los huevos revueltos no se conservan bien recalentados.
+   DESPUÉS:
+     • refrigerador: Servir de inmediato
+     • recalentar: Los huevos revueltos no se conservan bien recalentados.
+
+📄 manhattan.json
+   ANTES:  Servir de inmediato.
+   DESPUÉS:
+     • refrigerador: Servir de inmediato.
+
+📄 medallones-al-vino.json
+   ANTES:  Servir de inmediato; se puede guardar en refrigerador hasta 1 día pero el queso pierde textura.
+   DESPUÉS:
+     • refrigerador: Servir de inmediato. 1 día pero el queso pierde textura.
+
+📄 mojito.json
+   ANTES:  Se recomienda servir de inmediato para conservar el gas de la soda y la frescura de la menta.
+   DESPUÉS:
+     • refrigerador: Se recomienda servir de inmediato para conservar el gas de la soda y la frescura de la menta.
+
+📄 ninos-envueltos.json
+   ANTES:  Guardar en un recipiente hermético en el refrigerador hasta por 3 días. Se puede congelar hasta por 2 meses; descongelar en el refrigerador y recalentar a fuego lento con un poco de agua o salsa.
+   DESPUÉS:
+     • refrigerador: Guardar en un recipiente hermético en el refrigerador hasta por 3 días. Descongelar en el refrigerador
+     • congelador: Se puede congelar hasta por 2 meses
+     • recalentar: A fuego lento con un poco de agua o salsa.
+
+📄 old-fashion.json
+   ANTES:  Servir de inmediato.
+   DESPUÉS:
+     • refrigerador: Servir de inmediato.
+
+📄 palitos-de-papa.json
+   ANTES:  Guardar en recipiente hermético hasta 2 días; recalentar en horno suave.
+   DESPUÉS:
+     • refrigerador: 2 días
+     • recalentar: En horno suave.
+
+📄 pan-de-pascua-vegano.json
+   ANTES:  Guardar envuelto en papel aluminio o en un recipiente hermético a temperatura ambiente por hasta 1 semana. Se puede congelar en rebanadas hasta por 3 meses.
+   DESPUÉS:
+     • refrigerador: Guardar envuelto en papel aluminio o en un recipiente hermético a temperatura ambiente por hasta 1 semana
+     • congelador: Se puede congelar en rebanadas hasta por 3 meses.
+
+📄 pan-nube-cloud-bread.json
+   ANTES:  Guardar en recipiente hermético en refrigerador hasta 3 días. Se pueden congelar hasta 1 mes.
+   DESPUÉS:
+     • refrigerador: Guardar en recipiente hermético en refrigerador hasta 3 días
+     • congelador: Se pueden congelar hasta 1 mes.
+
+📄 panitas-de-pollo-en-salsa.json
+   ANTES:  Guardar en refrigerador hasta 2 días; recalentar a fuego lento.
+   DESPUÉS:
+     • refrigerador: 2 días
+     • recalentar: A fuego lento.
+
+📄 panqueque-de-pollo.json
+   ANTES:  Guardar en refrigerador hasta 2 días; recalentar en microondas o horno suave.
+   DESPUÉS:
+     • refrigerador: 2 días
+     • recalentar: En microondas o horno suave.
+
+📄 pastel-de-panitas.json
+   ANTES:  Guardar en refrigerador hasta 2 días; recalentar en horno suave.
+   DESPUÉS:
+     • refrigerador: 2 días
+     • recalentar: En horno suave.
+
+📄 pato-asado-a-la-naranja.json
+   ANTES:  Guardar en refrigerador hasta 2 días; recalentar en horno suave.
+   DESPUÉS:
+     • refrigerador: 2 días
+     • recalentar: En horno suave.
+
+📄 pato-relleno.json
+   ANTES:  Guardar en refrigerador hasta 2 días; recalentar en horno suave con un poco de caldo.
+   DESPUÉS:
+     • refrigerador: 2 días
+     • recalentar: En horno suave con un poco de caldo.
+
+📄 pavita-rellena.json
+   ANTES:  Guardar en refrigerador hasta 3 días; recalentar en horno suave con un poco de caldo.
+   DESPUÉS:
+     • refrigerador: 3 días
+     • recalentar: En horno suave con un poco de caldo.
+
+📄 pavo-con-manzanas.json
+   ANTES:  Guardar en refrigerador hasta 3 días; recalentar en horno suave.
+   DESPUÉS:
+     • refrigerador: 3 días
+     • recalentar: En horno suave.
+
+📄 pavo-navideño.json
+   ANTES:  Guardar en refrigerador hasta 3 días; recalentar en horno suave con un poco de caldo.
+   DESPUÉS:
+     • refrigerador: 3 días
+     • recalentar: En horno suave con un poco de caldo.
+
+📄 picadillo-vegetariano.json
+   ANTES:  Mantener refrigerado hasta el momento de servir; consumir el mismo día.
+   DESPUÉS:
+     • refrigerador: Mantener refrigerado hasta el momento de servir. Consumir el mismo día.
+
+📄 pizzetas-de-coliflor.json
+   ANTES:  Guardar en refrigerador hasta 3 días. Recalentar en horno o air fryer.
+   DESPUÉS:
+     • refrigerador: 3 días
+     • recalentar: En horno o air fryer.
+
+📄 pizzetas.json
+   ANTES:  Servir de inmediato; no se conservan bien una vez frías.
+   DESPUÉS:
+     • refrigerador: Servir de inmediato. No se conservan bien una vez frías.
+
+📄 pollo-al-merken-con-coliflor-asada.json
+   ANTES:  Guardar en refrigerador hasta 3 días. Recalentar en horno o sartén.
+   DESPUÉS:
+     • refrigerador: 3 días
+     • recalentar: En horno o sartén.
+
+📄 pollo-con-champinones.json
+   ANTES:  Guardar en refrigerador hasta 2 días; recalentar a fuego lento con un poco de agua.
+   DESPUÉS:
+     • refrigerador: 2 días
+     • recalentar: A fuego lento con un poco de agua.
+
+📄 pollo-con-nueces.json
+   ANTES:  Guardar en refrigerador hasta 2 días; recalentar a fuego lento.
+   DESPUÉS:
+     • refrigerador: 2 días
+     • recalentar: A fuego lento.
+
+📄 pollo-oriental.json
+   ANTES:  Guardar en refrigerador hasta 2 días; recalentar a fuego lento.
+   DESPUÉS:
+     • refrigerador: 2 días
+     • recalentar: A fuego lento.
+
+📄 pollo-relleno.json
+   ANTES:  Guardar en refrigerador hasta 2 días; recalentar en horno suave.
+   DESPUÉS:
+     • refrigerador: 2 días
+     • recalentar: En horno suave.
+
+📄 ponche.json
+   ANTES:  Se puede guardar embotellado en un lugar fresco y oscuro por varias semanas.
+   DESPUÉS:
+     • refrigerador: Se puede guardar embotellado en un lugar fresco y oscuro por varias semanas.
+
+📄 pure-de-garbanzos.json
+   ANTES:  Guardar en un recipiente hermético en el refrigerador hasta por 4 días. Se puede congelar hasta por 2 meses.
+   DESPUÉS:
+     • refrigerador: Guardar en un recipiente hermético en el refrigerador hasta por 4 días
+     • congelador: Se puede congelar hasta por 2 meses.
+
+📄 rollitos-de-ciruela-y-tocino.json
+   ANTES:  Se pueden preparar con anticipación y recalentar en horno suave antes de servir.
+   DESPUÉS:
+     • refrigerador: Se pueden preparar con anticipación
+     • recalentar: En horno suave antes de servir.
+
+📄 rollitos-de-pechuga-de-pollo.json
+   ANTES:  Servir de inmediato; si se guardan, recalentar en horno para recuperar textura.
+   DESPUÉS:
+     • refrigerador: Servir de inmediato
+     • recalentar: Si se guardan, recalentar en horno para recuperar textura.
+
+📄 rompon.json
+   ANTES:  Guardar en el refrigerador y consumir dentro de 2 a 3 días.
+   DESPUÉS:
+     • refrigerador: Guardar en el refrigerador y consumir dentro de 2 a 3 días.
+
+📄 salpicon.json
+   ANTES:  Mantener refrigerado y consumir el mismo día; las verduras pierden textura si se guarda mucho tiempo.
+   DESPUÉS:
+     • refrigerador: Consumir el mismo día. Las verduras pierden textura si se guarda mucho tiempo.
+
+📄 sexo-en-la-playa.json
+   ANTES:  Servir de inmediato.
+   DESPUÉS:
+     • refrigerador: Servir de inmediato.
+
+📄 shawarma.json
+   ANTES:  El pollo marinado crudo se puede guardar en el refrigerador hasta 24 horas antes de cocinar. Una vez cocido, guardar en refrigerador hasta 3 días y recalentar en sartén. El shawarma armado se debe consumir de inmediato para que el pan no se humedezca.
+   DESPUÉS:
+     • refrigerador: El pollo marinado crudo se puede guardar en el refrigerador hasta 24 horas antes de cocinar. Una vez cocido, guardar en refrigerador hasta 3 días. El shawarma armado se debe consumir de inmediato para que el pan no se humedezca.
+     • recalentar: En sartén
+
+📄 sopa-de-avena.json
+   ANTES:  Guardar en refrigerador hasta 2 días; recalentar añadiendo caldo o agua porque la avena sigue espesando.
+   DESPUÉS:
+     • refrigerador: 2 días
+     • recalentar: Añadiendo caldo o agua porque la avena sigue espesando.
+
+📄 sopa-de-papas-crudas.json
+   ANTES:  Guardar en refrigerador hasta 2 días; recalentar a fuego lento.
+   DESPUÉS:
+     • refrigerador: 2 días
+     • recalentar: A fuego lento.
+
+📄 sopa-para-enfermos.json
+   ANTES:  Guardar en refrigerador hasta 2 días; recalentar a fuego lento.
+   DESPUÉS:
+     • refrigerador: 2 días
+     • recalentar: A fuego lento.
+
+📄 strogonoff.json
+   ANTES:  Servir de inmediato; se puede guardar en refrigerador hasta 1 día pero la crema pierde textura al recalentar.
+   DESPUÉS:
+     • refrigerador: Servir de inmediato. 1 día pero la crema pierde textura al recalentar.
+
+📄 suspiros-salados.json
+   ANTES:  Servir de inmediato; se pueden recalentar en horno suave.
+   DESPUÉS:
+     • refrigerador: Servir de inmediato
+     • recalentar: Se pueden recalentar en horno suave.
+
+📄 tequila-sunrise.json
+   ANTES:  Servir de inmediato.
+   DESPUÉS:
+     • refrigerador: Servir de inmediato.
+
+📄 torta-de-arroz.json
+   ANTES:  Mantener refrigerada hasta 2 días; decorar con palta al momento de servir.
+   DESPUÉS:
+     • refrigerador: Mantener refrigerada hasta 2 días. Decorar con palta al momento de servir.
+
+📄 tortilla-de-champiñones.json
+   ANTES:  Servir de inmediato; se puede recalentar en sartén a fuego suave.
+   DESPUÉS:
+     • refrigerador: Servir de inmediato
+     • recalentar: Se puede recalentar en sartén a fuego suave.
+
+📄 tortilla-huasa.json
+   ANTES:  Guardar en refrigerador hasta 2 días; recalentar en horno suave.
+   DESPUÉS:
+     • refrigerador: 2 días
+     • recalentar: En horno suave.

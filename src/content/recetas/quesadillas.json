@@ -1,0 +1,38 @@
+{
+  "titulo": "Quesadillas",
+  "categoria": "once",
+  "tags": ["once", "quesadilla", "queso", "pan", "simple", "tradicional"],
+  "imagen": null,
+  "tiempo": "15 min",
+  "porciones": "4 personas",
+  "dificultad": "muy fácil",
+  "tecnica": "Sartén",
+  "ingredientes": [
+    "8 rebanadas de pan de molde (o 4 panes amasados pequeños)",
+    "200 g de queso mantecoso o chanco en láminas",
+    "2 cucharadas de mantequilla"
+  ],
+  "pasos": [
+    "Si usas pan de molde, corta los bordes. Si usas pan amasado, córtalo por la mitad.",
+    "Pon una lámina de queso entre dos rebanadas de pan.",
+    "Unta la sartén con mantequilla y calienta a fuego medio.",
+    "Dora las quesadillas 2-3 minutos por lado, hasta que el pan esté dorado y el queso derretido.",
+    "Sirve calientes, cortadas en triángulos."
+  ],
+  "dato": "Las quesadillas son un clásico de la once chilena. Se hacen con pan de molde o pan amasado y queso. Son rápidas, ricas y gustan a todos. Se pueden hacer en sartén o en sandwichera.",
+  "errores": [
+    {
+      "error": "No se me derritió el queso",
+      "solucion": "No uses queso frío ni fuego muy alto; usa queso a temperatura ambiente y cocina a fuego medio para que se derrita sin quemarse."
+    },
+    {
+      "error": "Se me quemó el pan",
+      "solucion": "No uses fuego alto; cocina a fuego medio y revisa constantemente."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "No se guardan armadas.",
+    "congelador": "No aplica.",
+    "recalentar": "Sartén a fuego medio 1 minuto por lado."
+  }
+}

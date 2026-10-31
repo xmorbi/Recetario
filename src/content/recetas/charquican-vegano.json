@@ -1,0 +1,59 @@
+{
+  "titulo": "Charquicán Vegano",
+  "categoria": "principales",
+  "tags": [
+    "charquicán",
+    "vegano",
+    "soya",
+    "papas",
+    "zapallo",
+    "plato principal",
+    "invierno"
+  ],
+  "imagen": null,
+  "tiempo": "40 min",
+  "porciones": "4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "1 taza (100 g) de carne de soya texturizada",
+    "5 papas medianas, peladas y en cubos",
+    "200 g de zapallo en cubos",
+    "1 cebolla picada fina",
+    "1 zanahoria en cubitos o rallada",
+    "1 tomate en cubos (sin pepas)",
+    "2 dientes de ajo picados",
+    "1/2 taza (75 g) de choclo en grano",
+    "1/2 taza (75 g) de arvejas congeladas",
+    "1 hoja de laurel",
+    "1 cucharada de orégano",
+    "1 cucharada de ají de color",
+    "200 ml de agua (aprox.)",
+    "Aceite de oliva, sal y pimienta"
+  ],
+  "pasos": [
+    "Remoja la carne de soya en agua caliente por 10 minutos (puedes añadir condimentos al agua para más sabor) y luego cuélala.",
+    "Calienta el aceite a fuego medio y sofríe la cebolla con el ajo y los condimentos hasta que la cebolla esté transparente.",
+    "Sube un poco el fuego, agrega la zanahoria, el tomate y la carne de soya. Sofríe por unos minutos más.",
+    "Incorpora las papas y el zapallo. Cubre con agua fría y cocina tapado por 10 minutos desde que hierva.",
+    "Agrega las arvejas y el choclo. Tapa y cocina por 5 minutos más.",
+    "Machaca a gusto las verduras con un tenedor o cuchara de madera para darle la textura rústica del charquicán. Salpimenta.",
+    "Rectifica los sabores y sirve caliente. Puedes espolvorear cilantro picado por encima."
+  ],
+  "dato": "La soya texturizada es un excelente sustituto de la carne en guisos. Recuerda hidratarla bien y aliñarla para que tome buen sabor. El charquicán vegano mantiene el espíritu del plato de campo chileno, pero sin carne.",
+  "errores": [
+    {
+      "error": "El charquicán me quedó con sabor plano o a soya",
+      "solucion": "La soya texturizada absorbe el sabor del agua en la que se remoja. Añade sal, comino o ají de color al agua de remojo, y dórala bien antes de agregar las verduras."
+    },
+    {
+      "error": "Las papas se me deshicieron",
+      "solucion": "Cocina las papas el tiempo justo. Si usas una variedad que se deshace fácilmente, añádelas al final y controla el tiempo de cocción."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días en un recipiente hermético.",
+    "congelador": "Hasta 2 meses en porciones.",
+    "recalentar": "A fuego lento en una olla, añadiendo un poco de agua si es necesario."
+  }
+}

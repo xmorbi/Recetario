@@ -1,0 +1,50 @@
+{
+  "titulo": "Cola de mono infantil",
+  "categoria": "bebidas",
+  "tags": [
+    "bebida",
+    "sin alcohol",
+    "niños",
+    "café",
+    "navidad",
+    "invierno"
+  ],
+  "imagen": null,
+  "tiempo": "20 min + enfriado",
+  "porciones": "6 a 8 vasos",
+  "dificultad": "fácil",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "1 litro de leche entera",
+    "2 cucharadas (20 g) de café instantáneo descafeinado",
+    "1 rama de canela",
+    "2 clavos de olor",
+    "1/2 taza (100 g) de azúcar (ajustar al gusto)",
+    "1 cucharadita (5 ml) de esencia de vainilla",
+    "1 cucharadita (5 ml) de esencia de ron sin alcohol (opcional, para dar aroma)",
+    "Ralladura de 1/2 naranja (opcional)"
+  ],
+  "pasos": [
+    "En una olla, calienta la leche con la canela, los clavos y la ralladura de naranja. No dejes que hierva.",
+    "Disuelve el café descafeinado en un poco de leche caliente aparte y viértelo a la olla.",
+    "Agrega el azúcar y revuelve hasta disolver.",
+    "Retira del fuego, añade la vainilla y la esencia de ron si usas. Deja enfriar.",
+    "Refrigera por al menos 3 horas. Sirve bien frío con una pizca de canela molida encima."
+  ],
+  "dato": "La versión sin alcohol del clásico navideño. El café descafeinado y la esencia de ron (que no contiene alcohol, solo el aroma) permiten que los niños también disfruten de la tradición.",
+  "errores": [
+    {
+      "error": "La cola de mono me quedó muy aguada o sin gracia",
+      "solucion": "Usaste poca leche o no dejaste infusionar las especias. Deja reposar la leche con las especias por al menos 10 minutos antes de colar."
+    },
+    {
+      "error": "La cola de mono me quedó con demasiado café",
+      "solucion": "Exageraste con el café instantáneo. Con 2 cucharadas es suficiente; el café descafeinado no debe dominar sobre la leche y las especias."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 5 días en botella de vidrio tapada. Agítala antes de servir.",
+    "congelador": "No recomendado, la leche se separa.",
+    "recalentar": "Se consume fría o tibia. Si la quieres tibia, calienta suavemente sin hervir."
+  }
+}

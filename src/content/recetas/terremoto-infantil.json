@@ -1,0 +1,37 @@
+{
+  "titulo": "Terremoto infantil",
+  "categoria": "bebidas",
+  "tags": ["bebida", "sin alcohol", "niños", "fiestas patrias", "verano", "tradicional"],
+  "imagen": null,
+  "tiempo": "5 min",
+  "porciones": "1 vaso",
+  "dificultad": "muy fácil",
+  "tecnica": "Sin cocción",
+  "ingredientes": [
+    "Bebida blanca (Sprite, 7Up o Canada Dry), bien helada",
+    "2 bolas de helado de piña",
+    "1 chorrito de granadina"
+  ],
+  "pasos": [
+    "Pon 2 bolas de helado de piña en un vaso alto.",
+    "Vierte la bebida blanca bien helada hasta casi llenar el vaso.",
+    "Añade un chorrito de granadina para el color rosado.",
+    "Sirve inmediatamente con cuchara o bombilla."
+  ],
+  "dato": "Es la misma fiesta que el terremoto, pero sin pipeño. Ideal para que los niños también tengan su \"trago\" en Fiestas Patrias. El nombre puede ser \"terremoto sin\", \"temblorcito\" o simplemente \"terremoto infantil\".",
+  "errores": [
+    {
+      "error": "Se me perdió el color rosado",
+      "solucion": "No omitas la granadina; es la que da el color característico, y un chorrito pequeño basta."
+    },
+    {
+      "error": "Se me derrite muy rápido el helado",
+      "solucion": "No sirvas en vasos a temperatura ambiente; guarda los vasos en el congelador 10 minutos antes de servir."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Se consume al momento.",
+    "congelador": "No aplica.",
+    "recalentar": "No aplica. Siempre se sirve helado."
+  }
+}

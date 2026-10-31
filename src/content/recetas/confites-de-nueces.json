@@ -1,0 +1,41 @@
+{
+  "titulo": "Confites de Nueces",
+  "categoria": "dulces",
+  "tags": [
+    "confites de nueces",
+    "nueces",
+    "manjar",
+    "dulce",
+    "aperitivo"
+  ],
+  "imagen": null,
+  "tiempo": "25 min",
+  "porciones": "6 a 8 personas",
+  "dificultad": "fácil",
+  "tecnica": "Sin cocción",
+  "ingredientes": [
+    "1 taza (250 g) de manjar blanco",
+    "4 tazas (500 g) de azúcar flor cernida",
+    "Nueces partidas en mitades y peladas (unas 30)",
+    "1 cucharadita (5 ml) de vainilla"
+  ],
+  "pasos": [
+    "Mezclar el manjar con el azúcar y la vainilla revolviendo con cuchara de madera.",
+    "Formar bolitas y colocar una mitad de nuez encima de cada una.",
+    "Dejar secar a temperatura ambiente por 2 horas, hasta que firmen."
+  ],
+  "dato": "Los confites de nueces son un dulce tradicional de las once chilenas y de las mesas de Navidad. Se hacen con manjar y azúcar flor, y se decoran con una nuez. Son primos de los confites de coco, pero con el sabor tostado de la nuez.",
+  "errores": [
+    {
+      "error": "La mezcla me quedó muy pegajosa",
+      "solucion": "Añade más azúcar flor hasta que se pueda formar la bolita sin que se pegue en las manos."
+    },
+    {
+      "error": "Los confites no me firmaron",
+      "solucion": "No los dejaste secar el tiempo suficiente. Déjalos a temperatura ambiente al menos 2 horas, sin tapar, para que el azúcar absorba la humedad del manjar."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "1 semana."
+  }
+}

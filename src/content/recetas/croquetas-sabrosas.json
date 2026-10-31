@@ -1,0 +1,50 @@
+{
+  "titulo": "Croquetas Sabrosas",
+  "categoria": "principales",
+  "tags": [
+    "croquetas sabrosas",
+    "carne molida",
+    "tomate",
+    "horno",
+    "carnes"
+  ],
+  "imagen": null,
+  "tiempo": "40 min",
+  "porciones": "4 a 6 personas",
+  "dificultad": "fácil",
+  "tecnica": "Horno",
+  "ingredientes": [
+    "750 g de carne molida",
+    "2 tomates grandes maduros",
+    "1/2 taza (50 g) de pan rallado",
+    "1 marraqueta remojada",
+    "2 huevos",
+    "Sal",
+    "Pimienta",
+    "Perejil",
+    "Orégano molido",
+    "50 g de aceitunas",
+    "1 cebolla pequeña"
+  ],
+  "pasos": [
+    "Picar la cebolla y el perejil muy finos, mezclar con la carne, huevos, aliños, aceitunas picadas y pan remojado.",
+    "Formar las croquetas y pasarlas por pan rallado.",
+    "Aceitar una asadera, distribuir las croquetas y cubrir con rebanadas de tomate.",
+    "Cocinar a fuego lento una 1/2 hora aproximadamente y servir acompañadas de puré o ensaladas."
+  ],
+  "dato": "El pan remojado debe escurrirse bien antes de incorporarlo para que la mezcla no quede demasiado húmeda. Las croquetas sabrosas son un clásico de las casas chilenas: carne molida, tomate y aceitunas, todo en una croqueta que se hornea.",
+  "errores": [
+    {
+      "error": "Las croquetas se me desarman",
+      "solucion": "Agrega un poco más de pan rallado o refrigera la mezcla 20 minutos antes de formar las croquetas."
+    },
+    {
+      "error": "Las croquetas me quedaron secas",
+      "solucion": "Las horneaste demasiado o la carne era muy magra. Usa carne con algo de grasa y cubre con las rebanadas de tomate para que aporten humedad."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "2 días",
+    "recalentar": "En horno suave."
+  }
+}

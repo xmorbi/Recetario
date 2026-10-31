@@ -1,0 +1,41 @@
+{
+  "titulo": "Rollitos de Pechuga de Pollo",
+  "categoria": "ensaladas",
+  "tags": [
+    "rollitos de pechuga de pollo",
+    "pollo",
+    "espárragos",
+    "fritura",
+    "aperitivo"
+  ],
+  "imagen": null,
+  "tiempo": "25 min",
+  "porciones": "4 a 6 personas",
+  "dificultad": "media",
+  "tecnica": "Fritura",
+  "ingredientes": [
+    "6 filetes de pechuga de pollo",
+    "12 bastones de espárragos en conserva",
+    "3 cucharadas de chuño",
+    "1 taza de aceite",
+    "Sal",
+    "Pimienta"
+  ],
+  "pasos": [
+    "Poner los filetes de pechuga sobre una tabla, aplanar y sazonar con sal y pimienta.",
+    "Luego colocar 2 trozos de espárragos por filete, enrollar y pasar por el chuño.",
+    "Freír en abundante aceite bien caliente y sacar los rollitos cuando estén dorados.",
+    "Si se desea, pueden untarse en alguna salsa."
+  ],
+  "dato": "El chuño ayuda a que el pollo quede crujiente y selle los jugos; si no tienes, puedes usar maicena.",
+  "errores": [
+    {
+      "error": "Rollitos que se abren",
+      "solucion": "Sujeta con un palillo antes de freír o enharina bien el borde para que selle."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Servir de inmediato",
+    "recalentar": "Si se guardan, recalentar en horno para recuperar textura."
+  }
+}

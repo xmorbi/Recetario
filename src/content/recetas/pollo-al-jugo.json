@@ -1,0 +1,46 @@
+{
+  "titulo": "Pollo al jugo",
+  "categoria": "principales",
+  "tags": [
+    "pollo",
+    "olla",
+    "plato principal",
+    "guiso"
+  ],
+  "imagen": null,
+  "tiempo": "45 min",
+  "porciones": "4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "4 trutros de pollo sin piel",
+    "1 cebolla en pluma",
+    "1 zanahoria en rodajas",
+    "1 ajo picado",
+    "Aceite, sal, pimienta, laurel y orégano",
+    "1 L de agua hirviendo"
+  ],
+  "pasos": [
+    "Dora el pollo en aceite hasta sellar. Retira y reserva.",
+    "Sofríe la cebolla 5 min hasta que esté transparente.",
+    "Agrega el ajo, la zanahoria, el laurel, el orégano y el pollo.",
+    "Cubre con el agua hirviendo y cocina 30 min.",
+    "Sirve con puré, arroz o papas cocidas."
+  ],
+  "dato": "El jugo que queda en la olla es la salsa; viértelo sobre el puré.",
+  "errores": [
+    {
+      "error": "Pollo insípido y pálido",
+      "solucion": "Hervir el pollo directamente sin dorarlo. Sella el pollo en aceite caliente hasta que la piel esté dorada para darle sabor."
+    },
+    {
+      "error": "Caldo sin cuerpo",
+      "solucion": "No dejar reducir el líquido. Cuando el pollo esté cocido, retíralo y deja reducir el caldo hasta que tenga consistencia de salsa."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días en recipiente hermético.",
+    "congelador": "Hasta 2 meses.",
+    "recalentar": "A fuego lento, bañando el pollo con su propia salsa."
+  }
+}

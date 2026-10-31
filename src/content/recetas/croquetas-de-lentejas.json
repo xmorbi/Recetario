@@ -1,0 +1,52 @@
+{
+  "titulo": "Croquetas de Lentejas",
+  "categoria": "principales",
+  "tags": [
+    "croquetas de lentejas",
+    "lentejas",
+    "vegano",
+    "legumbres",
+    "fritura",
+    "horno",
+    "recetario mma"
+  ],
+  "imagen": null,
+  "tiempo": "60 min",
+  "porciones": "2 a 3 personas",
+  "dificultad": "fácil",
+  "tecnica": "Sartén u horno",
+  "ingredientes": [
+    "2 tazas (400 g) de lentejas cocidas",
+    "1 zanahoria rallada",
+    "1/2 taza (50 g) de avena en copos",
+    "1 diente de ajo picado",
+    "Perejil picado a gusto",
+    "Sal",
+    "Pimienta",
+    "Comino (opcional)",
+    "Merkén (opcional)",
+    "Aceite para cocinar"
+  ],
+  "pasos": [
+    "Procesar las lentejas cocidas hasta obtener una pasta. Reservar.",
+    "Sofreír la zanahoria rallada y el ajo picado en un poco de aceite.",
+    "Mezclar la pasta de lentejas con el sofrito, la avena, el perejil y los condimentos (sal, pimienta, comino o merkén si se desea).",
+    "Formar croquetas con las manos.",
+    "Cocinar en una sartén con un poco de aceite hasta dorar por ambos lados, o hornear a 180 °C por 30 minutos."
+  ],
+  "dato": "La avena ayuda a ligar la mezcla y aporta fibra. Si la masa está muy húmeda, agrega más avena; si está muy seca, un poco de agua o caldo. Son una excelente alternativa a las croquetas de carne y se pueden servir como entrada o acompañamiento. Las lentejas son una de las legumbres más tradicionales de la cocina chilena.",
+  "errores": [
+    {
+      "error": "Las croquetas se me desarman",
+      "solucion": "Refrigera la mezcla 20 minutos antes de formar las croquetas. Si usas horno, pincélalas con un poco de aceite para que doren."
+    },
+    {
+      "error": "Las croquetas me quedaron con sabor plano",
+      "solucion": "Rectifica la sal y añade especias como comino, merkén o pimentón ahumado. El ajo y el perejil fresco también realzan el sabor."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "3 días",
+    "congelador": "Se pueden congelar ya formadas y cocinar directamente."
+  }
+}

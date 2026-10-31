@@ -1,0 +1,50 @@
+{
+  "titulo": "Crema de Acelgas",
+  "categoria": "sopas",
+  "tags": [
+    "crema de acelgas",
+    "acelgas",
+    "crema",
+    "sopa",
+    "verduras"
+  ],
+  "imagen": null,
+  "tiempo": "35 min",
+  "porciones": "4 a 6 personas",
+  "dificultad": "fácil",
+  "tecnica": "Olla y licuadora",
+  "ingredientes": [
+    "1 paquete chico de acelgas tiernas",
+    "1 cucharada de maicena",
+    "1 cucharada de harina",
+    "6 tazas de caldo",
+    "Ajo",
+    "Aceite",
+    "Pimienta blanca",
+    "1 cucharada de cebolla rallada",
+    "4 rebanadas de pan de molde",
+    "1 huevo duro",
+    "Sal"
+  ],
+  "pasos": [
+    "Limpiar la acelga y eliminar los tallos.",
+    "Cocer las hojas en 2 tazas de agua con un poco de sal, aproximadamente 10 minutos.",
+    "Escurrirlas y molerlas en la licuadora hasta obtener una crema suave.",
+    "En una cacerola calentar aceite y freír el ajo machacado, 1 cucharada de cebolla rallada, sal y pimienta.",
+    "Deshacer en un plato con agua fría la cucharada de harina y la cucharada de maicena e incorporarlas a la fritura.",
+    "Agregar el caldo y revolver hasta que espese.",
+    "Finalmente agregar la crema de acelga.",
+    "Servir bien caliente y agregar en los platos una cucharada de cubitos de pan frito o bien, huevo duro picado."
+  ],
+  "dato": "El pan de molde se usa para hacer los cubitos de pan frito; si no tienes, puedes usar marraqueta del día anterior.",
+  "errores": [
+    {
+      "error": "Crema con grumos",
+      "solucion": "Disuelve bien la harina y la maicena en agua fría antes de incorporarlas; revuelve constantemente al agregar el caldo."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "2 días",
+    "recalentar": "A fuego lento añadiendo un poco de caldo si espesa demasiado."
+  }
+}

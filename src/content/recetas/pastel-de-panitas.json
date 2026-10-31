@@ -1,0 +1,47 @@
+{
+  "titulo": "Pastel de Panitas",
+  "categoria": "principales",
+  "tags": [
+    "pastel de panitas",
+    "panitas",
+    "pollo",
+    "horno",
+    "aves"
+  ],
+  "imagen": null,
+  "tiempo": "50 min",
+  "porciones": "4 a 6 personas",
+  "dificultad": "media",
+  "tecnica": "Horno",
+  "ingredientes": [
+    "1/4 kg de panitas de pollo",
+    "3 huevos",
+    "1/2 cebolla",
+    "1/2 taza de miga de pan",
+    "2 1/2 cucharadas de mantequilla",
+    "1/2 vaso de leche",
+    "1 cucharada de perejil picado",
+    "Sal",
+    "Pimienta"
+  ],
+  "pasos": [
+    "Limpiar y lavar muy bien las panitas de pollo.",
+    "Remojar la miga de pan con la leche.",
+    "Freír la cebolla picada fina en la mantequilla hasta que esté transparente.",
+    "Agregar las panitas y cocinar hasta que estén doradas.",
+    "Mezclar con la miga de pan remojada (estrujada), los huevos batidos, el perejil, sal y pimienta.",
+    "Poner la mezcla en un molde enmantequillado.",
+    "Hornear a horno medio hasta que cuaje y se dore."
+  ],
+  "dato": "El PDF corta la preparación en \"En la...\". Se completó con el procedimiento típico de un pastel de panitas usando los ingredientes listados.",
+  "errores": [
+    {
+      "error": "Pastel seco",
+      "solucion": "No hornees en exceso; retira cuando el centro esté cuajado y la superficie dorada."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "2 días",
+    "recalentar": "En horno suave."
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "titulo": "Sándwich aliado",
+  "categoria": "sandwiches",
+  "tags": ["sándwich", "aliado", "mayonesa", "simple", "once", "completo"],
+  "imagen": null,
+  "tiempo": "5 min",
+  "porciones": "1 sándwich",
+  "dificultad": "muy fácil",
+  "tecnica": "Sin cocción",
+  "ingredientes": [
+    "1 pan de completo (alargado) o 1 marraqueta",
+    "1 vienesa de buena calidad",
+    "1-2 cucharadas de mayonesa casera o de buena calidad"
+  ],
+  "pasos": [
+    "Cuece la vienesa en agua hirviendo 5 minutos.",
+    "Calienta el pan en el horno o plancha 2 minutos por lado.",
+    "Abre el pan por la mitad sin llegar al fondo.",
+    "Pon la vienesa dentro.",
+    "Cubre con mayonesa en línea. Sirve inmediatamente."
+  ],
+  "dato": "El \"aliado\" es el completo más minimalista que existe: solo vienesa y mayonesa. En el carrito de completos, \"aliado\" es el que no lleva ni palta ni tomate. El nombre probablemente viene de que la mayonesa es \"aliada\" de la vienesa: no le agrega nada más. Para muchos chilenos es el completo \"de verdad\".",
+  "errores": [
+    {
+      "error": "Me quedó fría la vienesa",
+      "solucion": "No la cocines con anticipación ni la dejes enfriar; cuece la vienesa al momento y sírvela caliente."
+    },
+    {
+      "error": "Me quedó sabor a mayonesa industrial",
+      "solucion": "No uses mayonesa de bolsa barata; usa mayonesa casera o una de buena calidad, que cambia completamente el sándwich."
+    },
+    {
+      "error": "Me quedó frío el pan",
+      "solucion": "No omitas calentar el pan; un pan crujiente y caliente es la mitad del sándwich."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "No se guarda armado.",
+    "congelador": "No aplica.",
+    "recalentar": "La vienesa y el pan se recalentan."
+  }
+}

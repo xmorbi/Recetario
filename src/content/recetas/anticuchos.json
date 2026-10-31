@@ -1,0 +1,56 @@
+{
+  "titulo": "Anticuchos",
+  "categoria": "principales",
+  "tags": [
+    "anticuchos",
+    "posta de paleta",
+    "longaniza",
+    "parrilla",
+    "carnes"
+  ],
+  "imagen": null,
+  "tiempo": "1 h 20 min (más 1 h de maceración)",
+  "porciones": "6 a 8 personas",
+  "dificultad": "media",
+  "tecnica": "Parrilla",
+  "ingredientes": [
+    "1 kg de posta de paleta",
+    "500 g de longaniza",
+    "250 g de salchichas",
+    "2 cebollas",
+    "2 tomates",
+    "1 pimentón",
+    "200 g de pickles",
+    "1/2 taza (125 ml) de vinagre",
+    "1/4 taza (60 ml) de aceite",
+    "1 cucharadita de sal",
+    "1 cucharadita de pimienta",
+    "1 cucharada de orégano"
+  ],
+  "pasos": [
+    "Cortar la carne, longanizas y salchichas en trocitos de 2 ó 3 cm y dejar en adobo con el vinagre, aceite, sal, pimienta y orégano por 1 hora en el refrigerador.",
+    "Cortar la cebolla, tomates y pimentón en cascos medianos y aliñar.",
+    "Preparar los fierritos alternando los ingredientes, cuidando de incluir mayor cantidad de trocitos de carne.",
+    "Poner en la parrilla a fuego medio y girar los fierritos cada 2-3 minutos para que la carne se ase en forma pareja. Cocinar 15-20 minutos en total, hasta que la carne esté dorada por fuera y cocida por dentro.",
+    "Servir de preferencia con ensaladas surtidas y pebre."
+  ],
+  "dato": "Los anticuchos son parte de la tradición parrillera chilena, sobre todo en Fiestas Patrias y fines de semana largos. La clave está en el adobo con vinagre, que ablanda la carne, y en girar los fierritos constantemente para que se cocinen parejo.",
+  "advertencia": "Manipula la carne cruda con utensilios distintos a los de la carne cocida, y lávate las manos antes y después. La longaniza y las salchichas deben quedar bien cocidas por dentro.",
+  "errores": [
+    {
+      "error": "Los anticuchos me quedaron secos",
+      "solucion": "Los cocinaste demasiado o el fuego estaba muy alto. Cocina a fuego medio 15-20 minutos, girando cada 2-3 minutos, y rocía con el adobo durante la parrilla para que no se sequen."
+    },
+    {
+      "error": "Los anticuchos se me desarmaron",
+      "solucion": "Ensartaste los trozos muy apretados o no alternaste bien. Ensarta alternando carne y verdura sin apretar demasiado, y deja espacio entre los trozos."
+    },
+    {
+      "error": "Los anticuchos me quedaron crudos por dentro",
+      "solucion": "El fuego estaba demasiado fuerte y se doraron por fuera antes de cocinarse por dentro. Usa fuego medio y gira constantemente; la longaniza y las salchichas deben quedar bien cocidas."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Se pueden preparar con anticipación y mantener en el refrigerador hasta 1 día. Asar al momento de servir."
+  }
+}

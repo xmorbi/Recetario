@@ -1,0 +1,62 @@
+{
+  "titulo": "Arroz a la Española",
+  "categoria": "principales",
+  "tags": [
+    "arroz a la española",
+    "arroz",
+    "pollo",
+    "chorizo",
+    "arroces",
+    "tradicional"
+  ],
+  "imagen": null,
+  "tiempo": "1 h",
+  "porciones": "6 personas",
+  "dificultad": "media",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "400 g de arroz de grano largo",
+    "1 pollo cortado en presas (o 4 presas)",
+    "200 g de chorizo español en rodajas",
+    "1 cebolla picada fina",
+    "2 dientes de ajo picados",
+    "1 pimentón rojo en tiras",
+    "2 tomates maduros rallados",
+    "1 zanahoria rallada",
+    "1 taza (150 g) de arvejas (frescas o congeladas)",
+    "4 tazas (1 L) de caldo de pollo caliente",
+    "1/2 cucharadita de azafrán (o 1 cucharadita de ají de color)",
+    "1 cucharadita de ají de color",
+    "3 cucharadas (45 ml) de aceite de oliva",
+    "Sal y pimienta"
+  ],
+  "pasos": [
+    "Salpimentar las presas de pollo y dorarlas en una olla con aceite de oliva a fuego medio-alto. Retirar y reservar.",
+    "En la misma olla, dorar el chorizo en rodajas por 2-3 minutos. Retirar y reservar junto al pollo.",
+    "Sofreír la cebolla, el ajo y el pimentón rojo hasta que la cebolla esté transparente, unos 5 minutos.",
+    "Agregar el tomate rallado y la zanahoria; cocinar 3-4 minutos hasta que el tomate pierda el crudo.",
+    "Incorporar el arroz y el ají de color. Revolver para que los granos se impregnen del sofrito y se tuesten ligeramente, 2 minutos.",
+    "Añadir el caldo caliente, el azafrán, el pollo y el chorizo reservados. Rectificar sal y pimienta.",
+    "Cocinar tapado a fuego lento por 18-20 minutos, sin revolver, hasta que el arroz esté en su punto y el líquido se haya absorbido.",
+    "Retirar del fuego y dejar reposar tapado 5 minutos antes de servir."
+  ],
+  "dato": "Aunque su nombre nos transporte a España, en Chile es tradicional enriquecerlo con mariscos locales (choritos, almejas) y chorizo, una adaptación costera que no se ve en la península. El azafrán, herencia árabe, le da ese color dorado inconfundible.",
+  "errores": [
+    {
+      "error": "El arroz se me pegó",
+      "solucion": "Usa una olla de fondo grueso, no revuelvas en exceso durante la cocción y mantén el fuego lento."
+    },
+    {
+      "error": "El arroz me quedó crudo o pasado",
+      "solucion": "No respetaste la proporción de arroz y líquido. Usa 1 taza de arroz por 2 tazas de caldo, y prueba el punto antes de retirar del fuego."
+    },
+    {
+      "error": "El arroz me quedó sin sabor",
+      "solucion": "No doraste bien el pollo ni el chorizo. Dora bien las carnes antes de agregar el caldo: esa costra dorada es la que le da sabor de fondo al arroz."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 2 días en refrigerador, en recipiente cerrado.",
+    "recalentar": "Con un poco de caldo o agua para devolverle humedad."
+  }
+}

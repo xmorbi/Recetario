@@ -1,0 +1,54 @@
+{
+  "titulo": "Fideos con albóndigas",
+  "categoria": "principales",
+  "tags": [
+    "pasta",
+    "fideos",
+    "albóndigas",
+    "carne",
+    "cotidiano",
+    "salsa de tomate"
+  ],
+  "imagen": null,
+  "tiempo": "45 min",
+  "porciones": "4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "500 g de fideos (tallarines, spaghetti o corbatas)",
+    "400 g de carne picada",
+    "1 huevo",
+    "1/2 taza (50 g) de pan rallado",
+    "2 dientes de ajo picados",
+    "1 cebolla picada fina",
+    "1 zanahoria rallada",
+    "1 tarro de 400 g de tomates pelados (o 6 tomates maduros)",
+    "1 cucharadita de azúcar",
+    "Sal, pimienta, orégano y albahaca",
+    "Aceite"
+  ],
+  "pasos": [
+    "Mezcla la carne picada con el huevo, el pan rallado, la mitad del ajo, sal y pimienta. Forma bolitas del tamaño de una nuez.",
+    "Dora las albóndigas en aceite caliente. Retira y reserva.",
+    "En la misma olla, sofríe la cebolla, el ajo restante y la zanahoria. Agrega los tomates y condimenta con azúcar, orégano y albahaca.",
+    "Devuelve las albóndigas a la salsa y cocina a fuego bajo 20 minutos.",
+    "Cocina los fideos en abundante agua con sal. Escurre.",
+    "Sirve los fideos con la salsa y las albóndigas encima. Espolvorea queso rallado si quieres."
+  ],
+  "dato": "Los fideos con albóndigas son el plato de pasta más cotidiano de Chile, después de los tallarines con salsa de tomate. Se hacen con carne picada de vacuno o una mezcla de vacuno y cerdo. La salsa de tomate casera es la base.",
+  "errores": [
+    {
+      "error": "Las albóndigas me quedaron duras",
+      "solucion": "Usaste carne muy magra o no agregaste suficiente pan rallado. La carne debe tener algo de grasa y el pan rallado le da jugosidad."
+    },
+    {
+      "error": "Las albóndigas se me deshicieron en la salsa",
+      "solucion": "No las doraste antes de ponerlas en la salsa. Dorarlas en aceite caliente sella la superficie y evita que se deshagan."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días en recipiente hermético.",
+    "congelador": "La salsa con albóndigas hasta 2 meses. Los fideos no.",
+    "recalentar": "A fuego lento en la olla."
+  }
+}

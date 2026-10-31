@@ -1,0 +1,54 @@
+{
+  "titulo": "Picarones",
+  "categoria": "dulces",
+  "tags": [
+    "picarones",
+    "fritura",
+    "dulce",
+    "chancaca",
+    "once",
+    "tradicional"
+  ],
+  "imagen": null,
+  "tiempo": "1 h",
+  "porciones": "20 unidades",
+  "dificultad": "media",
+  "tecnica": "Fritura",
+  "ingredientes": [
+    "500 g de zapallo cocido y molido",
+    "250 g de harina",
+    "1 cucharadita de levadura",
+    "1 cucharadita de anís",
+    "1 pizca de sal",
+    "Aceite para freír",
+    "Chancaca: 250 g de chancaca",
+    "Chancaca: ½ taza de agua",
+    "Chancaca: 1 rama de canela",
+    "Chancaca: Cáscara de 1 naranja"
+  ],
+  "pasos": [
+    "Mezcla el zapallo molido con la harina, la levadura, el anís y la sal. Amasa hasta obtener una masa suave y pegajosa.",
+    "Deja reposar 30 minutos tapada.",
+    "Calienta abundante aceite a 170 °C.",
+    "Con las manos húmedas, toma porciones de masa y forma anillos. Fríe hasta que estén dorados por ambos lados.",
+    "Escurre sobre papel absorbente.",
+    "Para el almíbar, hierve la chancaca con el agua, la canela y la cáscara de naranja hasta que espese.",
+    "Baña los picarones con el almíbar caliente y sirve."
+  ],
+  "dato": "Los picarones son de origen peruano, pero en Chile se volvieron parte de la once y de las fondas. Se hacen con zapallo y se bañan en chancaca. Son primos de las sopaipillas pasadas, pero con forma de anillo y masa más liviana.",
+  "errores": [
+    {
+      "error": "Quedan duros",
+      "solucion": "Masa muy seca o aceite muy caliente. La masa debe quedar pegajosa y el aceite a 170 °C."
+    },
+    {
+      "error": "No toman forma",
+      "solucion": "Masa muy líquida o no dejar reposar. Deja reposar 30 minutos y agrega harina si es necesario."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "A temperatura ambiente 1 día. Se recomienda consumir al momento.",
+    "congelador": "No recomendado.",
+    "recalentar": "Horno o freidora de aire a 180 °C por 5 minutos, y bañar con almíbar caliente."
+  }
+}

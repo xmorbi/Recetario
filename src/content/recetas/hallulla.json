@@ -1,0 +1,52 @@
+{
+  "titulo": "Hallulla",
+  "categoria": "panes",
+  "tags": [
+    "pan",
+    "horno",
+    "masa",
+    "desayuno",
+    "once"
+  ],
+  "imagen": "img/hallulla.jpg",
+  "tiempo": "2 h",
+  "porciones": "6 panes",
+  "dificultad": "media",
+  "tecnica": "Horno",
+  "ingredientes": [
+    "500 g de harina",
+    "150 ml de leche tibia",
+    "10 g de levadura seca",
+    "1 1/2 cucharaditas de sal",
+    "80 g de manteca vegetal",
+    "1 cucharadita de azúcar (opcional)"
+  ],
+  "pasos": [
+    "Activa la levadura en la leche tibia con el azúcar. Deja reposar por 10 minutos.",
+    "Mezcla la harina con la sal. Agrega la levadura con la leche y la manteca. Amasa hasta que la masa esté suave y no se pegue.",
+    "Deja levar tapada por 1 hora, hasta que doble su volumen.",
+    "Divide la masa en 6 bollos. Estira cada uno en forma de disco plano de aproximadamente 1 cm de grosor.",
+    "Coloca en una bandeja engrasada y deja levar por 30 minutos más. Precalienta el horno a 200 °C.",
+    "Hornea por 15-20 minutos, hasta que estén doradas. Sirve tibias."
+  ],
+  "dato": "La hallulla es un pan redondo y plano, ideal para sándwiches. Su textura es más suave y compacta que la marraqueta.",
+  "errores": [
+    {
+      "error": "Pan duro y pesado",
+      "solucion": "Amasado insuficiente o levadura vieja. Amasa con energía por al menos 10 minutos y usa levadura fresca."
+    },
+    {
+      "error": "Se aplana en el horno",
+      "solucion": "No dejar levar lo suficiente antes de hornear. Deja que los discos leven por 30 minutos en un lugar cálido."
+    },
+    {
+      "error": "Horno seco",
+      "solucion": "Coloca una fuente con agua caliente en el horno para mantener la humedad y evitar que el pan se seque."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Nunca en frío. A temperatura ambiente 2 días en bolsa de tela.",
+    "congelador": "Hasta 3 meses en bolsa hermética.",
+    "recalentar": "Rocía un poco de agua y hornea a 180°C por 5 minutos."
+  }
+}

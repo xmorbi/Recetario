@@ -1,0 +1,50 @@
+{
+  "titulo": "Piscola",
+  "categoria": "bebidas",
+  "tags": [
+    "bebida",
+    "alcohol",
+    "pisco",
+    "cóctel",
+    "tradicional",
+    "verano"
+  ],
+  "imagen": null,
+  "tiempo": "5 min",
+  "porciones": "1 vaso",
+  "dificultad": "muy fácil",
+  "tecnica": "Sin cocción",
+  "ingredientes": [
+    "1 medida de pisco (40 ml aprox.)",
+    "Bebida cola bien helada (Coca-Cola, Pepsi o similar)",
+    "Hielo en cubos",
+    "Opcional: rodaja de limón"
+  ],
+  "pasos": [
+    "Llena un vaso alto con hielo.",
+    "Vierte el pisco sobre el hielo.",
+    "Completa con la bebida cola bien helada.",
+    "Revuelve suavemente con una cuchara larga.",
+    "Decora con una rodaja de limón si quieres. Sirve inmediatamente."
+  ],
+  "dato": "La piscola es el trago más popular de Chile, especialmente en verano y en las fondas. Se dice que nació en los años 70 en Valparaíso, y desde entonces compite con el terremoto como el cóctel nacional. La proporción varía: desde 1:3 (suave) hasta 1:1 (fuerte, \"con afán\").",
+  "errores": [
+    {
+      "error": "Sabe muy fuerte o \"quema\"",
+      "solucion": "Usar mucho pisco o bebida cola caliente. Usa una proporción de 1:3 (una medida de pisco por tres de cola) y hielo abundante."
+    },
+    {
+      "error": "Se siente aguado o sin gracia",
+      "solucion": "Usar demasiado hielo o bebida cola de mala calidad. Usa hielo en cubos grandes (se derrite más lento) y una bebida cola de buena calidad."
+    },
+    {
+      "error": "No está frío",
+      "solucion": "No enfriar el pisco ni la bebida cola. Deja ambos en el refrigerador al menos 2 horas antes de servir."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Se consume al momento.",
+    "congelador": "No aplica.",
+    "recalentar": "No aplica. Siempre se sirve helado."
+  }
+}

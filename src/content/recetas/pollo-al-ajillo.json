@@ -1,0 +1,49 @@
+{
+  "titulo": "Pollo al ajillo",
+  "categoria": "principales",
+  "tags": [
+    "pollo",
+    "ajo",
+    "sartén",
+    "plato principal",
+    "simple",
+    "español"
+  ],
+  "imagen": null,
+  "tiempo": "40 min",
+  "porciones": "4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Sartén",
+  "ingredientes": [
+    "4 trutros de pollo",
+    "8 dientes de ajo laminados",
+    "½ taza de aceite de oliva",
+    "½ taza de vino blanco",
+    "1 hoja de laurel",
+    "1 cucharadita de ají de color",
+    "Sal, pimienta y perejil"
+  ],
+  "pasos": [
+    "Sazona el pollo con sal, pimienta y ají de color.",
+    "Calienta el aceite en una sartén grande. Dora los ajos laminados y retíralos antes de que se quemen.",
+    "Dora el pollo en el mismo aceite por ambos lados.",
+    "Agrega el vino blanco y el laurel. Tapa y cocina 25-30 minutos a fuego medio, dando vuelta cada tanto.",
+    "Devuelve los ajos a la sartén, espolvorea perejil y sirve con papas o arroz."
+  ],
+  "dato": "El pollo al ajillo es de origen español y en Chile se volvió parte de la cocina casera. El ajo es el protagonista: se dora entero y se deja en la salsa. Es un plato simple pero lleno de sabor.",
+  "errores": [
+    {
+      "error": "Ajos quemados y amargos",
+      "solucion": "Sofreírlos a fuego muy alto. Dora los ajos a fuego medio y retíralos antes de que se quemen. Vuelven al final."
+    },
+    {
+      "error": "Pollo seco",
+      "solucion": "Cocinarlo destapado o demasiado tiempo. Cocina tapado para que se mantenga jugoso."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días en recipiente hermético.",
+    "congelador": "Hasta 2 meses.",
+    "recalentar": "A fuego lento con su salsa."
+  }
+}

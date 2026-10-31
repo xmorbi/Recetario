@@ -1,0 +1,53 @@
+{
+  "titulo": "Arroz con Atún",
+  "categoria": "principales",
+  "tags": [
+    "arroz con atún",
+    "arroz",
+    "atún",
+    "tomate",
+    "curry",
+    "arroces"
+  ],
+  "imagen": null,
+  "tiempo": "40 min",
+  "porciones": "4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "2 tazas (400 g) de arroz",
+    "1 tarro de 180 g de atún",
+    "1 cebolla chica",
+    "4 tomates maduros",
+    "1 diente de ajo",
+    "4 cucharadas (60 ml) de aceite",
+    "1/2 pimiento",
+    "1 cucharadita de curry",
+    "1 atado de verduras surtidas (apio, zanahoria y puerro, aprox. 200 g)",
+    "Sal",
+    "Pimienta"
+  ],
+  "pasos": [
+    "Lavar bien el arroz y dejarlo en remojo 10 minutos. Escurrir.",
+    "Calentar el aceite y freír el ajo, la cebolla picada, el pimiento, los tomates cortados y las verduras surtidas.",
+    "Agregar 4 tazas (1 L) de agua caliente y el curry.",
+    "Dejar en cocción a fuego lento.",
+    "Incorporar el arroz y continuar con la cocción por 15-18 minutos, hasta que el arroz esté tierno.",
+    "Agregar el atún desmenuzado al momento de servir."
+  ],
+  "dato": "El atún se agrega al final para que no se deshaga en exceso y conserve su textura. El arroz con atún es un plato de día de semana chileno, económico y rápido, que se hace con lo que hay en la despensa.",
+  "errores": [
+    {
+      "error": "El arroz se me pasó",
+      "solucion": "Controla el punto: el arroz debe estar cocido pero firme. Si se reseca, agrega un poco de agua caliente."
+    },
+    {
+      "error": "El arroz me quedó con sabor plano",
+      "solucion": "No sofreíste bien las verduras ni los aliños. Haz un buen sofrito con la cebolla, el ajo, el pimiento y el tomate antes de agregar el agua."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "2 días",
+    "recalentar": "A fuego lento con un poco de agua."
+  }
+}

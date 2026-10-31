@@ -1,0 +1,38 @@
+{
+  "titulo": "Picadillo Vegetariano",
+  "categoria": "ensaladas",
+  "tags": [
+    "picadillo vegetariano",
+    "huevos de codorniz",
+    "verduras",
+    "aperitivo",
+    "cóctel"
+  ],
+  "imagen": null,
+  "tiempo": "15 min",
+  "porciones": "4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Sin cocción",
+  "ingredientes": [
+    "12 huevos de codorniz",
+    "2 zanahorias",
+    "1 pepino de ensalada",
+    "Palitos de apio",
+    "Salsa golf o americana"
+  ],
+  "pasos": [
+    "Cocer los huevos de codorniz y pelarlos, dejándolos enteros.",
+    "Cortar las verduras en bastones.",
+    "Colocar en plato para servir, junto con salsa golf o americana."
+  ],
+  "dato": "Ideal para acompañar con palitos de apio, zanahoria y pepino; la salsa se sirve aparte para untar.",
+  "errores": [
+    {
+      "error": "Huevos de codorniz difíciles de pelar",
+      "solucion": "Cocínalos en agua con un poco de vinagre y pásalos a agua fría inmediatamente; así se pelan más fácil."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Mantener refrigerado hasta el momento de servir. Consumir el mismo día."
+  }
+}

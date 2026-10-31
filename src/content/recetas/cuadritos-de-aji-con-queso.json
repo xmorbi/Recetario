@@ -1,0 +1,48 @@
+{
+  "titulo": "Cuadritos de Ají con Queso",
+  "categoria": "once",
+  "tags": [
+    "cuadritos de ají",
+    "queso cheddar",
+    "huevo",
+    "keto",
+    "snack",
+    "sin harina"
+  ],
+  "imagen": null,
+  "tiempo": "45 min",
+  "porciones": "12 cuadritos",
+  "dificultad": "fácil",
+  "tecnica": "Horno",
+  "ingredientes": [
+    "2 tazas (200 g) de queso cheddar rallado",
+    "1 tarro de 200 g de ajíes verdes picados (con su jugo)",
+    "6 huevos grandes",
+    "Sal y pimienta a gusto"
+  ],
+  "pasos": [
+    "Precalentar el horno a 175 °C y engrasar un molde rectangular de aproximadamente 23x33 cm.",
+    "Esparcir la mitad del queso cheddar en el fondo del molde.",
+    "Distribuir los ajíes verdes picados sobre el queso y cubrir con el resto del queso.",
+    "En una licuadora, batir los huevos con el jugo reservado de los ajíes hasta que estén espumosos.",
+    "Verter la mezcla de huevo sobre el queso de manera uniforme.",
+    "Hornear por 30 minutos, hasta que la superficie esté dorada y el centro firme.",
+    "Dejar enfriar al menos 10 minutos antes de cortar en cuadritos."
+  ],
+  "dato": "El jugo de los ajíes aporta sabor y un toque de calor sin necesidad de especias adicionales. Puedes usar ajíes frescos si los prefieres, pero ajusta la cantidad según tu tolerancia al picante. Es un snack típico de la once chilena, sobre todo en casas donde se cuida el azúcar o el gluten.",
+  "advertencia": "El picante de los ajíes varía mucho. Prueba un trozo antes de usar el tarro completo, y lávate las manos después de manipular ajíes frescos.",
+  "errores": [
+    {
+      "error": "Los cuadritos no me cuajaron",
+      "solucion": "El horno no estaba a la temperatura correcta o los sacaste antes de tiempo. Verifica que el horno esté a 175 °C y hornea hasta que el centro esté firme. Si es necesario, déjalos unos minutos más."
+    },
+    {
+      "error": "Los cuadritos me quedaron aguados",
+      "solucion": "Usaste ajíes con demasiado jugo o no escurriste lo suficiente. Escurre un poco del jugo antes de incorporarlo a los huevos, pero reserva un par de cucharadas para dar sabor."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "5 días",
+    "recalentar": "En microondas o horno suave."
+  }
+}

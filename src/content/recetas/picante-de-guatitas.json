@@ -1,0 +1,56 @@
+{
+  "titulo": "Picante de guatitas",
+  "categoria": "principales",
+  "tags": [
+    "guatitas",
+    "picante",
+    "popular",
+    "olla",
+    "tradicional",
+    "invierno"
+  ],
+  "imagen": null,
+  "tiempo": "2 h",
+  "porciones": "4 personas",
+  "dificultad": "media",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "1 kg de guatitas de vacuno (mondongo)",
+    "2 cebollas grandes picadas finas",
+    "4 dientes de ajo picados",
+    "2 zanahorias en cubos",
+    "1 pimentón rojo en cubos",
+    "2 tomates maduros picados",
+    "2 cucharadas de ají de color",
+    "1 cucharadita de merkén o ají picante",
+    "1 cucharadita de orégano",
+    "1 hoja de laurel",
+    "2 papas en cubos",
+    "Agua o caldo para cubrir",
+    "Sal, pimienta y aceite"
+  ],
+  "pasos": [
+    "Lava muy bien las guatitas con agua fría y limón varias veces, hasta que el agua salga clara.",
+    "Cocínalas en agua hirviendo con laurel y un chorrito de vinagre por 1 hora y media, hasta que estén tiernas. Escurre y corta en tiras.",
+    "En otra olla, sofríe la cebolla, el ajo, la zanahoria y el pimentón hasta que estén tiernos.",
+    "Agrega el tomate, el ají de color, el merkén y el orégano. Cocina 5 minutos.",
+    "Incorpora las guatitas y las papas. Cubre con agua o caldo y cocina a fuego lento 30 minutos más.",
+    "Condimenta con sal y pimienta. Sirve caliente con arroz o pan."
+  ],
+  "dato": "El picante de guatitas es la versión con ají picante de las guatitas. Es un plato popular chileno, típico de fondas y de casas de antaño. El merkén le da el toque ahumado y picante que lo caracteriza.",
+  "errores": [
+    {
+      "error": "Olor fuerte",
+      "solucion": "No lavar bien las guatitas. Lávalas varias veces con agua y limón, y cambia el agua de cocción 2-3 veces."
+    },
+    {
+      "error": "Quedan duras",
+      "solucion": "Cocerlas poco tiempo. Las guatitas necesitan al menos 1 hora y media a fuego medio para ablandarse."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días en recipiente hermético.",
+    "congelador": "Hasta 2 meses.",
+    "recalentar": "A fuego lento con un poco de agua o caldo."
+  }
+}

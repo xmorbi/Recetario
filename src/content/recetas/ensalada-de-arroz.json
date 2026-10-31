@@ -1,0 +1,49 @@
+{
+  "titulo": "Ensalada de Arroz",
+  "categoria": "ensaladas",
+  "tags": [
+    "ensalada de arroz",
+    "arroz",
+    "langostinos",
+    "pickles",
+    "mayonesa",
+    "arroces"
+  ],
+  "imagen": null,
+  "tiempo": "25 min",
+  "porciones": "4 a 6 personas",
+  "dificultad": "fácil",
+  "tecnica": "Sin cocción (arroz ya cocido)",
+  "ingredientes": [
+    "2 tazas (400 g) de arroz",
+    "1 taza (150 g) de langostinos",
+    "1/4 taza (60 g) de mayonesa",
+    "6 pepinillos en vinagre",
+    "1/2 taza (75 g) de aceitunas",
+    "1 pimiento",
+    "250 g de pickles",
+    "Jugo de limón",
+    "Aceite",
+    "Sal",
+    "Pimienta"
+  ],
+  "pasos": [
+    "Cocer el arroz en abundante agua con sal.",
+    "Escurrir, enjuagar con agua caliente y enfriar.",
+    "Cortar el pimiento en cuadritos, las aceitunas y pepinillos en tiritas.",
+    "Mezclar con el arroz y la mayonesa.",
+    "Sazonar, agregar jugo de limón y pimienta.",
+    "Untar un molde con aceite y vaciar la preparación comprimiendo para que adquiera forma más compacta.",
+    "Volcar el molde sobre una fuente redonda y decorar con langostinos, aceitunas y pickles."
+  ],
+  "dato": "Esta ensalada se sirve fría; el arroz debe estar completamente frío antes de mezclar para que no absorba la mayonesa. Es una ensalada de verano chilena, típica de las once y de las celebraciones familiares.",
+  "errores": [
+    {
+      "error": "La ensalada me quedó pegajosa",
+      "solucion": "Enjuaga el arroz con agua caliente después de cocido y déjalo enfriar bien extendido en una bandeja."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Mantener refrigerada hasta 2 días. Agregar los langostinos al momento de servir."
+  }
+}

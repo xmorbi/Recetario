@@ -1,0 +1,48 @@
+{
+  "titulo": "Tortilla de acelga",
+  "categoria": "principales",
+  "tags": [
+    "tortilla",
+    "acelga",
+    "huevo",
+    "sartén",
+    "vegetariano",
+    "cotidiano"
+  ],
+  "imagen": null,
+  "tiempo": "25 min",
+  "porciones": "4 personas",
+  "dificultad": "muy fácil",
+  "tecnica": "Sartén",
+  "ingredientes": [
+    "1 atado de acelgas (solo las hojas, sin los tallos)",
+    "1 cebolla pequeña picada fina",
+    "6 huevos",
+    "2 cucharadas de aceite",
+    "Sal, pimienta y nuez moscada (opcional)"
+  ],
+  "pasos": [
+    "Lava bien las acelgas y pícalas finas. Escúrrelas bien.",
+    "Sofríe la cebolla en aceite hasta que esté transparente. Agrega la acelga y cocina 3-4 minutos, hasta que se ablande.",
+    "Bate los huevos con sal, pimienta y nuez moscada. Agrega la acelga y la cebolla.",
+    "Vierte la mezcla en la sartén y cocina a fuego medio 5-7 minutos, hasta que los bordes se despeguen.",
+    "Da vuelta la tortilla con un plato y cocina 3-4 minutos más.",
+    "Sirve tibia o fría, cortada en porciones."
+  ],
+  "dato": "La tortilla de acelga es un clásico de la once y del almuerzo rápido chileno. Se hace con acelga, huevo y cebolla. Es una forma rica de comer verduras. Se puede hacer también con espinaca.",
+  "errores": [
+    {
+      "error": "Queda aguada",
+      "solucion": "No mezcles la acelga sin escurrirla; escúrrela bien antes de mezclarla con los huevos, porque suelta mucha agua al cocinarse."
+    },
+    {
+      "error": "Se rompe al dar vuelta",
+      "solucion": "No des vuelta antes de que cuaje; cocina 5-7 minutos de un lado, hasta que los bordes se despeguen bien."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 2 días en recipiente hermético.",
+    "congelador": "No recomendado.",
+    "recalentar": "Sartén a fuego medio 2 minutos por lado."
+  }
+}

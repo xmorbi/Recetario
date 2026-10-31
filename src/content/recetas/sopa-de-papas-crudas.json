@@ -1,0 +1,47 @@
+{
+  "titulo": "Sopa de Papas Crudas",
+  "categoria": "sopas",
+  "tags": [
+    "sopa de papas crudas",
+    "papas",
+    "posta negra",
+    "sopa",
+    "invierno"
+  ],
+  "imagen": null,
+  "tiempo": "1 h",
+  "porciones": "4 a 6 personas",
+  "dificultad": "fácil",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "1/2 kg de posta negra",
+    "1/2 cebolla",
+    "1/2 zanahoria",
+    "1 ramito de verdura surtida",
+    "1/2 pimiento",
+    "3 papas",
+    "1 puerro",
+    "1 diente de ajo",
+    "Sal",
+    "Pimienta",
+    "Comino"
+  ],
+  "pasos": [
+    "Limpiar la carne y hacer unos cortes superficiales.",
+    "Poner a cocinar junto con las verduras, menos las papas, en agua fría con sal, pimiento y comino.",
+    "Después de 45 minutos de cocción, colar el caldo y poner nuevamente al fuego; al momento de hervir, agregar las papas peladas y ralladas.",
+    "Cocinar a fuego suave hasta que esté cremoso y no tenga sabor a crudo.",
+    "Servir caliente. Si se desea más espesa la sopa, agregar más papa rallada."
+  ],
+  "dato": "La papa rallada cruda suelta su almidón y espesa la sopa naturalmente, sin necesidad de harina.",
+  "errores": [
+    {
+      "error": "Sabor a crudo",
+      "solucion": "Cocina hasta que la papa esté completamente cocida y la sopa tenga textura cremosa; prueba y ajusta el tiempo."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "2 días",
+    "recalentar": "A fuego lento."
+  }
+}

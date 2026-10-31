@@ -1,0 +1,42 @@
+{
+  "titulo": "Sopa de fideos",
+  "categoria": "sopas",
+  "tags": ["sopa", "fideos", "caldo", "olla", "simple", "cotidiano"],
+  "imagen": null,
+  "tiempo": "25 min",
+  "porciones": "4 personas",
+  "dificultad": "muy fácil",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "1,5 L de caldo de pollo o de verduras",
+    "200 g de fideos cabello de ángel o de sopa",
+    "1 cebolla pequeña picada fina",
+    "1 zanahoria en cubos pequeños",
+    "1 ramita de apio picada",
+    "1 cucharada de aceite",
+    "Sal, pimienta y orégano"
+  ],
+  "pasos": [
+    "Sofríe la cebolla, la zanahoria y el apio en aceite hasta que estén tiernos.",
+    "Agrega el caldo y lleva a hervor.",
+    "Añade los fideos y cocina según las instrucciones del paquete (3-5 minutos para cabello de ángel).",
+    "Condimenta con sal, pimienta y orégano.",
+    "Sirve caliente con perejil fresco si quieres."
+  ],
+  "dato": "La sopa de fideos es la sopa más simple y cotidiana de Chile. Se hace con caldo de pollo o de verduras, fideos finos y verduras. Es el plato de invierno por excelencia en las casas chilenas, y se sirve como entrada o como plato único.",
+  "errores": [
+    {
+      "error": "Se me pasaron los fideos",
+      "solucion": "No los cocines de más; los fideos finos se hacen en 3-5 minutos, y si los dejas más, se deshacen."
+    },
+    {
+      "error": "Me quedó soso el caldo",
+      "solucion": "No uses agua en vez de caldo; el caldo de pollo o verduras es lo que le da sabor."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días en recipiente hermético.",
+    "congelador": "No recomendado, los fideos se pasan.",
+    "recalentar": "A fuego lento con un poco de caldo."
+  }
+}

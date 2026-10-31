@@ -1,0 +1,51 @@
+{
+  "titulo": "Mariscos en salsa verde",
+  "categoria": "principales",
+  "tags": [
+    "marisco",
+    "salsa verde",
+    "olla",
+    "plato principal",
+    "costa"
+  ],
+  "imagen": null,
+  "tiempo": "30 min",
+  "porciones": "4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "500 g de mariscos variados (choritos, almejas, camarones)",
+    "200 g de pescado blanco en trozos",
+    "1 cebolla grande picada fina",
+    "3 dientes de ajo picados",
+    "1 pimentón verde en cubos",
+    "1 taza de perejil fresco picado",
+    "½ taza de vino blanco",
+    "½ taza de aceite de oliva",
+    "1 cucharada de harina",
+    "Sal, pimienta y ají verde al gusto"
+  ],
+  "pasos": [
+    "Sofríe la cebolla, el ajo y el pimentón en aceite de oliva hasta que estén tiernos.",
+    "Agrega la harina y revuelve 1 minuto. Vierte el vino blanco y deja evaporar.",
+    "Incorpora los mariscos y el pescado. Cocina 5-7 minutos, hasta que los mariscos se abran.",
+    "Agrega el perejil, el ají, sal y pimienta. Cocina 2 minutos más.",
+    "Sirve caliente con arroz o pan."
+  ],
+  "dato": "Los mariscos en salsa verde son un plato típico de la costa chilena. La salsa verde se hace con perejil, ajo, vino blanco y aceite de oliva. Es una preparación simple que resalta el sabor del marisco. Se puede hacer con mariscos frescos o congelados.",
+  "errores": [
+    {
+      "error": "Mariscos gomosos",
+      "solucion": "Cocinarlos demasiado. Los mariscos se hacen en 5-7 minutos. Agrega el pescado al final."
+    },
+    {
+      "error": "Salsa sin sabor",
+      "solucion": "No usar suficiente perejil o ajo. La salsa verde depende del perejil fresco y el ajo."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 2 días en recipiente hermético.",
+    "congelador": "Hasta 2 meses, idealmente sin papas.",
+    "recalentar": "A fuego muy suave, sin hervir."
+  }
+}

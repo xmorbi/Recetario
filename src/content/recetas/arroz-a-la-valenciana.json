@@ -1,0 +1,64 @@
+{
+  "titulo": "Arroz a la Valenciana",
+  "categoria": "principales",
+  "tags": [
+    "arroz a la valenciana",
+    "arroz",
+    "pollo",
+    "mariscos",
+    "chorizo",
+    "arroces"
+  ],
+  "imagen": null,
+  "tiempo": "1 h 15 min",
+  "porciones": "6 a 8 personas",
+  "dificultad": "media",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "4 tazas (800 g) de arroz de grano largo",
+    "1 pollo cortado en presas (1,5 kg aprox.)",
+    "200 g de chorizo español en rodajas",
+    "500 g de almejas",
+    "500 g de choritos",
+    "250 g de camarones",
+    "2 pimientos (rojo y verde)",
+    "1 cebolla grande picada",
+    "3 dientes de ajo picados",
+    "2 tomates maduros rallados",
+    "1 taza (150 g) de arvejas",
+    "1 cucharadita de curry o cúrcuma (para el color)",
+    "1/2 cucharadita de azafrán (opcional)",
+    "1/4 taza (60 ml) de aceite de oliva",
+    "Sal y pimienta"
+  ],
+  "pasos": [
+    "Sazona las presas de pollo con sal y pimienta, y dóralas en el aceite de oliva a fuego medio-alto. Retira y reserva.",
+    "En la misma olla, dora el chorizo por 2-3 minutos. Retira y reserva junto al pollo.",
+    "Sofríe la cebolla, el ajo y los pimientos hasta que la cebolla esté transparente, unos 5 minutos.",
+    "Agrega el tomate rallado y cocina 3-4 minutos hasta que pierda el crudo.",
+    "Incorpora el arroz y el curry o cúrcuma. Revuelve para que los granos se impregnen del sofrito y se tuesten ligeramente, 2 minutos.",
+    "Añade 8 tazas (2 L) de agua o caldo caliente, el azafrán, el pollo y el chorizo reservados. Rectifica sal y pimienta.",
+    "Cocina tapado a fuego lento por 15 minutos.",
+    "Agrega las almejas, los choritos y los camarones. Tapa y cocina 5-7 minutos más, solo hasta que los mariscos se abran.",
+    "Apaga el fuego y deja reposar tapado 5 minutos antes de servir."
+  ],
+  "dato": "En Chile, el arroz a la valenciana se diferencia de la paella española en el uso de curry o cúrcuma para darle color, y en que siempre lleva un surtido de mariscos: almejas, choritos, camarones y machas. A veces se le llama \"paella chilena\" y se le agrega chorizo o pollo según el gusto de cada casa.",
+  "errores": [
+    {
+      "error": "El arroz se me pegó al fondo de la olla",
+      "solucion": "Usaste una olla de fondo delgado o revolviste demasiado durante la cocción. Usa una olla de fondo grueso, no revuelvas en exceso y mantén el fuego lento."
+    },
+    {
+      "error": "El arroz me quedó crudo o pasado",
+      "solucion": "No respetaste la proporción de arroz y líquido. La proporción es 1 taza de arroz por 2 tazas de líquido. Prueba el punto antes de retirar del fuego."
+    },
+    {
+      "error": "Los mariscos me quedaron gomosos",
+      "solucion": "Los cocinaste demasiado. Agrégalos al final, cuando el arroz ya esté casi listo, y cocina solo 5-7 minutos, hasta que se abran."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 2 días en refrigerador, en recipiente cerrado.",
+    "recalentar": "Con un poco de caldo o agua para devolverle humedad."
+  }
+}

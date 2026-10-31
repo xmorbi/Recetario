@@ -1,0 +1,50 @@
+{
+  "titulo": "Croquetas de Pollo",
+  "categoria": "principales",
+  "tags": [
+    "croquetas de pollo",
+    "pollo",
+    "salsa blanca",
+    "fritura",
+    "aves"
+  ],
+  "imagen": null,
+  "tiempo": "40 min",
+  "porciones": "4 a 6 personas",
+  "dificultad": "media",
+  "tecnica": "Fritura",
+  "ingredientes": [
+    "2 pechugas de pollo",
+    "1 cebolla chica",
+    "1 huevo",
+    "2 cucharadas (20 g) de harina",
+    "1 1/2 taza (375 ml) de salsa blanca",
+    "1 taza (250 ml) de aceite para freír",
+    "Sal",
+    "Pimienta"
+  ],
+  "pasos": [
+    "Deshuesar y moler las pechugas de pollo en la máquina.",
+    "Picar muy fina la cebolla y freírla en aceite.",
+    "Mezclar con el pollo molido, aliños y salsa blanca.",
+    "Formar las croquetas, pasar por huevo batido, harina y freír en aceite caliente (170-180 °C).",
+    "A medida que se retiran de la sartén dejar sobre papel absorbente.",
+    "Servir con ensaladas surtidas."
+  ],
+  "dato": "La salsa blanca debe estar espesa para que las croquetas mantengan la forma; si queda muy líquida, refrigera la mezcla antes de formar las croquetas. Las croquetas de pollo son un clásico de las once chilenas y de las mesas de fiesta.",
+  "advertencia": "Fríe a 170-180 °C: si el aceite está muy caliente, las croquetas se doran por fuera y quedan crudas por dentro. Si está muy frío, absorben grasa.",
+  "errores": [
+    {
+      "error": "Las croquetas se me desarman",
+      "solucion": "Usa salsa blanca bien espesa y refrigera la mezcla 30 minutos antes de formar las croquetas."
+    },
+    {
+      "error": "Las croquetas me quedaron aceitosas",
+      "solucion": "El aceite no estaba a la temperatura correcta. Fríe a 170-180 °C para que se cocinen por dentro sin absorber grasa."
+    }
+  ],
+  "conservacion": {
+    "congelador": "Se pueden congelar ya formadas y freír directamente.",
+    "refrigerador": "2 días."
+  }
+}

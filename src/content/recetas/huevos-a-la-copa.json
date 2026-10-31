@@ -1,0 +1,37 @@
+{
+  "titulo": "Huevos a la Copa",
+  "categoria": "once",
+  "tags": [
+    "huevos a la copa",
+    "huevos pasados por agua",
+    "huevo",
+    "desayuno",
+    "huevos"
+  ],
+  "imagen": null,
+  "tiempo": "5 min",
+  "porciones": "1 persona",
+  "dificultad": "fácil",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "Huevos (la cantidad deseada)",
+    "Agua"
+  ],
+  "pasos": [
+    "Poner los huevos enteros en una olla con agua fría de modo que el agua los cubra.",
+    "Cuando comience a hervir el agua, dejarlos 3 minutos.",
+    "Retirar del fuego y sacar los huevos del agua.",
+    "Retirar el contenido de la cáscara y poner en un pocillo, sirviendo de inmediato.",
+    "La yema debe estar líquida."
+  ],
+  "dato": "Como opción, se pueden servir con su cáscara en una copa especial para que la persona lo abra y retire su contenido, comiendo de inmediato.",
+  "errores": [
+    {
+      "error": "Yema cocida en exceso",
+      "solucion": "Respeta los 3 minutos exactos desde que el agua comienza a hervir; si los huevos son muy grandes, agrega 30 segundos como máximo."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Servir de inmediato. Los huevos pasados por agua no se conservan bien una vez pelados."
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "titulo": "Torta de chocolate",
+  "categoria": "dulces",
+  "tags": [
+    "torta",
+    "chocolate",
+    "horno",
+    "dulce",
+    "cumpleaños",
+    "reposteria"
+  ],
+  "imagen": null,
+  "tiempo": "1 h",
+  "porciones": "12 porciones",
+  "dificultad": "media",
+  "tecnica": "Horno",
+  "ingredientes": [
+    "Bizcocho: 3 huevos",
+    "Bizcocho: 150 g de azúcar",
+    "Bizcocho: 120 g de harina",
+    "Bizcocho: 40 g de cacao en polvo",
+    "Bizcocho: 1 cucharadita de polvos de hornear",
+    "Bizcocho: 100 ml de leche",
+    "Bizcocho: 100 g de mantequilla derretida",
+    "Cubierta: 200 g de chocolate amargo",
+    "Cubierta: 200 ml de crema para batir"
+  ],
+  "pasos": [
+    "Precalienta el horno a 180 °C. Engrasa un molde.",
+    "Bate los huevos con el azúcar hasta que estén pálidos y espumosos.",
+    "Incorpora la harina, el cacao y los polvos de hornear con movimientos envolventes.",
+    "Agrega la leche y la mantequilla derretida. Mezcla hasta integrar.",
+    "Vierte en el molde y hornea 30-35 minutos. Deja enfriar.",
+    "Para la cubierta, calienta la crema y viértela sobre el chocolate picado. Revuelve hasta obtener una ganache lisa.",
+    "Cubre la torta con la ganache y refrigera 2 horas antes de servir."
+  ],
+  "dato": "La torta de chocolate es la favorita de los cumpleaños chilenos. Hay dos escuelas: la torta húmeda (con ganache) y la torta seca (con manjar y chocolate). Esta receta es la versión húmeda, con ganache de chocolate.",
+  "errores": [
+    {
+      "error": "Bizcocho seco",
+      "solucion": "No hornees de más ni omitas la leche y la mantequilla; hornea solo el tiempo indicado y respeta las cantidades, porque son clave para la humedad."
+    },
+    {
+      "error": "Ganache se corta",
+      "solucion": "No uses chocolate muy caliente ni crema fría; usa crema caliente pero sin hervir y pica el chocolate fino."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 4 días en recipiente hermético.",
+    "congelador": "El bizcocho se puede congelar hasta 2 meses. La ganache no.",
+    "recalentar": "A temperatura ambiente."
+  }
+}

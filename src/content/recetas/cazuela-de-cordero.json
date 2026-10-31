@@ -1,0 +1,61 @@
+{
+  "titulo": "Cazuela de cordero",
+  "categoria": "principales",
+  "tags": [
+    "cazuela",
+    "cordero",
+    "olla",
+    "invierno",
+    "patagonia",
+    "tradicional"
+  ],
+  "imagen": null,
+  "tiempo": "1 h 30 min",
+  "porciones": "4 a 6 personas",
+  "dificultad": "fácil",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "1 kg de cordero en trozos (pierna, costillar o paleta)",
+    "4 papas medianas en trozos",
+    "1/2 zapallo en trozos",
+    "2 zanahorias en rodajas",
+    "1 cebolla grande picada",
+    "2 dientes de ajo picados",
+    "1 choclo cortado en trozos (opcional)",
+    "1/2 taza de arroz (opcional)",
+    "1 hoja de laurel",
+    "1 cucharadita de orégano",
+    "1 cucharadita de merkén (opcional)",
+    "Agua o caldo para cubrir",
+    "Sal y pimienta"
+  ],
+  "pasos": [
+    "En una olla grande, dora la carne de cordero en aceite caliente hasta que esté dorada por todos lados. Retira y reserva.",
+    "En la misma olla, sofríe la cebolla y el ajo hasta que estén transparentes.",
+    "Devuelve la carne a la olla. Agrega agua o caldo frío hasta cubrir, el laurel y el orégano.",
+    "Lleva a hervor, baja el fuego y cocina tapado 45 minutos.",
+    "Agrega las zanahorias, las papas, el zapallo y el choclo. Cocina 20 minutos más.",
+    "Si usas arroz, agrégalo en los últimos 15 minutos de cocción.",
+    "Condimenta con sal, pimienta y merkén. Sirve caliente en platos hondos con el caldo."
+  ],
+  "dato": "La cazuela de cordero es plato típico de la Patagonia chilena (Magallanes y Aysén), donde el cordero es la carne principal. En el resto de Chile se hace con menos frecuencia, pero es igual de tradicional. Se sirve con merkén, el ají ahumado mapuche, que le da un sabor único. En Magallanes se hace con cordero fresco de la zona; en el resto del país se puede usar cordero congelado.",
+  "errores": [
+    {
+      "error": "Carne dura",
+      "solucion": "Cocinar poco tiempo o a fuego muy alto. El cordero necesita cocción lenta y prolongada. Al menos 1 hora a fuego medio-bajo."
+    },
+    {
+      "error": "Caldo grasiento",
+      "solucion": "No retirar la grasa. A mitad de la cocción, retira la grasa que flota en la superficie con una cuchara. El cordero suelta bastante grasa."
+    },
+    {
+      "error": "Verduras deshechas",
+      "solucion": "Agregar todas las verduras al principio. Agrega las papas y el zapallo a mitad de cocción, y el choclo al final, según su dureza."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días en recipiente hermético.",
+    "congelador": "Hasta 2 meses, idealmente sin papas.",
+    "recalentar": "A fuego lento en la olla con un poco de agua o caldo."
+  }
+}

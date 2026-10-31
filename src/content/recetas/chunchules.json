@@ -1,0 +1,50 @@
+{
+  "titulo": "Chunchules",
+  "categoria": "principales",
+  "tags": [
+    "chunchules",
+    "tripas",
+    "popular",
+    "fritura",
+    "tradicional",
+    "invierno"
+  ],
+  "imagen": null,
+  "tiempo": "2 h",
+  "porciones": "4 personas",
+  "dificultad": "media",
+  "tecnica": "Olla y fritura",
+  "ingredientes": [
+    "1 kg de chunchules (tripas delgadas de vacuno)",
+    "1 cebolla en cuartos",
+    "2 dientes de ajo",
+    "1 hoja de laurel",
+    "1 cucharada (15 ml) de vinagre",
+    "Sal",
+    "Aceite para freír",
+    "Pebre para acompañar"
+  ],
+  "pasos": [
+    "Lava muy bien los chunchules con agua fría y limón varias veces. Este paso es clave para quitarles el olor fuerte.",
+    "En una olla, pon los chunchules con la cebolla, el ajo, el laurel, el vinagre y sal. Cubre con agua y cocina 1 hora y 30 minutos a fuego medio, hasta que estén tiernos.",
+    "Escurre y corta en trozos de 5 cm. Sécalos bien con papel absorbente.",
+    "Fríe en abundante aceite caliente (170-180 °C) hasta que estén dorados y crujientes. Escurre sobre papel absorbente.",
+    "Sala al gusto y sirve calientes con pebre y pan amasado."
+  ],
+  "dato": "Los chunchules son un plato popular chileno, típico de invierno y de fondas. Son las tripas delgadas del vacuno, que se cuecen hasta ablandarse y luego se fríen. Se comen con pebre y pan. En el campo se preparan en las fiestas y después de las faenas.",
+  "errores": [
+    {
+      "error": "Los chunchules me quedaron duros como caucho",
+      "solucion": "No los cocinaste el tiempo suficiente. Los chunchules necesitan al menos 1 hora y media de cocción para ablandarse. Si están duros, sigue cocinando."
+    },
+    {
+      "error": "Los chunchules me supieron muy fuerte",
+      "solucion": "No los lavaste bien. Lávalos varias veces con agua y limón hasta que el agua salga clara. El vinagre en la cocción también ayuda a quitarles el olor."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días en recipiente hermético, ya cocidos.",
+    "congelador": "Hasta 2 meses, ya cocidos y sin freír.",
+    "recalentar": "Sartén a fuego alto 2-3 minutos para que recuperen la textura crujiente."
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "titulo": "Bistec a lo pobre",
+  "categoria": "principales",
+  "tags": [
+    "carne",
+    "papas fritas",
+    "huevo",
+    "sarten",
+    "plato principal"
+  ],
+  "imagen": "img/Bistec-a-lo-pobre.jpg",
+  "tiempo": "40 min",
+  "porciones": "2 personas",
+  "dificultad": "fácil",
+  "tecnica": "Sartén",
+  "ingredientes": [
+    "2 bistecs de lomo liso o vetado (aprox. 200 g cada uno)",
+    "3 papas medianas cortadas en bastones",
+    "1 cebolla grande cortada en pluma",
+    "2 huevos",
+    "1 taza (250 ml) de aceite para freír",
+    "1 diente de ajo picado",
+    "Sal y pimienta al gusto"
+  ],
+  "pasos": [
+    "Sazona los bistecs con sal, pimienta y ajo. Déjalos reposar mientras preparas el resto.",
+    "Fríe las papas en bastones en abundante aceite caliente (170-180 °C) hasta que estén doradas. Escurre y reserva.",
+    "En una sartén, sofríe la cebolla en un poco de aceite hasta que esté caramelizada. Retira y reserva.",
+    "En la misma sartén, sube el fuego y cocina los bistecs a la plancha o sartén por 2-3 minutos por lado, o hasta el punto deseado.",
+    "Fríe los huevos (uno por persona).",
+    "Para servir, coloca el bistec en el plato, cúbrelo con la cebolla y acompaña con las papas fritas y el huevo frito encima."
+  ],
+  "dato": "Existen varias versiones sobre el origen del nombre \"a lo pobre\". La más difundida es que la carne se sirve con una guarnición sencilla y abundante (papas, cebolla y huevo) que en otros tiempos era considerada \"pobre\" frente a la carne.",
+  "advertencia": "Fríe las papas a 170-180 °C: si el aceite está muy caliente, se doran por fuera y quedan crudas por dentro. Si está muy frío, absorben grasa.",
+  "errores": [
+    {
+      "error": "La carne me quedó seca y dura",
+      "solucion": "Pusiste la carne directo del refrigerador a la sartén. Saca los bistecs 20 minutos antes para que estén a temperatura ambiente."
+    },
+    {
+      "error": "Las papas y la carne me quedaron frías",
+      "solucion": "No coordinaste los tiempos. Fríe las papas primero y mantenlas calientes en el horno, luego cocina la carne y por último los huevos."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "No recomendado, se pierde la textura de las papas y el huevo.",
+    "congelador": "No recomendado.",
+    "recalentar": "Se consume recién hecho."
+  }
+}

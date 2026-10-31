@@ -1,0 +1,52 @@
+{
+  "titulo": "Barros Luco",
+  "categoria": "sandwiches",
+  "tags": [
+    "sándwich",
+    "callejero",
+    "barros luco",
+    "vacuno",
+    "queso",
+    "historia",
+    "almuerzo"
+  ],
+  "imagen": null,
+  "tiempo": "15 min",
+  "porciones": "2 sándwiches",
+  "dificultad": "fácil",
+  "tecnica": "Plancha",
+  "ingredientes": [
+    "2 panes amasados individuales (o 2 marraquetas pequeñas)",
+    "300 g de churrasco de vacuno (posta o asiento) en 2 filetes",
+    "150 g de queso mantecoso o chanco en láminas gruesas",
+    "Sal, pimienta y aceite"
+  ],
+  "pasos": [
+    "Sazona los bistecs con sal y pimienta. Calienta la plancha a fuego alto.",
+    "Sella la carne 2 minutos por lado. Retira y deja reposar mientras preparas el pan.",
+    "Calienta los panes cortados por la mitad en la misma plancha, 1 minuto por lado.",
+    "Pon el queso encima de la carne aún caliente para que se derrita con el calor residual.",
+    "Arma el sándwich: pan, carne con queso derretido, pan.",
+    "Sirve inmediatamente. Si quieres, corta en diagonal."
+  ],
+  "dato": "Lleva el nombre de Ramón Barros Luco, presidente de Chile entre 1910 y 1915. Se dice que lo pedía todos los días en la Confitería Torres, en el centro de Santiago. La receta es minimalista: carne y queso. Nada más. Y así es como debe ser.",
+  "errores": [
+    {
+      "error": "El queso me quedó frío y no se derritió",
+      "solucion": "Pon el queso sobre la carne bien caliente, o pasa el sándwich armado por la plancha 30 segundos tapado. El queso debe derretirse."
+    },
+    {
+      "error": "La carne me quedó seca",
+      "solucion": "La cocinaste de más. Un bistec delgado se hace en 2 minutos por lado a fuego alto."
+    },
+    {
+      "error": "El pan me quedó blando",
+      "solucion": "No calentaste el pan. El pan amasado o la marraqueta deben ir a la plancha antes de armar."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "No se guarda armado.",
+    "congelador": "No aplica.",
+    "recalentar": "En plancha o sándwichera 2 minutos."
+  }
+}

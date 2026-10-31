@@ -1,0 +1,39 @@
+{
+  "titulo": "Rompon",
+  "categoria": "bebidas",
+  "tags": [
+    "rompon",
+    "coñac",
+    "leche",
+    "crema",
+    "yemas",
+    "tragos"
+  ],
+  "imagen": null,
+  "tiempo": "15 min",
+  "porciones": "6 a 8 personas",
+  "dificultad": "fácil",
+  "tecnica": "Licuadora",
+  "ingredientes": [
+    "1 taza de coñac",
+    "1 taza de leche",
+    "1 taza de crema fresca",
+    "1 taza de azúcar",
+    "5 yemas"
+  ],
+  "pasos": [
+    "Mezclar todos los ingredientes en la licuadora y batir a velocidad moderada.",
+    "Dejar en reposo unos 10 minutos.",
+    "Embotellar y guardar en el refrigerador."
+  ],
+  "dato": "El rompon es una bebida cremosa tipo eggnog; servir bien frío y agitar antes de servir.",
+  "errores": [
+    {
+      "error": "Mezcla cortada o grumosa",
+      "solucion": "Licúa a velocidad moderada y no en exceso; si queda grumosa, cuela antes de embotellar."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Guardar en el refrigerador y consumir dentro de 2 a 3 días."
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "titulo": "Pan de Pascua Vegano",
+  "categoria": "dulces",
+  "tags": [
+    "pan de pascua vegano",
+    "pan de pascua",
+    "navidad",
+    "vegano",
+    "frutos secos",
+    "horneado",
+    "chileno"
+  ],
+  "imagen": null,
+  "tiempo": "1 h 30 min",
+  "porciones": "8 porciones",
+  "dificultad": "media",
+  "tecnica": "Horno",
+  "ingredientes": [
+    "280 g de harina de trigo",
+    "170 g de melaza",
+    "75 g de aceite vegetal (maíz o coco)",
+    "75 g de almendras",
+    "75 g de nueces",
+    "60 g de dátiles sin cuesco picados",
+    "50 ml de agua",
+    "1 cdta. de café instantáneo o café de cebada",
+    "1 cda. de licor (ron, pisco o aguardiente) - opcional",
+    "½ cdta. de canela en polvo",
+    "1 anís estrellado",
+    "1 cda. de esencia de ron",
+    "Ralladura de naranja",
+    "1 pizca de clavo de olor",
+    "1 pizca de nuez moscada",
+    "1 cdta. de esencia de vainilla",
+    "30 g de pasas sultanas",
+    "1 ½ cda. de polvo de hornear",
+    "90 ml de aquafaba",
+    "30 g de almidón de papa o maíz",
+    "¼ cdta. de goma xantana (opcional)",
+    "3 g de proteína de soya aislada sin sabor (opcional)",
+    "¼ cdta. de bicarbonato de sodio",
+    "Perlas de azúcar (opcional, para decorar)"
+  ],
+  "pasos": [
+    "Picar los dátiles y mezclarlos con las pasas y el resto de la fruta seca. Agregar una cucharadita de melaza, las especias (canela, anís, clavo, nuez moscada), las esencias, el café instantáneo, el licor (si se usa) y 80 ml de agua. Dejar reposar al menos 15 minutos (idealmente 1 hora).",
+    "Preparar el reemplazo de huevo: mezclar el aquafaba, el almidón de papa o maíz, la goma xantana y la proteína de soya (si se usa) hasta integrar sin grumos. Batir hasta que esté espumoso.",
+    "Agregar la melaza y el aceite a la mezcla de aquafaba y batir bien.",
+    "En un bol aparte, mezclar la harina, el polvo de hornear, el bicarbonato y la sal. Espolvorear los frutos secos con un poco de harina para que no se hundan.",
+    "Escurrir la fruta especiada (reservar el líquido) y agregar el líquido al batido de aquafaba.",
+    "Incorporar la mezcla de harina de a poco al batido, usando batidora hasta que la masa lo permita, luego espátula.",
+    "Agregar la fruta escurrida, las nueces y almendras enharinadas. Incorporar con espátula sin sobremezclar.",
+    "Precalentar el horno a 175 °C. Verter la masa en un molde para pan de Pascua (18 cm) enmantequillado o con papel.",
+    "Hornear por 1 hora a 1 hora 10 minutos, o hasta que al insertar un palillo salga limpio.",
+    "Dejar enfriar en el molde por 10 minutos, luego desmoldar y dejar enfriar completamente sobre una rejilla."
+  ],
+  "dato": "La melaza es clave para el color oscuro y el sabor profundo del pan de Pascua vegano. El aquafaba (líquido de cocción de los garbanzos) actúa como reemplazo del huevo, aportando humedad y estructura. El reposo de la fruta con las especias intensifica el sabor navideño.",
+  "errores": [
+    {
+      "error": "Pan seco o desmoronadizo",
+      "solucion": "No hornees en exceso. La melaza y el aceite aportan humedad; si el pan se seca, puede deberse a demasiada harina. Mide los ingredientes con precisión."
+    },
+    {
+      "error": "Frutas secas que se hunden",
+      "solucion": "Enharina ligeramente las frutas y los frutos secos antes de incorporarlos a la masa."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Guardar envuelto en papel aluminio o en un recipiente hermético a temperatura ambiente por hasta 1 semana",
+    "congelador": "Se puede congelar en rebanadas hasta por 3 meses."
+  }
+}

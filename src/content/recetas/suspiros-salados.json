@@ -1,0 +1,44 @@
+{
+  "titulo": "Suspiros Salados",
+  "categoria": "ensaladas",
+  "tags": [
+    "suspiros salados",
+    "jamón",
+    "queso",
+    "fritura",
+    "aperitivo"
+  ],
+  "imagen": null,
+  "tiempo": "30 min",
+  "porciones": "6 a 8 personas",
+  "dificultad": "media",
+  "tecnica": "Fritura",
+  "ingredientes": [
+    "1/4 taza de harina",
+    "1 cucharada de margarina",
+    "5 huevos",
+    "2 cucharadas de jamón picado fino",
+    "1 cucharada de queso rallado",
+    "Sal",
+    "Aceite para freír"
+  ],
+  "pasos": [
+    "Hervir 3 tazas de agua con margarina y sal.",
+    "Retirar del fuego y agregar la harina de una sola vez.",
+    "Poner al fuego nuevamente. Revolver hasta que la pasta se despegue del fondo de la olla.",
+    "Una vez tibio agregar los huevos uno a uno mezclando bien.",
+    "Agregar el jamón y el queso.",
+    "Dejar reposar un momento y luego freír por cucharaditas en aceite hirviendo."
+  ],
+  "dato": "La masa debe quedar firme pero maleable; si está muy líquida, añade un poco más de harina.",
+  "errores": [
+    {
+      "error": "Suspiros que no inflan",
+      "solucion": "Asegúrate de que el aceite esté bien caliente y de incorporar los huevos cuando la masa esté tibia, no caliente."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Servir de inmediato",
+    "recalentar": "Se pueden recalentar en horno suave."
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "titulo": "Pollo asado",
+  "categoria": "principales",
+  "tags": [
+    "pollo",
+    "horno",
+    "plato principal",
+    "domingo",
+    "asado"
+  ],
+  "imagen": "img/pollo-asado.JPG",
+  "tiempo": "1 h 30 min",
+  "porciones": "4 a 6 personas",
+  "dificultad": "media",
+  "tecnica": "Horno",
+  "ingredientes": [
+    "1 pollo entero",
+    "4 cdas de mostaza",
+    "2 tabletas de caldo de pollo o verduras",
+    "1 taza de vinagre",
+    "1 taza de agua",
+    "4 cdas de aceite, sal y pimienta"
+  ],
+  "pasos": [
+    "Mezcla la mostaza, el caldo disuelto, el vinagre, el agua y el aceite.",
+    "Embadurna el pollo por dentro y por fuera. Marina al menos 3 horas (mejor toda la noche) siempre en el refrigerador, nunca a temperatura ambiente.",
+    "Precalienta el horno a 200 °C.",
+    "Hornea 1 hora a 1 hora 15 min, bañándolo con su jugo cada 20 min.",
+    "Deja reposar 10 min antes de cortar."
+  ],
+  "dato": "El vinagre y la mostaza ayudan a que la piel quede dorada y crujiente.",
+  "errores": [
+    {
+      "error": "Piel pálida y blanda",
+      "solucion": "Hornear el pollo húmedo o a temperatura muy baja. Seca muy bien el pollo y hornea a temperatura alta (200°C) los primeros minutos."
+    },
+    {
+      "error": "Pechuga seca",
+      "solucion": "El tiempo de cocción es excesivo. Cubre las pechugas con papel aluminio a mitad de cocción para que no se sequen."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días en recipiente hermético.",
+    "congelador": "Hasta 3 meses (desmenuzado o en porciones).",
+    "recalentar": "Horno o freidora de aire a 180°C por 10 minutos para que la piel recupere textura."
+  }
+}

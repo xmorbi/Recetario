@@ -1,0 +1,59 @@
+{
+  "titulo": "Empanadas de alcayota",
+  "categoria": "dulces",
+  "tags": [
+    "empanada",
+    "dulce",
+    "alcayota",
+    "horno",
+    "postre",
+    "tradicional"
+  ],
+  "imagen": null,
+  "tiempo": "1 h",
+  "porciones": "12 unidades",
+  "dificultad": "media",
+  "tecnica": "Horno",
+  "ingredientes": [
+    "Masa: 500 g de harina sin polvos de hornear",
+    "Masa: 200 g de mantequilla a temperatura ambiente",
+    "Masa: 100 g de azúcar",
+    "Masa: 2 yemas de huevo",
+    "Masa: 100 ml de agua fría",
+    "Masa: 1 pizca de sal",
+    "Relleno: 500 g de dulce de alcayota (ver receta), frío y espeso",
+    "Relleno: 50 g de nueces picadas (opcional)",
+    "Pintar: 1 huevo batido",
+    "Azúcar flor para espolvorear"
+  ],
+  "pasos": [
+    "Mezcla la harina con el azúcar y la sal. Agrega la mantequilla fría en cubos y trabaja con los dedos hasta que quede como arena gruesa.",
+    "Añade las yemas y el agua fría de a poco, y amasa solo hasta que la masa se una. No amases de más o queda dura.",
+    "Envuelve la masa en papel plástico y refrigera por 30 minutos.",
+    "Estira la masa sobre una superficie enharinada hasta que tenga 3 mm de grosor. Corta círculos de 12-15 cm de diámetro.",
+    "Rellena cada círculo con 2 cucharadas de dulce de alcayota frío. Agrega nueces si quieres. No pongas demasiado relleno o la masa se humedece y se rompe.",
+    "Cierra con repulgue, presiona los bordes con un tenedor y pincha la superficie con un palillo para que no se infle.",
+    "Pinta con huevo batido y hornea a 180 °C por 20-25 minutos, hasta que estén doradas.",
+    "Espolvorea azúcar flor antes de servir."
+  ],
+  "dato": "La alcayota es una fruta de la familia de la calabaza, típica de la zona central de Chile. Su dulce es un clásico de la repostería chilena, especialmente en Fiestas Patrias. Las empanadas de alcayota son primas de las de manzana, pero con un sabor más suave y dulce.",
+  "errores": [
+    {
+      "error": "El relleno se me salió de la empanada",
+      "solucion": "Usaste relleno caliente o no sellaste bien el repulgue. El dulce de alcayota debe estar frío y espeso, y el repulgue debe quedar bien firme."
+    },
+    {
+      "error": "La masa me quedó dura",
+      "solucion": "Amasaste demasiado. La masa de empanada dulce se trabaja lo justo hasta que se una. Si la amasas mucho, se desarrolla el gluten y queda dura."
+    },
+    {
+      "error": "Las empanadas se me inflaron en el horno",
+      "solucion": "No las pinchaste antes de hornear. Hazles unos hoyitos con un palillo o tenedor para que el vapor salga y no se inflen."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días cocidas.",
+    "congelador": "Hasta 3 meses crudas o cocidas.",
+    "recalentar": "Horno a 180 °C por 5-8 minutos."
+  }
+}

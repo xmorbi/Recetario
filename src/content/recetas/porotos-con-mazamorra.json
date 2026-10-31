@@ -1,0 +1,48 @@
+{
+  "titulo": "Porotos con mazamorra",
+  "categoria": "principales",
+  "tags": [
+    "porotos",
+    "choclo",
+    "plato principal",
+    "tradicional",
+    "verano"
+  ],
+  "imagen": "img/porotos-con-mazamorra.png",
+  "tiempo": "50 min",
+  "porciones": "4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "½ kg de porotos granados",
+    "150 g de zapallo camote",
+    "2 choclos pasteleros",
+    "½ cebolla grande, 1 diente de ajo, pimentón (opcional)",
+    "6 hojas de albahaca",
+    "Sal, orégano, ají de color, pimienta y aceite"
+  ],
+  "pasos": [
+    "Cuece los porotos desde agua fría con sal, pimienta y ají de color por 30 min.",
+    "Agrega el zapallo y cocina hasta que esté blando.",
+    "Licúa el choclo desgranado con las hojas de albahaca.",
+    "Haz un sofrito de cebolla, ajo y pimentón.",
+    "Aplasta el zapallo. Agrega el sofrito y la pasta de choclo.",
+    "Hierve 10 min más, rectifica sabores y deja reposar 10 min."
+  ],
+  "dato": "La mazamorra es el choclo licuado con albahaca, le da cuerpo al caldo.",
+  "errores": [
+    {
+      "error": "Mazamorra sin sabor",
+      "solucion": "No licuar el choclo con la albahaca. La gracia es el aroma que le da la albahaca fresca al choclo."
+    },
+    {
+      "error": "Porotos duros",
+      "solucion": "No agregues sal al principio: endurece la piel. Añádela solo cuando los porotos ya estén completamente blandos. (Tip extra: una pizca de bicarbonato los ablanda, pero cambia un poco el sabor)."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días en recipiente hermético.",
+    "congelador": "Hasta 2 meses.",
+    "recalentar": "A fuego lento añadiendo un poco de agua."
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "titulo": "Fondos de Alcachofas Rellenos",
+  "categoria": "once",
+  "tags": [
+    "fondos de alcachofas rellenos",
+    "alcachofas",
+    "atún",
+    "mayonesa",
+    "entrada"
+  ],
+  "imagen": null,
+  "tiempo": "45 min",
+  "porciones": "6 personas",
+  "dificultad": "media",
+  "tecnica": "Hervido",
+  "ingredientes": [
+    "12 alcachofas tiernas",
+    "1 tarro de 180 g de atún en aceite",
+    "Jugo de limón",
+    "Sal",
+    "Pimienta",
+    "Aceite",
+    "1 cucharada de cebolla picada fina",
+    "6 cucharadas (90 g) de mayonesa",
+    "Pimiento rojo",
+    "Perejil"
+  ],
+  "pasos": [
+    "Cocer las alcachofas, enfriarlas y retirarles las hojas.",
+    "Limpiar los fondos, aliñarlos con sal, pimienta, aceite y jugo de limón.",
+    "Dejar en reposo por 1/2 hora.",
+    "Sacar la parte comestible de las hojas y mezclar con el atún desmenuzado, cebolla picada y la mayonesa.",
+    "Rellenar los fondos y decorar con mayonesa, tiras de pimiento y perejil picado.",
+    "Acompañar con ensaladas."
+  ],
+  "dato": "Reserva las hojas más tiernas para raspar su parte comestible; las hojas duras se descartan. Los fondos de alcachofa rellenos son una entrada clásica de las celebraciones chilenas.",
+  "errores": [
+    {
+      "error": "Los fondos se me rompieron al ahuecar",
+      "solucion": "Cocina las alcachofas hasta que estén tiernas pero firmes; retira las hojas con cuidado y ahueca con una cuchara pequeña."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Se pueden preparar con unas horas de anticipación y mantener refrigerados."
+  }
+}

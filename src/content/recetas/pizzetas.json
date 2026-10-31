@@ -1,0 +1,46 @@
+{
+  "titulo": "Pizzetas",
+  "categoria": "ensaladas",
+  "tags": [
+    "pizzetas",
+    "pan de molde",
+    "jamón",
+    "queso",
+    "tomate",
+    "aperitivo"
+  ],
+  "imagen": null,
+  "tiempo": "20 min",
+  "porciones": "4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Horno",
+  "ingredientes": [
+    "Pan de molde",
+    "Jamón",
+    "Queso mantecoso",
+    "Queso mozzarella",
+    "Tomates",
+    "Cebolla",
+    "Orégano",
+    "Sal",
+    "Pimienta"
+  ],
+  "pasos": [
+    "Cubrir la rebanada de pan con tajadas de queso mantecoso.",
+    "Agregar luego el jamón; el tomate en tajadas finas, igual la cebolla.",
+    "Aliñar con sal, orégano y pimienta.",
+    "Rociar con queso mozzarella rallado.",
+    "Poner al horno por 10 minutos aproximadamente.",
+    "Cortar la rebanada en 4 y servir caliente."
+  ],
+  "dato": "La cebolla no aparece en la lista de ingredientes del PDF, pero sí en la preparación; se incluye como ingrediente opcional.",
+  "errores": [
+    {
+      "error": "Pan muy seco",
+      "solucion": "No hornees en exceso; retira cuando el queso esté derretido y el pan apenas dorado."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Servir de inmediato. No se conservan bien una vez frías."
+  }
+}

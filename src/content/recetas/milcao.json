@@ -1,0 +1,55 @@
+{
+  "titulo": "Milcao",
+  "categoria": "panes",
+  "tags": [
+    "milcao",
+    "chiloe",
+    "papa",
+    "patrimonio",
+    "tradicional",
+    "fritura",
+    "sur"
+  ],
+  "imagen": null,
+  "tiempo": "1 h 30 min",
+  "porciones": "12 milcaos",
+  "dificultad": "media",
+  "tecnica": "Olla o fritura",
+  "ingredientes": [
+    "1 kg de papas crudas",
+    "500 g de papas cocidas y hechas puré",
+    "100 g de manteca derretida (o chicharrones picados)",
+    "2 cucharaditas de sal",
+    "Opcional: chicharrones de cerdo picados para rellenar",
+    "Aceite para freír (si se fríen)"
+  ],
+  "pasos": [
+    "Ralla las papas crudas por el lado fino del rallador. Colócalas en un paño limpio y exprímelas muy bien para sacar todo el líquido. Deben quedar secas.",
+    "Pela y cuece las otras 500 g de papas. Hazlas puré y mézclalas con la manteca derretida y la sal.",
+    "Combina las papas ralladas (bien escurridas) con el puré de papas. Amasa hasta obtener una masa homogénea y firme.",
+    "Toma porciones del tamaño de una naranja y aplánalas en la palma de la mano. Si quieres, pon una cucharadita de chicharrones al centro, cierra y aplana de nuevo.",
+    "Para la versión tradicional (cocida): envuelve cada milcao en un paño de algodón (o en hoja de repollo), átalo con cordel y cuécelo en agua hirviendo con sal por 30-40 minutos.",
+    "Para la versión frita: fríe los milcaos en abundante aceite caliente hasta que estén dorados por ambos lados (3-4 minutos por lado).",
+    "Sirve calientes, con pebre o como acompañamiento de curanto y cazuelas."
+  ],
+  "dato": "El milcao es un plato de Chiloé, declarado Patrimonio de la Humanidad por la UNESCO junto con la cocina chilota. Es un \"pan de papa\" que se hace rallando papa cruda y mezclándola con puré. Se sirve con curanto, con cazuela, o solo con pebre. En Chiloé se prepara tradicionalmente en grandes cantidades para el curanto en hoyo. La versión frita es la más común en el resto de Chile, pero en Chiloé se prepara cocido al vapor envuelto en paño.",
+  "errores": [
+    {
+      "error": "Queda aguado",
+      "solucion": "No escurrir bien las papas ralladas. Es el paso más importante: exprímelas en un paño hasta que no suelten ni una gota de agua. Si queda agua, el milcao no toma forma."
+    },
+    {
+      "error": "Se deshace al cocinar",
+      "solucion": "Poca proporción de puré o masa muy aguada. La mezcla debe ser 2/3 papa cruda rallada + 1/3 puré. Si la masa queda muy blanda, agrega un poco más de puré."
+    },
+    {
+      "error": "Sabe muy simple",
+      "solucion": "No usar manteca o chicharrones. La grasa es esencial para el sabor y la textura. No omitas la manteca."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días cocidos en recipiente hermético.",
+    "congelador": "Hasta 3 meses crudos o cocidos, en bolsa hermética.",
+    "recalentar": "Fritos en sartén 2-3 minutos. O al vapor si eran cocidos."
+  }
+}

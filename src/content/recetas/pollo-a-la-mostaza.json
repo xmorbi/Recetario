@@ -1,0 +1,51 @@
+{
+  "titulo": "Pollo a la mostaza",
+  "categoria": "principales",
+  "tags": [
+    "pollo",
+    "mostaza",
+    "sartén",
+    "plato principal",
+    "simple"
+  ],
+  "imagen": null,
+  "tiempo": "45 min",
+  "porciones": "4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Sartén",
+  "ingredientes": [
+    "4 trutros de pollo",
+    "3 cucharadas de mostaza de Dijon",
+    "2 cucharadas de mantequilla",
+    "1 cucharada de aceite",
+    "1 cebolla picada",
+    "2 dientes de ajo picados",
+    "½ taza de vino blanco",
+    "½ taza de crema",
+    "Sal y pimienta"
+  ],
+  "pasos": [
+    "Sazona el pollo con sal y pimienta. Úntalo con 2 cucharadas de mostaza.",
+    "Calienta la mantequilla y el aceite en una sartén. Dora el pollo por ambos lados. Retira y reserva.",
+    "En la misma sartén, sofríe la cebolla y el ajo hasta que estén transparentes.",
+    "Agrega el vino blanco y deja evaporar. Añade la crema y la cucharada de mostaza restante. Revuelve.",
+    "Devuelve el pollo a la sartén, tapa y cocina 20-25 minutos a fuego medio.",
+    "Rectifica la sal y sirve con arroz o papas."
+  ],
+  "dato": "El pollo a la mostaza es un plato de origen francés que en Chile se volvió clásico de las casas. La mostaza de Dijon le da un sabor intenso, y la crema suaviza. Es una receta elegante pero fácil.",
+  "errores": [
+    {
+      "error": "Sabor muy fuerte a mostaza",
+      "solucion": "Usar demasiada mostaza o no cocinarla. La mostaza se suaviza al cocinarse con la crema. Si queda muy fuerte, agrega más crema."
+    },
+    {
+      "error": "Salsa se corta",
+      "solucion": "Hervir la crema o usar crema fría. Agrega la crema a fuego bajo y no dejes que hierva."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días en recipiente hermético.",
+    "congelador": "No recomendado, la crema se corta.",
+    "recalentar": "A fuego lento con un poco de crema o leche."
+  }
+}

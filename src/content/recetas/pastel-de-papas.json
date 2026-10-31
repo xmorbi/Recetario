@@ -1,0 +1,55 @@
+{
+  "titulo": "Pastel de papas",
+  "categoria": "principales",
+  "tags": [
+    "pastel",
+    "papa",
+    "carne",
+    "horno",
+    "plato principal",
+    "cotidiano"
+  ],
+  "imagen": null,
+  "tiempo": "1 h",
+  "porciones": "6 personas",
+  "dificultad": "media",
+  "tecnica": "Horno",
+  "ingredientes": [
+    "6 papas grandes",
+    "½ taza de leche",
+    "2 cucharadas de mantequilla",
+    "500 g de carne picada",
+    "1 cebolla grande picada fina",
+    "2 dientes de ajo picados",
+    "1 pimentón rojo en cubos",
+    "2 tomates maduros picados",
+    "1 cucharadita de ají de color",
+    "1 cucharadita de orégano",
+    "3 huevos duros, 12 aceitunas, 50 g de pasas",
+    "Sal, pimienta y aceite"
+  ],
+  "pasos": [
+    "Cuece las papas y haz un puré con la leche y la mantequilla. Reserva.",
+    "Sofríe la cebolla, el ajo y el pimentón. Agrega la carne y condimenta con ají de color, orégano, sal y pimienta.",
+    "Cocina la carne 10 minutos, agrega el tomate y deja reducir.",
+    "En una fuente para horno, extiende la mitad del puré. Encima pon el pino, los huevos duros, las aceitunas y las pasas.",
+    "Cubre con el resto del puré y alisa la superficie con un tenedor.",
+    "Hornea a 200 °C por 25-30 minutos, hasta que la superficie esté dorada."
+  ],
+  "dato": "El pastel de papas es el hermano del pastel de choclo, pero con puré de papas en vez de pasta de choclo. Es igual de tradicional y se hace en las casas chilenas todo el año. Se le puede agregar azúcar por encima para gratinar, igual que al de choclo.",
+  "errores": [
+    {
+      "error": "Puré aguado",
+      "solucion": "Cocer las papas con poca agua y escurrir bien. El puré debe quedar espeso para que sostenga el relleno."
+    },
+    {
+      "error": "Se desarma al servir",
+      "solucion": "No dejar reposar antes de cortar. Deja reposar 10 minutos fuera del horno antes de porcionar."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días en recipiente hermético.",
+    "congelador": "No recomendado, el puré se aguada.",
+    "recalentar": "Horno a 180 °C por 15 minutos."
+  }
+}

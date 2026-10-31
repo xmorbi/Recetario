@@ -1,0 +1,45 @@
+{
+  "titulo": "Ensalada a la chilena",
+  "categoria": "ensaladas",
+  "tags": [
+    "ensalada",
+    "tomate",
+    "cebolla",
+    "fresca",
+    "acompañamiento",
+    "tradicional"
+  ],
+  "imagen": "img/Ensalada-a-la-Chilena.jpg",
+  "tiempo": "15 min",
+  "porciones": "5 personas",
+  "dificultad": "fácil",
+  "tecnica": "Fresca",
+  "ingredientes": [
+    "4 tomates maduros",
+    "1/2 cebolla blanca",
+    "Cilantro fresco picado",
+    "Sal y aceite a gusto"
+  ],
+  "pasos": [
+    "Pela y corta los tomates en cubos.",
+    "Corta la cebolla en pluma fina y pásala por agua fría para suavizarla.",
+    "Mezcla tomates y cebolla. Condimenta con sal y aceite.",
+    "Decora con cilantro picado."
+  ],
+  "dato": "El agua fría le quita el picor a la cebolla sin perder su textura. La ensalada a la chilena es la ensalada más tradicional de la mesa chilena: tomate, cebolla y cilantro, con aceite y sal. No puede faltar en las Fiestas Patrias ni en el almuerzo de domingo.",
+  "errores": [
+    {
+      "error": "La ensalada se me puso aguada al servir",
+      "solucion": "No sales los tomates con anticipación. Usa un colador para que boten el exceso de agua antes de mezclar."
+    },
+    {
+      "error": "La cebolla me quedó muy fuerte",
+      "solucion": "Córtala en pluma fina y remójala en agua fría por al menos 10 minutos. Esto le quita el picor."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 2 días. Se recomienda consumir el mismo día.",
+    "congelador": "No recomendado.",
+    "recalentar": "Se consume fresca."
+  }
+}

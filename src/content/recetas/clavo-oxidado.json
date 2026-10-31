@@ -1,0 +1,42 @@
+{
+  "titulo": "Clavo Oxidado",
+  "categoria": "bebidas",
+  "tags": [
+    "clavo oxidado",
+    "whisky",
+    "drambuie",
+    "angostura",
+    "cóctel",
+    "tragos"
+  ],
+  "imagen": null,
+  "tiempo": "5 min",
+  "porciones": "1 persona",
+  "dificultad": "fácil",
+  "tecnica": "Vaso",
+  "ingredientes": [
+    "50 cc de whisky",
+    "50 cc de drambuie",
+    "2 gotas de angostura (opcional)",
+    "1 o 2 clavos de olor (opcional)",
+    "1 marrasquino (opcional)",
+    "Cáscara de limón (opcional)",
+    "Hielo"
+  ],
+  "pasos": [
+    "Colocar 2 hielos en un vaso corto ancho (un vaso de whisky).",
+    "Agregar el whisky, el drambuie y las gotas de angostura.",
+    "Hay quienes prefieren beberlo sin el amargo de angostura, por lo que queda a gusto de quien se sirve.",
+    "Puede agregar 1 clavo y un trozo de cáscara de limón."
+  ],
+  "dato": "El drambuie aporta dulzor y notas de miel y especias; la angostura es opcional y añade un amargor aromático. El clavo oxidado es un cóctel clásico de bares chilenos, y se sirve bien frío, en vaso corto.",
+  "errores": [
+    {
+      "error": "El clavo oxidado me quedó demasiado dulce",
+      "solucion": "Ajusta la cantidad de drambuie o añade las gotas de angostura para equilibrar el dulzor."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Servir de inmediato. No se recomienda guardar preparado."
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "titulo": "Pollo al Merkén con Coliflor Asada",
+  "categoria": "principales",
+  "tags": [
+    "pollo al merkén",
+    "coliflor asada",
+    "keto",
+    "low carb",
+    "horno",
+    "plato principal"
+  ],
+  "imagen": null,
+  "tiempo": "45 min",
+  "porciones": "4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Horno",
+  "ingredientes": [
+    "4 presas de pollo (muslos o pechugas)",
+    "1 coliflor mediana",
+    "2 cucharadas de aceite de oliva",
+    "1 cucharadita de merkén",
+    "1 cucharadita de comino",
+    "1 cucharadita de ajo en polvo",
+    "Jugo de 1/2 limón",
+    "1/4 taza de queso rallado (opcional)",
+    "Sal y pimienta a gusto"
+  ],
+  "pasos": [
+    "Precalentar el horno a 200 °C.",
+    "Cortar la coliflor en floretes de tamaño similar y colocarla en una bandeja para horno.",
+    "En un bol, mezclar el aceite de oliva, el merkén, el comino, el ajo en polvo, el jugo de limón, sal y pimienta.",
+    "Untar las presas de pollo con esta mezcla y colocarlas en la bandeja junto a la coliflor.",
+    "Hornear por 25 a 30 minutos, o hasta que el pollo esté cocido y la coliflor esté tierna y dorada.",
+    "Si se desea, espolvorear queso rallado sobre la coliflor en los últimos 5 minutos de horneado."
+  ],
+  "dato": "El merkén es un ahumado chileno que aporta un sabor profundo y picante. Si no lo tienes, puedes usar pimentón ahumado o ají de color.",
+  "errores": [
+    {
+      "error": "Coliflor blanda o sin sabor",
+      "solucion": "Corta los floretes de tamaño uniforme y ásalos a temperatura alta para que se doren por fuera y queden tiernos por dentro."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "3 días",
+    "recalentar": "En horno o sartén."
+  }
+}

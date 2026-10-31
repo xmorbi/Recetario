@@ -1,0 +1,39 @@
+{
+  "titulo": "Huevos Revueltos con Tomate",
+  "categoria": "once",
+  "tags": [
+    "huevos revueltos con tomate",
+    "huevos",
+    "tomate",
+    "desayuno",
+    "once",
+    "huevos"
+  ],
+  "imagen": null,
+  "tiempo": "10 min",
+  "porciones": "2 personas",
+  "dificultad": "fácil",
+  "tecnica": "Sartén",
+  "ingredientes": [
+    "5 huevos",
+    "2 cucharadas de mantequilla",
+    "2 cucharadas de salsa de tomate o 2 tomates maduros",
+    "Sal",
+    "Pimienta"
+  ],
+  "pasos": [
+    "Mezclar los huevos con la salsa de tomates o los tomates maduros picados finos y aliñar.",
+    "Vaciar sobre la mantequilla caliente y revolver hasta que el huevo esté cocido."
+  ],
+  "dato": "Esta misma receta sirve de base para preparar huevos revueltos con panitas de ave, arvejas, porotos verdes, champiñones, etc.",
+  "errores": [
+    {
+      "error": "Huevos secos",
+      "solucion": "Revuelve a fuego suave y retira del calor cuando aún estén cremosos; el calor residual termina de cocinarlos."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Servir de inmediato",
+    "recalentar": "Los huevos revueltos no se conservan bien recalentados."
+  }
+}

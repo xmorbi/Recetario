@@ -1,0 +1,37 @@
+{
+  "titulo": "Sopa para Enfermos",
+  "categoria": "sopas",
+  "tags": [
+    "sopa para enfermos",
+    "posta negra",
+    "fideos",
+    "sopa",
+    "caldo"
+  ],
+  "imagen": null,
+  "tiempo": "2 h 10 min",
+  "porciones": "2 a 4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "1/2 kg de posta negra",
+    "1/2 taza de fideos cabellos de ángel",
+    "Sal"
+  ],
+  "pasos": [
+    "Hacer cortes en el trozo de carne formando cuadrados sin llegar a cortarlo.",
+    "Poner la carne en 1 litro de agua fría y cocinar aproximadamente 2 horas a fuego lento, retirando la espuma cada cierto tiempo.",
+    "Agregar la sal junto con los fideos y cocinar otros 5 minutos más."
+  ],
+  "dato": "Los cortes en la carne ayudan a que suelte más sabor y se cocine de manera pareja. Es una sopa liviana y reconfortante, ideal para personas convalecientes.",
+  "errores": [
+    {
+      "error": "Caldo turbio",
+      "solucion": "Retira la espuma con una espumadera cada cierto tiempo; mantén el fuego lento para que no se emulsione la grasa."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "2 días",
+    "recalentar": "A fuego lento."
+  }
+}

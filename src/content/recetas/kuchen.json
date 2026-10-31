@@ -1,0 +1,54 @@
+{
+  "titulo": "Kuchen",
+  "categoria": "dulces",
+  "tags": [
+    "kuchen",
+    "torta",
+    "horno",
+    "alemán",
+    "sur",
+    "once",
+    "reposteria"
+  ],
+  "imagen": null,
+  "tiempo": "1 h 15 min",
+  "porciones": "12 porciones",
+  "dificultad": "media",
+  "tecnica": "Horno",
+  "ingredientes": [
+    "Masa: 300 g de harina",
+    "Masa: 150 g de mantequilla fría",
+    "Masa: 100 g de azúcar",
+    "Masa: 1 huevo",
+    "Masa: 1 cucharadita de polvos de hornear",
+    "Relleno: 1 kg de frutas (manzanas, ciruelas, duraznos o frutillas)",
+    "Relleno: 3 cucharadas de azúcar",
+    "Relleno: 1 cucharadita de canela",
+    "Cubierta: 2 cucharadas de azúcar flor"
+  ],
+  "pasos": [
+    "Precalienta el horno a 180 °C. Engrasa un molde redondo.",
+    "Prepara la masa: mezcla la harina con los polvos de hornear y el azúcar. Agrega la mantequilla fría en cubos y trabaja con los dedos hasta que quede como arena. Añade el huevo y amasa hasta formar una masa lisa. Refrigera 30 minutos.",
+    "Estira la masa y forra el molde. Pincha con un tenedor.",
+    "Pela y corta las frutas. Mezcla con el azúcar y la canela.",
+    "Distribuye las frutas sobre la masa.",
+    "Hornea 45-50 minutos, hasta que la masa esté dorada y las frutas tiernas.",
+    "Deja enfriar y espolvorea azúcar flor antes de servir."
+  ],
+  "dato": "El kuchen es la herencia alemana en la repostería chilena, especialmente en el sur (Valdivia, Osorno, Puerto Montt). Se hace con masa quebrada y frutas de la estación. El kuchen de manzana es el más clásico, pero también se hace de ciruela, durazno y frutilla.",
+  "errores": [
+    {
+      "error": "Masa dura",
+      "solucion": "Amasar demasiado o usar mantequilla caliente. La mantequilla debe estar fría y la masa no debe amasarse mucho."
+    },
+    {
+      "error": "Frutas sueltan mucho jugo",
+      "solucion": "No escurrirlas o usar frutas muy maduras. Escurre bien las frutas y si es necesario espolvorea un poco de harina o maicena sobre la masa antes de ponerlas."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días en recipiente hermético.",
+    "congelador": "Hasta 2 meses.",
+    "recalentar": "Horno a 180 °C por 5-8 minutos."
+  }
+}

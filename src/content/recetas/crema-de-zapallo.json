@@ -1,0 +1,50 @@
+{
+  "titulo": "Crema de Zapallo",
+  "categoria": "sopas",
+  "tags": [
+    "crema de zapallo",
+    "zapallo",
+    "zanahoria",
+    "crema",
+    "sopa"
+  ],
+  "imagen": null,
+  "tiempo": "35 min",
+  "porciones": "4 a 6 personas",
+  "dificultad": "fácil",
+  "tecnica": "Olla y cedazo",
+  "ingredientes": [
+    "1/2 kg de zapallo",
+    "1 1/2 litro de leche",
+    "1 cebolla",
+    "2 zanahorias",
+    "2 dientes de ajo",
+    "2 cucharadas (20 g) de queso rallado",
+    "2 cucharadas (30 g) de mantequilla",
+    "2 cucharadas (20 g) de harina"
+  ],
+  "pasos": [
+    "Cocer el zapallo y la zanahoria y pasarlos por el cedazo para obtener una crema suave.",
+    "Calentar la leche.",
+    "Calentar la mantequilla y freír la cebolla picada fina con el ajo machacado.",
+    "Disolver la harina en un poco de leche y agregarla de a poco a la fritura revolviendo constantemente.",
+    "Cocinar por algunos minutos y luego incorporar el puré de zapallo y la leche.",
+    "Hervir a fuego lento unos 10 minutos.",
+    "Servir bien caliente con queso rallado o pan frito."
+  ],
+  "dato": "El zapallo chileno es dulce y cremoso; si usas otra variedad, ajusta la sazón y el espesor con la leche. La crema de zapallo es una sopa de invierno chilena, típica de las casas donde se aprovecha el zapallo de la feria.",
+  "errores": [
+    {
+      "error": "La crema me quedó muy líquida",
+      "solucion": "Usaste menos zapallo o más leche de la necesaria. Deja reducir un poco más al fuego; el puré de zapallo debe aportar cuerpo."
+    },
+    {
+      "error": "La crema me quedó con grumos de harina",
+      "solucion": "No disolviste bien la harina. Disuélvela en leche fría antes de incorporarla y revuelve constantemente al agregarla a la olla."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "3 días",
+    "recalentar": "A fuego lento."
+  }
+}

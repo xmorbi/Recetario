@@ -1,0 +1,50 @@
+{
+  "titulo": "Pizzetas de Coliflor",
+  "categoria": "ensaladas",
+  "tags": [
+    "pizzetas de coliflor",
+    "keto",
+    "sin harina",
+    "snack",
+    "horno",
+    "vegetariano"
+  ],
+  "imagen": null,
+  "tiempo": "45 min",
+  "porciones": "10 unidades",
+  "dificultad": "media",
+  "tecnica": "Horno",
+  "ingredientes": [
+    "1000 g de ramilletes de coliflor",
+    "100 g de queso parmesano",
+    "2 huevos",
+    "60 g de queso crema",
+    "1 cucharadita de sal",
+    "2 pellizcos de pimienta negra",
+    "300 g de salsa de tomate",
+    "200 g de queso granulado (mozzarella)",
+    "Hojas de albahaca fresca para decorar"
+  ],
+  "pasos": [
+    "Precalentar el horno a 200 °C.",
+    "Rallar la coliflor cruda o triturarla en un procesador de alimentos hasta obtener una textura similar a la harina.",
+    "Cocer la coliflor rallada en una sartén a fuego medio para eliminar el exceso de humedad.",
+    "Mezclar la coliflor con el queso parmesano, los huevos, el queso crema, la sal y la pimienta.",
+    "Formar discos pequeños con la mezcla y colocarlos en una bandeja para horno con papel de hornear.",
+    "Hornear la base por 20 minutos, hasta que esté firme y dorada.",
+    "Agregar la salsa de tomate y el queso granulado sobre cada base.",
+    "Hornear por 15 minutos más, hasta que el queso se derrita.",
+    "Decorar con albahaca fresca antes de servir."
+  ],
+  "dato": "Escurrir bien la coliflor después de cocerla es clave para que las bases no queden aguadas. Puedes usar un paño limpio para presionarla y eliminar el líquido.",
+  "errores": [
+    {
+      "error": "Bases que se desarman",
+      "solucion": "Asegúrate de eliminar toda la humedad posible de la coliflor y deja enfriar la mezcla antes de formar los discos. Si es necesario, agrega un poco más de queso parmesano para ligar."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "3 días",
+    "recalentar": "En horno o air fryer."
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "titulo": "Pavita Rellena",
+  "categoria": "principales",
+  "tags": [
+    "pavita rellena",
+    "pavita",
+    "tocino",
+    "limón",
+    "horno",
+    "aves"
+  ],
+  "imagen": null,
+  "tiempo": "2 h 30 min",
+  "porciones": "6 a 8 personas",
+  "dificultad": "media",
+  "tecnica": "Horno",
+  "ingredientes": [
+    "1 pavita",
+    "1 cebolla mediana",
+    "1 cucharada de mantequilla",
+    "2 limones",
+    "1/8 kg de tocino ahumado",
+    "1 vaso de vino blanco",
+    "Clavos de olor",
+    "Aceite",
+    "Sal",
+    "Pimienta"
+  ],
+  "pasos": [
+    "Limpiar bien la pavita eliminando con la llama los restos de plumilla, lavar y secar con un paño.",
+    "Limpiar la cebolla y enterrarle los clavos de olor.",
+    "Lavar un limón y agujerearlo en varias partes.",
+    "Aliñar la pavita con sal y pimienta, colocar en su interior la cebolla y el limón.",
+    "Cubrirla con tiras de tocino ahumado y amarrarle las patas y las alas.",
+    "Ponerla en una asadera, rociarla con sal, pimienta, aceite y trocitos de mantequilla; dejarla en cocción en horno caliente.",
+    "Bañar la pavita con el vino blanco y el jugo que se va formando.",
+    "Cuando esté blanda quitar las tiras de tocino y rociar con jugo de limón.",
+    "Servir con su jugo, acompañada de puré de papas."
+  ],
+  "dato": "El título fue reconstruido porque el OCR perdió el encabezado. La cebolla con clavos y el limón agujereado se colocan dentro para aromatizar desde adentro.",
+  "errores": [
+    {
+      "error": "Pavita seca",
+      "solucion": "Rocía con vino y su jugo cada cierto tiempo; cubre con papel aluminio si se dora demasiado rápido."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "3 días",
+    "recalentar": "En horno suave con un poco de caldo."
+  }
+}

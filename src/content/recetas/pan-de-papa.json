@@ -1,0 +1,50 @@
+{
+  "titulo": "Pan de papa",
+  "categoria": "panes",
+  "tags": [
+    "pan",
+    "papa",
+    "horno",
+    "masa",
+    "chiloé",
+    "tradicional"
+  ],
+  "imagen": null,
+  "tiempo": "2 h",
+  "porciones": "10 panes",
+  "dificultad": "media",
+  "tecnica": "Horno",
+  "ingredientes": [
+    "500 g de harina sin polvos de hornear",
+    "250 g de papas cocidas y hechas puré",
+    "150 ml de leche tibia",
+    "10 g de levadura granulada",
+    "1 cucharadita de sal",
+    "2 cucharadas de manteca derretida",
+    "1 cucharadita de azúcar"
+  ],
+  "pasos": [
+    "Activa la levadura en la leche tibia con el azúcar. Reposa 10 minutos.",
+    "Mezcla el puré de papas con la harina, la sal y la manteca.",
+    "Agrega la levadura y amasa hasta obtener una masa suave.",
+    "Deja levar tapada 1 hora, hasta que doble su volumen.",
+    "Forma 10 bollos y colócalos en bandeja engrasada. Deja levar 30 minutos más.",
+    "Hornea a 190 °C por 25-30 minutos, hasta dorar."
+  ],
+  "dato": "El pan de papa es típico de Chiloé y del sur de Chile. La papa le da una miga muy suave y húmeda, que se mantiene tierna por más tiempo. Es primo del milcao (que es de papa cruda rallada), pero el pan de papa lleva harina y levadura, y se hornea.",
+  "errores": [
+    {
+      "error": "Queda pesado",
+      "solucion": "Puré de papa muy húmedo o harina de más. El puré debe estar seco. Si la masa está muy pegajosa, agrega harina cucharada a cucharada."
+    },
+    {
+      "error": "No sube",
+      "solucion": "Levadura vencida o leche caliente. La leche debe estar tibia, no caliente."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "A temperatura ambiente 2 días en bolsa de tela.",
+    "congelador": "Hasta 3 meses en bolsa hermética.",
+    "recalentar": "Horno a 180 °C por 5 minutos."
+  }
+}

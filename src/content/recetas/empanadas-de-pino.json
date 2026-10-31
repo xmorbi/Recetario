@@ -1,0 +1,64 @@
+{
+  "titulo": "Empanadas de pino",
+  "categoria": "principales",
+  "tags": [
+    "empanada",
+    "horno",
+    "pino",
+    "plato principal",
+    "fiestas patrias"
+  ],
+  "imagen": "img/Empanadas-de-pino.jpg",
+  "tiempo": "90 min + reposo",
+  "porciones": "12 unidades",
+  "dificultad": "media",
+  "tecnica": "Horno",
+  "ingredientes": [
+    "Masa: 500 g de harina sin polvos de hornear",
+    "Masa: 120 g de manteca derretida",
+    "Masa: 1 huevo",
+    "Masa: 1 cucharadita de sal",
+    "Masa: 200 ml de agua tibia (aprox.)",
+    "Pino: 500 g de carne de vacuno picada gruesa",
+    "Pino: 2 cebollas grandes en cubos finos",
+    "Pino: 1 cucharadita de comino",
+    "Pino: 1 cucharadita de orégano",
+    "Pino: 2 cucharaditas de ají de color",
+    "Pino: Sal y pimienta",
+    "Pino: 12 aceitunas, 2 huevos duros, 50 g de pasas"
+  ],
+  "pasos": [
+    "Sofríe la cebolla en aceite a fuego medio hasta que esté transparente, unos 10 minutos.",
+    "Agrega la carne, el comino, el orégano y el ají de color. Cocina 10 minutos más y condimenta.",
+    "Deja enfriar el pino por completo.",
+    "Mezcla la harina con la sal, añade la manteca, el huevo y el agua tibia. Amasa hasta lograr una masa lisa.",
+    "Reposa la masa 30 minutos. Divídela en 12 bollos y estira cada uno en un disco de unos 15 cm.",
+    "Rellena con dos cucharadas de pino, una aceituna, unas pasas y un trozo de huevo duro.",
+    "Humedece el borde, cierra con un repulgue y pincha la masa con un tenedor.",
+    "Pinta con huevo batido y hornea a 200 °C por 25 a 30 minutos."
+  ],
+  "dato": "El repulgue no es decorativo: impide que el jugo del pino se escape en el horno. La empanada de pino es el plato más emblemático de las Fiestas Patrias chilenas, y cada familia tiene su versión: con más cebolla, con más carne, con o sin pasas.",
+  "errores": [
+    {
+      "error": "El pino me quedó caliente al armar",
+      "solucion": "Si rellenas la masa con el pino caliente, la grasa se derrite y las empanadas se abren en el horno. Prepara el pino el día anterior o déjalo enfriar completamente."
+    },
+    {
+      "error": "La cebolla me picó demasiado",
+      "solucion": "Lávala con sal y déjala remojando en agua fría por unos minutos. Otra opción es dejarla reposar en agua hirviendo un par de minutos antes de sofreírla."
+    },
+    {
+      "error": "La masa me quedó seca o quebradiza",
+      "solucion": "Amasaste en exceso y se desarrolló el gluten. Amasa solo hasta que los ingredientes se integren."
+    },
+    {
+      "error": "Le puse demasiado relleno y no cerró",
+      "solucion": "Poner demasiado pino impide que el repulgue cierre bien. Usa dos cucharadas generosas por empanada y deja un borde libre."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días cocidas en un recipiente hermético.",
+    "congelador": "Hasta 3 meses. Se pueden congelar crudas (armadas) o cocidas.",
+    "recalentar": "Si están crudas: hornear directo del congelador a 180 °C por 35-40 min. Si están cocidas: horno o freidora de aire por 5-10 min. Evita el microondas."
+  }
+}

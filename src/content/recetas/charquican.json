@@ -1,0 +1,53 @@
+{
+  "titulo": "Charquicán",
+  "categoria": "principales",
+  "tags": [
+    "charquican",
+    "olla",
+    "plato principal",
+    "invierno",
+    "papas",
+    "verduras"
+  ],
+  "imagen": "img/Charquican.jpg",
+  "tiempo": "40 min",
+  "porciones": "4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "500 g de carne picada (o charqui remojado y desmenuzado)",
+    "3 papas en cubos",
+    "1/2 zapallo en cubos",
+    "1 cebolla picada",
+    "1 choclo desgranado o 1 taza (150 g) de arvejas",
+    "Comino, ají de color, orégano y sal",
+    "Huevos para freír al servir"
+  ],
+  "pasos": [
+    "Hierve papas y zapallo en agua con sal hasta que estén blandos. Reserva un poco del agua.",
+    "Sofríe la cebolla en otra olla. Agrega la carne y condimenta.",
+    "Incorpora el choclo o las arvejas y cocina 5 minutos.",
+    "Agrega las papas y el zapallo escurridos. Maja la mezcla con un tenedor.",
+    "Sirve con un huevo frito encima."
+  ],
+  "dato": "El nombre viene del quechua charquicán, por el charqui, carne seca y salada. Es un plato de campo chileno, de esos que se hacen con lo que hay en la casa, y se sirve con huevo frito encima.",
+  "errores": [
+    {
+      "error": "El charquicán me quedó como puré en vez de guiso",
+      "solucion": "Lo majaste demasiado. Usa un tenedor y aplasta suavemente: el charquicán debe tener textura rústica, con trozos visibles."
+    },
+    {
+      "error": "El charquicán me quedó con sabor plano",
+      "solucion": "No condimentaste lo suficiente. El charquicán es un plato de campo y necesita aliños generosos: comino, ají de color, orégano. Prueba y ajusta la sal antes de servir."
+    },
+    {
+      "error": "Al charquicán le faltó sabor profundo",
+      "solucion": "Agrega un sazonador (como salsa inglesa o un cubo de caldo) o pica finamente un par de champiñones. Levantan el sabor de fondo sin que se noten."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días en recipiente hermético.",
+    "congelador": "Hasta 2 meses.",
+    "recalentar": "A fuego lento en la olla. Si está muy espeso, agrega un chorrito de agua o leche."
+  }
+}

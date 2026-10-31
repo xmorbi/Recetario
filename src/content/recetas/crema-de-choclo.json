@@ -1,0 +1,46 @@
+{
+  "titulo": "Crema de Choclo",
+  "categoria": "sopas",
+  "tags": [
+    "crema de choclo",
+    "choclo",
+    "albahaca",
+    "crema",
+    "sopa"
+  ],
+  "imagen": null,
+  "tiempo": "30 min",
+  "porciones": "4 a 6 personas",
+  "dificultad": "fácil",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "3 choclos grandes, sanos",
+    "1 cebolla chica",
+    "Hojas de albahaca",
+    "2 cucharadas grandes de mantequilla",
+    "4 cucharadas de crema",
+    "Sal",
+    "Ají picante",
+    "2 panes duros"
+  ],
+  "pasos": [
+    "Rallar los choclos.",
+    "Derretir la mantequilla en la olla.",
+    "Agregar la cebolla picada en cuadritos, la sal, albahaca, choclos rallados y finalmente 1 litro de agua.",
+    "Revolver bien, sazonar y hervir a fuego suave unos 20 minutos.",
+    "Cortar el pan en cubos pequeños y dorarlos en mantequilla o aceite.",
+    "Cuando la sopa esté lista, batir la crema y agregarla revolviendo bien.",
+    "Al momento de servir poner en cada plato una cucharada de pan frito."
+  ],
+  "dato": "El choclo rallado suelta su almidón y espesa la crema naturalmente; no necesita harina.",
+  "errores": [
+    {
+      "error": "La crema me quedó sin sabor a choclo",
+      "solucion": "Usa choclos bien maduros y no los cuezas antes de rallar; el sabor se concentra al cocinar el choclo crudo en la sopa."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "2 días",
+    "recalentar": "A fuego lento sin dejar hervir."
+  }
+}

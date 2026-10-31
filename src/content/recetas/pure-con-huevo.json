@@ -1,0 +1,47 @@
+{
+  "titulo": "Puré con huevo",
+  "categoria": "principales",
+  "tags": [
+    "puré",
+    "papa",
+    "huevo",
+    "cotidiano",
+    "simple",
+    "comfort"
+  ],
+  "imagen": null,
+  "tiempo": "25 min",
+  "porciones": "4 personas",
+  "dificultad": "muy fácil",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "6 papas medianas",
+    "3 cucharadas de mantequilla",
+    "½ taza de leche",
+    "Sal y pimienta",
+    "4 huevos",
+    "Aceite para freír"
+  ],
+  "pasos": [
+    "Cuece las papas en agua con sal hasta que estén tiernas. Escurre.",
+    "Haz un puré con la mantequilla, la leche, sal y pimienta. Bate hasta que quede cremoso.",
+    "Fríe los huevos en aceite con sal y pimienta.",
+    "Sirve el puré en platos y pon un huevo frito encima de cada porción."
+  ],
+  "dato": "El puré con huevo es el plato más simple y reconfortante de la cocina chilena. Se come en la once, en el almuerzo, o cuando no hay ganas de cocinar. El huevo frito con yema líquida sobre el puré caliente es una combinación perfecta.",
+  "errores": [
+    {
+      "error": "Puré con grumos",
+      "solucion": "Batir las papas calientes con leche fría. Usa leche tibia y mantequilla a temperatura ambiente."
+    },
+    {
+      "error": "Huevo con yema dura",
+      "solucion": "Cocinar de más. El huevo frito necesita 2-3 minutos a fuego medio para yema líquida."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 2 días por separado.",
+    "congelador": "No recomendado.",
+    "recalentar": "Puré en microondas con un poco de leche. Huevo al momento."
+  }
+}

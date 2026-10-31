@@ -1,0 +1,43 @@
+{
+  "titulo": "Pato Asado a la Naranja",
+  "categoria": "principales",
+  "tags": [
+    "pato asado a la naranja",
+    "pato",
+    "naranja",
+    "miel",
+    "horno",
+    "aves"
+  ],
+  "imagen": null,
+  "tiempo": "1 h",
+  "porciones": "2 a 4 personas",
+  "dificultad": "media",
+  "tecnica": "Horno",
+  "ingredientes": [
+    "1 pato pequeño cortado en trozos",
+    "2 cucharadas de aceite",
+    "1 vaso de jugo de naranja",
+    "1 cucharadita de miel",
+    "Pimienta",
+    "Sal"
+  ],
+  "pasos": [
+    "Salpimentar las mitades de pato y untarlas con aceite.",
+    "Asarlas en horno caliente hasta que estén doradas.",
+    "Mientras tanto, calentar la miel y mezclarla con el jugo de naranja y el aceite. Salpimentar.",
+    "Volcar poco a poco la salsa sobre el pato y cocerlo 35 minutos a horno medio.",
+    "Retirar el pato del horno y servirlo con la salsa resultante."
+  ],
+  "dato": "La miel ayuda a caramelizar la piel del pato; úsala con moderación para que no se queme.",
+  "errores": [
+    {
+      "error": "Pato seco",
+      "solucion": "No lo cocines en exceso y rocía con la salsa de naranja varias veces durante el horneado."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "2 días",
+    "recalentar": "En horno suave."
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "titulo": "Pollo con Nueces",
+  "categoria": "principales",
+  "tags": [
+    "pollo con nueces",
+    "pollo",
+    "nueces",
+    "caldo",
+    "aves"
+  ],
+  "imagen": null,
+  "tiempo": "1 h 15 min",
+  "porciones": "4 a 6 personas",
+  "dificultad": "media",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "1 pollo de 2 kg",
+    "1 zanahoria",
+    "2 puerros",
+    "2 cebollas medianas",
+    "1/4 kg de nueces",
+    "Tomillo",
+    "Perejil",
+    "1 diente de ajo",
+    "2 cucharadas de harina",
+    "Aceite",
+    "Pimienta",
+    "Sal"
+  ],
+  "pasos": [
+    "Limpiar, lavar y trocear el pollo.",
+    "Con las partes menos carnudas preparar un caldo con zanahoria, puerros limpios, cebolla, ajo, tomillo, perejil, sal y pimienta.",
+    "Moler las verduras en la licuadora y agregarlas al caldo.",
+    "Freír el resto de las presas de pollo en una cacerola con aceite caliente y vaciar el caldo.",
+    "Dejar en cocción por 1/2 hora a fuego suave.",
+    "Tostar las nueces, pelarlas y molerlas.",
+    "Agregar a la cacerola y continuar cocinando por 15 minutos.",
+    "Si la salsa no espesara lo suficiente, dorar un poco de harina en la sartén seca, revolviendo con cuchara de madera para evitar que se dore demasiado. Debe quedar de un color claro, espolvorear sobre el guiso para lograr la consistencia deseada.",
+    "Servir el pollo con toda su salsa muy caliente."
+  ],
+  "dato": "Tostar las nueces antes de molerlas intensifica su sabor y facilita retirar el hollejo amargo.",
+  "errores": [
+    {
+      "error": "Salsa amarga",
+      "solucion": "Pela bien las nueces después de tostarlas para eliminar el hollejo, que aporta amargor."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "2 días",
+    "recalentar": "A fuego lento."
+  }
+}

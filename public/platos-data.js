@@ -1,0 +1,266 @@
+const PLATOS = [
+  { id: 'cazuela-de-vacuno', nombre: 'Cazuela de vacuno', emoji: '🍲', categoria: 'Sopas y cazuelas', recetaSlug: 'cazuela-de-vacuno', ingredientes: [
+    { id: 'carne-vacuno', nombre: 'Carne de vacuno con hueso', porAdulto: 200, porNino: 120, unidad: 'g', nota: 'Osobuco o costilla' },
+    { id: 'papas', nombre: 'Papas', porAdulto: 1, porNino: 1, unidad: 'unidad', nota: 'Medianas' },
+    { id: 'zapallo', nombre: 'Zapallo', porAdulto: 1, porNino: 1, unidad: 'trozo', nota: 'Trozo grande' },
+    { id: 'zanahoria', nombre: 'Zanahoria', porAdulto: 0.5, porNino: 0.5, unidad: 'unidad' },
+    { id: 'choclo', nombre: 'Choclo', porAdulto: 1, porNino: 1, unidad: 'trozo', nota: '1 choclo = 4 trozos' },
+    { id: 'cebolla', nombre: 'Cebolla', porAdulto: 0.25, porNino: 0.15, unidad: 'unidad' },
+    { id: 'arroz', nombre: 'Arroz', porAdulto: 15, porNino: 10, unidad: 'g' },
+    { id: 'agua', nombre: 'Agua', porAdulto: 300, porNino: 200, unidad: 'ml' }
+  ]},
+  { id: 'cazuela-de-ave', nombre: 'Cazuela de ave', emoji: '🍲', categoria: 'Sopas y cazuelas', recetaSlug: 'cazuela-de-ave', ingredientes: [
+    { id: 'pollo', nombre: 'Pollo', porAdulto: 1, porNino: 1, unidad: 'presa', nota: '1 ala, 1 trutro corto o 1 trutro largo = 1 presa' },
+    { id: 'papas', nombre: 'Papas', porAdulto: 1, porNino: 1, unidad: 'unidad', nota: 'Medianas' },
+    { id: 'zapallo', nombre: 'Zapallo', porAdulto: 1, porNino: 1, unidad: 'trozo', nota: 'Trozo grande' },
+    { id: 'choclo', nombre: 'Choclo', porAdulto: 1, porNino: 1, unidad: 'trozo', nota: '1 choclo = 4 trozos' },
+    { id: 'zanahoria', nombre: 'Zanahoria', porAdulto: 0.5, porNino: 0.5, unidad: 'unidad' },
+    { id: 'porotos-verdes', nombre: 'Porotos verdes', porAdulto: 30, porNino: 20, unidad: 'g', nota: 'Picados' },
+    { id: 'arroz', nombre: 'Arroz', porAdulto: 15, porNino: 10, unidad: 'g' },
+    { id: 'agua', nombre: 'Agua o caldo', porAdulto: 250, porNino: 200, unidad: 'ml' }
+  ]},
+  { id: 'cazuela-de-cerdo', nombre: 'Cazuela de cerdo', emoji: '🍲', categoria: 'Sopas y cazuelas', recetaSlug: 'cazuela-de-cerdo', ingredientes: [
+    { id: 'pulpa-cerdo', nombre: 'Pulpa de cerdo', porAdulto: 100, porNino: 70, unidad: 'g', nota: 'En cubos' },
+    { id: 'costillar', nombre: 'Costillar ahumado', porAdulto: 50, porNino: 30, unidad: 'g' },
+    { id: 'papas', nombre: 'Papas', porAdulto: 1, porNino: 1, unidad: 'unidad', nota: 'Medianas' },
+    { id: 'zanahoria', nombre: 'Zanahoria', porAdulto: 0.5, porNino: 0.5, unidad: 'unidad' },
+    { id: 'puerro', nombre: 'Puerro', porAdulto: 0.5, porNino: 0.3, unidad: 'unidad' },
+    { id: 'repollo', nombre: 'Repollo', porAdulto: 60, porNino: 40, unidad: 'g' },
+    { id: 'agua', nombre: 'Agua', porAdulto: 400, porNino: 250, unidad: 'ml' }
+  ]},
+  { id: 'pantrucas', nombre: 'Pantrucas', emoji: '🍜', categoria: 'Sopas y cazuelas', recetaSlug: 'pantrucas', ingredientes: [
+    { id: 'carne-vacuno', nombre: 'Carne de vacuno (posta)', porAdulto: 100, porNino: 70, unidad: 'g' },
+    { id: 'papas', nombre: 'Papas', porAdulto: 1, porNino: 1, unidad: 'unidad', nota: 'En cubos' },
+    { id: 'harina', nombre: 'Harina (masa)', porAdulto: 50, porNino: 35, unidad: 'g', nota: 'Masa: 2 tazas harina + 1 huevo' },
+    { id: 'huevo', nombre: 'Huevo', porAdulto: 0.25, porNino: 0.15, unidad: 'unidad' },
+    { id: 'cebolla', nombre: 'Cebolla', porAdulto: 0.25, porNino: 0.15, unidad: 'unidad' },
+    { id: 'agua', nombre: 'Agua o caldo', porAdulto: 400, porNino: 250, unidad: 'ml' }
+  ]},
+  { id: 'ajiaco-chileno', nombre: 'Ajiaco chileno', emoji: '🥘', categoria: 'Sopas y cazuelas', recetaSlug: 'ajiaco-chileno', ingredientes: [
+    { id: 'carne-asada', nombre: 'Carne asada (vacuno/cerdo/pollo)', porAdulto: 125, porNino: 80, unidad: 'g', nota: 'Ideal para reutilizar el asado' },
+    { id: 'papas', nombre: 'Papas', porAdulto: 1, porNino: 1, unidad: 'unidad', nota: 'En cubos' },
+    { id: 'cebolla', nombre: 'Cebolla', porAdulto: 0.25, porNino: 0.15, unidad: 'unidad' },
+    { id: 'zanahoria', nombre: 'Zanahoria', porAdulto: 0.5, porNino: 0.3, unidad: 'unidad' },
+    { id: 'pimenton', nombre: 'Pimentón', porAdulto: 0.25, porNino: 0.15, unidad: 'unidad' },
+    { id: 'caldo', nombre: 'Caldo de carne', porAdulto: 250, porNino: 180, unidad: 'ml' }
+  ]},
+  { id: 'caldillo-de-congrio', nombre: 'Caldillo de congrio', emoji: '🐟', categoria: 'Sopas y cazuelas', recetaSlug: 'caldillo-de-congrio', ingredientes: [
+    { id: 'congrio', nombre: 'Congrio en medallones', porAdulto: 250, porNino: 150, unidad: 'g' },
+    { id: 'papas', nombre: 'Papas', porAdulto: 1, porNino: 1, unidad: 'unidad', nota: 'En gajos' },
+    { id: 'cebolla', nombre: 'Cebolla', porAdulto: 0.25, porNino: 0.15, unidad: 'unidad', nota: 'En pluma' },
+    { id: 'tomate', nombre: 'Tomate', porAdulto: 0.5, porNino: 0.3, unidad: 'unidad' },
+    { id: 'zanahoria', nombre: 'Zanahoria', porAdulto: 0.25, porNino: 0.15, unidad: 'unidad' },
+    { id: 'vino-blanco', nombre: 'Vino blanco', porAdulto: 50, porNino: 0, unidad: 'ml', nota: 'Solo adultos (se evapora)' },
+    { id: 'agua', nombre: 'Agua (para caldo)', porAdulto: 500, porNino: 300, unidad: 'ml' }
+  ]},
+  { id: 'valdiviano', nombre: 'Valdiviano', emoji: '🍲', categoria: 'Sopas y cazuelas', recetaSlug: 'valdiviano', ingredientes: [
+    { id: 'charqui', nombre: 'Charqui', porAdulto: 75, porNino: 50, unidad: 'g', nota: 'Remojar la noche anterior' },
+    { id: 'papas', nombre: 'Papas', porAdulto: 1, porNino: 1, unidad: 'unidad', nota: 'En cubos' },
+    { id: 'zanahoria', nombre: 'Zanahoria', porAdulto: 0.5, porNino: 0.3, unidad: 'unidad' },
+    { id: 'cebolla', nombre: 'Cebolla', porAdulto: 0.25, porNino: 0.15, unidad: 'unidad' },
+    { id: 'tomate', nombre: 'Tomate', porAdulto: 0.25, porNino: 0.15, unidad: 'unidad' },
+    { id: 'agua', nombre: 'Agua o caldo', porAdulto: 250, porNino: 180, unidad: 'ml' }
+  ]},
+  { id: 'paila-marina', nombre: 'Paila marina', emoji: '🦐', categoria: 'Sopas y cazuelas', recetaSlug: 'paila-marina', ingredientes: [
+    { id: 'pescado', nombre: 'Pescado blanco', porAdulto: 125, porNino: 80, unidad: 'g', nota: 'Congrio o merluza' },
+    { id: 'choritos', nombre: 'Choritos', porAdulto: 60, porNino: 40, unidad: 'g', nota: 'Con concha' },
+    { id: 'almejas', nombre: 'Almejas', porAdulto: 60, porNino: 40, unidad: 'g', nota: 'Con concha' },
+    { id: 'camarones', nombre: 'Camarones', porAdulto: 40, porNino: 25, unidad: 'g', nota: 'Pelados' },
+    { id: 'cebolla', nombre: 'Cebolla', porAdulto: 0.25, porNino: 0.15, unidad: 'unidad' },
+    { id: 'tomate', nombre: 'Tomate', porAdulto: 0.5, porNino: 0.3, unidad: 'unidad' },
+    { id: 'caldo-pescado', nombre: 'Caldo de pescado', porAdulto: 250, porNino: 180, unidad: 'ml' }
+  ]},
+  { id: 'sopones-o-machos-ahogados', nombre: 'Sopones o machos ahogados', emoji: '🥣', categoria: 'Sopas y cazuelas', recetaSlug: 'sopones-o-machos-ahogados', ingredientes: [
+    { id: 'caldo', nombre: 'Caldo de vacuno', porAdulto: 375, porNino: 250, unidad: 'ml' },
+    { id: 'harina', nombre: 'Harina', porAdulto: 30, porNino: 20, unidad: 'g' },
+    { id: 'huevo', nombre: 'Huevo', porAdulto: 0.25, porNino: 0.15, unidad: 'unidad' },
+    { id: 'cebolla', nombre: 'Cebolla', porAdulto: 0.25, porNino: 0.15, unidad: 'unidad', nota: 'Picada fina' },
+    { id: 'perejil', nombre: 'Perejil', porAdulto: 0.25, porNino: 0.15, unidad: 'cucharada' }
+  ]},
+  { id: 'empanadas-de-pino', nombre: 'Empanadas de pino', emoji: '🥟', categoria: 'Platos principales', recetaSlug: 'empanadas-de-pino', ingredientes: [
+    { id: 'harina', nombre: 'Harina', porAdulto: 42, porNino: 25, unidad: 'g', nota: '500 g = 12 unidades' },
+    { id: 'carne-picada', nombre: 'Carne picada', porAdulto: 42, porNino: 25, unidad: 'g' },
+    { id: 'cebolla', nombre: 'Cebolla', porAdulto: 0.17, porNino: 0.1, unidad: 'unidad' },
+    { id: 'huevo', nombre: 'Huevo duro', porAdulto: 0.17, porNino: 0.1, unidad: 'unidad' },
+    { id: 'aceituna', nombre: 'Aceitunas', porAdulto: 1, porNino: 0.5, unidad: 'unidad' },
+    { id: 'pasas', nombre: 'Pasas', porAdulto: 4, porNino: 2, unidad: 'g' }
+  ]},
+  { id: 'pastel-de-choclo', nombre: 'Pastel de choclo', emoji: '🌽', categoria: 'Platos principales', recetaSlug: 'pastel-de-choclo', ingredientes: [
+    { id: 'choclo', nombre: 'Choclo rallado', porAdulto: 1, porNino: 0.7, unidad: 'unidad', nota: 'Grande, o 170 g congelado' },
+    { id: 'carne-picada', nombre: 'Carne picada', porAdulto: 85, porNino: 55, unidad: 'g' },
+    { id: 'cebolla', nombre: 'Cebolla', porAdulto: 0.33, porNino: 0.2, unidad: 'unidad' },
+    { id: 'huevo', nombre: 'Huevo duro', porAdulto: 0.5, porNino: 0.3, unidad: 'unidad' },
+    { id: 'aceituna', nombre: 'Aceitunas', porAdulto: 2, porNino: 1, unidad: 'unidad' },
+    { id: 'leche', nombre: 'Leche', porAdulto: 40, porNino: 30, unidad: 'ml' }
+  ]},
+  { id: 'charquican', nombre: 'Charquicán', emoji: '🥘', categoria: 'Platos principales', recetaSlug: 'charquican', ingredientes: [
+    { id: 'carne', nombre: 'Carne picada', porAdulto: 125, porNino: 80, unidad: 'g' },
+    { id: 'papas', nombre: 'Papas', porAdulto: 200, porNino: 120, unidad: 'g', nota: 'En cubos' },
+    { id: 'zapallo', nombre: 'Zapallo', porAdulto: 100, porNino: 60, unidad: 'g' },
+    { id: 'choclo-desgranado', nombre: 'Choclo desgranado', porAdulto: 50, porNino: 30, unidad: 'g', nota: 'Usar los granos, no trozos' },
+    { id: 'cebolla', nombre: 'Cebolla', porAdulto: 0.25, porNino: 0.15, unidad: 'unidad' },
+    { id: 'huevo', nombre: 'Huevo', porAdulto: 1, porNino: 1, unidad: 'unidad', nota: 'Para freír al servir' }
+  ]},
+  { id: 'porotos-granados', nombre: 'Porotos granados', emoji: '🫘', categoria: 'Platos principales', recetaSlug: 'porotos-granados', ingredientes: [
+    { id: 'porotos', nombre: 'Porotos granados', porAdulto: 85, porNino: 55, unidad: 'g', nota: 'Frescos; secos: 50 g' },
+    { id: 'zapallo', nombre: 'Zapallo', porAdulto: 85, porNino: 55, unidad: 'g' },
+    { id: 'choclo', nombre: 'Choclo', porAdulto: 0.33, porNino: 0.2, unidad: 'unidad', nota: 'Desgranado (granos)' },
+    { id: 'cebolla', nombre: 'Cebolla', porAdulto: 0.17, porNino: 0.1, unidad: 'unidad' },
+    { id: 'albahaca', nombre: 'Albahaca', porAdulto: 0.5, porNino: 0.3, unidad: 'cucharada' }
+  ]},
+  { id: 'tomatican', nombre: 'Tomaticán', emoji: '🍅', categoria: 'Platos principales', recetaSlug: 'tomatican', ingredientes: [
+    { id: 'tomate', nombre: 'Tomate', porAdulto: 250, porNino: 150, unidad: 'g', nota: 'Maduros' },
+    { id: 'carne', nombre: 'Carne en tiras', porAdulto: 65, porNino: 40, unidad: 'g' },
+    { id: 'choclo', nombre: 'Choclo desgranado', porAdulto: 50, porNino: 30, unidad: 'g', nota: 'Usar los granos' },
+    { id: 'cebolla', nombre: 'Cebolla', porAdulto: 0.25, porNino: 0.15, unidad: 'unidad' }
+  ]},
+  { id: 'porotos-con-mazamorra', nombre: 'Porotos con mazamorra', emoji: '🫘', categoria: 'Platos principales', recetaSlug: 'porotos-con-mazamorra', ingredientes: [
+    { id: 'porotos', nombre: 'Porotos granados', porAdulto: 125, porNino: 80, unidad: 'g' },
+    { id: 'zapallo', nombre: 'Zapallo camote', porAdulto: 40, porNino: 25, unidad: 'g' },
+    { id: 'choclo', nombre: 'Choclo', porAdulto: 0.5, porNino: 0.3, unidad: 'unidad', nota: 'Licuado con albahaca (mazamorra)' },
+    { id: 'cebolla', nombre: 'Cebolla', porAdulto: 0.12, porNino: 0.08, unidad: 'unidad' }
+  ]},
+  { id: 'pollo-arvejado', nombre: 'Pollo arvejado', emoji: '🍗', categoria: 'Platos principales', recetaSlug: 'pollo-arvejado', ingredientes: [
+    { id: 'pollo', nombre: 'Pollo (trutros)', porAdulto: 1, porNino: 1, unidad: 'presa', nota: '1 trutro = 1 presa' },
+    { id: 'arvejas', nombre: 'Arvejas congeladas', porAdulto: 75, porNino: 45, unidad: 'g' },
+    { id: 'zanahoria', nombre: 'Zanahoria', porAdulto: 0.5, porNino: 0.3, unidad: 'unidad' },
+    { id: 'cebolla', nombre: 'Cebolla', porAdulto: 0.5, porNino: 0.3, unidad: 'unidad' },
+    { id: 'vino-blanco', nombre: 'Vino blanco', porAdulto: 40, porNino: 0, unidad: 'ml', nota: 'Solo adultos (se evapora)' },
+    { id: 'caldo', nombre: 'Caldo de pollo', porAdulto: 50, porNino: 35, unidad: 'ml' }
+  ]},
+  { id: 'pollo-al-jugo', nombre: 'Pollo al jugo', emoji: '🍗', categoria: 'Platos principales', recetaSlug: 'pollo-al-jugo', ingredientes: [
+    { id: 'pollo', nombre: 'Pollo (trutros)', porAdulto: 1, porNino: 1, unidad: 'presa', nota: '1 trutro = 1 presa' },
+    { id: 'cebolla', nombre: 'Cebolla', porAdulto: 0.25, porNino: 0.15, unidad: 'unidad', nota: 'En pluma' },
+    { id: 'zanahoria', nombre: 'Zanahoria', porAdulto: 0.25, porNino: 0.15, unidad: 'unidad' },
+    { id: 'agua', nombre: 'Agua hirviendo', porAdulto: 250, porNino: 180, unidad: 'ml' }
+  ]},
+  { id: 'pollo-asado', nombre: 'Pollo asado', emoji: '🍗', categoria: 'Platos principales', recetaSlug: 'pollo-asado', ingredientes: [
+    { id: 'pollo-entero', nombre: 'Pollo entero', porAdulto: 0.4, porNino: 0.25, unidad: 'unidad', nota: '1 pollo ≈ 2.5 kg rinde 4-6 porciones' },
+    { id: 'mostaza', nombre: 'Mostaza', porAdulto: 0.7, porNino: 0.5, unidad: 'cucharada' },
+    { id: 'vinagre', nombre: 'Vinagre', porAdulto: 40, porNino: 25, unidad: 'ml' },
+    { id: 'aceite', nombre: 'Aceite', porAdulto: 1, porNino: 0.7, unidad: 'cucharada' }
+  ]},
+  { id: 'carne-al-jugo-con-pure', nombre: 'Carne al jugo con puré', emoji: '🥩', categoria: 'Platos principales', recetaSlug: 'carne-al-jugo-con-pure', ingredientes: [
+    { id: 'carne', nombre: 'Carne (tapapecho/posta)', porAdulto: 250, porNino: 150, unidad: 'g' },
+    { id: 'papas', nombre: 'Papas (puré)', porAdulto: 1.5, porNino: 1, unidad: 'unidad', nota: 'Medianas' },
+    { id: 'cebolla', nombre: 'Cebolla', porAdulto: 0.25, porNino: 0.15, unidad: 'unidad' },
+    { id: 'zanahoria', nombre: 'Zanahoria', porAdulto: 0.25, porNino: 0.15, unidad: 'unidad' },
+    { id: 'mantequilla', nombre: 'Mantequilla (puré)', porAdulto: 10, porNino: 7, unidad: 'g' },
+    { id: 'leche', nombre: 'Leche (puré)', porAdulto: 30, porNino: 20, unidad: 'ml' }
+  ]},
+  { id: 'porotos-con-riendas', nombre: 'Porotos con riendas', emoji: '🍝', categoria: 'Platos principales', recetaSlug: 'porotos-con-riendas', ingredientes: [
+    { id: 'porotos', nombre: 'Porotos secos', porAdulto: 85, porNino: 55, unidad: 'g', nota: 'Remojar la noche anterior' },
+    { id: 'zapallo', nombre: 'Zapallo camote', porAdulto: 50, porNino: 30, unidad: 'g' },
+    { id: 'tallarines', nombre: 'Tallarines', porAdulto: 30, porNino: 20, unidad: 'g' },
+    { id: 'longaniza', nombre: 'Longaniza', porAdulto: 25, porNino: 15, unidad: 'g', nota: 'Opcional pero tradicional' },
+    { id: 'cebolla', nombre: 'Cebolla', porAdulto: 0.17, porNino: 0.1, unidad: 'unidad' }
+  ]},
+  { id: 'carbonada', nombre: 'Carbonada', emoji: '🥘', categoria: 'Platos principales', recetaSlug: 'carbonada', ingredientes: [
+    { id: 'carne', nombre: 'Posta de vacuno', porAdulto: 85, porNino: 55, unidad: 'g', nota: 'En cubos' },
+    { id: 'papas', nombre: 'Papas', porAdulto: 1, porNino: 0.7, unidad: 'unidad' },
+    { id: 'zapallo', nombre: 'Zapallo', porAdulto: 40, porNino: 25, unidad: 'g' },
+    { id: 'choclo', nombre: 'Choclo desgranado', porAdulto: 30, porNino: 20, unidad: 'g', nota: 'Usar los granos' },
+    { id: 'arroz', nombre: 'Arroz', porAdulto: 20, porNino: 12, unidad: 'g' },
+    { id: 'zanahoria', nombre: 'Zanahoria', porAdulto: 0.25, porNino: 0.15, unidad: 'unidad' },
+    { id: 'caldo', nombre: 'Agua o caldo', porAdulto: 170, porNino: 120, unidad: 'ml' }
+  ]},
+  { id: 'chorrillana', nombre: 'Chorrillana', emoji: '🍟', categoria: 'Platos principales', recetaSlug: 'chorrillana', ingredientes: [
+    { id: 'papas', nombre: 'Papas', porAdulto: 250, porNino: 150, unidad: 'g', nota: 'Para freír en bastones' },
+    { id: 'carne', nombre: 'Carne en tiras', porAdulto: 125, porNino: 80, unidad: 'g' },
+    { id: 'cebolla', nombre: 'Cebolla', porAdulto: 0.5, porNino: 0.3, unidad: 'unidad' },
+    { id: 'huevo', nombre: 'Huevo', porAdulto: 0.5, porNino: 0.3, unidad: 'unidad' }
+  ]},
+  { id: 'bistec-a-lo-pobre', nombre: 'Bistec a lo pobre', emoji: '🥩', categoria: 'Platos principales', recetaSlug: 'bistec-a-lo-pobre', ingredientes: [
+    { id: 'bistec', nombre: 'Bistec de lomo', porAdulto: 200, porNino: 120, unidad: 'g' },
+    { id: 'papas', nombre: 'Papas', porAdulto: 1.5, porNino: 1, unidad: 'unidad', nota: 'Medianas' },
+    { id: 'cebolla', nombre: 'Cebolla', porAdulto: 0.5, porNino: 0.3, unidad: 'unidad' },
+    { id: 'huevo', nombre: 'Huevo', porAdulto: 1, porNino: 1, unidad: 'unidad' }
+  ]},
+  { id: 'salchipapas', nombre: 'Salchipapas', emoji: '🌭', categoria: 'Platos principales', recetaSlug: 'salchipapas', ingredientes: [
+    { id: 'papas', nombre: 'Papas', porAdulto: 1, porNino: 1, unidad: 'unidad', nota: 'Grandes' },
+    { id: 'salchichas', nombre: 'Salchichas', porAdulto: 1.5, porNino: 1, unidad: 'unidad' }
+  ]},
+  { id: 'carne-mechada', nombre: 'Carne mechada', emoji: '🥩', categoria: 'Platos principales', recetaSlug: 'carne-mechada', ingredientes: [
+    { id: 'carne', nombre: 'Posta negra o pollo ganso', porAdulto: 200, porNino: 120, unidad: 'g' },
+    { id: 'cebolla', nombre: 'Cebolla', porAdulto: 0.33, porNino: 0.2, unidad: 'unidad' },
+    { id: 'zanahoria', nombre: 'Zanahoria', porAdulto: 0.5, porNino: 0.3, unidad: 'unidad' },
+    { id: 'vino-tinto', nombre: 'Vino tinto', porAdulto: 40, porNino: 0, unidad: 'ml', nota: 'Opcional' },
+    { id: 'caldo', nombre: 'Caldo de carne', porAdulto: 40, porNino: 30, unidad: 'ml' }
+  ]},
+  { id: 'pescado-frito', nombre: 'Pescado frito', emoji: '🐟', categoria: 'Platos principales', recetaSlug: 'pescado-frito', ingredientes: [
+    { id: 'pescado', nombre: 'Filetes de pescado', porAdulto: 200, porNino: 120, unidad: 'g', nota: 'Merluza, reineta o congrio' },
+    { id: 'harina', nombre: 'Harina (rebozado)', porAdulto: 30, porNino: 20, unidad: 'g' },
+    { id: 'huevo', nombre: 'Huevo', porAdulto: 0.25, porNino: 0.15, unidad: 'unidad' }
+  ]},
+  { id: 'corvina-al-horno', nombre: 'Corvina al horno', emoji: '🐟', categoria: 'Platos principales', recetaSlug: 'corvina-al-horno', ingredientes: [
+    { id: 'corvina', nombre: 'Filetes de corvina', porAdulto: 200, porNino: 120, unidad: 'g' },
+    { id: 'cebolla', nombre: 'Cebolla', porAdulto: 0.5, porNino: 0.3, unidad: 'unidad' },
+    { id: 'tomate', nombre: 'Tomate', porAdulto: 0.5, porNino: 0.3, unidad: 'unidad' },
+    { id: 'vino-blanco', nombre: 'Vino blanco', porAdulto: 60, porNino: 0, unidad: 'ml', nota: 'Solo adultos (se evapora)' }
+  ]},
+  { id: 'salmon-al-horno', nombre: 'Salmón al horno', emoji: '🐟', categoria: 'Platos principales', recetaSlug: 'salmon-al-horno', ingredientes: [
+    { id: 'salmon', nombre: 'Filete de salmón', porAdulto: 200, porNino: 120, unidad: 'g' },
+    { id: 'limon', nombre: 'Limón', porAdulto: 0.5, porNino: 0.3, unidad: 'unidad' },
+    { id: 'ajo', nombre: 'Ajo', porAdulto: 0.5, porNino: 0.3, unidad: 'diente' }
+  ]},
+  { id: 'prietas', nombre: 'Prietas', emoji: '🥩', categoria: 'Platos principales', recetaSlug: 'prietas', ingredientes: [
+    { id: 'prieta', nombre: 'Prieta fresca', porAdulto: 1, porNino: 0.5, unidad: 'unidad' },
+    { id: 'cebolla', nombre: 'Cebolla', porAdulto: 0.25, porNino: 0.15, unidad: 'unidad' },
+    { id: 'papas', nombre: 'Papas (acompañamiento)', porAdulto: 1, porNino: 1, unidad: 'unidad' }
+  ]},
+  { id: 'machas-a-la-parmesana', nombre: 'Machas a la parmesana', emoji: '🦪', categoria: 'Platos principales', recetaSlug: 'machas-a-la-parmesana', ingredientes: [
+    { id: 'machas', nombre: 'Machas', porAdulto: 5, porNino: 3, unidad: 'unidad', nota: 'Frescas con concha o 1 lata' },
+    { id: 'parmesano', nombre: 'Queso parmesano rallado', porAdulto: 25, porNino: 15, unidad: 'g' },
+    { id: 'mantequilla', nombre: 'Mantequilla', porAdulto: 12, porNino: 8, unidad: 'g' }
+  ]},
+  { id: 'locos-con-mayonesa', nombre: 'Locos con mayonesa', emoji: '🐚', categoria: 'Platos principales', recetaSlug: 'locos-con-mayonesa', ingredientes: [
+    { id: 'locos', nombre: 'Locos', porAdulto: 1, porNino: 0.5, unidad: 'unidad' },
+    { id: 'mayonesa', nombre: 'Mayonesa', porAdulto: 50, porNino: 30, unidad: 'g' },
+    { id: 'cebolla-morada', nombre: 'Cebolla morada', porAdulto: 0.25, porNino: 0.15, unidad: 'unidad' }
+  ]},
+  { id: 'camarones-al-pil-pil', nombre: 'Camarones al Pil Pil', emoji: '🦐', categoria: 'Platos principales', recetaSlug: 'camarones-al-pil-pil', ingredientes: [
+    { id: 'camarones', nombre: 'Camarones', porAdulto: 125, porNino: 80, unidad: 'g', nota: 'Pelados' },
+    { id: 'ajo', nombre: 'Ajo', porAdulto: 1.5, porNino: 1, unidad: 'diente', nota: 'Laminados' },
+    { id: 'aceite-oliva', nombre: 'Aceite de oliva', porAdulto: 30, porNino: 20, unidad: 'ml' },
+    { id: 'vino-blanco', nombre: 'Vino blanco', porAdulto: 30, porNino: 0, unidad: 'ml', nota: 'Solo adultos' }
+  ]},
+  { id: 'humitas', nombre: 'Humitas', emoji: '🌽', categoria: 'Panes y masas', recetaSlug: 'humitas', ingredientes: [
+    { id: 'choclo', nombre: 'Choclo tierno', porAdulto: 0.75, porNino: 0.5, unidad: 'unidad', nota: 'Rallado; 1 choclo = ~2 humitas' },
+    { id: 'cebolla', nombre: 'Cebolla', porAdulto: 0.12, porNino: 0.08, unidad: 'unidad' },
+    { id: 'manteca', nombre: 'Manteca', porAdulto: 12, porNino: 8, unidad: 'g' },
+    { id: 'albahaca', nombre: 'Albahaca', porAdulto: 0.25, porNino: 0.15, unidad: 'cucharada' }
+  ]},
+  { id: 'sopaipillas', nombre: 'Sopaipillas', emoji: '🟡', categoria: 'Panes y masas', recetaSlug: 'sopaipillas', ingredientes: [
+    { id: 'harina', nombre: 'Harina', porAdulto: 25, porNino: 15, unidad: 'g', nota: '500 g = 20 unidades' },
+    { id: 'zapallo', nombre: 'Zapallo cocido', porAdulto: 25, porNino: 15, unidad: 'g' },
+    { id: 'manteca', nombre: 'Manteca', porAdulto: 5, porNino: 3, unidad: 'g' }
+  ]},
+  { id: 'pan-amasado', nombre: 'Pan amasado', emoji: '🍞', categoria: 'Panes y masas', recetaSlug: 'pan-amasado', ingredientes: [
+    { id: 'harina', nombre: 'Harina', porAdulto: 83, porNino: 50, unidad: 'g', nota: '1 kg = 12 panes' },
+    { id: 'manteca', nombre: 'Manteca', porAdulto: 17, porNino: 10, unidad: 'g' },
+    { id: 'agua', nombre: 'Agua tibia o leche', porAdulto: 42, porNino: 25, unidad: 'ml' }
+  ]},
+  { id: 'marraqueta', nombre: 'Marraqueta', emoji: '🥖', categoria: 'Panes y masas', recetaSlug: 'marraqueta', ingredientes: [
+    { id: 'harina', nombre: 'Harina', porAdulto: 250, porNino: 150, unidad: 'g', nota: '1 kg = 4 panes' },
+    { id: 'agua', nombre: 'Agua', porAdulto: 150, porNino: 90, unidad: 'ml' },
+    { id: 'levadura', nombre: 'Levadura', porAdulto: 3.75, porNino: 2.25, unidad: 'g' },
+    { id: 'sal', nombre: 'Sal', porAdulto: 5, porNino: 3, unidad: 'g' }
+  ]},
+  { id: 'hallulla', nombre: 'Hallulla', emoji: '🫓', categoria: 'Panes y masas', recetaSlug: 'hallulla', ingredientes: [
+    { id: 'harina', nombre: 'Harina', porAdulto: 83, porNino: 50, unidad: 'g', nota: '500 g = 6 panes' },
+    { id: 'leche', nombre: 'Leche tibia', porAdulto: 25, porNino: 15, unidad: 'ml' },
+    { id: 'levadura', nombre: 'Levadura seca', porAdulto: 1.7, porNino: 1, unidad: 'g' },
+    { id: 'manteca', nombre: 'Manteca vegetal', porAdulto: 13, porNino: 8, unidad: 'g' }
+  ]},
+  { id: 'empanadas-de-queso', nombre: 'Empanadas de queso', emoji: '🧀', categoria: 'Panes y masas', recetaSlug: 'empanadas-de-queso', ingredientes: [
+    { id: 'harina', nombre: 'Harina', porAdulto: 42, porNino: 25, unidad: 'g', nota: '500 g = 12 unidades' },
+    { id: 'queso', nombre: 'Queso chanco/mantecoso', porAdulto: 42, porNino: 25, unidad: 'g', nota: 'Rallado' },
+    { id: 'manteca', nombre: 'Manteca', porAdulto: 10, porNino: 6, unidad: 'g' }
+  ]},
+  { id: 'sopaipillas-pasadas', nombre: 'Sopaipillas pasadas', emoji: '🍯', categoria: 'Panes y masas', recetaSlug: 'sopaipillas-pasadas', ingredientes: [
+    { id: 'harina', nombre: 'Harina', porAdulto: 25, porNino: 15, unidad: 'g' },
+    { id: 'zapallo', nombre: 'Zapallo cocido', porAdulto: 15, porNino: 10, unidad: 'g' },
+    { id: 'chancaca', nombre: 'Chancaca', porAdulto: 12.5, porNino: 8, unidad: 'g', nota: 'Para el almíbar' },
+    { id: 'naranja', nombre: 'Cáscara de naranja', porAdulto: 0.05, porNino: 0.03, unidad: 'unidad' }
+  ]}
+];

@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Mis Recetas Favoritas" description="Tus recetas guardadas en este dispositivo." activePage="mis-recetas" noindex={true}>
+  
+  <header class="hero-receta">
+    <div class="hero-receta-inner">
+      <h1>Mis recetas favoritas</h1>
+      <p class="sub" style="color:var(--suave); font-style:italic; margin-top:1rem;">Tus recetas guardadas en este dispositivo.</p>
+    </div>
+  </header>
+
+  <main>
+    <div id="contenedorFavoritos" class="recetas-grid-favoritos" style="min-height: 50vh;"></div>
+  </main>
+
+  <!-- FASE 1 (auditoría): lista-compras.js se carga SOLO desde Layout.astro (aquí estaba duplicado). -->
+  <script is:inline src="/app.js"></script>
+  <script is:inline src="/favoritos.js"></script>
+
+  <!-- FETCH AL FINAL -->
+  <script is:inline>
+    window.RECETAS = [];
+    fetch('/api/recetas.json')
+      .then(res => res.json())
+      .then(data => {
+        window.RECETAS = data;
+        document.dispatchEvent(new Event('recetas-listas'));
+      })
+      .catch(err => console.error('Error cargando recetas:', err));
+  </script>
+</Layout>

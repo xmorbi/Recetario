@@ -1,0 +1,49 @@
+{
+  "titulo": "Higos rellenos",
+  "categoria": "dulces",
+  "tags": [
+    "dulce",
+    "higo",
+    "nuez",
+    "tradicional",
+    "navidad",
+    "postre"
+  ],
+  "imagen": null,
+  "tiempo": "30 min + reposo",
+  "porciones": "20 higos",
+  "dificultad": "fácil",
+  "tecnica": "Sin cocción",
+  "ingredientes": [
+    "20 higos secos",
+    "100 g de nueces picadas",
+    "50 g de almendras picadas",
+    "2 cucharadas de miel",
+    "1 cucharada de azúcar flor",
+    "1 cucharadita de canela en polvo",
+    "Opcional: 1 cucharada de pisco o ron"
+  ],
+  "pasos": [
+    "Abre los higos por la mitad, sin separarlos del todo.",
+    "Mezcla las nueces, almendras, miel, azúcar flor, canela y el licor si usas.",
+    "Rellena cada higo con la mezcla.",
+    "Presiona ligeramente para cerrar.",
+    "Deja reposar al menos 2 horas antes de servir para que los sabores se integren."
+  ],
+  "dato": "Los higos rellenos son un dulce tradicional chileno, típico de Navidad y de las celebraciones de fin de año. Se hacen con higos secos rellenos de nueces y bañados en miel. En el campo se preparan con higos frescos secados al sol.",
+  "errores": [
+    {
+      "error": "Higos muy duros",
+      "solucion": "No remojarlos antes. Si los higos están muy secos, remójalos en agua tibia 30 minutos antes de rellenar."
+    },
+    {
+      "error": "Relleno se sale",
+      "solucion": "No presionar bien los higos. Presiona suavemente para cerrar y deja reposar en frío."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 2 semanas en recipiente hermético.",
+    "congelador": "No recomendado.",
+    "recalentar": "A temperatura ambiente."
+  }
+}

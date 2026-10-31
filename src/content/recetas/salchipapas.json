@@ -1,0 +1,46 @@
+{
+  "titulo": "Salchipapas",
+  "categoria": "principales",
+  "tags": [
+    "picoteo",
+    "papas fritas",
+    "salchicha",
+    "fritura",
+    "compartir",
+    "plato principal"
+  ],
+  "imagen": "img/salchipapas.jpg",
+  "tiempo": "25 min",
+  "porciones": "4 personas",
+  "dificultad": "muy fácil",
+  "tecnica": "Fritura",
+  "ingredientes": [
+    "4 papas grandes cortadas en bastones",
+    "6 salchichas de buena calidad",
+    "Aceite para freír",
+    "Ketchup, mayonesa o mostaza al gusto"
+  ],
+  "pasos": [
+    "Pela y corta las papas en bastones. Lava bien para quitar el almidón y sécalas.",
+    "Fríe las papas en abundante aceite caliente hasta que estén doradas y crujientes. Escurre y sala al gusto.",
+    "Corta las salchichas en rodajas o en trozos y fríelas en una sartén hasta que estén doradas.",
+    "Mezcla las papas fritas con las salchichas o sirve las salchichas encima de las papas.",
+    "Acompaña con tus salsas favoritas."
+  ],
+  "dato": "Es el plato favorito de los niños y también un clásico de las picadas chilenas. Puedes agregar queso derretido encima para una versión aún más contundente.",
+  "errores": [
+    {
+      "error": "Papas blandas o grasosas",
+      "solucion": "Freír a temperatura muy baja. Haz doble fritura: una a fuego medio para cocinarlas y otra a fuego alto antes de servir para que doren."
+    },
+    {
+      "error": "Salchichas insípidas",
+      "solucion": "Hervirlas o freírlas enteras. Córtalas en rodajas y sofríelas con un poquito de cebolla hasta que estén doradas por los bordes."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "No recomendado, las papas se ablandan.",
+    "congelador": "No recomendado.",
+    "recalentar": "Se consume recién hecha."
+  }
+}

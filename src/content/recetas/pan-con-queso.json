@@ -1,0 +1,45 @@
+{
+  "titulo": "Pan con queso",
+  "categoria": "once",
+  "tags": [
+    "once",
+    "pan",
+    "queso",
+    "desayuno",
+    "simple",
+    "tradicional"
+  ],
+  "imagen": null,
+  "tiempo": "5 min",
+  "porciones": "1 persona",
+  "dificultad": "muy fácil",
+  "tecnica": "Sin cocción",
+  "ingredientes": [
+    "1 marraqueta o hallulla recién horneada",
+    "2 láminas de queso mantecoso o chanco",
+    "Opcional: mantequilla"
+  ],
+  "pasos": [
+    "Abre el pan por la mitad.",
+    "Si quieres, úntalo con un poco de mantequilla.",
+    "Pon las láminas de queso dentro del pan.",
+    "Si quieres el queso derretido, calienta el pan armado 1 minuto en el horno o sandwichera.",
+    "Come inmediatamente."
+  ],
+  "dato": "El pan con queso es la once más simple de Chile. Se come a cualquier hora y no necesita más que pan y queso. Si es pan recién horneado, mejor. Si el queso se derrite, es el paraíso.",
+  "errores": [
+    {
+      "error": "Queso frío",
+      "solucion": "No derretirlo. Si quieres el queso derretido, calienta el pan armado 1 minuto en el horno o sandwichera."
+    },
+    {
+      "error": "Pan frío",
+      "solucion": "No calentar el pan. Un pan caliente es la mitad del placer."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "No se guarda armado.",
+    "congelador": "No aplica.",
+    "recalentar": "No aplica."
+  }
+}

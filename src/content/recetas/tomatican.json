@@ -1,0 +1,46 @@
+{
+  "titulo": "Tomaticán",
+  "categoria": "principales",
+  "tags": ["tomatican", "olla", "plato principal", "tomate", "verano"],
+  "imagen": "img/Tomatican.jpg",
+  "tiempo": "30 min",
+  "porciones": "4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "1 kg de tomates maduros",
+    "1 taza de choclo picado",
+    "1 cebolla en pluma",
+    "250 g de lomo, asiento o posta en tiras",
+    "2 dientes de ajo, perejil, ½ pimentón",
+    "Sal, pimienta, orégano, ají de color y aceite"
+  ],
+  "pasos": [
+    "Corta la carne en tiritas y los tomates en trozos.",
+    "Sofríe la cebolla, el ajo, el perejil y el pimentón con aliños.",
+    "Agrega la carne y fríe unos minutos.",
+    "Incorpora el choclo y los tomates. Mezcla bien.",
+    "Cuando hierva, tapa y cocina a fuego lento 15 min.",
+    "Sirve con arroz o papas cocidas."
+  ],
+  "dato": "Mientras más maduros los tomates, más dulce queda el plato.",
+  "errores": [
+    {
+      "error": "Me quedó como una sopa aguada",
+      "solucion": "No dejes que los tomates se cocinen de menos ni que quede líquido; usa tomates maduros y cocina a fuego lento tapado 20-30 minutos. Si queda líquido, destapa y reduce."
+    },
+    {
+      "error": "Me quedó amargo o ácido",
+      "solucion": "No uses tomates verdes o de mala calidad; usa tomates maduros y dulces, y si están ácidos, agrega una pizca de azúcar."
+    },
+    {
+      "error": "Me faltó profundidad de sabor",
+      "solucion": "No omitas dorar bien la carne al principio; sella la carne en tiras a fuego alto antes de agregar las verduras."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días en recipiente hermético.",
+    "congelador": "Hasta 2 meses.",
+    "recalentar": "A fuego lento en una olla, moviendo de vez en cuando."
+  }
+}

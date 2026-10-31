@@ -1,0 +1,49 @@
+{
+  "titulo": "Hamburguesas de Pollo",
+  "categoria": "principales",
+  "tags": [
+    "hamburguesas de pollo",
+    "pollo",
+    "fritura",
+    "aves"
+  ],
+  "imagen": null,
+  "tiempo": "35 min",
+  "porciones": "4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Fritura",
+  "ingredientes": [
+    "2 pechugas de pollo",
+    "1/2 marraqueta añeja",
+    "1/2 taza de leche",
+    "1 huevo",
+    "2 cucharadas de mantequilla",
+    "Harina",
+    "Una pizca de nuez moscada",
+    "Pan rallado",
+    "Jugo de limón",
+    "Sal",
+    "Pimienta",
+    "Aceite para freír"
+  ],
+  "pasos": [
+    "Remojar el pan añejo con la leche.",
+    "Moler las pechugas de pollo en la máquina de moler.",
+    "Agregar el pan remojado (estrujado), la mantequilla, sal, nuez moscada y pimienta.",
+    "Trabajar bien la mezcla para formar una pasta homogénea.",
+    "Dividir en porciones iguales, pasar por harina y con la palma de la mano aplastar para dar la forma de hamburguesas.",
+    "Pasarlas por el huevo batido, luego por el pan rallado y freír en aceite caliente por ambos lados; estilar y disponerlas en una fuente para llevar a la mesa.",
+    "Verter el jugo de limón sobre las hamburguesas y decorar con trozos de limón, ganchos de perejil crespo o con lo que sea de su agrado."
+  ],
+  "dato": "El pan remojado en leche aporta jugosidad; escúrrelo bien antes de incorporarlo para que la mezcla no quede demasiado húmeda.",
+  "errores": [
+    {
+      "error": "Hamburguesas secas",
+      "solucion": "No cocines en exceso; el pollo se seca rápido. Sella a fuego medio-alto y termina a fuego suave."
+    }
+  ],
+  "conservacion": {
+    "congelador": "Se pueden congelar crudas ya formadas",
+    "refrigerador": "2 días."
+  }
+}

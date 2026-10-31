@@ -1,0 +1,53 @@
+{
+  "titulo": "Pajaritos dulces",
+  "categoria": "dulces",
+  "tags": [
+    "pan",
+    "dulce",
+    "horno",
+    "merienda",
+    "once",
+    "masa"
+  ],
+  "imagen": "img/Pajaritos-dulces.jpg",
+  "tiempo": "1 h",
+  "porciones": "12 unidades",
+  "dificultad": "media",
+  "tecnica": "Horno",
+  "ingredientes": [
+    "Masa: 500 g de harina",
+    "Masa: 3 huevos",
+    "Masa: 50 g de mantequilla",
+    "Masa: 120 g de azúcar",
+    "Masa: 15 g de levadura",
+    "Masa: Ralladura de limón o naranja",
+    "Masa: 100 ml de agua o leche tibia",
+    "Merengue: 2 claras de huevo",
+    "Merengue: 1 taza de azúcar flor",
+    "Merengue: Vainilla y chispas de colores (opcional)"
+  ],
+  "pasos": [
+    "Activa la levadura en el agua tibia con una cucharada de azúcar.",
+    "Mezcla la harina con los huevos, mantequilla, azúcar y ralladura. Agrega la levadura y forma una masa suave.",
+    "Deja reposar tapada hasta que doble su volumen.",
+    "Forma bolitas de unos 70 g, colócalas en una bandeja engrasada y deja levar 30 min más.",
+    "Hornea a 180 °C por 25-30 min. Deja enfriar.",
+    "Bate las claras a nieve, añade el azúcar flor y la vainilla. Cubre los pancitos con el merengue y decora."
+  ],
+  "dato": "El nombre viene de la forma de pajarito que toma el merengue al decorarlos.",
+  "errores": [
+    {
+      "error": "Merengue que llora (suelta agua)",
+      "solucion": "Colocar el merengue en un ambiente húmedo o usar claras muy frías. Usa claras a temperatura ambiente y asegúrate de que la masa esté 100% fría."
+    },
+    {
+      "error": "Masa cruda en el centro",
+      "solucion": "Hornear a temperatura muy alta. Hornea a fuego medio (180°C) para que se cocine por dentro sin quemarse."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "A temperatura ambiente 2 días. En frío el merengue se humedece.",
+    "congelador": "No recomendado, el merengue se estropea.",
+    "recalentar": "A temperatura ambiente."
+  }
+}

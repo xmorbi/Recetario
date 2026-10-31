@@ -1,0 +1,51 @@
+{
+  "titulo": "Crema de Arvejas",
+  "categoria": "sopas",
+  "tags": [
+    "crema de arvejas",
+    "arvejas",
+    "tocino",
+    "crema",
+    "sopa"
+  ],
+  "imagen": null,
+  "tiempo": "1 h 30 min (incluye remojo)",
+  "porciones": "4 a 6 personas",
+  "dificultad": "fácil",
+  "tecnica": "Olla y cedazo",
+  "ingredientes": [
+    "500 g de arvejas partidas secas",
+    "100 g de tocino",
+    "2 cucharadas (30 ml) de aceite",
+    "1 diente de ajo",
+    "1 cebolla picada fina",
+    "1 cucharadita de ají de color",
+    "1 L de caldo",
+    "Sal",
+    "1/4 cucharadita de pimienta"
+  ],
+  "pasos": [
+    "Lavar bien las arvejas y dejarlas remojando en unas 3 tazas de agua durante la noche.",
+    "Calentar aceite en una cacerola y freír el ajo, la cebolla picada muy fina y el ají de color.",
+    "Agregar las arvejitas y el agua en que se remojaron, hervir hasta que estén bien blandas.",
+    "Pasar todo por el cedazo.",
+    "Volver la crema a la olla, agregarle el caldo y el tocino cortado en trocitos pequeños.",
+    "Sazonar bien y agregar 1/4 cucharadita de pimienta.",
+    "Puede servirse espolvoreando los platos con huevo duro, queso rallado o pan frito."
+  ],
+  "dato": "El remojo de las arvejas partidas es clave para que se cocinen parejo y queden tiernas. La crema de arvejas es una sopa de invierno chilena, típica de las casas donde se aprovechan las legumbres secas.",
+  "errores": [
+    {
+      "error": "La crema me quedó con cáscaras o grumos",
+      "solucion": "Pasa bien por el cedazo; si quedan cáscaras, repite el proceso o usa una licuadora y luego cuela."
+    },
+    {
+      "error": "La crema me quedó muy espesa",
+      "solucion": "Agrega más caldo caliente hasta lograr la consistencia deseada, revolviendo bien."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "3 días",
+    "congelador": "Se puede congelar hasta 2 meses."
+  }
+}

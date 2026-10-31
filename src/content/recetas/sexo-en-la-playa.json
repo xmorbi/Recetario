@@ -1,0 +1,40 @@
+{
+  "titulo": "Sexo en la Playa",
+  "categoria": "bebidas",
+  "tags": [
+    "sexo en la playa",
+    "ron",
+    "piña",
+    "curazao azul",
+    "crema de coco",
+    "tragos"
+  ],
+  "imagen": null,
+  "tiempo": "5 min",
+  "porciones": "1 persona",
+  "dificultad": "fácil",
+  "tecnica": "Coctelera",
+  "ingredientes": [
+    "1/1 de ron blanco",
+    "1/1 de jugo de piña",
+    "1/1 de curazao azul",
+    "1/1 de crema de coco",
+    "Cereza de marrasquino",
+    "Hielo"
+  ],
+  "pasos": [
+    "Colocar todos los ingredientes en una coctelera y batir enérgicamente.",
+    "Servir en un vaso largo.",
+    "Decorar con 1 cereza de marrasquino."
+  ],
+  "dato": "Las medidas están expresadas en partes iguales (1/1); puedes usar la misma unidad para todas, por ejemplo, 1 oz o 30 cc.",
+  "errores": [
+    {
+      "error": "Color o sabor desequilibrado",
+      "solucion": "El curazao azul aporta color y dulzor; si queda muy dulce, reduce un poco su cantidad o añade más jugo de piña."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Servir de inmediato."
+  }
+}

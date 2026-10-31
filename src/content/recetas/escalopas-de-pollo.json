@@ -1,0 +1,53 @@
+{
+  "titulo": "Escalopas de Pollo",
+  "categoria": "principales",
+  "tags": [
+    "escalopas de pollo",
+    "pollo",
+    "queso",
+    "tomate",
+    "horno",
+    "aves"
+  ],
+  "imagen": null,
+  "tiempo": "40 min",
+  "porciones": "4 a 6 personas",
+  "dificultad": "fácil",
+  "tecnica": "Horno y fritura",
+  "ingredientes": [
+    "3 pechugas grandes",
+    "500 g de queso mantecoso",
+    "2 tomates",
+    "3 huevos",
+    "1 taza (100 g) de pan rallado",
+    "Aceite para freír",
+    "Sal",
+    "Orégano",
+    "Pimienta"
+  ],
+  "pasos": [
+    "Asar las pechugas de pollo, enfriar y cortar en rebanadas.",
+    "Batir los huevos y agregar sal, pimienta y orégano.",
+    "Pasar las rebanadas de pollo por el batido, luego por abundante pan rallado y freír en aceite caliente (170-180 °C).",
+    "Dejar las escalopas en una fuente con papel absorbente.",
+    "Disponer en una asadera las escalopas y poner sobre cada una tiritas de queso, rodajas de tomate y aliños.",
+    "Sujetar cada escalopa con un mondadientes y llevar a horno a 200 °C hasta que el queso se derrita.",
+    "Servir acompañado con ensaladas y arroz."
+  ],
+  "dato": "El mondadientes mantiene el queso y el tomate sobre la escalopa mientras se gratinan. Las escalopas de pollo son un clásico de la once y de las celebraciones chilenas.",
+  "advertencia": "Fríe a 170-180 °C: si el aceite está muy caliente, las escalopas se doran por fuera y quedan crudas por dentro. Si está muy frío, absorben grasa.",
+  "errores": [
+    {
+      "error": "El empanizado se me despegó",
+      "solucion": "Pasa las rebanadas por huevo y luego por pan rallado presionando bien; refrigera 15 minutos antes de freír."
+    },
+    {
+      "error": "Las escalopas me quedaron aceitosas",
+      "solucion": "El aceite no estaba a la temperatura correcta. Fríe a 170-180 °C para que se cocinen por dentro sin absorber grasa."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "2 días",
+    "recalentar": "En horno suave."
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "titulo": "Croquetas de jurel",
+  "categoria": "principales",
+  "tags": [
+    "jurel",
+    "pescado",
+    "croqueta",
+    "fritura",
+    "cotidiano",
+    "economico"
+  ],
+  "imagen": null,
+  "tiempo": "40 min",
+  "porciones": "4 personas (12 croquetas)",
+  "dificultad": "fácil",
+  "tecnica": "Fritura",
+  "ingredientes": [
+    "2 filetes de jurel cocidos y desmenuzados (o 1 tarro de 180 g de jurel)",
+    "2 papas medianas cocidas y hechas puré",
+    "1 cebolla pequeña picada muy fina",
+    "1 huevo",
+    "1/2 taza (50 g) de pan rallado",
+    "2 cucharadas de perejil picado",
+    "Sal, pimienta y orégano",
+    "1 taza (250 ml) de aceite para freír",
+    "1/2 taza (50 g) de harina para empanar"
+  ],
+  "pasos": [
+    "Mezcla el jurel desmenuzado con el puré de papas, la cebolla, el huevo, el perejil y los condimentos.",
+    "Forma croquetas del tamaño de una nuez grande. Pásalas por harina, luego por huevo batido y finalmente por pan rallado.",
+    "Fríe en abundante aceite caliente (170-180 °C) hasta que estén doradas por ambos lados.",
+    "Escurre sobre papel absorbente y sirve calientes con ensalada o arroz."
+  ],
+  "dato": "Las croquetas de jurel son un clásico de la cocina chilena económica. El jurel es un pescado abundante y barato en Chile, y las croquetas son una forma rica de comerlo. Se pueden hacer con jurel fresco o en conserva.",
+  "advertencia": "Fríe a 170-180 °C: si el aceite está muy caliente, las croquetas se doran por fuera y quedan crudas por dentro. Si está muy frío, absorben grasa y quedan pesadas.",
+  "errores": [
+    {
+      "error": "Las croquetas se me desarman al freír",
+      "solucion": "La mezcla estaba muy húmeda o no empanaste bien. Escurre bien el jurel, agrega más pan rallado si es necesario y empaniza con harina, huevo y pan rallado."
+    },
+    {
+      "error": "Las croquetas me quedaron aceitosas",
+      "solucion": "El aceite no estaba caliente. Fríe a fuego medio (170 °C) para que se cocinen por dentro sin absorber aceite."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 2 días en recipiente hermético.",
+    "congelador": "Hasta 2 meses, ya empanizadas y crudas.",
+    "recalentar": "Horno o freidora de aire a 180 °C por 5-8 minutos."
+  }
+}

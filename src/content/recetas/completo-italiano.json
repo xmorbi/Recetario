@@ -1,0 +1,55 @@
+{
+  "titulo": "Completo italiano",
+  "categoria": "sandwiches",
+  "tags": [
+    "completo",
+    "sándwich",
+    "callejero",
+    "italiano",
+    "palta",
+    "tomate",
+    "once"
+  ],
+  "imagen": null,
+  "tiempo": "15 min",
+  "porciones": "2 completos",
+  "dificultad": "fácil",
+  "tecnica": "Sin cocción",
+  "ingredientes": [
+    "2 panes de completo (alargados, tipo marraqueta alargada)",
+    "2 vienesas de buena calidad",
+    "1 palta Hass madura",
+    "2 tomates maduros",
+    "Mayonesa casera o de buena calidad",
+    "Sal, limón y aceite (opcional para la palta)"
+  ],
+  "pasos": [
+    "Cuece las vienesas en agua hirviendo 5 minutos, o ásalas en la plancha hasta que doren. La vienesa hervida es la del carrito; la asada es la de la casa.",
+    "Calienta el pan en el horno o plancha 2 minutos por lado: debe quedar crujiente por fuera y suave por dentro.",
+    "Prepara la palta: pisa con tenedor, agrega sal, unas gotas de limón y un chorrito de aceite. Cremosa, pero no líquida.",
+    "Corta el tomate en cubos pequeños y sala ligeramente justo antes de armar. Si lo salas antes, suelta agua y arruina el pan.",
+    "Abre el pan por la mitad, sin llegar al fondo. Pon la vienesa.",
+    "Agrega primero la palta, luego el tomate, y por último la mayonesa en línea (no revuelvas).",
+    "Sirve inmediatamente, con servilletas."
+  ],
+  "dato": "El \"italiano\" nace en el Hoyo de la Luna, un local nocturno del centro de Santiago en los años 70. El nombre viene de los colores de los ingredientes: verde (palta), blanco (mayonesa), rojo (tomate) — la bandera italiana. Existen variantes: el \"dinámico\" es palta + tomate, el \"aliado\" es solo mayonesa, el \"completo\" lleva todo lo anterior más chucrut y americana, el \"as\" es solo vienesa.",
+  "errores": [
+    {
+      "error": "El pan me quedó blando y frío",
+      "solucion": "El pan debe calentarse para que quede crocante. Un pan frío arruina un completo."
+    },
+    {
+      "error": "La palta me quedó negra o marrón",
+      "solucion": "Usaste palta poco madura o muy madura. La palta debe ceder al presionar pero no deshacerse. Si está muy dura, déjala 2 días a temperatura ambiente con una manzana."
+    },
+    {
+      "error": "El completo se me desarmó al comer",
+      "solucion": "Pusiste demasiada mayonesa o ingredientes muy húmedos. Escurre bien el tomate antes de ponerlo."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "No se guarda armado. Los componentes se guardan por separado hasta 3 días.",
+    "congelador": "No aplica.",
+    "recalentar": "La vienesa y el pan se recalentan. La palta y el tomate, no."
+  }
+}

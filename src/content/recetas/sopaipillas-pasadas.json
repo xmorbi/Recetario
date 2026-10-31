@@ -1,0 +1,44 @@
+{
+  "titulo": "Sopaipillas pasadas",
+  "categoria": "panes",
+  "tags": ["sopaipilla", "dulce", "chancaca", "invierno", "merienda", "once"],
+  "imagen": "img/Sopaipillas-pasadas.jpg",
+  "tiempo": "45 min",
+  "porciones": "20 unidades",
+  "dificultad": "fácil",
+  "tecnica": "Fritura",
+  "ingredientes": [
+    "Masa: 500 g de harina",
+    "Masa: 300 g de zapallo cocido y molido",
+    "Masa: 100 g de manteca derretida",
+    "Masa: 1 cdta de sal y 1 cdta de polvos de hornear",
+    "Masa: Aceite para freír",
+    "Chancaca: 250 g de chancaca",
+    "Chancaca: ½ taza de agua",
+    "Chancaca: 1 rama de canela",
+    "Chancaca: Cáscara de 1 naranja",
+    "Chancaca: 2 clavos de olor"
+  ],
+  "pasos": [
+    "Mezcla el zapallo, la harina, la sal y los polvos de hornear. Agrega la manteca y amasa hasta obtener una masa suave.",
+    "Reposa 20 min, estira a 5 mm y corta discos de 8 cm. Pincha con un tenedor y fríe en aceite caliente hasta dorar.",
+    "Aparte, hierve la chancaca con el agua, la canela, la cáscara de naranja y los clavos hasta formar un almíbar.",
+    "Baña las sopaipillas recién fritas con el almíbar caliente y sirve."
+  ],
+  "dato": "Las sopaipillas pasadas son un dulce tradicional chileno de invierno. Se hacen bañadas en almíbar de chancaca con canela y naranja, y se comen tibias, cuando el almíbar está brillante y pegajoso.",
+  "errores": [
+    {
+      "error": "Se me quemó la chancaca",
+      "solucion": "No hiervas la chancaca a fuego alto; derrítela a fuego bajo para que no amargue."
+    },
+    {
+      "error": "Se me enfriaron las sopaipillas al bañar",
+      "solucion": "No bañes sopaipillas frías; el almíbar debe estar caliente y las sopaipillas recién fritas."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 2 días en recipiente hermético.",
+    "congelador": "Hasta 2 meses sin el almíbar. Congela las sopaipillas fritas y luego prepara el almíbar al servir.",
+    "recalentar": "En horno o freidora de aire por 5 minutos. Luego bañar con almíbar caliente."
+  }
+}

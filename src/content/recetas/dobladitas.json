@@ -1,0 +1,49 @@
+{
+  "titulo": "Dobladitas",
+  "categoria": "panes",
+  "tags": [
+    "pan",
+    "dobladita",
+    "horno",
+    "masa",
+    "once",
+    "tradicional"
+  ],
+  "imagen": null,
+  "tiempo": "1 h 30 min",
+  "porciones": "12 unidades",
+  "dificultad": "media",
+  "tecnica": "Horno",
+  "ingredientes": [
+    "500 g de harina sin polvos de hornear",
+    "200 g de manteca vegetal",
+    "1 cucharadita de sal",
+    "1 cucharadita de polvos de hornear",
+    "200 ml de agua tibia (aprox.)"
+  ],
+  "pasos": [
+    "Mezcla la harina con la sal y los polvos de hornear.",
+    "Agrega la manteca y trabaja con las manos hasta que quede como arena gruesa.",
+    "Añade el agua tibia de a poco y amasa hasta obtener una masa suave.",
+    "Estira la masa en un rectángulo de 1/2 cm de grosor. Unta con manteca derretida y espolvorea un poco de harina.",
+    "Dobla la masa en tres (como una carta). Estira de nuevo y repite el doblez 3 veces más.",
+    "Corta rectángulos de 8x5 cm. Haz un corte en el centro de cada uno (opcional) y dóblalos por la mitad.",
+    "Coloca en bandeja engrasada y hornea a 200 °C por 20-25 minutos, hasta dorar."
+  ],
+  "dato": "La dobladita es un pan tradicional chileno, típico de la once y del desayuno. Su nombre viene de la forma de doblar la masa en tres, como una carta. Es hojaldrada y crujiente por fuera, suave por dentro. En el sur se hace con chicharrones y se llama \"dobladita de chicharrón\".",
+  "errores": [
+    {
+      "error": "Las dobladitas no me quedaron hojaldradas",
+      "solucion": "No hiciste suficientes dobleces o usaste mantequilla en vez de manteca. Los dobleces son los que crean las capas. Haz al menos 3 dobleces."
+    },
+    {
+      "error": "Las dobladitas me quedaron duras",
+      "solucion": "Amasaste en exceso. La masa de dobladita no debe amasarse mucho. Solo hasta integrar."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "A temperatura ambiente 2 días en bolsa de tela.",
+    "congelador": "Hasta 2 meses.",
+    "recalentar": "Horno a 180 °C por 5 minutos."
+  }
+}

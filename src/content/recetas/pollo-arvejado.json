@@ -1,0 +1,48 @@
+{
+  "titulo": "Pollo arvejado",
+  "categoria": "principales",
+  "tags": [
+    "pollo",
+    "guiso",
+    "olla",
+    "arvejas",
+    "plato principal"
+  ],
+  "imagen": "img/pollo-arvejado.jpg",
+  "tiempo": "60 min",
+  "porciones": "4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "1,3 kg de trutros de pollo",
+    "300 g de arvejas congeladas",
+    "2 zanahorias, 1 cebolla, 1 pimentón rojo",
+    "3 dientes de ajo",
+    "150 ml de vino blanco",
+    "200 ml de caldo de pollo",
+    "Orégano, comino, laurel, sal, pimienta y perejil"
+  ],
+  "pasos": [
+    "Sella el pollo condimentado. Retira y reserva.",
+    "Sofríe cebolla, zanahoria, pimentón y ajo en la misma olla.",
+    "Devuelve el pollo, agrega el vino, el caldo, orégano y laurel. Tapa y cocina 25 min.",
+    "Añade las arvejas congeladas y cocina 5 min más.",
+    "Sirve con perejil fresco y acompaña con arroz o papas."
+  ],
+  "dato": "Las arvejas se agregan al final para que conserven su color verde vivo.",
+  "errores": [
+    {
+      "error": "Arvejas descoloridas y pasadas",
+      "solucion": "Agregar las arvejas al principio. Añádelas solo en los últimos 5 minutos de cocción para que mantengan su color y textura."
+    },
+    {
+      "error": "Pollo seco",
+      "solucion": "Cocinar los trutros enteros por demasiado tiempo. Dora el pollo, prepara la salsa y devuélvelo a la olla para que se cocine en su punto."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días en recipiente hermético.",
+    "congelador": "Hasta 2 meses.",
+    "recalentar": "A fuego lento en la olla con un poco de caldo."
+  }
+}

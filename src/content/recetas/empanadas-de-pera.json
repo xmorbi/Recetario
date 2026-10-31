@@ -1,0 +1,49 @@
+{
+  "titulo": "Empanadas de pera",
+  "categoria": "dulces",
+  "tags": [
+    "dulce",
+    "empanada",
+    "horno",
+    "postre",
+    "pera"
+  ],
+  "imagen": "img/empanadas-de-pera.jpg",
+  "tiempo": "1 h + remojo",
+  "porciones": "12 unidades",
+  "dificultad": "media",
+  "tecnica": "Horno",
+  "ingredientes": [
+    "Relleno: 300 g de peras secas, remojadas desde la noche anterior",
+    "Relleno: 300 g de azúcar",
+    "Relleno: 3 clavos de olor y 1 rama de canela",
+    "Masa: 3 tazas (450 g) de harina",
+    "Masa: 5 yemas de huevo",
+    "Masa: 4 cucharadas (60 g) de manteca vegetal tibia",
+    "Masa: 1/2 taza (125 ml) de leche (aprox.)"
+  ],
+  "pasos": [
+    "Cocina las peras molidas con el azúcar, el líquido del remojo, los clavos y la canela hasta que espese. Enfría por completo.",
+    "Forma la masa con la harina, las yemas, la manteca y la leche. Amasa hasta que quede elástica.",
+    "Refrigera la masa 30 minutos.",
+    "Estira fina (3 mm) y corta círculos de 12 cm.",
+    "Rellena con el dulce de pera frío y sella los bordes con un repulgue.",
+    "Hornea a 180 °C por 15-20 min, hasta dorar."
+  ],
+  "dato": "Las empanadas de pera son típicas del centro-sur de Chile, donde la pera seca es parte de la despensa de invierno. Se sirven tibias o frías, y son un clásico de la once y de las celebraciones.",
+  "errores": [
+    {
+      "error": "El relleno se me salió o quedó aguado",
+      "solucion": "Usaste el relleno caliente al armar. El dulce de pera debe estar completamente frío y espeso antes de rellenar."
+    },
+    {
+      "error": "La masa me quedó dura",
+      "solucion": "No dejaste reposar la masa. Debe reposar en frío al menos 30 minutos antes de estirarla."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días cocidas.",
+    "congelador": "Hasta 3 meses (crudas o cocidas).",
+    "recalentar": "Horno o freidora de aire a 180 °C por 5-8 minutos."
+  }
+}

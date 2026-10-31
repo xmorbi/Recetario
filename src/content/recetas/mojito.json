@@ -1,0 +1,41 @@
+{
+  "titulo": "Mojito",
+  "categoria": "bebidas",
+  "tags": [
+    "mojito",
+    "ron",
+    "menta",
+    "limón de Pica",
+    "cóctel",
+    "tragos"
+  ],
+  "imagen": null,
+  "tiempo": "5 min",
+  "porciones": "1 persona",
+  "dificultad": "fácil",
+  "tecnica": "Vaso",
+  "ingredientes": [
+    "1/4 de ron blanco",
+    "8 hojas de menta",
+    "1 limón de Pica",
+    "Soda",
+    "Azúcar",
+    "Hielo picado"
+  ],
+  "pasos": [
+    "Colocar en un vaso largo la menta, el azúcar y el jugo del limón; machacar cuidando de no moler las hojas.",
+    "Colocar el hielo, el ron y completar con soda.",
+    "Revolver bien.",
+    "Decorar con una rodaja de limón."
+  ],
+  "dato": "Machacar la menta sin molerla evita que suelte amargor y permite que conserve su aroma fresco.",
+  "errores": [
+    {
+      "error": "Menta amarga",
+      "solucion": "Machaca suavemente las hojas con la presión del muddler o cuchara; si las mueles en exceso, la bebida queda amarga."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Se recomienda servir de inmediato para conservar el gas de la soda y la frescura de la menta."
+  }
+}

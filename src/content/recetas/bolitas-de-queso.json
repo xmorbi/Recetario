@@ -1,0 +1,49 @@
+{
+  "titulo": "Bolitas de Queso",
+  "categoria": "once",
+  "tags": [
+    "bolitas de queso",
+    "queso",
+    "fritura",
+    "aperitivo",
+    "cóctel"
+  ],
+  "imagen": null,
+  "tiempo": "2 h 30 min (incluye reposo)",
+  "porciones": "6 a 8 personas",
+  "dificultad": "media",
+  "tecnica": "Fritura",
+  "ingredientes": [
+    "100 g de queso rallado",
+    "100 g de mantequilla",
+    "50 g de pan rallado (tostado previamente)",
+    "3 huevos",
+    "Harina para pasar las bolitas",
+    "Sal",
+    "Pimienta",
+    "Ají (a gusto)",
+    "Aceite para freír"
+  ],
+  "pasos": [
+    "A la mantequilla derretida se agregan las yemas. Se revuelve constantemente.",
+    "Se agregan los aliños (sal, pimienta, ají) y luego el queso y el pan.",
+    "Finalmente se incorporan las claras batidas a nieve.",
+    "Las bolitas se forman luego que la mezcla ha reposado aproximadamente 2 horas en el refrigerador.",
+    "Se pasan por harina y se fríen en aceite caliente (170-180 °C)."
+  ],
+  "dato": "El reposo de 2 horas es clave: la mezcla se firma y permite formar bolitas que no se deshacen al freír. Las bolitas de queso son un aperitivo clásico de las once chilenas y de las celebraciones familiares.",
+  "errores": [
+    {
+      "error": "La mezcla me quedó muy blanda",
+      "solucion": "Refrigérala más tiempo o añade un poco más de pan rallado hasta que se pueda formar la bolita."
+    },
+    {
+      "error": "Las bolitas se me abrieron en el aceite",
+      "solucion": "El aceite no estaba a la temperatura correcta o las bolitas no estaban bien refrigeradas. Asegúrate de que el aceite esté a 170-180 °C (bien caliente pero sin humear) y pasa las bolitas por harina justo antes de freír."
+    }
+  ],
+  "conservacion": {
+    "congelador": "Se pueden congelar ya formadas y freír directamente.",
+    "refrigerador": "2 días."
+  }
+}

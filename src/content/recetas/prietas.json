@@ -1,0 +1,48 @@
+{
+  "titulo": "Prietas",
+  "categoria": "principales",
+  "tags": [
+    "prieta",
+    "olla",
+    "sarten",
+    "plato principal"
+  ],
+  "imagen": "img/prietas.jpg",
+  "tiempo": "1 h 30 min",
+  "porciones": "4 personas",
+  "dificultad": "media",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "4 prietas frescas",
+    "1 cebolla picada en pluma",
+    "2 dientes de ajo picados",
+    "1 hoja de laurel",
+    "1 cucharada de orégano",
+    "Aceite para freír",
+    "Sal y pimienta al gusto",
+    "Papas cocidas o puré para acompañar"
+  ],
+  "pasos": [
+    "Pincha las prietas con un tenedor para que no exploten durante la cocción.",
+    "En una olla con agua hirviendo, cocina las prietas por 10-15 minutos con una hoja de laurel. Escurre y corta en rodajas gruesas.",
+    "En una sartén con un poco de aceite, sofríe la cebolla y el ajo hasta que estén dorados. Agrega el orégano.",
+    "Incorpora las rodajas de prieta y fríelas por unos minutos de cada lado hasta que estén doradas y crujientes por fuera.",
+    "Sirve caliente con papas cocidas, puré o ensalada."
+  ],
+  "dato": "La prieta es un embutido de sangre de cerdo típico de la zona sur de Chile. Se suele consumir en fiestas patrias y en invierno.",
+  "errores": [
+    {
+      "error": "Prietas explotadas",
+      "solucion": "Ponerlas a freír directamente sin cocinarlas previamente o no pincharlas. Hiérvelas primero y pínchalas varias veces."
+    },
+    {
+      "error": "Textura gomosa",
+      "solucion": "Freírlas a fuego muy alto. Fríelas a fuego medio para que se doren por fuera pero mantengan su textura suave."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días en recipiente hermético.",
+    "congelador": "Hasta 2 meses, idealmente ya cocidas.",
+    "recalentar": "En sartén a fuego medio para que recuperen la textura crujiente."
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "titulo": "Daiquiri",
+  "categoria": "bebidas",
+  "tags": [
+    "daiquiri",
+    "ron",
+    "limón",
+    "cóctel",
+    "tragos"
+  ],
+  "imagen": null,
+  "tiempo": "5 min",
+  "porciones": "1 persona",
+  "dificultad": "fácil",
+  "tecnica": "Coctelera",
+  "ingredientes": [
+    "2 cucharadas (30 ml) de ron",
+    "Jugo de 1/4 de limón",
+    "1 cucharadita (5 g) de azúcar",
+    "Hielo"
+  ],
+  "pasos": [
+    "Se mezclan los ingredientes en un vaso grande o en la coctelera.",
+    "Batir, colar y servir en copas adornadas con cascaritas de limón."
+  ],
+  "dato": "El daiquiri clásico se sirve colado y bien frío; la cascarita de limón aporta aroma en la nariz. Es un cóctel de origen cubano que en Chile se adoptó en los bares y restaurantes de autor.",
+  "errores": [
+    {
+      "error": "El daiquiri me quedó desequilibrado",
+      "solucion": "Prueba antes de servir y ajusta azúcar o limón según la acidez de la fruta."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Servir de inmediato."
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "titulo": "Crema de Pollo",
+  "categoria": "sopas",
+  "tags": [
+    "crema de pollo",
+    "pollo",
+    "arroz",
+    "crema",
+    "sopa"
+  ],
+  "imagen": null,
+  "tiempo": "1 h 30 min",
+  "porciones": "6 a 8 personas",
+  "dificultad": "media",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "1 pollo (1,5 kg aprox.)",
+    "2 cucharadas (20 g) de harina",
+    "7 cucharadas (70 g) de arroz",
+    "1 1/2 litro de agua",
+    "1 cebolla",
+    "1 taza de apio picado",
+    "2 tazas (300 g) de arvejas cocidas",
+    "1 pimiento",
+    "3 cucharadas (45 g) de mantequilla",
+    "1/2 taza (125 ml) de crema",
+    "1 manojito de verduras surtidas",
+    "Sal",
+    "Pimienta"
+  ],
+  "pasos": [
+    "Limpiar y lavar muy bien el pollo.",
+    "Cocinarlo con el agua, sal y la verdura surtida hasta que esté tierno.",
+    "Colar el caldo y dejar enfriar el pollo para desmenuzarlo.",
+    "En una cacerola derretir la mantequilla y freír la cebolla picada en cuadritos junto con el apio cuidando que no se doren.",
+    "Agregar el caldo en que se coció el pollo, la harina disuelta en un poco de agua fría y el arroz.",
+    "Sazonar con sal y pimienta. Cocinar durante unos 20 minutos.",
+    "Incorporar las arvejas cocidas y el pimiento, que puedes cocinar aparte en agua hirviendo por 5 minutos y cortar en tiritas.",
+    "Añadir la crema de a poco, revolviendo cuidando que no hierva la preparación.",
+    "Servir inmediatamente."
+  ],
+  "dato": "La crema no debe hervir una vez incorporada, porque se corta. Agrega y revuelve solo para calentar. La crema de pollo es una sopa de invierno chilena, de esas que se hacen cuando hay que alimentar a mucha gente.",
+  "errores": [
+    {
+      "error": "La crema se me cortó",
+      "solucion": "Baja el fuego antes de añadir la crema y no dejes que hierva; revuelve suavemente."
+    },
+    {
+      "error": "El arroz se me pasó",
+      "solucion": "Cocina el arroz el tiempo justo; si la sopa se va a guardar, cocina el arroz por separado y agrégalo al servir."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "2 días",
+    "recalentar": "A fuego lento. El arroz tiende a absorber el caldo, así que puede necesitar un poco más de líquido al recalentar."
+  }
+}

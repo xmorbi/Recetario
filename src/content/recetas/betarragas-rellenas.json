@@ -1,0 +1,52 @@
+{
+  "titulo": "Betarragas Rellenas",
+  "categoria": "ensaladas",
+  "tags": [
+    "betarragas rellenas",
+    "betarraga",
+    "quesillo",
+    "nueces",
+    "mayonesa",
+    "entrada"
+  ],
+  "imagen": null,
+  "tiempo": "40 min",
+  "porciones": "6 personas",
+  "dificultad": "media",
+  "tecnica": "Hervido",
+  "ingredientes": [
+    "6 betarragas medianas (1 kg aprox.)",
+    "250 g de quesillo",
+    "200 g de mayonesa",
+    "60 g de nueces",
+    "1 lechuga",
+    "Jugo de 1 limón",
+    "Sal",
+    "Pimienta"
+  ],
+  "pasos": [
+    "Lavar muy bien las betarragas y quitarles los tallos.",
+    "Ponerlas a cocer en agua fría con 1 cucharada rasa de sal por 30-40 minutos, hasta que estén blandas pero firmes.",
+    "Retirarlas del fuego, enfriar y ahuecar con una cuchara, con cuidado de no romperlas.",
+    "Tostar las nueces en el horno a 180 °C por 5-8 minutos. Cuando estén tibias, refregarlas con un paño hasta que se suelte el hollejo y luego molerlas.",
+    "Moler el quesillo y mezclarlo con la mitad de la mayonesa y las nueces.",
+    "Aliñar las betarragas con sal, pimienta y jugo de limón, por dentro y por fuera.",
+    "Rellenar las betarragas con la mezcla.",
+    "Cubrir la parte superior con el resto de la mayonesa.",
+    "Acompañar con hojas de lechuga."
+  ],
+  "dato": "Las betarragas rellenas son una entrada clásica de la cocina chilena, típica de matrimonios y celebraciones. La betarraga es una de las hortalizas más cultivadas en la zona central de Chile, y su color rojo intenso es característico de nuestras mesas.",
+  "errores": [
+    {
+      "error": "Las betarragas me quedaron duras o se me deshacen",
+      "solucion": "Las cocinaste poco o demasiado. Deben quedar tiernas pero firmes: 30-40 minutos para betarragas medianas. Usa betarragas del mismo tamaño para una cocción pareja."
+    },
+    {
+      "error": "Las nueces me quedaron con hollejo amargo",
+      "solucion": "No las tostaste lo suficiente. Tuesta las nueces a 180 °C por 5-8 minutos y frótalas con un paño tibio para retirar el hollejo; eso elimina el amargor."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Se pueden preparar con anticipación y mantener en el refrigerador tapadas hasta 2 días."
+  }
+}

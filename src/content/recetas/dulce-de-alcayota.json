@@ -1,0 +1,49 @@
+{
+  "titulo": "Dulce de alcayota",
+  "categoria": "dulces",
+  "tags": [
+    "dulce",
+    "alcayota",
+    "conserva",
+    "postre",
+    "tradicional",
+    "chile"
+  ],
+  "imagen": null,
+  "tiempo": "1 h 30 min",
+  "porciones": "4 frascos",
+  "dificultad": "fácil",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "1 alcayota grande (2 a 3 kg)",
+    "1 kg de azúcar",
+    "1 rama de canela",
+    "3 clavos de olor",
+    "Cáscara de 1 naranja",
+    "Jugo de 1 limón"
+  ],
+  "pasos": [
+    "Pela la alcayota, córtala por la mitad y retira las semillas y la pulpa fibrosa.",
+    "Corta la pulpa en tiras o cubos. Cocínala en agua hirviendo 20 minutos, hasta que esté tierna. Escurre.",
+    "En una olla, mezcla la alcayota cocida con el azúcar, la canela, los clavos y la cáscara de naranja.",
+    "Cocina a fuego medio-bajo, revolviendo de vez en cuando, por 40-50 minutos, hasta que el dulce espese y tome color.",
+    "Agrega el jugo de limón al final y revuelve.",
+    "Envasa en frascos esterilizados calientes y tapa. Deja enfriar y refrigera."
+  ],
+  "dato": "El dulce de alcayota es un clásico de la repostería chilena. La alcayota es una fruta originaria de Chile, de la familia de las cucurbitáceas. Su pulpa es fibrosa y dulce, y se usa para hacer dulces, mermeladas y empanadas. En Chile se cultiva sobre todo en la zona central.",
+  "errores": [
+    {
+      "error": "El dulce me quedó muy líquido",
+      "solucion": "No lo cocinaste el tiempo suficiente. El dulce debe espesar y tomar color. Cocina a fuego medio-bajo hasta que tenga consistencia de mermelada espesa."
+    },
+    {
+      "error": "El dulce me quedó amargo",
+      "solucion": "No retiraste bien las semillas y la pulpa fibrosa. La alcayota tiene una parte fibrosa que es amarga. Retírala bien antes de cocinar."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 1 mes en frasco esterilizado cerrado.",
+    "congelador": "Hasta 6 meses.",
+    "recalentar": "A temperatura ambiente o tibio."
+  }
+}

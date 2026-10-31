@@ -1,0 +1,59 @@
+{
+  "titulo": "Chaparritas",
+  "categoria": "once",
+  "tags": [
+    "chaparritas",
+    "vienesas",
+    "queso",
+    "tomate",
+    "masa horneada",
+    "chileno",
+    "once",
+    "desayuno",
+    "snack",
+    "aperitivo"
+  ],
+  "imagen": null,
+  "tiempo": "40 min",
+  "porciones": "6 unidades",
+  "dificultad": "fácil",
+  "tecnica": "Horno",
+  "ingredientes": [
+    "500 g de harina sin polvos de hornear",
+    "125 g de mantequilla derretida",
+    "1 1/2 taza (375 ml) de agua caliente",
+    "1 cucharadita de sal",
+    "6 vienesas o salchichas",
+    "150 g de queso mantecoso en lonjas o rallado",
+    "Salsa de tomate a gusto",
+    "Orégano seco a gusto",
+    "1 yema de huevo (para pincelar)"
+  ],
+  "pasos": [
+    "En un recipiente, cernir la harina y formar un volcán. Volcar la mantequilla derretida y agregar la sal disuelta en el agua caliente.",
+    "Mezclar y unir los ingredientes hasta formar una masa suave y lisa. Amasar brevemente y dividir en 6 bollitos.",
+    "Uslerear cada bollito formando rectángulos un poco más largos que la vienesa.",
+    "Rellenar cada masa colocando una cucharada de salsa de tomate, una vienesa y un trozo generoso de queso. Espolvorear orégano.",
+    "Cerrar la masa doblando los bordes hacia el centro y sellar bien con los dedos o un tenedor para que el relleno no se salga.",
+    "Pincelar la superficie con yema de huevo batida.",
+    "Llevar a horno precalentado a 200 °C por 20 minutos, o hasta que la masa esté dorada y cocida.",
+    "Servir calientes, ideales para la once, el desayuno o como snack en cualquier momento del día."
+  ],
+  "dato": "La masa debe quedar suave pero manejable. Si está muy pegajosa, agrega un poco más de harina; si está muy dura, unas gotas de agua. El queso mantecoso chileno es el que tradicionalmente se usa por su sabor y textura fundente. Son perfectas para el desayuno, la once o como snack rápido.",
+  "advertencia": "La masa se hace con agua caliente, así que trabájala con cuidado de no quemarte las manos. Deja que la masa se enfríe un poco antes de amasar.",
+  "errores": [
+    {
+      "error": "La masa se me rompe al rellenar",
+      "solucion": "Estira la masa de forma pareja y no la hagas demasiado delgada. Sella bien los bordes humedeciéndolos ligeramente con agua antes de presionar."
+    },
+    {
+      "error": "El relleno se me sale en el horno",
+      "solucion": "No sobrecargues las chaparritas y asegúrate de sellar bien todos los bordes. Puedes hacer un pequeño doblez en los extremos antes de cerrar."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "3 días",
+    "recalentar": "En horno suave o air fryer para recuperar la textura de la masa. Directamente.",
+    "congelador": "También se pueden congelar ya horneadas"
+  }
+}

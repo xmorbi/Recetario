@@ -1,0 +1,53 @@
+{
+  "titulo": "Torta curicana",
+  "categoria": "dulces",
+  "tags": [
+    "torta",
+    "curicó",
+    "dulce",
+    "horno",
+    "tradicional",
+    "reposteria"
+  ],
+  "imagen": null,
+  "tiempo": "1 h 30 min",
+  "porciones": "12 porciones",
+  "dificultad": "alta",
+  "tecnica": "Horno",
+  "ingredientes": [
+    "Masa: 500 g de harina",
+    "Masa: 250 g de mantequilla",
+    "Masa: 100 g de azúcar",
+    "Masa: 2 yemas",
+    "Masa: 100 ml de agua fría",
+    "Relleno: 500 g de manjar",
+    "Relleno: 200 g de nueces picadas",
+    "Relleno: 100 g de pasas",
+    "Cubierta: azúcar flor"
+  ],
+  "pasos": [
+    "Mezcla la harina con el azúcar. Agrega la mantequilla fría en cubos y trabaja con los dedos hasta que quede como arena.",
+    "Agrega las yemas y el agua fría. Amasa hasta obtener una masa lisa.",
+    "Envuelve en papel plástico y refrigera 1 hora.",
+    "Divide la masa en 6 porciones. Estira cada una en un disco delgado.",
+    "Hornea cada disco a 180 °C por 10-12 minutos, hasta que esté dorado.",
+    "Mezcla el manjar con las nueces y pasas.",
+    "Arma la torta: disco, relleno, disco, relleno, hasta terminar. Cubre con azúcar flor."
+  ],
+  "dato": "La torta curicana es tradicional de Curicó, en la zona central de Chile. Se dice que nació en el siglo XIX en las casas de las familias más tradicionales de la ciudad. Es una torta de masa quebrada con relleno de manjar, nueces y pasas. Se sirve en cumpleaños y celebraciones.",
+  "errores": [
+    {
+      "error": "Masa dura",
+      "solucion": "No amases de más ni uses mantequilla caliente; usa mantequilla fría y amasa solo hasta integrar."
+    },
+    {
+      "error": "Se desarma al cortar",
+      "solucion": "No cortes la torta sin reposo en frío; déjala al menos 2 horas en refrigerador antes de cortar."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 4 días en recipiente hermético.",
+    "congelador": "No recomendado.",
+    "recalentar": "A temperatura ambiente."
+  }
+}

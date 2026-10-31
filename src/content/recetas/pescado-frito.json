@@ -1,0 +1,51 @@
+{
+  "titulo": "Pescado frito",
+  "categoria": "principales",
+  "tags": [
+    "pescado",
+    "fritura",
+    "plato principal",
+    "sarten",
+    "merluza",
+    "reineta",
+    "congrio"
+  ],
+  "imagen": "img/pescado-frito.jpg",
+  "tiempo": "30 min",
+  "porciones": "4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Fritura",
+  "ingredientes": [
+    "4 filetes de pescado blanco (merluza, reineta o congrio)",
+    "1 taza de harina",
+    "1 cucharadita de polvos de hornear",
+    "1 huevo",
+    "1/2 taza de agua o cerveza fría",
+    "Sal, pimienta y orégano al gusto",
+    "Aceite para freír",
+    "Limón para servir"
+  ],
+  "pasos": [
+    "Sazona los filetes de pescado con sal, pimienta y orégano. Déjalos reposar por 10 minutos.",
+    "Prepara la mezcla del rebozado: en un bol, mezcla la harina, los polvos de hornear, el huevo y el agua o cerveza hasta obtener una consistencia espesa pero fluida.",
+    "Calienta abundante aceite en una sartén honda o freidora a unos 180 °C.",
+    "Pasa cada filete por la mezcla, dejando que escurra el exceso, y fríe en el aceite caliente por 3-4 minutos por lado, hasta que estén dorados y crujientes.",
+    "Escurre sobre papel absorbente y sirve con rodajas de limón y ensalada a la chilena."
+  ],
+  "dato": "La cerveza fría en el rebozado le da una textura extra crujiente al pescado frito. Es un secreto de cocina muy popular.",
+  "errores": [
+    {
+      "error": "Rebozado que se cae o queda grasoso",
+      "solucion": "El pescado está muy húmedo o el aceite no está caliente. Seca los filetes con papel absorbente y asegúrate de que el aceite esté a 180°C."
+    },
+    {
+      "error": "Pescado crudo por dentro y quemado por fuera",
+      "solucion": "Fuego demasiado alto. Regula el fuego a medio para que el pescado se cocine por dentro sin quemarse."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 2 días en recipiente hermético.",
+    "congelador": "No recomendado, el rebozado pierde textura.",
+    "recalentar": "Horno o freidora de aire a 180°C por 5-8 minutos para recuperar la crocancia."
+  }
+}
