@@ -37,3 +37,36 @@
   to = "/gracias/"
   status = 301
   force = true
+
+# ==========================================
+# Mejora 5: Redirecciones 301 por cambio de slugs con "ñ"
+# ==========================================
+
+[[redirects]]
+  from = "/recetas/arroz-a-la-espa%C3%B1ola/"
+  to = "/recetas/arroz-a-la-espanola/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/recetas/tortilla-de-champi%C3%B1ones/"
+  to = "/recetas/tortilla-de-champinones/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/recetas/pavo-navide%C3%B1o/"
+  to = "/recetas/pavo-navideno-relleno/"
+  status = 301
+  force = true
+
+# ==========================================
+# Fallback 404 (Debe ir siempre al final)
+# ==========================================
+# ✅ Mejora 3: Fallback para la página 404 de Astro
+# Como build.format es 'directory', Astro genera /404/index.html.
+# Esta regla le dice a Netlify que lo use para cualquier ruta no encontrada.
+[[redirects]]
+  from = "/*"
+  to = "/404/"
+  status = 404

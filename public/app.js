@@ -20,13 +20,6 @@
     chef: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"/><line x1="6" y1="17" x2="18" y2="17"/></svg>'
   };
 
-  /*
-   * FASE 4A (deuda D1 + D2): ELIMINADOS los IIFEs initNavToggle() e initDropdownHerramientas().
-   * Ambos duplicaban la lógica de nav.js (que se carga SIEMPRE vía Layout.astro <head>),
-   * causando doble listener sobre el mismo botón → toggle abría y cerraba en el mismo clic.
-   * nav.js ya incluye el fix de trailing slash para marcar el ítem activo del dropdown.
-   */
-
   /* ---------- Utilidades ---------- */
   function quitarAcentos(str) {
     return String(str).normalize('NFD').replace(/[\u0300-\u036f]/g, '');
@@ -137,10 +130,6 @@
 
     var fotoHTML = '';
     if (receta.imagen && receta.imagen.trim() !== '') {
-      // FASE 4B (deuda D4): revertido a opacity:'0' en lugar de display:'none'.
-      // Motivo: si la imagen falla, display:'none' colapsaba el grid-template-columns
-      // de .receta-card-link (200px 1fr) a 1 columna, causando re-layout y saltos.
-      // Con opacity:'0' el contenedor .receta-card-foto mantiene sus dimensiones.
       fotoHTML =
         '<div class="receta-card-foto">' +
           '<img src="' + escaparAtributo(receta.imagen) + '" ' +
@@ -298,11 +287,7 @@
   }
 
   function esVegano(receta) {
-    if ((receta.tags || []).some(function (t) { return /vegan/i.test(t); })) return true;
-    const textoCrudo = ((receta.titulo || '') + ' ' + (receta.ingredientes || []).join(' ') + ' ' + (receta.tags || []).join(' '));
-    const texto = quitarAcentos(textoCrudo).toLowerCase();
-    const animalRegex = /\b(carne(?! de (soya|soja|trigo|vegetal))|vacuno|vaca|bife|bistec|churrasco|lomo|posta|asiento|tapapecho|plateada|osobuco|costilla|costillar|malaya|arrollado|mechada|pollo|trutro|pechuga|panita|gallina|pavo|pavita|cordero|borrego|cerdo|chancho|pulpa|chuleta|pernil|tocino|chicharron|hamburguesa|vienesa|salchicha|chorizo|longaniza|prieta|morcilla|jamon|cecina|pate|guatita|chunchule|rinon|higado|corazon|seso|chanfaina|menudencia|charqui|hueso|caldo|pescado|marisco|camaron|chorito|almeja|macha|loco|jaiba|centolla|congrio|corvina|merluza|reineta|salmon|atun|jurel|pulpo|calamar|picoroco|cholga|ostion|leche(?! de (coco|almendra|soya|avena))|queso|mantequilla|crema(?! de (coco|almendra|verduras))|yogur|parmesano|manjar|manteca|suero|caseina|huevo|clara|yema|miel)s?\b/i;
-    return !animalRegex.test(texto);
+    return (receta.tags || []).some(function (t) { return /vegan/i.test(t); });
   }
 
   function esSinHorno(receta) {
@@ -671,13 +656,19 @@
 
     renderizarDestacada();
 
+    // MEJORA 12/6 (Fase 3/4): Inicializar el autocompletado ANTES de chequear
+    // si existe el contenedor, para que funcione también en la portada (index).
+    buscador = document.getElementById('buscador');
+    if (buscador) {
+      initAutocompletado(buscador, RECETAS);
+    }
+
     contenedor = document.getElementById('contenedorRecetas');
     if (!contenedor) {
       window.crearTarjetaGlobal = crearTarjeta;
       return;
     }
 
-    buscador     = document.getElementById('buscador');
     limpiarBtn   = document.getElementById('limpiarBuscador');
     limpiarVacio = document.getElementById('limpiarVacio');
     vacio        = document.getElementById('sinResultados');
@@ -923,7 +914,6 @@
 
     /* ---------- Arranque ---------- */
     renderizar();
-    initAutocompletado(buscador, RECETAS);
     botones.forEach(function (b) {
       b.classList.toggle('activo', b.dataset.cat === categoriaActiva);
     });

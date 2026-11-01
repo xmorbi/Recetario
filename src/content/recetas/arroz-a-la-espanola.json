@@ -43,15 +43,15 @@
   "dato": "Aunque su nombre nos transporte a España, en Chile es tradicional enriquecerlo con mariscos locales (choritos, almejas) y chorizo, una adaptación costera que no se ve en la península. El azafrán, herencia árabe, le da ese color dorado inconfundible.",
   "errores": [
     {
-      "error": "El arroz se me pegó",
+      "error": "Se me pegó el arroz",
       "solucion": "Usa una olla de fondo grueso, no revuelvas en exceso durante la cocción y mantén el fuego lento."
     },
     {
-      "error": "El arroz me quedó crudo o pasado",
+      "error": "Me quedó crudo o pasado el arroz",
       "solucion": "No respetaste la proporción de arroz y líquido. Usa 1 taza de arroz por 2 tazas de caldo, y prueba el punto antes de retirar del fuego."
     },
     {
-      "error": "El arroz me quedó sin sabor",
+      "error": "Me quedó sin sabor el arroz",
       "solucion": "No doraste bien el pollo ni el chorizo. Dora bien las carnes antes de agregar el caldo: esa costra dorada es la que le da sabor de fondo al arroz."
     }
   ],

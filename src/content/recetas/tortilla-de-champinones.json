@@ -36,11 +36,11 @@
   "dato": "Cocinar los champiñones tapados y sin agua concentra su sabor y evita que suelten líquido en la tortilla.",
   "errores": [
     {
-      "error": "Tortilla aguada",
+      "error": "Me quedó aguada la tortilla",
       "solucion": "Cocina los champiñones hasta que pierdan su agua antes de agregar los huevos; si sueltan mucho líquido, escúrrelos."
     },
     {
-      "error": "Tortilla que se pega",
+      "error": "Se me pegó la tortilla",
       "solucion": "Usa una sartén antiadherente y suficiente aceite y mantequilla; mueve la sartén para despegar los bordes."
     }
   ],

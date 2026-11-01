@@ -88,9 +88,10 @@
   (function initNavSearch() {
     var input = document.getElementById('nav-buscador');
     var dropdown = document.getElementById('nav-buscador-sugerencias');
-    
-    // Si no existe el input en esta página, o no se inyectaron las recetas, salir.
-    if (!input || !dropdown || typeof window.RECETAS_NAV === 'undefined') return;
+
+    // MEJORA 6 (Fase 4): ya no exigimos window.RECETAS_NAV en el arranque.
+    // Se carga perezosamente al enfocar el input.
+    if (!input || !dropdown) return;
 
     var activo = -1;
     var sugerencias = [];
@@ -100,17 +101,30 @@
       return String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
     }
 
+    // MEJORA 6 (Fase 4): carga perezosa de la lista mínima del buscador.
+    // Layout.astro ya no incrusta los ~26 KB en cada página.
+    function cargarNav() {
+      if (window.RECETAS_NAV) return Promise.resolve();
+      return fetch('/api/recetas-nav.json')
+        .then(function (r) { return r.json(); })
+        .then(function (d) { window.RECETAS_NAV = d; })
+        .catch(function () { window.RECETAS_NAV = []; });
+    }
+
     function buscar(q) {
+      // MEJORA 6 (Fase 4): si la lista aún no llegó, no romper.
+      if (!window.RECETAS_NAV) return [];
+
       var qN = norm(q.trim());
       if (qN.length < 2) return [];
-      
+
       var resultados = [];
-      
+
       // Buscar coincidencias con puntuación para ordenar por relevancia
       window.RECETAS_NAV.forEach(function (r) {
         var tituloNorm = norm(r.titulo);
         var score = 0;
-        
+
         if (tituloNorm === qN) {
           score = 100; // Coincidencia exacta
         } else if (tituloNorm.indexOf(qN) === 0) {
@@ -129,17 +143,17 @@
             }
           }
         }
-        
+
         if (score > 0) {
           resultados.push({ r: r, score: score });
         }
       });
-      
+
       // Ordenar de mayor a menor puntaje
       resultados.sort(function (a, b) {
         return b.score - a.score;
       });
-      
+
       // Devolver solo los primeros 6
       return resultados.slice(0, 6).map(function(x) { return x.r; });
     }
@@ -159,7 +173,7 @@
           '<span class="ac-cat">' + escaparHtml(r.categoria || '') + '</span>' +
         '</li>';
       }).join('');
-      
+
       dropdown.hidden = false;
       input.setAttribute('aria-expanded', 'true');
     }
@@ -167,7 +181,7 @@
     function seleccionar(idx) {
       var r = sugerencias[idx];
       if (!r) return;
-      
+
       // FASE 3 (auditoría): URL limpia → /recetas/slug/
       window.location.href = '/recetas/' + r.slug + '/';
     }
@@ -178,6 +192,13 @@
         return { '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c];
       });
     }
+
+    // MEJORA 6 (Fase 4): disparar la carga al primer foco (una sola vez).
+    input.addEventListener('focus', function () {
+      cargarNav().then(function () {
+        if (input.value) input.dispatchEvent(new Event('input'));
+      });
+    }, { once: true });
 
     // --- EVENTOS ---
     input.addEventListener('input', function () {

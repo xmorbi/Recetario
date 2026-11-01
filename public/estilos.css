@@ -1593,3 +1593,40 @@ body.mc-bloqueado{overflow:hidden}
   border-color: #ffc107;
   color: #ffda6a;
 }
+
+/* ===== FIX FASE 4: BARRA DE ACCIONES + ESTRELLAS EN LÍNEA ===== */
+/* .receta-barra no existía en el CSS: se comportaba como block y apilaba
+   los botones arriba y las estrellas abajo. Ahora es un flex horizontal. */
+
+.receta-barra{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:1rem;
+  margin-bottom:1.5rem;
+}
+
+.receta-barra .receta-acciones-top{
+  margin-bottom:0;
+  flex:1 1 auto;
+}
+
+.receta-barra .rating-container{
+  margin-bottom:0;
+  flex:0 0 auto;
+}
+
+@media(max-width:640px){
+  .receta-barra{
+    flex-direction:column;
+    align-items:stretch;
+    gap:.8rem;
+  }
+  .receta-barra .receta-acciones-top{
+    justify-content:center;
+  }
+  .receta-barra .rating-container{
+    align-self:center;
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "titulo": "Pavo Navideño",
+  "titulo": "Pavo navideño relleno con ciruelas y castañas",
   "categoria": "principales",
   "tags": [
     "pavo navideño",
@@ -55,11 +55,11 @@
   "dato": "El caldo preparado con el cogote y las patas se enfría para retirar la grasa solidificada y usar un caldo más limpio para rociar el pavo.",
   "errores": [
     {
-      "error": "Pavo seco",
+      "error": "Me quedó seco el pavo",
       "solucion": "Tapa con papel aluminio a los 10 minutos y rocía con su jugo y caldo varias veces durante las 2 horas de cocción."
     },
     {
-      "error": "Relleno que se sale",
+      "error": "Se me salió el relleno",
       "solucion": "Cose bien la abertura con cordel blanco firme y aprieta el relleno sin dejar huecos."
     }
   ],

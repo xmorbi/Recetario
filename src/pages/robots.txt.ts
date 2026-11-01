@@ -16,9 +16,6 @@ export const GET: APIRoute = ({ site }) => {
 User-agent: *
 Allow: /
 
-# Bloquear la herramienta interna de generación de páginas (si existe)
-Disallow: /generar.html
-
 # 2. Ubicación del mapa del sitio
 Sitemap: ${sitemapURL}
 

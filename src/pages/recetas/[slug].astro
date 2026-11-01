@@ -46,6 +46,11 @@ const img = receta.imagen && receta.imagen.trim() !== ''
   ? new URL(`/${receta.imagen}`, SITE).toString()
   : new URL('/img/og-default.jpg', SITE).toString();
 
+// FASE 2 (Mejora 2): si la receta tiene imagen propia, sabemos sus dimensiones
+// porque el <img> de abajo las declara (1200×675). Si cae en la imagen por
+// defecto, NO inventamos width/height.
+const tieneImagenPropia = !!(receta.imagen && receta.imagen.trim() !== '');
+
 // Guías recomendadas (URLs limpias)
 const GUIAS = {
   'pastel-de-choclo': { titulo: 'Cómo elegir un buen choclo', url: '/guias/como-elegir-un-choclo/' },
@@ -66,6 +71,26 @@ const guiaAsociada = GUIAS[slug];
 
 const ingPrincipales = receta.ingredientes.slice(0, 3).map(x => x.split(':').pop().trim()).join(', ');
 const resumenTexto = `Para preparar ${receta.titulo} necesitas ${ingPrincipales}. Es una receta de dificultad ${receta.dificultad || 'fácil'} que toma ${receta.tiempo || 'un tiempo'} y rinde ${receta.porciones || '4 porciones'}.`;
+
+// FASE 2 (Mejora 2): descripción única por receta para <meta name="description">
+// y og:description. Se compone con datos ya existentes (título, tiempo,
+// dificultad) para evitar el texto genérico "Receta chilena de X. Ingredientes
+// y preparación paso a paso." y se trunca a 160 caracteres respetando palabras.
+const DESCRIPCION_MAX = 160;
+function truncarDescripcion(texto, max = DESCRIPCION_MAX) {
+  if (!texto) return '';
+  const limpio = String(texto).replace(/\s+/g, ' ').trim();
+  if (limpio.length <= max) return limpio;
+  const corte = limpio.slice(0, max - 1);
+  const ultimoEspacio = corte.lastIndexOf(' ');
+  return (ultimoEspacio > 0 ? corte.slice(0, ultimoEspacio) : corte) + '…';
+}
+const descripcionSEO = truncarDescripcion(
+  `${receta.titulo}: receta chilena` +
+  `${receta.tiempo ? ' lista en ' + receta.tiempo : ''}` +
+  `${receta.dificultad ? ', dificultad ' + String(receta.dificultad).toLowerCase() : ''}` +
+  `. Ingredientes, preparación paso a paso y consejos.`
+);
 
 // FASE 1 (auditoría): convierte duraciones humanas a ISO 8601
 function aISODuracion(t) {
@@ -124,14 +149,18 @@ const ICON_STAR = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
 const ICON_LIBRO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>';
 ---
 
-<Layout title={receta.titulo} description={`Receta chilena de ${receta.titulo}. Ingredientes y preparación paso a paso.`} activePage="recetas">
+<Layout
+  title={receta.titulo}
+  description={descripcionSEO}
+  activePage="recetas"
+  image={img}
+  imageWidth={tieneImagenPropia ? 1200 : undefined}
+  imageHeight={tieneImagenPropia ? 675 : undefined}
+  imageAlt={receta.titulo}
+  ogType="article"
+>
 
   <Fragment slot="head">
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content={`${receta.titulo} | Recetario Chileno`} />
-    <meta property="og:description" content={`Receta chilena de ${receta.titulo}`} />
-    <meta property="og:image" content={img} />
-    <meta property="og:url" content={url} />
     <script type="application/ld+json" set:html={schema}></script>
     <script type="application/ld+json" set:html={bread}></script>
   </Fragment>

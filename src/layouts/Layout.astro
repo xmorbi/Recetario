@@ -1,21 +1,25 @@
 ---
-import { getCollection } from 'astro:content';
-
 const { 
   title = 'Recetario Chileno', 
   description = 'Las mejores recetas tradicionales chilenas explicadas paso a paso.',
   // Centralización: canonical explícito con Astro.site, sin query params.
   canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://recetariochileno.netlify.app'),
   activePage = '',
-  noindex = false
+  noindex = false,
+  // FASE 2 (Mejora 2): metadatos Open Graph / Twitter centralizados.
+  // Acepta rutas relativas ('/img/foo.jpg') o URLs absolutas ('https://...').
+  image = '/img/og-default.jpg',
+  imageWidth,
+  imageHeight,
+  imageAlt,
+  ogType = 'website'
 } = Astro.props;
 
 const siteTitle = title === 'Recetario Chileno' ? title : `${title} | Recetario Chileno`;
 const canonical = canonicalURL.toString();
-
-const recetasDB = await getCollection('recetas');
-const recetasNav = recetasDB.map(r => ({ titulo: r.data.titulo, slug: r.id, categoria: r.data.categoria }));
-const recetasNavJSON = JSON.stringify(recetasNav);
+const ogImage = /^https?:\/\//.test(image)
+  ? image
+  : new URL(image, Astro.site ?? 'https://recetariochileno.netlify.app').toString();
 ---
 
 <!DOCTYPE html>
@@ -42,11 +46,24 @@ const recetasNavJSON = JSON.stringify(recetasNav);
   {noindex && <meta name="robots" content="noindex, follow">}
   <link rel="canonical" href={canonical}>
 
-  <meta property="og:type" content="website">
+  <!-- Open Graph (FASE 2: centralizado aquí, sin duplicados en [slug].astro) -->
+  <meta property="og:type" content={ogType}>
+  <meta property="og:site_name" content="Recetario Chileno">
   <meta property="og:title" content={siteTitle}>
   <meta property="og:description" content={description}>
   <meta property="og:url" content={canonical}>
+  <meta property="og:image" content={ogImage}>
+  {imageWidth && <meta property="og:image:width" content={String(imageWidth)}>}
+  {imageHeight && <meta property="og:image:height" content={String(imageHeight)}>}
+  {imageAlt && <meta property="og:image:alt" content={imageAlt}>}
   <meta property="og:locale" content="es_CL">
+
+  <!-- Twitter Cards (FASE 2) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content={siteTitle}>
+  <meta name="twitter:description" content={description}>
+  <meta name="twitter:image" content={ogImage}>
+  {imageAlt && <meta name="twitter:image:alt" content={imageAlt}>}
 
   <!--
     FASE 3 (auditoría): GTM/GA4 se cargan SOLO después de consentimiento.
@@ -146,10 +163,6 @@ const recetasNavJSON = JSON.stringify(recetasNav);
       <button id="btn-aceptar-cookies" class="btn-cookie">Aceptar</button>
     </div>
   </div>
-
-  <script is:inline define:vars={{ recetasNavJSON }}>
-    window.RECETAS_NAV = JSON.parse(recetasNavJSON);
-  </script>
 
   <script is:inline src="/nav.js" defer></script>
   <script is:inline src="/lista-compras.js"></script>

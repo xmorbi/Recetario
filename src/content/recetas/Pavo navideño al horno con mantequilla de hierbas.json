@@ -1,5 +1,5 @@
 {
-  "titulo": "Pavo navideño",
+  "titulo": "Pavo navideño al horno con mantequilla de hierbas",
   "categoria": "principales",
   "tags": [
     "pavo",
@@ -38,11 +38,11 @@
   "dato": "El pavo navideño es el plato central de la Navidad chilena. La mantequilla con hierbas y el marinado largo son la clave para que quede jugoso. En Chile se suele servir con papas duquesas, ensalada a la chilena y pan de Pascua de postre.",
   "errores": [
     {
-      "error": "Queda seco",
-      "solucion": "Cocinarlo destapado todo el tiempo o no bañarlo. Mantenlo cubierto la mayor parte de la cocción y baña cada 30 minutos."
+      "error": "Me quedó seco el pavo",
+      "solucion": "Lo cociné destapado todo el tiempo o no lo bañé. Mantenlo cubierto la mayor parte de la cocción y baña cada 30 minutos."
     },
     {
-      "error": "Queda crudo por dentro",
+      "error": "Me quedó crudo por dentro",
       "solucion": "Horno muy caliente o pavo muy grande. Cocina a 180 °C, no más, y verifica con un termómetro: la pechuga debe llegar a 75 °C."
     }
   ],

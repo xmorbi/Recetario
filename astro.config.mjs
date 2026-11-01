@@ -20,5 +20,10 @@ export default defineConfig({
     format: 'directory'
   },
 
-  integrations: [sitemap()]
+  integrations: [
+    sitemap({
+      // Mejora 4: Excluir páginas noindex del sitemap
+      filter: (page) => !page.includes('/gracias/') && !page.includes('/mis-recetas/'),
+    }),
+  ]
 });
