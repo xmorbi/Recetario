@@ -98,6 +98,9 @@ const ogImage = /^https?:\/\//.test(image)
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <slot name="head" />
+  <!-- FASE 2 (2.3): slot dedicado para JSON-LD estructurado, separado del head genérico.
+       Mantenemos "head" para no romper otras páginas que ya lo usan. -->
+  <slot name="jsonld" />
 </head>
 <body>
   <div class="bandera"><i class="azul"></i><i class="blanco"></i><i class="rojo"></i></div>
@@ -153,14 +156,20 @@ const ogImage = /^https?:\/\//.test(image)
     <nav class="footer-legal" aria-label="Enlaces legales">
       <a href="/sobre-mi/">Sobre nosotros</a><span class="sep">·</span>
       <a href="/privacidad/">Privacidad</a><span class="sep">·</span>
-      <a href="/contacto/">Contacto</a>
+      <a href="/contacto/">Contacto</a><span class="sep">·</span>
+      <!-- FASE 2 (2.2): reabre el banner para cambiar la decisión de cookies -->
+      <button type="button" id="link-preferencias-cookies" class="footer-link-btn">Preferencias de cookies</button>
     </nav>
   </footer>
 
   <div id="cookie-banner" class="cookie-banner" hidden>
     <div class="cookie-content">
-      <p>🍪 Utilizamos cookies propias y de terceros para analizar el tráfico y mejorar tu experiencia. Al hacer clic en "Aceptar", aceptas su uso. Más info en nuestra <a href="/privacidad/">Política de Privacidad</a>.</p>
-      <button id="btn-aceptar-cookies" class="btn-cookie">Aceptar</button>
+      <p>🍪 Utilizamos cookies propias y de terceros para analizar el tráfico y mejorar tu experiencia. Puedes aceptar o rechazar su uso. Más info en nuestra <a href="/privacidad/">Política de Privacidad</a>.</p>
+      <!-- FASE 2 (2.1): botones Aceptar / Rechazar con persistencia en localStorage -->
+      <div class="cookie-botones">
+        <button id="btn-rechazar-cookies" class="btn-cookie btn-cookie-secundario" type="button">Rechazar</button>
+        <button id="btn-aceptar-cookies" class="btn-cookie" type="button">Aceptar</button>
+      </div>
     </div>
   </div>
 
@@ -197,22 +206,57 @@ const ogImage = /^https?:\/\//.test(image)
       }
 
       // --- AVISO DE COOKIES + CARGA DE GTM AL ACEPTAR ---
+      // FASE 2 (2.1 / 2.2): consentimiento aceptar/rechazar + reapertura desde footer.
       var cookieBanner = document.getElementById('cookie-banner');
       var btnAceptarCookies = document.getElementById('btn-aceptar-cookies');
+      var btnRechazarCookies = document.getElementById('btn-rechazar-cookies');
+      var linkPreferenciasCookies = document.getElementById('link-preferencias-cookies');
 
+      function mostrarBannerCookies() {
+        if (!cookieBanner) return;
+        cookieBanner.hidden = false;
+        // forzar reflow para que la transición CSS se dispare al reabrir
+        void cookieBanner.offsetHeight;
+        setTimeout(function() { cookieBanner.classList.add('visible'); }, 50);
+      }
+
+      function ocultarBannerCookies() {
+        if (!cookieBanner) return;
+        cookieBanner.classList.remove('visible');
+        setTimeout(function() { cookieBanner.hidden = true; }, 300);
+      }
+
+      // valor: 'true' = aceptar | 'false' = rechazar
+      function registrarConsentimiento(valor) {
+        setSafeItem('cookies_aceptadas', valor);
+        if (valor === 'true' && typeof window.cargarGTM === 'function') {
+          window.cargarGTM();
+        }
+        ocultarBannerCookies();
+      }
+
+      // Expuesto para que el enlace del footer pueda reabrir el banner.
+      window.abrirPreferenciasCookies = function () {
+        try { localStorage.removeItem('cookies_aceptadas'); } catch (e) {}
+        mostrarBannerCookies();
+      };
+
+      // Mostrar el banner solo si no hay una decisión previa.
+      // ('false' es truthy, así que un rechazo previo NO reabre el banner.)
       if (cookieBanner && !getSafeItem('cookies_aceptadas')) {
-        setTimeout(function() {
-          cookieBanner.hidden = false;
-          setTimeout(function() { cookieBanner.classList.add('visible'); }, 50);
-        }, 1000);
+        setTimeout(mostrarBannerCookies, 1000);
       }
 
       if (btnAceptarCookies) {
-        btnAceptarCookies.addEventListener('click', function() {
-          setSafeItem('cookies_aceptadas', 'true');
-          if (typeof window.cargarGTM === 'function') window.cargarGTM();
-          cookieBanner.classList.remove('visible');
-          setTimeout(function() { cookieBanner.hidden = true; }, 300);
+        btnAceptarCookies.addEventListener('click', function() { registrarConsentimiento('true'); });
+      }
+      if (btnRechazarCookies) {
+        btnRechazarCookies.addEventListener('click', function() { registrarConsentimiento('false'); });
+      }
+      if (linkPreferenciasCookies) {
+        linkPreferenciasCookies.addEventListener('click', function(e) {
+          e.preventDefault();
+          window.abrirPreferenciasCookies();
         });
       }
     });
