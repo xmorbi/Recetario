@@ -23,6 +23,8 @@ export default defineConfig({
     format: 'directory',
   },
   adapter: cloudflare({
+    // FASE 3: procesar imágenes en build-time (elimina warning de IMAGES en runtime)
+    imageService: 'compile',
     platformProxy: {
       enabled: true,
     },
