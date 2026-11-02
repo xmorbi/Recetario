@@ -1,7 +1,7 @@
 {
-  "name": "empty-project",
+  "name": "recetario",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "engines": {
     "node": ">=22.23.4"
   },
@@ -9,10 +9,19 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "deploy": "astro build && wrangler deploy",
     "astro": "astro"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
     "astro": "^7.4.4"
+  },
+  "devDependencies": {
+    "@astrojs/cloudflare": "^14.4.3",
+    "wrangler": "^4.156.1"
+  },
+  "allowScripts": {
+    "workerd@1.20261101.1": true,
+    "esbuild@0.28.2": true
   }
 }

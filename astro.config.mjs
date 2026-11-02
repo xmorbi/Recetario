@@ -1,29 +1,30 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
+import cloudflare from '@astrojs/cloudflare';
 
-import sitemap from '@astrojs/sitemap';
+// `site` es obligatorio. Sin dominio canónico no se pueden generar
+// canonical, sitemap ni JSON-LD correctamente. Netlify está descartado:
+// no hay fallback hardcodeado.
+const site =
+  import.meta.env?.PUBLIC_SITE_URL ||
+  process.env.PUBLIC_SITE_URL;
 
-// Centralización de dominio:
-// - En local, Netlify y CI sin env var → fallback al dominio actual.
-// - El día que exista el dominio final, se setea SITE_URL en Netlify
-//   env vars → deploy → cero cambios de código.
-const SITE_URL = process.env.SITE_URL || 'https://recetariochileno.netlify.app';
+if (!site) {
+  throw new Error(
+    '[recetario] Falta la variable PUBLIC_SITE_URL. ' +
+      'Define el dominio canónico (ej. https://recetariochileno.cl) ' +
+      'en .env o en el entorno del CI. El build se aborta a propósito.'
+  );
+}
 
-// https://astro.build/config
 export default defineConfig({
-  site: SITE_URL,
-
-  // FASE 3 (auditoría): URLs limpias (sin .html) + trailing slash siempre
+  site,
   trailingSlash: 'always',
-
   build: {
-    format: 'directory'
+    format: 'directory',
   },
-
-  integrations: [
-    sitemap({
-      // Mejora 4: Excluir páginas noindex del sitemap
-      filter: (page) => !page.includes('/gracias/') && !page.includes('/mis-recetas/'),
-    }),
-  ]
+  adapter: cloudflare({
+    platformProxy: {
+      enabled: true,
+    },
+  }),
 });

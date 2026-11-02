@@ -1,0 +1,48 @@
+name: Deploy a Cloudflare Workers
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    env:
+      PUBLIC_SITE_URL: ${{ vars.PUBLIC_SITE_URL }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Validar PUBLIC_SITE_URL
+        run: |
+          if [ -z "$PUBLIC_SITE_URL" ]; then
+            echo "::error::Falta el repo variable PUBLIC_SITE_URL (Settings → Variables)."
+            exit 1
+          fi
+
+      - name: Build (astro build — única build del pipeline)
+        run: npm run build
+
+      - name: Deploy a Cloudflare Workers (sin rebuild)
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: deploy
+          workingDirectory: .
