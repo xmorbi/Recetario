@@ -60,7 +60,18 @@ body{background:var(--crema);color:var(--tinta);font-family:var(--fuente-texto);
 .filtro{font-family:inherit;font-size:.85rem;font-weight:500;padding:.65rem 1.1rem;border-radius:99px;cursor:pointer;border:1.5px solid var(--borde);background:#fff;color:var(--suave);box-shadow:var(--sombra-sm);transition:all .2s;text-decoration:none;display:inline-block}
 .filtro:hover{border-color:var(--rojo);color:var(--rojo);transform:translateY(-1px);box-shadow:0 3px 8px rgba(176,58,46,.12)}
 .filtro.activo{background:linear-gradient(135deg,var(--rojo) 0%,var(--rojo-osc) 100%);border-color:var(--rojo-osc);color:#fff;box-shadow:0 4px 12px rgba(176,58,46,.28)}
-@media(max-width:640px){.controles{padding:.65rem 0}.controles .inner{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;gap:.5rem;padding-right:1rem}.controles .inner::-webkit-scrollbar{display:none}.controles .inner>*{flex-shrink:0}.buscador-wrap{flex:0 0 180px}.buscador-wrap #buscador{padding:.7rem 2.2rem .7rem 2.2rem;font-size:.85rem}.buscador-wrap .lupa{left:.8rem;width:16px;height:16px}.limpiar{width:26px;height:26px;right:.4rem;font-size:1rem}}
+/* MÓVIL: sin scroll horizontal oculto. El buscador ocupa su propia fila y los filtros bajan a líneas siguientes.
+   La barra deja de ser sticky en móvil: con varias filas ocuparía media pantalla al hacer scroll. */
+@media(max-width:640px){
+  .controles{position:static;padding:.8rem 0;background:var(--crema);backdrop-filter:none;-webkit-backdrop-filter:none}
+  .controles .inner{flex-wrap:wrap;overflow:visible;gap:.5rem;padding:0 1rem}
+  .controles .inner>*{flex-shrink:1}
+  .buscador-wrap{flex:1 1 100%;order:-1}
+  .buscador-wrap #buscador{padding:.8rem 2.6rem .8rem 2.7rem;font-size:.95rem}
+  .buscador-wrap .lupa{left:.95rem;width:18px;height:18px}
+  .limpiar{width:28px;height:28px;right:.45rem;font-size:1.05rem}
+  .filtro,.btn-despensa,.filtro-avanzado-toggle{font-size:.8rem;padding:.5rem .85rem}
+}
 
 /* ===== MAIN Y CONTADOR ===== */
 main{max-width:var(--max-width);margin:0 auto;padding:2.5rem var(--pad-x) 5rem}
