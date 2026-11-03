@@ -2,9 +2,18 @@
 @font-face{font-family:'Fraunces-fallback';src:local('Georgia');size-adjust:105%;ascent-override:90%;descent-override:22%;line-gap-override:0%}
 @font-face{font-family:'Inter-fallback';src:local('Arial');size-adjust:107%;ascent-override:90%;descent-override:22.4%;line-gap-override:0%}
 html{scrollbar-gutter:stable}
-:root{--rojo:#b03a2e;--rojo-osc:#7a1b15;--azul:#1f3a5f;--dorado:#c8963e;--terracota:#c4643a;--crema:#fdf8f0;--crema-osc:#f6ecdd;--arena:#f2e6d6;--borde:#e6d6c1;--tinta:#2b2320;--suave:#6f6257;--radio:16px;--sombra-sm:0 1px 3px rgba(90,60,30,.08);--sombra-md:0 4px 16px rgba(90,60,30,.08);--sombra-lg:0 12px 32px rgba(90,60,30,.14);--fuente-titulos:'Fraunces','Fraunces-fallback',Georgia,'Playfair Display',serif;--fuente-texto:'Inter','Inter-fallback',system-ui,-apple-system,'Segoe UI',sans-serif;--max-width:1000px;--pad-x:1rem;--destacada-min:540px}
+:root{--rojo:#b03a2e;--rojo-osc:#7a1b15;--azul:#1f3a5f;--dorado:#c8963e;--terracota:#c4643a;--crema:#fdf8f0;--crema-osc:#f6ecdd;--arena:#f2e6d6;--borde:#e6d6c1;--tinta:#2b2320;--suave:#6f6257;--radio:16px;--sombra-sm:0 1px 3px rgba(90,60,30,.08);--sombra-md:0 4px 16px rgba(90,60,30,.08);--sombra-lg:0 12px 32px rgba(90,60,30,.14);--fuente-titulos:'Fraunces','Fraunces-fallback',Georgia,'Playfair Display',serif;--fuente-texto:'Inter','Inter-fallback',system-ui,-apple-system,'Segoe UI',sans-serif;--max-width:1000px;--pad-x:1rem;--destacada-min:540px;--color-foco:#7a1b15}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--crema);color:var(--tinta);font-family:var(--fuente-texto);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+/* FASE 1 (a11y): foco visible genérico para elementos sin estilo propio.
+   No sustituye a los estilos de foco específicos que ya existen
+   (inputs con border-color+box-shadow, etc.); solo actúa de red de
+   seguridad para enlaces, botones y summary que no tenían ninguno. */
+:focus-visible {
+  outline: 2px solid var(--color-foco, #0066cc);
+  outline-offset: 2px;
+}
 
 /* ===== BANDERA Y UTILIDADES ===== */
 .bandera{height:6px;display:flex;position:relative;overflow:hidden}
@@ -844,6 +853,7 @@ body.mc-bloqueado{overflow:hidden}
   --borde: #333333;
   --rojo-osc: #e57373;
   --arena: #2a2a2a;
+  --color-foco: #e57373;
 }
 
 [data-theme="dark"] .site-nav { background: #1a1a1a; border-bottom: 1px solid #333; }

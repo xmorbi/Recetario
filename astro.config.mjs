@@ -1,12 +1,13 @@
 import { defineConfig } from 'astro/config';
 import cloudflare from '@astrojs/cloudflare';
+import sitemap from '@astrojs/sitemap';
+import { loadEnv } from 'vite';
 
-// `site` es obligatorio. Sin dominio canónico no se pueden generar
-// canonical, sitemap ni JSON-LD correctamente. Netlify está descartado:
-// no hay fallback hardcodeado.
-const site =
-  import.meta.env?.PUBLIC_SITE_URL ||
-  process.env.PUBLIC_SITE_URL;
+// ⚠️ CRÍTICO: Cargar el .env ANTES de leer process.env.
+// Astro ejecuta este archivo en Node puro, por lo que las variables de .env
+// no están en process.env por defecto. loadEnv las inyecta.
+const env = loadEnv(process.env.NODE_ENV || 'production', process.cwd(), '');
+const site = env.PUBLIC_SITE_URL || process.env.PUBLIC_SITE_URL;
 
 if (!site) {
   throw new Error(
@@ -29,6 +30,7 @@ export default defineConfig({
     // Si prefieres caché entre páginas a costa de una petición CSS, vuelve a 'auto'.
     inlineStylesheets: 'always',
   },
+  integrations: [sitemap()],
   adapter: cloudflare({
     // FASE 3: procesar imágenes en build-time (elimina warning de IMAGES en runtime)
     imageService: 'compile',

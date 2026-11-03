@@ -165,10 +165,13 @@
         return;
       }
 
-      // Crear el HTML de las sugerencias
+      // FASE 1 (a11y): TODOS los <li> llevan aria-selected explícito
+      // ("true" en el activo, "false" en el resto). Sin esto, el listbox
+      // incumple WAI-ARIA 1.2 y Lighthouse lo marca.
       dropdown.innerHTML = sugerencias.map(function (r, i) {
-        return '<li data-idx="' + i + '" role="option" ' +
-          (i === activo ? 'class="activo" aria-selected="true"' : '') + '>' +
+        var isActivo = i === activo;
+        return '<li data-idx="' + i + '" role="option" aria-selected="' + (isActivo ? 'true' : 'false') + '"' +
+          (isActivo ? ' class="activo"' : '') + '>' +
           '<span class="ac-titulo">' + escaparHtml(r.titulo) + '</span>' +
           '<span class="ac-cat">' + escaparHtml(r.categoria || '') + '</span>' +
         '</li>';

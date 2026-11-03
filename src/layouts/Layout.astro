@@ -167,8 +167,9 @@ const ogImage = /^https?:\/\//.test(image)
         <a href="/mis-recetas/" class={activePage === 'mis-recetas' ? 'activo' : ''}>Mis recetas</a>
 
         <!-- ⚠️ CAMBIO (a11y/HTML): type="button" para evitar submit accidental si algún día
-             este botón queda dentro de un <form>. No cambia comportamiento actual. -->
-        <button id="theme-toggle" type="button" style="background:none; border:none; cursor:pointer; padding:0.5rem; color:var(--tinta); font-size:1.2rem; display:flex; align-items:center; margin-left: 0.5rem;" aria-label="Cambiar tema">
+             este botón queda dentro de un <form>. No cambia comportamiento actual.
+             FASE 1 (a11y): aria-pressed comunica el estado del toggle a lectores de pantalla. -->
+        <button id="theme-toggle" type="button" style="background:none; border:none; cursor:pointer; padding:0.5rem; color:var(--tinta); font-size:1.2rem; display:flex; align-items:center; margin-left: 0.5rem;" aria-label="Cambiar tema" aria-pressed="false">
           🌙
         </button>
       </nav>
@@ -221,20 +222,25 @@ const ogImage = /^https?:\/\//.test(image)
       }
 
       // --- MODO OSCURO ---
+      // FASE 1 (a11y): sincronizar textContent Y aria-pressed en el arranque,
+      // por si el usuario venía con el tema oscuro persistido en localStorage.
       var toggle = document.getElementById('theme-toggle');
       var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-      if (toggle) toggle.textContent = isDark ? '☀️' : '🌙';
       if (toggle) {
+        toggle.textContent = isDark ? '☀️' : '🌙';
+        toggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
         toggle.addEventListener('click', function() {
           var theme = document.documentElement.getAttribute('data-theme');
           if (theme === 'dark') {
             document.documentElement.removeAttribute('data-theme');
             setSafeItem('theme', 'light');
             toggle.textContent = '🌙';
+            toggle.setAttribute('aria-pressed', 'false');
           } else {
             document.documentElement.setAttribute('data-theme', 'dark');
             setSafeItem('theme', 'dark');
             toggle.textContent = '☀️';
+            toggle.setAttribute('aria-pressed', 'true');
           }
         });
       }
