@@ -1,7 +1,6 @@
 import { defineConfig } from 'astro/config';
 import cloudflare from '@astrojs/cloudflare';
 import sitemap from '@astrojs/sitemap';
-import gtm from 'astro-gtm-lite'; // <-- NUEVO: Importación de GTM
 import { loadEnv } from 'vite';
 
 // ⚠️ CRÍTICO: Cargar el .env ANTES de leer process.env.
@@ -33,7 +32,7 @@ export default defineConfig({
   },
   integrations: [
     sitemap(),
-    gtm({ id: 'GTM-KXH425KQ' }) // <-- NUEVO: Integración de GTM
+    // GTM se carga desde Layout.astro (cargarGTM) solo tras el consentimiento de cookies.
   ],
   adapter: cloudflare({
     // FASE 3: procesar imágenes en build-time (elimina warning de IMAGES en runtime)
