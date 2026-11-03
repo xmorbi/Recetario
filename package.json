@@ -14,7 +14,8 @@
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
-    "astro": "^7.4.4"
+    "astro": "^7.4.4",
+    "astro-gtm-lite": "^1.0.2"
   },
   "devDependencies": {
     "@astrojs/cloudflare": "^14.4.3",

@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import cloudflare from '@astrojs/cloudflare';
 import sitemap from '@astrojs/sitemap';
+import gtm from 'astro-gtm-lite'; // <-- NUEVO: Importación de GTM
 import { loadEnv } from 'vite';
 
 // ⚠️ CRÍTICO: Cargar el .env ANTES de leer process.env.
@@ -30,7 +31,10 @@ export default defineConfig({
     // Si prefieres caché entre páginas a costa de una petición CSS, vuelve a 'auto'.
     inlineStylesheets: 'always',
   },
-  integrations: [sitemap()],
+  integrations: [
+    sitemap(),
+    gtm({ id: 'GTM-KXH425KQ' }) // <-- NUEVO: Integración de GTM
+  ],
   adapter: cloudflare({
     // FASE 3: procesar imágenes en build-time (elimina warning de IMAGES en runtime)
     imageService: 'compile',
