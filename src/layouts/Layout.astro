@@ -1,9 +1,15 @@
 ---
-const { 
-  title = 'Recetario Chileno', 
+// PERF: el CSS global vive en src/styles/global.css y se importa aquí, para que
+// Astro lo procese, lo versione (hash) y lo inlinee según build.inlineStylesheets.
+// Antes era /estilos.css en public/ (archivo externo render-blocking).
+import '../styles/global.css';
+
+const {
+  title = 'Recetario Chileno',
   description = 'Las mejores recetas tradicionales chilenas explicadas paso a paso.',
   // Centralización: canonical explícito con Astro.site, sin query params.
-  canonicalURL = new URL(Astro.url.pathname, Astro.site ?? 'https://recetariochileno.netlify.app'),
+  // ⚠️ CAMBIO: se elimina el fallback a netlify.app (astro.config.mjs ya garantiza Astro.site).
+  canonicalURL,
   activePage = '',
   noindex = false,
   // FASE 2 (Mejora 2): metadatos Open Graph / Twitter centralizados.
@@ -15,11 +21,21 @@ const {
   ogType = 'website'
 } = Astro.props;
 
+// ⚠️ CAMBIO: fail-fast. El astro.config ya aborta si falta PUBLIC_SITE_URL,
+// pero por defensa aquí también validamos para no generar URLs relativas rotas.
+const siteUrl = Astro.site;
+if (!siteUrl) {
+  throw new Error(
+    '[Layout] Astro.site no está configurado. Verifica PUBLIC_SITE_URL en astro.config.mjs.'
+  );
+}
+
 const siteTitle = title === 'Recetario Chileno' ? title : `${title} | Recetario Chileno`;
-const canonical = canonicalURL.toString();
+const canonicalResolved = canonicalURL ?? new URL(Astro.url.pathname, siteUrl);
+const canonical = canonicalResolved.toString();
 const ogImage = /^https?:\/\//.test(image)
   ? image
-  : new URL(image, Astro.site ?? 'https://recetariochileno.netlify.app').toString();
+  : new URL(image, siteUrl).toString();
 ---
 
 <!DOCTYPE html>
@@ -40,6 +56,10 @@ const ogImage = /^https?:\/\//.test(image)
   </script>
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- ⚠️ CAMBIO (perf): preconnect a Google Fonts para reducir latencia de la petición bloqueante. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <title>{siteTitle}</title>
   <meta name="description" content={description}>
@@ -94,7 +114,8 @@ const ogImage = /^https?:\/\//.test(image)
     window.__SITE_URL = SITE_ORIGIN;
   </script>
 
-  <link rel="stylesheet" href="/estilos.css">
+  <!-- PERF: el CSS global ahora se importa en el frontmatter (src/styles/global.css);
+       Astro inyecta su <style>/<link> automáticamente. Ya no se enlaza /estilos.css. -->
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <slot name="head" />
@@ -103,23 +124,28 @@ const ogImage = /^https?:\/\//.test(image)
   <slot name="jsonld" />
 </head>
 <body>
-  <div class="bandera"><i class="azul"></i><i class="blanco"></i><i class="rojo"></i></div>
+  <!-- ⚠️ CAMBIO (a11y): bandera decorativa → aria-hidden para no ensuciar el árbol accesible. -->
+  <div class="bandera" aria-hidden="true"><i class="azul"></i><i class="blanco"></i><i class="rojo"></i></div>
 
   <header class="site-nav">
     <div class="site-nav-inner">
       <a href="/" class="site-nav-logo" aria-label="Recetario Chileno — Inicio">
-        <div class="marca-logo"><span class="estrella"></span></div>
+        <!-- ⚠️ CAMBIO (a11y): logo decorativo → aria-hidden. -->
+        <div class="marca-logo" aria-hidden="true"><span class="estrella"></span></div>
         <span class="marca-texto">Recetario Chileno</span>
       </a>
-      <button class="site-nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <button class="site-nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
         <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
       <nav class="site-nav-links" aria-label="Navegación principal">
 
         <form class="nav-search" action="/recetario/" method="get" role="search">
           <svg class="nav-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <!-- ⚠️ CAMBIO (a11y): se mantiene role="combobox" pero se añade role="listbox"
+               al <ul> de sugerencias para que la relación aria-controls sea válida.
+               Antes el <ul> era un listbox huérfano (causa del aviso "ARIA prohibited"). -->
           <input type="search" id="nav-buscador" name="buscar" placeholder="Buscar receta…" aria-label="Buscar recetas" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="nav-buscador-sugerencias">
-          <ul id="nav-buscador-sugerencias" class="ac-dropdown ac-dropdown-nav" hidden></ul>
+          <ul id="nav-buscador-sugerencias" class="ac-dropdown ac-dropdown-nav" role="listbox" aria-label="Sugerencias de búsqueda" hidden></ul>
         </form>
 
         <a href="/" class={activePage === 'inicio' ? 'activo' : ''}>Inicio</a>
@@ -140,18 +166,26 @@ const ogImage = /^https?:\/\//.test(image)
 
         <a href="/mis-recetas/" class={activePage === 'mis-recetas' ? 'activo' : ''}>Mis recetas</a>
 
-        <button id="theme-toggle" style="background:none; border:none; cursor:pointer; padding:0.5rem; color:var(--tinta); font-size:1.2rem; display:flex; align-items:center; margin-left: 0.5rem;" aria-label="Cambiar tema">
+        <!-- ⚠️ CAMBIO (a11y/HTML): type="button" para evitar submit accidental si algún día
+             este botón queda dentro de un <form>. No cambia comportamiento actual. -->
+        <button id="theme-toggle" type="button" style="background:none; border:none; cursor:pointer; padding:0.5rem; color:var(--tinta); font-size:1.2rem; display:flex; align-items:center; margin-left: 0.5rem;" aria-label="Cambiar tema">
           🌙
         </button>
       </nav>
     </div>
   </header>
 
-  <slot />
+  <!-- ⚠️ CAMBIO (a11y CRÍTICO): landmark principal <main> que PageSpeed reportaba como ausente.
+       Envuelve el slot para que cada página tenga un único <main> implícito. -->
+  <main id="contenido-principal">
+    <slot />
+  </main>
 
   <footer>
-    <div class="bandera"><i class="azul"></i><i class="blanco"></i><i class="rojo"></i></div>
-    <span class="footer-flag" aria-label="Bandera de Chile"></span>
+    <div class="bandera" aria-hidden="true"><i class="azul"></i><i class="blanco"></i><i class="rojo"></i></div>
+    <!-- ⚠️ CAMBIO (a11y): <span aria-label="..."> sin role es "ARIA prohibida" (genérico).
+         Se le asigna role="img" para preservar el significado y cumplir WAI-ARIA 1.2. -->
+    <span class="footer-flag" role="img" aria-label="Bandera de Chile"></span>
     Recetario Chileno · Hecho con cariño en Chile
     <nav class="footer-legal" aria-label="Enlaces legales">
       <a href="/sobre-mi/">Sobre nosotros</a><span class="sep">·</span>

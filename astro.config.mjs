@@ -21,6 +21,13 @@ export default defineConfig({
   trailingSlash: 'always',
   build: {
     format: 'directory',
+    // ⚠️ CAMBIO (perf): el CSS global ahora vive en src/styles/global.css (importado
+    // desde Layout.astro). Con 'auto' Astro solo inlinea hojas < 4 KB
+    // (vite.build.assetsInlineLimit); global.css pesa ~116 KB, así que 'auto' lo
+    // dejaría como archivo externo bloqueante. Con 'always' se inyecta en el <head>
+    // de cada página y desaparece la petición render-blocking.
+    // Si prefieres caché entre páginas a costa de una petición CSS, vuelve a 'auto'.
+    inlineStylesheets: 'always',
   },
   adapter: cloudflare({
     // FASE 3: procesar imágenes en build-time (elimina warning de IMAGES en runtime)
