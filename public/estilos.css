@@ -15,7 +15,7 @@ body{background:var(--crema);color:var(--tinta);font-family:var(--fuente-texto);
 .meta-icon{width:14px;height:14px;flex-shrink:0;display:inline-block;vertical-align:-2px}
 
 /* ===== HERO PORTADA ===== */
-.hero{position:relative;padding:5rem 1.2rem 4rem;text-align:center;background:radial-gradient(circle at 50% 0%,rgba(200,150,62,.10),transparent 65%),linear-gradient(180deg,#fefaf3 0%,var(--crema) 100%);overflow:hidden;border-bottom:1px solid var(--borde)}
+.hero{position:relative;z-index:5;padding:5rem 1.2rem 4rem;text-align:center;background:radial-gradient(circle at 50% 0%,rgba(200,150,62,.10),transparent 65%),linear-gradient(180deg,#fefaf3 0%,var(--crema) 100%);border-bottom:1px solid var(--borde)}
 .hero-inner{position:relative;z-index:2;max-width:var(--max-width);margin:0 auto}
 .hero-copy{text-align:center}
 .hero-copy h1{font-family:var(--fuente-titulos);font-size:clamp(2.6rem,7vw,4.2rem);color:var(--rojo-osc);letter-spacing:-1.5px;line-height:1.02;font-weight:900;margin:0;text-shadow:0 1px 0 rgba(255,255,255,.5)}
@@ -1694,3 +1694,8 @@ body.mc-bloqueado{overflow:hidden}
     align-self:center;
   }
 }
+
+/* ===== Autocompletado del buscador del hero ===== */
+.hero-search .hero-ac{text-align:left;top:calc(100% + 8px);border-radius:16px;padding:.35rem}
+.hero-search .hero-ac li{padding:.75rem 1rem;min-height:44px;align-items:center}
+@media(max-width:640px){.hero-search .hero-ac{max-height:50vh}}
