@@ -8,13 +8,15 @@
  *  - Rangos ("15-20 minutos"): usar el límite inferior y poner el rango en la etiqueta.
  *  - Segundos: 30 segundos = 0,5 min.
  *  - Días o más de 12 horas: no crear timer.
+ *  - Números en palabra (un/una/uno/medio/media) solo aplican a horas.
+ *    Evita falsos positivos como "un sándwich" (1 s) o "un minuto".
  */
 
 const NUM = '(?:\\d+\\s+\\d+\\/\\d+|\\d+\\/\\d+|\\d+[.,]\\d+|\\d+)';
 const WORD_NUM = '(?:\\bun[ao]?\\b|\\bmedi[ao]?\\b)';
 const ANY_NUM = '(?:' + WORD_NUM + '|' + NUM + ')';
 const RANGE_SEP = '(?:[-–]|\\ba\\b|\\bal\\b)';
-const UNIT = '(?:hrs?|horas?|h|mins?|minutos?|min|segs?|segundos?|s|d[ií]as?)';
+const UNIT = '(?:hrs?|horas?|h|mins?|minutos?|min|segs?|segundos?|s(?![\\wáéíóúüñÁÉÍÓÚÜÑ])|d[ií]as?)';
 
 const RE = new RegExp(
   '(' + ANY_NUM + ')' +
@@ -47,6 +49,10 @@ function categoriaUnidad(u) {
   return null;
 }
 
+function esWordNum(s) {
+  return /^(?:un|una|uno|medio|media)$/i.test(String(s).trim());
+}
+
 function formatNum(n) {
   if (Number.isInteger(n)) return String(n);
   return String(n).replace('.', ',');
@@ -66,6 +72,10 @@ export function detectarTiempos(texto) {
 
     const cat = categoriaUnidad(m[3]);
     if (!cat || cat === 'd') continue;
+
+    // Word-num (un/una/uno/medio/media) solo para horas.
+    // Evita "un sándwich" -> 1 s, "un minuto" -> 1 min, "una sartén" -> 1 s.
+    if (esWordNum(m[1]) && cat !== 'h') continue;
 
     const bajo = parseNum(m[1]);
     if (isNaN(bajo)) continue;

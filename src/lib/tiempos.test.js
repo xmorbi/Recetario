@@ -87,4 +87,28 @@ describe('detectarTiempos', () => {
     const r = detectarTiempos('Girar cada 2-3 minutos.');
     expect(r).toEqual([]);
   });
+
+  // --- Falsos positivos corregidos ---
+
+  it('no confunde "un sándwich" con 1 segundo', () => {
+    expect(detectarTiempos('Sirve con puré, arroz o en un sándwich.')).toEqual([]);
+  });
+
+  it('no confunde "5 sándwiches" con 5 segundos', () => {
+    expect(detectarTiempos('Sirve con 5 sándwiches.')).toEqual([]);
+  });
+
+  it('no confunde "una sartén" con 1 segundo', () => {
+    expect(detectarTiempos('Calienta aceite en una sartén.')).toEqual([]);
+  });
+
+  it('no detecta "un minuto" (word-num solo aplica a horas)', () => {
+    expect(detectarTiempos('Agrega el orégano y cocina un minuto más.')).toEqual([]);
+  });
+
+  it('sigue detectando "30 s" con dígitos', () => {
+    const r = detectarTiempos('Espera 30 s.');
+    expect(r).toHaveLength(1);
+    expect(r[0].minutos).toBe(0.5);
+  });
 });
