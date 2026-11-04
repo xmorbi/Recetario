@@ -115,8 +115,10 @@ import Layout from '../layouts/Layout.astro';
     Nota: favoritos.js y app.js se mantienen en orden porque app.js necesita
     exponer window.crearTarjetaGlobal antes de que favoritos.js lo consuma.
   -->
-  <script is:inline src="/favoritos.js"></script>
   <script is:inline src="/app.js"></script>
+  <script>
+    import '../scripts/favoritos.js';
+  </script>
 
   <script is:inline>
     window.RECETAS = [];

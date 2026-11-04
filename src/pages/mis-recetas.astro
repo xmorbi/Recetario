@@ -17,7 +17,9 @@ import Layout from '../layouts/Layout.astro';
 
   <!-- FASE 1 (auditoría): lista-compras.js se carga SOLO desde Layout.astro (aquí estaba duplicado). -->
   <script is:inline src="/app.js"></script>
-  <script is:inline src="/favoritos.js"></script>
+  <script>
+    import '../scripts/favoritos.js';
+  </script>
 
   <!-- FETCH AL FINAL -->
   <script is:inline>

@@ -320,10 +320,12 @@ const ICON_LIBRO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" s
 
   <script type="application/json" id="receta-data" set:html={recetaJSON}></script>
 
-  <script is:inline src="/modo-cocina.js" defer></script>
-  <script is:inline src="/escalador.js" defer></script>
-  <script is:inline src="/favoritos.js" defer></script>
-  <script is:inline src="/estrellas.js" defer></script>
-  <script is:inline src="/print-marcados.js" defer></script>
+  <script>
+    import '../../scripts/modo-cocina.js';
+    import '../../scripts/escalador.js';
+    import '../../scripts/favoritos.js';
+    import '../../scripts/estrellas.js';
+    import '../../scripts/print-marcados.js';
+  </script>
 
 </Layout>
