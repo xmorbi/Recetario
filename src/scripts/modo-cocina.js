@@ -17,7 +17,8 @@
    FASE 4 (tiempos): usa detectarTiempos (varios timers por paso) y
                      permite override manual por receta vía receta.timers.
    FASE 5 (auto-timer): sin duplicados, botón no se traba, click cancela,
-                        yaCorriendo ignora estado, reiniciar limpia timers.
+                        yaCorriendo ignora estado, reiniciar limpia timers,
+                        y no relanza auto-timer en pasos ya visitados.
    ================================================================= */
 
 import { detectarTiempos } from '../lib/tiempos.js';
@@ -53,6 +54,7 @@ import { detectarTiempos } from '../lib/tiempos.js';
   var autoTimerActivo = true;     
   var countdownInterval = null;   
   var countdownBtn = null;
+  var autoTimerLanzados = new Set();
 
   // ---- Constantes ----
   var STORAGE_PROGRESO = 'mc_progreso_';
@@ -996,6 +998,7 @@ import { detectarTiempos } from '../lib/tiempos.js';
     cargarAjustes();
     timers = cargarTimersGuardados();
     microActivo = false; 
+    autoTimerLanzados.clear();
     
     initAudio();
     initTTS();
@@ -1172,10 +1175,11 @@ import { detectarTiempos } from '../lib/tiempos.js';
     if (!enMise) {
       const elPaso = pasosEls[pasoActual];
       const btnTimer = elPaso.querySelector('.mc-timer-iniciar');
-      if (btnTimer && autoTimerActivo) {
+      if (btnTimer && autoTimerActivo && !autoTimerLanzados.has(pasoActual)) {
         const mins = parseFloat(btnTimer.getAttribute('data-minutos'));
         const yaCorriendo = timers.some(t => t.paso === pasoActual);
         if (!isNaN(mins) && !yaCorriendo) {
+          autoTimerLanzados.add(pasoActual);
           iniciarCuentaRegresiva(btnTimer, mins, pasoActual);
         }
       }
@@ -1276,6 +1280,7 @@ import { detectarTiempos } from '../lib/tiempos.js';
     pasosHechos = new Array((recetaActual && recetaActual.pasos || []).length).fill(false);
     pasoActual = 0; limpiarEstado(); guardarEstado();
     timers = []; guardarTimers(); renderTimers();
+    autoTimerLanzados.clear();
     if (overlayEl) overlayEl.classList.remove('completado');
     actualizarPaso(true); actualizarProgreso();
     anunciar('Progreso reiniciado'); reiniciarMise();
