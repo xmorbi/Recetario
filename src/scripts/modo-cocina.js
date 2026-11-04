@@ -16,6 +16,8 @@
                       cantidades en los pasos.
    FASE 4 (tiempos): usa detectarTiempos (varios timers por paso) y
                      permite override manual por receta vía receta.timers.
+   FASE 5 (auto-timer): sin duplicados, botón no se traba, click cancela,
+                        yaCorriendo ignora estado, reiniciar limpia timers.
    ================================================================= */
 
 import { detectarTiempos } from '../lib/tiempos.js';
@@ -50,6 +52,7 @@ import { detectarTiempos } from '../lib/tiempos.js';
   var recognition = null;
   var autoTimerActivo = true;     
   var countdownInterval = null;   
+  var countdownBtn = null;
 
   // ---- Constantes ----
   var STORAGE_PROGRESO = 'mc_progreso_';
@@ -97,26 +100,32 @@ import { detectarTiempos } from '../lib/tiempos.js';
       clearInterval(countdownInterval);
       countdownInterval = null;
     }
+    if (countdownBtn) {
+      countdownBtn.innerHTML = countdownBtn.dataset.label;
+      countdownBtn.disabled = false;
+      countdownBtn.classList.remove('mc-timer-countdown');
+      countdownBtn = null;
+    }
   }
 
   function iniciarCuentaRegresiva(btnTimer, minutos, pasoIdx) {
     limpiarAutoTimer();
     let segundos = 4;
-    const textoOriginal = btnTimer.innerHTML;
+    
+    if (!btnTimer.dataset.label) {
+      btnTimer.dataset.label = btnTimer.innerHTML;
+    }
+    countdownBtn = btnTimer;
 
-    btnTimer.innerHTML = `<span aria-hidden="true">⏳</span> Iniciando en ${segundos}s...`;
-    btnTimer.disabled = true;
+    btnTimer.innerHTML = `<span aria-hidden="true">⏳</span> Iniciando en ${segundos}s… toca para cancelar`;
     btnTimer.classList.add('mc-timer-countdown');
 
     countdownInterval = setInterval(() => {
       segundos--;
       if (segundos > 0) {
-        btnTimer.innerHTML = `<span aria-hidden="true">⏳</span> Iniciando en ${segundos}s...`;
+        btnTimer.innerHTML = `<span aria-hidden="true">⏳</span> Iniciando en ${segundos}s… toca para cancelar`;
       } else {
         limpiarAutoTimer();
-        btnTimer.innerHTML = textoOriginal;
-        btnTimer.disabled = false;
-        btnTimer.classList.remove('mc-timer-countdown');
         iniciarTimer(pasoIdx, minutos);
       }
     }, 1000);
@@ -234,7 +243,7 @@ import { detectarTiempos } from '../lib/tiempos.js';
 
   function cargarAjustes() {
     try {
-      autoTimerActivo = localStorage.getItem(STORAGE_AUTOTIMER) !== 'false';
+      autoTimerActivo = localStorage.getItem(STORAGE_AUTOTIMER) === 'true';
       ttsActivo = localStorage.getItem(STORAGE_TTS) === 'true';
       autoAvanzar = localStorage.getItem(STORAGE_AUTOAVANZAR) !== 'false';
       sonidoActivo = localStorage.getItem(STORAGE_SONIDO) !== 'false';
@@ -912,6 +921,10 @@ import { detectarTiempos } from '../lib/tiempos.js';
       if (marcar) { var idx = parseInt(marcar.getAttribute('data-paso'), 10); if (!isNaN(idx)) marcarHecho(idx, !pasosHechos[idx]); return; }
       var iniciarBtn = e.target.closest('.mc-timer-iniciar');
       if (iniciarBtn) { 
+        if (countdownBtn === iniciarBtn) {
+          limpiarAutoTimer();
+          return;
+        }
         limpiarAutoTimer();
         var mins = parseFloat(iniciarBtn.getAttribute('data-minutos')); var pasoIdx = parseInt(iniciarBtn.getAttribute('data-paso'), 10); 
         if (!isNaN(mins) && !isNaN(pasoIdx)) iniciarTimer(pasoIdx, mins); 
@@ -957,9 +970,6 @@ import { detectarTiempos } from '../lib/tiempos.js';
   }
 
   // ---- FASE 4: timers manuales por receta ----
-  // Si la receta trae receta.timers, para cada paso usamos los timers manuales
-  // de ese paso (override). Si un paso no tiene entrada manual, se usa la
-  // detección automática (devolvemos null para ese paso).
   function timersDeReceta(receta, i) {
     if (!receta || !Array.isArray(receta.timers)) return null;
     var manual = receta.timers.filter(function (t) { return t.paso === i + 1; });
@@ -1164,7 +1174,7 @@ import { detectarTiempos } from '../lib/tiempos.js';
       const btnTimer = elPaso.querySelector('.mc-timer-iniciar');
       if (btnTimer && autoTimerActivo) {
         const mins = parseFloat(btnTimer.getAttribute('data-minutos'));
-        const yaCorriendo = timers.some(t => t.paso === pasoActual && t.estado === 'corriendo');
+        const yaCorriendo = timers.some(t => t.paso === pasoActual);
         if (!isNaN(mins) && !yaCorriendo) {
           iniciarCuentaRegresiva(btnTimer, mins, pasoActual);
         }
@@ -1265,6 +1275,7 @@ import { detectarTiempos } from '../lib/tiempos.js';
     if (!skipConfirm && tieneProgreso) { if (!confirm('¿Reiniciar el progreso de esta receta?')) return; }
     pasosHechos = new Array((recetaActual && recetaActual.pasos || []).length).fill(false);
     pasoActual = 0; limpiarEstado(); guardarEstado();
+    timers = []; guardarTimers(); renderTimers();
     if (overlayEl) overlayEl.classList.remove('completado');
     actualizarPaso(true); actualizarProgreso();
     anunciar('Progreso reiniciado'); reiniciarMise();
