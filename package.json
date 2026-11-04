@@ -10,7 +10,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "deploy": "astro build && wrangler deploy",
-    "astro": "astro"
+    "astro": "astro",
+    "test": "vitest run"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
@@ -19,6 +20,7 @@
   },
   "devDependencies": {
     "@astrojs/cloudflare": "^14.4.3",
+    "vitest": "^5.1.0",
     "wrangler": "^4.156.1"
   },
   "allowScripts": {
