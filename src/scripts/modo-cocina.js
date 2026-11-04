@@ -11,6 +11,9 @@
    FASE 7 (fix): "listo" por voz marca + avanza siempre (marcarYAvanzar)
                  autoAvanzar default = true (el toggle del panel lo desactiva)
    FASE 1 (auditoría): fix guardarTTS + no auto-timer en mise en place
+   FASE 3 (escalado): lee #receta-data en cada click (no al cargar),
+                      y muestra aviso si hay factorEscalado != 1 con
+                      cantidades en los pasos.
    ================================================================= */
 (function () {
   'use strict';
@@ -35,9 +38,8 @@
   var miseHechas = [];           
   var miseTerminada = false;     
   var enMise = false;            
-  var miseActual = -1;           // FASE 7: índice de la tarea actual en mise
+  var miseActual = -1;
   
-  // FASE 5 y 6
   var ttsActivo = false;         
   var microActivo = false;
   var recognition = null;
@@ -85,7 +87,6 @@
     });
   }
 
-  // ---- FASE 6: Auto-Timer y Recordatorio de comandos ----
   function limpiarAutoTimer() {
     if (countdownInterval) {
       clearInterval(countdownInterval);
@@ -129,7 +130,6 @@
     }
   }
 
-  // ---- FASE 5 y 7: TTS y Comandos de Voz ----
   function initTTS() {
     if (!('speechSynthesis' in window)) {
       var ttsBtn = overlayEl.querySelector('.mc-tts-toggle');
@@ -154,7 +154,6 @@
       if (!microActivo) return;
       var texto = e.results[e.results.length - 1][0].transcript.toLowerCase().trim();
       
-      // FASE 7: En mise en place, comandos específicos
       if (enMise) {
         if (texto.includes('empezar') || texto.includes('cocinar') || texto.includes('continuar') || texto.includes('vamos')) {
           salirMise();
@@ -170,13 +169,11 @@
         return;
       }
       
-      // Comandos normales de pasos (fuera de mise)
       if (texto.includes('siguiente') || texto.includes('avanzar')) {
         if (typeof pasoSiguiente === 'function') pasoSiguiente();
       } else if (texto.includes('atrás') || texto.includes('atras') || texto.includes('anterior')) {
         if (typeof pasoAnterior === 'function') pasoAnterior();
       } else if (texto.includes('listo') || texto.includes('hecho') || texto.includes('marcar')) {
-        // FASE 7 (fix): "listo" por voz marca + avanza SIEMPRE, sin depender de autoAvanzar
         if (typeof marcarYAvanzar === 'function') marcarYAvanzar();
       } else if (texto.includes('repetir') || texto.includes('leer')) {
         var stepText = overlayEl.querySelector('.mc-paso.activo .mc-paso-texto');
@@ -201,7 +198,6 @@
     };
   }
 
-  // FASE 7: forzar=true permite leer aunque TTS esté apagado
   function leerTexto(texto, forzar) {
     if (!('speechSynthesis' in window)) return;
     
@@ -235,7 +231,6 @@
     try {
       autoTimerActivo = localStorage.getItem(STORAGE_AUTOTIMER) !== 'false';
       ttsActivo = localStorage.getItem(STORAGE_TTS) === 'true';
-      // FASE 7 (fix): default true. El usuario lo desactiva explícitamente con el toggle.
       autoAvanzar = localStorage.getItem(STORAGE_AUTOAVANZAR) !== 'false';
       sonidoActivo = localStorage.getItem(STORAGE_SONIDO) !== 'false';
     } catch(e) {}
@@ -249,7 +244,6 @@
     try { localStorage.setItem(STORAGE_TTS, v ? 'true' : 'false'); } catch (e) {}
   }
 
-  // ---- Focus trap + inert externo ----
   function aplicarInert(activo) {
     if (activo) {
       inertedElements = [];
@@ -279,7 +273,6 @@
     else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
   }
 
-  // ---- Persistencia ----
   function guardarEstado() {
     if (!recetaSlug) return;
     try { localStorage.setItem(STORAGE_PROGRESO + recetaSlug, JSON.stringify({ pasoActual: pasoActual, pasosHechos: pasosHechos, version: 1 })); } catch (e) {}
@@ -301,7 +294,6 @@
   function limpiarEstado() { if (!recetaSlug) return; try { localStorage.removeItem(STORAGE_PROGRESO + recetaSlug); } catch (e) {} }
   function guardarAutoAvanzar(v) { try { localStorage.setItem(STORAGE_AUTOAVANZAR, v ? 'true' : 'false'); } catch (e) {} }
 
-  // ---- Audio ----
   function initAudio() { if (audioCtx) return; try { var Ctx = window.AudioContext || window.webkitAudioContext; if (Ctx) audioCtx = new Ctx(); } catch (e) { audioCtx = null; } }
   function playDing() {
     if (!audioCtx || !sonidoActivo) return;
@@ -328,7 +320,6 @@
   }
   function guardarSonido(v) { try { localStorage.setItem(STORAGE_SONIDO, v ? 'true' : 'false'); } catch (e) {} }
 
-  // ---- Tiempos y Timers ----
   function detectarTiempo(texto) {
     if (!texto) return null; var totalMin = 0; var tiene = false; var m;
     var reHoras = /(\d+)\s*(?:h|hrs?|horas?)\b/gi; while ((m = reHoras.exec(texto)) !== null) { totalMin += parseInt(m[1], 10) * 60; tiene = true; }
@@ -434,7 +425,6 @@
     }).join('');
   }
 
-  // ---- Wake lock ----
   async function solicitarWakeLock() { try { if ('wakeLock' in navigator && !WAKE_LOCK) { WAKE_LOCK = await navigator.wakeLock.request('screen'); WAKE_LOCK.addEventListener('release', function () { WAKE_LOCK = null; }); } } catch (e) {} }
   function liberarWakeLock() { if (WAKE_LOCK) { try { WAKE_LOCK.release(); } catch (e) {} WAKE_LOCK = null; } }
 
@@ -853,6 +843,7 @@
           '</button>' +
         '</div>' +
       '</header>' +
+      '<div class="mc-aviso-escala" hidden></div>' +
       '<div class="mc-voice-hint" hidden>🎤 Di: "Siguiente", "Atrás", "Listo", "Repetir" o "Empezar"</div>' +
       '<div class="mc-progreso" aria-hidden="true"><div class="mc-progreso-barra"><div class="mc-progreso-fill"></div></div><div class="mc-progreso-texto">0 de 0 pasos completados</div></div>' +
       '<div class="mc-timers" hidden></div>' +
@@ -949,6 +940,23 @@
     return overlayEl;
   }
 
+  // ---- FASE 3: helpers para el aviso de escalado ----
+  function formatearFactorTexto(f) {
+    if (f === 0.5) return '½';
+    if (f === 1.5) return '1½';
+    if (f === 2.5) return '2½';
+    if (f === 3.5) return '3½';
+    return String(f).replace('.', ',');
+  }
+
+  function pasosTienenCantidades(pasos) {
+    if (!Array.isArray(pasos)) return false;
+    var re = /(\d\s*(?:g|kg|ml|l)\b)|(\b(?:tazas?|cucharadas?|cucharaditas?)\b)/i;
+    return pasos.some(function (p) {
+      return typeof p === 'string' && re.test(p);
+    });
+  }
+
   // ---- Abrir ----
   function abrir(receta) {
     if (!receta) return;
@@ -973,6 +981,24 @@
     var ov = crearOverlay();
     ov.classList.remove('completado');
     ov.querySelector('.mc-titulo').textContent = receta.titulo || 'Receta';
+
+    // FASE 3: aviso de escalado. Se muestra solo si:
+    //  - existe receta.factorEscalado y es != 1 (viene de #receta-data)
+    //  - al menos un paso contiene cantidades (g, kg, ml, l, tazas, cucharadas, cucharaditas)
+    var avisoEscala = ov.querySelector('.mc-aviso-escala');
+    if (avisoEscala) {
+      var factorEsc = receta.factorEscalado;
+      var mostrarAviso = (factorEsc != null) && (factorEsc !== 1) && pasosTienenCantidades(pasos);
+      if (mostrarAviso) {
+        avisoEscala.textContent = 'Cantidades ×' + formatearFactorTexto(factorEsc) +
+          '. Las cantidades escritas dentro de los pasos no se ajustan; revísalas.';
+        avisoEscala.hidden = false;
+      } else {
+        avisoEscala.textContent = '';
+        avisoEscala.hidden = true;
+      }
+    }
+
     ov.querySelector('.mc-toggle-autoavanzar').checked = autoAvanzar;
     ov.querySelector('.mc-toggle-sonido').checked = sonidoActivo;
     ov.querySelector('.mc-toggle-autotimer').checked = autoTimerActivo;
@@ -1117,7 +1143,6 @@
 
     overlayEl.querySelector('.mc-contenido').scrollTop = 0;
 
-    // FASE 6: Auto-timer (no en mise)
     limpiarAutoTimer();
     if (!enMise) {
       const elPaso = pasosEls[pasoActual];
@@ -1184,8 +1209,6 @@
     }
   }
 
-  // FASE 7 (fix): "listo" por voz marca + avanza SIEMPRE, sin depender de autoAvanzar.
-  // El toggle "Avanzar al marcar hecho" queda solo para el clic manual.
   function marcarYAvanzar() {
     if (!recetaActual) return;
     var pasos = recetaActual.pasos || [];
@@ -1200,12 +1223,11 @@
     }
 
     if (pasoActual >= pasos.length - 1) {
-      // Último paso: ya completado arriba; por si acaso, no avanzar más
       return;
     }
 
     pasoActual++;
-    actualizarPaso();       // anuncia "Paso N de M" y lee en TTS si está activo
+    actualizarPaso();
     guardarEstado();
   }
 
@@ -1252,12 +1274,18 @@
     else { pasoActual++; actualizarPaso(); guardarEstado(); }
   }
 
-  // ---- Auto-init ----
+  // ---- Auto-init (FASE 3: el JSON se parsea dentro del click) ----
   document.addEventListener('DOMContentLoaded', function () {
-    var dataEl = document.getElementById('receta-data'); var btn = document.querySelector('.btn-modo-cocina');
-    if (!dataEl || !btn) return; var receta;
-    try { receta = JSON.parse(dataEl.textContent); } catch (e) { return; }
-    btn.addEventListener('click', function (e) { e.preventDefault(); abrir(receta); });
+    var btn = document.querySelector('.btn-modo-cocina');
+    if (!btn) return;
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      var dataEl = document.getElementById('receta-data');
+      if (!dataEl) return;
+      var receta;
+      try { receta = JSON.parse(dataEl.textContent); } catch (err) { return; }
+      abrir(receta);
+    });
   });
 
   document.addEventListener('visibilitychange', function () {

@@ -691,6 +691,11 @@ body.mc-bloqueado{overflow:hidden}
 .mc-btn-icon{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.20);color:#fdf8f0;width:44px;height:44px;border-radius:50%;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s;padding:0;font-family:inherit}
 .mc-btn-icon:hover{background:rgba(255,255,255,.20)}
 .mc-btn-icon:focus-visible{outline:2px solid #e8b54a;outline-offset:2px}
+
+/* FASE 3 (escalado): aviso cuando hay factorEscalado ≠ 1 y los pasos tienen cantidades */
+.mc-aviso-escala{margin:.7rem .5rem 0;padding:.8rem 1rem;background:rgba(232,181,74,.15);border:1px solid rgba(232,181,74,.4);border-left:3px solid #e8b54a;border-radius:0 10px 10px 0;color:#f5d67a;font-size:1rem;line-height:1.4;font-weight:500}
+.mc-aviso-escala[hidden]{display:none}
+
 .mc-progreso{padding:.7rem .5rem 0;flex-shrink:0}
 .mc-progreso-barra{height:6px;background:rgba(255,255,255,.10);border-radius:99px;overflow:hidden}
 .mc-progreso-fill{height:100%;width:0%;background:linear-gradient(90deg,#e8b54a,#f5d67a);border-radius:99px;transition:width .3s ease}

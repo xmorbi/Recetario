@@ -12,11 +12,12 @@ import { extraerPorciones, formatearPorciones, escalarIngrediente } from '../lib
      usen las cantidades ajustadas
    - Restaura las cantidades originales si el usuario vuelve a 1×
    - Las funciones puras viven en ../lib/escalado.js (Fase 2)
+   - FASE 3: guarda factorEscalado en #receta-data y dispara
+     'recetario:escalado' para que Modo Cocina lea el estado actual.
    ================================================================= */
 (function () {
   'use strict';
 
-  // Esperar a que el DOM esté listo (por si el script no lleva defer)
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {
@@ -24,7 +25,6 @@ import { extraerPorciones, formatearPorciones, escalarIngrediente } from '../lib
   }
 
   function init() {
-    // Guard: evitar duplicados si el script se carga dos veces
     if (document.querySelector('.escalador')) return;
 
     var dataEl = document.getElementById('receta-data');
@@ -44,23 +44,17 @@ import { extraerPorciones, formatearPorciones, escalarIngrediente } from '../lib
     var ul = document.querySelector('.receta-page .ingredientes');
     if (!ul) return;
 
-    // Guardar copia original para poder volver a 1×
     var dataOriginal = JSON.parse(JSON.stringify(receta));
 
-    // Detectar porciones base
     var porciones = extraerPorciones(receta.porciones || '');
     if (!porciones) return;
 
-    // Porciones base numéricas (ej: 6 personas)
     var baseNum = parseInt(porciones.min, 10) || 4;
 
-    // Guardar los spans de ingredientes para manipular su texto
     var labels = Array.prototype.slice.call(ul.querySelectorAll('label span'));
 
-    // Crear el panel (ahora recibe baseNum y la unidad)
     var panel = crearPanel(porciones, baseNum);
 
-    // Insertar antes del <h3>Ingredientes</h3> (o antes de la <ul> si no hay h3)
     var prev = ul.previousElementSibling;
     if (prev && prev.tagName === 'H3') {
       prev.parentNode.insertBefore(panel, prev);
@@ -68,10 +62,8 @@ import { extraerPorciones, formatearPorciones, escalarIngrediente } from '../lib
       ul.parentNode.insertBefore(panel, ul);
     }
 
-    // ---- Estado ----
     var factorActual = 1;
 
-    // ---- Aplicar factor ----
     function aplicarFactor(factor) {
       if (factor === factorActual) return;
       factorActual = factor;
@@ -89,9 +81,13 @@ import { extraerPorciones, formatearPorciones, escalarIngrediente } from '../lib
       // 3. Actualizar #receta-data (para modo cocina + añadir todos)
       var nuevaData = JSON.parse(JSON.stringify(dataOriginal));
       nuevaData.ingredientes = nuevos;
+      nuevaData.factorEscalado = factor;
       try {
         dataEl.textContent = JSON.stringify(nuevaData);
       } catch (e) {}
+
+      // 3b. FASE 3: avisar a otros componentes (Modo Cocina) del factor actual
+      document.dispatchEvent(new CustomEvent('recetario:escalado', { detail: { factor: factor } }));
 
       // 4. Actualizar el resumen de porciones
       var nuevoSpan = panel.querySelector('.escalador-nuevo');
@@ -99,7 +95,7 @@ import { extraerPorciones, formatearPorciones, escalarIngrediente } from '../lib
         nuevoSpan.textContent = formatearPorciones(porciones, factor);
       }
 
-      // 5. Actualizar el chip de porciones en el hero (si lo encontramos)
+      // 5. Actualizar el chip de porciones en el hero
       actualizarChipHeroPorciones(porciones, factor);
 
       // 6. Anunciar accesiblemente
@@ -109,7 +105,6 @@ import { extraerPorciones, formatearPorciones, escalarIngrediente } from '../lib
       }
     }
 
-    // ---- Wiring: botones de factor ----
     panel.addEventListener('click', function (e) {
       var btn = e.target.closest('button[data-factor]');
       if (!btn) return;
@@ -121,14 +116,12 @@ import { extraerPorciones, formatearPorciones, escalarIngrediente } from '../lib
       });
       btn.classList.add('activo');
 
-      // Actualizar el input con las porciones calculadas
       var custom = panel.querySelector('.escalador-custom');
       if (custom) custom.value = Math.round(baseNum * factor);
 
       aplicarFactor(factor);
     });
 
-    // ---- Wiring: input de porciones finales ----
     var customInput = panel.querySelector('.escalador-custom');
     if (customInput) {
       customInput.addEventListener('input', function () {
@@ -136,9 +129,8 @@ import { extraerPorciones, formatearPorciones, escalarIngrediente } from '../lib
         if (isNaN(val) || val <= 0) return;
 
         var f = val / baseNum;
-        if (f <= 0 || f > 100) return; // Límite de seguridad
+        if (f <= 0 || f > 100) return;
 
-        // Desmarcar botones si el factor no coincide exactamente con un preset
         panel.querySelectorAll('button[data-factor]').forEach(function (b) {
           b.classList.remove('activo');
         });
@@ -150,9 +142,6 @@ import { extraerPorciones, formatearPorciones, escalarIngrediente } from '../lib
     }
   }
 
-  /* ============================================================
-     CHIP DE PORCIONES EN EL HERO
-     ============================================================ */
   function actualizarChipHeroPorciones(porciones, factor) {
     var chips = document.querySelectorAll('.hero-receta .meta span');
     if (!chips.length) return;
@@ -161,10 +150,8 @@ import { extraerPorciones, formatearPorciones, escalarIngrediente } from '../lib
       var chip = chips[i];
       var svg = chip.querySelector('svg.meta-icon');
       if (!svg) continue;
-      // El path del icono de porciones empieza con "M5 2v6"
       if (svg.innerHTML.indexOf('M5 2v6') === -1) continue;
 
-      // Encontrado: actualizar los nodos de texto (sin tocar el SVG)
       var nuevoTexto = formatearPorciones(porciones, factor);
       var textoSet = false;
       for (var j = 0; j < chip.childNodes.length; j++) {
@@ -182,9 +169,6 @@ import { extraerPorciones, formatearPorciones, escalarIngrediente } from '../lib
     }
   }
 
-  /* ============================================================
-     CREACIÓN DEL PANEL
-     ============================================================ */
   function crearPanel(porciones, baseNum) {
     var panel = document.createElement('div');
     panel.className = 'escalador';
@@ -196,9 +180,7 @@ import { extraerPorciones, formatearPorciones, escalarIngrediente } from '../lib
       : porciones.min;
     var unidadLabel = porciones.unidad ? ' ' + porciones.unidad : '';
 
-    // Determinar el texto del label del input
     var unidadInput = porciones.unidad || 'porciones';
-    // Si la unidad es plural (ej: personas), la usamos tal cual. Si es singular, la pluralizamos.
     if (unidadInput === 'persona') unidadInput = 'personas';
     else if (unidadInput === 'porción') unidadInput = 'porciones';
     else if (unidadInput === 'unidad') unidadInput = 'unidades';
