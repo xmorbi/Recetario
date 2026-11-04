@@ -1,3 +1,5 @@
+import { extraerPorciones, formatearPorciones, escalarIngrediente } from '../lib/escalado.js';
+
 /* =================================================================
    ESCALADOR.JS — Ajusta las cantidades de una receta
    =================================================================
@@ -9,6 +11,7 @@
    - Actualiza #receta-data para que "Añadir todos" y "Modo cocina"
      usen las cantidades ajustadas
    - Restaura las cantidades originales si el usuario vuelve a 1×
+   - Las funciones puras viven en ../lib/escalado.js (Fase 2)
    ================================================================= */
 (function () {
   'use strict';
@@ -148,164 +151,6 @@
   }
 
   /* ============================================================
-     DETECCIÓN Y FORMATEO DE PORCIONES
-     ============================================================ */
-
-  function extraerPorciones(str) {
-    if (!str) return null;
-    str = String(str).trim();
-
-    // Caso especial: "X (Y porciones)" → usar Y (las porciones reales)
-    var paren = /\((\d+)\s*(porciones?|personas?)\)/i.exec(str);
-    if (paren) {
-      return {
-        min: parseInt(paren[1], 10),
-        max: null,
-        unidad: paren[2].toLowerCase(),
-        texto: str
-      };
-    }
-
-    // "X a Y unidad"
-    var rango = /(\d+)\s+(?:a|al|-)\s+(\d+)\s+(personas?|porciones?|unidades?|vasos?|tazas?)/i.exec(str);
-    if (rango) {
-      return {
-        min: parseInt(rango[1], 10),
-        max: parseInt(rango[2], 10),
-        unidad: rango[3].toLowerCase(),
-        texto: str
-      };
-    }
-
-    // "X unidad"
-    var simple = /(\d+)\s+(personas?|porciones?|unidades?|vasos?|tazas?|molde(?:s)?)/i.exec(str);
-    if (simple) {
-      return {
-        min: parseInt(simple[1], 10),
-        max: null,
-        unidad: simple[2].toLowerCase(),
-        texto: str
-      };
-    }
-
-    // Fallback: primer número de la cadena
-    var fallback = /(\d+)/.exec(str);
-    if (fallback) {
-      return {
-        min: parseInt(fallback[1], 10),
-        max: null,
-        unidad: '',
-        texto: str
-      };
-    }
-
-    return null;
-  }
-
-  function formatearPorciones(porciones, factor) {
-    var min = Math.round(porciones.min * factor * 10) / 10;
-    var max = porciones.max != null ? Math.round(porciones.max * factor * 10) / 10 : null;
-    var unidad = porciones.unidad;
-
-    // Plural básico para casos como "1 unidad" → "2 unidades"
-    var unidadFinal = unidad;
-    if (unidad && (min !== 1 || (max != null && max !== 1))) {
-      if (unidad === 'persona') unidadFinal = 'personas';
-      else if (unidad === 'porción') unidadFinal = 'porciones';
-      else if (unidad === 'unidad') unidadFinal = 'unidades';
-      else if (unidad === 'vaso') unidadFinal = 'vasos';
-      else if (unidad === 'taza') unidadFinal = 'tazas';
-      else if (unidad === 'molde') unidadFinal = 'moldes';
-    } else if (unidad && min === 1) {
-      if (unidad === 'personas') unidadFinal = 'persona';
-      else if (unidad === 'porciones') unidadFinal = 'porción';
-      else if (unidad === 'unidades') unidadFinal = 'unidad';
-      else if (unidad === 'vasos') unidadFinal = 'vaso';
-      else if (unidad === 'tazas') unidadFinal = 'taza';
-      else if (unidad === 'moldes') unidadFinal = 'molde';
-    }
-
-    if (max != null && max !== min) {
-      return min + ' a ' + max + (unidadFinal ? ' ' + unidadFinal : '');
-    }
-    return min + (unidadFinal ? ' ' + unidadFinal : '');
-  }
-
-  /* ============================================================
-     ESCALADO DE INGREDIENTES
-     ============================================================ */
-
-  function escalarIngrediente(texto, factor) {
-    // En 1× devolvemos el original intacto (conserva fracciones unicode)
-    if (factor === 1) return texto;
-
-    // 1. Normalizar fracciones unicode → texto "1/2"
-    var t = texto
-      .replace(/½/g, ' 1/2 ')
-      .replace(/¼/g, ' 1/4 ')
-      .replace(/¾/g, ' 3/4 ')
-      .replace(/⅓/g, ' 1/3 ')
-      .replace(/⅔/g, ' 2/3 ')
-      .replace(/\s+/g, ' ')
-      .trim();
-
-    // 2. Números mixtos: "1 1/2" (entero + fracción)
-    t = t.replace(/(\d+)\s+(\d+)\s*\/\s*(\d+)/g, function (m, ent, num, den) {
-      var val = (parseInt(ent, 10) + parseInt(num, 10) / parseInt(den, 10)) * factor;
-      return formatearNumero(val);
-    });
-
-    // 3. Fracciones simples "1/2"
-    t = t.replace(/(\d+)\s*\/\s*(\d+)/g, function (m, num, den) {
-      var val = (parseInt(num, 10) / parseInt(den, 10)) * factor;
-      return formatearNumero(val);
-    });
-
-    // 4. Decimales con coma o punto: "1,5" o "0.75"
-    t = t.replace(/(\d+)[.,](\d+)/g, function (m, ent, dec) {
-      var val = parseFloat(ent + '.' + dec) * factor;
-      return formatearNumero(val);
-    });
-
-    // 5. Enteros sueltos que quedaron
-    t = t.replace(/\b(\d+)\b/g, function (m) {
-      return formatearNumero(parseInt(m, 10) * factor);
-    });
-
-    return t;
-  }
-
-  function formatearNumero(n) {
-    if (!isFinite(n) || n < 0) return '0';
-    if (n === 0) return '0';
-
-    var ent = Math.floor(n);
-    var resto = n - ent;
-
-    // Devolver como fracción unicode cuando sea "bonito"
-    var fracciones = [
-      [1 / 4, '¼'],
-      [1 / 3, '⅓'],
-      [1 / 2, '½'],
-      [2 / 3, '⅔'],
-      [3 / 4, '¾']
-    ];
-    for (var i = 0; i < fracciones.length; i++) {
-      if (Math.abs(resto - fracciones[i][0]) < 0.04) {
-        return (ent > 0 ? String(ent) : '') + fracciones[i][1];
-      }
-    }
-
-    // Entero
-    if (Math.abs(n - Math.round(n)) < 0.05) {
-      return String(Math.round(n));
-    }
-
-    // Un decimal (con coma para español de Chile)
-    return String(Math.round(n * 10) / 10).replace('.', ',');
-  }
-
-  /* ============================================================
      CHIP DE PORCIONES EN EL HERO
      ============================================================ */
   function actualizarChipHeroPorciones(porciones, factor) {
@@ -350,10 +195,10 @@
       ? porciones.min + ' a ' + porciones.max
       : porciones.min;
     var unidadLabel = porciones.unidad ? ' ' + porciones.unidad : '';
-    
+
     // Determinar el texto del label del input
     var unidadInput = porciones.unidad || 'porciones';
-    // Si la unidad es plural (ej: personas), la usamos tal cual. Si es singular (ej: persona), la pluralizamos.
+    // Si la unidad es plural (ej: personas), la usamos tal cual. Si es singular, la pluralizamos.
     if (unidadInput === 'persona') unidadInput = 'personas';
     else if (unidadInput === 'porción') unidadInput = 'porciones';
     else if (unidadInput === 'unidad') unidadInput = 'unidades';
