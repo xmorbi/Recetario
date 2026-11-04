@@ -14,7 +14,12 @@
    FASE 3 (escalado): lee #receta-data en cada click (no al cargar),
                       y muestra aviso si hay factorEscalado != 1 con
                       cantidades en los pasos.
+   FASE 4 (tiempos): usa detectarTiempos (varios timers por paso) y
+                     permite override manual por receta vía receta.timers.
    ================================================================= */
+
+import { detectarTiempos } from '../lib/tiempos.js';
+
 (function () {
   'use strict';
   if (window.ModoCocina) return;
@@ -320,12 +325,6 @@
   }
   function guardarSonido(v) { try { localStorage.setItem(STORAGE_SONIDO, v ? 'true' : 'false'); } catch (e) {} }
 
-  function detectarTiempo(texto) {
-    if (!texto) return null; var totalMin = 0; var tiene = false; var m;
-    var reHoras = /(\d+)\s*(?:h|hrs?|horas?)\b/gi; while ((m = reHoras.exec(texto)) !== null) { totalMin += parseInt(m[1], 10) * 60; tiene = true; }
-    var reMin = /(\d+)\s*(?:min|mins|minutos?)\b/gi; while ((m = reMin.exec(texto)) !== null) { totalMin += parseInt(m[1], 10); tiene = true; }
-    if (!tiene || totalMin <= 0) return null; return { minutos: totalMin };
-  }
   function formatTiempo(ms) {
     var totalSec = Math.max(0, Math.floor(ms / 1000)); var h = Math.floor(totalSec / 3600); var mi = Math.floor((totalSec % 3600) / 60); var s = totalSec % 60;
     if (h > 0) return h + ':' + String(mi).padStart(2, '0') + ':' + String(s).padStart(2, '0');
@@ -914,7 +913,7 @@
       var iniciarBtn = e.target.closest('.mc-timer-iniciar');
       if (iniciarBtn) { 
         limpiarAutoTimer();
-        var mins = parseInt(iniciarBtn.getAttribute('data-minutos'), 10); var pasoIdx = parseInt(iniciarBtn.getAttribute('data-paso'), 10); 
+        var mins = parseFloat(iniciarBtn.getAttribute('data-minutos')); var pasoIdx = parseInt(iniciarBtn.getAttribute('data-paso'), 10); 
         if (!isNaN(mins) && !isNaN(pasoIdx)) iniciarTimer(pasoIdx, mins); 
         return; 
       }
@@ -954,6 +953,19 @@
     var re = /(\d\s*(?:g|kg|ml|l)\b)|(\b(?:tazas?|cucharadas?|cucharaditas?)\b)/i;
     return pasos.some(function (p) {
       return typeof p === 'string' && re.test(p);
+    });
+  }
+
+  // ---- FASE 4: timers manuales por receta ----
+  // Si la receta trae receta.timers, para cada paso usamos los timers manuales
+  // de ese paso (override). Si un paso no tiene entrada manual, se usa la
+  // detección automática (devolvemos null para ese paso).
+  function timersDeReceta(receta, i) {
+    if (!receta || !Array.isArray(receta.timers)) return null;
+    var manual = receta.timers.filter(function (t) { return t.paso === i + 1; });
+    if (manual.length === 0) return null;
+    return manual.map(function (t) {
+      return { minutos: t.minutos, etiqueta: t.etiqueta || (String(t.minutos).replace('.', ',') + ' min') };
     });
   }
 
@@ -1038,14 +1050,17 @@
     ov.querySelector('.mc-ing-list').innerHTML = ings.map(function (x) { return '<li>' + escaparHtml(x) + '</li>'; }).join('');
 
     var htmlPasos = pasos.map(function (p, i) {
-      var tiempo = detectarTiempo(p);
-      var botonTimer = tiempo ? '<button type="button" class="mc-timer-iniciar" data-paso="' + i + '" data-minutos="' + tiempo.minutos + '" aria-label="Iniciar temporizador de ' + tiempo.minutos + ' minutos"><span aria-hidden="true">⏱</span> Iniciar ' + tiempo.minutos + ' min</button>' : '';
+      var manuales = timersDeReceta(receta, i);
+      var tiempos = manuales !== null ? manuales : detectarTiempos(p);
+      var botonesTimers = tiempos.map(function (t) {
+        return '<button type="button" class="mc-timer-iniciar" data-paso="' + i + '" data-minutos="' + t.minutos + '" aria-label="Iniciar temporizador de ' + t.etiqueta + '"><span aria-hidden="true">⏱</span> Iniciar ' + t.etiqueta + '</button>';
+      }).join('');
       var btnLeer = '<button type="button" class="mc-leer-btn" aria-label="Escuchar este paso"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg> Escuchar</button>';
 
       return '<div class="mc-paso" data-paso="' + i + '">' +
         '<div class="mc-paso-header"><div class="mc-paso-num">Paso ' + (i + 1) + '</div><button type="button" class="mc-marcar" data-paso="' + i + '" aria-pressed="false" aria-label="Marcar paso ' + (i + 1) + ' como hecho"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></button></div>' +
         '<p class="mc-paso-texto">' + escaparHtml(p) + '</p>' +
-        '<div class="mc-paso-acciones">' + btnLeer + botonTimer + '</div>' +
+        '<div class="mc-paso-acciones">' + btnLeer + botonesTimers + '</div>' +
       '</div>';
     }).join('');
 
@@ -1148,7 +1163,7 @@
       const elPaso = pasosEls[pasoActual];
       const btnTimer = elPaso.querySelector('.mc-timer-iniciar');
       if (btnTimer && autoTimerActivo) {
-        const mins = parseInt(btnTimer.getAttribute('data-minutos'), 10);
+        const mins = parseFloat(btnTimer.getAttribute('data-minutos'));
         const yaCorriendo = timers.some(t => t.paso === pasoActual && t.estado === 'corriendo');
         if (!isNaN(mins) && !yaCorriendo) {
           iniciarCuentaRegresiva(btnTimer, mins, pasoActual);

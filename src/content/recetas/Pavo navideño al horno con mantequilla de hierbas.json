@@ -50,5 +50,8 @@
     "refrigerador": "Hasta 4 días en recipiente hermético, en su jugo.",
     "congelador": "Hasta 3 meses en porciones.",
     "recalentar": "Horno a 160 °C por 20 minutos, cubierto con aluminio y bañado con su jugo."
-  }
+  },
+  "timers": [
+    { "paso": 7, "minutos": 20, "etiqueta": "20 min" }
+  ]
 }

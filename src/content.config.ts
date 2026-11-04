@@ -31,6 +31,11 @@ const recetas = defineCollection({
       congelador: z.string().nullable().optional(),
       recalentar: z.string().nullable().optional(),
     }).default({}),
+    timers: z.array(z.object({
+      paso: z.number().int().min(1),
+      minutos: z.number().positive(),
+      etiqueta: z.string().optional(),
+    })).optional(),
   }),
 });
 
