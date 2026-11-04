@@ -19,6 +19,10 @@
    FASE 5 (auto-timer): sin duplicados, botón no se traba, click cancela,
                         yaCorriendo ignora estado, reiniciar limpia timers,
                         y no relanza auto-timer en pasos ya visitados.
+   FASE 6 (UX táctil y legibilidad): tamaños 48/56, A−/A+ con 3 niveles
+                     (localStorage mc_fs), timer dentro del paso activo,
+                     swipe horizontal con pointer events, prefers-reduced-motion,
+                     safe-area + 100dvh.
    ================================================================= */
 
 import { detectarTiempos } from '../lib/tiempos.js';
@@ -56,6 +60,10 @@ import { detectarTiempos } from '../lib/tiempos.js';
   var countdownBtn = null;
   var autoTimerLanzados = new Set();
 
+  // FASE 6: tamaño de letra del paso
+  var NIVELES_FS = [1, 1.25, 1.5];
+  var fsNivel = 0;
+
   // ---- Constantes ----
   var STORAGE_PROGRESO = 'mc_progreso_';
   var STORAGE_AUTOAVANZAR = 'mc_autoavanzar';
@@ -64,6 +72,7 @@ import { detectarTiempos } from '../lib/tiempos.js';
   var STORAGE_MISE = 'mc_mise_';          
   var STORAGE_TTS = 'mc_tts';             
   var STORAGE_AUTOTIMER = 'mc_autotimer'; 
+  var STORAGE_FS = 'mc_fs';
   var AUTO_ADVANCE_DELAY = 400;
   var TICK_MS = 250;                      
 
@@ -144,6 +153,39 @@ import { detectarTiempos } from '../lib/tiempos.js';
     if (hint) {
       hint.hidden = !microActivo;
     }
+  }
+
+  // FASE 6: tamaño de letra del paso
+  function cargarFs() {
+    try {
+      var v = parseFloat(localStorage.getItem(STORAGE_FS));
+      if (!isNaN(v)) {
+        var idx = NIVELES_FS.indexOf(v);
+        if (idx >= 0) fsNivel = idx;
+      }
+    } catch (e) {}
+  }
+
+  function guardarFs() {
+    try { localStorage.setItem(STORAGE_FS, String(NIVELES_FS[fsNivel])); } catch (e) {}
+  }
+
+  function aplicarFs() {
+    if (!overlayEl) return;
+    overlayEl.style.setProperty('--mc-fs', String(NIVELES_FS[fsNivel]));
+    var btnMenos = overlayEl.querySelector('.mc-fs-menos');
+    var btnMas = overlayEl.querySelector('.mc-fs-mas');
+    if (btnMenos) btnMenos.disabled = fsNivel === 0;
+    if (btnMas) btnMas.disabled = fsNivel === NIVELES_FS.length - 1;
+  }
+
+  function cambiarFs(delta) {
+    var nuevo = fsNivel + delta;
+    if (nuevo < 0 || nuevo >= NIVELES_FS.length) return;
+    fsNivel = nuevo;
+    guardarFs();
+    aplicarFs();
+    anunciar('Tamaño de letra: ' + Math.round(NIVELES_FS[fsNivel] * 100) + '%');
   }
 
   function initTTS() {
@@ -418,21 +460,37 @@ import { detectarTiempos } from '../lib/tiempos.js';
     });
   }
 
+  // FASE 6: helper de chip de temporizador (paso activo o franja)
+  function renderTimerChip(t, enPaso) {
+    var ahora = Date.now();
+    var restante = t.estado === 'corriendo' ? Math.max(0, t.finTimestamp - ahora) : (t.estado === 'pausado' ? t.restanteAlPausar : 0);
+    var clase = 'mc-timer-chip' + (t.estado === 'terminado' ? ' mc-timer-terminado' : (t.estado === 'pausado' ? ' mc-timer-pausado' : ''));
+    var botones = '';
+    if (t.estado === 'corriendo') botones += '<button type="button" class="mc-timer-btn" data-action="pausar" data-id="' + t.id + '" aria-label="Pausar temporizador">⏸</button>';
+    else if (t.estado === 'pausado') botones += '<button type="button" class="mc-timer-btn" data-action="reanudar" data-id="' + t.id + '" aria-label="Reanudar temporizador">▶</button>';
+    botones += '<button type="button" class="mc-timer-btn" data-action="agregar" data-id="' + t.id + '" aria-label="Añadir 1 minuto">+1</button>';
+    botones += '<button type="button" class="mc-timer-btn mc-timer-btn-cerrar" data-action="cancelar" data-id="' + t.id + '" aria-label="Cancelar temporizador">×</button>';
+    var icono = t.estado === 'terminado' ? '🔔' : '⏱';
+    var labelHtml = enPaso ? '' : '<span class="mc-timer-label">Paso ' + (t.paso + 1) + '</span>';
+    return '<div class="' + clase + '" data-id="' + t.id + '"><span class="mc-timer-icono" aria-hidden="true">' + icono + '</span>' + labelHtml + '<span class="mc-timer-tiempo">' + formatTiempo(restante) + '</span><div class="mc-timer-acciones">' + botones + '</div></div>';
+  }
+
   function renderTimers() {
-    if (!overlayEl) return; var cont = overlayEl.querySelector('.mc-timers'); if (!cont) return;
-    if (timers.length === 0) { cont.innerHTML = ''; cont.hidden = true; return; }
-    cont.hidden = false; var ahora = Date.now();
-    cont.innerHTML = timers.map(function (t) {
-      var restante = t.estado === 'corriendo' ? Math.max(0, t.finTimestamp - ahora) : (t.estado === 'pausado' ? t.restanteAlPausar : 0);
-      var clase = 'mc-timer-chip' + (t.estado === 'terminado' ? ' mc-timer-terminado' : (t.estado === 'pausado' ? ' mc-timer-pausado' : ''));
-      var botones = '';
-      if (t.estado === 'corriendo') botones += '<button type="button" class="mc-timer-btn" data-action="pausar" data-id="' + t.id + '" aria-label="Pausar temporizador">⏸</button>';
-      else if (t.estado === 'pausado') botones += '<button type="button" class="mc-timer-btn" data-action="reanudar" data-id="' + t.id + '" aria-label="Reanudar temporizador">▶</button>';
-      botones += '<button type="button" class="mc-timer-btn" data-action="agregar" data-id="' + t.id + '" aria-label="Añadir 1 minuto">+1</button>';
-      botones += '<button type="button" class="mc-timer-btn mc-timer-btn-cerrar" data-action="cancelar" data-id="' + t.id + '" aria-label="Cancelar temporizador">×</button>';
-      var icono = t.estado === 'terminado' ? '🔔' : '⏱';
-      return '<div class="' + clase + '" data-id="' + t.id + '"><span class="mc-timer-icono" aria-hidden="true">' + icono + '</span><span class="mc-timer-label">P' + (t.paso + 1) + '</span><span class="mc-timer-tiempo">' + formatTiempo(restante) + '</span><div class="mc-timer-acciones">' + botones + '</div></div>';
-    }).join('');
+    if (!overlayEl) return;
+    // Limpiar todos los contenedores de timer por paso (evita duplicados data-id)
+    overlayEl.querySelectorAll('.mc-paso-timer').forEach(function (c) { c.innerHTML = ''; c.hidden = true; });
+    var pasoCont = overlayEl.querySelector('.mc-paso.activo .mc-paso-timer');
+    var strip = overlayEl.querySelector('.mc-timers');
+    var delPaso = timers.filter(function (t) { return t.paso === pasoActual; });
+    var otros = timers.filter(function (t) { return t.paso !== pasoActual; });
+    if (pasoCont && delPaso.length > 0) {
+      pasoCont.innerHTML = delPaso.map(function (t) { return renderTimerChip(t, true); }).join('');
+      pasoCont.hidden = false;
+    }
+    if (!strip) return;
+    if (otros.length === 0) { strip.innerHTML = ''; strip.hidden = true; return; }
+    strip.hidden = false;
+    strip.innerHTML = otros.map(function (t) { return renderTimerChip(t, false); }).join('');
   }
 
   async function solicitarWakeLock() { try { if ('wakeLock' in navigator && !WAKE_LOCK) { WAKE_LOCK = await navigator.wakeLock.request('screen'); WAKE_LOCK.addEventListener('release', function () { WAKE_LOCK = null; }); } } catch (e) {} }
@@ -818,6 +876,8 @@ import { detectarTiempos } from '../lib/tiempos.js';
           '<button type="button" class="mc-btn-icon mc-mic-toggle" aria-pressed="false" aria-label="Activar manos libres (comandos de voz)" title="Manos libres (Comandos de Voz)" style="display:none;">' +
             '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>' +
           '</button>' +
+          '<button type="button" class="mc-fs-btn mc-fs-menos" aria-label="Reducir tamaño de letra" title="Reducir letra">A−</button>' +
+          '<button type="button" class="mc-fs-btn mc-fs-mas" aria-label="Aumentar tamaño de letra" title="Aumentar letra">A+</button>' +
           '<details class="mc-atajos">' +
             '<summary aria-label="Ayuda y atajos de teclado">?</summary>' +
             '<div class="mc-atajos-panel">' +
@@ -872,6 +932,10 @@ import { detectarTiempos } from '../lib/tiempos.js';
     overlayEl.querySelector('.mc-prev').addEventListener('click', pasoAnterior);
     overlayEl.querySelector('.mc-next').addEventListener('click', pasoSiguiente);
     overlayEl.querySelector('.mc-reiniciar').addEventListener('click', function () { reiniciarProgreso(false); });
+
+    // FASE 6: botones A− / A+
+    overlayEl.querySelector('.mc-fs-menos').addEventListener('click', function () { cambiarFs(-1); });
+    overlayEl.querySelector('.mc-fs-mas').addEventListener('click', function () { cambiarFs(1); });
 
     overlayEl.querySelector('.mc-mise-toggle').addEventListener('click', function () { if (enMise) salirMise(); else entrarMise(); });
     var miseEl = overlayEl.querySelector('.mc-mise');
@@ -945,6 +1009,28 @@ import { detectarTiempos } from '../lib/tiempos.js';
       if (action === 'pausar') pausarTimer(id); else if (action === 'reanudar') reanudarTimer(id); else if (action === 'agregar') agregarTiempo(id, 1); else if (action === 'cancelar') cancelarTimer(id);
     });
 
+    // FASE 6: Swipe horizontal en .mc-contenido
+    var contenidoEl = overlayEl.querySelector('.mc-contenido');
+    var swipeStart = null;
+    contenidoEl.addEventListener('pointerdown', function (e) {
+      if (enMise) return;
+      if (e.target.closest('button, .mc-timers, .mc-paso-timer, input, summary, a')) return;
+      swipeStart = { x: e.clientX, y: e.clientY, t: Date.now() };
+    });
+    contenidoEl.addEventListener('pointerup', function (e) {
+      if (!swipeStart || enMise) { swipeStart = null; return; }
+      var dx = e.clientX - swipeStart.x;
+      var dy = e.clientY - swipeStart.y;
+      var dt = Date.now() - swipeStart.t;
+      swipeStart = null;
+      if (dt > 600) return;
+      var adx = Math.abs(dx), ady = Math.abs(dy);
+      if (adx < 60) return;
+      if (adx < ady * 1.5) return;
+      if (dx < 0) pasoSiguiente(); else pasoAnterior();
+    });
+    contenidoEl.addEventListener('pointercancel', function () { swipeStart = null; });
+
     document.addEventListener('click', function (e) {
       if (!overlayEl || !overlayEl.classList.contains('abierto')) return;
       var atajos = overlayEl.querySelector('.mc-atajos');
@@ -1004,6 +1090,9 @@ import { detectarTiempos } from '../lib/tiempos.js';
     initTTS();
 
     var ov = crearOverlay();
+    // FASE 6: aplicar nivel de letra guardado
+    cargarFs();
+    aplicarFs();
     ov.classList.remove('completado');
     ov.querySelector('.mc-titulo').textContent = receta.titulo || 'Receta';
 
@@ -1074,6 +1163,7 @@ import { detectarTiempos } from '../lib/tiempos.js';
         '<div class="mc-paso-header"><div class="mc-paso-num">Paso ' + (i + 1) + '</div><button type="button" class="mc-marcar" data-paso="' + i + '" aria-pressed="false" aria-label="Marcar paso ' + (i + 1) + ' como hecho"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></button></div>' +
         '<p class="mc-paso-texto">' + escaparHtml(p) + '</p>' +
         '<div class="mc-paso-acciones">' + btnLeer + botonesTimers + '</div>' +
+        '<div class="mc-paso-timer" hidden></div>' +
       '</div>';
     }).join('');
 
@@ -1083,7 +1173,6 @@ import { detectarTiempos } from '../lib/tiempos.js';
 
     actualizarPaso(true);
     actualizarProgreso();
-    renderTimers();
 
     if (todosLosPasosHechos()) ov.classList.add('completado');
 
@@ -1184,6 +1273,9 @@ import { detectarTiempos } from '../lib/tiempos.js';
         }
       }
     }
+
+    // FASE 6: recolocar timers (los del paso activo dentro del paso, el resto en la franja)
+    renderTimers();
 
     if (!silencioso) {
       anunciar('Paso ' + (pasoActual + 1) + ' de ' + pasosEls.length);
