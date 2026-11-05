@@ -487,7 +487,7 @@ footer .bandera{max-width:140px;margin:0 auto 1.2rem;border-radius:4px;overflow:
 .resumen-aeo strong{color:var(--rojo-osc);font-weight:700;display:inline-block;margin-right:.3rem}
 
 /* ===== MODO COCINA (OVERLAY) ===== */
-.mc-overlay{position:fixed;inset:0;z-index:9999;height:100dvh;background:linear-gradient(135deg,#1a0f0a 0%,#2b1810 100%);color:#fdf8f0;display:flex;flex-direction:column;padding:max(1rem,env(safe-area-inset-top)) max(1rem,env(safe-area-inset-right)) max(1rem,env(safe-area-inset-bottom)) max(1rem,env(safe-area-inset-left));overflow:hidden;opacity:0;pointer-events:none;visibility:hidden;transition:opacity .3s ease,visibility 0s linear .3s}
+.mc-overlay{position:fixed;inset:0;z-index:9999;height:100%;background:linear-gradient(135deg,#1a0f0a 0%,#2b1810 100%);color:#fdf8f0;display:flex;flex-direction:column;padding:max(1rem,env(safe-area-inset-top)) max(1rem,env(safe-area-inset-right)) max(1rem,env(safe-area-inset-bottom)) max(1rem,env(safe-area-inset-left));overflow:hidden;opacity:0;pointer-events:none;visibility:hidden;transition:opacity .3s ease,visibility 0s linear .3s}
 .mc-overlay.abierto{opacity:1;pointer-events:auto;visibility:visible;transition:opacity .3s ease,visibility 0s}
 body.mc-bloqueado{overflow:hidden}
 .mc-header{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;padding:.5rem .5rem 1rem;border-bottom:1px solid rgba(255,255,255,.15);flex-shrink:0}
@@ -527,7 +527,7 @@ body.mc-bloqueado{overflow:hidden}
 .mc-next.mc-terminar:hover{background:#3d6449}
 .mc-contador{font-size:1.05rem;font-weight:700;color:#e8b54a;min-width:60px;text-align:center;font-variant-numeric:tabular-nums}
 @media(max-width:640px){.mc-overlay{padding:max(.5rem,env(safe-area-inset-top)) max(.5rem,env(safe-area-inset-right)) max(.5rem,env(safe-area-inset-bottom)) max(.5rem,env(safe-area-inset-left))}.mc-titulo{font-size:1.1rem}.mc-nav{grid-template-columns:auto 1fr auto;padding:.8rem .3rem .3rem}.mc-nav button{padding:.9rem 1rem;font-size:.9rem}.mc-prev span,.mc-next span{display:none}.mc-paso{padding:1rem .5rem}}
-@media(max-width:640px){.mc-header{flex-wrap:wrap;gap:.5rem}.mc-header-acciones{flex-basis:100%;flex-wrap:wrap;justify-content:flex-end;gap:.25rem}}
+@media(max-width:640px){.mc-header{flex-wrap:wrap;gap:.5rem}.mc-header-acciones{flex-basis:100%;flex-wrap:wrap;justify-content:center;gap:.4rem}}
 
 /* ===== ETIQUETAS VISUALES Y CRUCES ===== */
 .receta-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem;margin-bottom:1.5rem}
