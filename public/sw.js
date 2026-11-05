@@ -1,15 +1,19 @@
 /* =================================================================
-   SW.JS — Service Worker del Recetario Chileno (Fase 8 + 9)
+   SW.JS — Service Worker del Recetario Chileno (Fase 8 + 9 + Bloque 1)
    Sin dependencias.
-   - Navegación HTML: red primero (3 s) → caché → /offline/
+   - Navegación HTML: red primero (3 s SOLO si hay copia en caché)
+     → caché → /offline/
+   - Redirecciones (opaqueredirect) se devuelven tal cual al navegador.
    - /_astro/*, /img/*, /fonts/*: caché primero
    - /api/*.json: stale-while-revalidate
-   - Mensaje CACHE_RECIPE: guarda página + imagen en recetas-guardadas-v1
+   - Mensaje CACHE_RECIPE: guarda página + imagen + recursos enviados
+     por la página (performance.getEntriesByType('resource')).
+     Responde CACHE_RECIPE_DONE al cliente que lo pidió.
    - FASE 9: notificationclick enfoca la pestaña; TIMER_FIN (opcional)
    No se usa skipWaiting: la actualización espera al siguiente arranque.
    ================================================================= */
 
-const VERSION = 'v1';
+const VERSION = 'v2';
 const CACHE_CORE = `core-${VERSION}`;
 const CACHE_STATIC = `static-${VERSION}`;
 const CACHE_RECETAS = `recetas-guardadas-${VERSION}`;
@@ -58,21 +62,51 @@ self.addEventListener('fetch', (event) => {
 
 async function navegacionRedPrimero(request) {
   const cache = await caches.open(CACHE_CORE);
-  try {
-    const red = fetch(request);
-    const timeout = new Promise((_, reject) => setTimeout(() => reject(new Error('timeout')), 3000));
-    const response = await Promise.race([red, timeout]);
-    if (response && response.ok) {
-      const copia = response.clone();
-      cache.put(request, copia);
-      return response;
-    }
-  } catch (e) { /* red falló o timeout */ }
-  const cached = await cache.match(request);
-  if (cached) return cached;
   const recetasCache = await caches.open(CACHE_RECETAS);
-  const recetaGuardada = await recetasCache.match(request);
-  if (recetaGuardada) return recetaGuardada;
+
+  // Buscar copia en caché (core primero, luego recetas guardadas).
+  const cachedCore = await cache.match(request);
+  const cachedReceta = cachedCore ? null : await recetasCache.match(request);
+  const cached = cachedCore || cachedReceta;
+
+  const red = fetch(request);
+
+  let response = null;
+
+  if (cached) {
+    // Con copia en caché: máximo 3 s esperando la red.
+    try {
+      const timeout = new Promise((_, reject) =>
+        setTimeout(() => reject(new Error('timeout')), 3000)
+      );
+      response = await Promise.race([red, timeout]);
+    } catch (e) {
+      // Timeout: devolver caché ya; refrescar copia cuando llegue la red.
+      red.then((r) => { if (r && r.ok) cache.put(request, r.clone()); }).catch(() => {});
+      return cached;
+    }
+  } else {
+    // Sin copia en caché: esperar la red sin límite artificial.
+    try {
+      response = await red;
+    } catch (e) {
+      response = null;
+    }
+  }
+
+  // Redirección (las navegaciones usan redirect:'manual'):
+  // devolverla tal cual para que el navegador la resuelva.
+  if (response && response.type === 'opaqueredirect') {
+    return response;
+  }
+
+  if (response && response.ok) {
+    cache.put(request, response.clone());
+    return response;
+  }
+
+  if (cached) return cached;
+
   const offline = await cache.match('/offline/');
   return offline || new Response('Sin conexión', { status: 503 });
 }
@@ -102,18 +136,43 @@ self.addEventListener('message', (event) => {
   if (!data) return;
 
   if (data.type === 'CACHE_RECIPE') {
-    const { url, imageUrl } = data;
+    const { url, imageUrl, resources } = data;
     if (!url) return;
+    const source = event.source;
+
     event.waitUntil((async () => {
       const cache = await caches.open(CACHE_RECETAS);
-      try {
-        const pageRes = await fetch(url);
-        if (pageRes.ok) await cache.put(url, pageRes);
-        if (imageUrl) {
-          const imgRes = await fetch(imageUrl);
-          if (imgRes.ok) await cache.put(imageUrl, imgRes);
+
+      // Construir el conjunto de URLs a cachear.
+      const urls = new Set();
+      urls.add(url);
+      if (imageUrl) urls.add(imageUrl);
+      if (Array.isArray(resources)) {
+        for (const r of resources) {
+          if (typeof r === 'string' && r) urls.add(r);
         }
-      } catch (e) { /* sin red ahora */ }
+      }
+
+      let ok = 0;
+      let fail = 0;
+      for (const u of urls) {
+        try {
+          const res = await fetch(u, { credentials: 'same-origin' });
+          if (res.ok) {
+            await cache.put(u, res);
+            ok++;
+          } else {
+            fail++;
+          }
+        } catch (e) {
+          fail++;
+        }
+      }
+
+      // Confirmar al cliente que pidió el guardado.
+      if (source && typeof source.postMessage === 'function') {
+        source.postMessage({ type: 'CACHE_RECIPE_DONE', url, ok, fail });
+      }
     })());
   }
 

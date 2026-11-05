@@ -336,33 +336,97 @@ const ICON_LIBRO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" s
     import '../../scripts/print-marcados.js';
   </script>
 
-  <!-- FASE 8: botón manual "Guardar para cocinar sin conexión".
-       Envía CACHE_RECIPE al service worker activo con la página y la imagen. -->
+  <!-- BLOQUE 1: botón manual "Guardar para cocinar sin conexión".
+       Envía CACHE_RECIPE al SW con la URL de la página, la imagen y
+       TODOS los recursos ya cargados en esta página
+       (performance.getEntriesByType('resource')).
+       El SW responde CACHE_RECIPE_DONE con el conteo real de ok/fail;
+       el botón solo muestra "✅ Guardada" cuando el SW lo confirma. -->
   <script is:inline>
-    document.querySelectorAll('.btn-offline').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        if (!('serviceWorker' in navigator)) {
-          btn.textContent = 'Tu navegador no soporta modo offline';
-          btn.disabled = true;
-          return;
-        }
-        navigator.serviceWorker.ready.then(function (reg) {
-          if (!reg.active) return;
-          var url = btn.dataset.url;
-          var imgRel = btn.dataset.image || '';
-          var imageUrl = imgRel ? new URL(imgRel, window.location.origin).href : null;
-          reg.active.postMessage({
-            type: 'CACHE_RECIPE',
-            url: url,
-            imageUrl: imageUrl
+    (function () {
+      if (!('serviceWorker' in navigator)) {
+        document.querySelectorAll('.btn-offline').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            btn.textContent = 'Tu navegador no soporta modo offline';
+            btn.disabled = true;
           });
+        });
+        return;
+      }
+
+      var pending = null;
+
+      navigator.serviceWorker.addEventListener('message', function (event) {
+        var data = event.data;
+        if (!data || data.type !== 'CACHE_RECIPE_DONE') return;
+        if (!pending || pending.url !== data.url) return;
+        var btn = pending.btn;
+        pending = null;
+        if (!btn) return;
+        if (data.fail === 0 && data.ok > 0) {
           btn.textContent = '✅ Guardada para sin conexión';
-          btn.disabled = true;
-        }).catch(function () {
+        } else if (data.ok > 0) {
+          btn.textContent = '⚠️ Guardada parcialmente (' + data.ok + '/' + (data.ok + data.fail) + ')';
+          btn.disabled = false;
+        } else {
           btn.textContent = 'No se pudo guardar; reintenta';
+          btn.disabled = false;
+        }
+      });
+
+      document.querySelectorAll('.btn-offline').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var textoOriginal = btn.textContent;
+          btn.textContent = 'Guardando…';
+          btn.disabled = true;
+
+          navigator.serviceWorker.ready.then(function (reg) {
+            if (!reg.active) {
+              btn.textContent = 'No se pudo guardar; reintenta';
+              btn.disabled = false;
+              return;
+            }
+
+            var url = btn.dataset.url;
+            var imgRel = btn.dataset.image || '';
+            var imageUrl = imgRel ? new URL(imgRel, window.location.origin).href : null;
+
+            // Todos los recursos ya cargados por esta página, del mismo origen.
+            var resources = performance.getEntriesByType('resource')
+              .map(function (e) { return e.name; })
+              .filter(function (n) {
+                try {
+                  var u = new URL(n);
+                  return u.origin === window.location.origin && n !== url;
+                } catch (e) {
+                  return false;
+                }
+              });
+
+            pending = { url: url, btn: btn };
+
+            reg.active.postMessage({
+              type: 'CACHE_RECIPE',
+              url: url,
+              imageUrl: imageUrl,
+              resources: resources
+            });
+
+            // Red de seguridad: si el SW no responde, no dejar el botón colgado.
+            setTimeout(function () {
+              if (pending && pending.url === url) {
+                pending = null;
+                btn.textContent = 'No se pudo confirmar; reintenta';
+                btn.disabled = false;
+              }
+            }, 20000);
+          }).catch(function () {
+            btn.textContent = 'No se pudo guardar; reintenta';
+            btn.disabled = false;
+          });
         });
       });
-    });
+    })();
   </script>
 
 </Layout>
