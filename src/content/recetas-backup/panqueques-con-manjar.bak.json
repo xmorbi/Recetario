@@ -1,0 +1,55 @@
+{
+  "titulo": "Panqueques con manjar",
+  "categoria": "dulces",
+  "tags": [
+    "panqueque",
+    "once",
+    "dulce",
+    "manjar",
+    "desayuno",
+    "simple"
+  ],
+  "imagen": null,
+  "tiempo": "20 min",
+  "porciones": "8 a 10 panqueques",
+  "dificultad": "muy fácil",
+  "tecnica": "Sartén",
+  "ingredientes": [
+    "2 huevos",
+    "1 taza de leche",
+    "1 taza de harina sin polvos de hornear",
+    "1 cucharada de azúcar",
+    "1 pizca de sal",
+    "1 cucharada de mantequilla derretida",
+    "Manjar (dulce de leche) para rellenar"
+  ],
+  "pasos": [
+    "Bate los huevos con la leche, el azúcar y la sal.",
+    "Incorpora la harina cernida y mezcla hasta obtener una masa lisa. Agrega la mantequilla derretida.",
+    "Deja reposar la mezcla 15 minutos: esto hace que los panqueques no se rompan.",
+    "Calienta una sartén antiadherente a fuego medio. Unta con un poquito de mantequilla.",
+    "Vierte un cucharón de mezcla y extiende girando la sartén. Cocina 1-2 minutos, hasta que los bordes se despeguen.",
+    "Da vuelta con una espátula y cocina 30 segundos más. Retira y repite con el resto.",
+    "Rellena con manjar, dobla en cuatro y sirve tibios. Si quieres, espolvorea azúcar flor."
+  ],
+  "dato": "El panqueque con manjar es el favorito de la once chilena, sobre todo en la infancia. Se puede hacer versión \"con dulce de leche\" (igual) o \"con manjar y plátano\". Hay familias que los hacen finos y otras gruesos: la textura depende de la cantidad de leche.",
+  "errores": [
+    {
+      "error": "Se rompen al darlos vuelta",
+      "solucion": "No dejar reposar la mezcla o batir demasiado. Deja reposar 15 minutos y no batas en exceso: solo hasta integrar."
+    },
+    {
+      "error": "Quedan gordos y crudos",
+      "solucion": "Echar demasiada mezcla o sartén muy caliente. Usa un cucharón pequeño y extiende bien. La sartén debe estar a fuego medio, no alto."
+    },
+    {
+      "error": "Se pegan a la sartén",
+      "solucion": "Sartén fría o sin grasa. Calienta bien la sartén antes de echar la primera mezcla y úntala con un poquito de mantequilla."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 2 días en recipiente hermético, separados con papel.",
+    "congelador": "Hasta 2 meses, ya cocidos y separados con papel.",
+    "recalentar": "Sartén a fuego medio 30 segundos por lado, o microondas 20 segundos."
+  }
+}

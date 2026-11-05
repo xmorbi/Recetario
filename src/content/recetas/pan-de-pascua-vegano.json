@@ -67,5 +67,222 @@
   "conservacion": {
     "refrigerador": "Guardar envuelto en papel aluminio o en un recipiente hermético a temperatura ambiente por hasta 1 semana",
     "congelador": "Se puede congelar en rebanadas hasta por 3 meses."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 280,
+      "unidad": "g",
+      "nombre": "harina de trigo",
+      "escalable": true
+    },
+    {
+      "cantidad": 170,
+      "unidad": "g",
+      "nombre": "melaza",
+      "escalable": true
+    },
+    {
+      "cantidad": 75,
+      "unidad": "g",
+      "nombre": "aceite vegetal",
+      "nota": "maíz o coco",
+      "escalable": true
+    },
+    {
+      "cantidad": 75,
+      "unidad": "g",
+      "nombre": "almendras",
+      "escalable": true
+    },
+    {
+      "cantidad": 75,
+      "unidad": "g",
+      "nombre": "nueces",
+      "escalable": true
+    },
+    {
+      "cantidad": 60,
+      "unidad": "g",
+      "nombre": "dátiles sin cuesco picados",
+      "escalable": true
+    },
+    {
+      "cantidad": 50,
+      "unidad": "ml",
+      "nombre": "agua",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cdta. de café instantáneo o café de cebada",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cda. de licor  - opcional",
+      "nota": "ron, pisco o aguardiente",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": null,
+      "nombre": "cdta. de canela en polvo",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "anís estrellado",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cda. de esencia de ron",
+      "escalable": true
+    },
+    {
+      "cantidad": null,
+      "unidad": null,
+      "nombre": "Ralladura de naranja",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "pizca",
+      "nombre": "clavo de olor",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "pizca",
+      "nombre": "nuez moscada",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cdta. de esencia de vainilla",
+      "escalable": true
+    },
+    {
+      "cantidad": 30,
+      "unidad": "g",
+      "nombre": "pasas sultanas",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "½ cda. de polvo de hornear",
+      "escalable": true
+    },
+    {
+      "cantidad": 90,
+      "unidad": "ml",
+      "nombre": "aquafaba",
+      "escalable": true
+    },
+    {
+      "cantidad": 30,
+      "unidad": "g",
+      "nombre": "almidón de papa o maíz",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.25,
+      "unidad": null,
+      "nombre": "cdta. de goma xantana",
+      "opcional": true,
+      "escalable": true
+    },
+    {
+      "cantidad": 3,
+      "unidad": "g",
+      "nombre": "proteína de soya aislada sin sabor",
+      "opcional": true,
+      "escalable": true
+    },
+    {
+      "cantidad": 0.25,
+      "unidad": null,
+      "nombre": "cdta. de bicarbonato de sodio",
+      "escalable": true
+    },
+    {
+      "cantidad": null,
+      "unidad": null,
+      "nombre": "Perlas de azúcar",
+      "opcional": true,
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Picar los dátiles y mezclarlos con las pasas y el resto de la fruta seca. Agregar una cucharadita de melaza, las especias (canela, anís, clavo, nuez moscada), las esencias, el café instantáneo, el licor (si se usa) y 80 ml de agua. Dejar reposar al menos 15 minutos (idealmente 1 hora).",
+      "timers": [
+        {
+          "minutos": 15,
+          "etiqueta": "15 min"
+        },
+        {
+          "minutos": 60,
+          "etiqueta": "60 min"
+        }
+      ]
+    },
+    {
+      "texto": "Preparar el reemplazo de huevo: mezclar el aquafaba, el almidón de papa o maíz, la goma xantana y la proteína de soya (si se usa) hasta integrar sin grumos. Batir hasta que esté espumoso."
+    },
+    {
+      "texto": "Agregar la melaza y el aceite a la mezcla de aquafaba y batir bien."
+    },
+    {
+      "texto": "En un bol aparte, mezclar la harina, el polvo de hornear, el bicarbonato y la sal. Espolvorear los frutos secos con un poco de harina para que no se hundan."
+    },
+    {
+      "texto": "Escurrir la fruta especiada (reservar el líquido) y agregar el líquido al batido de aquafaba."
+    },
+    {
+      "texto": "Incorporar la mezcla de harina de a poco al batido, usando batidora hasta que la masa lo permita, luego espátula."
+    },
+    {
+      "texto": "Agregar la fruta escurrida, las nueces y almendras enharinadas. Incorporar con espátula sin sobremezclar."
+    },
+    {
+      "texto": "Precalentar el horno a 175 °C. Verter la masa en un molde para pan de Pascua (18 cm) enmantequillado o con papel."
+    },
+    {
+      "texto": "Hornear por 1 hora a 1 hora 10 minutos, o hasta que al insertar un palillo salga limpio.",
+      "timers": [
+        {
+          "minutos": 60,
+          "etiqueta": "60 min"
+        },
+        {
+          "minutos": 60,
+          "etiqueta": "60 min"
+        },
+        {
+          "minutos": 10,
+          "etiqueta": "10 min"
+        }
+      ]
+    },
+    {
+      "texto": "Dejar enfriar en el molde por 10 minutos, luego desmoldar y dejar enfriar completamente sobre una rejilla.",
+      "timers": [
+        {
+          "minutos": 10,
+          "etiqueta": "10 min"
+        }
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 90
+  },
+  "revisado_v2": false
 }

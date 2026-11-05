@@ -51,5 +51,100 @@
   "conservacion": {
     "refrigerador": "3 días",
     "recalentar": "En horno suave."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pavo de 3 kg",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "kg",
+      "nombre": "manzanas",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.25,
+      "unidad": "kg",
+      "nombre": "ricota",
+      "escalable": true
+    },
+    {
+      "cantidad": 3,
+      "unidad": "cucharadas",
+      "nombre": "crema fresca",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.125,
+      "unidad": "kg",
+      "nombre": "mantequilla",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "vasos",
+      "nombre": "coñac",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "jeringa desechable",
+      "escalable": true
+    },
+    {
+      "cantidad": null,
+      "unidad": null,
+      "nombre": "Sal",
+      "escalable": true
+    },
+    {
+      "cantidad": null,
+      "unidad": null,
+      "nombre": "Pimienta",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Limpiar muy bien y lavar el pavo."
+    },
+    {
+      "texto": "Con la jeringa inyectar el coñac por todos lados."
+    },
+    {
+      "texto": "Dejar macerar de un día para otro."
+    },
+    {
+      "texto": "Al día siguiente, pelar 1 kg de manzanas, cortarlas en láminas, mezclar con la crema, ricota, sal y pimienta."
+    },
+    {
+      "texto": "Distribuir esta preparación en una fuente para horno, poner encima el pavo bien untado con mantequilla, sal y pimienta."
+    },
+    {
+      "texto": "Cocinar a horno caliente durante 1 1/2 hora, rociándolo periódicamente con su jugo.",
+      "timers": [
+        {
+          "minutos": 90,
+          "etiqueta": "90 min"
+        }
+      ]
+    },
+    {
+      "texto": "Pelar el resto de las manzanas y quitarles los corazones. Untar con mantequilla y distribuirlas alrededor del pavo, dejar hasta que esté tierno."
+    },
+    {
+      "texto": "Cortar el pavo en tajadas delgadas, distribuirlas en el centro de una fuente para la mesa y decorar con las mitades de manzana y el jugo en una salsera aparte."
+    },
+    {
+      "texto": "Servir muy caliente."
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 120
+  },
+  "revisado_v2": false
 }

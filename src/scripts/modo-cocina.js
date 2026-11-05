@@ -11,15 +11,18 @@
                  sin alert() ni confirm() (reinicio con doble toque).
    FASE 8: al abrir el overlay, se envía CACHE_RECIPE al service worker
            para guardar la página de la receta y su imagen.
-   FASE 9: alarma visible a pantalla completa cuando termina un timer;
-           el aviso llega aunque se cambie de app (al volver a la pestaña);
-           notificación del navegador si el timer termina con document.hidden;
-           timers que expiraron con el overlay cerrado se marcan como
-           terminados y suenan una sola vez al abrir.
+   FASE 9: alarma visible a pantalla completa cuando termina un timer.
+   FASE 10: si la receta trae revisado_v2 === true, usa ingredientes_v2,
+            pasos_v2 y preparacion para el mise en place; reemplaza {ing:N}
+            en los pasos; desactiva el aviso de la Fase 3.
    ================================================================= */
 
 import { detectarTiempos } from '../lib/tiempos.js';
 import { interpretarComando } from '../lib/voz.js';
+import {
+  formatearIngredienteEstructurado,
+  reemplazarMarcasIngredientes
+} from '../lib/escalado.js';
 
 (function () {
   'use strict';
@@ -45,6 +48,11 @@ import { interpretarComando } from '../lib/voz.js';
   var miseTerminada = false;
   var enMise = false;
   var miseActual = -1;
+
+  // FASE 10: datos v2 de la receta actual
+  var esV2 = false;
+  var ingredientesV2 = null;
+  var pasosV2 = null;
 
   var ttsActivo = false;
   var microActivo = false;
@@ -365,7 +373,12 @@ import { interpretarComando } from '../lib/voz.js';
   }
 
   function leerIngredientes() {
-    var ings = (recetaActual && recetaActual.ingredientes) || [];
+    var ings;
+    if (esV2 && Array.isArray(ingredientesV2)) {
+      ings = ingredientesV2.map(formatearIngredienteEstructurado);
+    } else {
+      ings = (recetaActual && recetaActual.ingredientes) || [];
+    }
     if (ings.length === 0) {
       var msg = 'Esta receta no tiene ingredientes listados.';
       anunciar(msg);
@@ -530,8 +543,6 @@ import { interpretarComando } from '../lib/voz.js';
       var ahora = Date.now();
       return data.map(function (t) {
         var estado = t.estado;
-        // FASE 9: si el timer estaba corriendo y expiró mientras el overlay estaba cerrado,
-        // se marca como terminado PERO con yaAlertado=false para que suene una vez al abrir.
         if (estado === 'corriendo' && t.finTimestamp && t.finTimestamp <= ahora) {
           estado = 'terminado';
           return {
@@ -687,11 +698,8 @@ import { interpretarComando } from '../lib/voz.js';
     anunciar(msg);
     if (ttsActivo) leerTexto(msg);
 
-    // Alarma visual + loop de sonido (funciona aunque el overlay esté oculto:
-    // al volver a la pestaña, la alarma se ve y el loop sigue activo)
     mostrarAlarma(timer);
 
-    // Notificación solo si el timer termina con la pestaña oculta
     if (document.hidden) {
       mostrarNotificacion(timer, msg);
     }
@@ -705,8 +713,6 @@ import { interpretarComando } from '../lib/voz.js';
         t.estado = 'terminado'; cambioEstado = true;
         if (!t.yaAlertado) { t.yaAlertado = true; dispararAlerta(t); }
       } else if (t.estado === 'terminado' && !t.yaAlertado) {
-        // Timer cargado del storage que terminó con el overlay cerrado:
-        // disparar la alerta ahora (una sola vez) al abrir el overlay.
         t.yaAlertado = true;
         cambioEstado = true;
         dispararAlerta(t);
@@ -720,7 +726,6 @@ import { interpretarComando } from '../lib/voz.js';
     });
   }
 
-  // FASE 6 + 9: chip con aviso bajo el primer timer activo
   function renderTimerChip(t, enPaso, esPrimerActivo) {
     var ahora = Date.now();
     var restante = t.estado === 'corriendo' ? Math.max(0, t.finTimestamp - ahora) : (t.estado === 'pausado' ? t.restanteAlPausar : 0);
@@ -755,8 +760,6 @@ import { interpretarComando } from '../lib/voz.js';
     var delPaso = timers.filter(function (t) { return t.paso === pasoActual; });
     var otros = timers.filter(function (t) { return t.paso !== pasoActual; });
 
-    // FASE 9: el aviso "Para que suene…" y el botón de notificación
-    // se muestran bajo el primer timer que esté activo (corriendo o pausado).
     var primerTimerActivo = timers.find(function (t) { return t.estado !== 'terminado'; });
     var primerId = primerTimerActivo ? primerTimerActivo.id : null;
 
@@ -781,7 +784,14 @@ import { interpretarComando } from '../lib/voz.js';
   var VERBOS = { remojar: 'Remojar', cocer: 'Cocer', enfriar: 'Enfriar', lavar: 'Lavar', pelar: 'Pelar', cascara: 'Sacar la cáscara', desgranar: 'Desgranar', cortar: 'Cortar', picar: 'Picar', laminar: 'Laminar', rallar: 'Rallar', exprimir: 'Exprimir', moler: 'Pisar', desmenuzar: 'Desmenuzar', derretir: 'Derretir', batir: 'Batir', cernir: 'Cernir' };
   var ORDEN_VERBOS = ['remojar', 'cocer', 'enfriar', 'lavar', 'pelar', 'cascara', 'desgranar', 'cortar', 'picar', 'laminar', 'rallar', 'exprimir', 'moler', 'desmenuzar', 'derretir', 'batir', 'cernir'];
   var BUCKET_DE = { remojar: 'adelantar', cocer: 'adelantar', enfriar: 'adelantar', lavar: 'limpiar', pelar: 'limpiar', cascara: 'limpiar', desgranar: 'limpiar', cortar: 'cortar', picar: 'cortar', laminar: 'cortar', rallar: 'rallar', exprimir: 'rallar', moler: 'rallar', desmenuzar: 'rallar', derretir: 'mezclar', batir: 'mezclar', cernir: 'mezclar' };
-  var BUCKETS = [ { id: 'adelantar', icono: '⏳', titulo: 'Adelantar (toma tiempo)' }, { id: 'limpiar', icono: '🧼', titulo: 'Lavar y pelar' }, { id: 'cortar', icono: '🔪', titulo: 'Cortar y picar' }, { id: 'rallar', icono: '🧀', titulo: 'Rallar, exprimir y desmenuzar' }, { id: 'mezclar', icono: '🥣', titulo: 'Derretir, batir y cernir' } ];
+  var BUCKETS = [
+    { id: 'adelantar', icono: '⏳', titulo: 'Adelantar (toma tiempo)' },
+    { id: 'limpiar', icono: '🧼', titulo: 'Lavar y pelar' },
+    { id: 'cortar', icono: '🔪', titulo: 'Cortar y picar' },
+    { id: 'rallar', icono: '🧀', titulo: 'Rallar, exprimir y desmenuzar' },
+    { id: 'mezclar', icono: '🥣', titulo: 'Derretir, batir y cernir' },
+    { id: 'preparar', icono: '📋', titulo: 'Preparar' }
+  ];
   var RE_CORTE = /\ben\s+(?:cubos|cubitos|cuadraditos|daditos|rodajas|rodajitas|trozos|trocitos|tiras|gajos|bastones|pluma|medallones|laminas|mitades|cuartos|rebanadas|juliana|aros)(?:\s+(?:muy\s+)?(?:finos?|finas?|pequenos?|pequenas?|gruesos?|gruesas?|medianos?|medianas?|delgados?|delgadas?|grandes))?\b/;
   var RE_OPCIONAL = /\(\s*opcional\b[^)]*\)/i;
   var RE_CALIDAD = /^\s+(?:muy\s+|bien\s+)?(?:fin[oa]s?|finamente|grues[oa]s?|menud[oa]s?|chic[oa]s?)\b/;
@@ -879,6 +889,35 @@ import { interpretarComando } from '../lib/voz.js';
           nounPrevio = pieza.replace(/^[\d½¼¾\/.,\- ]+(?:(?:g|kg|ml|l|cc|cdas?|cdtas?|tazas?|cucharadas?|cucharaditas?)\s+(?:de\s+)?)?/i, '');
         }
       });
+    });
+    return { tareas: tareas, amano: amano };
+  }
+
+  // FASE 10: tareas de mise en place a partir de ingredientes_v2 (revisados).
+  function tareasDesdeEstructurado(ingsV2) {
+    var tareas = [], amano = [];
+    (ingsV2 || []).forEach(function (ing) {
+      var prep = ing && ing.preparacion ? String(ing.preparacion).trim() : '';
+      var etiqueta = prep ? prep.charAt(0).toUpperCase() + prep.slice(1) : 'Tener a mano';
+      if (prep) {
+        tareas.push({
+          id: tareas.length,
+          seccion: ing.seccion || '',
+          verbos: [],
+          etiqueta: etiqueta,
+          texto: formatearIngredienteEstructurado(ing),
+          detalle: '',
+          opcional: !!ing.opcional,
+          anticipado: /anticip|remoj|repos|noche|hora/i.test(prep),
+          bucket: 'preparar'
+        });
+      } else {
+        amano.push({
+          seccion: ing.seccion || '',
+          texto: formatearIngredienteEstructurado(ing),
+          opcional: !!ing.opcional
+        });
+      }
     });
     return { tareas: tareas, amano: amano };
   }
@@ -1282,7 +1321,6 @@ import { interpretarComando } from '../lib/voz.js';
       }
     });
 
-    // FASE 9: botón Detener de la alarma + botón "Avisarme cuando termine"
     overlayEl.addEventListener('click', function (e) {
       var detener = e.target.closest('[data-action="detener-alarma"]');
       if (detener) { detenerAlarma(); return; }
@@ -1351,6 +1389,30 @@ import { interpretarComando } from '../lib/voz.js';
     });
   }
 
+  // FASE 10: timers de pasos_v2[i] (revisados a mano).
+  function timersDePasoV2(i) {
+    if (!Array.isArray(pasosV2)) return null;
+    var p = pasosV2[i];
+    if (!p || !Array.isArray(p.timers) || p.timers.length === 0) return null;
+    return p.timers.map(function (t) {
+      return { minutos: t.minutos, etiqueta: t.etiqueta || (String(t.minutos).replace('.', ',') + ' min') };
+    });
+  }
+
+  // FASE 10: HTML "Ingredientes de este paso" a partir de los índices.
+  function htmlIngredientesPasoV2(i) {
+    if (!Array.isArray(pasosV2) || !Array.isArray(ingredientesV2)) return '';
+    var p = pasosV2[i];
+    if (!p || !Array.isArray(p.ingredientes) || p.ingredientes.length === 0) return '';
+    var items = p.ingredientes
+      .map(function (n) { return ingredientesV2[n - 1]; })
+      .filter(Boolean)
+      .map(function (ing) { return '<li>' + escaparHtml(formatearIngredienteEstructurado(ing)) + '</li>'; })
+      .join('');
+    if (!items) return '';
+    return '<div class="mc-paso-ings"><span class="mc-paso-ings-titulo">Ingredientes de este paso</span><ul class="mc-paso-ings-lista">' + items + '</ul></div>';
+  }
+
   // ---- Abrir ----
   function abrir(receta) {
     if (!receta) return;
@@ -1371,6 +1433,13 @@ import { interpretarComando } from '../lib/voz.js';
     var slugBtn = document.querySelector('.btn-favorito[data-slug]');
     recetaSlug = slugBtn ? slugBtn.getAttribute('data-slug') : slugify(receta.titulo || 'default');
 
+    // FASE 10: activar v2 si está revisado y hay datos estructurados.
+    esV2 = receta.revisado_v2 === true &&
+           Array.isArray(receta.ingredientes_v2) &&
+           receta.ingredientes_v2.length > 0;
+    ingredientesV2 = esV2 ? receta.ingredientes_v2 : null;
+    pasosV2 = esV2 && Array.isArray(receta.pasos_v2) ? receta.pasos_v2 : null;
+
     var pasos = receta.pasos || [];
     var saved = cargarEstado(pasos.length);
     if (saved) { pasoActual = saved.pasoActual; pasosHechos = saved.pasosHechos; }
@@ -1381,7 +1450,6 @@ import { interpretarComando } from '../lib/voz.js';
     microActivo = false;
     autoTimerLanzados.clear();
 
-    // FASE 9: resetear el estado de la alarma al abrir
     alarmaTimer = null;
     detenerLoopAlarma();
 
@@ -1400,7 +1468,9 @@ import { interpretarComando } from '../lib/voz.js';
     var avisoEscala = ov.querySelector('.mc-aviso-escala');
     if (avisoEscala) {
       var factorEsc = receta.factorEscalado;
-      var mostrarAviso = (factorEsc != null) && (factorEsc !== 1) && pasosTienenCantidades(pasos);
+      // FASE 10: con v2 revisado no mostramos el aviso de la Fase 3
+      // (las marcas {ing:N} se reemplazan automáticamente).
+      var mostrarAviso = !esV2 && (factorEsc != null) && (factorEsc !== 1) && pasosTienenCantidades(pasos);
       if (mostrarAviso) {
         avisoEscala.textContent = 'Cantidades ×' + formatearFactorTexto(factorEsc) +
           '. Las cantidades escritas dentro de los pasos no se ajustan; revísalas.';
@@ -1432,7 +1502,13 @@ import { interpretarComando } from '../lib/voz.js';
     }
     actualizarBotonMicro();
 
-    prep = analizarPrep(receta.ingredientes || []);
+    // FASE 10: mise en place desde preparacion si hay v2; si no, analizarPrep.
+    if (esV2 && Array.isArray(ingredientesV2)) {
+      prep = tareasDesdeEstructurado(ingredientesV2);
+    } else {
+      prep = analizarPrep(receta.ingredientes || []);
+    }
+
     var nPrep = prep.tareas.length;
     var stMise = cargarMise(nPrep);
     miseHechas = stMise ? stMise.hechas : new Array(nPrep).fill(false);
@@ -1445,21 +1521,44 @@ import { interpretarComando } from '../lib/voz.js';
     renderMise();
     ov.classList.toggle('mise', enMise);
 
-    var ings = receta.ingredientes || [];
-    ov.querySelector('.mc-ing-count').textContent = ings.length;
-    ov.querySelector('.mc-ing-list').innerHTML = ings.map(function (x) { return '<li>' + escaparHtml(x) + '</li>'; }).join('');
+    // Panel de ingredientes del overlay (para consulta rápida).
+    var ingsTexto;
+    if (esV2 && Array.isArray(ingredientesV2)) {
+      ingsTexto = ingredientesV2.map(formatearIngredienteEstructurado);
+    } else {
+      ingsTexto = receta.ingredientes || [];
+    }
+    ov.querySelector('.mc-ing-count').textContent = ingsTexto.length;
+    ov.querySelector('.mc-ing-list').innerHTML = ingsTexto.map(function (x) { return '<li>' + escaparHtml(x) + '</li>'; }).join('');
 
     var htmlPasos = pasos.map(function (p, i) {
-      var manuales = timersDeReceta(receta, i);
-      var tiempos = manuales !== null ? manuales : detectarTiempos(p);
+      var tiempos;
+      if (esV2) {
+        var tV2 = timersDePasoV2(i);
+        tiempos = tV2 !== null ? tV2 : [];
+      } else {
+        var manuales = timersDeReceta(receta, i);
+        tiempos = manuales !== null ? manuales : detectarTiempos(p);
+      }
       var botonesTimers = tiempos.map(function (t) {
         return '<button type="button" class="mc-timer-iniciar" data-paso="' + i + '" data-minutos="' + t.minutos + '" aria-label="Iniciar temporizador de ' + t.etiqueta + '"><span aria-hidden="true">⏱</span> Iniciar ' + t.etiqueta + '</button>';
       }).join('');
       var btnLeer = '<button type="button" class="mc-leer-btn" aria-label="Escuchar este paso"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg> Escuchar</button>';
 
+      // FASE 10: reemplazar {ing:N} en el texto si v2.
+      var textoPaso = p;
+      if (esV2 && Array.isArray(pasosV2) && pasosV2[i] && typeof pasosV2[i].texto === 'string') {
+        textoPaso = reemplazarMarcasIngredientes(pasosV2[i].texto, ingredientesV2);
+      } else if (esV2 && Array.isArray(ingredientesV2)) {
+        textoPaso = reemplazarMarcasIngredientes(p, ingredientesV2);
+      }
+
+      var ingsPasoHtml = esV2 ? htmlIngredientesPasoV2(i) : '';
+
       return '<div class="mc-paso" data-paso="' + i + '">' +
         '<div class="mc-paso-header"><div class="mc-paso-num">Paso ' + (i + 1) + '</div><button type="button" class="mc-marcar" data-paso="' + i + '" aria-pressed="false" aria-label="Marcar paso ' + (i + 1) + ' como hecho"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></button></div>' +
-        '<p class="mc-paso-texto">' + escaparHtml(p) + '</p>' +
+        '<p class="mc-paso-texto">' + escaparHtml(textoPaso) + '</p>' +
+        ingsPasoHtml +
         '<div class="mc-paso-acciones">' + btnLeer + botonesTimers + '</div>' +
         '<div class="mc-paso-timer" hidden></div>' +
       '</div>';
@@ -1514,8 +1613,6 @@ import { interpretarComando } from '../lib/voz.js';
       else { var next = ov.querySelector('.mc-next'); if (next) next.focus(); }
     }, 100);
 
-    // FASE 9: en el siguiente tick, disparar timers que expiraron
-    // con el overlay cerrado y quedaron con yaAlertado=false.
     setTimeout(function () { tickTimers(); }, 300);
   }
 
@@ -1741,13 +1838,10 @@ import { interpretarComando } from '../lib/voz.js';
 
   document.addEventListener('visibilitychange', function () {
     if (!overlayEl || !overlayEl.classList.contains('abierto')) return;
-    // FASE 9: al volver a la pestaña, disparar timers expirados de inmediato
-    // (en background los setInterval se throttlean y pueden tardar hasta 1 min).
     tickTimers();
     if (!document.hidden) {
       solicitarWakeLock();
       if (audioCtx && audioCtx.state === 'suspended') audioCtx.resume().catch(function () {});
-      // FASE 9: si hay una alarma visible, asegurar que el loop siga activo
       if (alarmaTimer && !alarmaLoopTimeout) iniciarLoopAlarma();
     }
   });

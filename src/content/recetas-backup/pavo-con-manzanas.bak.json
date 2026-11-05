@@ -1,0 +1,55 @@
+{
+  "titulo": "Pavo con Manzanas",
+  "categoria": "principales",
+  "tags": [
+    "pavo con manzanas",
+    "pavo",
+    "manzanas",
+    "ricota",
+    "coñac",
+    "horno",
+    "aves"
+  ],
+  "imagen": null,
+  "tiempo": "2 h (más maceración de un día)",
+  "porciones": "8 a 10 personas",
+  "dificultad": "alta",
+  "tecnica": "Horno",
+  "ingredientes": [
+    "1 pavo de 3 kg",
+    "2 kg de manzanas",
+    "1/4 kg de ricota",
+    "3 cucharadas de crema fresca",
+    "1/8 kg de mantequilla",
+    "2 vasos de coñac",
+    "1 jeringa desechable",
+    "Sal",
+    "Pimienta"
+  ],
+  "pasos": [
+    "Limpiar muy bien y lavar el pavo.",
+    "Con la jeringa inyectar el coñac por todos lados.",
+    "Dejar macerar de un día para otro.",
+    "Al día siguiente, pelar 1 kg de manzanas, cortarlas en láminas, mezclar con la crema, ricota, sal y pimienta.",
+    "Distribuir esta preparación en una fuente para horno, poner encima el pavo bien untado con mantequilla, sal y pimienta.",
+    "Cocinar a horno caliente durante 1 1/2 hora, rociándolo periódicamente con su jugo.",
+    "Pelar el resto de las manzanas y quitarles los corazones. Untar con mantequilla y distribuirlas alrededor del pavo, dejar hasta que esté tierno.",
+    "Cortar el pavo en tajadas delgadas, distribuirlas en el centro de una fuente para la mesa y decorar con las mitades de manzana y el jugo en una salsera aparte.",
+    "Servir muy caliente."
+  ],
+  "dato": "La jeringa permite inyectar el coñac dentro de la carne, logrando un sabor más parejo que si solo se rocía por fuera.",
+  "errores": [
+    {
+      "error": "Pavo seco",
+      "solucion": "Rocía con su jugo cada 20-30 minutos y cubre con papel aluminio si la superficie se dora demasiado."
+    },
+    {
+      "error": "Manzanas deshechas",
+      "solucion": "Agrega las manzanas de acompañamiento en la última media hora de cocción."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "3 días",
+    "recalentar": "En horno suave."
+  }
+}

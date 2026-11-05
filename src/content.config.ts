@@ -36,6 +36,33 @@ const recetas = defineCollection({
       minutos: z.number().positive(),
       etiqueta: z.string().optional(),
     })).optional(),
+
+    // ===== FASE 10: campos estructurados opcionales =====
+    ingredientes_v2: z.array(z.object({
+      cantidad: z.number().nullable(),
+      cantidadMax: z.number().nullable().optional(),
+      unidad: z.string().nullable(),
+      nombre: z.string(),
+      nota: z.string().optional(),
+      seccion: z.string().optional(),
+      opcional: z.boolean().optional(),
+      escalable: z.boolean().default(true),
+      preparacion: z.string().optional(),
+    })).optional(),
+    pasos_v2: z.array(z.object({
+      texto: z.string(),
+      timers: z.array(z.object({
+        minutos: z.number().positive(),
+        etiqueta: z.string().optional(),
+      })).optional(),
+      ingredientes: z.array(z.number().int().min(1)).optional(),
+    })).optional(),
+    tiempo_v2: z.object({
+      preparacion: z.number().positive().optional(),
+      coccion: z.number().positive().optional(),
+      reposo: z.number().positive().optional(),
+    }).optional(),
+    revisado_v2: z.boolean().default(false),
   }),
 });
 

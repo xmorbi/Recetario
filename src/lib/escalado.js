@@ -9,12 +9,11 @@
    - escalarIngrediente:  multiplica cada cantidad UNA SOLA VEZ
    - pluralizarUnidad:    (Fase 2) pluraliza/singulariza la palabra
                           que sigue a cada número (taza↔tazas, etc.)
-
-   Reglas de pluralización:
-   - valor ≥ 2 → pluralizar (si la palabra está en el diccionario)
-   - valor ≤ 1 → singularizar (si la palabra está en el diccionario)
-   - 1 < valor < 2 (ej. 1½) → no tocar
-   - palabras no listadas → no se tocan
+   - FASE 10:
+     · parsearIngredienteTexto:  "500 g de harina" → objeto estructurado
+     · escalarEstructurado:      multiplica cantidad/cantidadMax sin regex
+     · formatearIngredienteEstructurado: objeto → texto legible
+     · reemplazarMarcasIngredientes: sustituye {ing:N} en un texto
    ================================================================= */
 
 export function extraerPorciones(str) {
@@ -251,7 +250,7 @@ Object.keys(SINGULAR_A_PLURAL).forEach(function (s) {
 });
 
 // Convierte "1", "½", "1½", "2,5", "3", "1/2" a número. null si no aplica.
-function parsearNumeroTexto(s) {
+export function parsearNumeroTexto(s) {
   if (s === null || s === undefined) return null;
   s = String(s).trim();
 
@@ -356,4 +355,164 @@ export function escalarIngrediente(texto, factor) {
   t = pluralizarUnidad(t);
 
   return t;
+}
+
+/* =================================================================
+   FASE 10 — DATOS ESTRUCTURADOS
+   ================================================================= */
+
+// Unidades reconocidas al parsear una línea de ingrediente.
+var UNIDADES_CONOCIDAS = {
+  'g': 1, 'kg': 1, 'mg': 1, 'ml': 1, 'l': 1, 'cl': 1, 'dl': 1, 'cc': 1,
+  'taza': 1, 'tazas': 1, 'cucharada': 1, 'cucharadas': 1,
+  'cucharadita': 1, 'cucharaditas': 1, 'cdta': 1, 'cdtas': 1, 'cda': 1, 'cdas': 1,
+  'cucharón': 1, 'cucharones': 1,
+  'diente': 1, 'dientes': 1, 'unidad': 1, 'unidades': 1,
+  'sobre': 1, 'sobres': 1, 'lata': 1, 'latas': 1, 'tarro': 1, 'tarros': 1,
+  'paquete': 1, 'paquetes': 1, 'ramita': 1, 'ramitas': 1, 'rama': 1, 'ramas': 1,
+  'hoja': 1, 'hojas': 1, 'tallo': 1, 'tallos': 1, 'cabeza': 1, 'cabezas': 1,
+  'rodaja': 1, 'rodajas': 1, 'trozo': 1, 'trozos': 1, 'presa': 1, 'presas': 1,
+  'docena': 1, 'docenas': 1, 'mano': 1, 'manos': 1, 'puñado': 1, 'puñados': 1,
+  'pizca': 1, 'pizcas': 1, 'gota': 1, 'gotas': 1,
+  'gramo': 1, 'gramos': 1, 'kilo': 1, 'kilos': 1,
+  'litro': 1, 'litros': 1, 'mililitro': 1, 'mililitros': 1,
+  'onza': 1, 'onzas': 1, 'libra': 1, 'libras': 1,
+  'molde': 1, 'moldes': 1, 'vaso': 1, 'vasos': 1,
+  'plato': 1, 'platos': 1, 'bowl': 1, 'bowls': 1, 'tazón': 1, 'tazones': 1,
+  'porción': 1, 'porciones': 1, 'persona': 1, 'personas': 1
+};
+
+/**
+ * Parsea una línea de ingrediente en texto libre a un objeto estructurado.
+ * Heurística: no es perfecta, el humano la revisa después.
+ */
+export function parsearIngredienteTexto(linea) {
+  var original = String(linea);
+  var txt = original.trim();
+  if (!txt) return null;
+
+  // Sección (mayúsculas antes de ":")
+  var seccion = '';
+  var sm = /^([A-ZÁÉÍÓÚÑ][A-Za-zÁÉÍÓÚáéíóúñÑ ]{1,24}):\s+/.exec(txt);
+  if (sm) { seccion = sm[1].trim(); txt = txt.slice(sm[0].length); }
+
+  // Opcional
+  var opcional = /\(\s*opcional\b[^)]*\)/i.test(original) || /^opcional\b/i.test(txt);
+  if (opcional) {
+    txt = txt.replace(/\(\s*opcional\b[^)]*\)/gi, '').replace(/\bopcional\b/gi, '').trim();
+  }
+
+  // Nota entre paréntesis
+  var nota = '';
+  var nm = /\(([^)]+)\)/.exec(txt);
+  if (nm) { nota = nm[1].trim(); txt = txt.replace(nm[0], '').trim(); }
+
+  // Cantidad / cantidadMax
+  var cantidad = null, cantidadMax = null, resto = txt;
+  var reCant = /^(\d+\s+\d+\/\d+|\d+\/\d+|\d+[.,]\d+|\d+|½|¼|¾|⅓|⅔|\d[½¼¾⅓⅔])\s*(?:(?:a|al|-|–)\s*(\d+\s+\d+\/\d+|\d+\/\d+|\d+[.,]\d+|\d+|½|¼|¾|⅓|⅔|\d[½¼¾⅓⅔]))?\s*/i;
+  var mc = reCant.exec(resto);
+  if (mc) {
+    cantidad = parsearNumeroTexto(mc[1]);
+    if (mc[2]) cantidadMax = parsearNumeroTexto(mc[2]);
+    resto = resto.slice(mc[0].length).trim();
+  }
+
+  // Unidad
+  var unidad = null;
+  var palabras = resto.split(/\s+/);
+  if (palabras.length > 1 && UNIDADES_CONOCIDAS[palabras[0].toLowerCase()]) {
+    unidad = palabras[0];
+    resto = palabras.slice(1).join(' ').trim();
+  }
+
+  // Quitar "de" inicial del nombre
+  resto = resto.replace(/^de\s+/i, '').trim();
+
+  var nombre = resto || txt;
+
+  return {
+    cantidad: cantidad,
+    cantidadMax: cantidadMax == null ? undefined : cantidadMax,
+    unidad: unidad,
+    nombre: nombre,
+    nota: nota || undefined,
+    seccion: seccion || undefined,
+    opcional: opcional || undefined,
+    escalable: true,
+    preparacion: undefined,
+  };
+}
+
+/**
+ * Multiplica cantidad y cantidadMax de cada ingrediente sin tocar
+ * los ítems con escalable: false ni los que tienen cantidad null.
+ */
+export function escalarEstructurado(ingredientes, factor) {
+  if (!Array.isArray(ingredientes)) return [];
+  if (factor === 1) return ingredientes.map(function (x) { return Object.assign({}, x); });
+
+  return ingredientes.map(function (ing) {
+    if (ing.escalable === false) return Object.assign({}, ing);
+    if (ing.cantidad == null) return Object.assign({}, ing);
+    var out = Object.assign({}, ing);
+    out.cantidad = Math.round(ing.cantidad * factor * 1000) / 1000;
+    if (ing.cantidadMax != null) {
+      out.cantidadMax = Math.round(ing.cantidadMax * factor * 1000) / 1000;
+    }
+    return out;
+  });
+}
+
+/**
+ * Devuelve el texto legible de un ingrediente estructurado.
+ * Ej: { cantidad: 500, unidad: 'g', nombre: 'harina' } → "500 g de harina"
+ */
+export function formatearIngredienteEstructurado(ing) {
+  if (!ing) return '';
+  var partes = [];
+
+  if (ing.cantidad != null) {
+    var numTxt = formatearNumero(ing.cantidad);
+    if (ing.cantidadMax != null && ing.cantidadMax !== ing.cantidad) {
+      numTxt += ' a ' + formatearNumero(ing.cantidadMax);
+    }
+    partes.push(numTxt);
+  }
+
+  if (ing.unidad) {
+    var unidad = ing.unidad;
+    if (ing.cantidad != null) {
+      var val = ing.cantidad;
+      var valMax = ing.cantidadMax != null ? ing.cantidadMax : val;
+      if (val >= 2 || valMax >= 2) {
+        if (SINGULAR_A_PLURAL[unidad]) unidad = SINGULAR_A_PLURAL[unidad];
+      } else if (val <= 1 && valMax <= 1) {
+        if (PLURAL_A_SINGULAR[unidad]) unidad = PLURAL_A_SINGULAR[unidad];
+      }
+    }
+    partes.push(unidad);
+  }
+
+  if (ing.nombre) {
+    if (ing.unidad && ing.cantidad != null) partes.push('de ' + ing.nombre);
+    else partes.push(ing.nombre);
+  }
+
+  var txt = partes.join(' ');
+  if (ing.nota) txt += ' (' + ing.nota + ')';
+  if (ing.opcional && !/opcional/i.test(txt)) txt += ' (opcional)';
+  return txt;
+}
+
+/**
+ * Sustituye las marcas {ing:N} de un texto por el ingrediente N
+ * (1-based) ya formateado. El ingrediente puede venir escalado.
+ */
+export function reemplazarMarcasIngredientes(texto, ingredientes) {
+  return String(texto).replace(/\{ing:(\d+)\}/g, function (_, n) {
+    var idx = parseInt(n, 10) - 1;
+    var ing = ingredientes && ingredientes[idx];
+    if (!ing) return _;
+    return formatearIngredienteEstructurado(ing);
+  });
 }

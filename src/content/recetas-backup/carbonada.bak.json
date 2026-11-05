@@ -1,0 +1,58 @@
+{
+  "titulo": "Carbonada",
+  "categoria": "principales",
+  "tags": [
+    "guiso",
+    "olla",
+    "carne",
+    "verduras",
+    "plato principal",
+    "invierno"
+  ],
+  "imagen": "img/Carbonada.JPG",
+  "tiempo": "50 min",
+  "porciones": "6 personas",
+  "dificultad": "fácil",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "500 g de posta de vacuno picada en cubos",
+    "2 cucharadas de aceite",
+    "1 cebolla picada en cubitos",
+    "1/4 de pimentón rojo picado",
+    "2 papas medianas en cubos",
+    "1 zanahoria en rodajas",
+    "1 taza de zapallo en cubos",
+    "1 choclo desgranado",
+    "1/2 taza de arroz",
+    "1 litro de agua caliente o caldo de carne",
+    "Sal, pimienta, orégano, comino y ají de color"
+  ],
+  "pasos": [
+    "Calienta el aceite en una olla grande. Agrega la carne y séllala hasta que dore por todos lados.",
+    "Incorpora la cebolla, el pimentón y los condimentos (ají de color, orégano, comino, sal y pimienta). Sofríe por 5 minutos.",
+    "Vierte el agua o caldo caliente, tapa y cocina a fuego medio por 20 minutos.",
+    "Agrega las papas, la zanahoria, el zapallo y el choclo. Cocina por 15 minutos más.",
+    "Añade el arroz y cocina hasta que los granos estén tiernos y las verduras blandas (unos 15 minutos).",
+    "Rectifica la sal y sirve caliente en platos hondos."
+  ],
+  "dato": "La carbonada es un guiso de invierno por excelencia. Su nombre proviene de \"carbón\", porque antiguamente se cocinaba en ollas de barro sobre brasas.",
+  "errores": [
+    {
+      "error": "Se me avinagró la carbonada al guardarla",
+      "solucion": "No la dejes varios días en el refrigerador: la mezcla de caldo, carne y arroz fermenta rápido. Consúmela el mismo día o congélala en porciones."
+    },
+    {
+      "error": "La carbonada me quedó aguada, como una sopa",
+      "solucion": "No espesaste el guiso. Cuando el zapallo esté blando, aplasta 3 o 4 trozos con el cucharón y revuelve para que suelten almidón."
+    },
+    {
+      "error": "La carne me quedó dura",
+      "solucion": "No la cocinaste el tiempo suficiente a fuego lento. Cocina por al menos 40-50 minutos."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días en recipiente hermético.",
+    "congelador": "Hasta 2 meses (idealmente sin papas).",
+    "recalentar": "A fuego lento con un poco de caldo."
+  }
+}

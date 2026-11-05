@@ -9,7 +9,7 @@
     "tradicional",
     "pan"
   ],
-  "imagen": null,
+  "imagen": img/pan-de-pascua.jpg
   "tiempo": "1 h 30 min + reposo",
   "porciones": "1 molde grande (12 porciones)",
   "dificultad": "media",
@@ -59,5 +59,138 @@
     "refrigerador": "Hasta 2 semanas envuelto en papel mantequilla y aluminio en un lugar fresco.",
     "congelador": "Hasta 3 meses, bien envuelto.",
     "recalentar": "A temperatura ambiente. Si lo quieres tibio, horno a 150°C por 10 minutos."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "harina sin polvos de hornear",
+      "escalable": true
+    },
+    {
+      "cantidad": 200,
+      "unidad": "g",
+      "nombre": "mantequilla a temperatura ambiente",
+      "escalable": true
+    },
+    {
+      "cantidad": 200,
+      "unidad": "g",
+      "nombre": "azúcar",
+      "escalable": true
+    },
+    {
+      "cantidad": 4,
+      "unidad": null,
+      "nombre": "huevos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "polvos de hornear",
+      "escalable": true
+    },
+    {
+      "cantidad": 250,
+      "unidad": "g",
+      "nombre": "frutas confitadas picadas",
+      "nota": "naranja, limón, cereza",
+      "escalable": true
+    },
+    {
+      "cantidad": 150,
+      "unidad": "g",
+      "nombre": "pasas remojadas en ron o pisco",
+      "escalable": true
+    },
+    {
+      "cantidad": 100,
+      "unidad": "g",
+      "nombre": "nueces picadas",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "canela molida",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "cucharadita",
+      "nombre": "clavo de olor molido",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "cucharadita",
+      "nombre": "jengibre molido",
+      "escalable": true
+    },
+    {
+      "cantidad": null,
+      "unidad": null,
+      "nombre": "Ralladura de 1 naranja y 1 limón",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "esencia de vainilla",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "taza",
+      "nombre": "leche si es necesario",
+      "escalable": true
+    },
+    {
+      "cantidad": null,
+      "unidad": null,
+      "nombre": "Azúcar flor para decorar",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Remoja las pasas en ron o pisco al menos 2 horas antes. Escurre y reserva.",
+      "timers": [
+        {
+          "minutos": 120,
+          "etiqueta": "120 min"
+        }
+      ]
+    },
+    {
+      "texto": "Bate la mantequilla con el azúcar hasta obtener una crema. Agrega los huevos uno a uno."
+    },
+    {
+      "texto": "Añade la vainilla, las ralladuras de naranja y limón, y las especias."
+    },
+    {
+      "texto": "Incorpora la harina cernida con los polvos de hornear, mezclando suavemente."
+    },
+    {
+      "texto": "Agrega las frutas confitadas, las pasas y las nueces. Si la masa está muy seca, añade leche cucharada a cucharada."
+    },
+    {
+      "texto": "Vierte la mezcla en un molde engrasado y enharinado. Hornea a 170 °C por 50-60 minutos.",
+      "timers": [
+        {
+          "minutos": 50,
+          "etiqueta": "50–60 min"
+        }
+      ]
+    },
+    {
+      "texto": "Deja enfriar, desmolda y espolvorea con azúcar flor antes de servir."
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 90,
+    "coccion": 90
+  },
+  "revisado_v2": false
 }

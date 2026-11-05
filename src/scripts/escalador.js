@@ -1,4 +1,11 @@
-import { extraerPorciones, formatearPorciones, escalarIngrediente } from '../lib/escalado.js';
+import {
+  extraerPorciones,
+  formatearPorciones,
+  escalarIngrediente,
+  escalarEstructurado,
+  formatearIngredienteEstructurado,
+  reemplazarMarcasIngredientes
+} from '../lib/escalado.js';
 
 /* =================================================================
    ESCALADOR.JS — Ajusta las cantidades de una receta
@@ -14,6 +21,8 @@ import { extraerPorciones, formatearPorciones, escalarIngrediente } from '../lib
    - Las funciones puras viven en ../lib/escalado.js (Fase 2)
    - FASE 3: guarda factorEscalado en #receta-data y dispara
      'recetario:escalado' para que Modo Cocina lea el estado actual.
+   - FASE 10: si receta.revisado_v2 === true y hay ingredientes_v2,
+     usa escalarEstructurado y reemplaza {ing:N} en pasos_v2.
    ================================================================= */
 (function () {
   'use strict';
@@ -68,25 +77,48 @@ import { extraerPorciones, formatearPorciones, escalarIngrediente } from '../lib
       if (factor === factorActual) return;
       factorActual = factor;
 
-      // 1. Calcular nuevos textos de ingredientes
-      var nuevos = dataOriginal.ingredientes.map(function (ing) {
-        return escalarIngrediente(ing, factor);
-      });
+      var esV2 = dataOriginal.revisado_v2 === true &&
+                 Array.isArray(dataOriginal.ingredientes_v2) &&
+                 dataOriginal.ingredientes_v2.length > 0;
 
-      // 2. Actualizar el DOM visible
+      var escalados = null;
+      var nuevos;
+
+      if (esV2) {
+        escalados = escalarEstructurado(dataOriginal.ingredientes_v2, factor);
+        nuevos = escalados.map(formatearIngredienteEstructurado);
+      } else {
+        nuevos = dataOriginal.ingredientes.map(function (ing) {
+          return escalarIngrediente(ing, factor);
+        });
+      }
+
+      // 1. Actualizar el DOM visible
       labels.forEach(function (span, i) {
         if (nuevos[i] != null) span.textContent = nuevos[i];
       });
 
-      // 3. Actualizar #receta-data (para modo cocina + añadir todos)
+      // 2. Actualizar #receta-data (para modo cocina + añadir todos)
       var nuevaData = JSON.parse(JSON.stringify(dataOriginal));
       nuevaData.ingredientes = nuevos;
+
+      if (esV2) {
+        nuevaData.ingredientes_v2 = escalados;
+        if (Array.isArray(nuevaData.pasos_v2)) {
+          nuevaData.pasos_v2 = nuevaData.pasos_v2.map(function (p) {
+            return Object.assign({}, p, {
+              texto: reemplazarMarcasIngredientes(p.texto, escalados)
+            });
+          });
+        }
+      }
+
       nuevaData.factorEscalado = factor;
       try {
         dataEl.textContent = JSON.stringify(nuevaData);
       } catch (e) {}
 
-      // 3b. FASE 3: avisar a otros componentes (Modo Cocina) del factor actual
+      // 3. FASE 3: avisar a otros componentes (Modo Cocina) del factor actual
       document.dispatchEvent(new CustomEvent('recetario:escalado', { detail: { factor: factor } }));
 
       // 4. Actualizar el resumen de porciones

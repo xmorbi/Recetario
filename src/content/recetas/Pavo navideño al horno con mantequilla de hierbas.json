@@ -53,5 +53,113 @@
   },
   "timers": [
     { "paso": 7, "minutos": 20, "etiqueta": "20 min" }
-  ]
+  ],
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pavo entero de 5 a 6 kg",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "mantequilla a temperatura ambiente",
+      "escalable": true
+    },
+    {
+      "cantidad": 4,
+      "unidad": "dientes",
+      "nombre": "ajo machacados",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharadas",
+      "nombre": "orégano",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "tomillo",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "romero",
+      "escalable": true
+    },
+    {
+      "cantidad": null,
+      "unidad": null,
+      "nombre": "Sal y pimienta",
+      "escalable": false
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "cebollas en cuartos",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "zanahorias en trozos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "vino blanco",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "caldo de pollo",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Mezcla la mantequilla con el ajo, orégano, tomillo y romero. Unta el pavo por dentro y por fuera, y sazona con sal y pimienta.",
+      "ingredientes": [1, 2, 3, 4, 5, 6, 7]
+    },
+    {
+      "texto": "Marina en frío al menos 12 horas (mejor 24), cubierto con papel plástico."
+    },
+    {
+      "texto": "Precalienta el horno a 180 °C. Rellena la cavidad del pavo con la cebolla y la zanahoria.",
+      "ingredientes": [8, 9]
+    },
+    {
+      "texto": "Pon el pavo en una fuente para horno y vierte el vino y el caldo. Cubre con papel aluminio.",
+      "ingredientes": [1, 10, 11]
+    },
+    {
+      "texto": "Hornea 2 horas cubierto, bañándolo cada 30 minutos con su jugo.",
+      "timers": [
+        { "minutos": 120, "etiqueta": "120 min" }
+      ]
+    },
+    {
+      "texto": "Retira el aluminio y hornea 1 hora más a 180 °C, hasta que la piel esté dorada y crujiente. El pavo está listo cuando el jugo sale claro al pinchar la parte más gruesa.",
+      "timers": [
+        { "minutos": 60, "etiqueta": "60 min" }
+      ]
+    },
+    {
+      "texto": "Deja reposar 20 minutos antes de cortar. Sirve con su jugo y las verduras asadas.",
+      "timers": [
+        { "minutos": 20, "etiqueta": "20 min" }
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 240,
+    "reposo": 720
+  },
+  "revisado_v2": true
 }

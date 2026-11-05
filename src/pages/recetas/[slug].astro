@@ -123,7 +123,19 @@ const schemaObj = {
   "recipeIngredient": receta.ingredientes,
   "recipeInstructions": receta.pasos.map((p, i) => ({ "@type": "HowToStep", "position": i + 1, "text": p }))
 };
-if (totalTimeISO) schemaObj.totalTime = totalTimeISO;
+
+// FASE 10: si hay tiempo_v2, usar prepTime / cookTime / restTime.
+// Si no, caer al totalTime derivado de receta.tiempo.
+if (receta.tiempo_v2) {
+  const tv = receta.tiempo_v2;
+  if (tv.preparacion) schemaObj.prepTime = 'PT' + tv.preparacion + 'M';
+  if (tv.coccion) schemaObj.cookTime = 'PT' + tv.coccion + 'M';
+  if (tv.reposo) schemaObj.restTime = 'PT' + tv.reposo + 'M';
+  const total = (tv.preparacion || 0) + (tv.coccion || 0) + (tv.reposo || 0);
+  if (total > 0) schemaObj.totalTime = 'PT' + total + 'M';
+} else if (totalTimeISO) {
+  schemaObj.totalTime = totalTimeISO;
+}
 
 const schema = JSON.stringify(schemaObj);
 
@@ -336,12 +348,7 @@ const ICON_LIBRO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" s
     import '../../scripts/print-marcados.js';
   </script>
 
-  <!-- BLOQUE 1: botón manual "Guardar para cocinar sin conexión".
-       Envía CACHE_RECIPE al SW con la URL de la página, la imagen y
-       TODOS los recursos ya cargados en esta página
-       (performance.getEntriesByType('resource')).
-       El SW responde CACHE_RECIPE_DONE con el conteo real de ok/fail;
-       el botón solo muestra "✅ Guardada" cuando el SW lo confirma. -->
+  <!-- BLOQUE 1: botón manual "Guardar para cocinar sin conexión". -->
   <script is:inline>
     (function () {
       if (!('serviceWorker' in navigator)) {
@@ -391,7 +398,6 @@ const ICON_LIBRO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" s
             var imgRel = btn.dataset.image || '';
             var imageUrl = imgRel ? new URL(imgRel, window.location.origin).href : null;
 
-            // Todos los recursos ya cargados por esta página, del mismo origen.
             var resources = performance.getEntriesByType('resource')
               .map(function (e) { return e.name; })
               .filter(function (n) {
@@ -412,7 +418,6 @@ const ICON_LIBRO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" s
               resources: resources
             });
 
-            // Red de seguridad: si el SW no responde, no dejar el botón colgado.
             setTimeout(function () {
               if (pending && pending.url === url) {
                 pending = null;

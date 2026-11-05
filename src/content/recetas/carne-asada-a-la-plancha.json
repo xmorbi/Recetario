@@ -48,5 +48,82 @@
     "refrigerador": "Hasta 2 días en recipiente hermético.",
     "congelador": "No recomendado, pierde jugosidad.",
     "recalentar": "Sartén a fuego alto 1 minuto por lado."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "bistecs de vacuno  de 200 g cada uno",
+      "nota": "lomo, posta o asiento",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "aceite",
+      "nota": "15 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": null,
+      "unidad": null,
+      "nombre": "Sal gruesa",
+      "escalable": true
+    },
+    {
+      "cantidad": null,
+      "unidad": null,
+      "nombre": "Pimienta negra molida",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "diente",
+      "nombre": "ajo",
+      "seccion": "Opcional",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Saca la carne del refrigerador 20 minutos antes de cocinar. Debe estar a temperatura ambiente.",
+      "timers": [
+        {
+          "minutos": 20,
+          "etiqueta": "20 min"
+        }
+      ]
+    },
+    {
+      "texto": "Calienta la plancha a fuego alto hasta que humee ligeramente. Agrega el aceite."
+    },
+    {
+      "texto": "Sala la carne justo antes de ponerla en la plancha."
+    },
+    {
+      "texto": "Cocina 2-3 minutos por lado para término medio. No la muevas mientras se cocina.",
+      "timers": [
+        {
+          "minutos": 2,
+          "etiqueta": "2–3 min"
+        }
+      ]
+    },
+    {
+      "texto": "Retira y deja reposar 5 minutos sobre una tabla antes de cortar.",
+      "timers": [
+        {
+          "minutos": 5,
+          "etiqueta": "5 min"
+        }
+      ]
+    },
+    {
+      "texto": "Sirve con sal gruesa y pimienta, y acompañamientos a gusto."
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 20
+  },
+  "revisado_v2": false
 }

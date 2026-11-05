@@ -1,0 +1,63 @@
+{
+  "titulo": "Pan de Pascua",
+  "categoria": "dulces",
+  "tags": [
+    "navidad",
+    "dulce",
+    "horno",
+    "frutas",
+    "tradicional",
+    "pan"
+  ],
+  "imagen": null,
+  "tiempo": "1 h 30 min + reposo",
+  "porciones": "1 molde grande (12 porciones)",
+  "dificultad": "media",
+  "tecnica": "Horno",
+  "ingredientes": [
+    "500 g de harina sin polvos de hornear",
+    "200 g de mantequilla a temperatura ambiente",
+    "200 g de azúcar",
+    "4 huevos",
+    "1 cucharadita de polvos de hornear",
+    "250 g de frutas confitadas picadas (naranja, limón, cereza)",
+    "150 g de pasas remojadas en ron o pisco",
+    "100 g de nueces picadas",
+    "1 cucharadita de canela molida",
+    "½ cucharadita de clavo de olor molido",
+    "½ cucharadita de jengibre molido",
+    "Ralladura de 1 naranja y 1 limón",
+    "1 cucharadita de esencia de vainilla",
+    "½ taza de leche si es necesario",
+    "Azúcar flor para decorar"
+  ],
+  "pasos": [
+    "Remoja las pasas en ron o pisco al menos 2 horas antes. Escurre y reserva.",
+    "Bate la mantequilla con el azúcar hasta obtener una crema. Agrega los huevos uno a uno.",
+    "Añade la vainilla, las ralladuras de naranja y limón, y las especias.",
+    "Incorpora la harina cernida con los polvos de hornear, mezclando suavemente.",
+    "Agrega las frutas confitadas, las pasas y las nueces. Si la masa está muy seca, añade leche cucharada a cucharada.",
+    "Vierte la mezcla en un molde engrasado y enharinado. Hornea a 170 °C por 50-60 minutos.",
+    "Deja enfriar, desmolda y espolvorea con azúcar flor antes de servir."
+  ],
+  "dato": "El Pan de Pascua llega a Chile con la tradición alemana. Antiguamente se horneaba en grandes cantidades y se guardaba hasta por semanas, porque el alcohol y las frutas confitadas lo conservaban. Es el rey de la mesa navideña.",
+  "errores": [
+    {
+      "error": "Queda seco como piedra",
+      "solucion": "Hornearlo demasiado o no remojar las pasas. Hornea con un recipiente de agua en el horno para generar vapor, y no excedas los 60 minutos."
+    },
+    {
+      "error": "Las frutas se van al fondo",
+      "solucion": "No enharinar las frutas. Pásalas por un poco de harina antes de incorporarlas para que se distribuyan parejo."
+    },
+    {
+      "error": "No sube o queda crudo en el centro",
+      "solucion": "Horno muy caliente o molde muy hondo. Hornea a 170°C (no más) y usa un molde de no más de 20 cm de alto."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 2 semanas envuelto en papel mantequilla y aluminio en un lugar fresco.",
+    "congelador": "Hasta 3 meses, bien envuelto.",
+    "recalentar": "A temperatura ambiente. Si lo quieres tibio, horno a 150°C por 10 minutos."
+  }
+}

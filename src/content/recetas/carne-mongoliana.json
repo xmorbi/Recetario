@@ -44,5 +44,72 @@
   ],
   "conservacion": {
     "refrigerador": "Servir de inmediato. 1 día."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 750,
+      "unidad": "g",
+      "nombre": "lomo o filete",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "ají verde grande",
+      "escalable": true
+    },
+    {
+      "cantidad": 4,
+      "unidad": null,
+      "nombre": "cebollines",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "aceite",
+      "nota": "15 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharadas",
+      "nombre": "salsa de soja",
+      "nota": "30 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": null,
+      "unidad": null,
+      "nombre": "Sal",
+      "escalable": true
+    },
+    {
+      "cantidad": null,
+      "unidad": null,
+      "nombre": "Pimienta",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Cortar la carne en trozos pequeños."
+    },
+    {
+      "texto": "Limpiar los cebollines y picarlos en trozos; limpiar el ají y cortarlo en tiras."
+    },
+    {
+      "texto": "Dorar la carne en el aceite previamente calentado en un wok o sartén amplia, evitando que se seque."
+    },
+    {
+      "texto": "Agregar los cebollines, el ají, sal y pimienta y revolver muy bien."
+    },
+    {
+      "texto": "Un minuto antes de servir agregar la salsa de soja."
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 20
+  },
+  "revisado_v2": false
 }

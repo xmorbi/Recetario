@@ -51,5 +51,90 @@
     "refrigerador": "Hasta 2 días en recipiente hermético, separados con papel.",
     "congelador": "Hasta 2 meses, ya cocidos y separados con papel.",
     "recalentar": "Sartén a fuego medio 30 segundos por lado, o microondas 20 segundos."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "huevos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "leche",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "harina sin polvos de hornear",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "azúcar",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "pizca",
+      "nombre": "sal",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "mantequilla derretida",
+      "escalable": true
+    },
+    {
+      "cantidad": null,
+      "unidad": null,
+      "nombre": "Manjar para rellenar",
+      "nota": "dulce de leche",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Bate los huevos con la leche, el azúcar y la sal.",
+      "ingredientes": [1, 2, 4, 5]
+    },
+    {
+      "texto": "Incorpora la harina cernida y mezcla hasta obtener una masa lisa. Agrega la mantequilla derretida.",
+      "ingredientes": [3, 6]
+    },
+    {
+      "texto": "Deja reposar la mezcla 15 minutos: esto hace que los panqueques no se rompan.",
+      "timers": [
+        { "minutos": 15, "etiqueta": "15 min" }
+      ]
+    },
+    {
+      "texto": "Calienta una sartén antiadherente a fuego medio. Unta con un poquito de mantequilla.",
+      "ingredientes": [6]
+    },
+    {
+      "texto": "Vierte un cucharón de mezcla y extiende girando la sartén. Cocina 1-2 minutos, hasta que los bordes se despeguen.",
+      "timers": [
+        { "minutos": 1, "etiqueta": "1–2 min" }
+      ]
+    },
+    {
+      "texto": "Da vuelta con una espátula y cocina 30 segundos más. Retira y repite con el resto.",
+      "timers": [
+        { "minutos": 0.5, "etiqueta": "30 s" }
+      ]
+    },
+    {
+      "texto": "Rellena con manjar, dobla en cuatro y sirve tibios. Si quieres, espolvorea azúcar flor.",
+      "ingredientes": [7]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 20
+  },
+  "revisado_v2": true
 }

@@ -52,5 +52,112 @@
   ],
   "conservacion": {
     "refrigerador": "Se pueden preparar con anticipación y mantener en el refrigerador hasta 1 día. Asar al momento de servir."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": "kg",
+      "nombre": "posta de paleta",
+      "escalable": true
+    },
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "longaniza",
+      "escalable": true
+    },
+    {
+      "cantidad": 250,
+      "unidad": "g",
+      "nombre": "salchichas",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "cebollas",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "tomates",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pimentón",
+      "escalable": true
+    },
+    {
+      "cantidad": 200,
+      "unidad": "g",
+      "nombre": "pickles",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "taza",
+      "nombre": "vinagre",
+      "nota": "125 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.25,
+      "unidad": "taza",
+      "nombre": "aceite",
+      "nota": "60 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "sal",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "pimienta",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "orégano",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Cortar la carne, longanizas y salchichas en trocitos de 2 ó 3 cm y dejar en adobo con el vinagre, aceite, sal, pimienta y orégano por 1 hora en el refrigerador.",
+      "timers": [
+        { "minutos": 60, "etiqueta": "60 min" }
+      ],
+      "ingredientes": [1, 2, 3, 8, 9, 10, 11, 12]
+    },
+    {
+      "texto": "Cortar la cebolla, tomates y pimentón en cascos medianos y aliñar.",
+      "ingredientes": [4, 5, 6]
+    },
+    {
+      "texto": "Preparar los fierritos alternando los ingredientes, cuidando de incluir mayor cantidad de trocitos de carne.",
+      "ingredientes": [1, 2, 3, 4, 5, 6, 7]
+    },
+    {
+      "texto": "Poner en la parrilla a fuego medio y girar los fierritos cada 2-3 minutos para que la carne se ase en forma pareja. Cocinar 15-20 minutos en total, hasta que la carne esté dorada por fuera y cocida por dentro.",
+      "timers": [
+        { "minutos": 15, "etiqueta": "15–20 min" }
+      ]
+    },
+    {
+      "texto": "Servir de preferencia con ensaladas surtidas y pebre."
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 20,
+    "reposo": 60
+  },
+  "revisado_v2": true
 }
