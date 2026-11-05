@@ -102,6 +102,43 @@ describe('interpretarComando — modo mise', () => {
   });
 });
 
+/* ============================================================
+   FASE 7 — guarda "no"
+   ============================================================ */
+describe('interpretarComando — guarda "no" (Fase 7)', () => {
+  it('"no está listo" → null', () => {
+    expect(interpretarComando('no está listo', false)).toBeNull();
+  });
+  it('"no listo" → null', () => {
+    expect(interpretarComando('no listo', false)).toBeNull();
+  });
+  it('"aún no" → null', () => {
+    expect(interpretarComando('aún no', false)).toBeNull();
+  });
+  it('"todavía no está" → null', () => {
+    expect(interpretarComando('todavía no está', false)).toBeNull();
+  });
+  it('"no, listo" → null (con coma)', () => {
+    expect(interpretarComando('no, listo', false)).toBeNull();
+  });
+  it('"no repetir" → null', () => {
+    expect(interpretarComando('no repetir', false)).toBeNull();
+  });
+  it('"no" → null', () => {
+    expect(interpretarComando('no', false)).toBeNull();
+  });
+  it('"no" en mise también bloquea', () => {
+    expect(interpretarComando('no listo', true)).toBeNull();
+    expect(interpretarComando('no está listo', true)).toBeNull();
+  });
+  it('"siguiente" sin "no" sigue funcionando', () => {
+    expect(interpretarComando('siguiente', false)).toBe('siguiente');
+  });
+  it('"cuanto falta" no contiene "no" como palabra, sigue siendo tiempo', () => {
+    expect(interpretarComando('cuanto falta', false)).toBe('tiempo');
+  });
+});
+
 describe('interpretarComando — entradas inválidas', () => {
   it('vacío / null / undefined / número → null', () => {
     expect(interpretarComando('', false)).toBeNull();

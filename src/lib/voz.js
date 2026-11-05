@@ -4,6 +4,8 @@
 
    Reglas:
    - Normaliza a minúsculas sin tildes (aPlano).
+   - Guarda: si la frase contiene "no" como palabra completa, devuelve
+     null. Evita que "no está listo" marque el paso como hecho.
    - Solo acepta frases de 3 palabras o menos.
    - Coincidencia por palabra completa (no substring).
    - Devuelve uno de: 'siguiente', 'atras', 'listo', 'repetir',
@@ -28,6 +30,11 @@ export function interpretarComando(texto, enMise) {
 
   var plano = aPlano(texto).replace(/\s+/g, ' ').trim();
   if (!plano) return null;
+
+  // FASE 7 (guarda "no"): si la frase contiene "no" como palabra
+  // completa, no es un comando válido. "no está listo", "aún no",
+  // "no repetir" → null. Ningún comando legítimo contiene "no".
+  if (/\bno\b/.test(plano)) return null;
 
   // Solo frases cortas: 3 palabras o menos.
   var palabras = plano.split(' ').filter(function (p) { return p.length > 0; });
