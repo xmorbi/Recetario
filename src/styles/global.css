@@ -443,7 +443,7 @@ footer .bandera{max-width:140px;margin:0 auto 1.2rem;border-radius:4px;overflow:
 .btn-favorito:hover{border-color:var(--rojo);color:var(--rojo);transform:scale(1.1)}
 .btn-favorito.activo{color:var(--rojo);border-color:var(--rojo);background:#fdf3e3}
 .recetas-grid-favoritos{display:flex;flex-direction:column;gap:2rem}
-.rating-container{display:flex;align-items:center;gap:.8rem;margin-bottom:1.5rem;padding:.8rem 1rem;background:var(--crema-osc);border-radius:99px;width:fit-content;border:1px solid var(--borde)}
+.rating-container{display:flex;flex-wrap:wrap;align-items:center;gap:.8rem;margin-bottom:1.5rem;padding:.8rem 1rem;background:var(--crema-osc);border-radius:99px;width:fit-content;max-width:100%;border:1px solid var(--borde)}
 .rating-stars{display:flex;gap:.2rem}
 /* FASE 2 (auditoría): stars ahora son <button> para teclado + lector de pantalla */
 .rating-star{cursor:pointer;color:#d1c4b8;transition:color .2s,transform .2s;display:flex;align-items:center;justify-content:center;background:none;border:none;padding:0;font:inherit;min-width:32px;min-height:32px;border-radius:6px}
@@ -451,7 +451,7 @@ footer .bandera{max-width:140px;margin:0 auto 1.2rem;border-radius:4px;overflow:
 .rating-star svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.5}
 .rating-star.hover,.rating-star.activa{color:var(--dorado);transform:scale(1.15)}
 .rating-star.activa svg{fill:var(--dorado)}
-.rating-text{font-size:.9rem;font-weight:600;color:var(--suave);min-width:11rem;white-space:nowrap}
+.rating-text{font-size:.9rem;font-weight:600;color:var(--suave);min-width:0;white-space:normal}
 .errores-box{background:#fff;border:1px solid var(--borde);border-left:5px solid #d97706;border-radius:var(--radio);padding:1.8rem;margin-top:2.5rem;box-shadow:var(--sombra-sm)}
 .errores-box h3{font-family:var(--fuente-titulos);color:#b45309;font-size:1.3rem;margin-bottom:1.2rem;border-bottom:none;padding-bottom:0;display:flex;align-items:center;gap:.5rem}
 .errores-box h3::before{content:"⚠️";font-size:1.5rem}
