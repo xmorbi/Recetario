@@ -38,7 +38,7 @@ describe('detectarTiempos', () => {
     expect(minutos(r)).toEqual([15]);
   });
 
-  it('ignora tiempos seguidos de "antes de"', () => {
+  it('ignora tiempos seguidos de "antes de" (word-num con min)', () => {
     const r = detectarTiempos('Un minuto antes de servir agregar la salsa de soja.');
     expect(r).toEqual([]);
   });
@@ -110,5 +110,96 @@ describe('detectarTiempos', () => {
     const r = detectarTiempos('Espera 30 s.');
     expect(r).toHaveLength(1);
     expect(r[0].minutos).toBe(0.5);
+  });
+});
+
+/* ============================================================
+   FASE 4 — duraciones compuestas
+   ============================================================ */
+describe('detectarTiempos — duraciones compuestas (Fase 4)', () => {
+  it('"1 hora y 30 minutos" → un solo timer de 90', () => {
+    expect(minutos(detectarTiempos('Cocina 1 hora y 30 minutos a fuego lento.'))).toEqual([90]);
+  });
+
+  it('"1 hora y media" → un solo timer de 90', () => {
+    expect(minutos(detectarTiempos('Cocina 1 hora y media a fuego lento.'))).toEqual([90]);
+  });
+
+  it('"2 horas y 15 minutos" → 135', () => {
+    expect(minutos(detectarTiempos('Hornea 2 horas y 15 minutos.'))).toEqual([135]);
+  });
+
+  it('"2 horas y media" → 150', () => {
+    expect(minutos(detectarTiempos('Hornea 2 horas y media.'))).toEqual([150]);
+  });
+
+  it('"una hora y media" (word-num) → 90', () => {
+    expect(minutos(detectarTiempos('Deja reposar una hora y media.'))).toEqual([90]);
+  });
+
+  it('"1 hora y cuarto" → 75', () => {
+    expect(minutos(detectarTiempos('Hornea 1 hora y cuarto.'))).toEqual([75]);
+  });
+
+  it('"1,5 horas y 30 minutos" → 120', () => {
+    expect(minutos(detectarTiempos('Cocina 1,5 horas y 30 minutos.'))).toEqual([120]);
+  });
+
+  it('"1 hora y 30 minutos" no se cuenta como dos timers', () => {
+    const r = detectarTiempos('Cocina 1 hora y 30 minutos.');
+    expect(r).toHaveLength(1);
+    expect(r[0].minutos).toBe(90);
+    expect(r[0].etiqueta).toBe('90 min');
+  });
+
+  it('duración compuesta + otro timer en el mismo paso', () => {
+    const r = detectarTiempos('Cocina 1 hora y 30 minutos. Luego hornea 20 minutos.');
+    expect(minutos(r)).toEqual([90, 20]);
+  });
+
+  it('"1 hora y 30 minutos antes de servir" mantiene el timer de 90', () => {
+    expect(minutos(detectarTiempos('Cocina 1 hora y 30 minutos antes de servir.'))).toEqual([90]);
+  });
+
+  it('"1 hora y 30 minutos antes de servir, retira" descarta el timer', () => {
+    expect(detectarTiempos('Cocina 1 hora y 30 minutos antes de servir, retira la olla.')).toEqual([]);
+  });
+});
+
+/* ============================================================
+   FASE 4 — regla "antes de" (espera vs. referencia temporal)
+   ============================================================ */
+describe('detectarTiempos — regla "antes de" (Fase 4)', () => {
+  it('"reposar 5 minutos antes de servir" mantiene el timer', () => {
+    expect(minutos(detectarTiempos('Deja reposar 5 minutos antes de servir.'))).toEqual([5]);
+  });
+
+  it('"refrigerar 4 horas antes de servir" mantiene el timer', () => {
+    expect(minutos(detectarTiempos('Refrigera 4 horas antes de servir.'))).toEqual([240]);
+  });
+
+  it('"reposar 5 minutos antes de servir la mesa" mantiene el timer', () => {
+    expect(minutos(detectarTiempos('Deja reposar 5 minutos antes de servir la mesa.'))).toEqual([5]);
+  });
+
+  it('"1 minuto antes de servir, agrega" descarta el timer (coma)', () => {
+    expect(detectarTiempos('1 minuto antes de servir, agrega la salsa.')).toEqual([]);
+  });
+
+  it('"1 minuto antes de servir agregar" descarta el timer (verbo)', () => {
+    expect(detectarTiempos('1 minuto antes de servir agregar la salsa.')).toEqual([]);
+  });
+
+  it('"5 minutos antes de servir sazona" descarta el timer (verbo)', () => {
+    expect(detectarTiempos('5 minutos antes de servir sazona al gusto.')).toEqual([]);
+  });
+
+  it('"antes de servir" al final no descarta el timer', () => {
+    const r = detectarTiempos('Hornea 20 minutos antes de servir.');
+    expect(minutos(r)).toEqual([20]);
+  });
+
+  it('"20 minutos antes de servir, corta" descarta el timer', () => {
+    expect(detectarTiempos('Hornea 20 minutos antes de servir, corta en porciones.')).toEqual([]);
   });
 });
