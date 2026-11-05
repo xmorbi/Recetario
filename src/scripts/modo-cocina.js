@@ -15,6 +15,9 @@
                  Nuevos comandos: pausa, reanudar, tiempo, ingredientes.
                  Eco visible 2 s en .mc-voz-eco. Sin alert() ni confirm():
                  avisos dentro del overlay y reinicio con doble toque (4 s).
+   FASE 8: al abrir el overlay, se envía un mensaje CACHE_RECIPE al
+           service worker para guardar la página de la receta y su imagen
+           en la caché recetas-guardadas-v1.
    FASE 1 (auditoría): fix guardarTTS + no auto-timer en mise en place
    FASE 3 (escalado): lee #receta-data en cada click (no al cargar),
                       y muestra aviso si hay factorEscalado != 1 con
@@ -1206,6 +1209,22 @@ import { interpretarComando } from '../lib/voz.js';
   // ---- Abrir ----
   function abrir(receta) {
     if (!receta) return;
+
+    // FASE 8: pedir al service worker que guarde esta receta y su imagen
+    // para que esté disponible sin conexión la próxima vez.
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.ready.then(function (reg) {
+        if (!reg.active) return;
+        var imgRel = receta.imagen || null;
+        var imgAbs = imgRel ? new URL(imgRel, window.location.origin).href : null;
+        reg.active.postMessage({
+          type: 'CACHE_RECIPE',
+          url: window.location.pathname,
+          imageUrl: imgAbs
+        });
+      }).catch(function () {});
+    }
+
     recetaActual = receta;
     botonOrigen = document.activeElement && document.activeElement !== document.body ? document.activeElement : null;
 
@@ -1508,7 +1527,6 @@ import { interpretarComando } from '../lib/voz.js';
 
     if (!skipConfirm && tieneProgreso) {
       if (reiniciarPendiente === null) {
-        // Primer toque: pedir confirmación
         reiniciarPendiente = setTimeout(function () {
           reiniciarPendiente = null;
           var btnT = overlayEl && overlayEl.querySelector('.mc-reiniciar');
@@ -1528,10 +1546,8 @@ import { interpretarComando } from '../lib/voz.js';
         mostrarAvisoOverlay('Toca otra vez para reiniciar');
         return;
       }
-      // Segundo toque: cae al reset
     }
 
-    // Limpiar confirmación pendiente si la hubiera
     if (reiniciarPendiente) {
       clearTimeout(reiniciarPendiente);
       reiniciarPendiente = null;

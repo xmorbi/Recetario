@@ -1815,3 +1815,54 @@ body.mc-bloqueado{overflow:hidden}
     box-shadow: 0 0 0 2px rgba(220,38,38,.35) !important;
   }
 }
+
+/* ===== MODO COCINA FASE 8: BOTÓN GUARDAR OFFLINE ===== */
+.btn-offline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 42px;
+  padding: 0 1.15rem;
+  border-radius: 99px;
+  border: 1.5px solid var(--borde);
+  background: #fff;
+  color: var(--tinta);
+  font-family: inherit;
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.btn-offline:hover {
+  border-color: var(--dorado);
+  color: var(--rojo-osc);
+  transform: translateY(-1px);
+}
+.btn-offline:disabled {
+  opacity: 0.7;
+  cursor: default;
+  transform: none;
+}
+.btn-offline:focus-visible {
+  outline: 2px solid var(--dorado);
+  outline-offset: 2px;
+}
+
+[data-theme="dark"] .btn-offline {
+  background: #1e1e1e;
+  color: var(--tinta);
+  border-color: #333;
+}
+[data-theme="dark"] .btn-offline:hover {
+  border-color: var(--dorado);
+  color: var(--dorado);
+}
+
+@media (max-width: 480px) {
+  .btn-offline {
+    padding: 0 1rem;
+    font-size: 0.88rem;
+  }
+}

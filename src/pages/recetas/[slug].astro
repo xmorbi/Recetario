@@ -189,6 +189,14 @@ const ICON_LIBRO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" s
       <div class="receta-acciones-top" style="margin-bottom:0;">
         <button type="button" class="btn-imprimir" onclick="window.print()">🖨️ Imprimir</button>
         <button type="button" class="btn-modo-cocina">👨‍🍳 Modo cocina</button>
+        <button
+          type="button"
+          class="btn-offline"
+          data-url={`/recetas/${slug}/`}
+          data-image={tieneImagenPropia ? '/' + receta.imagen : ''}
+        >
+          📥 Guardar para cocinar sin conexión
+        </button>
         <button type="button" class="btn-favorito" data-slug={slug} aria-label="Guardar en favoritos">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
         </button>
@@ -326,6 +334,35 @@ const ICON_LIBRO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" s
     import '../../scripts/favoritos.js';
     import '../../scripts/estrellas.js';
     import '../../scripts/print-marcados.js';
+  </script>
+
+  <!-- FASE 8: botón manual "Guardar para cocinar sin conexión".
+       Envía CACHE_RECIPE al service worker activo con la página y la imagen. -->
+  <script is:inline>
+    document.querySelectorAll('.btn-offline').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        if (!('serviceWorker' in navigator)) {
+          btn.textContent = 'Tu navegador no soporta modo offline';
+          btn.disabled = true;
+          return;
+        }
+        navigator.serviceWorker.ready.then(function (reg) {
+          if (!reg.active) return;
+          var url = btn.dataset.url;
+          var imgRel = btn.dataset.image || '';
+          var imageUrl = imgRel ? new URL(imgRel, window.location.origin).href : null;
+          reg.active.postMessage({
+            type: 'CACHE_RECIPE',
+            url: url,
+            imageUrl: imageUrl
+          });
+          btn.textContent = '✅ Guardada para sin conexión';
+          btn.disabled = true;
+        }).catch(function () {
+          btn.textContent = 'No se pudo guardar; reintenta';
+        });
+      });
+    });
   </script>
 
 </Layout>

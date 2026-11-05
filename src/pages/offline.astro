@@ -1,0 +1,68 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Sin conexión" noindex={true}>
+  <section class="offline-page">
+    <h1>Sin conexión</h1>
+    <p>No pudimos cargar esta página porque no hay internet en este momento.</p>
+    <p>Las recetas que guardaste para cocinar sin conexión siguen disponibles.</p>
+    <div class="offline-acciones">
+      <a href="/mis-recetas/" class="btn-cocina">Ir a Mis recetas</a>
+      <a href="/" class="btn-volver">Volver al inicio</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .offline-page {
+    max-width: 560px;
+    margin: 4rem auto;
+    padding: 0 1rem;
+    text-align: center;
+  }
+  .offline-page h1 {
+    font-family: var(--fuente-titulos);
+    color: var(--rojo-osc);
+    font-size: clamp(2rem, 6vw, 2.8rem);
+    margin-bottom: 1rem;
+  }
+  .offline-page p {
+    color: var(--suave);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  .offline-acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  .btn-cocina,
+  .btn-volver {
+    display: inline-block;
+    padding: 0.8rem 1.4rem;
+    border-radius: 99px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .btn-cocina {
+    background: var(--rojo);
+    color: #fff;
+  }
+  .btn-cocina:hover {
+    background: var(--rojo-osc);
+    transform: translateY(-2px);
+  }
+  .btn-volver {
+    background: var(--crema-osc);
+    color: var(--tinta);
+    border: 1.5px solid var(--borde);
+  }
+  .btn-volver:hover {
+    background: var(--crema);
+    transform: translateY(-2px);
+  }
+</style>
