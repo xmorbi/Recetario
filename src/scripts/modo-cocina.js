@@ -7,30 +7,15 @@
    FASE 5: Text-to-Speech (TTS) y Comandos de Voz (Manos Libres)
    FASE 6: Recordatorio visual de comandos y Auto-Timer con cuenta regresiva
    FASE 7 (mise): Comandos de voz específicos para mise en place
-                 (listo / siguiente / atrás / repetir / empezar)
-   FASE 7 (fix): "listo" por voz marca + avanza siempre (marcarYAvanzar)
-                 autoAvanzar default = true (el toggle del panel lo desactiva)
-   FASE 7 (voz fiable): interpretarComando (src/lib/voz.js) reemplaza los
-                 includes() frágiles. Frases > 3 palabras se ignoran.
-                 Nuevos comandos: pausa, reanudar, tiempo, ingredientes.
-                 Eco visible 2 s en .mc-voz-eco. Sin alert() ni confirm():
-                 avisos dentro del overlay y reinicio con doble toque (4 s).
-   FASE 8: al abrir el overlay, se envía un mensaje CACHE_RECIPE al
-           service worker para guardar la página de la receta y su imagen
-           en la caché recetas-guardadas-v1.
-   FASE 1 (auditoría): fix guardarTTS + no auto-timer en mise en place
-   FASE 3 (escalado): lee #receta-data en cada click (no al cargar),
-                      y muestra aviso si hay factorEscalado != 1 con
-                      cantidades en los pasos.
-   FASE 4 (tiempos): usa detectarTiempos (varios timers por paso) y
-                     permite override manual por receta vía receta.timers.
-   FASE 5 (auto-timer): sin duplicados, botón no se traba, click cancela,
-                        yaCorriendo ignora estado, reiniciar limpia timers,
-                        y no relanza auto-timer en pasos ya visitados.
-   FASE 6 (UX táctil y legibilidad): tamaños 48/56, A−/A+ con 3 niveles
-                     (localStorage mc_fs), timer dentro del paso activo,
-                     swipe horizontal con pointer events, prefers-reduced-motion,
-                     safe-area + 100dvh.
+   FASE 7 (voz fiable): interpretarComando, eco, pausa/reanudar/tiempo/ingredientes,
+                 sin alert() ni confirm() (reinicio con doble toque).
+   FASE 8: al abrir el overlay, se envía CACHE_RECIPE al service worker
+           para guardar la página de la receta y su imagen.
+   FASE 9: alarma visible a pantalla completa cuando termina un timer;
+           el aviso llega aunque se cambie de app (al volver a la pestaña);
+           notificación del navegador si el timer termina con document.hidden;
+           timers que expiraron con el overlay cerrado se marcan como
+           terminados y suenan una sola vez al abrir.
    ================================================================= */
 
 import { detectarTiempos } from '../lib/tiempos.js';
@@ -74,6 +59,10 @@ import { interpretarComando } from '../lib/voz.js';
   var avisoTimeout = null;
   var reiniciarPendiente = null;
 
+  // FASE 9: alarma visible + loop de sonido
+  var alarmaTimer = null;
+  var alarmaLoopTimeout = null;
+
   // FASE 6: tamaño de letra del paso
   var NIVELES_FS = [1, 1.25, 1.5];
   var fsNivel = 0;
@@ -87,8 +76,10 @@ import { interpretarComando } from '../lib/voz.js';
   var STORAGE_TTS = 'mc_tts';
   var STORAGE_AUTOTIMER = 'mc_autotimer';
   var STORAGE_FS = 'mc_fs';
+  var STORAGE_NOTIF_PEDIDO = 'mc_notif_pedido';
   var AUTO_ADVANCE_DELAY = 400;
   var TICK_MS = 250;
+  var ALARMA_REPETIR_MS = 3000;
 
   var ETIQUETAS_VOZ = {
     'siguiente': 'siguiente',
@@ -122,7 +113,6 @@ import { interpretarComando } from '../lib/voz.js';
     setTimeout(function () { live.textContent = msg; }, 50);
   }
 
-  // FASE 7: eco de lo que se entendió (2 s)
   function mostrarEcoVoz(cmd) {
     if (!overlayEl) return;
     var eco = overlayEl.querySelector('.mc-voz-eco');
@@ -133,7 +123,6 @@ import { interpretarComando } from '../lib/voz.js';
     ecoTimeout = setTimeout(function () { eco.hidden = true; }, 2000);
   }
 
-  // FASE 7: aviso dentro del overlay (reemplaza alert/confirm)
   function mostrarAvisoOverlay(msg) {
     if (!overlayEl) return;
     var aviso = overlayEl.querySelector('.mc-aviso-voz');
@@ -204,7 +193,6 @@ import { interpretarComando } from '../lib/voz.js';
     }
   }
 
-  // FASE 6: tamaño de letra del paso
   function cargarFs() {
     try {
       var v = parseFloat(localStorage.getItem(STORAGE_FS));
@@ -334,7 +322,6 @@ import { interpretarComando } from '../lib/voz.js';
     };
   }
 
-  // FASE 7: leer tiempo restante del timer activo en el paso actual
   function formatTiempoVoz(ms) {
     var totalSec = Math.max(0, Math.floor(ms / 1000));
     var h = Math.floor(totalSec / 3600);
@@ -377,7 +364,6 @@ import { interpretarComando } from '../lib/voz.js';
     leerTexto(msgOk, true);
   }
 
-  // FASE 7: leer lista de ingredientes
   function leerIngredientes() {
     var ings = (recetaActual && recetaActual.ingredientes) || [];
     if (ings.length === 0) {
@@ -488,6 +474,7 @@ import { interpretarComando } from '../lib/voz.js';
   function guardarAutoAvanzar(v) { try { localStorage.setItem(STORAGE_AUTOAVANZAR, v ? 'true' : 'false'); } catch (e) {} }
 
   function initAudio() { if (audioCtx) return; try { var Ctx = window.AudioContext || window.webkitAudioContext; if (Ctx) audioCtx = new Ctx(); } catch (e) { audioCtx = null; } }
+
   function playDing() {
     if (!audioCtx || !sonidoActivo) return;
     if (audioCtx.state === 'suspended') audioCtx.resume().catch(function () {});
@@ -503,6 +490,7 @@ import { interpretarComando } from '../lib/voz.js';
     }
     golpe(); setTimeout(golpe, 1400);
   }
+
   function playTick() {
     if (!audioCtx || !sonidoActivo) return;
     if (audioCtx.state === 'suspended') audioCtx.resume().catch(function () {});
@@ -511,6 +499,7 @@ import { interpretarComando } from '../lib/voz.js';
     gain.gain.setValueAtTime(0, ahora); gain.gain.linearRampToValueAtTime(0.15, ahora + 0.01); gain.gain.exponentialRampToValueAtTime(0.001, ahora + 0.15);
     osc.connect(gain); gain.connect(audioCtx.destination); osc.start(ahora); osc.stop(ahora + 0.2);
   }
+
   function guardarSonido(v) { try { localStorage.setItem(STORAGE_SONIDO, v ? 'true' : 'false'); } catch (e) {} }
 
   function formatTiempo(ms) {
@@ -522,7 +511,13 @@ import { interpretarComando } from '../lib/voz.js';
   function guardarTimers() {
     if (!recetaSlug) return;
     try {
-      var data = timers.map(function (t) { return { id: t.id, paso: t.paso, duracionTotal: t.duracionTotal, finTimestamp: t.finTimestamp, restanteAlPausar: t.restanteAlPausar, estado: t.estado, etiqueta: t.etiqueta }; });
+      var data = timers.map(function (t) {
+        return {
+          id: t.id, paso: t.paso, duracionTotal: t.duracionTotal,
+          finTimestamp: t.finTimestamp, restanteAlPausar: t.restanteAlPausar,
+          estado: t.estado, etiqueta: t.etiqueta, yaAlertado: !!t.yaAlertado
+        };
+      });
       localStorage.setItem(STORAGE_TIMERS + recetaSlug, JSON.stringify(data));
     } catch (e) {}
   }
@@ -535,17 +530,41 @@ import { interpretarComando } from '../lib/voz.js';
       var ahora = Date.now();
       return data.map(function (t) {
         var estado = t.estado;
-        if (estado === 'corriendo' && t.finTimestamp && t.finTimestamp <= ahora) estado = 'terminado';
-        return { id: t.id, paso: t.paso, duracionTotal: t.duracionTotal, finTimestamp: t.finTimestamp, restanteAlPausar: t.restanteAlPausar || 0, estado: estado, etiqueta: t.etiqueta, yaAlertado: estado === 'terminado' };
+        // FASE 9: si el timer estaba corriendo y expiró mientras el overlay estaba cerrado,
+        // se marca como terminado PERO con yaAlertado=false para que suene una vez al abrir.
+        if (estado === 'corriendo' && t.finTimestamp && t.finTimestamp <= ahora) {
+          estado = 'terminado';
+          return {
+            id: t.id, paso: t.paso, duracionTotal: t.duracionTotal,
+            finTimestamp: t.finTimestamp, restanteAlPausar: t.restanteAlPausar || 0,
+            estado: estado, etiqueta: t.etiqueta, yaAlertado: false
+          };
+        }
+        return {
+          id: t.id, paso: t.paso, duracionTotal: t.duracionTotal,
+          finTimestamp: t.finTimestamp, restanteAlPausar: t.restanteAlPausar || 0,
+          estado: estado, etiqueta: t.etiqueta, yaAlertado: t.yaAlertado === true
+        };
       });
     } catch (e) { return []; }
   }
 
   function iniciarTimer(paso, minutos) {
     if (minutos <= 0) return;
-    initAudio(); var ahora = Date.now();
-    timers.push({ id: 't_' + ahora + '_' + Math.random().toString(36).slice(2, 7), paso: paso, duracionTotal: minutos * 60 * 1000, finTimestamp: ahora + minutos * 60 * 1000, restanteAlPausar: 0, estado: 'corriendo', etiqueta: 'Paso ' + (paso + 1) + ' — ' + minutos + ' min', yaAlertado: false });
-    guardarTimers(); playTick(); renderTimers(); anunciar('Temporizador iniciado: ' + minutos + ' minutos');
+    initAudio();
+    var ahora = Date.now();
+    timers.push({
+      id: 't_' + ahora + '_' + Math.random().toString(36).slice(2, 7),
+      paso: paso,
+      duracionTotal: minutos * 60 * 1000,
+      finTimestamp: ahora + minutos * 60 * 1000,
+      restanteAlPausar: 0,
+      estado: 'corriendo',
+      etiqueta: 'Paso ' + (paso + 1) + ' — ' + minutos + ' min',
+      yaAlertado: false
+    });
+    guardarTimers(); playTick(); renderTimers();
+    anunciar('Temporizador iniciado: ' + minutos + ' minutos');
   }
 
   function pausarTimer(id) {
@@ -568,14 +587,114 @@ import { interpretarComando } from '../lib/voz.js';
   }
 
   function cancelarTimer(id) {
-    timers = timers.filter(function (x) { return x.id !== id; }); guardarTimers(); renderTimers(); anunciar('Temporizador cancelado');
+    timers = timers.filter(function (x) { return x.id !== id; });
+    guardarTimers(); renderTimers(); anunciar('Temporizador cancelado');
+  }
+
+  // ---- FASE 9: alarma y notificación ----
+  function minutosDesdeFin(timer) {
+    if (!timer || !timer.finTimestamp) return 0;
+    var deltaMs = Date.now() - timer.finTimestamp;
+    if (deltaMs < 60000) return 0;
+    return Math.floor(deltaMs / 60000);
+  }
+
+  function iniciarLoopAlarma() {
+    detenerLoopAlarma();
+    function loop() {
+      if (!alarmaTimer) return;
+      playDing();
+      alarmaLoopTimeout = setTimeout(loop, ALARMA_REPETIR_MS);
+    }
+    playDing();
+    alarmaLoopTimeout = setTimeout(loop, ALARMA_REPETIR_MS);
+  }
+
+  function detenerLoopAlarma() {
+    if (alarmaLoopTimeout) { clearTimeout(alarmaLoopTimeout); alarmaLoopTimeout = null; }
+  }
+
+  function mostrarAlarma(timer) {
+    if (!overlayEl) return;
+    var alarma = overlayEl.querySelector('.mc-alarma');
+    if (!alarma) return;
+
+    alarma.querySelector('.mc-alarma-paso').textContent = 'Paso ' + (timer.paso + 1);
+    alarma.querySelector('.mc-alarma-etiqueta').textContent = timer.etiqueta || '';
+
+    var deltaMin = minutosDesdeFin(timer);
+    var texto = deltaMin >= 1
+      ? 'Se acabó el tiempo (hace ' + deltaMin + (deltaMin === 1 ? ' minuto' : ' minutos') + ')'
+      : 'Se acabó el tiempo';
+    alarma.querySelector('.mc-alarma-texto').textContent = texto;
+
+    alarma.hidden = false;
+    alarmaTimer = timer;
+
+    var btnDetener = alarma.querySelector('.mc-alarma-detener');
+    if (btnDetener) {
+      try { btnDetener.focus({ preventScroll: true }); } catch (e) { btnDetener.focus(); }
+    }
+
+    iniciarLoopAlarma();
+  }
+
+  function detenerAlarma() {
+    detenerLoopAlarma();
+    if (overlayEl) {
+      var alarma = overlayEl.querySelector('.mc-alarma');
+      if (alarma) alarma.hidden = true;
+    }
+    alarmaTimer = null;
+  }
+
+  function mostrarNotificacion(timer, msg) {
+    if (!('Notification' in window) || Notification.permission !== 'granted') return;
+    if (!('serviceWorker' in navigator)) return;
+    navigator.serviceWorker.ready.then(function (reg) {
+      reg.showNotification('Se acabó el tiempo — ' + timer.etiqueta, {
+        body: msg,
+        icon: '/icons/icon-192.png',
+        badge: '/icons/icon-192.png',
+        tag: 'mc-timer-' + timer.id,
+        requireInteraction: true
+      });
+    }).catch(function () {});
+  }
+
+  function pedirPermisoNotif() {
+    if (!('Notification' in window)) {
+      anunciar('Este navegador no soporta notificaciones');
+      return;
+    }
+    Notification.requestPermission().then(function (permiso) {
+      try { localStorage.setItem(STORAGE_NOTIF_PEDIDO, 'true'); } catch (e) {}
+      if (permiso === 'granted') anunciar('Notificaciones activadas');
+      else if (permiso === 'denied') anunciar('Notificaciones bloqueadas por el navegador');
+      else anunciar('Notificaciones no permitidas');
+      renderTimers();
+    });
   }
 
   function dispararAlerta(timer) {
-    playDing();
-    if ('vibrate' in navigator) { try { navigator.vibrate([200, 100, 200, 100, 400]); } catch (e) {} }
-    anunciar('Temporizador finalizado: ' + timer.etiqueta);
-    if (ttsActivo) leerTexto('El temporizador del ' + timer.etiqueta + ' ha terminado');
+    var deltaMin = minutosDesdeFin(timer);
+    var msg;
+    if (deltaMin >= 1) {
+      msg = 'El temporizador del ' + timer.etiqueta + ' terminó hace ' + deltaMin + (deltaMin === 1 ? ' minuto' : ' minutos');
+    } else {
+      msg = 'Temporizador finalizado: ' + timer.etiqueta;
+    }
+    anunciar(msg);
+    if (ttsActivo) leerTexto(msg);
+
+    // Alarma visual + loop de sonido (funciona aunque el overlay esté oculto:
+    // al volver a la pestaña, la alarma se ve y el loop sigue activo)
+    mostrarAlarma(timer);
+
+    // Notificación solo si el timer termina con la pestaña oculta
+    if (document.hidden) {
+      mostrarNotificacion(timer, msg);
+    }
   }
 
   function tickTimers() {
@@ -585,6 +704,12 @@ import { interpretarComando } from '../lib/voz.js';
       if (t.estado === 'corriendo' && t.finTimestamp <= ahora) {
         t.estado = 'terminado'; cambioEstado = true;
         if (!t.yaAlertado) { t.yaAlertado = true; dispararAlerta(t); }
+      } else if (t.estado === 'terminado' && !t.yaAlertado) {
+        // Timer cargado del storage que terminó con el overlay cerrado:
+        // disparar la alerta ahora (una sola vez) al abrir el overlay.
+        t.yaAlertado = true;
+        cambioEstado = true;
+        dispararAlerta(t);
       }
     });
     if (cambioEstado) { guardarTimers(); renderTimers(); return; }
@@ -595,8 +720,8 @@ import { interpretarComando } from '../lib/voz.js';
     });
   }
 
-  // FASE 6: helper de chip de temporizador (paso activo o franja)
-  function renderTimerChip(t, enPaso) {
+  // FASE 6 + 9: chip con aviso bajo el primer timer activo
+  function renderTimerChip(t, enPaso, esPrimerActivo) {
     var ahora = Date.now();
     var restante = t.estado === 'corriendo' ? Math.max(0, t.finTimestamp - ahora) : (t.estado === 'pausado' ? t.restanteAlPausar : 0);
     var clase = 'mc-timer-chip' + (t.estado === 'terminado' ? ' mc-timer-terminado' : (t.estado === 'pausado' ? ' mc-timer-pausado' : ''));
@@ -607,7 +732,19 @@ import { interpretarComando } from '../lib/voz.js';
     botones += '<button type="button" class="mc-timer-btn mc-timer-btn-cerrar" data-action="cancelar" data-id="' + t.id + '" aria-label="Cancelar temporizador">×</button>';
     var icono = t.estado === 'terminado' ? '🔔' : '⏱';
     var labelHtml = enPaso ? '' : '<span class="mc-timer-label">Paso ' + (t.paso + 1) + '</span>';
-    return '<div class="' + clase + '" data-id="' + t.id + '"><span class="mc-timer-icono" aria-hidden="true">' + icono + '</span>' + labelHtml + '<span class="mc-timer-tiempo">' + formatTiempo(restante) + '</span><div class="mc-timer-acciones">' + botones + '</div></div>';
+    var chip = '<div class="' + clase + '" data-id="' + t.id + '"><span class="mc-timer-icono" aria-hidden="true">' + icono + '</span>' + labelHtml + '<span class="mc-timer-tiempo">' + formatTiempo(restante) + '</span><div class="mc-timer-acciones">' + botones + '</div></div>';
+
+    var extras = '';
+    if (esPrimerActivo) {
+      extras += '<div class="mc-timer-aviso">Para que suene, deja esta pantalla abierta</div>';
+      var permisoDefault = ('Notification' in window) && Notification.permission === 'default';
+      var yaPedido = false;
+      try { yaPedido = localStorage.getItem(STORAGE_NOTIF_PEDIDO) === 'true'; } catch (e) {}
+      if (permisoDefault && !yaPedido && t.estado === 'corriendo') {
+        extras += '<button type="button" class="mc-timer-notif-btn" data-action="pedir-notif">🔔 Avisarme cuando termine</button>';
+      }
+    }
+    return chip + extras;
   }
 
   function renderTimers() {
@@ -617,14 +754,24 @@ import { interpretarComando } from '../lib/voz.js';
     var strip = overlayEl.querySelector('.mc-timers');
     var delPaso = timers.filter(function (t) { return t.paso === pasoActual; });
     var otros = timers.filter(function (t) { return t.paso !== pasoActual; });
+
+    // FASE 9: el aviso "Para que suene…" y el botón de notificación
+    // se muestran bajo el primer timer que esté activo (corriendo o pausado).
+    var primerTimerActivo = timers.find(function (t) { return t.estado !== 'terminado'; });
+    var primerId = primerTimerActivo ? primerTimerActivo.id : null;
+
     if (pasoCont && delPaso.length > 0) {
-      pasoCont.innerHTML = delPaso.map(function (t) { return renderTimerChip(t, true); }).join('');
+      pasoCont.innerHTML = delPaso.map(function (t) {
+        return renderTimerChip(t, true, t.id === primerId);
+      }).join('');
       pasoCont.hidden = false;
     }
     if (!strip) return;
     if (otros.length === 0) { strip.innerHTML = ''; strip.hidden = true; return; }
     strip.hidden = false;
-    strip.innerHTML = otros.map(function (t) { return renderTimerChip(t, false); }).join('');
+    strip.innerHTML = otros.map(function (t) {
+      return renderTimerChip(t, false, t.id === primerId);
+    }).join('');
   }
 
   async function solicitarWakeLock() { try { if ('wakeLock' in navigator && !WAKE_LOCK) { WAKE_LOCK = await navigator.wakeLock.request('screen'); WAKE_LOCK.addEventListener('release', function () { WAKE_LOCK = null; }); } } catch (e) {} }
@@ -792,7 +939,6 @@ import { interpretarComando } from '../lib/voz.js';
     }
   }
 
-  // ================= FASE 7: Navegación de tareas en mise =================
   function buscarTareaPendiente(desde) {
     for (var i = desde; i < miseHechas.length; i++) {
       if (!miseHechas[i]) return i;
@@ -872,10 +1018,7 @@ import { interpretarComando } from '../lib/voz.js';
     if (ttsActivo) leerTexto(msg);
   }
 
-  function siguienteTareaMise() {
-    if (!prep) return;
-    avanzarTareaMise();
-  }
+  function siguienteTareaMise() { if (!prep) return; avanzarTareaMise(); }
 
   function anteriorTareaMise() {
     if (!prep) return;
@@ -919,10 +1062,7 @@ import { interpretarComando } from '../lib/voz.js';
     actualizarMiseProgreso(false);
     if (miseActual < 0) {
       var pendiente = buscarTareaPendiente(0);
-      if (pendiente >= 0) {
-        miseActual = pendiente;
-        actualizarTareaActualMise();
-      }
+      if (pendiente >= 0) { miseActual = pendiente; actualizarTareaActualMise(); }
     }
   }
 
@@ -939,9 +1079,7 @@ import { interpretarComando } from '../lib/voz.js';
     setTimeout(function () {
       if (!overlayEl || !enMise) return;
       var f;
-      if (miseActual >= 0) {
-        f = overlayEl.querySelector('.mc-mise-check[data-id="' + miseActual + '"]');
-      }
+      if (miseActual >= 0) f = overlayEl.querySelector('.mc-mise-check[data-id="' + miseActual + '"]');
       if (!f) f = overlayEl.querySelector('.mc-mise-empezar');
       if (f) f.focus();
     }, 60);
@@ -951,9 +1089,7 @@ import { interpretarComando } from '../lib/voz.js';
     if (!overlayEl || !prep || prep.tareas.length === 0) return;
     if ('speechSynthesis' in window) window.speechSynthesis.cancel();
     limpiarAutoTimer();
-    if (miseActual < 0 || miseHechas[miseActual]) {
-      miseActual = buscarTareaPendiente(0);
-    }
+    if (miseActual < 0 || miseHechas[miseActual]) miseActual = buscarTareaPendiente(0);
     enMise = true;
     overlayEl.classList.remove('completado');
     overlayEl.classList.add('mise');
@@ -970,7 +1106,6 @@ import { interpretarComando } from '../lib/voz.js';
     }
     anunciar(msg);
     if (ttsActivo) leerTexto(msg);
-
     enfocarMise();
   }
 
@@ -1063,7 +1198,16 @@ import { interpretarComando } from '../lib/voz.js';
         '<button type="button" class="mc-prev" aria-label="Paso anterior">← <span>Anterior</span></button>' +
         '<span class="mc-contador" aria-live="polite">1 / 1</span>' +
         '<button type="button" class="mc-next" aria-label="Paso siguiente"><span>Siguiente</span> →</button>' +
-      '</nav>';
+      '</nav>' +
+      '<div class="mc-alarma" hidden role="alertdialog" aria-labelledby="mc-alarma-texto">' +
+        '<div class="mc-alarma-contenido">' +
+          '<div class="mc-alarma-icono" aria-hidden="true">⏰</div>' +
+          '<div class="mc-alarma-paso"></div>' +
+          '<h2 id="mc-alarma-texto" class="mc-alarma-texto">Se acabó el tiempo</h2>' +
+          '<div class="mc-alarma-etiqueta"></div>' +
+          '<button type="button" class="mc-alarma-detener" data-action="detener-alarma">Detener</button>' +
+        '</div>' +
+      '</div>';
 
     document.body.appendChild(overlayEl);
 
@@ -1072,7 +1216,6 @@ import { interpretarComando } from '../lib/voz.js';
     overlayEl.querySelector('.mc-next').addEventListener('click', pasoSiguiente);
     overlayEl.querySelector('.mc-reiniciar').addEventListener('click', function () { reiniciarProgreso(false); });
 
-    // FASE 6: botones A− / A+
     overlayEl.querySelector('.mc-fs-menos').addEventListener('click', function () { cambiarFs(-1); });
     overlayEl.querySelector('.mc-fs-mas').addEventListener('click', function () { cambiarFs(1); });
 
@@ -1126,10 +1269,7 @@ import { interpretarComando } from '../lib/voz.js';
       if (marcar) { var idx = parseInt(marcar.getAttribute('data-paso'), 10); if (!isNaN(idx)) marcarHecho(idx, !pasosHechos[idx]); return; }
       var iniciarBtn = e.target.closest('.mc-timer-iniciar');
       if (iniciarBtn) {
-        if (countdownBtn === iniciarBtn) {
-          limpiarAutoTimer();
-          return;
-        }
+        if (countdownBtn === iniciarBtn) { limpiarAutoTimer(); return; }
         limpiarAutoTimer();
         var mins = parseFloat(iniciarBtn.getAttribute('data-minutos')); var pasoIdx = parseInt(iniciarBtn.getAttribute('data-paso'), 10);
         if (!isNaN(mins) && !isNaN(pasoIdx)) iniciarTimer(pasoIdx, mins);
@@ -1142,13 +1282,20 @@ import { interpretarComando } from '../lib/voz.js';
       }
     });
 
+    // FASE 9: botón Detener de la alarma + botón "Avisarme cuando termine"
+    overlayEl.addEventListener('click', function (e) {
+      var detener = e.target.closest('[data-action="detener-alarma"]');
+      if (detener) { detenerAlarma(); return; }
+      var notifBtn = e.target.closest('[data-action="pedir-notif"]');
+      if (notifBtn) { pedirPermisoNotif(); return; }
+    });
+
     overlayEl.querySelector('.mc-timers').addEventListener('click', function (e) {
       var btn = e.target.closest('.mc-timer-btn'); if (!btn) return;
       var action = btn.getAttribute('data-action'); var id = btn.getAttribute('data-id');
       if (action === 'pausar') pausarTimer(id); else if (action === 'reanudar') reanudarTimer(id); else if (action === 'agregar') agregarTiempo(id, 1); else if (action === 'cancelar') cancelarTimer(id);
     });
 
-    // FASE 6: Swipe horizontal en .mc-contenido
     var contenidoEl = overlayEl.querySelector('.mc-contenido');
     var swipeStart = null;
     contenidoEl.addEventListener('pointerdown', function (e) {
@@ -1191,9 +1338,7 @@ import { interpretarComando } from '../lib/voz.js';
   function pasosTienenCantidades(pasos) {
     if (!Array.isArray(pasos)) return false;
     var re = /(\d\s*(?:g|kg|ml|l)\b)|(\b(?:tazas?|cucharadas?|cucharaditas?)\b)/i;
-    return pasos.some(function (p) {
-      return typeof p === 'string' && re.test(p);
-    });
+    return pasos.some(function (p) { return typeof p === 'string' && re.test(p); });
   }
 
   // ---- FASE 4: timers manuales por receta ----
@@ -1211,17 +1356,12 @@ import { interpretarComando } from '../lib/voz.js';
     if (!receta) return;
 
     // FASE 8: pedir al service worker que guarde esta receta y su imagen
-    // para que esté disponible sin conexión la próxima vez.
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.ready.then(function (reg) {
         if (!reg.active) return;
         var imgRel = receta.imagen || null;
         var imgAbs = imgRel ? new URL(imgRel, window.location.origin).href : null;
-        reg.active.postMessage({
-          type: 'CACHE_RECIPE',
-          url: window.location.pathname,
-          imageUrl: imgAbs
-        });
+        reg.active.postMessage({ type: 'CACHE_RECIPE', url: window.location.pathname, imageUrl: imgAbs });
       }).catch(function () {});
     }
 
@@ -1241,17 +1381,22 @@ import { interpretarComando } from '../lib/voz.js';
     microActivo = false;
     autoTimerLanzados.clear();
 
+    // FASE 9: resetear el estado de la alarma al abrir
+    alarmaTimer = null;
+    detenerLoopAlarma();
+
     initAudio();
     initTTS();
 
     var ov = crearOverlay();
-    // FASE 6: aplicar nivel de letra guardado
     cargarFs();
     aplicarFs();
     ov.classList.remove('completado');
     ov.querySelector('.mc-titulo').textContent = receta.titulo || 'Receta';
 
-    // FASE 3: aviso de escalado
+    var alarmaEl = ov.querySelector('.mc-alarma');
+    if (alarmaEl) alarmaEl.hidden = true;
+
     var avisoEscala = ov.querySelector('.mc-aviso-escala');
     if (avisoEscala) {
       var factorEsc = receta.factorEscalado;
@@ -1368,6 +1513,10 @@ import { interpretarComando } from '../lib/voz.js';
       else if (ov.classList.contains('completado')) { var firstBtn = ov.querySelector('.mc-completado-acciones .mc-btn-accion'); if (firstBtn) firstBtn.focus(); }
       else { var next = ov.querySelector('.mc-next'); if (next) next.focus(); }
     }, 100);
+
+    // FASE 9: en el siguiente tick, disparar timers que expiraron
+    // con el overlay cerrado y quedaron con yaAlertado=false.
+    setTimeout(function () { tickTimers(); }, 300);
   }
 
   function cerrar() {
@@ -1375,6 +1524,7 @@ import { interpretarComando } from '../lib/voz.js';
     if ('speechSynthesis' in window) window.speechSynthesis.cancel();
     if (recognition && microActivo) { try { recognition.stop(); } catch(e) {} microActivo = false; }
     limpiarAutoTimer();
+    detenerAlarma();
     if (reiniciarPendiente) { clearTimeout(reiniciarPendiente); reiniciarPendiente = null; }
     if (ecoTimeout) { clearTimeout(ecoTimeout); ecoTimeout = null; }
     if (avisoTimeout) { clearTimeout(avisoTimeout); avisoTimeout = null; }
@@ -1489,19 +1639,10 @@ import { interpretarComando } from '../lib/voz.js';
     if (!recetaActual) return;
     var pasos = recetaActual.pasos || [];
     if (pasoActual < 0 || pasoActual >= pasos.length) return;
-
     aplicarMarcaPaso(pasoActual, true);
     anunciar('Paso ' + (pasoActual + 1) + ' marcado como hecho');
-
-    if (todosLosPasosHechos()) {
-      entrarCompletado();
-      return;
-    }
-
-    if (pasoActual >= pasos.length - 1) {
-      return;
-    }
-
+    if (todosLosPasosHechos()) { entrarCompletado(); return; }
+    if (pasoActual >= pasos.length - 1) return;
     pasoActual++;
     actualizarPaso();
     guardarEstado();
@@ -1521,7 +1662,6 @@ import { interpretarComando } from '../lib/voz.js';
     setTimeout(function () { var next = overlayEl.querySelector('.mc-next'); if (next) next.focus(); }, 50);
   }
 
-  // FASE 7: reiniciar sin confirm() nativo: doble toque en el botón (4 s)
   function reiniciarProgreso(skipConfirm) {
     var tieneProgreso = pasosHechos.some(function (v) { return v; }) || pasoActual > 0 || miseHechas.some(function (v) { return v; });
 
@@ -1548,10 +1688,7 @@ import { interpretarComando } from '../lib/voz.js';
       }
     }
 
-    if (reiniciarPendiente) {
-      clearTimeout(reiniciarPendiente);
-      reiniciarPendiente = null;
-    }
+    if (reiniciarPendiente) { clearTimeout(reiniciarPendiente); reiniciarPendiente = null; }
     var btnX = overlayEl && overlayEl.querySelector('.mc-reiniciar');
     if (btnX) {
       btnX.classList.remove('mc-reiniciar-confirmar');
@@ -1559,6 +1696,7 @@ import { interpretarComando } from '../lib/voz.js';
       btnX.setAttribute('title', 'Reiniciar progreso');
     }
 
+    detenerAlarma();
     pasosHechos = new Array((recetaActual && recetaActual.pasos || []).length).fill(false);
     pasoActual = 0; limpiarEstado(); guardarEstado();
     timers = []; guardarTimers(); renderTimers();
@@ -1602,9 +1740,15 @@ import { interpretarComando } from '../lib/voz.js';
   });
 
   document.addEventListener('visibilitychange', function () {
-    if (!document.hidden && overlayEl && overlayEl.classList.contains('abierto')) {
+    if (!overlayEl || !overlayEl.classList.contains('abierto')) return;
+    // FASE 9: al volver a la pestaña, disparar timers expirados de inmediato
+    // (en background los setInterval se throttlean y pueden tardar hasta 1 min).
+    tickTimers();
+    if (!document.hidden) {
       solicitarWakeLock();
       if (audioCtx && audioCtx.state === 'suspended') audioCtx.resume().catch(function () {});
+      // FASE 9: si hay una alarma visible, asegurar que el loop siga activo
+      if (alarmaTimer && !alarmaLoopTimeout) iniciarLoopAlarma();
     }
   });
 

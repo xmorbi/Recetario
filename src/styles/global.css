@@ -1866,3 +1866,140 @@ body.mc-bloqueado{overflow:hidden}
     font-size: 0.88rem;
   }
 }
+
+/* ===== MODO COCINA FASE 9: ALARMA VISIBLE Y AVISOS DE TIMER ===== */
+.mc-alarma {
+  position: fixed;
+  inset: 0;
+  z-index: 10001;
+  background: rgba(220, 38, 38, 0.96);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  animation: mcAlarmaIn 0.25s ease;
+}
+.mc-alarma[hidden] { display: none !important; }
+@keyframes mcAlarmaIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.mc-alarma-contenido {
+  text-align: center;
+  color: #fff;
+  max-width: 420px;
+  width: 100%;
+}
+.mc-alarma-icono {
+  font-size: clamp(4rem, 14vw, 6rem);
+  line-height: 1;
+  margin-bottom: 1rem;
+  animation: mcAlarmaPulse 1s ease-in-out infinite;
+}
+@keyframes mcAlarmaPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+.mc-alarma-paso {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  opacity: 0.85;
+  margin-bottom: 0.3rem;
+}
+.mc-alarma-texto {
+  font-family: var(--fuente-titulos);
+  font-size: clamp(1.8rem, 6vw, 2.6rem);
+  font-weight: 800;
+  margin: 0 0 0.6rem;
+}
+.mc-alarma-etiqueta {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 1.8rem;
+  line-height: 1.4;
+}
+.mc-alarma-detener {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+  min-height: 56px;
+  padding: 0 2rem;
+  border-radius: 99px;
+  background: #fff;
+  color: #dc2626;
+  border: none;
+  font-family: inherit;
+  font-size: 1.1rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s, background 0.2s;
+}
+.mc-alarma-detener:hover {
+  background: #fdf8f0;
+  transform: scale(1.03);
+}
+.mc-alarma-detener:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+/* Aviso bajo el primer timer: "Para que suene, deja esta pantalla abierta" */
+.mc-timer-aviso {
+  width: 100%;
+  font-size: 0.72rem;
+  color: rgba(253, 248, 240, 0.65);
+  font-weight: 400;
+  text-align: center;
+  margin-top: 0.3rem;
+  letter-spacing: 0.01em;
+  line-height: 1.35;
+}
+.mc-paso-timer .mc-timer-aviso {
+  font-size: 0.78rem;
+  color: rgba(253, 248, 240, 0.75);
+}
+
+/* Botón "Avisarme cuando termine" (pide permiso de notificaciones) */
+.mc-timer-notif-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  width: 100%;
+  min-height: 44px;
+  padding: 0 1rem;
+  border-radius: 99px;
+  background: rgba(232, 181, 74, 0.15);
+  border: 1.5px solid #e8b54a;
+  color: #e8b54a;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 0.4rem;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.mc-timer-notif-btn:hover {
+  background: #e8b54a;
+  color: #1a0f0a;
+}
+.mc-timer-notif-btn:focus-visible {
+  outline: 2px solid #e8b54a;
+  outline-offset: 2px;
+}
+
+/* Accesibilidad: sin parpadeo ni animación con prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .mc-alarma,
+  .mc-alarma-icono {
+    animation: none !important;
+  }
+  .mc-alarma-icono {
+    /* Señal estática cuando no se permite animación: borde + sombra */
+    filter: drop-shadow(0 0 0.6rem rgba(255, 255, 255, 0.6));
+  }
+}
