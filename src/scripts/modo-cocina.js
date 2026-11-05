@@ -6,10 +6,15 @@
    FASE 4: Mise en place
    FASE 5: Text-to-Speech (TTS) y Comandos de Voz (Manos Libres)
    FASE 6: Recordatorio visual de comandos y Auto-Timer con cuenta regresiva
-   FASE 7: Comandos de voz específicos para mise en place
-           (listo / siguiente / atrás / repetir / empezar)
+   FASE 7 (mise): Comandos de voz específicos para mise en place
+                 (listo / siguiente / atrás / repetir / empezar)
    FASE 7 (fix): "listo" por voz marca + avanza siempre (marcarYAvanzar)
                  autoAvanzar default = true (el toggle del panel lo desactiva)
+   FASE 7 (voz fiable): interpretarComando (src/lib/voz.js) reemplaza los
+                 includes() frágiles. Frases > 3 palabras se ignoran.
+                 Nuevos comandos: pausa, reanudar, tiempo, ingredientes.
+                 Eco visible 2 s en .mc-voz-eco. Sin alert() ni confirm():
+                 avisos dentro del overlay y reinicio con doble toque (4 s).
    FASE 1 (auditoría): fix guardarTTS + no auto-timer en mise en place
    FASE 3 (escalado): lee #receta-data en cada click (no al cargar),
                       y muestra aviso si hay factorEscalado != 1 con
@@ -26,6 +31,7 @@
    ================================================================= */
 
 import { detectarTiempos } from '../lib/tiempos.js';
+import { interpretarComando } from '../lib/voz.js';
 
 (function () {
   'use strict';
@@ -39,26 +45,31 @@ import { detectarTiempos } from '../lib/tiempos.js';
   var pasoActual = 0;
   var pasosHechos = [];
   var autoAvanzar = true;
-  var timers = [];              
-  var audioCtx = null;          
-  var sonidoActivo = true;      
-  var intervaloTick = null;     
+  var timers = [];
+  var audioCtx = null;
+  var sonidoActivo = true;
+  var intervaloTick = null;
   var botonOrigen = null;
   var onKeyDownHandler = null;
   var inertedElements = [];
-  var prep = null;               
-  var miseHechas = [];           
-  var miseTerminada = false;     
-  var enMise = false;            
+  var prep = null;
+  var miseHechas = [];
+  var miseTerminada = false;
+  var enMise = false;
   var miseActual = -1;
-  
-  var ttsActivo = false;         
+
+  var ttsActivo = false;
   var microActivo = false;
   var recognition = null;
-  var autoTimerActivo = true;     
-  var countdownInterval = null;   
+  var autoTimerActivo = true;
+  var countdownInterval = null;
   var countdownBtn = null;
   var autoTimerLanzados = new Set();
+
+  // FASE 7: eco de voz y avisos dentro del overlay
+  var ecoTimeout = null;
+  var avisoTimeout = null;
+  var reiniciarPendiente = null;
 
   // FASE 6: tamaño de letra del paso
   var NIVELES_FS = [1, 1.25, 1.5];
@@ -67,14 +78,26 @@ import { detectarTiempos } from '../lib/tiempos.js';
   // ---- Constantes ----
   var STORAGE_PROGRESO = 'mc_progreso_';
   var STORAGE_AUTOAVANZAR = 'mc_autoavanzar';
-  var STORAGE_TIMERS = 'mc_timers_';      
-  var STORAGE_SONIDO = 'mc_sonido';       
-  var STORAGE_MISE = 'mc_mise_';          
-  var STORAGE_TTS = 'mc_tts';             
-  var STORAGE_AUTOTIMER = 'mc_autotimer'; 
+  var STORAGE_TIMERS = 'mc_timers_';
+  var STORAGE_SONIDO = 'mc_sonido';
+  var STORAGE_MISE = 'mc_mise_';
+  var STORAGE_TTS = 'mc_tts';
+  var STORAGE_AUTOTIMER = 'mc_autotimer';
   var STORAGE_FS = 'mc_fs';
   var AUTO_ADVANCE_DELAY = 400;
-  var TICK_MS = 250;                      
+  var TICK_MS = 250;
+
+  var ETIQUETAS_VOZ = {
+    'siguiente': 'siguiente',
+    'atras': 'atrás',
+    'listo': 'listo',
+    'repetir': 'repetir',
+    'empezar': 'empezar',
+    'pausa': 'pausa',
+    'reanudar': 'reanudar',
+    'tiempo': 'cuánto falta',
+    'ingredientes': 'ingredientes'
+  };
 
   // ---- Utilidades ----
   function escaparHtml(s) {
@@ -94,6 +117,29 @@ import { detectarTiempos } from '../lib/tiempos.js';
     if (!live) return;
     live.textContent = '';
     setTimeout(function () { live.textContent = msg; }, 50);
+  }
+
+  // FASE 7: eco de lo que se entendió (2 s)
+  function mostrarEcoVoz(cmd) {
+    if (!overlayEl) return;
+    var eco = overlayEl.querySelector('.mc-voz-eco');
+    if (!eco) return;
+    eco.textContent = 'Entendí: ' + (ETIQUETAS_VOZ[cmd] || cmd);
+    eco.hidden = false;
+    if (ecoTimeout) clearTimeout(ecoTimeout);
+    ecoTimeout = setTimeout(function () { eco.hidden = true; }, 2000);
+  }
+
+  // FASE 7: aviso dentro del overlay (reemplaza alert/confirm)
+  function mostrarAvisoOverlay(msg) {
+    if (!overlayEl) return;
+    var aviso = overlayEl.querySelector('.mc-aviso-voz');
+    if (!aviso) return;
+    aviso.textContent = msg;
+    aviso.hidden = false;
+    anunciar(msg);
+    if (avisoTimeout) clearTimeout(avisoTimeout);
+    avisoTimeout = setTimeout(function () { aviso.hidden = true; }, 5000);
   }
 
   function getFocusables(container) {
@@ -122,7 +168,7 @@ import { detectarTiempos } from '../lib/tiempos.js';
   function iniciarCuentaRegresiva(btnTimer, minutos, pasoIdx) {
     limpiarAutoTimer();
     let segundos = 4;
-    
+
     if (!btnTimer.dataset.label) {
       btnTimer.dataset.label = btnTimer.innerHTML;
     }
@@ -195,91 +241,177 @@ import { detectarTiempos } from '../lib/tiempos.js';
     } else {
       window.speechSynthesis.getVoices();
     }
-    
+
     var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     if (!SpeechRecognition) {
       var micBtn = overlayEl.querySelector('.mc-mic-toggle');
       if (micBtn) micBtn.style.display = 'none';
       return;
     }
-    
+
     recognition = new SpeechRecognition();
     recognition.lang = 'es-CL';
     recognition.continuous = true;
     recognition.interimResults = false;
-    
+
     recognition.onresult = function(e) {
       if (!microActivo) return;
-      var texto = e.results[e.results.length - 1][0].transcript.toLowerCase().trim();
-      
+      var texto = e.results[e.results.length - 1][0].transcript;
+      var cmd = interpretarComando(texto, enMise);
+
+      if (cmd === null) return;
+
+      mostrarEcoVoz(cmd);
+
       if (enMise) {
-        if (texto.includes('empezar') || texto.includes('cocinar') || texto.includes('continuar') || texto.includes('vamos')) {
-          salirMise();
-        } else if (texto.includes('listo') || texto.includes('hecho') || texto.includes('marcar') || texto.includes('ya está') || texto.includes('ya esta')) {
-          marcarTareaMiseActual();
-        } else if (texto.includes('siguiente') || texto.includes('avanzar')) {
-          siguienteTareaMise();
-        } else if (texto.includes('atrás') || texto.includes('atras') || texto.includes('anterior')) {
-          anteriorTareaMise();
-        } else if (texto.includes('repetir') || texto.includes('leer')) {
-          leerTareaMiseActual();
-        }
+        if (cmd === 'empezar') salirMise();
+        else if (cmd === 'listo') marcarTareaMiseActual();
+        else if (cmd === 'siguiente') siguienteTareaMise();
+        else if (cmd === 'atras') anteriorTareaMise();
+        else if (cmd === 'repetir') leerTareaMiseActual();
         return;
       }
-      
-      if (texto.includes('siguiente') || texto.includes('avanzar')) {
-        if (typeof pasoSiguiente === 'function') pasoSiguiente();
-      } else if (texto.includes('atrás') || texto.includes('atras') || texto.includes('anterior')) {
-        if (typeof pasoAnterior === 'function') pasoAnterior();
-      } else if (texto.includes('listo') || texto.includes('hecho') || texto.includes('marcar')) {
-        if (typeof marcarYAvanzar === 'function') marcarYAvanzar();
-      } else if (texto.includes('repetir') || texto.includes('leer')) {
+
+      if (cmd === 'siguiente') {
+        pasoSiguiente();
+      } else if (cmd === 'atras') {
+        pasoAnterior();
+      } else if (cmd === 'listo') {
+        marcarYAvanzar();
+      } else if (cmd === 'repetir') {
         var stepText = overlayEl.querySelector('.mc-paso.activo .mc-paso-texto');
-        if (stepText) {
-          leerTexto(stepText.textContent, true);
+        if (stepText) leerTexto(stepText.textContent, true);
+      } else if (cmd === 'pausa') {
+        var timerCorriendo = null;
+        for (var i = 0; i < timers.length; i++) {
+          if (timers[i].paso === pasoActual && timers[i].estado === 'corriendo') {
+            timerCorriendo = timers[i];
+            break;
+          }
         }
+        if (timerCorriendo) pausarTimer(timerCorriendo.id);
+        else {
+          anunciar('No hay temporizador activo en este paso.');
+        }
+      } else if (cmd === 'reanudar') {
+        var timerPausado = null;
+        for (var j = 0; j < timers.length; j++) {
+          if (timers[j].paso === pasoActual && timers[j].estado === 'pausado') {
+            timerPausado = timers[j];
+            break;
+          }
+        }
+        if (timerPausado) reanudarTimer(timerPausado.id);
+        else {
+          anunciar('No hay temporizador pausado en este paso.');
+        }
+      } else if (cmd === 'tiempo') {
+        leerTiempoRestante();
+      } else if (cmd === 'ingredientes') {
+        leerIngredientes();
       }
     };
-    
+
     recognition.onerror = function(e) {
-        if(e.error === 'not-allowed' || e.error === 'service-not-allowed') {
-            alert('Permiso de micrófono denegado. No se pueden usar los comandos de voz.');
-            microActivo = false;
-            actualizarBotonMicro();
-        }
+      if (e.error === 'not-allowed' || e.error === 'service-not-allowed') {
+        microActivo = false;
+        actualizarBotonMicro();
+        mostrarAvisoOverlay('Permiso de micrófono denegado. No se pueden usar los comandos de voz.');
+      } else if (e.error === 'network') {
+        microActivo = false;
+        actualizarBotonMicro();
+        mostrarAvisoOverlay('Los comandos de voz necesitan internet en este navegador.');
+      }
     };
-    
+
     recognition.onend = function() {
-        if (microActivo) {
-            try { recognition.start(); } catch(e) {}
-        }
+      if (microActivo) {
+        try { recognition.start(); } catch(e) {}
+      }
     };
+  }
+
+  // FASE 7: leer tiempo restante del timer activo en el paso actual
+  function formatTiempoVoz(ms) {
+    var totalSec = Math.max(0, Math.floor(ms / 1000));
+    var h = Math.floor(totalSec / 3600);
+    var mi = Math.floor((totalSec % 3600) / 60);
+    var s = totalSec % 60;
+    var partes = [];
+    if (h > 0) partes.push(h + (h === 1 ? ' hora' : ' horas'));
+    if (mi > 0) partes.push(mi + (mi === 1 ? ' minuto' : ' minutos'));
+    if (s > 0 || partes.length === 0) partes.push(s + (s === 1 ? ' segundo' : ' segundos'));
+    return partes.join(' y ');
+  }
+
+  function leerTiempoRestante() {
+    var timerActivo = null;
+    for (var i = 0; i < timers.length; i++) {
+      if (timers[i].paso === pasoActual && timers[i].estado === 'corriendo') {
+        timerActivo = timers[i];
+        break;
+      }
+    }
+    if (!timerActivo) {
+      for (var j = 0; j < timers.length; j++) {
+        if (timers[j].paso === pasoActual && timers[j].estado === 'pausado') {
+          timerActivo = timers[j];
+          break;
+        }
+      }
+    }
+    if (!timerActivo) {
+      var msg = 'No hay temporizador activo en este paso.';
+      anunciar(msg);
+      leerTexto(msg, true);
+      return;
+    }
+    var restante = timerActivo.estado === 'corriendo'
+      ? Math.max(0, timerActivo.finTimestamp - Date.now())
+      : timerActivo.restanteAlPausar;
+    var msgOk = 'Quedan ' + formatTiempoVoz(restante);
+    anunciar(msgOk);
+    leerTexto(msgOk, true);
+  }
+
+  // FASE 7: leer lista de ingredientes
+  function leerIngredientes() {
+    var ings = (recetaActual && recetaActual.ingredientes) || [];
+    if (ings.length === 0) {
+      var msg = 'Esta receta no tiene ingredientes listados.';
+      anunciar(msg);
+      leerTexto(msg, true);
+      return;
+    }
+    var msgOk = 'Ingredientes: ' + ings.join(', ');
+    anunciar('Leyendo ingredientes');
+    leerTexto(msgOk, true);
   }
 
   function leerTexto(texto, forzar) {
     if (!('speechSynthesis' in window)) return;
-    
+
     if (recognition && microActivo) {
-        try { recognition.stop(); } catch(e) {}
+      try { recognition.stop(); } catch(e) {}
     }
-    
+
     window.speechSynthesis.cancel();
     if (!ttsActivo && !forzar) return;
-    
+
     var msg = new SpeechSynthesisUtterance(texto);
     msg.lang = 'es-CL';
     msg.rate = 0.95;
     msg.pitch = 1;
-    
+
     var voces = window.speechSynthesis.getVoices();
-    var vozEs = voces.find(function(v) { return v.lang === 'es-CL'; }) || 
+    var vozEs = voces.find(function(v) { return v.lang === 'es-CL'; }) ||
                 voces.find(function(v) { return v.lang.startsWith('es'); });
     if (vozEs) msg.voice = vozEs;
 
     msg.onend = function() {
-        if (recognition && microActivo) {
-            try { recognition.start(); } catch(e) {}
-        }
+      if (recognition && microActivo) {
+        try { recognition.start(); } catch(e) {}
+      }
     };
 
     window.speechSynthesis.speak(msg);
@@ -477,7 +609,6 @@ import { detectarTiempos } from '../lib/tiempos.js';
 
   function renderTimers() {
     if (!overlayEl) return;
-    // Limpiar todos los contenedores de timer por paso (evita duplicados data-id)
     overlayEl.querySelectorAll('.mc-paso-timer').forEach(function (c) { c.innerHTML = ''; c.hidden = true; });
     var pasoCont = overlayEl.querySelector('.mc-paso.activo .mc-paso-timer');
     var strip = overlayEl.querySelector('.mc-timers');
@@ -696,7 +827,7 @@ import { detectarTiempos } from '../lib/tiempos.js';
     } else {
       miseActual = -1;
       actualizarTareaActualMise();
-      var fin = 'No hay más tareas pendientes. Decí empezar para cocinar.';
+      var fin = 'No hay más tareas pendientes. Di empezar para cocinar.';
       anunciar(fin);
       if (ttsActivo) leerTexto(fin);
     }
@@ -706,7 +837,7 @@ import { detectarTiempos } from '../lib/tiempos.js';
     if (!prep) return;
     if (miseActual < 0) {
       var todoHecho = miseHechas.every(function (v) { return v; });
-      var msgNo = todoHecho ? '¡Todo listo! Decí empezar para cocinar.' : 'No hay tarea actual.';
+      var msgNo = todoHecho ? '¡Todo listo! Di empezar para cocinar.' : 'No hay tarea actual.';
       anunciar(msgNo);
       if (ttsActivo) leerTexto(msgNo);
       return;
@@ -732,7 +863,7 @@ import { detectarTiempos } from '../lib/tiempos.js';
       miseActual = -1;
       actualizarTareaActualMise();
       actualizarMiseProgreso(true);
-      msg = 'Listo: ' + tareaHecha.etiqueta + ' ' + tareaHecha.texto + '. ¡Todo listo! Decí empezar para cocinar.';
+      msg = 'Listo: ' + tareaHecha.etiqueta + ' ' + tareaHecha.texto + '. ¡Todo listo! Di empezar para cocinar.';
     }
     anunciar(msg);
     if (ttsActivo) leerTexto(msg);
@@ -815,7 +946,7 @@ import { detectarTiempos } from '../lib/tiempos.js';
 
   function entrarMise() {
     if (!overlayEl || !prep || prep.tareas.length === 0) return;
-    if ('speechSynthesis' in window) window.speechSynthesis.cancel(); 
+    if ('speechSynthesis' in window) window.speechSynthesis.cancel();
     limpiarAutoTimer();
     if (miseActual < 0 || miseHechas[miseActual]) {
       miseActual = buscarTareaPendiente(0);
@@ -867,6 +998,7 @@ import { detectarTiempos } from '../lib/tiempos.js';
 
     overlayEl.innerHTML =
       '<div class="mc-live" aria-live="polite" aria-atomic="true"></div>' +
+      '<div class="mc-aviso-voz" hidden></div>' +
       '<header class="mc-header">' +
         '<h1 id="mc-titulo" class="mc-titulo"></h1>' +
         '<div class="mc-header-acciones">' +
@@ -895,6 +1027,9 @@ import { detectarTiempos } from '../lib/tiempos.js';
                 '<li><span>Listo / Hecho</span><span>✓</span></li>' +
                 '<li><span>Repetir / Leer</span><span>🔊</span></li>' +
                 '<li><span>Empezar / Cocinar</span><span>▶</span></li>' +
+                '<li><span>Pausa / Reanudar</span><span>⏸</span></li>' +
+                '<li><span>Cuánto falta</span><span>⏱</span></li>' +
+                '<li><span>Ingredientes</span><span>🛒</span></li>' +
               '</ul>' +
               '<label class="mc-atajos-setting"><span>Avanzar al marcar hecho</span><input type="checkbox" class="mc-toggle-autoavanzar"></label>' +
               '<label class="mc-atajos-setting"><span>Iniciar timer automáticamente</span><input type="checkbox" class="mc-toggle-autotimer"></label>' +
@@ -914,7 +1049,8 @@ import { detectarTiempos } from '../lib/tiempos.js';
         '</div>' +
       '</header>' +
       '<div class="mc-aviso-escala" hidden></div>' +
-      '<div class="mc-voice-hint" hidden>🎤 Di: "Siguiente", "Atrás", "Listo", "Repetir" o "Empezar"</div>' +
+      '<div class="mc-voice-hint" hidden>🎤 Di: "Siguiente", "Atrás", "Listo", "Repetir", "Empezar", "Pausa", "Tiempo" o "Ingredientes"</div>' +
+      '<div class="mc-voz-eco" hidden aria-live="polite"></div>' +
       '<div class="mc-progreso" aria-hidden="true"><div class="mc-progreso-barra"><div class="mc-progreso-fill"></div></div><div class="mc-progreso-texto">0 de 0 pasos completados</div></div>' +
       '<div class="mc-timers" hidden></div>' +
       '<details class="mc-ingredientes"><summary>Ingredientes (<span class="mc-ing-count">0</span>)</summary><ul class="mc-ing-list"></ul></details>' +
@@ -974,7 +1110,7 @@ import { detectarTiempos } from '../lib/tiempos.js';
       microActivo = !microActivo;
       actualizarBotonMicro();
       if (microActivo) {
-        try { recognition.start(); anunciar(enMise ? 'Comandos de voz activados. Decí listo, siguiente, atrás o empezar.' : 'Comandos de voz activados.'); } catch(e) { console.error(e); microActivo = false; actualizarBotonMicro(); }
+        try { recognition.start(); anunciar(enMise ? 'Comandos de voz activados. Di listo, siguiente, atrás o empezar.' : 'Comandos de voz activados.'); } catch(e) { console.error(e); microActivo = false; actualizarBotonMicro(); }
       } else {
         try { recognition.stop(); anunciar('Comandos de voz desactivados.'); } catch(e) {}
       }
@@ -986,15 +1122,15 @@ import { detectarTiempos } from '../lib/tiempos.js';
       var marcar = e.target.closest('.mc-marcar');
       if (marcar) { var idx = parseInt(marcar.getAttribute('data-paso'), 10); if (!isNaN(idx)) marcarHecho(idx, !pasosHechos[idx]); return; }
       var iniciarBtn = e.target.closest('.mc-timer-iniciar');
-      if (iniciarBtn) { 
+      if (iniciarBtn) {
         if (countdownBtn === iniciarBtn) {
           limpiarAutoTimer();
           return;
         }
         limpiarAutoTimer();
-        var mins = parseFloat(iniciarBtn.getAttribute('data-minutos')); var pasoIdx = parseInt(iniciarBtn.getAttribute('data-paso'), 10); 
-        if (!isNaN(mins) && !isNaN(pasoIdx)) iniciarTimer(pasoIdx, mins); 
-        return; 
+        var mins = parseFloat(iniciarBtn.getAttribute('data-minutos')); var pasoIdx = parseInt(iniciarBtn.getAttribute('data-paso'), 10);
+        if (!isNaN(mins) && !isNaN(pasoIdx)) iniciarTimer(pasoIdx, mins);
+        return;
       }
       var accion = e.target.closest('[data-accion]');
       if (accion) {
@@ -1083,9 +1219,9 @@ import { detectarTiempos } from '../lib/tiempos.js';
 
     cargarAjustes();
     timers = cargarTimersGuardados();
-    microActivo = false; 
+    microActivo = false;
     autoTimerLanzados.clear();
-    
+
     initAudio();
     initTTS();
 
@@ -1096,9 +1232,7 @@ import { detectarTiempos } from '../lib/tiempos.js';
     ov.classList.remove('completado');
     ov.querySelector('.mc-titulo').textContent = receta.titulo || 'Receta';
 
-    // FASE 3: aviso de escalado. Se muestra solo si:
-    //  - existe receta.factorEscalado y es != 1 (viene de #receta-data)
-    //  - al menos un paso contiene cantidades (g, kg, ml, l, tazas, cucharadas, cucharaditas)
+    // FASE 3: aviso de escalado
     var avisoEscala = ov.querySelector('.mc-aviso-escala');
     if (avisoEscala) {
       var factorEsc = receta.factorEscalado;
@@ -1222,7 +1356,10 @@ import { detectarTiempos } from '../lib/tiempos.js';
     if ('speechSynthesis' in window) window.speechSynthesis.cancel();
     if (recognition && microActivo) { try { recognition.stop(); } catch(e) {} microActivo = false; }
     limpiarAutoTimer();
-    
+    if (reiniciarPendiente) { clearTimeout(reiniciarPendiente); reiniciarPendiente = null; }
+    if (ecoTimeout) { clearTimeout(ecoTimeout); ecoTimeout = null; }
+    if (avisoTimeout) { clearTimeout(avisoTimeout); avisoTimeout = null; }
+
     overlayEl.classList.remove('abierto');
     document.body.classList.remove('mc-bloqueado');
     aplicarInert(false);
@@ -1274,7 +1411,6 @@ import { detectarTiempos } from '../lib/tiempos.js';
       }
     }
 
-    // FASE 6: recolocar timers (los del paso activo dentro del paso, el resto en la franja)
     renderTimers();
 
     if (!silencioso) {
@@ -1366,9 +1502,47 @@ import { detectarTiempos } from '../lib/tiempos.js';
     setTimeout(function () { var next = overlayEl.querySelector('.mc-next'); if (next) next.focus(); }, 50);
   }
 
+  // FASE 7: reiniciar sin confirm() nativo: doble toque en el botón (4 s)
   function reiniciarProgreso(skipConfirm) {
     var tieneProgreso = pasosHechos.some(function (v) { return v; }) || pasoActual > 0 || miseHechas.some(function (v) { return v; });
-    if (!skipConfirm && tieneProgreso) { if (!confirm('¿Reiniciar el progreso de esta receta?')) return; }
+
+    if (!skipConfirm && tieneProgreso) {
+      if (reiniciarPendiente === null) {
+        // Primer toque: pedir confirmación
+        reiniciarPendiente = setTimeout(function () {
+          reiniciarPendiente = null;
+          var btnT = overlayEl && overlayEl.querySelector('.mc-reiniciar');
+          if (btnT) {
+            btnT.classList.remove('mc-reiniciar-confirmar');
+            btnT.setAttribute('aria-label', 'Reiniciar progreso');
+            btnT.setAttribute('title', 'Reiniciar progreso');
+          }
+        }, 4000);
+        var btn = overlayEl && overlayEl.querySelector('.mc-reiniciar');
+        if (btn) {
+          btn.classList.add('mc-reiniciar-confirmar');
+          btn.setAttribute('aria-label', 'Toca otra vez para reiniciar el progreso');
+          btn.setAttribute('title', 'Toca otra vez para reiniciar');
+        }
+        anunciar('Toca otra vez para reiniciar');
+        mostrarAvisoOverlay('Toca otra vez para reiniciar');
+        return;
+      }
+      // Segundo toque: cae al reset
+    }
+
+    // Limpiar confirmación pendiente si la hubiera
+    if (reiniciarPendiente) {
+      clearTimeout(reiniciarPendiente);
+      reiniciarPendiente = null;
+    }
+    var btnX = overlayEl && overlayEl.querySelector('.mc-reiniciar');
+    if (btnX) {
+      btnX.classList.remove('mc-reiniciar-confirmar');
+      btnX.setAttribute('aria-label', 'Reiniciar progreso');
+      btnX.setAttribute('title', 'Reiniciar progreso');
+    }
+
     pasosHechos = new Array((recetaActual && recetaActual.pasos || []).length).fill(false);
     pasoActual = 0; limpiarEstado(); guardarEstado();
     timers = []; guardarTimers(); renderTimers();
@@ -1379,11 +1553,11 @@ import { detectarTiempos } from '../lib/tiempos.js';
     setTimeout(function () { if (enMise) return; var next = overlayEl && overlayEl.querySelector('.mc-next'); if (next) next.focus(); }, 50);
   }
 
-  function pasoAnterior() { 
-    if (pasoActual > 0) { 
+  function pasoAnterior() {
+    if (pasoActual > 0) {
       limpiarAutoTimer();
-      pasoActual--; actualizarPaso(); guardarEstado(); 
-    } 
+      pasoActual--; actualizarPaso(); guardarEstado();
+    }
   }
 
   function pasoSiguiente() {
@@ -1397,7 +1571,7 @@ import { detectarTiempos } from '../lib/tiempos.js';
     else { pasoActual++; actualizarPaso(); guardarEstado(); }
   }
 
-  // ---- Auto-init (FASE 3: el JSON se parsea dentro del click) ----
+  // ---- Auto-init ----
   document.addEventListener('DOMContentLoaded', function () {
     var btn = document.querySelector('.btn-modo-cocina');
     if (!btn) return;
