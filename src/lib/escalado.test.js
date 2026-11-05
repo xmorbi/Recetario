@@ -80,6 +80,79 @@ describe('escalarIngrediente — ×0.5 y ×1.5 sobre ingredientes reales', () =>
 });
 
 /* ============================================================
+   FASE 2: PLURALIZACIÓN DE UNIDADES
+   ============================================================ */
+describe('escalarIngrediente — pluralización de unidades (Fase 2)', () => {
+  it('taza → tazas al duplicar', () => {
+    expect(escalarIngrediente('1 taza de azúcar', 2)).toBe('2 tazas de azúcar');
+  });
+
+  it('taza → tazas al triplicar', () => {
+    expect(escalarIngrediente('1 taza de azúcar', 3)).toBe('3 tazas de azúcar');
+  });
+
+  it('diente → dientes al duplicar', () => {
+    expect(escalarIngrediente('1 diente de ajo', 2)).toBe('2 dientes de ajo');
+  });
+
+  it('diente → dientes al triplicar', () => {
+    expect(escalarIngrediente('1 diente de ajo', 3)).toBe('3 dientes de ajo');
+  });
+
+  it('cucharada → cucharadas al duplicar', () => {
+    expect(escalarIngrediente('1 cucharada de aceite', 2)).toBe('2 cucharadas de aceite');
+  });
+
+  it('huevo → huevos al duplicar', () => {
+    expect(escalarIngrediente('1 huevo', 2)).toBe('2 huevos');
+  });
+
+  it('tazas → taza al reducir a la mitad desde 2', () => {
+    expect(escalarIngrediente('2 tazas de azúcar', 0.5)).toBe('1 taza de azúcar');
+  });
+
+  it('dientes → diente al reducir a la mitad desde 2', () => {
+    expect(escalarIngrediente('2 dientes de ajo', 0.5)).toBe('1 diente de ajo');
+  });
+
+  it('no pluraliza en 1× (devuelve original)', () => {
+    expect(escalarIngrediente('1 taza de azúcar', 1)).toBe('1 taza de azúcar');
+  });
+
+  it('1½ queda en singular (entre 1 y 2, no se toca)', () => {
+    expect(escalarIngrediente('1 taza de azúcar', 1.5)).toBe('1½ taza de azúcar');
+  });
+
+  it('ya plural no se toca al duplicar', () => {
+    expect(escalarIngrediente('4 huevos', 2)).toBe('8 huevos');
+  });
+
+  it('palabra no listada (malaya) no se toca', () => {
+    expect(escalarIngrediente('1 malaya de vacuno', 2)).toBe('2 malaya de vacuno');
+  });
+
+  it('kg no se toca (invariante)', () => {
+    expect(escalarIngrediente('1 kg de papas', 2)).toBe('2 kg de papas');
+  });
+
+  it('palabras de tiempo (hora, minuto) no se escalan ni se pluralizan', () => {
+    expect(escalarIngrediente('1 hora de cocción', 2)).toBe('1 hora de cocción');
+  });
+
+  it('pluraliza cada par número+palabra del texto', () => {
+    expect(
+      escalarIngrediente('1 taza de harina y 1 cucharada de azúcar', 2)
+    ).toBe('2 tazas de harina y 2 cucharadas de azúcar');
+  });
+
+  it('pluraliza aunque el segundo par ya esté plural', () => {
+    expect(
+      escalarIngrediente('1 taza de harina y 2 cucharadas de azúcar', 2)
+    ).toBe('2 tazas de harina y 4 cucharadas de azúcar');
+  });
+});
+
+/* ============================================================
    formatearNumero
    ============================================================ */
 describe('formatearNumero', () => {
