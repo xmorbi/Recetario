@@ -243,8 +243,26 @@ const ICON_LIBRO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" s
         </div>
       )}
 
-      <div class="cuerpo">
-        <div>
+      <!-- FASE 5C: navegación segmentada. En escritorio las tabs no se ven
+           (CSS las oculta) y ambas columnas quedan visibles lado a lado
+           como siempre. En móvil, JS alterna data-vista entre
+           "ingredientes", "preparacion" y "todo". El contenido sigue
+           completo en el DOM → SEO intacto. -->
+      <div class="receta-tabs" role="tablist" aria-label="Secciones de la receta">
+        <button type="button" role="tab" id="tab-ingredientes"
+                aria-controls="seccion-ingredientes" aria-selected="true"
+                data-tab="ingredientes">Ingredientes</button>
+        <button type="button" role="tab" id="tab-preparacion"
+                aria-controls="seccion-preparacion" aria-selected="false"
+                data-tab="preparacion">Preparación</button>
+        <button type="button" role="tab" id="tab-todo"
+                aria-selected="false" data-tab="todo">Ver todo</button>
+      </div>
+
+      <div class="cuerpo" id="recetaCuerpo" data-vista="todo">
+        <div class="cuerpo-col" data-seccion="ingredientes"
+             id="seccion-ingredientes" role="tabpanel"
+             aria-labelledby="tab-ingredientes">
           <h3>Ingredientes</h3>
           <ul class="ingredientes">
             {receta.ingredientes.map(ing => (
@@ -256,7 +274,9 @@ const ICON_LIBRO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" s
           </ul>
           <button type="button" class="btn-add-all">Añadir todos los ingredientes</button>
         </div>
-        <div>
+        <div class="cuerpo-col" data-seccion="preparacion"
+             id="seccion-preparacion" role="tabpanel"
+             aria-labelledby="tab-preparacion">
           <h3>Preparación</h3>
           <ol class="preparacion">
             {receta.pasos.map(paso => <li>{paso}</li>)}
@@ -346,6 +366,7 @@ const ICON_LIBRO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" s
     import '../../scripts/favoritos.js';
     import '../../scripts/estrellas.js';
     import '../../scripts/print-marcados.js';
+    import '../../scripts/receta-tabs.js';
   </script>
 
   <!-- BLOQUE 1: botón manual "Guardar para cocinar sin conexión". -->

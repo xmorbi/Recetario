@@ -3,6 +3,130 @@
 @font-face{font-family:'Inter-fallback';src:local('Arial');size-adjust:107%;ascent-override:90%;descent-override:22.4%;line-gap-override:0%}
 html{scrollbar-gutter:stable}
 :root{--rojo:#b03a2e;--rojo-osc:#7a1b15;--azul:#1f3a5f;--dorado:#c8963e;--terracota:#c4643a;--crema:#fdf8f0;--crema-osc:#f6ecdd;--arena:#f2e6d6;--borde:#e6d6c1;--tinta:#2b2320;--suave:#6f6257;--radio:16px;--sombra-sm:0 1px 3px rgba(90,60,30,.08);--sombra-md:0 4px 16px rgba(90,60,30,.08);--sombra-lg:0 12px 32px rgba(90,60,30,.14);--fuente-titulos:'Fraunces','Fraunces-fallback',Georgia,'Playfair Display',serif;--fuente-texto:'Inter','Inter-fallback',system-ui,-apple-system,'Segoe UI',sans-serif;--max-width:1000px;--pad-x:1rem;--destacada-min:540px;--color-foco:#7a1b15}
+
+/* =====================================================================
+   FASE 1 — SISTEMA DE DISEÑO (TOKENS)
+   Solo variables. Ninguna regla existente se modifica ni se reemplaza.
+   Los tokens semánticos apuntan a variables ya existentes
+   (--crema, --tinta, --rojo, etc.), por lo que heredan automáticamente
+   el modo oscuro sin necesidad de overrides adicionales.
+   Uso previsto: migración progresiva componente por componente a partir
+   de la Fase 2. En la Fase 1 NINGÚN componente usa todavía estos tokens.
+   ===================================================================== */
+:root {
+  /* ---- 1. Color semántico (aliases de la paleta existente) ---------- */
+  --surface-page:         var(--crema);        /* fondo de página        */
+  --surface-sunken:       var(--crema-osc);    /* fondo hundido / chip   */
+  --text-primary:         var(--tinta);
+  --text-secondary:       var(--suave);
+  --text-accent:          var(--rojo);
+  --text-accent-strong:   var(--rojo-osc);
+  --text-inverse:         #ffffff;
+  --border-subtle:        var(--borde);
+  --accent-primary:       var(--rojo);
+  --accent-primary-hover: var(--rojo-osc);
+  --accent-gold:          var(--dorado);
+  --accent-warm:          var(--terracota);
+  --focus-ring:           var(--color-foco);
+
+  /* ---- 2. Espaciado (base 4 px) ------------------------------------- */
+  --space-0:  0;
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  24px;
+  --space-6:  32px;
+  --space-7:  48px;
+  --space-8:  64px;
+
+  /* ---- 3. Radios ----------------------------------------------------- */
+  --radius-xs:   4px;
+  --radius-sm:   8px;
+  --radius-md:  12px;
+  --radius-lg:  var(--radio);   /* 16 px, mantiene el token existente */
+  --radius-xl:  24px;
+  --radius-2xl: 32px;
+  --radius-pill: 99px;
+
+  /* ---- 4. Tipografía ------------------------------------------------- */
+  --font-sans:    var(--fuente-texto);
+  --font-display: var(--fuente-titulos);
+  --fs-xs:   0.75rem;    /* 12 */
+  --fs-sm:   0.875rem;   /* 14 */
+  --fs-base: 1rem;       /* 16 */
+  --fs-md:   1.0625rem;  /* 17 — tamaño base iOS */
+  --fs-lg:   1.125rem;   /* 18 */
+  --fs-xl:   1.375rem;   /* 22 */
+  --fs-2xl:  1.75rem;    /* 28 */
+  --fs-3xl:  2.25rem;    /* 36 */
+  --fs-4xl:  3rem;       /* 48 */
+
+  --lh-tight:   1.1;
+  --lh-snug:    1.25;
+  --lh-normal:  1.5;
+  --lh-relaxed: 1.65;
+
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+  --fw-black:    900;
+
+  --tracking-tight:  -0.02em;
+  --tracking-normal:  0;
+  --tracking-wide:    0.05em;
+
+  /* ---- 5. Movimiento ------------------------------------------------ */
+  --duration-fast:   150ms;
+  --duration-base:   250ms;
+  --duration-slow:   350ms;
+  --duration-slower: 600ms;
+
+  --ease-ios:     cubic-bezier(0.16, 1, 0.3, 1);  /* curva iOS         */
+  --ease-out:     cubic-bezier(0, 0, 0.2, 1);      /* decelerate        */
+  --ease-in-out:  cubic-bezier(0.4, 0, 0.2, 1);    /* estándar Material */
+
+  /* ---- 6. Sombras (multicapa) --------------------------------------- */
+  --shadow-1: 0 1px 3px rgba(90,60,30,.08);
+  --shadow-2: 0 4px 16px rgba(90,60,30,.08);
+  --shadow-3: 0 12px 32px rgba(90,60,30,.14);
+  --shadow-float:    0 8px 24px rgba(90,60,30,.10),
+                     0 2px 6px  rgba(90,60,30,.06);
+
+  /* ---- 7. Materiales translúcidos ----------------------------------- */
+  --blur-sm: blur(8px)  saturate(140%);
+  --blur-md: blur(20px) saturate(180%);
+  --blur-lg: blur(40px) saturate(180%);
+
+  /* ---- 8. Capas (z-index) ------------------------------------------- */
+  --z-content:    1;
+  --z-sticky:   100;
+  --z-dropdown: 200;
+  --z-nav:      500;
+  --z-overlay: 8000;
+  --z-modal:   9000;
+  --z-toast:   9500;
+  --z-cook:    9999;   /* Modo Cocina                              */
+  --z-alarm:  10001;   /* alarma dentro de Modo Cocina             */
+
+  /* ---- 9. Safe areas (iOS) ------------------------------------------ */
+  --safe-top:    env(safe-area-inset-top,    0px);
+  --safe-right:  env(safe-area-inset-right,  0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left:   env(safe-area-inset-left,   0px);
+
+  /* ---- 10. Layout ---------------------------------------------------- */
+  --content-max: var(--max-width);   /* 1000px, alias */
+  --content-pad: var(--pad-x);       /* 1rem,   alias */
+  --nav-h:       56px;               /* reservado Fase 2 (nav inferior) */
+  --header-h:    56px;
+
+  /* ---- 11. Feedback táctil ------------------------------------------ */
+  --opacity-active: 0.7;
+  --scale-press:    0.97;
+}
+
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--crema);color:var(--tinta);font-family:var(--fuente-texto);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 
@@ -2001,5 +2125,1208 @@ body.mc-bloqueado{overflow:hidden}
   .mc-alarma-icono {
     /* Señal estática cuando no se permite animación: borde + sombra */
     filter: drop-shadow(0 0 0.6rem rgba(255, 255, 255, 0.6));
+  }
+}
+/* =========================================================
+   FASE 2: NAVEGACIÓN INFERIOR MÓVIL
+   Barra fija en la parte inferior con 5 accesos.
+   Solo visible bajo 768 px.
+   Consume tokens de Fase 1 (--space-*, --radius-*, --ease-*, etc.).
+   ========================================================= */
+
+/* El diseño de tabbar cómodo requiere más altura que los 56 px reservados en Fase 1. */
+:root {
+  --nav-h: 60px;
+}
+
+.tabbar {
+  display: none; /* solo móvil */
+}
+
+@media (max-width: 768px) {
+  /* Reserva de espacio para que la tabbar no tape contenido.
+     main y footer reciben el padding adecuado; el resto del layout no cambia. */
+  main {
+    padding-bottom: calc(var(--nav-h) + var(--safe-bottom) + var(--space-4));
+  }
+  footer {
+    padding-bottom: calc(var(--nav-h) + var(--safe-bottom) + var(--space-4));
+  }
+
+  .tabbar {
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: var(--z-nav);
+    height: calc(var(--nav-h) + var(--safe-bottom));
+    padding-bottom: var(--safe-bottom);
+    background: rgba(253, 248, 240, 0.92);
+    backdrop-filter: var(--blur-md);
+    -webkit-backdrop-filter: var(--blur-md);
+    border-top: 1px solid var(--border-subtle);
+    align-items: stretch;
+    justify-content: space-around;
+    box-shadow: 0 -2px 12px rgba(90, 60, 30, 0.06);
+  }
+
+  .tabbar-item {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    padding: var(--space-1);
+    min-height: 48px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-medium);
+    line-height: 1;
+    transition: color var(--duration-fast) var(--ease-out);
+    -webkit-tap-highlight-color: transparent;
+    background: none;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+  }
+  .tabbar-item svg {
+    width: 22px;
+    height: 22px;
+    stroke-width: 2;
+    flex-shrink: 0;
+  }
+  .tabbar-item:active {
+    opacity: var(--opacity-active);
+  }
+  .tabbar-item[aria-current="page"] {
+    color: var(--accent-primary);
+  }
+  .tabbar-item[aria-current="page"] svg {
+    stroke-width: 2.5;
+  }
+
+  /* El botón flotante de la lista de compras y el banner de cookies
+     deben quedar por encima de la tabbar, nunca solapados. */
+  .shopping-fab {
+    bottom: calc(var(--nav-h) + var(--safe-bottom) + var(--space-3));
+  }
+
+  .cookie-banner {
+    bottom: calc(var(--nav-h) + var(--safe-bottom) + var(--space-2));
+  }
+}
+
+/* Herramientas: dropdown que abre hacia arriba.
+   Estructura <details><summary>…</summary><div>…</div></details> */
+.tabbar-tools {
+  position: relative;
+  flex: 1 1 0;
+  display: flex;
+}
+.tabbar-tools > summary {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: var(--space-1);
+  min-height: 48px;
+  color: var(--text-secondary);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  line-height: 1;
+  cursor: pointer;
+  list-style: none;
+  transition: color var(--duration-fast) var(--ease-out);
+  -webkit-tap-highlight-color: transparent;
+}
+.tabbar-tools > summary::-webkit-details-marker { display: none; }
+.tabbar-tools > summary::marker { content: ''; }
+.tabbar-tools[open] > summary,
+.tabbar-tools > summary:active {
+  color: var(--accent-primary);
+}
+.tabbar-tools > summary[aria-current="page"] {
+  color: var(--accent-primary);
+}
+.tabbar-tools > summary[aria-current="page"] svg {
+  stroke-width: 2.5;
+}
+.tabbar-tools > summary svg {
+  width: 22px;
+  height: 22px;
+  stroke-width: 2;
+}
+
+.tabbar-tools-menu {
+  position: absolute;
+  bottom: calc(100% + var(--space-2));
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 210px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: var(--blur-md);
+  -webkit-backdrop-filter: var(--blur-md);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-float);
+  padding: var(--space-1);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  z-index: calc(var(--z-nav) + 1);
+}
+.tabbar-tools-menu a {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  transition: background var(--duration-fast) var(--ease-out),
+              color var(--duration-fast) var(--ease-out);
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+.tabbar-tools-menu a:hover,
+.tabbar-tools-menu a:focus-visible {
+  background: var(--surface-sunken);
+  color: var(--accent-primary);
+  outline: none;
+}
+.tabbar-tools-menu hr {
+  border: none;
+  border-top: 1px solid var(--border-subtle);
+  margin: var(--space-1) var(--space-2);
+}
+
+/* Modo oscuro de la tabbar y su menú */
+[data-theme="dark"] .tabbar {
+  background: rgba(18, 18, 18, 0.92);
+  border-top-color: #333;
+}
+[data-theme="dark"] .tabbar-tools-menu {
+  background: rgba(30, 30, 30, 0.95);
+  border-color: #333;
+}
+[data-theme="dark"] .tabbar-tools-menu a {
+  color: var(--text-primary);
+}
+[data-theme="dark"] .tabbar-tools-menu a:hover,
+[data-theme="dark"] .tabbar-tools-menu a:focus-visible {
+  background: #2a2a2a;
+  color: var(--accent-primary);
+}
+[data-theme="dark"] .tabbar-tools-menu hr {
+  border-top-color: #333;
+}
+
+/* =========================================================
+   FASE 2: CABECERA SIMPLIFICADA EN MÓVIL
+   - Se oculta el botón hamburguesa (queda en DOM para no romper nav.js).
+   - Se ocultan los enlaces y el dropdown de Herramientas.
+   - Se conservan el buscador y el botón de tema.
+   - El texto del logo se oculta en pantallas muy pequeñas.
+   ========================================================= */
+@media (max-width: 768px) {
+  .site-nav-toggle {
+    display: none !important;
+  }
+  .site-nav-links {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+    border: none;
+    gap: var(--space-2);
+    overflow: visible;
+    flex: 1;
+    justify-content: flex-end;
+  }
+  .site-nav-links > a,
+  .site-nav-links > details {
+    display: none;
+  }
+  .site-nav-links .nav-search {
+    flex: 1 1 auto;
+    min-width: 0;
+    margin: 0;
+    order: 0;
+  }
+  .site-nav-links .nav-search input {
+    font-size: 1rem; /* evita el auto-zoom de iOS al enfocar */
+  }
+  .site-nav-links #theme-toggle {
+    order: 1;
+    flex-shrink: 0;
+  }
+  .site-nav-inner {
+    gap: var(--space-2);
+  }
+}
+@media (max-width: 480px) {
+  /* Logo más compacto en pantallas muy pequeñas: solo el ícono bandera */
+  .site-nav-logo .marca-texto {
+    display: none;
+  }
+}
+
+/* =========================================================
+   FASE 2: BOTÓN DE TEMA (extraído del style inline anterior)
+   ========================================================= */
+#theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-2);
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-pill);
+  margin-left: var(--space-2);
+  transition: background var(--duration-fast) var(--ease-out),
+              transform var(--duration-fast) var(--ease-out);
+  -webkit-tap-highlight-color: transparent;
+}
+#theme-toggle:hover {
+  background: var(--surface-sunken);
+}
+#theme-toggle:active {
+  background: var(--surface-sunken);
+  transform: scale(0.95);
+}
+
+/* =====================================================================
+   FASE 2 — NAVEGACIÓN INFERIOR MÓVIL (TABBAR)
+   Requiere los tokens de Fase 1. Todo lo nuevo se activa SOLO bajo 768px.
+   No toca reglas existentes: solo añade selectores nuevos y sobrescribe
+   comportamiento de algunos flotantes (.shopping-fab, .cookie-banner)
+   para que convivan con la tabbar.
+   ===================================================================== */
+
+/* Altura de la tabbar (sobrescribe el valor provisional de Fase 1) */
+:root { --nav-h: 60px; }
+
+/* Oculta por defecto: la tabbar solo aparece en móvil */
+.tabbar { display: none; }
+
+@media (max-width: 768px) {
+
+  /* --- Espacio reservado al final del documento --- */
+  body {
+    padding-bottom: calc(var(--nav-h) + var(--safe-bottom) + 8px);
+  }
+
+  /* --- Cabecera superior simplificada --- */
+  .site-nav-inner {
+    padding: .5rem .85rem;
+    gap: .5rem;
+  }
+
+  /* Logo compacto: solo el ícono de la bandera, sin texto */
+  .site-nav-logo .marca-texto { display: none; }
+
+  /* Los enlaces del nav superior dejan de ser un dropdown */
+  .site-nav-links {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: .4rem;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    flex: 1;
+    overflow: visible;
+  }
+
+  /* En móvil se ocultan los enlaces tradicionales: viven en la tabbar */
+  .site-nav-links > a,
+  .site-nav-links > .dropdown-tools {
+    display: none;
+  }
+
+  /* Buscador: flexible, nunca en fila separada */
+  .nav-search {
+    flex: 1 1 auto;
+    max-width: none;
+    min-width: 0;
+    margin: 0;
+  }
+
+  .nav-search input {
+    padding: .55rem .9rem .55rem 2rem;
+    font-size: .85rem;
+  }
+
+  /* --- TABBAR --- */
+  .tabbar {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: var(--z-nav);
+    height: calc(var(--nav-h) + var(--safe-bottom));
+    padding-bottom: var(--safe-bottom);
+    background: rgba(253, 248, 240, .82);
+    border-top: 1px solid var(--border-subtle);
+    -webkit-backdrop-filter: var(--blur-md);
+    backdrop-filter: var(--blur-md);
+    box-shadow:
+      0 -1px 0 rgba(90, 60, 30, .04),
+      0 -8px 24px rgba(90, 60, 30, .06);
+  }
+
+  .tabbar-item,
+  .tabbar-tools > summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    text-decoration: none;
+    color: var(--text-secondary);
+    background: transparent;
+    border: none;
+    padding: .4rem .15rem 0;
+    min-height: 44px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    list-style: none;
+    transition:
+      color var(--duration-fast) var(--ease-out),
+      transform var(--duration-fast) var(--ease-out);
+  }
+
+  .tabbar-item:active,
+  .tabbar-tools > summary:active {
+    transform: scale(var(--scale-press));
+  }
+
+  .tabbar svg {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+  }
+
+  .tabbar-label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: .01em;
+    line-height: 1;
+  }
+
+  /* Estados activos */
+  .tabbar-item.activo,
+  .tabbar-tools.activo > summary {
+    color: var(--accent-primary);
+  }
+
+  .tabbar-item.activo svg,
+  .tabbar-tools.activo > summary svg {
+    stroke-width: 2.25;
+  }
+
+  /* --- Panel Herramientas (details que abre hacia arriba) --- */
+  .tabbar-tools {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tabbar-tools > summary::-webkit-details-marker { display: none; }
+  .tabbar-tools > summary::marker { content: ""; }
+
+  .tabbar-tools[open] > summary {
+    color: var(--accent-primary);
+  }
+
+  .tabbar-tools-menu {
+    position: absolute;
+    bottom: calc(100% + 6px);
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 200px;
+    background: #fff;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-2);
+    padding: .35rem;
+    z-index: calc(var(--z-nav) + 1);
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  .tabbar-tools-menu a {
+    display: block;
+    padding: .7rem 1rem;
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: .9rem;
+    font-weight: 500;
+    text-align: left;
+    transition: background var(--duration-fast) var(--ease-out);
+  }
+
+  .tabbar-tools-menu a:hover,
+  .tabbar-tools-menu a:focus-visible {
+    background: var(--surface-sunken);
+    color: var(--accent-primary);
+  }
+
+  .tabbar-tools-menu hr {
+    border: none;
+    height: 1px;
+    background: var(--border-subtle);
+    margin: .25rem .5rem;
+  }
+
+  /* --- Flotantes conviviendo con la tabbar --- */
+  .shopping-fab {
+    bottom: calc(var(--nav-h) + var(--safe-bottom) + 16px);
+    right: 16px;
+    z-index: calc(var(--z-nav) - 200);
+  }
+
+  .cookie-banner {
+    bottom: calc(var(--nav-h) + var(--safe-bottom) + 12px);
+  }
+}
+
+/* --- Modo oscuro --- */
+[data-theme="dark"] .tabbar {
+  background: rgba(18, 18, 18, .82);
+  border-top-color: #333;
+  box-shadow:
+    0 -1px 0 rgba(255, 255, 255, .04),
+    0 -8px 24px rgba(0, 0, 0, .4);
+}
+
+[data-theme="dark"] .tabbar-tools-menu {
+  background: #1e1e1e;
+  border-color: #333;
+}
+
+[data-theme="dark"] .tabbar-tools-menu a:hover,
+[data-theme="dark"] .tabbar-tools-menu a:focus-visible {
+  background: #2a2a2a;
+  color: var(--accent-primary);
+}
+
+[data-theme="dark"] .tabbar-tools-menu hr {
+  background: #333;
+}
+
+/* --- Respeto por prefers-reduced-motion --- */
+@media (prefers-reduced-motion: reduce) {
+  .tabbar-item,
+  .tabbar-item:active,
+  .tabbar-tools > summary,
+  .tabbar-tools > summary:active {
+    transition: none;
+    transform: none;
+  }
+}
+
+/* =====================================================================
+   FASE 3 — PORTADA REDISEÑADA (solo móvil ≤768px)
+   Reduce scroll vertical sobreescribiendo alturas, paddings y layout.
+   NO modifica reglas de escritorio: todo va dentro de @media(max-width:768px).
+   ===================================================================== */
+
+@media (max-width: 768px) {
+
+  /* ---------- A. HERO COMPACTO ---------- */
+  .hero {
+    padding: 1.25rem 1rem 1.5rem;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2rem, 8.5vw, 2.75rem);
+    letter-spacing: -1px;
+    line-height: 1.05;
+  }
+
+  .hero-copy .sub {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    max-width: 320px;
+  }
+
+  .hero-copy .lema {
+    margin-top: 0.6rem;
+    padding: 0.35rem 0.85rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    gap: 0.4rem;
+  }
+
+  .hero-copy .lema::before,
+  .hero-copy .lema::after {
+    font-size: 0.75rem;
+  }
+
+  .hero-search {
+    margin-top: 1rem;
+    max-width: 100%;
+    padding: 0.25rem 0.3rem 0.25rem 0.85rem;
+  }
+
+  .hero-search input {
+    padding: 0.6rem 0.35rem;
+    font-size: 0.9rem;
+  }
+
+  .hero-search button {
+    padding: 0.55rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  /* ---------- B. RECETA DESTACADA COMPACTA ---------- */
+  .receta-destacada-section {
+    --destacada-min: 0;
+    min-height: 0;
+    padding: 1.5rem 0.85rem 0.5rem;
+  }
+
+  .receta-destacada-eyebrow {
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    margin-bottom: 0.6rem;
+  }
+
+  .receta-destacada {
+    grid-template-columns: 1fr;
+    box-shadow: 0 4px 16px rgba(90, 60, 30, 0.08);
+  }
+
+  .receta-destacada-media {
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+  }
+
+  .receta-destacada:hover,
+  .receta-destacada:hover .receta-destacada-media img {
+    transform: none;
+  }
+
+  .receta-destacada-body {
+    padding: 1rem 1.1rem 1.1rem;
+    gap: 0.4rem;
+  }
+
+  .receta-destacada-tag {
+    font-size: 0.65rem;
+    padding: 0.28rem 0.7rem;
+    letter-spacing: 0.08em;
+  }
+
+  .receta-destacada h2 {
+    font-size: 1.35rem;
+    letter-spacing: -0.3px;
+  }
+
+  .receta-destacada p {
+    font-size: 0.88rem;
+    line-height: 1.45;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .receta-destacada .meta {
+    margin: 0;
+    gap: 0.35rem;
+  }
+
+  .receta-destacada .meta span {
+    font-size: 0.68rem;
+    padding: 0.25rem 0.6rem;
+  }
+
+  .receta-destacada-cta {
+    margin-top: 0.4rem;
+    padding: 0.55rem 1.1rem;
+    font-size: 0.85rem;
+  }
+
+  /* ---------- C. CATEGORÍAS EN 2 COLUMNAS ---------- */
+  .landing-intro {
+    padding: 1.2rem 1rem 0.75rem;
+  }
+
+  .landing-intro h2 {
+    font-size: 1.35rem;
+    margin-bottom: 0.35rem;
+    letter-spacing: -0.2px;
+  }
+
+  .landing-intro p {
+    font-size: 0.88rem;
+    line-height: 1.4;
+    max-width: 100%;
+  }
+
+  .categorias-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+    padding: 0 0.85rem 0.75rem;
+  }
+
+  .categoria-card {
+    min-height: 0;
+    padding: 0.9rem 0.85rem;
+    gap: 0;
+  }
+
+  .categoria-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.5rem;
+  }
+
+  .categoria-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .categoria-nombre {
+    font-size: 1.05rem;
+    line-height: 1.15;
+    margin-bottom: 0.2rem;
+    letter-spacing: -0.2px;
+  }
+
+  .categoria-count {
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 0;
+  }
+
+  /* Descripciones ocultas en móvil; siguen visibles en desktop */
+  .categoria-desc {
+    display: none;
+  }
+
+  .categoria-arrow {
+    display: none;
+  }
+
+  /* ---------- D. SECCIONES SECUNDARIAS COMPACTAS ---------- */
+  .landing-todas {
+    margin: 0.5rem auto 0;
+    padding: 0 0.85rem 1.5rem;
+  }
+
+  .landing-todas-btn {
+    padding: 0.75rem 1.6rem;
+    font-size: 0.9rem;
+    gap: 0.5rem;
+    box-shadow: 0 4px 14px rgba(176, 58, 46, 0.25);
+  }
+
+  .landing-once-cta {
+    margin: 1rem auto 0.75rem;
+    padding: 0 0.85rem;
+  }
+
+  .landing-once-cta-inner {
+    padding: 0.75rem 0.9rem;
+    gap: 0.6rem;
+  }
+
+  .landing-once-cta-icon {
+    font-size: 1.4rem;
+  }
+
+  .landing-once-cta-texto strong {
+    font-size: 0.95rem;
+  }
+
+  .landing-once-cta-texto span {
+    font-size: 0.8rem;
+    line-height: 1.35;
+  }
+
+  .landing-once-cta-btn {
+    padding: 0.5rem 0.9rem;
+    font-size: 0.8rem;
+  }
+
+  .landing-destacado {
+    margin: 1rem auto 1.5rem;
+    padding: 1rem 1rem;
+    border-left-width: 3px;
+  }
+
+  .landing-destacado p {
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+}
+
+/* =====================================================================
+   FASE 4 — LISTADO Y FILTROS (solo móvil ≤640px)
+   - En desktop, .filtros-scroll usa display:contents → cero cambios.
+   - En móvil: 3 filas en .controles .inner (grid).
+       Fila 1: buscador full width.
+       Fila 2: despensa (col 1) + más filtros (col 2).
+       Fila 3: carrusel horizontal de categorías (scroll táctil).
+       Fila 4: panel de filtros avanzados (full width).
+   - Tarjetas .receta-card horizontales compactas (foto 96px izq).
+   - Contador, chips activos y badge "faltan X" más pequeños.
+   ===================================================================== */
+
+/* Desktop: el wrapper nuevo no altera el flex existente de .controles .inner */
+.filtros-scroll { display: contents; }
+
+@media (max-width: 640px) {
+
+  /* ---------- CONTROLES: layout en grid de 2 columnas ---------- */
+  .controles .inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5rem;
+    padding: 0 .85rem;
+  }
+
+  /* Fila 1: buscador a todo el ancho */
+  .controles .inner .buscador-wrap {
+    grid-column: 1 / -1;
+    order: 0;
+  }
+
+  /* Fila 2: despensa + botón más filtros, mitad y mitad */
+  .controles .inner > .btn-despensa {
+    order: 1;
+    width: 100%;
+    justify-content: center;
+  }
+  .controles .inner > .filtro-avanzado-toggle {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Fila 3: carrusel horizontal de filtros.
+     Truco del margen negativo para que el primer chip quede alineado
+     con el buscador y el último “asome” como invitación al swipe. */
+  .filtros-scroll {
+    display: flex;
+    grid-column: 1 / -1;
+    order: 3;
+    gap: .4rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x proximity;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    margin: 0 -.85rem;
+    padding: .15rem .85rem .35rem;
+  }
+  .filtros-scroll::-webkit-scrollbar { display: none; }
+
+  .filtros-scroll > .filtro,
+  .filtros-scroll > .filtro-once {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    font-size: .78rem;
+    padding: .45rem .8rem;
+  }
+
+  /* Fila 4: panel de filtros avanzados a ancho completo */
+  .controles .inner > .filtros-avanzados {
+    grid-column: 1 / -1;
+    order: 4;
+  }
+
+  /* ---------- TARJETA HORIZONTAL COMPACTA ---------- */
+  .receta-card-link {
+    grid-template-columns: 96px 1fr;
+    gap: .75rem;
+    padding: .7rem 2.75rem .7rem .7rem;
+    align-items: center;
+  }
+
+  .receta-card-foto {
+    aspect-ratio: 1 / 1;
+    border-radius: 8px;
+  }
+
+  .receta-card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .25rem;
+    min-width: 0;
+  }
+
+  .receta-card h2 {
+    font-size: 1rem;
+    line-height: 1.2;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .receta-card .meta {
+    margin: 0;
+    gap: .25rem;
+  }
+
+  .receta-card .meta span {
+    font-size: .62rem;
+    padding: .2rem .5rem;
+  }
+
+  .receta-card-desc {
+    font-size: .78rem;
+    line-height: 1.35;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* En móvil ocultamos el "Ver receta completa →" para ganar altura */
+  .receta-card-cta {
+    display: none;
+  }
+
+  /* Favorito: más chico y arriba-derecha */
+  .receta-card .btn-favorito {
+    top: .55rem;
+    right: .55rem;
+    width: 30px;
+    height: 30px;
+  }
+  .receta-card .btn-favorito svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  /* Badge "Te faltan X": compacto, absoluto abajo-derecha */
+  .receta-card-faltan {
+    position: absolute;
+    bottom: .5rem;
+    right: .55rem;
+    margin: 0;
+    font-size: .62rem;
+    padding: .2rem .55rem;
+  }
+
+  /* ---------- CONTADOR Y CHIPS ACTIVOS, MÁS PEQUEÑOS ---------- */
+  .contador {
+    font-size: .78rem;
+    margin-bottom: .9rem;
+    min-height: 0;
+  }
+  .contador .chip {
+    padding: .3rem .7rem;
+    font-size: .74rem;
+  }
+
+  #filtros-activos-container {
+    gap: .35rem;
+    margin-bottom: .7rem;
+  }
+  #filtros-activos-container .chip-activo {
+    font-size: .72rem;
+    padding: .3rem .6rem;
+  }
+
+  /* Botón "Más filtros" un poco más chico */
+  .filtro-avanzado-toggle {
+    font-size: .8rem;
+    padding: .5rem .85rem;
+  }
+}
+
+/* =====================================================================
+   FASE 5A — HERO DE RECETA COMPACTO (solo móvil ≤720px)
+   Reduce el alto del encabezado sin tocar la versión de escritorio.
+   ===================================================================== */
+@media (max-width: 720px) {
+  .hero-receta {
+    padding: 1rem 1rem 1.25rem;
+  }
+  .hero-receta-inner {
+    padding: 0;
+  }
+  .breadcrumb {
+    font-size: .78rem;
+    margin-bottom: .5rem;
+    gap: .35rem;
+  }
+  .hero-receta h1 {
+    font-size: clamp(1.4rem, 5.5vw, 1.9rem);
+    line-height: 1.15;
+    letter-spacing: -.3px;
+    margin-bottom: .6rem;
+  }
+  .hero-receta .meta {
+    gap: .3rem;
+    justify-content: flex-start;
+  }
+  .hero-receta .meta span {
+    font-size: .68rem;
+    padding: .25rem .6rem;
+  }
+  .hero-receta .meta-icon {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/* =====================================================================
+   FASE 5B — IMAGEN DE RECETA (solo móvil ≤720px)
+   - aspect-ratio 16/9 fijo (consistencia entre recetas).
+   - max-height dinámico según vh, con techo.
+   - object-fit cover para no deformar.
+   - Sombra sutil para separar del fondo crema.
+   ===================================================================== */
+@media (max-width: 720px) {
+  .receta-page .receta {
+    padding: 1.25rem 1rem;
+  }
+  .receta-page .receta-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    max-height: 42vh;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+  }
+}
+
+/* =====================================================================
+   FASE 5C — TABS INGREDIENTES / PREPARACIÓN
+   - Desktop (>720px): tabs ocultas, ambas columnas lado a lado como antes.
+   - Móvil (≤720px): tabs visibles; data-vista controla qué columna se ve.
+   ===================================================================== */
+
+/* Las tabs solo se muestran en móvil */
+.receta-tabs {
+  display: none;
+}
+
+/* Blindaje de escritorio: pase lo que pase en data-vista,
+   ambas columnas se ven. Así un cambio de JS nunca rompe desktop. */
+@media (min-width: 721px) {
+  .cuerpo {
+    display: grid !important;
+    grid-template-columns: 1fr 1.5fr;
+  }
+  .cuerpo-col {
+    display: block !important;
+  }
+}
+
+@media (max-width: 720px) {
+  /* ---- Tabs visibles ---- */
+  .receta-tabs {
+    display: flex;
+    gap: .3rem;
+    background: var(--crema-osc);
+    border: 1px solid var(--borde);
+    border-radius: 99px;
+    padding: .25rem;
+    margin: 0 0 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    background: rgba(246, 236, 221, 0.92);
+  }
+
+  .receta-tabs > button {
+    flex: 1;
+    font-family: inherit;
+    font-size: .85rem;
+    font-weight: 600;
+    padding: .55rem .6rem;
+    border-radius: 99px;
+    border: none;
+    background: transparent;
+    color: var(--suave);
+    cursor: pointer;
+    min-height: 40px;
+    transition: background .2s, color .2s, box-shadow .2s;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .receta-tabs > button[aria-selected="true"] {
+    background: #fff;
+    color: var(--rojo-osc);
+    box-shadow: 0 2px 6px rgba(90, 60, 30, .12);
+  }
+
+  .receta-tabs > button:active {
+    transform: scale(.97);
+  }
+
+  .receta-tabs > button:focus-visible {
+    outline: 2px solid var(--rojo);
+    outline-offset: 2px;
+  }
+
+  /* ---- El cuerpo deja de ser grid y pasa a block ---- */
+  .cuerpo {
+    display: block;
+    grid-template-columns: none;
+    gap: 0;
+  }
+
+  /* ---- Toggle por data-vista ---- */
+  .cuerpo[data-vista="ingredientes"] .cuerpo-col[data-seccion="preparacion"] { display: none; }
+  .cuerpo[data-vista="preparacion"]  .cuerpo-col[data-seccion="ingredientes"] { display: none; }
+  .cuerpo[data-vista="todo"]         .cuerpo-col { display: block; }
+
+  /* Cuando ambas están visibles, se separan con un respiro */
+  .cuerpo[data-vista="todo"] .cuerpo-col[data-seccion="preparacion"] {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px dashed var(--borde);
+  }
+}
+
+/* ---- Impresión: siempre ambos visibles, sin tabs ---- */
+@media print {
+  .receta-tabs { display: none !important; }
+  .cuerpo { display: block !important; }
+  .cuerpo-col { display: block !important; }
+  .cuerpo-col[data-seccion="preparacion"] { margin-top: 0 !important; padding-top: 0 !important; border-top: none !important; }
+}
+
+/* =====================================================================
+   FASE 5D — BLOQUES COMPLEMENTARIOS COMPACTOS (solo móvil ≤720px)
+   ===================================================================== */
+@media (max-width: 720px) {
+  .dato {
+    margin-top: 1.2rem;
+    padding: .8rem 1rem;
+    font-size: .85rem;
+  }
+  .errores-box,
+  .conservacion-box {
+    padding: 1.1rem 1rem;
+    margin-top: 1.5rem;
+  }
+  .errores-box h3,
+  .conservacion-box h3 {
+    font-size: 1.05rem;
+    margin-bottom: .8rem;
+  }
+  .errores-lista li {
+    margin-bottom: 1rem;
+    font-size: .9rem;
+  }
+  .errores-lista span.solucion {
+    padding-left: 1.1rem;
+  }
+  .conservacion-item {
+    padding: .8rem;
+    font-size: .85rem;
+  }
+  .receta-guia-box {
+    padding: .85rem;
+    gap: .7rem;
+    margin-top: 1rem;
+  }
+  .guia-icon {
+    width: 34px;
+    height: 34px;
+  }
+  .guia-texto a {
+    font-size: 1rem;
+  }
+  .recetas-relacionadas {
+    padding: 1.1rem;
+    margin-top: 1.5rem;
+  }
+}
+
+/* =====================================================================
+   FASE 5E — BARRA DE ACCIONES COMPACTA (solo móvil ≤720px)
+   - Botones reducidos.
+   - Estrellas en su propia fila, centradas.
+   - Favorito cuadrado, no círculo grande.
+   ===================================================================== */
+@media (max-width: 720px) {
+  .receta-barra {
+    gap: .5rem;
+    margin-bottom: 1rem;
+  }
+  .receta-barra .receta-acciones-top {
+    gap: .4rem;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  .btn-imprimir,
+  .btn-modo-cocina,
+  .btn-offline {
+    height: 36px;
+    padding: 0 .8rem;
+    font-size: .82rem;
+    border-radius: 99px;
+  }
+  .btn-imprimir svg,
+  .btn-modo-cocina svg {
+    width: 14px;
+    height: 14px;
+  }
+  .receta-acciones-top .btn-favorito,
+  .receta-barra .btn-favorito {
+    width: 36px;
+    height: 36px;
+  }
+  .receta-acciones-top .btn-favorito svg,
+  .receta-barra .btn-favorito svg {
+    width: 16px;
+    height: 16px;
+  }
+  .rating-container {
+    width: 100%;
+    justify-content: center;
+    padding: .5rem .7rem;
+    gap: .5rem;
+    border-radius: 99px;
+  }
+  .rating-text {
+    font-size: .8rem;
+  }
+  .rating-star {
+    min-width: 28px;
+    min-height: 28px;
+  }
+  .rating-star svg {
+    width: 18px;
+    height: 18px;
   }
 }

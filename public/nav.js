@@ -9,6 +9,9 @@
   window.__navInicializado = true;
 
   /* ---------- Menú hamburguesa (móvil) ---------- */
+  // FASE 2: el botón hamburguesa ya no existe en el HTML.
+  // Esta IIFE retorna temprano (toggle === null) y no hace nada.
+  // Se conserva por si en el futuro se reactiva el patrón.
   (function initNavToggle() {
     var toggle = document.querySelector('.site-nav-toggle');
     var links  = document.querySelector('.site-nav-links');
@@ -19,7 +22,6 @@
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
 
-    // Cerrar el menú al hacer clic en cualquier enlace
     links.addEventListener('click', function (e) {
       if (e.target.closest('a')) {
         links.classList.remove('abierto');
@@ -28,34 +30,29 @@
     });
   })();
 
-  /* ---------- Dropdown Herramientas ---------- */
+  /* ---------- Dropdown Herramientas (desktop) ---------- */
   (function initDropdownHerramientas() {
     var dropdowns = document.querySelectorAll('.dropdown-tools');
     if (!dropdowns.length) return;
 
-    // Cerrar al hacer clic fuera
     document.addEventListener('click', function (e) {
       dropdowns.forEach(function (d) {
         if (d.open && !d.contains(e.target)) d.open = false;
       });
     });
 
-    // Cerrar con Escape
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') {
         dropdowns.forEach(function (d) { d.open = false; });
       }
     });
 
-    // Cerrar al hacer clic en un enlace del dropdown
     dropdowns.forEach(function (d) {
       d.querySelectorAll('.dropdown-menu a').forEach(function (a) {
         a.addEventListener('click', function () { d.open = false; });
       });
     });
 
-    // FASE 3 (auditoría): detectar "activo" con URLs limpias (trailing slash)
-    // location.pathname ahora termina en "/" → normalizamos ambos lados.
     var path = location.pathname.replace(/\/+$/, '').split('/').filter(Boolean).pop() || '';
     path = path.toLowerCase();
     dropdowns.forEach(function (d) {
@@ -72,7 +69,6 @@
       if (tieneActivo) d.classList.add('tools-activo');
     });
 
-    // Fix: cuando el dropdown está abierto, permitir que se desborde
     var navLinks = document.querySelector('.site-nav-links');
     if (navLinks) {
       dropdowns.forEach(function (d) {
@@ -88,21 +84,15 @@
   (function initNavSearch() {
     var input = document.getElementById('nav-buscador');
     var dropdown = document.getElementById('nav-buscador-sugerencias');
-
-    // MEJORA 6 (Fase 4): ya no exigimos window.RECETAS_NAV en el arranque.
-    // Se carga perezosamente al enfocar el input.
     if (!input || !dropdown) return;
 
     var activo = -1;
     var sugerencias = [];
 
-    // Normalizar texto (quitar acentos y minúsculas)
     function norm(s) {
       return String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
     }
 
-    // MEJORA 6 (Fase 4): carga perezosa de la lista mínima del buscador.
-    // Layout.astro ya no incrusta los ~26 KB en cada página.
     function cargarNav() {
       if (window.RECETAS_NAV) return Promise.resolve();
       return fetch('/api/recetas-nav.json')
@@ -112,7 +102,6 @@
     }
 
     function buscar(q) {
-      // MEJORA 6 (Fase 4): si la lista aún no llegó, no romper.
       if (!window.RECETAS_NAV) return [];
 
       var qN = norm(q.trim());
@@ -120,24 +109,21 @@
 
       var resultados = [];
 
-      // Buscar coincidencias con puntuación para ordenar por relevancia
       window.RECETAS_NAV.forEach(function (r) {
         var tituloNorm = norm(r.titulo);
         var score = 0;
 
         if (tituloNorm === qN) {
-          score = 100; // Coincidencia exacta
+          score = 100;
         } else if (tituloNorm.indexOf(qN) === 0) {
-          score = 80; // Empieza con la palabra (ej. "Pan amasado")
+          score = 80;
         } else {
-          // Si la palabra tiene 3 letras o más, buscar como palabra completa
           if (qN.length >= 3) {
             var re = new RegExp('\\b' + qN.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i');
             if (re.test(tituloNorm)) {
-              score = 60; // Lo contiene como palabra (ej. "Arroz con pan")
+              score = 60;
             }
           } else {
-            // Si es muy corto (ej. "pa"), buscar simplemente si lo contiene
             if (tituloNorm.indexOf(qN) !== -1) {
               score = 40;
             }
@@ -149,12 +135,10 @@
         }
       });
 
-      // Ordenar de mayor a menor puntaje
       resultados.sort(function (a, b) {
         return b.score - a.score;
       });
 
-      // Devolver solo los primeros 6
       return resultados.slice(0, 6).map(function(x) { return x.r; });
     }
 
@@ -165,9 +149,6 @@
         return;
       }
 
-      // FASE 1 (a11y): TODOS los <li> llevan aria-selected explícito
-      // ("true" en el activo, "false" en el resto). Sin esto, el listbox
-      // incumple WAI-ARIA 1.2 y Lighthouse lo marca.
       dropdown.innerHTML = sugerencias.map(function (r, i) {
         var isActivo = i === activo;
         return '<li data-idx="' + i + '" role="option" aria-selected="' + (isActivo ? 'true' : 'false') + '"' +
@@ -184,26 +165,21 @@
     function seleccionar(idx) {
       var r = sugerencias[idx];
       if (!r) return;
-
-      // FASE 3 (auditoría): URL limpia → /recetas/slug/
       window.location.href = '/recetas/' + r.slug + '/';
     }
 
-    // Función auxiliar para evitar inyecciones HTML
     function escaparHtml(s) {
       return String(s).replace(/[&<>"']/g, function (c) {
         return { '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c];
       });
     }
 
-    // MEJORA 6 (Fase 4): disparar la carga al primer foco (una sola vez).
     input.addEventListener('focus', function () {
       cargarNav().then(function () {
         if (input.value) input.dispatchEvent(new Event('input'));
       });
     }, { once: true });
 
-    // --- EVENTOS ---
     input.addEventListener('input', function () {
       sugerencias = buscar(input.value);
       activo = -1;
@@ -231,7 +207,6 @@
       }
     });
 
-    // Usar mousedown en vez de click para que el evento ocurra antes del blur
     dropdown.addEventListener('mousedown', function (e) {
       var li = e.target.closest('li[data-idx]');
       if (li) {
@@ -240,12 +215,32 @@
       }
     });
 
-    // Ocultar el dropdown cuando se pierde el foco
     input.addEventListener('blur', function () {
       setTimeout(function () {
         dropdown.hidden = true;
         activo = -1;
       }, 150);
+    });
+  })();
+
+  /* ---------- FASE 2: Tabbar inferior — panel Herramientas ---------- */
+  (function initTabbarTools() {
+    var tools = document.querySelector('.tabbar-tools');
+    if (!tools) return;
+
+    // Cerrar al hacer clic fuera
+    document.addEventListener('click', function (e) {
+      if (tools.open && !tools.contains(e.target)) tools.open = false;
+    });
+
+    // Cerrar con Escape
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && tools.open) tools.open = false;
+    });
+
+    // Cerrar al tocar cualquier enlace del panel
+    tools.querySelectorAll('.tabbar-tools-menu a').forEach(function (a) {
+      a.addEventListener('click', function () { tools.open = false; });
     });
   })();
 

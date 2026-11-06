@@ -19,17 +19,19 @@ import Layout from '../layouts/Layout.astro';
         <ul id="buscador-sugerencias" class="ac-dropdown" hidden></ul>
       </div>
       <button type="button" class="btn-despensa" id="btnDespensa">🥕 ¿Qué tenemos?</button>
-      <button class="filtro activo" data-cat="todas">Todas</button>
-      <button class="filtro" data-cat="principales">Platos de fondo</button>
-      <button class="filtro" data-cat="sopas">Sopas y guisos</button>
-      <button class="filtro" data-cat="panes">Masas y horneados</button>
-      <button class="filtro" data-cat="ensaladas">Ensaladas y picoteo</button>
-      <button class="filtro" data-cat="dulces">Dulces</button>
-      <button class="filtro" data-cat="bebidas">Bebidas</button>
-      <button class="filtro" data-cat="once">Once</button>
-      <button class="filtro" data-cat="sandwiches">Sándwiches</button>
-      <button class="filtro" data-cat="mar">Del mar</button>
-      <button class="filtro filtro-once" data-cat="modo-once" title="Panes + once + sándwiches juntos">🧉 Modo Once</button>
+      <div class="filtros-scroll">
+        <button class="filtro activo" data-cat="todas">Todas</button>
+        <button class="filtro" data-cat="principales">Platos de fondo</button>
+        <button class="filtro" data-cat="sopas">Sopas y guisos</button>
+        <button class="filtro" data-cat="panes">Masas y horneados</button>
+        <button class="filtro" data-cat="ensaladas">Ensaladas y picoteo</button>
+        <button class="filtro" data-cat="dulces">Dulces</button>
+        <button class="filtro" data-cat="bebidas">Bebidas</button>
+        <button class="filtro" data-cat="once">Once</button>
+        <button class="filtro" data-cat="sandwiches">Sándwiches</button>
+        <button class="filtro" data-cat="mar">Del mar</button>
+        <button class="filtro filtro-once" data-cat="modo-once" title="Panes + once + sándwiches juntos">🧉 Modo Once</button>
+      </div>
       <button type="button" class="filtro-avanzado-toggle" id="btnFiltrosAvanzados" aria-expanded="false">⚙️ Más filtros</button>
 
       <div class="filtros-avanzados" id="filtrosAvanzados" hidden>
