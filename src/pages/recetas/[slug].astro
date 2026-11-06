@@ -509,4 +509,71 @@ const ICON_LIBRO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" s
     })();
   </script>
 
+  <!-- FASE C — Ocultar FAB del carrito cuando el escalador o "Añadir todos"
+       entran en la zona del FAB (últimos ~20% del viewport).
+       - El FAB vive en el body (creado por lista-compras.js en su DOMContentLoaded).
+       - Este observer espera a que exista con reintentos cortos.
+       - Degradación: si IntersectionObserver no existe, FAB visible siempre.
+       - No modifica lista-compras.js ni el comportamiento del carrito. -->
+  <script is:inline>
+    (function () {
+      'use strict';
+
+      if (!('IntersectionObserver' in window)) return;
+
+      var intentos = 0;
+      var MAX_INTENTOS = 30; // ~1.8s máximo (60ms × 30)
+
+      function arrancar() {
+        var fab = document.getElementById('shopping-fab');
+
+        // El FAB lo crea lista-compras.js en su propio DOMContentLoaded.
+        // Este script puede registrar su listener antes o después;
+        // con reintentos cubrimos ambos órdenes.
+        if (!fab) {
+          intentos++;
+          if (intentos > MAX_INTENTOS) return;
+          setTimeout(arrancar, 60);
+          return;
+        }
+
+        var targets = [];
+        var escalador = document.querySelector('.escalador');
+        var btnAll = document.querySelector('.btn-add-all');
+        if (escalador) targets.push(escalador);
+        if (btnAll) targets.push(btnAll);
+        if (targets.length === 0) return;
+
+        // Observa solo los últimos 20% del viewport (zona donde vive el FAB).
+        // rootMargin -80% arriba ⇒ la "ventana" del observer es la franja
+        // inferior del viewport. Cuando el escalador cruza esa franja,
+        // isIntersecting = true y ocultamos el FAB.
+        var observer = new IntersectionObserver(function (entries) {
+          var algunoVisible = false;
+          for (var i = 0; i < entries.length; i++) {
+            if (entries[i].isIntersecting) { algunoVisible = true; break; }
+          }
+          if (algunoVisible) {
+            fab.classList.add('shopping-fab--oculto');
+          } else {
+            fab.classList.remove('shopping-fab--oculto');
+          }
+        }, {
+          rootMargin: '-80% 0px 0px 0px',
+          threshold: 0
+        });
+
+        for (var j = 0; j < targets.length; j++) {
+          observer.observe(targets[j]);
+        }
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', arrancar);
+      } else {
+        arrancar();
+      }
+    })();
+  </script>
+
 </Layout>

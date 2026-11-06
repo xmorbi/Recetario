@@ -903,7 +903,44 @@ body.mc-bloqueado{overflow:hidden}
   }
 }
 /* === FIN BLOQUE FASE B — MENÚ IMPRIMIR === */
+/* === INICIO BLOQUE FASE C — FAB vs ESCALADOR (v2, IntersectionObserver) === */
+/* v1 usaba padding-right en el escalador y comprimía tanto el ancho que
+   el layout se reorganizaba en 3 filas apretadas. Descartado.
+   v2 delega en un IntersectionObserver (en [slug].astro) que agrega la
+   clase .shopping-fab--oculto cuando el escalador o "Añadir todos"
+   entran en la zona del FAB (últimos 20% del viewport).
+   Aquí solo definimos transición y estado oculto.
+   Degradación: si el observer no corre, el FAB queda visible como siempre. */
 
+.shopping-fab {
+  /* Sobrescribe la transición original para incluir opacity.
+     Especificidad idéntica, cascade gana por estar después. */
+  transition: opacity 0.25s ease, transform 0.2s, background 0.2s;
+}
+
+.shopping-fab--oculto {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+}
+
+/* En desktop no ocultamos: el observer igual agrega la clase si el
+   escalador entra en la zona, pero en desktop el FAB no molesta y
+   no queremos que desaparezca. */
+@media (min-width: 641px) {
+  .shopping-fab--oculto {
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shopping-fab {
+    transition: none;
+  }
+}
+/* === FIN BLOQUE FASE C — FAB vs ESCALADOR === */
 /* ===== ESTABILIDAD DE LAYOUT (ANTI-SALTOS) ===== */
 .receta-card .receta-card-faltan[hidden]{display:none!important}
 .calc-breakdown{min-height:1.4em}
