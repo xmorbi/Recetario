@@ -3330,3 +3330,888 @@ body.mc-bloqueado{overflow:hidden}
     height: 18px;
   }
 }
+
+/* =====================================================================
+   FASE 6A — MODO COCINA: HEADER COMPACTO (≤640px)
+   - Botones de 48 → 40px (aún >44px de tap target efectivo con el gap).
+   - Título más chico, no compite con el paso.
+   - Reduce padding del header para ganar altura vertical.
+   ===================================================================== */
+@media (max-width: 640px) {
+  .mc-header {
+    flex-wrap: wrap;
+    gap: .4rem;
+    padding: .35rem .35rem .5rem;
+  }
+  .mc-titulo {
+    font-size: 1rem;
+    line-height: 1.15;
+    font-weight: 700;
+  }
+  .mc-header-acciones {
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .3rem;
+  }
+  .mc-btn-icon,
+  .mc-fs-btn,
+  .mc-cerrar,
+  .mc-atajos > summary {
+    width: 40px;
+    height: 40px;
+  }
+  .mc-btn-icon svg,
+  .mc-cerrar svg {
+    width: 18px;
+    height: 18px;
+  }
+  .mc-atajos > summary {
+    font-size: 1rem;
+  }
+  .mc-fs-btn {
+    font-size: .72rem;
+  }
+  .mc-progreso {
+    padding: .5rem .3rem 0;
+  }
+  .mc-progreso-texto {
+    font-size: .72rem;
+    margin-top: .3rem;
+  }
+}
+
+/* =====================================================================
+   FASE 6B — MODO COCINA: PASO ACTUAL PROTAGONISTA (≤640px)
+   - Texto más grande, line-height ajustado para lectura de cerca.
+   - max-width 30ch → 32ch (óptimo móvil: 45–75 caracteres por línea).
+   - Reduce paddings verticales para dar más área útil al paso.
+   ===================================================================== */
+@media (max-width: 640px) {
+  .mc-paso {
+    padding: .6rem .3rem;
+  }
+  .mc-paso-header {
+    margin-bottom: .7rem;
+    gap: .6rem;
+  }
+  .mc-paso-num {
+    font-size: .74rem;
+    letter-spacing: .14em;
+  }
+  .mc-paso-texto {
+    font-size: calc(clamp(1.6rem, 6vw, 2.4rem) * var(--mc-fs, 1));
+    line-height: 1.42;
+    max-width: 32ch;
+    font-weight: 600;
+    letter-spacing: -.005em;
+  }
+  .mc-contenido {
+    padding: .5rem .4rem;
+    margin-top: .5rem;
+  }
+  .mc-aviso-escala {
+    margin: .5rem .3rem 0;
+    padding: .65rem .8rem;
+    font-size: .9rem;
+  }
+}
+
+/* =====================================================================
+   FASE 6C — MODO COCINA: NAV INFERIOR (≤640px)
+   - Prev/Next más anchos (56×52px) para uso con pulgar.
+   - Contador central con ancho mínimo.
+   - Safe-area-bottom reforzado (aunque .mc-overlay ya lo aplica).
+   ===================================================================== */
+@media (max-width: 640px) {
+  .mc-nav {
+    grid-template-columns: auto 1fr auto;
+    gap: .5rem;
+    padding: .7rem .3rem calc(.4rem + env(safe-area-inset-bottom, 0px));
+  }
+  .mc-nav button {
+    min-width: 56px;
+    min-height: 52px;
+    padding: .8rem 1rem;
+    font-size: 1rem;
+  }
+  .mc-prev,
+  .mc-next {
+    font-size: 1.15rem;
+  }
+  .mc-contador {
+    font-size: 1rem;
+    min-width: 52px;
+    padding: 0 .25rem;
+  }
+}
+
+/* =====================================================================
+   FASE 6D — MODO COCINA: TIMERS (≤640px)
+   - Chips más compactos, más cantidad visible.
+   - Botones de control (pause/close) reducidos a 40px.
+   - Altura máxima recortada a 18vh (no choca con nav).
+   ===================================================================== */
+@media (max-width: 640px) {
+  .mc-timers {
+    padding: .35rem .3rem;
+    gap: .35rem;
+    max-height: 18vh;
+  }
+  .mc-timer-chip {
+    font-size: .76rem;
+    padding: .3rem .35rem .3rem .6rem;
+    gap: .35rem;
+  }
+  .mc-timer-tiempo {
+    font-size: .82rem;
+    min-width: 3.8ch;
+  }
+  .mc-timer-label {
+    font-size: .78rem;
+  }
+  .mc-timer-btn {
+    width: 40px;
+    height: 40px;
+  }
+  .mc-paso-timer {
+    margin: .9rem auto 0;
+    max-width: 320px;
+  }
+  .mc-paso-timer .mc-timer-tiempo {
+    font-size: 1.8rem;
+  }
+}
+
+/* =====================================================================
+   FASE 6E — MODO COCINA: MISE EN PLACE (≤640px)
+   - Filas de 64 → 56px (tap target sigue OK).
+   - Menos espacio entre grupos.
+   - Texto y verbo escalados al viewport.
+   ===================================================================== */
+@media (max-width: 640px) {
+  .mc-mise-cab {
+    margin: 0 auto .9rem;
+  }
+  .mc-mise-titulo {
+    font-size: 1.35rem;
+    margin-bottom: .3rem;
+  }
+  .mc-mise-sub {
+    font-size: .9rem;
+    margin-bottom: .5rem;
+    line-height: 1.4;
+  }
+  .mc-mise-grupo {
+    margin: 0 auto 1rem;
+  }
+  .mc-mise-grupo-t {
+    font-size: .82rem;
+    margin-bottom: .5rem;
+  }
+  .mc-mise-fila {
+    padding: .7rem .75rem;
+    gap: .7rem;
+    min-height: 56px;
+  }
+  .mc-mise-texto {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+  .mc-mise-chip {
+    font-size: .78rem;
+    padding: .08rem .45rem;
+  }
+  .mc-mise-verbo {
+    font-size: .72rem;
+    padding: .12rem .55rem;
+  }
+  .mc-mise-scroll {
+    padding: .3rem .3rem .8rem;
+  }
+  .mc-mise-mano summary {
+    padding: .8rem 1rem;
+    font-size: .92rem;
+  }
+}
+
+/* =====================================================================
+   FASE 6F — SAFE AREAS (≤640px)
+   Refuerzo del borde inferior del overlay completo.
+   ===================================================================== */
+@media (max-width: 640px) {
+  .mc-overlay {
+    padding-top: max(.5rem, env(safe-area-inset-top, 0px));
+    padding-bottom: max(.5rem, env(safe-area-inset-bottom, 0px));
+  }
+  .mc-mise-pie {
+    padding-bottom: calc(.5rem + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+/* =====================================================================
+   FASE 6H — MODO COCINA: HEADER LIMPIO + ACTION SHEET INFERIOR
+   Header (izq→der): Cerrar · Título + Paso X de Y · Mic · ⋯
+   Sheet: bottom sheet en móvil (spring physics), popover en desktop.
+   No toca lógica de timers, voz, notificaciones ni progreso.
+   ===================================================================== */
+
+/* ---------- Header base (aplica en todas las pantallas) ---------- */
+.mc-header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: .5rem;
+  padding: .35rem .5rem .5rem;
+  border-bottom: 1px solid rgba(255,255,255,.15);
+  flex-shrink: 0;
+  position: relative;
+}
+
+.mc-titulo-wrap {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: .1rem;
+  text-align: center;
+}
+
+.mc-titulo {
+  font-family: var(--fuente-titulos);
+  font-size: clamp(.95rem, 2vw, 1.3rem);
+  color: #fdf8f0;
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  letter-spacing: -.01em;
+}
+
+.mc-header-paso {
+  font-size: .7rem;
+  color: rgba(253,248,240,.65);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  line-height: 1;
+}
+
+.mc-header-acciones {
+  display: flex;
+  align-items: center;
+  gap: .35rem;
+  flex-shrink: 0;
+}
+
+/* En desktop: botón ⋯ visible */
+.mc-mas-toggle {
+  display: inline-flex;
+}
+
+/* ---------- Backdrop del sheet ---------- */
+.mc-sheet-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.45);
+  opacity: 0;
+  transition: opacity .3s ease;
+  z-index: 9990;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+}
+.mc-sheet-overlay[hidden] { display: none !important; }
+.mc-sheet-overlay.mc-sheet-overlay-abierto { opacity: 1; }
+
+/* ---------- Sheet (móvil primero) ---------- */
+.mc-sheet {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2b1810;
+  color: #fdf8f0;
+  border-radius: 20px 20px 0 0;
+  padding: .5rem 1rem calc(1rem + env(safe-area-inset-bottom, 0px));
+  z-index: 9991;
+  transform: translateY(100%);
+  transition: transform .42s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 -8px 32px rgba(0,0,0,.5);
+  max-height: 85vh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  backdrop-filter: blur(24px) saturate(180%);
+}
+.mc-sheet[hidden] { display: none !important; }
+.mc-sheet.mc-sheet-abierto { transform: translateY(0); }
+
+.mc-sheet-handle {
+  width: 40px;
+  height: 4px;
+  background: rgba(253,248,240,.35);
+  border-radius: 99px;
+  margin: 0 auto .9rem;
+}
+
+.mc-sheet-titulo {
+  font-family: var(--fuente-titulos);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fdf8f0;
+  margin: 0 0 .9rem;
+  text-align: center;
+}
+
+.mc-sheet-seccion {
+  margin: 0 0 1rem;
+}
+
+.mc-sheet-label {
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: #e8b54a;
+  font-weight: 700;
+  margin: 0 0 .5rem;
+}
+
+/* Control segmentado de tamaño de letra */
+.mc-sheet-fs {
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 99px;
+  padding: .25rem;
+  gap: .25rem;
+}
+.mc-sheet-fs .mc-fs-btn {
+  flex: 1;
+  height: 44px;
+  border-radius: 99px;
+  border: none;
+  background: transparent;
+  color: #fdf8f0;
+  font-family: inherit;
+  font-size: 1.05rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background .2s;
+}
+.mc-sheet-fs .mc-fs-btn:hover:not([disabled]) { background: rgba(255,255,255,.12); }
+.mc-sheet-fs .mc-fs-btn[disabled] { opacity: .35; cursor: not-allowed; }
+.mc-sheet-fs-valor {
+  flex: 0 0 auto;
+  min-width: 60px;
+  text-align: center;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: #e8b54a;
+  font-size: .95rem;
+}
+
+/* Fila de acción del sheet */
+.mc-sheet-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: .75rem;
+  padding: .85rem .9rem;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 12px;
+  color: #fdf8f0;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  margin-bottom: .4rem;
+  transition: background .2s, border-color .2s;
+  min-height: 52px;
+  list-style: none;
+}
+.mc-sheet-item:hover,
+.mc-sheet-item:focus-visible {
+  background: rgba(255,255,255,.12);
+  border-color: rgba(232,181,74,.5);
+  outline: none;
+}
+.mc-sheet-item-icon {
+  font-size: 1.15rem;
+  line-height: 1;
+  flex-shrink: 0;
+  width: 24px;
+  text-align: center;
+}
+.mc-sheet-item-texto {
+  flex: 1;
+  min-width: 0;
+}
+.mc-sheet-item-estado {
+  font-size: .78rem;
+  color: #e8b54a;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+.mc-sheet-item-chevron {
+  color: rgba(253,248,240,.5);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* Estado activo de TTS */
+.mc-sheet-item.mc-tts-toggle.activo {
+  background: rgba(232,181,74,.15);
+  border-color: rgba(232,181,74,.55);
+}
+
+/* Details de atajos dentro del sheet: se expande en flujo */
+.mc-sheet .mc-sheet-details { display: block; }
+.mc-sheet .mc-sheet-details > summary::-webkit-details-marker { display: none; }
+.mc-sheet .mc-sheet-details[open] > summary .mc-sheet-item-chevron { transform: rotate(90deg); }
+.mc-sheet .mc-sheet-details > summary .mc-sheet-item-chevron {
+  transition: transform .2s;
+}
+.mc-sheet .mc-atajos-panel {
+  position: static;
+  width: auto;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 10px;
+  padding: .75rem .9rem;
+  margin-top: .4rem;
+  box-shadow: none;
+}
+
+/* ---------- Desktop: sheet = popover ---------- */
+@media (min-width: 641px) {
+  .mc-sheet-overlay { display: none !important; }
+  .mc-sheet {
+    position: absolute;
+    left: auto;
+    right: .5rem;
+    top: calc(100% + 6px);
+    bottom: auto;
+    width: 340px;
+    border-radius: 14px;
+    padding: 1rem 1rem 1.1rem;
+    transform: translateY(-8px);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform .22s var(--ease-out, ease-out), opacity .22s, visibility 0s linear .22s;
+    box-shadow: 0 12px 36px rgba(0,0,0,.55);
+    max-height: calc(100vh - 120px);
+  }
+  .mc-sheet.mc-sheet-abierto {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    transition: transform .22s var(--ease-out, ease-out), opacity .22s, visibility 0s;
+  }
+  .mc-sheet-handle { display: none; }
+  .mc-sheet[hidden] { display: none !important; }
+}
+
+/* ---------- Mobile ≤640: header más chico ---------- */
+@media (max-width: 640px) {
+  .mc-header {
+    padding: .3rem .4rem .4rem;
+    gap: .3rem;
+  }
+  .mc-btn-icon,
+  .mc-cerrar,
+  .mc-mas-toggle {
+    width: 40px;
+    height: 40px;
+  }
+  .mc-titulo {
+    font-size: .95rem;
+  }
+  .mc-header-paso {
+    font-size: .66rem;
+  }
+}
+
+/* =====================================================================
+   FASE 7 — MATERIALES, ANIMACIONES Y MICROINTERACCIONES
+   Aditivo. No modifica bloques previos: sobrescribe por orden de
+   cascada (mismo patrón que fases 4, 5 y 6). Objetivo: sensación iOS.
+   - 7A tokens nuevos (spring, materiales, sombra multicapa)
+   - 7B materiales translúcidos (menús, modales, paneles, banner)
+   - 7C animaciones con --ease-ios (menús, paneles, overlays, cards)
+   - 7D respuesta táctil (:active, -webkit-tap-highlight-color)
+   - 7E geometría: radios más orgánicos en móvil + paneles flotantes
+   - 7F modo oscuro: sombras y materiales específicos
+   - 7G prefers-reduced-motion
+   ===================================================================== */
+
+/* ----- 7A — Tokens nuevos ----- */
+:root {
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --material-thin:    rgba(253, 248, 240, 0.82);
+  --material-regular: rgba(253, 248, 240, 0.90);
+  --material-thick:   rgba(253, 248, 240, 0.95);
+  --shadow-material:
+    0 1px 2px rgba(90, 60, 30, 0.06),
+    0 4px 12px rgba(90, 60, 30, 0.08),
+    0 16px 40px rgba(90, 60, 30, 0.10);
+}
+
+[data-theme="dark"] {
+  --material-thin:    rgba(18, 18, 18, 0.82);
+  --material-regular: rgba(18, 18, 18, 0.90);
+  --material-thick:   rgba(30, 30, 30, 0.95);
+  --shadow-material:
+    0 1px 2px rgba(0, 0, 0, 0.35),
+    0 4px 12px rgba(0, 0, 0, 0.45),
+    0 16px 40px rgba(0, 0, 0, 0.55);
+}
+
+/* ----- 7B — Materiales translúcidos ----- */
+/* Menús flotantes: dropdown nav, dropdown tabbar, autocompletado */
+.dropdown-menu,
+.tabbar-tools-menu,
+.ac-dropdown {
+  -webkit-backdrop-filter: var(--blur-md);
+  backdrop-filter: var(--blur-md);
+  background: var(--material-thick);
+  box-shadow: var(--shadow-material);
+}
+
+[data-theme="dark"] .dropdown-menu,
+[data-theme="dark"] .tabbar-tools-menu,
+[data-theme="dark"] .ac-dropdown {
+  background: var(--material-thick);
+  box-shadow: var(--shadow-material);
+}
+
+/* Origen de transform para las animaciones de entrada */
+.dropdown-menu { transform-origin: top right; }
+.tabbar-tools-menu { transform-origin: bottom center; }
+
+/* Modal de despensa: overlay con blur + sombra profunda */
+.modal-despensa-overlay {
+  -webkit-backdrop-filter: blur(10px) saturate(120%);
+  backdrop-filter: blur(10px) saturate(120%);
+  background: rgba(20, 12, 8, 0.45);
+}
+
+.modal-despensa {
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.12),
+    0 12px 32px rgba(0, 0, 0, 0.24),
+    0 32px 80px rgba(0, 0, 0, 0.32);
+}
+
+/* Panel de lista de compras: overlay con blur + sombra lateral */
+.shopping-overlay {
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  background: rgba(20, 12, 8, 0.35);
+}
+
+.shopping-panel {
+  box-shadow:
+    -2px 0 8px rgba(0, 0, 0, 0.08),
+    -16px 0 48px rgba(0, 0, 0, 0.18);
+}
+
+/* Cookie banner: refinar material */
+.cookie-banner {
+  -webkit-backdrop-filter: var(--blur-md);
+  backdrop-filter: var(--blur-md);
+  box-shadow: var(--shadow-material);
+}
+
+[data-theme="dark"] .cookie-banner {
+  box-shadow: var(--shadow-material);
+}
+
+/* ----- 7C — Animaciones con --ease-ios ----- */
+@keyframes f7MenuInDown {
+  from { opacity: 0; transform: translateY(-6px) scale(0.96); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes f7MenuInUp {
+  from { opacity: 0; transform: translateX(-50%) translateY(6px) scale(0.94); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0) scale(1); }
+}
+
+@keyframes f7PanelIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Entrada de menús flotantes (details) */
+details[open] > .dropdown-menu {
+  animation: f7MenuInDown var(--duration-base) var(--ease-ios);
+}
+
+details[open] > .tabbar-tools-menu {
+  animation: f7MenuInUp var(--duration-base) var(--ease-ios);
+}
+
+/* Autocomplete dropdown */
+.ac-dropdown:not([hidden]) {
+  animation: f7MenuInDown var(--duration-fast) var(--ease-ios);
+}
+
+/* Filtros avanzados */
+.filtros-avanzados:not([hidden]) {
+  animation: f7PanelIn var(--duration-base) var(--ease-ios);
+}
+
+/* Paneles: transiciones con --ease-ios */
+.shopping-panel {
+  transition: transform var(--duration-slow) var(--ease-ios);
+}
+
+.shopping-overlay {
+  transition: opacity var(--duration-base) var(--ease-ios);
+}
+
+.modal-despensa-overlay {
+  transition: opacity var(--duration-base) var(--ease-ios);
+}
+
+.modal-despensa {
+  transition:
+    transform var(--duration-slow) var(--ease-ios),
+    opacity var(--duration-slow) var(--ease-ios);
+}
+
+.cookie-banner {
+  transition:
+    transform var(--duration-slow) var(--ease-ios),
+    opacity var(--duration-slow) var(--ease-ios);
+}
+
+.mc-overlay {
+  transition:
+    opacity var(--duration-base) var(--ease-ios),
+    visibility 0s linear var(--duration-base);
+}
+
+.mc-overlay.abierto {
+  transition:
+    opacity var(--duration-base) var(--ease-ios),
+    visibility 0s;
+}
+
+/* Cards: hover coherente */
+.receta,
+.receta-card,
+.receta-destacada,
+.categoria-card,
+.minuta-card {
+  transition:
+    transform var(--duration-base) var(--ease-ios),
+    box-shadow var(--duration-base) var(--ease-ios),
+    border-color var(--duration-fast) var(--ease-ios);
+}
+
+/* Botones de acción: transiciones coherentes */
+.btn-imprimir,
+.btn-modo-cocina,
+.btn-offline,
+.btn-despensa,
+.btn-calc,
+.btn-whatsapp,
+.btn-pinterest,
+.btn-compartir-lista,
+.btn-compartir-link,
+.btn-limpiar,
+.btn-minuta,
+.landing-todas-btn {
+  transition:
+    background var(--duration-fast) var(--ease-ios),
+    border-color var(--duration-fast) var(--ease-ios),
+    color var(--duration-fast) var(--ease-ios),
+    transform var(--duration-fast) var(--ease-ios),
+    box-shadow var(--duration-fast) var(--ease-ios);
+}
+
+/* Favorito: escala con spring al toque */
+.btn-favorito {
+  transition:
+    color var(--duration-fast) var(--ease-ios),
+    border-color var(--duration-fast) var(--ease-ios),
+    background var(--duration-fast) var(--ease-ios),
+    transform var(--duration-base) var(--ease-spring);
+}
+
+/* ----- 7D — Respuesta táctil ----- */
+/* Feedback inmediato al toque */
+.btn-imprimir:active,
+.btn-modo-cocina:active,
+.btn-offline:active,
+.btn-despensa:active,
+.btn-calc:active,
+.btn-whatsapp:active,
+.btn-pinterest:active,
+.btn-compartir-lista:active,
+.btn-compartir-link:active,
+.btn-limpiar:active,
+.btn-minuta:active,
+.btn-aplicar-despensa:active,
+.btn-vaciar:active,
+.btn-add-all:active,
+.btn-add-ing:active,
+.landing-todas-btn:active,
+.landing-once-btn:active,
+.filtro:active,
+.filtro-chip:active,
+.filtro-once:active,
+.filtro-avanzado-toggle:active,
+.chip-activo:active,
+.chip-despensa:active,
+.tabbar-item:active,
+.tabbar-tools > summary:active,
+.modal-close:active,
+.shopping-close:active,
+.shop-del:active,
+.shop-check:active {
+  transform: scale(var(--scale-press));
+  opacity: var(--opacity-active);
+  transition-duration: var(--duration-fast);
+}
+
+/* Botones que ya tienen translate al hover: combinar en :active */
+.btn-modo-cocina:active,
+.btn-imprimir:active,
+.btn-offline:active,
+.btn-despensa:active {
+  transform: translateY(-1px) scale(var(--scale-press));
+}
+
+/* Cards: feedback sutil al toque */
+.receta-card-link:active,
+.categoria-card:active,
+.receta-destacada:active {
+  transform: scale(0.99);
+  transition: transform var(--duration-fast) var(--ease-ios);
+}
+
+/* Estrellas de rating */
+.rating-star:active {
+  transform: scale(0.9);
+  transition: transform var(--duration-fast) var(--ease-ios);
+}
+
+/* Favorito: rebote al marcar */
+.btn-favorito:active {
+  transform: scale(0.9);
+}
+
+/* Tabbar: evitar highlight azul en iOS */
+.tabbar-item,
+.tabbar-tools > summary {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ----- 7E — Geometría: cards más orgánicas en móvil ----- */
+@media (max-width: 640px) {
+  .receta-card {
+    border-radius: 20px;
+  }
+  .receta-card-foto {
+    border-radius: 14px;
+  }
+  .categoria-card {
+    border-radius: 20px;
+  }
+}
+
+/* Radios coherentes en paneles flotantes */
+.modal-despensa {
+  border-radius: 24px;
+}
+
+@media (max-width: 768px) {
+  .shopping-panel {
+    border-radius: 24px 0 0 24px;
+  }
+}
+
+@media (min-width: 769px) {
+  .shopping-panel {
+    border-radius: 24px 0 0 24px;
+  }
+}
+
+/* ----- 7F — Modo oscuro: sombras específicas ----- */
+[data-theme="dark"] .modal-despensa {
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.4),
+    0 12px 32px rgba(0, 0, 0, 0.5),
+    0 32px 80px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] .shopping-panel {
+  box-shadow:
+    -2px 0 8px rgba(0, 0, 0, 0.3),
+    -16px 0 48px rgba(0, 0, 0, 0.4);
+}
+
+/* ----- 7G — Accesibilidad: prefers-reduced-motion ----- */
+@media (prefers-reduced-motion: reduce) {
+  details[open] > .dropdown-menu,
+  details[open] > .tabbar-tools-menu,
+  .ac-dropdown:not([hidden]),
+  .filtros-avanzados:not([hidden]) {
+    animation: none;
+  }
+
+  .shopping-panel,
+  .shopping-overlay,
+  .modal-despensa-overlay,
+  .modal-despensa,
+  .cookie-banner,
+  .mc-overlay,
+  .mc-overlay.abierto,
+  .receta,
+  .receta-card,
+  .receta-destacada,
+  .categoria-card,
+  .minuta-card,
+  .btn-favorito,
+  .btn-imprimir,
+  .btn-modo-cocina,
+  .btn-offline,
+  .btn-despensa,
+  .btn-calc,
+  .btn-whatsapp,
+  .btn-pinterest,
+  .landing-todas-btn {
+    transition: none !important;
+  }
+
+  .btn-imprimir:active,
+  .btn-modo-cocina:active,
+  .btn-offline:active,
+  .btn-despensa:active,
+  .tabbar-item:active,
+  .tabbar-tools > summary:active,
+  .filtro:active,
+  .filtro-chip:active,
+  .btn-favorito:active,
+  .btn-calc:active {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+
+  .receta-card-link:active,
+  .categoria-card:active,
+  .receta-destacada:active,
+  .rating-star:active {
+    transform: none !important;
+  }
+}

@@ -15,6 +15,9 @@
    FASE 10: si la receta trae revisado_v2 === true, usa ingredientes_v2,
             pasos_v2 y preparacion para el mise en place; reemplaza {ing:N}
             en los pasos; desactiva el aviso de la Fase 3.
+   FASE 6H (rediseño móvil): header minimalista (Cerrar · Título+Paso · Mic · ⋯)
+            y bottom sheet (action sheet) con tipografía, TTS, mise en place,
+            reiniciar y atajos. En desktop el sheet es un popover.
    ================================================================= */
 
 import { detectarTiempos } from '../lib/tiempos.js';
@@ -222,6 +225,9 @@ import {
     var btnMas = overlayEl.querySelector('.mc-fs-mas');
     if (btnMenos) btnMenos.disabled = fsNivel === 0;
     if (btnMas) btnMas.disabled = fsNivel === NIVELES_FS.length - 1;
+    // FASE 6H — valor visible en el sheet
+    var fsValor = overlayEl.querySelector('.mc-sheet-fs-valor');
+    if (fsValor) fsValor.textContent = Math.round(NIVELES_FS[fsNivel] * 100) + '%';
   }
 
   function cambiarFs(delta) {
@@ -1166,6 +1172,45 @@ import {
     entrarMise();
   }
 
+  // ================= FASE 6H: control del bottom sheet =================
+  function abrirSheet() {
+    if (!overlayEl) return;
+    var sheet = overlayEl.querySelector('.mc-sheet');
+    var backdrop = overlayEl.querySelector('.mc-sheet-overlay');
+    if (!sheet || !backdrop) return;
+    if (!sheet.hidden && sheet.classList.contains('mc-sheet-abierto')) return;
+    sheet.hidden = false;
+    backdrop.hidden = false;
+    void sheet.offsetWidth;
+    sheet.classList.add('mc-sheet-abierto');
+    backdrop.classList.add('mc-sheet-overlay-abierto');
+    var btn = overlayEl.querySelector('.mc-mas-toggle');
+    if (btn) btn.setAttribute('aria-pressed', 'true');
+    anunciar('Opciones de cocina abiertas');
+    setTimeout(function () {
+      var first = sheet.querySelector('button:not([disabled]):not([hidden]), summary');
+      if (first) try { first.focus({ preventScroll: true }); } catch (e) {}
+    }, 120);
+  }
+
+  function cerrarSheet() {
+    if (!overlayEl) return;
+    var sheet = overlayEl.querySelector('.mc-sheet');
+    var backdrop = overlayEl.querySelector('.mc-sheet-overlay');
+    if (!sheet || !backdrop) return;
+    if (sheet.hidden) return;
+    sheet.classList.remove('mc-sheet-abierto');
+    backdrop.classList.remove('mc-sheet-overlay-abierto');
+    var btn = overlayEl.querySelector('.mc-mas-toggle');
+    if (btn) btn.setAttribute('aria-pressed', 'false');
+    setTimeout(function () {
+      if (!sheet.classList.contains('mc-sheet-abierto')) {
+        sheet.hidden = true;
+        backdrop.hidden = true;
+      }
+    }, 450);
+  }
+
   // ---- Construcción del overlay ----
   function crearOverlay() {
     if (overlayEl) return overlayEl;
@@ -1177,18 +1222,56 @@ import {
       '<div class="mc-live" aria-live="polite" aria-atomic="true"></div>' +
       '<div class="mc-aviso-voz" hidden></div>' +
       '<header class="mc-header">' +
-        '<h1 id="mc-titulo" class="mc-titulo"></h1>' +
+        '<button type="button" class="mc-btn-icon mc-cerrar" aria-label="Cerrar modo cocina">' +
+          '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>' +
+        '</button>' +
+        '<div class="mc-titulo-wrap">' +
+          '<h1 id="mc-titulo" class="mc-titulo"></h1>' +
+          '<span class="mc-header-paso">Paso 1 de 1</span>' +
+        '</div>' +
         '<div class="mc-header-acciones">' +
-          '<button type="button" class="mc-btn-icon mc-tts-toggle" aria-pressed="false" aria-label="Leer pasos en voz alta" title="Leer pasos en voz alta" style="display:none;">' +
-            '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>' +
-          '</button>' +
           '<button type="button" class="mc-btn-icon mc-mic-toggle" aria-pressed="false" aria-label="Activar manos libres (comandos de voz)" title="Manos libres (Comandos de Voz)" style="display:none;">' +
             '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>' +
           '</button>' +
-          '<button type="button" class="mc-fs-btn mc-fs-menos" aria-label="Reducir tamaño de letra" title="Reducir letra">A−</button>' +
-          '<button type="button" class="mc-fs-btn mc-fs-mas" aria-label="Aumentar tamaño de letra" title="Aumentar letra">A+</button>' +
-          '<details class="mc-atajos">' +
-            '<summary aria-label="Ayuda y atajos de teclado">?</summary>' +
+          '<button type="button" class="mc-btn-icon mc-mas-toggle" aria-pressed="false" aria-label="Más opciones" title="Más opciones">' +
+            '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="5" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="12" cy="19" r="1.6"/></svg>' +
+          '</button>' +
+        '</div>' +
+      '</header>' +
+      '<div class="mc-sheet-overlay" hidden></div>' +
+      '<div class="mc-sheet" hidden role="dialog" aria-labelledby="mc-sheet-titulo">' +
+        '<div class="mc-sheet-handle" aria-hidden="true"></div>' +
+        '<h2 id="mc-sheet-titulo" class="mc-sheet-titulo">Opciones</h2>' +
+        '<section class="mc-sheet-seccion">' +
+          '<h3 class="mc-sheet-label">Tamaño de letra</h3>' +
+          '<div class="mc-sheet-fs" role="group" aria-label="Tamaño de letra">' +
+            '<button type="button" class="mc-fs-btn mc-fs-menos" aria-label="Reducir letra">A−</button>' +
+            '<span class="mc-sheet-fs-valor" aria-live="polite">100%</span>' +
+            '<button type="button" class="mc-fs-btn mc-fs-mas" aria-label="Aumentar letra">A+</button>' +
+          '</div>' +
+        '</section>' +
+        '<section class="mc-sheet-seccion">' +
+          '<h3 class="mc-sheet-label">Acciones</h3>' +
+          '<button type="button" class="mc-sheet-item mc-tts-toggle" aria-pressed="false" style="display:none;">' +
+            '<span class="mc-sheet-item-icon" aria-hidden="true">🔊</span>' +
+            '<span class="mc-sheet-item-texto">Leer en voz alta</span>' +
+            '<span class="mc-sheet-item-estado mc-tts-estado">Desactivado</span>' +
+          '</button>' +
+          '<button type="button" class="mc-sheet-item mc-mise-toggle" aria-pressed="false" hidden>' +
+            '<span class="mc-sheet-item-icon" aria-hidden="true">📋</span>' +
+            '<span class="mc-sheet-item-texto">Mise en place</span>' +
+            '<span class="mc-sheet-item-estado">Abrir</span>' +
+          '</button>' +
+          '<button type="button" class="mc-sheet-item mc-reiniciar" aria-label="Reiniciar progreso">' +
+            '<span class="mc-sheet-item-icon" aria-hidden="true">↺</span>' +
+            '<span class="mc-sheet-item-texto">Reiniciar progreso</span>' +
+          '</button>' +
+          '<details class="mc-atajos mc-sheet-details">' +
+            '<summary class="mc-sheet-item">' +
+              '<span class="mc-sheet-item-icon" aria-hidden="true">?</span>' +
+              '<span class="mc-sheet-item-texto">Atajos y ayuda</span>' +
+              '<span class="mc-sheet-item-chevron" aria-hidden="true">›</span>' +
+            '</summary>' +
             '<div class="mc-atajos-panel">' +
               '<h3>Atajos de teclado</h3>' +
               '<ul>' +
@@ -1214,17 +1297,8 @@ import {
               '<label class="mc-atajos-setting"><span>Leer pasos en voz alta</span><input type="checkbox" class="mc-toggle-tts"></label>' +
             '</div>' +
           '</details>' +
-          '<button type="button" class="mc-btn-icon mc-mise-toggle" aria-pressed="false" aria-label="Preparación (mise en place)" title="Preparación (mise en place)" hidden>' +
-            '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 6 5 8 9 4"/><polyline points="3 14 5 16 9 12"/><line x1="13" y1="6" x2="21" y2="6"/><line x1="13" y1="14" x2="21" y2="14"/><line x1="3" y1="21" x2="21" y2="21"/></svg>' +
-          '</button>' +
-          '<button type="button" class="mc-btn-icon mc-reiniciar" aria-label="Reiniciar progreso" title="Reiniciar progreso">' +
-            '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>' +
-          '</button>' +
-          '<button type="button" class="mc-btn-icon mc-cerrar" aria-label="Cerrar modo cocina">' +
-            '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>' +
-          '</button>' +
-        '</div>' +
-      '</header>' +
+        '</section>' +
+      '</div>' +
       '<div class="mc-aviso-escala" hidden></div>' +
       '<div class="mc-voice-hint" hidden>🎤 Di: "Siguiente", "Atrás", "Listo", "Repetir", "Empezar", "Pausa", "Tiempo" o "Ingredientes"</div>' +
       '<div class="mc-voz-eco" hidden aria-live="polite"></div>' +
@@ -1251,6 +1325,20 @@ import {
     document.body.appendChild(overlayEl);
 
     overlayEl.querySelector('.mc-cerrar').addEventListener('click', cerrar);
+
+    // FASE 6H — toggle del bottom sheet y su backdrop
+    var masBtn = overlayEl.querySelector('.mc-mas-toggle');
+    masBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var sheet = overlayEl.querySelector('.mc-sheet');
+      if (!sheet) return;
+      if (sheet.classList.contains('mc-sheet-abierto')) cerrarSheet();
+      else abrirSheet();
+    });
+
+    var sheetBackdrop = overlayEl.querySelector('.mc-sheet-overlay');
+    if (sheetBackdrop) sheetBackdrop.addEventListener('click', cerrarSheet);
+
     overlayEl.querySelector('.mc-prev').addEventListener('click', pasoAnterior);
     overlayEl.querySelector('.mc-next').addEventListener('click', pasoSiguiente);
     overlayEl.querySelector('.mc-reiniciar').addEventListener('click', function () { reiniciarProgreso(false); });
@@ -1258,7 +1346,10 @@ import {
     overlayEl.querySelector('.mc-fs-menos').addEventListener('click', function () { cambiarFs(-1); });
     overlayEl.querySelector('.mc-fs-mas').addEventListener('click', function () { cambiarFs(1); });
 
-    overlayEl.querySelector('.mc-mise-toggle').addEventListener('click', function () { if (enMise) salirMise(); else entrarMise(); });
+    overlayEl.querySelector('.mc-mise-toggle').addEventListener('click', function () {
+      if (enMise) salirMise(); else entrarMise();
+      cerrarSheet();
+    });
     var miseEl = overlayEl.querySelector('.mc-mise');
     miseEl.addEventListener('change', function (e) { var c = e.target.closest('.mc-mise-check'); if (c) setTareaMise(parseInt(c.getAttribute('data-id'), 10), c.checked); });
     miseEl.addEventListener('click', function (e) {
@@ -1286,6 +1377,9 @@ import {
       anunciar(ttsActivo ? 'Lectura en voz alta activada' : 'Lectura en voz alta desactivada');
       if (!ttsActivo) { if ('speechSynthesis' in window) window.speechSynthesis.cancel(); }
       else if (!enMise) { var currentStepText = overlayEl.querySelector('.mc-paso.activo .mc-paso-texto'); if (currentStepText) leerTexto(currentStepText.textContent); }
+      // FASE 6H — reflejar estado en el sheet
+      var estado = overlayEl.querySelector('.mc-tts-estado');
+      if (estado) estado.textContent = ttsActivo ? 'Activado' : 'Desactivado';
     });
     toggleTTS.addEventListener('change', function() { if (this.checked !== ttsActivo) ttsBtn.click(); });
 
@@ -1462,6 +1556,16 @@ import {
     ov.classList.remove('completado');
     ov.querySelector('.mc-titulo').textContent = receta.titulo || 'Receta';
 
+    // FASE 6H — inicializar subtítulo del paso en el header
+    var pasoLabelInit = ov.querySelector('.mc-header-paso');
+    if (pasoLabelInit) pasoLabelInit.textContent = 'Paso 1 de ' + (pasos.length || 1);
+
+    // FASE 6H — asegurar sheet cerrado al abrir el overlay
+    var sheetInit = ov.querySelector('.mc-sheet');
+    var backdropInit = ov.querySelector('.mc-sheet-overlay');
+    if (sheetInit) { sheetInit.classList.remove('mc-sheet-abierto'); sheetInit.hidden = true; }
+    if (backdropInit) { backdropInit.classList.remove('mc-sheet-overlay-abierto'); backdropInit.hidden = true; }
+
     var alarmaEl = ov.querySelector('.mc-alarma');
     if (alarmaEl) alarmaEl.hidden = true;
 
@@ -1488,10 +1592,13 @@ import {
     var ttsBtn = ov.querySelector('.mc-tts-toggle');
     var toggleTTS = ov.querySelector('.mc-toggle-tts');
     if ('speechSynthesis' in window) {
-      ttsBtn.style.display = 'inline-flex';
+      ttsBtn.style.display = 'flex';
       ttsBtn.setAttribute('aria-pressed', ttsActivo ? 'true' : 'false');
       ttsBtn.classList.toggle('activo', ttsActivo);
       toggleTTS.checked = ttsActivo;
+      // FASE 6H — inicializar estado visual del TTS en el sheet
+      var ttsEstadoInit = ov.querySelector('.mc-tts-estado');
+      if (ttsEstadoInit) ttsEstadoInit.textContent = ttsActivo ? 'Activado' : 'Desactivado';
     }
 
     var micBtn = ov.querySelector('.mc-mic-toggle');
@@ -1581,7 +1688,12 @@ import {
     intervaloTick = setInterval(tickTimers, TICK_MS);
 
     onKeyDownHandler = function (e) {
-      if (e.key === 'Escape') { e.preventDefault(); cerrar(); return; }
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        var sheetE = overlayEl && overlayEl.querySelector('.mc-sheet');
+        if (sheetE && sheetE.classList.contains('mc-sheet-abierto')) { cerrarSheet(); return; }
+        cerrar(); return;
+      }
       if (e.key === 'Tab') { manejarTab(e); return; }
       if (enMise) return;
       if (e.key === 'ArrowLeft') { e.preventDefault(); pasoAnterior(); return; }
@@ -1627,6 +1739,14 @@ import {
     if (avisoTimeout) { clearTimeout(avisoTimeout); avisoTimeout = null; }
 
     overlayEl.classList.remove('abierto');
+    // FASE 6H — cerrar el sheet sin animación al cerrar el overlay
+    var sheetC = overlayEl.querySelector('.mc-sheet');
+    var backdropC = overlayEl.querySelector('.mc-sheet-overlay');
+    if (sheetC) { sheetC.classList.remove('mc-sheet-abierto'); sheetC.hidden = true; }
+    if (backdropC) { backdropC.classList.remove('mc-sheet-overlay-abierto'); backdropC.hidden = true; }
+    var masBtnReset = overlayEl.querySelector('.mc-mas-toggle');
+    if (masBtnReset) masBtnReset.setAttribute('aria-pressed', 'false');
+
     document.body.classList.remove('mc-bloqueado');
     aplicarInert(false);
     if (onKeyDownHandler) { document.removeEventListener('keydown', onKeyDownHandler); onKeyDownHandler = null; }
@@ -1654,6 +1774,10 @@ import {
     });
 
     overlayEl.querySelector('.mc-contador').textContent = (pasoActual + 1) + ' / ' + pasosEls.length;
+
+    // FASE 6H — subtítulo del header con el paso actual
+    var pasoLabel = overlayEl.querySelector('.mc-header-paso');
+    if (pasoLabel) pasoLabel.textContent = 'Paso ' + (pasoActual + 1) + ' de ' + pasosEls.length;
 
     var prev = overlayEl.querySelector('.mc-prev');
     var next = overlayEl.querySelector('.mc-next');
@@ -1799,6 +1923,8 @@ import {
     timers = []; guardarTimers(); renderTimers();
     autoTimerLanzados.clear();
     if (overlayEl) overlayEl.classList.remove('completado');
+    // FASE 6H — cerrar el sheet tras reiniciar
+    cerrarSheet();
     actualizarPaso(true); actualizarProgreso();
     anunciar('Progreso reiniciado'); reiniciarMise();
     setTimeout(function () { if (enMise) return; var next = overlayEl && overlayEl.querySelector('.mc-next'); if (next) next.focus(); }, 50);
