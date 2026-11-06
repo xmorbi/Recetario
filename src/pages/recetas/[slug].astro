@@ -287,31 +287,41 @@ const ICON_LIBRO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" s
     </article>
 
     {receta.errores && receta.errores.length > 0 && (
-      <div class="errores-box">
-        <h3>Errores comunes y cómo evitarlos</h3>
-        <ul class="errores-lista">
-          {receta.errores.map(err => (
-            <li>
-              <strong class="error">{err.error}</strong>
-              <span class="solucion">{err.solucion}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
+      <details class="errores-box accordion-receta" open>
+        <summary class="accordion-receta-summary">
+          <h3>Errores comunes y cómo evitarlos</h3>
+          <span class="accordion-receta-chevron" aria-hidden="true"></span>
+        </summary>
+        <div class="accordion-receta-contenido">
+          <ul class="errores-lista">
+            {receta.errores.map(err => (
+              <li>
+                <strong class="error">{err.error}</strong>
+                <span class="solucion">{err.solucion}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </details>
     )}
 
     {receta.conservacion && (
-      <div class="conservacion-box">
-        <h3>Conservación y Recalentado</h3>
-        <div class="conservacion-grid">
-          {receta.conservacion.refrigerador && <div class="conservacion-item"><strong>Refrigerador</strong>{receta.conservacion.refrigerador}</div>}
-          {receta.conservacion.congelador && <div class="conservacion-item"><strong>Congelador</strong>{receta.conservacion.congelador}</div>}
-          {receta.conservacion.recalentar && <div class="conservacion-item full-width"><strong>Recalentar</strong>{receta.conservacion.recalentar}</div>}
+      <details class="conservacion-box accordion-receta" open>
+        <summary class="accordion-receta-summary">
+          <h3>Conservación y Recalentado</h3>
+          <span class="accordion-receta-chevron" aria-hidden="true"></span>
+        </summary>
+        <div class="accordion-receta-contenido">
+          <div class="conservacion-grid">
+            {receta.conservacion.refrigerador && <div class="conservacion-item"><strong>Refrigerador</strong>{receta.conservacion.refrigerador}</div>}
+            {receta.conservacion.congelador && <div class="conservacion-item"><strong>Congelador</strong>{receta.conservacion.congelador}</div>}
+            {receta.conservacion.recalentar && <div class="conservacion-item full-width"><strong>Recalentar</strong>{receta.conservacion.recalentar}</div>}
+          </div>
+          <div style="margin-top:1rem; font-size:0.85rem; text-align:right;">
+            <a href="/guia-conservacion/" style="color:#0369a1; text-decoration:underline; font-weight:600;">Ver guía completa de conservación →</a>
+          </div>
         </div>
-        <div style="margin-top:1rem; font-size:0.85rem; text-align:right;">
-          <a href="/guia-conservacion/" style="color:#0369a1; text-decoration:underline; font-weight:600;">Ver guía completa de conservación →</a>
-        </div>
-      </div>
+      </details>
     )}
 
     {receta.tags && receta.tags.length > 0 && (
@@ -452,6 +462,21 @@ const ICON_LIBRO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" s
           });
         });
       });
+    })();
+  </script>
+
+  <!-- FASE 8 — 8.7: Accordion de "Errores" y "Conservación".
+       En móvil (≤720px) los bloques se muestran colapsados por defecto
+       para reducir el scroll vertical del artículo. En desktop quedan
+       abiertos (el CSS anula el chevron y el cursor pointer).
+       Sin JS: abierto en todos los viewports (mismo comportamiento que antes). -->
+  <script is:inline>
+    (function () {
+      if (!window.matchMedia('(max-width: 720px)').matches) return;
+      var abiertos = document.querySelectorAll('.accordion-receta[open]');
+      for (var i = 0; i < abiertos.length; i++) {
+        abiertos[i].removeAttribute('open');
+      }
     })();
   </script>
 

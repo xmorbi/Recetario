@@ -4837,3 +4837,95 @@ details[open] > .tabbar-tools-menu {
     padding-bottom: calc(1.2rem + env(safe-area-inset-bottom, 0));
   }
 }
+
+/* =====================================================================
+   FASE 8 — 8.7 ACCORDION DE "ERRORES" Y "CONSERVACIÓN" (MÓVIL)
+   Reduce el scroll vertical del artículo en móvil colapsando dos
+   bloques de referencia que no se consultan durante la ejecución
+   de la receta. En desktop se ven como antes (abiertos, sin chevron).
+   ===================================================================== */
+
+/* ---------- 8.7.A — Summary: layout y reset del marker ---------- */
+.accordion-receta > summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.accordion-receta > summary::-webkit-details-marker { display: none; }
+.accordion-receta > summary::marker { content: ''; }
+
+/* El <h3> dentro del summary conserva su estilo pero sin margen inferior
+   (el espaciado lo aporta ahora el wrapper del contenido). */
+.accordion-receta > summary h3 {
+  margin-bottom: 0;
+  flex: 1;
+  min-width: 0;
+}
+
+/* Feedback táctil breve al tocar el summary en móvil */
+@media (max-width: 720px) {
+  .accordion-receta > summary:active {
+    opacity: var(--opacity-active);
+  }
+}
+
+/* ---------- 8.7.B — Chevron ---------- */
+.accordion-receta-chevron {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  position: relative;
+  color: var(--suave);
+  transition: transform var(--duration-base) var(--ease-ios);
+}
+.accordion-receta-chevron::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.accordion-receta[open] > summary .accordion-receta-chevron {
+  transform: rotate(180deg);
+}
+
+/* ---------- 8.7.C — Separación summary ↔ contenido ---------- */
+.accordion-receta[open] > .accordion-receta-contenido {
+  margin-top: .8rem;
+}
+
+/* ---------- 8.7.D — Foco visible en teclado (token de 8.1) ---------- */
+.accordion-receta > summary:focus-visible {
+  outline: 2px solid var(--color-foco);
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
+/* ---------- 8.7.E — Desktop: summary como bloque estático ---------- */
+@media (min-width: 721px) {
+  .accordion-receta > summary {
+    cursor: default;
+  }
+  .accordion-receta-chevron {
+    display: none;
+  }
+}
+
+/* ---------- 8.7.F — Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .accordion-receta-chevron {
+    transition: none;
+  }
+}
