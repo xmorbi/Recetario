@@ -11,32 +11,128 @@
      Responde CACHE_RECIPE_DONE al cliente que lo pidió.
    - FASE 9: notificationclick enfoca la pestaña; TIMER_FIN (opcional)
    No se usa skipWaiting: la actualización espera al siguiente arranque.
+
+   FASE 8 (8.6):
+   - VERSION v3 → v4 (forzar refresco del CSS de 8.1–8.5).
+   - CACHE_RECETAS ahora es estable entre versiones (sin sufijo -vN),
+     con migración desde recetas-guardadas-v3 arrastrando los assets
+     referenciados (_astro/*, /img/*, /fonts/*) desde static-v3.
+   - Al instalar se precachean los _astro/* referenciados por la home
+     para que la app abra offline con estilos.
+   - CORE_ASSETS incluye /favicon.svg.
    ================================================================= */
 
-const VERSION = 'v3';
+const VERSION = 'v4';
 const CACHE_CORE = `core-${VERSION}`;
 const CACHE_STATIC = `static-${VERSION}`;
-const CACHE_RECETAS = `recetas-guardadas-${VERSION}`;
+const CACHE_RECETAS = 'recetas-guardadas';
+const CACHE_RECETAS_LEGACY = ['recetas-guardadas-v3'];
 
-const CORE_ASSETS = ['/', '/offline/', '/manifest.webmanifest'];
+const CORE_ASSETS = ['/', '/offline/', '/manifest.webmanifest', '/favicon.svg'];
 
 self.addEventListener('install', (event) => {
-  event.waitUntil(caches.open(CACHE_CORE).then((cache) => cache.addAll(CORE_ASSETS)));
+  event.waitUntil((async () => {
+    const cache = await caches.open(CACHE_CORE);
+    await cache.addAll(CORE_ASSETS);
+    await precachearAssetsHome();
+  })());
   // Sin skipWaiting automático.
 });
 
 self.addEventListener('activate', (event) => {
-  event.waitUntil(
-    caches.keys().then((keys) =>
-      Promise.all(
-        keys
-          .filter((k) => ![CACHE_CORE, CACHE_STATIC, CACHE_RECETAS].includes(k))
-          .map((k) => caches.delete(k))
-      )
-    )
-  );
-  event.waitUntil(self.clients.claim());
+  event.waitUntil((async () => {
+    await migrarRecetasLegacy();
+
+    const keys = await caches.keys();
+    const validas = [CACHE_CORE, CACHE_STATIC, CACHE_RECETAS];
+    await Promise.all(
+      keys
+        .filter((k) => !validas.includes(k))
+        .map((k) => caches.delete(k))
+    );
+
+    await self.clients.claim();
+  })());
 });
+
+/* Migra las recetas guardadas en versiones anteriores a CACHE_RECETAS
+   (nombre estable). Arrastra los assets referenciados (_astro/*, /img/*,
+   /fonts/*) desde el static-<versionLegacy> al static actual, para que
+   la receta migrada siga teniendo estilos offline. */
+async function migrarRecetasLegacy() {
+  const target = await caches.open(CACHE_RECETAS);
+
+  for (const legacyName of CACHE_RECETAS_LEGACY) {
+    if (!(await caches.has(legacyName))) continue;
+
+    const legacy = await caches.open(legacyName);
+
+    // Intentar abrir el cache estático de la misma versión legacy
+    // (ej. 'recetas-guardadas-v3' → 'static-v3').
+    const versionMatch = legacyName.match(/-([^-]+)$/);
+    const legacyVersion = versionMatch ? versionMatch[1] : null;
+    const statLegacy = legacyVersion && (await caches.has(`static-${legacyVersion}`))
+      ? await caches.open(`static-${legacyVersion}`)
+      : null;
+    const statTarget = await caches.open(CACHE_STATIC);
+
+    const keys = await legacy.keys();
+    for (const req of keys) {
+      const res = await legacy.match(req);
+      if (!res) continue;
+
+      // Copia el HTML (o asset) al cache estable.
+      await target.put(req, res.clone());
+
+      if (!statLegacy) continue;
+
+      // Extrae los assets referenciados en el HTML y los migra.
+      try {
+        const html = await res.text();
+        const re = /(?:href|src)="(\/(?:_astro|img|fonts)\/[^"]+)"/g;
+        const assets = new Set();
+        let m;
+        while ((m = re.exec(html)) !== null) assets.add(m[1]);
+
+        for (const a of assets) {
+          if (await statTarget.match(a)) continue;
+          const assetRes = await statLegacy.match(a);
+          if (assetRes) await statTarget.put(a, assetRes);
+        }
+      } catch (e) { /* HTML no parseable: seguimos con la siguiente */ }
+    }
+
+    await caches.delete(legacyName);
+  }
+}
+
+/* Precachea los assets _astro/* referenciados por la home al instalar.
+   Sin esto, la primera apertura offline de la PWA vería la home sin CSS. */
+async function precachearAssetsHome() {
+  try {
+    const core = await caches.open(CACHE_CORE);
+    const resp = await core.match('/');
+    if (!resp) return;
+    const html = await resp.text();
+
+    const re = /(?:href|src)="(\/_astro\/[^"]+)"/g;
+    const urls = new Set();
+    let m;
+    while ((m = re.exec(html)) !== null) urls.add(m[1]);
+    if (urls.size === 0) return;
+
+    const stat = await caches.open(CACHE_STATIC);
+    await Promise.all(
+      [...urls].map((u) =>
+        stat.match(u).then((c) =>
+          c
+            ? null
+            : fetch(u).then((r) => (r.ok ? stat.put(u, r) : null)).catch(() => null)
+        )
+      )
+    );
+  } catch (e) { /* si algo falla, seguimos: se cacheará por navegación */ }
+}
 
 function esNavegacion(request) {
   return request.mode === 'navigate' || request.headers.get('accept')?.includes('text/html');

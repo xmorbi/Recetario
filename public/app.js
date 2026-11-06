@@ -71,6 +71,10 @@
   let modoOnceBanner;
   let heroH1;
 
+  // FASE 8: índice por título para lookup O(1) dentro de aplicarFiltros.
+  // Antes se hacía RECETAS.find() por cada tarjeta en cada tecla → O(n²).
+  let recetasPorTitulo = null;
+
   /* ---------- Receta destacada (portada) ---------- */
   function renderizarDestacada() {
     var cont = document.getElementById('recetaDestacada');
@@ -384,7 +388,8 @@
       }
 
       const titulo = tarjeta.dataset.titulo;
-      const receta = RECETAS.find(function (r) { return r.titulo === titulo; });
+      // FASE 8: lookup O(1) en lugar de RECETAS.find() (que era O(n) por tarjeta).
+      const receta = recetasPorTitulo ? recetasPorTitulo.get(titulo) : null;
 
       let matchInfo = { matches: 0, faltantes: 0, pct: 0 };
       let coincideDespensa = true;
@@ -658,6 +663,15 @@
       console.error('No se encontraron las recetas en window.RECETAS');
       return;
     }
+
+    // FASE 8: construir el índice por título una sola vez.
+    // Si dos recetas comparten título, gana la primera (mismo criterio que el find anterior).
+    recetasPorTitulo = new Map();
+    RECETAS.forEach(function (r) {
+      if (!recetasPorTitulo.has(r.titulo)) {
+        recetasPorTitulo.set(r.titulo, r);
+      }
+    });
 
     renderizarDestacada();
 

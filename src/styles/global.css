@@ -4449,3 +4449,391 @@ details[open] > .tabbar-tools-menu {
   color: #fff;
   border-color: var(--rojo);
 }
+
+/* =====================================================================
+   FASE 8 — 8.1 ACCESIBILIDAD: FOCO Y CONTRASTE EN MODO OSCURO
+   - Redefine --color-foco por tema (azul en claro, dorado en oscuro)
+   - Unifica el anillo de foco en controles que usaban --rojo
+   - Repara el anillo eliminado en el menú de la tabbar
+   - Sube el contraste de bordes de inputs en dark a 3:1 (WCAG 1.4.11)
+   ===================================================================== */
+
+/* ---------- 8.1.A — Token de foco adaptativo por tema ---------- */
+:root {
+  /* Azul profundo: contrasta con crema, blanco y también con el rojo
+     de los botones primarios (outline-offset 2px lo separa del fondo). */
+  --color-foco: #1f3a5f;
+  --focus-halo: rgba(31, 58, 95, 0.25);
+}
+
+[data-theme="dark"] {
+  /* Dorado: alto contraste contra #121212, #1a1a1a y #1e1e1e. */
+  --color-foco: #e8b54a;
+  --focus-halo: rgba(232, 181, 74, 0.30);
+}
+
+/* ---------- 8.1.B — Unificar color de foco en controles con --rojo ----------
+   Estas reglas originales declaran `outline: 2px solid var(--rojo)`, que en
+   dark queda casi invisible sobre paneles #1e1e1e. Solo cambiamos el color;
+   mantenemos width, style y offset originales. */
+.filtro-chip:focus-visible,
+.filtro-limpiar:focus-visible,
+.filtro-avanzado-toggle:focus-visible,
+.notas-favorito summary:focus-visible,
+.btn-calc:focus-visible,
+.escalador-botones button:focus-visible,
+.calc-tab:focus-visible,
+.stepper input[type="number"]:focus {
+  outline-color: var(--color-foco);
+}
+
+/* ---------- 8.1.C — Menú de la tabbar: recuperar el anillo de foco ----------
+   Regla original: `.tabbar-tools-menu a:focus-visible { outline: none; }`
+   Restituye el anillo con offset negativo para que quede dentro del item
+   (el panel flotante recorta hacia fuera). */
+.tabbar-tools-menu a:focus-visible {
+  outline: 2px solid var(--color-foco);
+  outline-offset: -2px;
+  background: var(--surface-sunken);
+  color: var(--accent-primary);
+}
+
+/* ---------- 8.1.D — Modo oscuro: bordes de inputs a 3:1 y foco visible ----------
+   En dark, #333 contra #121212 da ~1.5:1. Subimos el borde a #5c5c5c,
+   que da exactamente 3:1 con el fondo del page. */
+[data-theme="dark"] .nav-search input,
+[data-theme="dark"] .buscador-wrap #buscador,
+[data-theme="dark"] .despensa-buscar-wrap input,
+[data-theme="dark"] .notas-texto,
+[data-theme="dark"] .contacto-form input,
+[data-theme="dark"] .contacto-form textarea,
+[data-theme="dark"] .modal-dinamico-body input,
+[data-theme="dark"] .stepper,
+[data-theme="dark"] .toggle-group {
+  border-color: #5c5c5c;
+}
+
+/* Al enfocar en dark, el borde pasa a dorado + halo suave. */
+[data-theme="dark"] .nav-search input:focus,
+[data-theme="dark"] .buscador-wrap #buscador:focus,
+[data-theme="dark"] .despensa-buscar-wrap input:focus,
+[data-theme="dark"] .notas-texto:focus,
+[data-theme="dark"] .contacto-form input:focus,
+[data-theme="dark"] .contacto-form textarea:focus,
+[data-theme="dark"] .modal-dinamico-body input:focus {
+  border-color: var(--color-foco);
+  box-shadow: 0 0 0 3px var(--focus-halo);
+}
+
+/* =====================================================================
+   FASE 8 — 8.2 REPAINT / SCROLL
+   - 8.2.A: Sustituye transition:all por listas explícitas de propiedades.
+            Solo se anima lo que realmente cambia en hover/activo. Menos
+            trabajo por frame durante interacción.
+   - 8.2.B: content-visibility en tarjetas de receta (listado con ~286
+            elementos). El navegador salta layout y paint de tarjetas que
+            están fuera del viewport. Se mantiene find-in-page del sitio
+            y navegación por teclado. Trade-off: Ctrl+F nativo del
+            navegador no encuentra coincidencias en tarjetas aún no
+            pintadas. Si esto molesta, comenta el bloque 8.2.B.
+   ===================================================================== */
+
+/* ---------- 8.2.A — transition:all → propiedades específicas ---------- */
+
+/* .filtro: hover usa border-color, color, transform, box-shadow;
+   .activo añade background y box-shadow. */
+.filtro {
+  transition:
+    background-color .2s,
+    border-color .2s,
+    color .2s,
+    transform .2s,
+    box-shadow .2s;
+}
+
+/* .chip-despensa: hover y .activo solo tocan estos tres. */
+.chip-despensa {
+  transition:
+    background-color .2s ease,
+    border-color .2s ease,
+    color .2s ease;
+}
+
+/* .chip-activo: hover cambia fondo, borde y color. */
+.chip-activo {
+  transition:
+    background-color .2s,
+    border-color .2s,
+    color .2s;
+}
+
+/* .filtro-chip: hover borde+color; .activo agrega fondo y sombra. */
+.filtro-chip {
+  transition:
+    background-color .2s ease,
+    border-color .2s ease,
+    color .2s ease,
+    box-shadow .2s ease;
+}
+
+/* .filtro-avanzado-toggle: borde, color y fondo. border-style no anima. */
+.filtro-avanzado-toggle {
+  transition:
+    background-color .2s ease,
+    border-color .2s ease,
+    color .2s ease;
+}
+
+/* .escalador-botones button: borde, color, fondo, sombra. */
+.escalador-botones button {
+  transition:
+    background-color .2s ease,
+    border-color .2s ease,
+    color .2s ease,
+    box-shadow .2s ease;
+}
+
+/* .modo-once-cerrar: fondo y color. */
+.modo-once-cerrar {
+  transition:
+    background-color .2s,
+    color .2s;
+}
+
+/* .restriccion-item: hover usa borde, transform y sombra;
+   :checked añade fondo y borde. */
+.restriccion-item {
+  transition:
+    background-color .2s,
+    border-color .2s,
+    transform .2s,
+    box-shadow .2s;
+}
+
+/* .btn-eliminar-dia: fondo, borde, color. */
+.btn-eliminar-dia {
+  transition:
+    background-color .2s,
+    border-color .2s,
+    color .2s;
+}
+
+/* .btn-volver-empezar: fondo y color. */
+.btn-volver-empezar {
+  transition:
+    background-color .2s,
+    color .2s;
+}
+
+/* .toggle-group span: al marcar radio cambia fondo, color y sombra.
+   font-weight no se anima y queda fuera. */
+.toggle-group span {
+  transition:
+    background-color .2s,
+    color .2s,
+    box-shadow .2s;
+}
+
+/* ---------- 8.2.B — content-visibility en tarjetas del listado ---------- */
+
+.receta-card {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 180px;
+}
+
+@media (max-width: 640px) {
+  .receta-card {
+    contain-intrinsic-size: auto 120px;
+  }
+}
+
+/* Si el usuario entra a la tarjeta por teclado, garantizamos que
+   esté renderizada antes del foco (evita saltos al tabular). */
+.receta-card:focus-within {
+  content-visibility: visible;
+}
+
+/* =====================================================================
+   FASE 8 — 8.3 CLS (Cumulative Layout Shift)
+   - Reserva de altura para la receta destacada en móvil: el HTML de
+     #recetaDestacada está vacío hasta que app.js lo rellena. Sin
+     reserva, el navegador reflowea al llegar el innerHTML.
+   - aspect-ratio explícito en la media de la destacada (desktop) para
+     que la reserva no dependa solo de min-height:360px.
+   - Background de carga en la imagen de receta (receta-page) para
+     evitar flash blanco mientras la imagen lazy carga en modo oscuro.
+   ===================================================================== */
+
+/* 8.3.A — Reserva de altura para la destacada en móvil.
+   El contenedor #recetaDestacada se rellena por JS. Reservamos 480px
+   (media 16/9 + body típicos) para que no haya reflow al llegar el
+   HTML generado por renderizarDestacada(). */
+@media (max-width: 768px) {
+  #recetaDestacada {
+    min-height: 480px;
+  }
+}
+
+/* 8.3.B — aspect-ratio explícito en la media de la destacada (desktop).
+   La regla existente tiene min-height:360px; añadimos aspect-ratio
+   para que la reserva sea predecible si el body queda más bajo que
+   la media. */
+@media (min-width: 769px) {
+  .receta-destacada-media {
+    aspect-ratio: 3 / 2;
+  }
+}
+
+/* 8.3.C — Background de carga en la imagen de receta (receta-page).
+   Coherente con .receta-img del listado y .receta-card-foto, que ya
+   tienen background. Evita flash blanco/negro mientras carga. */
+.receta-page .receta-img {
+  background-color: var(--crema-osc);
+}
+
+[data-theme="dark"] .receta-page .receta-img {
+  background-color: #1e1e1e;
+}
+
+/* =====================================================================
+   FASE 8 — 8.4 MOTION
+   Anula scroll-behavior:smooth cuando el usuario tiene activada la
+   preferencia "reducir movimiento". El resto de animaciones de la
+   Fase 7 ya respeta prefers-reduced-motion (bloque 7G).
+   ===================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .mc-contenido,
+  .mc-mise-scroll {
+    scroll-behavior: auto;
+  }
+}
+
+/* =====================================================================
+   FASE 8 — 8.5 iOS / SAFARI
+   - 8.5.A: overscroll-behavior:contain + touch-action en scrollables
+            internos. Evita el scroll chaining (arrastrar el panel y que
+            "se pegue" el fondo del page) y la vibración horizontal.
+   - 8.5.B: font-size mínimo 1rem (16px) en inputs móviles para evitar
+            el zoom automático de Safari iOS al enfocar.
+   - 8.5.C: touch-action:manipulation en controles tappables. Elimina
+            el retraso de 300ms y el doble-tap zoom, y mantiene el
+            pinch-zoom de accesibilidad en el resto del page.
+   - 8.5.D: 100dvh como fallback moderno para manejar la barra dinámica
+            de Safari iOS. Donde no hay soporte, cascade fallback a vh.
+   - 8.5.E: safe-area-inset-bottom en paneles flotantes inferiores
+            para respetar el home indicator del iPhone.
+   ===================================================================== */
+
+/* ---------- 8.5.A — Scroll chaining ---------- */
+.mc-mise-scroll,
+.mc-ing-list,
+.mc-sheet,
+.shopping-content,
+.despensa-grid,
+.ac-dropdown {
+  overscroll-behavior: contain;
+}
+
+.mc-mise-scroll,
+.mc-ing-list,
+.shopping-content,
+.despensa-grid,
+.ac-dropdown {
+  touch-action: pan-y;
+}
+
+@media (max-width: 640px) {
+  .filtros-scroll {
+    overscroll-behavior: contain;
+  }
+}
+
+/* ---------- 8.5.B — Zoom de iOS en inputs ---------- */
+@media (max-width: 768px) {
+  .buscador-wrap #buscador,
+  .despensa-buscar-wrap input,
+  .notas-texto,
+  .escalador-custom,
+  .contacto-form input,
+  .contacto-form textarea,
+  .modal-dinamico-body input,
+  .hero-search input {
+    font-size: 1rem;
+  }
+}
+
+/* ---------- 8.5.C — Touch action en controles tappables ---------- */
+.tabbar-item,
+.tabbar-tools > summary,
+.mc-btn-icon,
+.mc-cerrar,
+.mc-mas-toggle,
+.mc-fs-btn,
+.mc-timer-btn,
+.mc-timer-iniciar,
+.mc-leer-btn,
+.mc-marcar,
+.mc-prev,
+.mc-next,
+.mc-alarma-detener,
+.mc-btn-accion,
+.mc-sheet-item,
+.filtro,
+.filtro-chip,
+.filtro-avanzado-toggle,
+.chip-despensa,
+.chip-activo,
+.btn-despensa,
+.btn-imprimir,
+.btn-modo-cocina,
+.btn-offline,
+.btn-favorito,
+.btn-whatsapp,
+.btn-pinterest,
+.btn-compartir-lista,
+.btn-compartir-link,
+.rating-star,
+.hero-search button,
+.landing-todas-btn,
+.landing-once-btn,
+.shopping-fab,
+.shop-check,
+.shop-del,
+.modal-close,
+.shopping-close,
+#theme-toggle {
+  touch-action: manipulation;
+}
+
+/* ---------- 8.5.D — 100dvh como fallback ---------- */
+.mc-overlay {
+  height: 100%;
+  height: 100dvh;
+}
+
+.modal-despensa {
+  max-height: 90vh;
+  max-height: 90dvh;
+}
+
+/* .mc-sheet tiene 85vh solo en mobile (el override desktop está en
+   media query); por eso el dvh también va dentro de la media query
+   para no romper el popover de desktop. */
+@media (max-width: 640px) {
+  .mc-sheet {
+    max-height: 85vh;
+    max-height: 85dvh;
+  }
+}
+
+/* ---------- 8.5.E — Safe areas en paneles flotantes inferiores ---------- */
+.shopping-footer {
+  padding-bottom: calc(1.2rem + env(safe-area-inset-bottom, 0));
+}
+
+@media (max-width: 640px) {
+  .cookie-banner {
+    padding-bottom: calc(1.2rem + env(safe-area-inset-bottom, 0));
+  }
+}
