@@ -5421,3 +5421,44 @@ details[open] > .tabbar-tools-menu {
   .hero-receta .hero-media .hero-fav-flotante { transition: none; }
 }
 /* === FIN BLOQUE FASE 1.5 — AJUSTES VISUALES HERO (NIVEL PRO) === */
+
+/* === INICIO BLOQUE FASE 1.6 — COMPACTAR ESPACIOS === */
+/* Reduce los espacios muertos entre el menú, la foto, el grid y el AEO */
+
+@media (max-width: 720px) {
+  /* 1. Pegar el hero al menú superior */
+  .hero-receta {
+    padding-top: 0.5rem !important;
+    padding-bottom: 1rem !important;
+  }
+  .breadcrumb {
+    margin-bottom: 0.5rem !important;
+  }
+  .hero-receta h1 {
+    margin-bottom: 0.8rem !important;
+  }
+
+  /* 2. Foto al Grid */
+  .hero-media-wrap {
+    margin-bottom: 1rem !important;
+  }
+
+  /* 3. Grid al Chip de "Olla" */
+  .meta-grid {
+    margin-bottom: 0.5rem !important;
+  }
+  .meta-tecnica {
+    margin-bottom: 0 !important; 
+  }
+
+  /* 4. EL GRAN CULPABLE: reducir el espacio entre el Hero y la "Respuesta rápida" */
+  main.receta-page {
+    padding-top: 1rem !important; /* Antes había 2.5rem de espacio */
+  }
+
+  /* 5. Ajustar la cajita AEO */
+  .resumen-aeo {
+    margin-bottom: 1rem !important;
+  }
+}
+/* === FIN BLOQUE FASE 1.6 === */
