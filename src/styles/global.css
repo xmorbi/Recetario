@@ -5490,3 +5490,27 @@ details[open] > .tabbar-tools-menu {
   }
 }
 /* === FIN BLOQUE FASE 1.7 === */
+
+/* === INICIO BLOQUE FASE 1.8 — GOLPE DE GRACIA DEFINITIVO === */
+@media (max-width: 720px) {
+  /* 1. Tirar el hero hacia arriba para comerse el padding del <main> del Layout */
+  header.hero-receta {
+    margin-top: -2.5rem !important; /* El -2.5rem anula exactamente el padding del main */
+    padding-top: 1rem !important;   /* Dejamos solo un suspiro de 16px */
+    padding-bottom: 1rem !important;
+  }
+
+  /* 2. Pegar el breadcrumb */
+  .hero-receta .breadcrumb {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  /* 3. Ajustar el título */
+  header.hero-receta h1 {
+    margin-top: 0 !important;
+    margin-bottom: 0.8rem !important;
+  }
+}
+/* === FIN BLOQUE FASE 1.8 === */
