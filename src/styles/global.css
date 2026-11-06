@@ -941,6 +941,85 @@ body.mc-bloqueado{overflow:hidden}
   }
 }
 /* === FIN BLOQUE FASE C — FAB vs ESCALADOR === */
+/* === INICIO BLOQUE FASE F — JERARQUÍA MODO COCINA (v2, refinado) === */
+/* El botón ya tiene color rojo, texto blanco, weight 600 y 36px en móvil
+   (FASE 5E). Este bloque NO cambia tamaño ni posición en móvil. Aplica:
+
+   - Desktop (>720px): altura de 42px → 48px para dominar la jerarquía
+     frente a "Imprimir" y "Guardar offline" (ambos 42px).
+   - Micro-interacción :active con scale(.96) en todos los viewports.
+   - Sombra más presente (mantiene identidad de marca en rojo).
+   - letter-spacing sutil (-0.01em) para tipografía más limpia.
+   - Elevación en hover desktop (translateY -1px).
+   - Modo oscuro: sombra más neutra para no brillar de más.
+   - Reduced motion: sin scale ni transform.
+
+   NO toca la tabbar, NO mueve el FAB, NO requiere JS. */
+
+/* --- Desktop: subir altura de 42 → 48px --- */
+@media (min-width: 721px) {
+  .btn-modo-cocina {
+    height: 48px;
+    padding: 0 1.3rem;
+    font-size: 0.95rem;
+    letter-spacing: -0.01em;
+    box-shadow: 0 4px 14px rgba(176, 58, 46, 0.32);
+    will-change: transform;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease,
+      transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+      box-shadow 0.2s ease;
+  }
+
+  .btn-modo-cocina:hover {
+    background: var(--rojo-osc);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(176, 58, 46, 0.40);
+  }
+}
+
+/* --- Móvil: altura y padding se mantienen en 36px (FASE 5E).
+       Solo agregamos sombra un poco más marcada para destacar
+       frente a los otros botones sin romper la fila. --- */
+@media (max-width: 720px) {
+  .btn-modo-cocina {
+    box-shadow: 0 3px 10px rgba(176, 58, 46, 0.32);
+    letter-spacing: -0.01em;
+    will-change: transform;
+  }
+}
+
+/* --- Micro-interacción táctil: scale(.96) al presionar --- */
+.btn-modo-cocina:active {
+  transform: scale(0.96);
+  box-shadow: 0 2px 6px rgba(176, 58, 46, 0.28);
+  transition-duration: 0.1s;
+}
+
+/* --- Modo oscuro: sombra más neutra para no brillar de más
+       sobre el fondo #121212, manteniendo el rojo corporativo. --- */
+[data-theme="dark"] .btn-modo-cocina {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="dark"] .btn-modo-cocina:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.10);
+}
+
+/* --- Accesibilidad: sin animación de escala si el usuario pidió
+       reducir movimiento. La jerarquía visual (color + sombra) se mantiene. --- */
+@media (prefers-reduced-motion: reduce) {
+  .btn-modo-cocina {
+    transition: background-color 0.2s ease, color 0.2s ease;
+    will-change: auto;
+  }
+  .btn-modo-cocina:hover,
+  .btn-modo-cocina:active {
+    transform: none;
+  }
+}
+/* === FIN BLOQUE FASE F — JERARQUÍA MODO COCINA === */
 /* ===== ESTABILIDAD DE LAYOUT (ANTI-SALTOS) ===== */
 .receta-card .receta-card-faltan[hidden]{display:none!important}
 .calc-breakdown{min-height:1.4em}
@@ -5112,3 +5191,233 @@ details[open] > .tabbar-tools-menu {
     transition: none;
   }
 }
+
+/* === INICIO BLOQUE FASE 1.5 — AJUSTES VISUALES HERO (NIVEL PRO) === */
+
+/* ---- 1. Matar el "ESPACIO PERDIDO" ---- */
+.hero-receta {
+  padding: 1rem 1rem 1.5rem !important; 
+}
+.hero-receta-inner {
+  padding: 0 !important; 
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.breadcrumb {
+  margin-bottom: 0.5rem;
+}
+
+/* ---- 2. Contenedor del media ---- */
+.hero-media-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 700px; 
+  margin: 0 auto 1.2rem;
+}
+
+/* ---- 3. El contenedor con fondo desenfocado ---- */
+.hero-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radio);
+  overflow: hidden;
+  background-color: var(--crema-osc);
+  box-shadow: var(--sombra-lg);
+  isolation: isolate;
+}
+
+/* La magia: pseudo-elemento como fondo borroso */
+.hero-media::before {
+  content: "";
+  position: absolute;
+  inset: -20px; 
+  background-image: var(--bg-img, none);
+  background-size: cover;
+  background-position: center;
+  filter: blur(20px) brightness(0.8); 
+  opacity: 0.9;
+  z-index: 0;
+}
+
+/* La foto real (se ve entera, sin recortes) */
+.hero-media-img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+  display: block;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+}
+
+/* ---- 4. Placeholder (Estilo Tapa de Libro) ---- */
+.hero-placeholder {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--tinta); 
+  color: var(--crema);
+}
+
+.hero-placeholder::before {
+  content: "";
+  position: absolute;
+  inset: 16px;
+  border: 1px solid rgba(253, 248, 240, 0.2);
+  border-radius: calc(var(--radio) - 6px);
+  pointer-events: none;
+}
+
+.hero-placeholder-titulo {
+  position: relative;
+  z-index: 1;
+  font-family: var(--fuente-titulos);
+  font-weight: 700;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  max-width: 22ch;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ---- 5. Favorito flotante ---- */
+.hero-receta .hero-media .hero-fav-flotante {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 3;
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.92);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-color: transparent;
+  color: var(--suave);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+.hero-receta .hero-media .hero-fav-flotante svg {
+  width: 20px;
+  height: 20px;
+}
+
+.hero-receta .hero-media .hero-fav-flotante:hover,
+.hero-receta .hero-media .hero-fav-flotante.activo {
+  background: #fff;
+  color: var(--rojo);
+  border-color: var(--rojo);
+  transform: scale(1.08);
+}
+
+/* ---- 6. Meta grid ---- */
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 600px; 
+  margin: 0 auto 1rem;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.9rem 0.5rem;
+  background: #fff;
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  box-shadow: var(--sombra-sm);
+  text-align: center;
+}
+
+.meta-item .meta-icon {
+  width: 22px;
+  height: 22px;
+  color: var(--rojo);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.meta-item-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--suave);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.meta-item-valor {
+  font-family: var(--fuente-titulos);
+  font-size: 0.95rem;
+  color: var(--tinta);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* ---- 7. Chip de técnica ---- */
+.meta-tecnica {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0 auto 1rem;
+  padding: 0.4rem 0.95rem;
+  background: var(--crema-osc);
+  border: 1px solid var(--borde);
+  border-radius: 99px;
+  font-size: 0.8rem;
+  color: var(--suave);
+  font-weight: 500;
+}
+
+.meta-tecnica .meta-icon {
+  width: 14px;
+  height: 14px;
+  color: var(--rojo);
+  flex-shrink: 0;
+}
+
+/* ---- Modo oscuro ---- */
+[data-theme="dark"] .hero-placeholder { background-color: #1a1512; color: var(--tinta); }
+[data-theme="dark"] .hero-placeholder::before { border-color: rgba(255, 255, 255, 0.1); }
+[data-theme="dark"] .meta-item { background: #1e1e1e; border-color: #333; }
+[data-theme="dark"] .meta-item .meta-icon { color: var(--rojo-osc); }
+[data-theme="dark"] .meta-item-valor { color: var(--tinta); }
+[data-theme="dark"] .meta-tecnica { background: #1e1e1e; border-color: #333; }
+[data-theme="dark"] .hero-media { background-color: #121212; }
+[data-theme="dark"] .hero-media::before { filter: blur(20px) brightness(0.4); }
+
+/* ---- Responsive Móvil ---- */
+@media (max-width: 720px) {
+  .hero-media-wrap { margin-bottom: 1rem; }
+  .meta-grid { gap: 0.4rem; }
+  .meta-item { padding: 0.7rem 0.3rem; border-radius: 10px; }
+  .meta-item .meta-icon { width: 18px; height: 18px; }
+  .meta-item-label { font-size: 0.58rem; }
+  .meta-item-valor { font-size: 0.8rem; }
+  .meta-tecnica { font-size: 0.75rem; padding: 0.35rem 0.8rem; }
+}
+
+/* ---- Impresión ---- */
+@media print {
+  .hero-placeholder { display: none !important; }
+  .hero-receta .hero-media .hero-fav-flotante { display: none !important; }
+  .hero-media-wrap { max-width: 60% !important; margin: 0 auto .4cm !important; }
+  .hero-media { box-shadow: none !important; border-radius: 4px !important; background: #fff !important; }
+  .hero-media::before { display: none !important; }
+}
+
+/* ---- Reduced motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  .hero-receta .hero-media .hero-fav-flotante { transition: none; }
+}
+/* === FIN BLOQUE FASE 1.5 — AJUSTES VISUALES HERO (NIVEL PRO) === */

@@ -177,18 +177,77 @@ const ICON_LIBRO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" s
     <script type="application/ld+json" set:html={bread}></script>
   </Fragment>
 
+  <!-- FASE 1 — HERO "FICHA GASTRONÓMICA EDITORIAL" -->
   <header class="hero-receta">
     <div class="hero-receta-inner">
       <nav class="breadcrumb" aria-label="Migas de pan">
         <a href="/">Inicio</a> <span>›</span> <a href="/recetario/">Recetas</a> <span>›</span> <span class="breadcrumb-current">{receta.titulo}</span>
       </nav>
       <h1>{receta.titulo}</h1>
-      <div class="meta">
-        {receta.tiempo && <span set:html={ICON_CLOCK + receta.tiempo} />}
-        {receta.porciones && <span set:html={ICON_PORCIONES + receta.porciones} />}
-        {receta.dificultad && <span set:html={ICON_DIFICULTAD + 'Dificultad: ' + receta.dificultad} />}
-        {receta.tecnica && <span set:html={ICON_TECNICA + receta.tecnica} />}
+      
+      <div class="hero-media-wrap">
+        style=<div class="hero-media">
+          {tieneImagenPropia ? (
+            <img
+              class="hero-media-img"
+              src={'/' + receta.imagen}
+              alt={receta.titulo}
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+              width="1200"
+              height="675"
+            />
+          ) : (
+            <div
+              class="hero-placeholder"
+              role="img"
+              aria-label={`Portada de la receta: ${receta.titulo}`}
+            >
+              <span class="hero-placeholder-titulo">{receta.titulo}</span>
+            </div>
+          )}
+          <button
+            type="button"
+            class="btn-favorito hero-fav-flotante"
+            data-slug={slug}
+            aria-label="Guardar en favoritos"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          </button>
+        </div>
       </div>
+
+      <div class="meta-grid">
+        {receta.tiempo && (
+          <div class="meta-item">
+            <span class="meta-item-icon" set:html={ICON_CLOCK} aria-hidden="true"></span>
+            <span class="meta-item-label">Tiempo</span>
+            <span class="meta-item-valor">{receta.tiempo}</span>
+          </div>
+        )}
+        {receta.porciones && (
+          <div class="meta-item">
+            <span class="meta-item-icon" set:html={ICON_PORCIONES} aria-hidden="true"></span>
+            <span class="meta-item-label">Porciones</span>
+            <span class="meta-item-valor">{receta.porciones}</span>
+          </div>
+        )}
+        {receta.dificultad && (
+          <div class="meta-item">
+            <span class="meta-item-icon" set:html={ICON_DIFICULTAD} aria-hidden="true"></span>
+            <span class="meta-item-label">Dificultad</span>
+            <span class="meta-item-valor">{receta.dificultad}</span>
+          </div>
+        )}
+      </div>
+
+      {receta.tecnica && (
+        <div class="meta-tecnica">
+          <span class="meta-tecnica-icon" set:html={ICON_TECNICA} aria-hidden="true"></span>
+          <span>{receta.tecnica}</span>
+        </div>
+      )}
     </div>
   </header>
 
@@ -238,9 +297,6 @@ const ICON_LIBRO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" s
         >
           📥 Guardar para cocinar sin conexión
         </button>
-        <button type="button" class="btn-favorito" data-slug={slug} aria-label="Guardar en favoritos">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-        </button>
       </div>
 
       <div class="rating-container" data-slug={slug}>
@@ -261,8 +317,6 @@ const ICON_LIBRO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" s
     </div>
 
     <article class="receta">
-      {receta.imagen && <img class="receta-img" src={'/' + receta.imagen} alt={receta.titulo} loading="eager" width="1200" height="675" />}
-
       {receta.advertencia && (
         <div class="advertencia-box" role="alert">
           <div class="advertencia-icon">⚠️</div>
