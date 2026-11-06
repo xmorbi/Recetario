@@ -5462,3 +5462,31 @@ details[open] > .tabbar-tools-menu {
   }
 }
 /* === FIN BLOQUE FASE 1.6 === */
+
+/* === INICIO BLOQUE FASE 1.7 — MATAR ESPACIO SUPERIOR === */
+@media (max-width: 720px) {
+  /* Forzar que el header se pegue arriba */
+  header.hero-receta {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+  
+  /* Achicar el espacio interno del contenedor */
+  header.hero-receta .hero-receta-inner {
+    padding-top: 0 !important;
+  }
+
+  /* Pegar el breadcrumb */
+  header.hero-receta .breadcrumb {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    margin-bottom: 0.6rem !important;
+  }
+  
+  /* Reducir un pelín el margen del título hacia la foto */
+  header.hero-receta h1 {
+    margin-top: 0 !important;
+    margin-bottom: 0.6rem !important;
+  }
+}
+/* === FIN BLOQUE FASE 1.7 === */
