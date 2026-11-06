@@ -73,9 +73,6 @@ const ingPrincipales = receta.ingredientes.slice(0, 3).map(x => x.split(':').pop
 const resumenTexto = `Para preparar ${receta.titulo} necesitas ${ingPrincipales}. Es una receta de dificultad ${receta.dificultad || 'fácil'} que toma ${receta.tiempo || 'un tiempo'} y rinde ${receta.porciones || '4 porciones'}.`;
 
 // FASE 2 (Mejora 2): descripción única por receta para <meta name="description">
-// y og:description. Se compone con datos ya existentes (título, tiempo,
-// dificultad) para evitar el texto genérico "Receta chilena de X. Ingredientes
-// y preparación paso a paso." y se trunca a 160 caracteres respetando palabras.
 const DESCRIPCION_MAX = 160;
 function truncarDescripcion(texto, max = DESCRIPCION_MAX) {
   if (!texto) return '';
@@ -124,8 +121,6 @@ const schemaObj = {
   "recipeInstructions": receta.pasos.map((p, i) => ({ "@type": "HowToStep", "position": i + 1, "text": p }))
 };
 
-// FASE 10: si hay tiempo_v2, usar prepTime / cookTime / restTime.
-// Si no, caer al totalTime derivado de receta.tiempo.
 if (receta.tiempo_v2) {
   const tv = receta.tiempo_v2;
   if (tv.preparacion) schemaObj.prepTime = 'PT' + tv.preparacion + 'M';
@@ -139,7 +134,6 @@ if (receta.tiempo_v2) {
 
 const schema = JSON.stringify(schemaObj);
 
-// Centralización de dominio: breadcrumb dinámico vía SITE.
 const bread = JSON.stringify({
   "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
     {"@type": "ListItem", "position": 1, "name": "Inicio", "item": new URL('/', SITE).toString()},
@@ -177,7 +171,7 @@ const ICON_LIBRO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" s
     <script type="application/ld+json" set:html={bread}></script>
   </Fragment>
 
-  <!-- FASE 1 — HERO "FICHA GASTRONÓMICA EDITORIAL" -->
+  <!-- HERO "FICHA GASTRONÓMICA EDITORIAL" -->
   <header class="hero-receta">
     <div class="hero-receta-inner">
       <nav class="breadcrumb" aria-label="Migas de pan">
@@ -252,68 +246,53 @@ const ICON_LIBRO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" s
   </header>
 
   <main class="receta-page">
-    <div class="resumen-aeo">
-      <strong>Respuesta rápida:</strong> {resumenTexto}
-    </div>
+    
+    <!-- FASE 2 y 3: CTA Gigante + Botones + Estrellas (Todo integrado bajo el Hero) -->
+    <div class="acciones-principales-receta">
+      
+      <!-- 1. El CTA Gigante de Modo Cocina -->
+      <button type="button" class="btn-cta-cocina">
+        <span class="cta-icon">👨‍🍳</span>
+        <span class="cta-textos">
+          <strong>Comenzar modo cocina</strong>
+          <small>Preparación guiada paso a paso con voz</small>
+        </span>
+      </button>
 
-    <div class="receta-barra">
-      <div class="receta-acciones-top" style="margin-bottom:0;">
-
-        {/* FASE B — Botón único "Imprimir" con dropdown nativo (<details>).
-            Dos opciones: toda la receta / solo ingredientes marcados.
-            El contador "X/Y" aparece solo si hay al menos 1 marcado. */}
+      <!-- 2. Botones secundarios (Imprimir y Guardar Offline) -->
+      <div class="acciones-secundarias">
         <details class="btn-imprimir-menu">
-          <summary class="btn-imprimir">
+          <summary class="btn-secundario">
             🖨️ Imprimir
             <svg class="chevron-imprimir" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <polyline points="6 9 12 15 18 9"/>
             </svg>
           </summary>
           <div class="imprimir-opciones">
-            <button type="button" class="imprimir-opcion" data-imprimir="todo">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M6 9V2h12v7"/>
-                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
-                <path d="M6 14h12v8H6z"/>
-              </svg>
-              <span>Toda la receta</span>
-            </button>
-            <button type="button" class="imprimir-opcion" data-imprimir="marcados">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <polyline points="20 6 9 17 4 12"/>
-              </svg>
-              <span>Solo ingredientes marcados</span>
-              <span class="contador-marcados" hidden></span>
-            </button>
+            <button type="button" class="imprimir-opcion" data-imprimir="todo"><span>Toda la receta</span></button>
+            <button type="button" class="imprimir-opcion" data-imprimir="marcados"><span>Solo ingredientes marcados</span></button>
           </div>
         </details>
 
-        <button type="button" class="btn-modo-cocina">👨‍🍳 Modo cocina</button>
-        <button
-          type="button"
-          class="btn-offline"
-          data-url={`/recetas/${slug}/`}
-          data-image={tieneImagenPropia ? '/' + receta.imagen : ''}
-        >
-          📥 Guardar para cocinar sin conexión
+        <button type="button" class="btn-offline btn-secundario" data-url={`/recetas/${slug}/`} data-image={tieneImagenPropia ? '/' + receta.imagen : ''}>
+          📥 Guardar offline
         </button>
       </div>
 
+      <!-- 3. Estrellas de calificación -->
       <div class="rating-container" data-slug={slug}>
         <div class="rating-stars" role="group" aria-label="Calificación de la receta">
           {Array.from({ length: 5 }).map((_, i) => (
-            <button
-              type="button"
-              class="rating-star"
-              data-value={i + 1}
-              aria-label={`Calificar con ${i + 1} ${i === 0 ? 'estrella' : 'estrellas'}`}
-              aria-pressed="false"
-              set:html={ICON_STAR}
-            ></button>
+            <button type="button" class="rating-star" data-value={i + 1} aria-label={`Calificar con ${i + 1} ${i === 0 ? 'estrella' : 'estrellas'}`} aria-pressed="false" set:html={ICON_STAR}></button>
           ))}
         </div>
         <span class="rating-text">Califica esta receta</span>
       </div>
+    </div>
+
+    <!-- 4. Respuesta rápida (AEO) movida aquí abajo para no romper el diseño del mockup -->
+    <div class="resumen-aeo">
+      <strong>Respuesta rápida:</strong> {resumenTexto}
     </div>
 
     <article class="receta">
@@ -326,26 +305,15 @@ const ICON_LIBRO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" s
         </div>
       )}
 
-      <!-- FASE 5C: navegación segmentada. En escritorio las tabs no se ven
-           (CSS las oculta) y ambas columnas quedan visibles lado a lado
-           como siempre. En móvil, JS alterna data-vista entre
-           "ingredientes", "preparacion" y "todo". El contenido sigue
-           completo en el DOM → SEO intacto. -->
+      <!-- TABS -->
       <div class="receta-tabs" role="tablist" aria-label="Secciones de la receta">
-        <button type="button" role="tab" id="tab-ingredientes"
-                aria-controls="seccion-ingredientes" aria-selected="true"
-                data-tab="ingredientes">Ingredientes</button>
-        <button type="button" role="tab" id="tab-preparacion"
-                aria-controls="seccion-preparacion" aria-selected="false"
-                data-tab="preparacion">Preparación</button>
-        <button type="button" role="tab" id="tab-todo"
-                aria-selected="false" data-tab="todo">Ver todo</button>
+        <button type="button" role="tab" id="tab-ingredientes" aria-controls="seccion-ingredientes" aria-selected="true" data-tab="ingredientes">Ingredientes</button>
+        <button type="button" role="tab" id="tab-preparacion" aria-controls="seccion-preparacion" aria-selected="false" data-tab="preparacion">Preparación</button>
+        <button type="button" role="tab" id="tab-todo" aria-selected="false" data-tab="todo">Ver todo</button>
       </div>
-
+      
       <div class="cuerpo" id="recetaCuerpo" data-vista="todo">
-        <div class="cuerpo-col" data-seccion="ingredientes"
-             id="seccion-ingredientes" role="tabpanel"
-             aria-labelledby="tab-ingredientes">
+        <div class="cuerpo-col" data-seccion="ingredientes" id="seccion-ingredientes" role="tabpanel" aria-labelledby="tab-ingredientes">
           <h3>Ingredientes</h3>
           <ul class="ingredientes">
             {receta.ingredientes.map(ing => (
@@ -357,9 +325,7 @@ const ICON_LIBRO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" s
           </ul>
           <button type="button" class="btn-add-all">Añadir todos los ingredientes</button>
         </div>
-        <div class="cuerpo-col" data-seccion="preparacion"
-             id="seccion-preparacion" role="tabpanel"
-             aria-labelledby="tab-preparacion">
+        <div class="cuerpo-col" data-seccion="preparacion" id="seccion-preparacion" role="tabpanel" aria-labelledby="tab-preparacion">
           <h3>Preparación</h3>
           <ol class="preparacion">
             {receta.pasos.map(paso => <li>{paso}</li>)}
@@ -548,11 +514,7 @@ const ICON_LIBRO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" s
     })();
   </script>
 
-  <!-- FASE 8 — 8.7: Accordion de "Errores" y "Conservación".
-       En móvil (≤720px) los bloques se muestran colapsados por defecto
-       para reducir el scroll vertical del artículo. En desktop quedan
-       abiertos (el CSS anula el chevron y el cursor pointer).
-       Sin JS: abierto en todos los viewports (mismo comportamiento que antes). -->
+  <!-- FASE 8 — 8.7: Accordion de "Errores" y "Conservación". -->
   <script is:inline>
     (function () {
       if (!window.matchMedia('(max-width: 720px)').matches) return;
@@ -563,12 +525,7 @@ const ICON_LIBRO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" s
     })();
   </script>
 
-  <!-- FASE C — Ocultar FAB del carrito cuando el escalador o "Añadir todos"
-       entran en la zona del FAB (últimos ~20% del viewport).
-       - El FAB vive en el body (creado por lista-compras.js en su DOMContentLoaded).
-       - Este observer espera a que exista con reintentos cortos.
-       - Degradación: si IntersectionObserver no existe, FAB visible siempre.
-       - No modifica lista-compras.js ni el comportamiento del carrito. -->
+  <!-- FASE C — Ocultar FAB del carrito cuando el escalador o "Añadir todos" entran -->
   <script is:inline>
     (function () {
       'use strict';
@@ -581,9 +538,6 @@ const ICON_LIBRO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" s
       function arrancar() {
         var fab = document.getElementById('shopping-fab');
 
-        // El FAB lo crea lista-compras.js en su propio DOMContentLoaded.
-        // Este script puede registrar su listener antes o después;
-        // con reintentos cubrimos ambos órdenes.
         if (!fab) {
           intentos++;
           if (intentos > MAX_INTENTOS) return;
@@ -598,10 +552,6 @@ const ICON_LIBRO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" s
         if (btnAll) targets.push(btnAll);
         if (targets.length === 0) return;
 
-        // Observa solo los últimos 20% del viewport (zona donde vive el FAB).
-        // rootMargin -80% arriba ⇒ la "ventana" del observer es la franja
-        // inferior del viewport. Cuando el escalador cruza esa franja,
-        // isIntersecting = true y ocultamos el FAB.
         var observer = new IntersectionObserver(function (entries) {
           var algunoVisible = false;
           for (var i = 0; i < entries.length; i++) {
