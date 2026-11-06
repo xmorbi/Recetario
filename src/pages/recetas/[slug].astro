@@ -170,15 +170,6 @@ const ICON_LIBRO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" s
       </nav>
       <h1>{receta.titulo}</h1>
 
-      <!-- ESTRELLAS MOVIDAS AL HERO -->
-      <div class="rating-container hero-rating" data-slug={slug}>
-        <div class="rating-stars" role="group" aria-label="Calificación de la receta">
-          {Array.from({ length: 5 }).map((_, i) => (
-            <button type="button" class="rating-star" data-value={i + 1} aria-label={`Calificar con ${i + 1} ${i === 0 ? 'estrella' : 'estrellas'}`} aria-pressed="false" set:html={ICON_STAR}></button>
-          ))}
-        </div>
-      </div>
-
       <div class="hero-media-wrap">
         <div class="hero-media" style={tieneImagenPropia ? `--bg-img: url('/${receta.imagen}')` : ''}>
           {tieneImagenPropia ? (
@@ -348,8 +339,19 @@ const ICON_LIBRO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" s
       </div>
     )}
 
-    <!-- FASE 2: BOTONES IMPRIMIR Y OFFLINE MOVIDOS AL FINAL -->
+    <!-- FASE 2: BOTONES IMPRIMIR Y OFFLINE + ESTRELLAS AL FINAL -->
     <div class="acciones-footer">
+      
+      <!-- Estrellas recuperadas aquí -->
+      <div class="rating-container" data-slug={slug}>
+        <div class="rating-stars" role="group" aria-label="Calificación de la receta">
+          {Array.from({ length: 5 }).map((_, i) => (
+            <button type="button" class="rating-star" data-value={i + 1} aria-label={`Calificar con ${i + 1} ${i === 0 ? 'estrella' : 'estrellas'}`} aria-pressed="false" set:html={ICON_STAR}></button>
+          ))}
+        </div>
+        <span class="rating-text">Califica esta receta</span>
+      </div>
+
       <details class="btn-imprimir-menu">
         <summary class="btn-secundario">
           🖨️ Imprimir
@@ -493,6 +495,7 @@ const ICON_LIBRO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" s
     })();
   </script>
 
+  <!-- FASE 8 — 8.7: Accordion de "Errores" y "Conservación". -->
   <script is:inline>
     (function () {
       if (!window.matchMedia('(max-width: 720px)').matches) return;
@@ -503,6 +506,7 @@ const ICON_LIBRO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" s
     })();
   </script>
 
+  <!-- FASE C — Ocultar FAB del carrito cuando el escalador o "Añadir todos" entran -->
   <script is:inline>
     (function () {
       'use strict';
