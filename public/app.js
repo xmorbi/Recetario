@@ -648,7 +648,12 @@
   /* =====================================================
      INICIALIZACIÓN
      ===================================================== */
+  let appIniciada = false; // Guarda para evitar doble inicialización y listeners duplicados
+
   function initApp() {
+    if (appIniciada) return;
+    appIniciada = true;
+
     if (typeof RECETAS === 'undefined' || !Array.isArray(RECETAS)) {
       console.error('No se encontraron las recetas en window.RECETAS');
       return;
@@ -820,7 +825,12 @@
     const btnLimpiarFiltros = document.getElementById('btnLimpiarFiltros');
 
     if (btnFiltrosAvanzados && panelFiltrosAvanzados) {
-      btnFiltrosAvanzados.addEventListener('click', function () {
+      btnFiltrosAvanzados.addEventListener('click', function (e) {
+        // stopImmediatePropagation evita que otros listeners de clic en el mismo
+        // botón (por ejemplo, si el script se cargó dos veces por error) anulen
+        // la apertura del panel de filtros.
+        e.stopImmediatePropagation();
+        
         const estabaAbierto = !panelFiltrosAvanzados.hidden;
         panelFiltrosAvanzados.hidden = estabaAbierto;
         btnFiltrosAvanzados.setAttribute('aria-expanded', estabaAbierto ? 'false' : 'true');

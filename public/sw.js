@@ -13,7 +13,7 @@
    No se usa skipWaiting: la actualización espera al siguiente arranque.
    ================================================================= */
 
-const VERSION = 'v2';
+const VERSION = 'v3';
 const CACHE_CORE = `core-${VERSION}`;
 const CACHE_STATIC = `static-${VERSION}`;
 const CACHE_RECETAS = `recetas-guardadas-${VERSION}`;

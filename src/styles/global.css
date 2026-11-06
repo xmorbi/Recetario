@@ -4215,3 +4215,237 @@ details[open] > .tabbar-tools-menu {
     transform: none !important;
   }
 }
+
+/* =========================================================
+   FIX — "Más filtros" no abre el panel en móvil
+   El grid móvil de .controles .inner depende de que el botón y
+   el panel sean hijos directos. Si quedaron anidados dentro de
+   .filtros-scroll (que tiene overflow-y: hidden), el panel se
+   recorta al abrirse. Esta regla lo blinda en ambos casos.
+   ========================================================= */
+@media (max-width: 640px) {
+
+  /* Botón: asegurar clic y ubicación en el grid */
+  .controles .inner > .filtro-avanzado-toggle,
+  .controles .inner > #btnFiltrosAvanzados {
+    grid-column: 2 / 3;
+    order: 2;
+    width: 100%;
+    pointer-events: auto;
+    position: relative;
+    z-index: 3;
+  }
+
+  /* Panel cuando es hijo directo del grid */
+  .controles .inner > .filtros-avanzados,
+  .controles .inner > #filtrosAvanzados {
+    grid-column: 1 / -1;
+    order: 4;
+    width: 100%;
+    max-width: 100%;
+    max-height: none;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Fallback: si el panel quedó dentro del carrusel,
+     desbloquear el overflow del carrusel mientras el panel esté abierto. */
+  .filtros-scroll:has(#filtrosAvanzados:not([hidden])),
+  .filtros-scroll:has(.filtros-avanzados:not([hidden])) {
+    overflow: visible;
+    flex-wrap: wrap;
+    height: auto;
+  }
+}
+
+/* =========================================================
+   FASE 7 — 7I: ESTILO PREMIUM PARA EL PANEL "MÁS FILTROS" (MÓVIL)
+   ========================================================= */
+@media (max-width: 640px) {
+  .controles .inner > .filtros-avanzados,
+  .controles .inner > #filtrosAvanzados {
+    background: #ffffff;
+    border: 1px solid var(--border-subtle, #e6d6c1);
+    border-radius: 20px;
+    padding: 1.25rem;
+    margin-top: .75rem;
+    box-shadow: var(--shadow-2);
+    gap: 1.25rem;
+  }
+
+  .filtro-grupo {
+    gap: .6rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed rgba(0,0,0,0.08);
+  }
+  .filtro-grupo:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .filtro-grupo-titulo {
+    font-size: .78rem;
+    letter-spacing: .08em;
+    color: var(--text-accent-strong, #7a1b15);
+    margin-bottom: .2rem;
+  }
+
+  .filtro-chip {
+    background: var(--surface-sunken, #f6ecdd);
+    border: 1px solid var(--border-subtle, #e6d6c1);
+    box-shadow: var(--shadow-1);
+  }
+
+  .filtro-chip.activo {
+    background: var(--accent-primary, #b03a2e);
+    border-color: var(--accent-primary, #b03a2e);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(176,58,46,.3);
+  }
+
+  .filtro-limpiar {
+    align-self: center;
+    margin-top: .25rem;
+    padding: .6rem 1.2rem;
+    background: #ffffff;
+    border: 1px solid var(--border-subtle, #e6d6c1);
+    border-radius: 99px;
+    text-decoration: none;
+    box-shadow: var(--shadow-1);
+    color: var(--text-secondary, #6f6257);
+    font-weight: 600;
+  }
+
+  [data-theme="dark"] .controles .inner > .filtros-avanzados,
+  [data-theme="dark"] .controles .inner > #filtrosAvanzados {
+    background: #1e1e1e;
+    border-color: #333;
+  }
+  [data-theme="dark"] .filtro-grupo {
+    border-bottom-color: #333;
+  }
+  [data-theme="dark"] .filtro-chip {
+    background: #121212;
+    border-color: #444;
+  }
+  [data-theme="dark"] .filtro-limpiar {
+    background: #2a2a2a;
+    border-color: #444;
+  }
+}
+
+/* =====================================================================
+   FASE 7J — PULIDO VISUAL DEL PANEL "MÁS FILTROS" EN MÓVIL
+   Hace que el panel se vea como una tarjeta flotante limpia (estilo iOS)
+   en lugar de un bloque pegado al fondo.
+   ===================================================================== */
+@media (max-width: 640px) {
+  /* El panel en sí */
+  .controles .inner > .filtros-avanzados {
+    background: #fff;
+    border: 1px solid var(--borde);
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(90, 60, 30, 0.08), 0 2px 8px rgba(90, 60, 30, 0.04);
+    padding: 1.2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Títulos de los grupos (Tiempo, Dificultad, etc.) */
+  .controles .inner > .filtros-avanzados .filtro-grupo-titulo {
+    font-family: var(--fuente-titulos);
+    font-size: 1rem;
+    color: var(--rojo-osc);
+    margin-bottom: 0.5rem;
+    border-bottom: none;
+    padding-bottom: 0;
+    letter-spacing: -0.2px;
+  }
+
+  /* Separador sutil entre grupos */
+  .controles .inner > .filtros-avanzados .filtro-grupo {
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px dashed var(--borde);
+  }
+  .controles .inner > .filtros-avanzados .filtro-grupo:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  /* Chips (Tiempo, Dificultad, etc.) */
+  .controles .inner > .filtros-avanzados .filtro-chip {
+    background: var(--crema);
+    border: 1.5px solid var(--borde);
+    color: var(--tinta);
+    border-radius: 99px;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+
+  .controles .inner > .filtros-avanzados .filtro-chip.activo {
+    background: var(--rojo);
+    color: #fff;
+    border-color: var(--rojo-osc);
+    box-shadow: 0 2px 6px rgba(176, 58, 46, 0.25);
+  }
+
+  /* Botón de "Limpiar filtros" */
+  .controles .inner > .filtros-avanzados .filtro-limpiar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--crema-osc);
+    color: var(--rojo-osc);
+    border: 1px solid var(--borde);
+    padding: 0.6rem 1.2rem;
+    border-radius: 99px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-top: 1rem;
+    width: 100%;
+    text-decoration: none;
+  }
+  
+  .controles .inner > .filtros-avanzados .filtro-limpiar:hover {
+    background: var(--rojo);
+    color: #fff;
+    border-color: var(--rojo);
+  }
+}
+
+/* Modo oscuro para el panel */
+[data-theme="dark"] .controles .inner > .filtros-avanzados {
+  background: #1e1e1e;
+  border-color: #333;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+[data-theme="dark"] .controles .inner > .filtros-avanzados .filtro-grupo-titulo {
+  color: #e57373;
+}
+[data-theme="dark"] .controles .inner > .filtros-avanzados .filtro-grupo {
+  border-bottom-color: #333;
+}
+[data-theme="dark"] .controles .inner > .filtros-avanzados .filtro-chip {
+  background: #121212;
+  color: #f5f5f5;
+  border-color: #444;
+}
+[data-theme="dark"] .controles .inner > .filtros-avanzados .filtro-chip.activo {
+  background: var(--rojo);
+  color: #fff;
+  border-color: var(--rojo-osc);
+}
+[data-theme="dark"] .controles .inner > .filtros-avanzados .filtro-limpiar {
+  background: #2a2a2a;
+  color: #f5f5f5;
+  border-color: #444;
+}
+[data-theme="dark"] .controles .inner > .filtros-avanzados .filtro-limpiar:hover {
+  background: var(--rojo);
+  color: #fff;
+  border-color: var(--rojo);
+}
