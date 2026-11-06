@@ -184,9 +184,9 @@ const ICON_LIBRO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" s
         <a href="/">Inicio</a> <span>›</span> <a href="/recetario/">Recetas</a> <span>›</span> <span class="breadcrumb-current">{receta.titulo}</span>
       </nav>
       <h1>{receta.titulo}</h1>
-      
+
       <div class="hero-media-wrap">
-        style=<div class="hero-media">
+        <div class="hero-media" style={tieneImagenPropia ? `--bg-img: url('/${receta.imagen}')` : ''}>
           {tieneImagenPropia ? (
             <img
               class="hero-media-img"
