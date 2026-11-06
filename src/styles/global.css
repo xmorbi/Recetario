@@ -758,6 +758,152 @@ body.mc-bloqueado{overflow:hidden}
 .receta-acciones-top .btn-favorito svg{width:20px;height:20px}
 @media(max-width:480px){.btn-imprimir,.btn-modo-cocina{padding:0 1rem;font-size:.88rem}}
 
+/* === INICIO BLOQUE FASE B — MENÚ IMPRIMIR === */
+/* Reemplaza los dos botones "Imprimir" + "Imprimir marcados" por un
+   único botón con dropdown nativo (<details>). Hereda el look del
+   antiguo .btn-imprimir desde el <summary>. */
+
+.btn-imprimir-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.btn-imprimir-menu > summary {
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn-imprimir-menu > summary::-webkit-details-marker { display: none; }
+.btn-imprimir-menu > summary::marker { content: ''; }
+
+.chevron-imprimir {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  transition: transform var(--duration-base, 250ms) var(--ease-ios, ease-out);
+}
+
+.btn-imprimir-menu[open] .chevron-imprimir {
+  transform: rotate(180deg);
+}
+
+/* Panel desplegable */
+.imprimir-opciones {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  background: #fff;
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  box-shadow: var(--sombra-md, 0 4px 16px rgba(90,60,30,.08));
+  min-width: 240px;
+  max-width: calc(100vw - 2rem);
+  padding: .35rem;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  animation: f7MenuInDown var(--duration-fast, 150ms) var(--ease-ios, ease-out);
+}
+
+.imprimir-opcion {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+  padding: .65rem .9rem;
+  border: none;
+  background: transparent;
+  color: var(--tinta);
+  font-family: inherit;
+  font-size: .9rem;
+  font-weight: 500;
+  text-align: left;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    background-color var(--duration-fast, 150ms) var(--ease-ios, ease-out),
+    color var(--duration-fast, 150ms) var(--ease-ios, ease-out);
+  min-height: 44px;
+  width: 100%;
+}
+
+.imprimir-opcion:hover,
+.imprimir-opcion:focus-visible {
+  background: var(--crema-osc);
+  color: var(--rojo);
+  outline: none;
+}
+
+.imprimir-opcion:focus-visible {
+  outline: 2px solid var(--color-foco, #1f3a5f);
+  outline-offset: -2px;
+}
+
+.imprimir-opcion svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: currentColor;
+}
+
+.imprimir-opcion > span:first-of-type {
+  flex: 1;
+}
+
+.contador-marcados {
+  font-size: .75rem;
+  font-weight: 600;
+  color: var(--rojo);
+  background: var(--crema-osc);
+  padding: .1rem .45rem;
+  border-radius: 99px;
+  flex-shrink: 0;
+}
+
+/* Modo oscuro */
+[data-theme="dark"] .imprimir-opciones {
+  background: #1e1e1e;
+  border-color: #333;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .imprimir-opcion {
+  color: var(--tinta);
+}
+
+[data-theme="dark"] .imprimir-opcion:hover,
+[data-theme="dark"] .imprimir-opcion:focus-visible {
+  background: #2a2a2a;
+  color: var(--rojo-osc, #e57373);
+}
+
+[data-theme="dark"] .contador-marcados {
+  background: #2a2a2a;
+  color: var(--rojo-osc, #e57373);
+}
+
+/* Impresión: ocultar todo el menú y el dropdown */
+@media print {
+  .btn-imprimir-menu,
+  .imprimir-opciones {
+    display: none !important;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .chevron-imprimir {
+    transition: none;
+  }
+
+  .imprimir-opciones {
+    animation: none;
+  }
+}
+/* === FIN BLOQUE FASE B — MENÚ IMPRIMIR === */
+
 /* ===== ESTABILIDAD DE LAYOUT (ANTI-SALTOS) ===== */
 .receta-card .receta-card-faltan[hidden]{display:none!important}
 .calc-breakdown{min-height:1.4em}

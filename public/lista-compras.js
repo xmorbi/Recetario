@@ -1,6 +1,7 @@
 /* =================================================================
    LISTA-COMPRAS.JS — Carrito flotante y lista de compras
    Fase 5: compartir lista por WhatsApp + enlace portátil
+   FASE A: dominio del mensaje de compartir dinámico (sin netlify hardcodeado)
    ================================================================= */
 (function() {
   'use strict';
@@ -93,6 +94,19 @@
   // Redondea a 2 decimales y quita ceros sobrantes: 0.25 -> "0.25", 1.50 -> "1.5"
   function numLimpio(n) {
     return String(Math.round(n * 100) / 100);
+  }
+
+  /* FASE A: devuelve el host del sitio (sin protocolo ni trailing slash)
+     para usar en mensajes de compartir. Orden de preferencia:
+       1. window.__SITE_URL  → inyectado por Layout.astro (Astro.site)
+       2. location.origin    → lo que ve el usuario en la barra
+       3. cadena vacía       → si todo falla, se omite la línea del mensaje */
+  function hostSitio() {
+    var base = (typeof window !== 'undefined' && window.__SITE_URL) ||
+               (typeof location !== 'undefined' && location.origin) || '';
+    return String(base)
+      .replace(/^https?:\/\//i, '')
+      .replace(/\/+$/, '');
   }
 
   function agregarItem(texto) {
@@ -197,15 +211,17 @@
       return;
     }
 
-    // Agrupar por categoría no es trivial con textos libres,
-    // así que solo listamos en viñetas con cantidad incluida.
+    // FASE A: el sufijo "Enviado desde …" ahora es dinámico.
+    // Antes era `_Enviado desde recetariochileno.netlify.app_` fijo.
+    const host = hostSitio();
+    const sufijo = host ? '\n\n_Enviado desde ' + host + '_' : '';
+
     const texto =
       '🛒 *Mi Lista de Compras*\n' +
       '_Recetario Chileno_\n' +
       '\n' +
       pendientes.map(i => '• ' + i.texto).join('\n') +
-      '\n\n' +
-      '_Enviado desde recetariochileno.netlify.app_';
+      sufijo;
 
     // wa.me funciona en móvil (abre app) y en desktop (abre web.whatsapp)
     const url = 'https://wa.me/?text=' + encodeURIComponent(texto);

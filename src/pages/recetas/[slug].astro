@@ -199,7 +199,36 @@ const ICON_LIBRO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" s
 
     <div class="receta-barra">
       <div class="receta-acciones-top" style="margin-bottom:0;">
-        <button type="button" class="btn-imprimir" onclick="window.print()">🖨️ Imprimir</button>
+
+        {/* FASE B — Botón único "Imprimir" con dropdown nativo (<details>).
+            Dos opciones: toda la receta / solo ingredientes marcados.
+            El contador "X/Y" aparece solo si hay al menos 1 marcado. */}
+        <details class="btn-imprimir-menu">
+          <summary class="btn-imprimir">
+            🖨️ Imprimir
+            <svg class="chevron-imprimir" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </summary>
+          <div class="imprimir-opciones">
+            <button type="button" class="imprimir-opcion" data-imprimir="todo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M6 9V2h12v7"/>
+                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+                <path d="M6 14h12v8H6z"/>
+              </svg>
+              <span>Toda la receta</span>
+            </button>
+            <button type="button" class="imprimir-opcion" data-imprimir="marcados">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>Solo ingredientes marcados</span>
+              <span class="contador-marcados" hidden></span>
+            </button>
+          </div>
+        </details>
+
         <button type="button" class="btn-modo-cocina">👨‍🍳 Modo cocina</button>
         <button
           type="button"
