@@ -5619,3 +5619,30 @@ details[open] > .tabbar-tools-menu {
   .cta-icon { font-size: 1.8rem; }
 }
 /* === FIN BLOQUE FASE 2 y 3 (OPCIÓN 1 - CTA PROTAGONISTA) === */
+
+/* === FIX: Evitar que el carrito tape la Respuesta Rápida === */
+@media (max-width: 720px) {
+  .resumen-aeo {
+    /* Dejamos un margen a la derecha para que el texto respire lejos del carrito */
+    margin-right: 4rem !important; 
+  }
+}
+
+/* === FIX: Arreglar desborde del botón "Atajos y ayuda" en el menú === */
+.mc-sheet-details > summary.mc-sheet-item {
+  display: flex !important;
+  align-items: center !important;
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 12px !important;
+  padding: .85rem .9rem !important;
+  background: rgba(255,255,255,.06) !important;
+  border: 1px solid rgba(255,255,255,.12) !important;
+}
+
+.mc-sheet-details > summary.mc-sheet-item .mc-sheet-item-texto {
+  flex: 1 !important;
+  text-align: left !important;
+  margin-left: 0.5rem;
+}
+/* === FIN FIX === */

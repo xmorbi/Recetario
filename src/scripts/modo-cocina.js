@@ -1893,18 +1893,15 @@ import {
           var btnT = overlayEl && overlayEl.querySelector('.mc-reiniciar');
           if (btnT) {
             btnT.classList.remove('mc-reiniciar-confirmar');
-            btnT.setAttribute('aria-label', 'Reiniciar progreso');
-            btnT.setAttribute('title', 'Reiniciar progreso');
+            btnT.innerHTML = '<span class="mc-sheet-item-icon" aria-hidden="true">↺</span><span class="mc-sheet-item-texto">Reiniciar progreso</span>';
           }
-        }, 4000);
+        }, 5000);
         var btn = overlayEl && overlayEl.querySelector('.mc-reiniciar');
         if (btn) {
           btn.classList.add('mc-reiniciar-confirmar');
-          btn.setAttribute('aria-label', 'Toca otra vez para reiniciar el progreso');
-          btn.setAttribute('title', 'Toca otra vez para reiniciar');
+          btn.innerHTML = '<span class="mc-sheet-item-icon" aria-hidden="true">⚠️</span><span class="mc-sheet-item-texto">¿Seguro? Toca otra vez</span>';
         }
-        anunciar('Toca otra vez para reiniciar');
-        mostrarAvisoOverlay('Toca otra vez para reiniciar');
+        anunciar('Toca otra vez para reiniciar el progreso');
         return;
       }
     }
@@ -1913,8 +1910,7 @@ import {
     var btnX = overlayEl && overlayEl.querySelector('.mc-reiniciar');
     if (btnX) {
       btnX.classList.remove('mc-reiniciar-confirmar');
-      btnX.setAttribute('aria-label', 'Reiniciar progreso');
-      btnX.setAttribute('title', 'Reiniciar progreso');
+      btnX.innerHTML = '<span class="mc-sheet-item-icon" aria-hidden="true">↺</span><span class="mc-sheet-item-texto">Reiniciar progreso</span>';
     }
 
     detenerAlarma();
