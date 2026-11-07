@@ -311,19 +311,20 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
 
         <!-- INGREDIENTES -->
         <div class="cuerpo-col" data-seccion="ingredientes" id="seccion-ingredientes" role="tabpanel" aria-labelledby="tab-ingredientes">
-          
-          <div class="ingredientes-header">
+                  <div class="ingredientes-header">
             <h3>
               <span class="ing-header-icon" set:html={ICON_BASKET} aria-hidden="true"></span>
               Ingredientes
             </h3>
-            <div class="stepper-porciones" data-base={porcionesBase} aria-label={`Ajustar porciones (base: ${porcionesBase})`}>
-              <span class="stepper-label">Porciones:</span>
-              <button type="button" class="stepper-menos" aria-label="Disminuir porciones">−</button>
-              <input type="number" class="stepper-valor" value={porcionesBase} min="1" max="50" inputmode="numeric" aria-label="Cantidad de porciones" />
-              <button type="button" class="stepper-mas" aria-label="Aumentar porciones">+</button>
+            <div class="stepper-porciones" data-base={porcionesBase} aria-label={`Ajustar cantidad para ${porcionesBase} personas`}>
+              <span class="stepper-label-prefix">Para</span>
+              <button type="button" class="stepper-menos" aria-label="Quitar una persona">−</button>
+              <input type="number" class="stepper-valor" value={porcionesBase} min="1" max="50" inputmode="numeric" aria-label="Cantidad de personas" />
+              <button type="button" class="stepper-mas" aria-label="Agregar una persona">+</button>
+              <span class="stepper-label-suffix">personas</span>
             </div>
-          </div>
+          </div>  
+         
 
           <ul class="ingredientes">
             {receta.ingredientes.map(ing => (
