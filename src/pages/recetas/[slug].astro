@@ -175,12 +175,8 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
     <script type="application/ld+json" set:html={bread}></script>
   </Fragment>
 
-  <!-- ============================================================
-       HERO EDITORIAL — imagen edge-to-edge + título + meta-card
-       ============================================================ -->
+  <!-- HERO EDITORIAL -->
   <header class="hero-nuevo">
-
-    <!-- Imagen edge-to-edge con favorito flotante -->
     <div class="hero-img-full">
       {tieneImagenPropia ? (
         <img
@@ -198,19 +194,12 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
           <span class="hero-placeholder-titulo">{receta.titulo}</span>
         </div>
       )}
-      <button
-        type="button"
-        class="btn-favorito fav-hero-flotante"
-        data-slug={slug}
-        aria-label="Guardar en favoritos"
-      >
+      <button type="button" class="btn-favorito fav-hero-flotante" data-slug={slug} aria-label="Guardar en favoritos">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
       </button>
     </div>
 
-    <!-- Contenido textual del hero -->
     <div class="hero-contenido">
-
       <nav class="breadcrumb-nuevo" aria-label="Migas de pan">
         <a href="/" class="bc-link">
           <span class="bc-home" set:html={ICON_HOME}></span> Inicio
@@ -222,10 +211,8 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
       </nav>
 
       <h1 class="titulo-receta-nuevo">{receta.titulo}</h1>
-
       <p class="subtitulo-receta-nuevo">{subtitulo}</p>
 
-      <!-- Meta card beige con 3 columnas -->
       <div class="meta-card-nuevo">
         {receta.tiempo && (
           <div class="meta-col">
@@ -250,22 +237,18 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
         )}
       </div>
 
-      <!-- Cápsula de método/técnica -->
       {receta.tecnica && (
         <div class="tecnica-capsule-nuevo">
           <span class="tecnica-icon" set:html={ICON_TECNICA} aria-hidden="true"></span>
           <span>{receta.tecnica}</span>
         </div>
       )}
-
     </div>
   </header>
 
   <main class="receta-page receta-page-nuevo">
 
-    <!-- ============================================================
-         CTA REDISEÑADO — tarjeta roja con chef + textos + play
-         ============================================================ -->
+    <!-- CTA REDISEÑADO -->
     <div class="cta-wrapper-nuevo">
       <button type="button" class="btn-cta-cocina btn-modo-cocina cta-nuevo">
         <span class="cta-chef" aria-hidden="true">👨‍🍳</span>
@@ -279,39 +262,23 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
       </button>
     </div>
 
-    <!-- ============================================================
-         ACCESOS RÁPIDOS — 3 tarjetas con scroll suave
-         ============================================================ -->
+    <!-- ACCESOS RÁPIDOS -->
     <div class="accesos-rapidos">
-      <a
-        href="#seccion-ingredientes"
-        class="acceso-card"
-        data-tab-target="ingredientes"
-      >
+      <a href="#seccion-ingredientes" class="acceso-card" data-tab-target="ingredientes">
         <span class="acceso-icon" set:html={ICON_BASKET} aria-hidden="true"></span>
         <span class="acceso-texto">Ingredientes</span>
       </a>
-      <button
-        type="button"
-        class="acceso-card acceso-card-btn"
-        data-action="open-cart"
-      >
+      <button type="button" class="acceso-card acceso-card-btn" data-action="open-cart">
         <span class="acceso-icon" set:html={ICON_CART} aria-hidden="true"></span>
         <span class="acceso-texto">Lista de compras</span>
       </button>
-      <a
-        href="#seccion-preparacion"
-        class="acceso-card"
-        data-tab-target="preparacion"
-      >
+      <a href="#seccion-preparacion" class="acceso-card" data-tab-target="preparacion">
         <span class="acceso-icon" set:html={ICON_LIST} aria-hidden="true"></span>
         <span class="acceso-texto">Preparación</span>
       </a>
     </div>
 
-    <!-- ============================================================
-         AEO — Respuesta rápida
-         ============================================================ -->
+    <!-- AEO -->
     <div class="resumen-aeo-nuevo">
       <div class="aeo-icon-wrap" aria-hidden="true">
         <span set:html={ICON_BULB}></span>
@@ -322,9 +289,7 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
       </div>
     </div>
 
-    <!-- ============================================================
-         RECETA (tabs + ingredientes con stepper + preparación)
-         ============================================================ -->
+    <!-- RECETA -->
     <article class="receta">
 
       {receta.advertencia && (
@@ -336,7 +301,6 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
         </div>
       )}
 
-      <!-- TABS -->
       <div class="receta-tabs" role="tablist" aria-label="Secciones de la receta">
         <button type="button" role="tab" id="tab-ingredientes" aria-controls="seccion-ingredientes" aria-selected="true" data-tab="ingredientes">Ingredientes</button>
         <button type="button" role="tab" id="tab-preparacion" aria-controls="seccion-preparacion" aria-selected="false" data-tab="preparacion">Preparación</button>
@@ -347,27 +311,16 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
 
         <!-- INGREDIENTES -->
         <div class="cuerpo-col" data-seccion="ingredientes" id="seccion-ingredientes" role="tabpanel" aria-labelledby="tab-ingredientes">
-
+          
           <div class="ingredientes-header">
             <h3>
               <span class="ing-header-icon" set:html={ICON_BASKET} aria-hidden="true"></span>
               Ingredientes
             </h3>
-            <div
-              class="stepper-porciones"
-              data-base={porcionesBase}
-              aria-label={`Ajustar porciones (base: ${porcionesBase})`}
-            >
+            <div class="stepper-porciones" data-base={porcionesBase} aria-label={`Ajustar porciones (base: ${porcionesBase})`}>
+              <span class="stepper-label">Porciones:</span>
               <button type="button" class="stepper-menos" aria-label="Disminuir porciones">−</button>
-              <input
-                type="number"
-                class="stepper-valor"
-                value={porcionesBase}
-                min="1"
-                max="50"
-                inputmode="numeric"
-                aria-label="Cantidad de porciones"
-              />
+              <input type="number" class="stepper-valor" value={porcionesBase} min="1" max="50" inputmode="numeric" aria-label="Cantidad de porciones" />
               <button type="button" class="stepper-mas" aria-label="Aumentar porciones">+</button>
             </div>
           </div>
@@ -379,12 +332,7 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
                   <input type="checkbox" class="ing-check">
                   <span class="ing-texto" data-original={ing}>{ing}</span>
                 </label>
-                <button
-                  type="button"
-                  class="btn-add-ing"
-                  data-ing={ing}
-                  aria-label="Añadir a lista de compras"
-                >+</button>
+                <button type="button" class="btn-add-ing" data-ing={ing} aria-label="Añadir a lista de compras">+</button>
               </li>
             ))}
           </ul>
@@ -404,7 +352,7 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
       </div>
     </article>
 
-    <!-- ERRORES COMUNES -->
+    <!-- ERRORES -->
     {receta.errores && receta.errores.length > 0 && (
       <details class="errores-box accordion-receta" open>
         <summary class="accordion-receta-summary">
@@ -451,7 +399,7 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
       </div>
     )}
 
-    <!-- GUÍA RECOMENDADA -->
+    <!-- GUÍA -->
     {guiaAsociada && (
       <div class="receta-guia-box">
         <div class="guia-icon" set:html={ICON_LIBRO}></div>
@@ -462,19 +410,12 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
       </div>
     )}
 
-    <!-- ACCIONES FOOTER (estrellas, imprimir, offline) -->
+    <!-- ACCIONES FOOTER -->
     <div class="acciones-footer">
       <div class="rating-container" data-slug={slug}>
         <div class="rating-stars" role="group" aria-label="Calificación de la receta">
           {Array.from({ length: 5 }).map((_, i) => (
-            <button
-              type="button"
-              class="rating-star"
-              data-value={i + 1}
-              aria-label={`Calificar con ${i + 1} ${i === 0 ? 'estrella' : 'estrellas'}`}
-              aria-pressed="false"
-              set:html={ICON_STAR}
-            ></button>
+            <button type="button" class="rating-star" data-value={i + 1} aria-label={`Calificar con ${i + 1} ${i === 0 ? 'estrella' : 'estrellas'}`} aria-pressed="false" set:html={ICON_STAR}></button>
           ))}
         </div>
         <span class="rating-text">Califica esta receta</span>
@@ -493,27 +434,24 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
         </div>
       </details>
 
-      <button
-        type="button"
-        class="btn-offline btn-secundario"
-        data-url={`/recetas/${slug}/`}
-        data-image={tieneImagenPropia ? '/' + receta.imagen : ''}
-      >
+      <button type="button" class="btn-offline btn-secundario" data-url={`/recetas/${slug}/`} data-image={tieneImagenPropia ? '/' + receta.imagen : ''}>
         📥 Guardar offline
       </button>
     </div>
 
-    <!-- COMPARTIR -->
+    <!-- COMPARTIR (BOTONES LADO A LADO) -->
     <div class="compartir-receta">
-      <span>¿Te gustó esta receta?</span>
-      <a href={linkWA} target="_blank" rel="noopener" class="btn-whatsapp">
-        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Compartir por WhatsApp
-      </a>
-      <a href={linkPin} target="_blank" rel="noopener" class="btn-pinterest">
-        <svg viewBox="0 0 24 24"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.951-7.252 4.195 0 7.454 2.988 7.454 6.978 0 4.169-2.626 7.525-6.282 7.525-1.226 0-2.379-.637-2.774-1.39l-.756 2.882c-.272 1.049-1.009 2.361-1.505 3.166 1.131.346 2.333.535 3.577.535 6.621 0 11.987-5.367 11.987-11.987C24.007 5.367 18.641 0 12.017 0z"/></svg>
-        Guardar en Pinterest
-      </a>
+      <span class="compartir-titulo">¿Te gustó esta receta?</span>
+      <div class="compartir-botones">
+        <a href={linkWA} target="_blank" rel="noopener" class="btn-whatsapp">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+        <a href={linkPin} target="_blank" rel="noopener" class="btn-pinterest">
+          <svg viewBox="0 0 24 24"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.951-7.252 4.195 0 7.454 2.988 7.454 6.978 0 4.169-2.626 7.525-6.282 7.525-1.226 0-2.379-.637-2.774-1.39l-.756 2.882c-.272 1.049-1.009 2.361-1.505 3.166 1.131.346 2.333.535 3.577.535 6.621 0 11.987-5.367 11.987-11.987C24.007 5.367 18.641 0 12.017 0z"/></svg>
+          Pinterest
+        </a>
+      </div>
     </div>
 
     <!-- RELACIONADAS -->
@@ -545,9 +483,7 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
     import '../../scripts/receta-tabs.js';
   </script>
 
-  <!-- ============================================================
-       Botón "Guardar offline" (sin cambios de lógica)
-       ============================================================ -->
+  <!-- JS BOTÓN OFFLINE -->
   <script is:inline>
     (function () {
       if (!('serviceWorker' in navigator)) {
@@ -633,7 +569,7 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
     })();
   </script>
 
-  <!-- Accordion: colapsar errores/conservación en móvil -->
+  <!-- JS ACORDEÓN MÓVIL -->
   <script is:inline>
     (function () {
       if (!window.matchMedia('(max-width: 720px)').matches) return;
@@ -644,7 +580,7 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
     })();
   </script>
 
-  <!-- FAB oculto al hacer scroll a stepper / "Añadir todos" -->
+  <!-- JS FAB OCULTO -->
   <script is:inline>
     (function () {
       'use strict';
@@ -699,16 +635,14 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
     })();
   </script>
 
-  <!-- ============================================================
-       NUEVO: Accesos rápidos + Stepper de porciones
-       ============================================================ -->
+  <!-- JS ACCESOS RÁPIDOS Y STEPPER -->
   <script is:inline>
     (function () {
       'use strict';
 
       function init() {
 
-        /* ---------- Accesos rápidos ---------- */
+        /* Accesos rápidos */
         document.querySelectorAll('.acceso-card').forEach(function (card) {
           card.addEventListener('click', function (e) {
             var tabTarget = card.dataset.tabTarget;
@@ -730,7 +664,7 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
           });
         });
 
-        /* ---------- Stepper de porciones ---------- */
+        /* Stepper de porciones */
         var stepper = document.querySelector('.stepper-porciones');
         if (!stepper) return;
 
@@ -801,7 +735,7 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
           setValor(v);
         });
 
-        // Aplicar estado inicial (ratio 1x, sin cambios visibles)
+        // Aplicar estado inicial
         setValor(current);
       }
 
