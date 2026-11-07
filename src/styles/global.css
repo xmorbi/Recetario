@@ -127,6 +127,44 @@ html{scrollbar-gutter:stable}
   --scale-press:    0.97;
 }
 
+
+/* =====================================================================
+   PALETA DE LA FICHA DE RECETA (hero, CTA, meta, acordeones, stepper)
+   Un solo lugar para cambiar estos colores. Los valores claros son los
+   que ya usaba el diseño; los oscuros siguen la convención del modo
+   oscuro del sitio (#1e1e1e / #2a2a2a / #e57373).
+   ===================================================================== */
+:root {
+  --marca-rojo:         #c8102e;  /* iconos, acentos, enlaces activos      */
+  --marca-rojo-osc:     #7c1a1a;  /* títulos y textos de marca             */
+  --marca-cta-ini:      #9b1c1c;  /* degradado del CTA (inicio)            */
+  --marca-cta-fin:      #7c1414;  /* degradado del CTA (fin)               */
+  --marca-beige:        #f8ebdd;  /* tarjetas meta, stepper, cápsulas      */
+  --marca-beige-hover:  #f1ddc4;
+  --marca-beige-img:    #e9d8c4;  /* fondo tras la foto del hero           */
+  --marca-texto:        #2d2520;
+  --marca-texto-medio:  #5a4a3a;
+  --marca-texto-suave:  #7a6a5a;
+  --marca-texto-label:  #8a7a6a;
+  --marca-sep:          #b9a894;
+  --marca-card:         #ffffff;  /* fondo de tarjetas y acordeones        */
+  --marca-blanco:       #ffffff;  /* texto/íconos sobre fondos rojos       */
+}
+
+[data-theme="dark"] {
+  --marca-rojo:         #e57373;
+  --marca-rojo-osc:     #e57373;
+  --marca-beige:        #2a2a2a;
+  --marca-beige-hover:  #333333;
+  --marca-beige-img:    #1a1512;
+  --marca-texto:        #f5f5f5;
+  --marca-texto-medio:  #c4c4c4;
+  --marca-texto-suave:  #a0a0a0;
+  --marca-texto-label:  #a0a0a0;
+  --marca-sep:          #666666;
+  --marca-card:         #1e1e1e;
+}
+
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--crema);color:var(--tinta);font-family:var(--fuente-texto);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 
@@ -576,9 +614,6 @@ footer .bandera{max-width:140px;margin:0 auto 1.2rem;border-radius:4px;overflow:
 .rating-star.hover,.rating-star.activa{color:var(--dorado);transform:scale(1.15)}
 .rating-star.activa svg{fill:var(--dorado)}
 .rating-text{font-size:.9rem;font-weight:600;color:var(--suave);min-width:0;white-space:normal}
-.errores-box{background:#fff;border:1px solid var(--borde);border-left:5px solid #d97706;border-radius:var(--radio);padding:1.8rem;margin-top:2.5rem;box-shadow:var(--sombra-sm)}
-.errores-box h3{font-family:var(--fuente-titulos);color:#b45309;font-size:1.3rem;margin-bottom:1.2rem;border-bottom:none;padding-bottom:0;display:flex;align-items:center;gap:.5rem}
-.errores-box h3::before{content:"⚠️";font-size:1.5rem}
 .errores-lista{list-style:none;padding:0;margin:0}
 .errores-lista li{margin-bottom:1.5rem;font-size:.95rem;line-height:1.6}
 .errores-lista li:last-child{margin-bottom:0}
@@ -591,9 +626,6 @@ footer .bandera{max-width:140px;margin:0 auto 1.2rem;border-radius:4px;overflow:
 .tips-universales ul{list-style:none;padding:0;margin:0}
 .tips-universales li{font-size:.88rem;color:var(--suave);margin-bottom:.8rem;line-height:1.5}
 .tips-universales li strong{color:var(--rojo-osc)}
-.conservacion-box{background:#fff;border:1px solid var(--borde);border-left:5px solid #0284c7;border-radius:var(--radio);padding:1.8rem;margin-top:2rem;box-shadow:var(--sombra-sm)}
-.conservacion-box h3{font-family:var(--fuente-titulos);color:#0369a1;font-size:1.3rem;margin-bottom:1.2rem;border-bottom:none;padding-bottom:0;display:flex;align-items:center;gap:.5rem}
-.conservacion-box h3::before{content:"🧊";font-size:1.5rem}
 .conservacion-grid{display:grid;grid-template-columns:1fr;gap:1rem}
 @media(min-width:600px){.conservacion-grid{grid-template-columns:1fr 1fr}.conservacion-item.full-width{grid-column:1 / -1}}
 .conservacion-item{background:var(--crema);padding:1rem;border-radius:8px;border:1px solid var(--borde);font-size:.9rem;line-height:1.5}
@@ -1312,8 +1344,6 @@ body.mc-bloqueado{overflow:hidden}
    dejaban el texto blanco ilegible en modo oscuro.
    ========================================================= */
 [data-theme="dark"] .calc-container,
-[data-theme="dark"] .errores-box,
-[data-theme="dark"] .conservacion-box,
 [data-theme="dark"] .resumen-aeo,
 [data-theme="dark"] .shopping-panel,
 [data-theme="dark"] .compartir-receta {
@@ -1324,13 +1354,11 @@ body.mc-bloqueado{overflow:hidden}
 }
 
 /* Errores: headings/soluciones con naranjas hardcoded */
-[data-theme="dark"] .errores-box h3 { color: #fbbf24; }
 [data-theme="dark"] .errores-lista strong.error { color: #fca5a5; }
 [data-theme="dark"] .tips-universales h4 { color: #fbbf24; }
 [data-theme="dark"] .tips-universales { border-top-color: #333; }
 
 /* Conservación: azules hardcoded */
-[data-theme="dark"] .conservacion-box h3 { color: #7dd3fc; }
 [data-theme="dark"] .conservacion-item strong { color: #7dd3fc; }
 [data-theme="dark"] .conservacion-item { background: #121212; border-color: #333; }
 [data-theme="dark"] .guia-conservacion-item { background: #1e1e1e; border-color: #333; }
@@ -2411,9 +2439,8 @@ body.mc-bloqueado{overflow:hidden}
   main {
     padding-bottom: calc(var(--nav-h) + var(--safe-bottom) + var(--space-4));
   }
-  footer {
-    padding-bottom: calc(var(--nav-h) + var(--safe-bottom) + var(--space-4));
-  }
+  /* El espacio bajo el footer para la tabbar ya lo reserva el padding-bottom
+     del body (más abajo); duplicarlo aquí dejaba un hueco oscuro en el footer. */
 
   .tabbar {
     display: flex;
@@ -3494,16 +3521,6 @@ body.mc-bloqueado{overflow:hidden}
     margin-top: 1.2rem;
     padding: .8rem 1rem;
     font-size: .85rem;
-  }
-  .errores-box,
-  .conservacion-box {
-    padding: 1.1rem 1rem;
-    margin-top: 1.5rem;
-  }
-  .errores-box h3,
-  .conservacion-box h3 {
-    font-size: 1.05rem;
-    margin-bottom: .8rem;
   }
   .errores-lista li {
     margin-bottom: 1rem;
@@ -5192,591 +5209,52 @@ details[open] > .tabbar-tools-menu {
   }
 }
 
-/* === INICIO BLOQUE FASE 1.5 — AJUSTES VISUALES HERO (NIVEL PRO) === */
 
-/* ---- 1. Matar el "ESPACIO PERDIDO" ---- */
-.hero-receta {
-  padding: 1rem 1rem 1.5rem !important; 
-}
-.hero-receta-inner {
-  padding: 0 !important; 
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
-.breadcrumb {
-  margin-bottom: 0.5rem;
-}
+/* =====================================================================
+   FICHA DE RECETA — DISEÑO ACTUAL
+   Un solo bloque por componente. Sin !important. Colores en variables
+   --marca-* (ver :root al inicio del archivo).
+   Índice:
+     1. Hero heredado (.hero-receta: calculadoras y páginas internas)
+     2. Hero de ficha (.hero-nuevo)
+     3. Meta card y cápsula de técnica
+     4. CTA "Modo cocina"
+     5. Accesos rápidos y resumen AEO
+     6. Ingredientes y selector de porciones
+     7. Acordeones (errores y conservación)
+     8. Zona inferior (acciones, compartir, relacionadas, navegación)
+     9. Botón flotante de compras en móvil
+   ===================================================================== */
 
-/* ---- 2. Contenedor del media ---- */
-.hero-media-wrap {
-  position: relative;
-  width: 100%;
-  max-width: 700px; 
-  margin: 0 auto 1.2rem;
-}
+/* ---------- 1. HERO HEREDADO (.hero-receta) ----------
+   Se conserva solo la apariencia compacta que ya tenían estas páginas. */
+.hero-receta { padding: 1rem 1rem 1.5rem; }
+.hero-receta-inner { padding: 0; }
+.breadcrumb { margin-bottom: .5rem; }
 
-/* ---- 3. El contenedor con fondo desenfocado ---- */
-.hero-media {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: var(--radio);
-  overflow: hidden;
-  background-color: var(--crema-osc);
-  box-shadow: var(--sombra-lg);
-  isolation: isolate;
-}
-
-/* La magia: pseudo-elemento como fondo borroso */
-.hero-media::before {
-  content: "";
-  position: absolute;
-  inset: -20px; 
-  background-image: var(--bg-img, none);
-  background-size: cover;
-  background-position: center;
-  filter: blur(20px) brightness(0.8); 
-  opacity: 0.9;
-  z-index: 0;
-}
-
-/* La foto real (se ve entera, sin recortes) */
-.hero-media-img {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  object-fit: contain; 
-  display: block;
-  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
-}
-
-/* ---- 4. Placeholder (Estilo Tapa de Libro) ---- */
-.hero-placeholder {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  text-align: center;
-  background-color: var(--tinta); 
-  color: var(--crema);
-}
-
-.hero-placeholder::before {
-  content: "";
-  position: absolute;
-  inset: 16px;
-  border: 1px solid rgba(253, 248, 240, 0.2);
-  border-radius: calc(var(--radio) - 6px);
-  pointer-events: none;
-}
-
-.hero-placeholder-titulo {
-  position: relative;
-  z-index: 1;
-  font-family: var(--fuente-titulos);
-  font-weight: 700;
-  font-size: clamp(1.8rem, 5vw, 3rem);
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  max-width: 22ch;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
-
-/* ---- 5. Favorito flotante ---- */
-.hero-receta .hero-media .hero-fav-flotante {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  z-index: 3;
-  width: 44px;
-  height: 44px;
-  background: rgba(255, 255, 255, 0.92);
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
-  border-color: transparent;
-  color: var(--suave);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
-}
-
-.hero-receta .hero-media .hero-fav-flotante svg {
-  width: 20px;
-  height: 20px;
-}
-
-.hero-receta .hero-media .hero-fav-flotante:hover,
-.hero-receta .hero-media .hero-fav-flotante.activo {
-  background: #fff;
-  color: var(--rojo);
-  border-color: var(--rojo);
-  transform: scale(1.08);
-}
-
-/* ---- 6. Meta grid ---- */
-.meta-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.5rem;
-  width: 100%;
-  max-width: 600px; 
-  margin: 0 auto 1rem;
-}
-
-.meta-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.35rem;
-  padding: 0.9rem 0.5rem;
-  background: #fff;
-  border: 1px solid var(--borde);
-  border-radius: 12px;
-  box-shadow: var(--sombra-sm);
-  text-align: center;
-}
-
-.meta-item .meta-icon {
-  width: 22px;
-  height: 22px;
-  color: var(--rojo);
-  display: inline-block;
-  flex-shrink: 0;
-}
-
-.meta-item-label {
-  font-size: 0.65rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--suave);
-  font-weight: 700;
-  line-height: 1;
-}
-
-.meta-item-valor {
-  font-family: var(--fuente-titulos);
-  font-size: 0.95rem;
-  color: var(--tinta);
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-/* ---- 7. Chip de técnica ---- */
-.meta-tecnica {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  margin: 0 auto 1rem;
-  padding: 0.4rem 0.95rem;
-  background: var(--crema-osc);
-  border: 1px solid var(--borde);
-  border-radius: 99px;
-  font-size: 0.8rem;
-  color: var(--suave);
-  font-weight: 500;
-}
-
-.meta-tecnica .meta-icon {
-  width: 14px;
-  height: 14px;
-  color: var(--rojo);
-  flex-shrink: 0;
-}
-
-/* ---- Modo oscuro ---- */
-[data-theme="dark"] .hero-placeholder { background-color: #1a1512; color: var(--tinta); }
-[data-theme="dark"] .hero-placeholder::before { border-color: rgba(255, 255, 255, 0.1); }
-[data-theme="dark"] .meta-item { background: #1e1e1e; border-color: #333; }
-[data-theme="dark"] .meta-item .meta-icon { color: var(--rojo-osc); }
-[data-theme="dark"] .meta-item-valor { color: var(--tinta); }
-[data-theme="dark"] .meta-tecnica { background: #1e1e1e; border-color: #333; }
-[data-theme="dark"] .hero-media { background-color: #121212; }
-[data-theme="dark"] .hero-media::before { filter: blur(20px) brightness(0.4); }
-
-/* ---- Responsive Móvil ---- */
-@media (max-width: 720px) {
-  .hero-media-wrap { margin-bottom: 1rem; }
-  .meta-grid { gap: 0.4rem; }
-  .meta-item { padding: 0.7rem 0.3rem; border-radius: 10px; }
-  .meta-item .meta-icon { width: 18px; height: 18px; }
-  .meta-item-label { font-size: 0.58rem; }
-  .meta-item-valor { font-size: 0.8rem; }
-  .meta-tecnica { font-size: 0.75rem; padding: 0.35rem 0.8rem; }
-}
-
-/* ---- Impresión ---- */
-@media print {
-  .hero-placeholder { display: none !important; }
-  .hero-receta .hero-media .hero-fav-flotante { display: none !important; }
-  .hero-media-wrap { max-width: 60% !important; margin: 0 auto .4cm !important; }
-  .hero-media { box-shadow: none !important; border-radius: 4px !important; background: #fff !important; }
-  .hero-media::before { display: none !important; }
-}
-
-/* ---- Reduced motion ---- */
-@media (prefers-reduced-motion: reduce) {
-  .hero-receta .hero-media .hero-fav-flotante { transition: none; }
-}
-/* === FIN BLOQUE FASE 1.5 — AJUSTES VISUALES HERO (NIVEL PRO) === */
-
-/* === INICIO BLOQUE FASE 1.6 — COMPACTAR ESPACIOS === */
-/* Reduce los espacios muertos entre el menú, la foto, el grid y el AEO */
-
-@media (max-width: 720px) {
-  /* 1. Pegar el hero al menú superior */
-  .hero-receta {
-    padding-top: 0.5rem !important;
-    padding-bottom: 1rem !important;
-  }
-  .breadcrumb {
-    margin-bottom: 0.5rem !important;
-  }
-  .hero-receta h1 {
-    margin-bottom: 0.8rem !important;
-  }
-
-  /* 2. Foto al Grid */
-  .hero-media-wrap {
-    margin-bottom: 1rem !important;
-  }
-
-  /* 3. Grid al Chip de "Olla" */
-  .meta-grid {
-    margin-bottom: 0.5rem !important;
-  }
-  .meta-tecnica {
-    margin-bottom: 0 !important; 
-  }
-
-  /* 4. EL GRAN CULPABLE: reducir el espacio entre el Hero y la "Respuesta rápida" */
-  main.receta-page {
-    padding-top: 1rem !important; /* Antes había 2.5rem de espacio */
-  }
-
-  /* 5. Ajustar la cajita AEO */
-  .resumen-aeo {
-    margin-bottom: 1rem !important;
-  }
-}
-/* === FIN BLOQUE FASE 1.6 === */
-
-/* === INICIO BLOQUE FASE 1.7 — MATAR ESPACIO SUPERIOR === */
-@media (max-width: 720px) {
-  /* Forzar que el header se pegue arriba */
-  header.hero-receta {
-    padding-top: 0 !important;
-    margin-top: 0 !important;
-  }
-  
-  /* Achicar el espacio interno del contenedor */
-  header.hero-receta .hero-receta-inner {
-    padding-top: 0 !important;
-  }
-
-  /* Pegar el breadcrumb */
-  header.hero-receta .breadcrumb {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-    margin-bottom: 0.6rem !important;
-  }
-  
-  /* Reducir un pelín el margen del título hacia la foto */
-  header.hero-receta h1 {
-    margin-top: 0 !important;
-    margin-bottom: 0.6rem !important;
-  }
-}
-/* === FIN BLOQUE FASE 1.7 === */
-
-/* === INICIO BLOQUE FASE 1.8 — GOLPE DE GRACIA DEFINITIVO === */
-@media (max-width: 720px) {
-  /* 1. Tirar el hero hacia arriba para comerse el padding del <main> del Layout */
-  header.hero-receta {
-    margin-top: -2.5rem !important; /* El -2.5rem anula exactamente el padding del main */
-    padding-top: 1rem !important;   /* Dejamos solo un suspiro de 16px */
-    padding-bottom: 1rem !important;
-  }
-
-  /* 2. Pegar el breadcrumb */
-  .hero-receta .breadcrumb {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-    margin-bottom: 0.5rem !important;
-  }
-
-  /* 3. Ajustar el título */
-  header.hero-receta h1 {
-    margin-top: 0 !important;
-    margin-bottom: 0.8rem !important;
-  }
-}
-/* === FIN BLOQUE FASE 1.8 === */
-
-/* === INICIO BLOQUE FASE 2 y 3 (OPCIÓN 1 - CTA PROTAGONISTA) === */
-
-/* 1. Arreglar el Grid de metadatos (Ícono arriba, valor grande, etiqueta abajo) */
-.meta-item {
-  display: flex;
-  flex-direction: column !important;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 0.2rem;
-  padding: 0.6rem 0.3rem; /* Reducido para que no ocupe tanta altura */
-}
-
-.meta-item-icon { order: 1; margin-bottom: 0.2rem; width: 18px; height: 18px; }
-.meta-item-valor { order: 2; font-family: var(--fuente-titulos); font-size: 1rem !important; font-weight: 700; line-height: 1; }
-.meta-item-label { order: 3; font-size: 0.6rem !important; text-transform: uppercase; letter-spacing: 0.05em; color: var(--suave); margin-top: 0.1rem; }
-
-/* 2. Subir el CTA y darle protagonismo absoluto */
-.cta-wrapper-solo {
-  padding: 0 1rem;
-  margin-top: 0.5rem; /* Pegado al grid */
-  margin-bottom: 1.5rem;
-}
-
-.btn-cta-cocina {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  width: 100%;
-  background: linear-gradient(135deg, var(--rojo) 0%, var(--rojo-osc) 100%);
-  color: #fff;
-  border: none;
-  padding: 1rem 1.2rem;
-  border-radius: var(--radio);
-  cursor: pointer;
-  /* Sombra más profunda para que resalte */
-  box-shadow: 0 10px 25px -5px rgba(176, 58, 46, 0.5), 0 8px 10px -6px rgba(176, 58, 46, 0.3);
-  transition: all 0.2s;
-}
-
-.btn-cta-cocina:hover, .btn-cta-cocina:active {
-  transform: translateY(-2px) scale(0.98);
-  box-shadow: 0 15px 30px -5px rgba(176, 58, 46, 0.6), 0 10px 15px -5px rgba(176, 58, 46, 0.4);
-}
-
-.cta-icon { font-size: 2rem; line-height: 1; }
-.cta-textos { display: flex; flex-direction: column; align-items: flex-start; text-align: left; }
-.cta-textos strong { font-family: var(--fuente-titulos); font-size: 1.15rem; font-weight: 700; letter-spacing: -0.3px; line-height: 1.2; }
-.cta-textos small { font-size: 0.8rem; opacity: 0.9; font-weight: 500; margin-top: 0.1rem; }
-
-/* 3. Estrellas abajo, integradas con los botones secundarios */
-.acciones-footer {
-  display: flex;
-  flex-wrap: wrap; /* Permite que las estrellas salten si no caben */
-  justify-content: center;
-  align-items: center;
-  gap: 0.75rem;
-  margin: 2rem 0 1rem 0;
-}
-
-.acciones-footer .rating-container {
-  background: transparent;
-  border: none;
-  padding: 0;
-  margin: 0;
-  width: 100%; /* Fuerza a que las estrellas estén en su propia línea */
-  justify-content: center;
-}
-
-.acciones-footer .rating-text {
-  display: none; /* Ocultamos el texto largo */
-}
-
-.btn-secundario {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
-  height: 38px;
-  padding: 0 1.2rem;
-  border-radius: 99px;
-  border: 1.5px solid var(--borde);
-  background: transparent;
-  color: var(--suave);
-  font-family: inherit;
-  font-size: 0.82rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.btn-secundario:hover { border-color: var(--rojo); color: var(--rojo); background: #fff; }
-
-/* Modo oscuro */
-[data-theme="dark"] .btn-secundario { border-color: #444; color: var(--suave); }
-[data-theme="dark"] .btn-secundario:hover { border-color: var(--rojo-osc); color: var(--rojo-osc); background: #1e1e1e; }
-
-@media (max-width: 720px) {
-  .btn-cta-cocina { padding: 1rem; gap: 0.8rem; }
-  .cta-textos strong { font-size: 1.1rem; }
-  .cta-icon { font-size: 1.8rem; }
-}
-
-/* === INICIO BLOQUE DEFINITIVO CTA === */
-button.btn-cta-cocina.btn-modo-cocina {
-  display: flex !important;
-  width: 100% !important;
-  height: auto !important;          /* Mata la altura fija de 42px */
-  min-height: 80px !important;
-  padding: 1.2rem !important;       /* Le devuelve el aire interno */
-  border-radius: 16px !important;   /* Mata la forma de píldora */
-  flex-direction: row !important;
-  justify-content: center !important;
-  align-items: center !important;
-  gap: 1.2rem !important;
-  background: linear-gradient(135deg, var(--rojo) 0%, var(--rojo-osc) 100%) !important;
-  color: #fff !important;
-  box-shadow: 0 8px 24px rgba(176, 58, 46, 0.35) !important;
-  border: none !important;
-}
-
-button.btn-cta-cocina.btn-modo-cocina .cta-textos {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: flex-start !important;
-  margin: 0 !important;
-}
-
-button.btn-cta-cocina.btn-modo-cocina .cta-textos strong {
-  font-size: 1.3rem !important;
-  line-height: 1.2 !important;
-  margin-bottom: 0.2rem !important;
-}
-
-button.btn-cta-cocina.btn-modo-cocina .cta-textos small {
-  font-size: 0.9rem !important;
-  opacity: 0.9 !important;
-}
-
-button.btn-cta-cocina.btn-modo-cocina .cta-icon {
-  font-size: 2.2rem !important;
-  margin: 0 !important;
-}
-/* === FIN BLOQUE DEFINITIVO CTA === */
-
-/* === INICIO BLOQUE DARK HERO FICHA === */
-[data-theme="dark"] .hero-receta {
-  background: linear-gradient(180deg, #1a1a1a 0%, var(--crema) 100%);
-  border-bottom-color: #333;
-}
-[data-theme="dark"] .hero-receta h1 {
-  color: #e57373;
-}
-[data-theme="dark"] .hero-receta .hero-sub {
-  color: #bbb;
-}
-[data-theme="dark"] .hero-receta .breadcrumb,
-[data-theme="dark"] .hero-receta .breadcrumb a {
-  color: #aaa;
-}
-[data-theme="dark"] .hero-receta .breadcrumb a:hover {
-  color: var(--rojo-osc);
-}
-/* === FIN BLOQUE DARK HERO FICHA === */
-
-/* === INICIO BLOQUE DARK CTA FICHA === */
-[data-theme="dark"] button.btn-cta-cocina.btn-modo-cocina {
-  background: var(--rojo);
-  color: #fff;
-  border-color: var(--rojo);
-  box-shadow: 0 6px 22px rgba(176, 58, 46, 0.5);
-}
-[data-theme="dark"] button.btn-cta-cocina.btn-modo-cocina:hover,
-[data-theme="dark"] button.btn-cta-cocina.btn-modo-cocina:active {
-  background: var(--rojo-osc);
-  border-color: var(--rojo-osc);
-  box-shadow: 0 8px 26px rgba(176, 58, 46, 0.6);
-}
-/* === FIN BLOQUE DARK CTA FICHA === */
-
-/* === INICIO BLOQUE DARK CTA FICHA (v8 - Burbuja Estilizada) === */
-[data-theme="dark"] button.btn-cta-cocina.btn-modo-cocina {
-  background: var(--rojo) !important;
-  color: #fff !important;
-  box-shadow: 0 6px 22px rgba(176, 58, 46, 0.5) !important;
-}
-[data-theme="dark"] button.btn-cta-cocina.btn-modo-cocina:hover,
-[data-theme="dark"] button.btn-cta-cocina.btn-modo-cocina:active {
-  background: var(--rojo-osc) !important;
-  box-shadow: 0 8px 26px rgba(176, 58, 46, 0.6) !important;
-}
-
-@media (max-width: 720px) {
-  /* 1. El botón vuelve a ser casi full width, dejando solo un pequeño respiro */
-  button.btn-cta-cocina.btn-modo-cocina {
-    width: calc(100% - 3rem) !important; 
-    margin-right: auto !important; 
-    padding: 1.2rem 1rem !important;
-    justify-content: flex-start !important;
-    gap: 0.8rem !important;
-    height: auto !important;
-    min-height: 95px !important;
-  }
-
-  /* 2. Ajuste del texto */
-  button.btn-cta-cocina.btn-modo-cocina .cta-textos strong {
-    font-size: 1.1rem !important; 
-    line-height: 1.15 !important;
-    margin-bottom: 0.2rem !important;
-  }
-
-  button.btn-cta-cocina.btn-modo-cocina .cta-textos small {
-    font-size: 0.75rem !important;
-    line-height: 1.25 !important; 
-    display: block !important; 
-  }
-
-  /* 3. LA SOLUCIÓN: Achicamos la burbuja (FAB) en móvil */
-  .shopping-fab {
-    width: 44px !important;
-    height: 44px !important;
-    right: 12px !important; /* La pegamos un poco más al borde */
-    bottom: 85px !important; /* La subimos un poco para que no choque con la tabbar */
-    box-shadow: 0 4px 10px rgba(176, 58, 46, 0.3) !important;
-  }
-  
-  .shopping-fab svg {
-    width: 20px !important;
-    height: 20px !important;
-  }
-}
-/* === FIN BLOQUE DARK CTA FICHA (v8) === */
-
-/* === INICIO BLOQUE DESKTOP FICHA === */
 @media (min-width: 1024px) {
-  .hero-receta-inner {
-    max-width: 980px;
-  }
-  .hero-media {
-    max-height: 520px;
-  }
-  .hero-media img {
-    max-height: 520px;
-    object-fit: contain;
-  }
-  .btn-cta-cocina,
-  button.btn-cta-cocina.btn-modo-cocina {
-    max-width: 560px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+  .hero-receta-inner { max-width: 980px; }
 }
-/* === FIN BLOQUE DESKTOP FICHA === */
 
-/* === INICIO BLOQUE NUEVO 1: HERO EDITORIAL === */
+@media (max-width: 720px) {
+  header.hero-receta { margin-top: -2.5rem; padding-top: 1rem; padding-bottom: 1rem; }
+  header.hero-receta .breadcrumb { margin-top: 0; padding-top: 0; margin-bottom: .6rem; }
+  header.hero-receta h1 { margin-top: 0; margin-bottom: .8rem; }
+  main.receta-page { padding-top: 1rem; }
+  .resumen-aeo { margin-bottom: 1rem; }
+}
+
+[data-theme="dark"] .hero-receta .breadcrumb,
+[data-theme="dark"] .hero-receta .breadcrumb a { color: var(--suave); }
+[data-theme="dark"] .hero-receta .breadcrumb a:hover { color: var(--rojo-osc); }
+
+/* ---------- 2. HERO DE FICHA (.hero-nuevo) ---------- */
 .hero-nuevo {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  margin-top: -2.5rem; /* Elimina el aire perdido del Layout */
-  padding-bottom: 0.5rem;
+  margin-top: -2.5rem; /* compensa el padding superior del <main> */
+  padding: .5rem 0;
 }
 
 .hero-img-full {
@@ -5785,7 +5263,7 @@ button.btn-cta-cocina.btn-modo-cocina .cta-icon {
   margin-left: calc(-50vw + 50%);
   aspect-ratio: 16 / 9;
   overflow: hidden;
-  background: #e9d8c4;
+  background: var(--marca-beige-img);
 }
 
 .hero-img-nuevo {
@@ -5801,18 +5279,23 @@ button.btn-cta-cocina.btn-modo-cocina .cta-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #f8ebdd 0%, #e9d8c4 100%);
+  background: linear-gradient(135deg, var(--marca-beige) 0%, var(--marca-beige-img) 100%);
   padding: 2rem;
   box-sizing: border-box;
 }
 
 .hero-placeholder-titulo {
+  position: relative;
+  z-index: 1;
   font-family: Georgia, 'Times New Roman', serif;
   font-size: clamp(1.6rem, 4vw, 2.6rem);
-  color: #7c1a1a;
+  color: var(--marca-rojo-osc);
   text-align: center;
   font-weight: 700;
   line-height: 1.2;
+  letter-spacing: -0.02em;
+  max-width: 22ch;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .fav-hero-flotante {
@@ -5822,7 +5305,7 @@ button.btn-cta-cocina.btn-modo-cocina .cta-icon {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.94);
+  background: color-mix(in srgb, var(--marca-card) 94%, transparent);
   border: none;
   display: flex;
   align-items: center;
@@ -5835,8 +5318,8 @@ button.btn-cta-cocina.btn-modo-cocina .cta-icon {
 
 .fav-hero-flotante:hover { transform: scale(1.06); }
 .fav-hero-flotante:active { transform: scale(0.96); }
-.fav-hero-flotante svg { width: 22px; height: 22px; color: #7c1a1a; }
-.fav-hero-flotante[aria-pressed="true"] svg { fill: #c8102e; color: #c8102e; }
+.fav-hero-flotante svg { width: 22px; height: 22px; color: var(--marca-rojo-osc); }
+.fav-hero-flotante[aria-pressed="true"] svg { fill: var(--marca-rojo); color: var(--marca-rojo); }
 
 .hero-contenido {
   display: flex;
@@ -5851,27 +5334,27 @@ button.btn-cta-cocina.btn-modo-cocina .cta-icon {
   flex-wrap: wrap;
   gap: 0.35rem;
   font-size: 0.85rem;
-  color: #7a6a5a;
+  color: var(--marca-texto-suave);
 }
 
 .bc-link {
-  color: #7a6a5a;
+  color: var(--marca-texto-suave);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 0.2rem;
 }
 
-.bc-link:hover { color: #c8102e; text-decoration: underline; }
-.bc-home { display: inline-flex; width: 16px; height: 16px; }
-.bc-home svg { width: 16px; height: 16px; }
-.bc-sep { color: #b9a894; }
-.bc-current { color: #c8102e; font-weight: 600; }
+.bc-link:hover { color: var(--marca-rojo); text-decoration: underline; }
+.bc-home { display: inline-flex; width: 18px; height: 18px; }
+.bc-home svg { width: 18px; height: 18px; }
+.bc-sep { color: var(--marca-sep); }
+.bc-current { color: var(--marca-rojo); font-weight: 600; }
 
 .titulo-receta-nuevo {
   font-family: Georgia, 'Times New Roman', serif;
   font-size: clamp(2rem, 5vw, 3rem);
-  color: #7c1a1a;
+  color: var(--marca-rojo-osc);
   margin: 0;
   line-height: 1.1;
   font-weight: 700;
@@ -5879,23 +5362,27 @@ button.btn-cta-cocina.btn-modo-cocina .cta-icon {
 
 .subtitulo-receta-nuevo {
   font-size: 1.05rem;
-  color: #5a4a3a;
+  color: var(--marca-texto-medio);
   margin: 0;
   line-height: 1.4;
 }
 
-/* === FIN BLOQUE NUEVO 1 === */
+@media (max-width: 720px) {
+  .hero-nuevo { gap: 1rem; }
+  .hero-img-full { aspect-ratio: 16 / 10; }
+  .titulo-receta-nuevo { font-size: clamp(1.75rem, 7vw, 2.4rem); }
+  .subtitulo-receta-nuevo { font-size: 0.98rem; }
+}
 
-
-/* === INICIO BLOQUE NUEVO 2: META CARD BEIGE + TÉCNICA === */
+/* ---------- 3. META CARD Y CÁPSULA DE TÉCNICA ---------- */
 .meta-card-nuevo {
   display: flex;
   align-items: stretch;
-  background: #F8EBDD;
+  background: var(--marca-beige);
   border-radius: 14px;
   padding: 0.9rem 0.5rem;
   margin-top: 0.4rem;
-  box-shadow: 0 1px 3px rgba(124, 26, 26, 0.06);
+  box-shadow: 0 1px 3px color-mix(in srgb, var(--marca-rojo-osc) 6%, transparent);
 }
 
 .meta-col {
@@ -5917,25 +5404,27 @@ button.btn-cta-cocina.btn-modo-cocina .cta-icon {
   top: 15%;
   bottom: 15%;
   width: 1px;
-  background: rgba(124, 26, 26, 0.16);
+  background: color-mix(in srgb, var(--marca-rojo-osc) 16%, transparent);
 }
 
-.meta-col-icon { display: inline-flex; color: #c8102e; }
+.meta-col-icon { display: inline-flex; color: var(--marca-rojo); }
 .meta-col-icon svg { width: 20px; height: 20px; }
 
 .meta-col-valor {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 700;
-  color: #2d2520;
-  line-height: 1.2;
+  color: var(--marca-texto);
+  line-height: 1.1;
+  word-break: break-word;
 }
 
 .meta-col-label {
   font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: #8a7a6a;
+  color: var(--marca-texto-label);
   font-weight: 600;
+  margin-top: 0.1rem;
 }
 
 .tecnica-capsule-nuevo {
@@ -5943,9 +5432,9 @@ button.btn-cta-cocina.btn-modo-cocina .cta-icon {
   align-items: center;
   gap: 0.4rem;
   align-self: center;
-  background: #F8EBDD;
-  color: #7c1a1a;
-  border: 1px solid rgba(124, 26, 26, 0.14);
+  background: var(--marca-beige);
+  color: var(--marca-rojo-osc);
+  border: 1px solid color-mix(in srgb, var(--marca-rojo-osc) 14%, transparent);
   padding: 0.4rem 0.85rem;
   border-radius: 999px;
   font-size: 0.88rem;
@@ -5956,40 +5445,49 @@ button.btn-cta-cocina.btn-modo-cocina .cta-icon {
 .tecnica-icon { display: inline-flex; }
 .tecnica-icon svg { width: 16px; height: 16px; }
 
-/* === FIN BLOQUE NUEVO 2 === */
+@media (max-width: 720px) {
+  .meta-card-nuevo { padding: 0.8rem 0.3rem; }
+  .meta-col-label { font-size: 0.66rem; }
+  .meta-col-icon svg { width: 18px; height: 18px; }
+}
 
-
-/* === INICIO BLOQUE NUEVO 3: CTA REDISEÑADO === */
+/* ---------- 4. CTA "MODO COCINA" ----------
+   El botón también puede llevar .btn-modo-cocina (que sirve a otras
+   pantallas) y tiene reglas de modo oscuro con mayor especificidad.
+   Duplicar la clase (.cta-nuevo.cta-nuevo) sube la especificidad sin
+   necesidad de !important. */
 .cta-wrapper-nuevo {
   padding: 0 1rem;
   margin: 1.25rem 0 0.9rem;
 }
 
-.cta-nuevo {
-  display: flex !important;
-  align-items: center !important;
-  gap: 0.9rem !important;
-  width: 100% !important;
-  padding: 1rem 1.1rem !important;
-  background: linear-gradient(135deg, #9b1c1c 0%, #7c1414 100%) !important;
-  border-radius: 16px !important;
-  border: none !important;
-  color: #ffffff !important;
-  text-align: left !important;
-  cursor: pointer !important;
-  box-shadow: 0 4px 14px rgba(124, 26, 26, 0.25) !important;
-  transition: transform 0.15s ease, box-shadow 0.15s ease !important;
+.cta-nuevo.cta-nuevo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+  background: linear-gradient(135deg, var(--marca-cta-ini) 0%, var(--marca-cta-fin) 100%);
+  border-radius: 16px;
+  border: none;
+  color: var(--marca-blanco);
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 0 4px 14px color-mix(in srgb, var(--marca-rojo-osc) 25%, transparent);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.cta-nuevo:hover {
-  transform: translateY(-1px) !important;
-  box-shadow: 0 6px 18px rgba(124, 26, 26, 0.32) !important;
+.cta-nuevo.cta-nuevo:hover {
+  background: linear-gradient(135deg, var(--marca-cta-ini) 0%, var(--marca-cta-fin) 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px color-mix(in srgb, var(--marca-rojo-osc) 32%, transparent);
 }
 
-.cta-nuevo:active { transform: translateY(0) scale(0.99) !important; }
+.cta-nuevo.cta-nuevo:active { transform: translateY(0) scale(0.99); }
 
 .cta-chef {
-  font-size: 2.1rem;
+  font-size: 1.8rem;
   line-height: 1;
   flex-shrink: 0;
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
@@ -5997,31 +5495,43 @@ button.btn-cta-cocina.btn-modo-cocina .cta-icon {
 
 .cta-textos {
   flex: 1 1 auto;
+  min-width: 0;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 0.1rem;
-  color: #ffffff;
+  text-align: left;
+  color: var(--marca-blanco);
 }
 
 .cta-textos strong {
-  font-size: 1.05rem;
+  display: block;
+  font-family: var(--fuente-titulos);
+  font-size: 0.98rem;
   font-weight: 700;
+  letter-spacing: -0.3px;
   line-height: 1.2;
-  color: #ffffff;
+  white-space: normal;
+  color: var(--marca-blanco);
 }
 
 .cta-textos small {
-  font-size: 0.82rem;
-  line-height: 1.3;
-  color: rgba(255, 255, 255, 0.85);
+  display: block;
+  margin-top: 3px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.2;
+  white-space: normal;
+  opacity: 0.9;
+  color: color-mix(in srgb, var(--marca-blanco) 85%, transparent);
 }
 
 .cta-play-circle {
   flex-shrink: 0;
-  width: 44px;
-  height: 44px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
-  background: #ffffff;
+  background: var(--marca-blanco);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6030,16 +5540,13 @@ button.btn-cta-cocina.btn-modo-cocina .cta-icon {
 
 .cta-play-icon {
   display: inline-flex;
-  color: #9b1c1c;
-  margin-left: 3px; /* centra ópticamente el play */
+  color: var(--marca-cta-ini);
+  margin-left: 3px; /* centra ópticamente el triángulo de play */
 }
 
-.cta-play-icon svg { width: 18px; height: 18px; fill: currentColor; }
+.cta-play-icon svg { width: 16px; height: 16px; fill: currentColor; }
 
-/* === FIN BLOQUE NUEVO 3 === */
-
-
-/* === INICIO BLOQUE NUEVO 4: ACCESOS RÁPIDOS + AEO === */
+/* ---------- 5. ACCESOS RÁPIDOS Y RESUMEN AEO ---------- */
 .accesos-rapidos {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -6056,9 +5563,9 @@ button.btn-cta-cocina.btn-modo-cocina .cta-icon {
   gap: 0.35rem;
   padding: 0.75rem 0.4rem;
   border-radius: 12px;
-  background: #ffffff;
-  border: 1px solid rgba(124, 26, 26, 0.14);
-  color: #7c1a1a;
+  background: var(--marca-card);
+  border: 1px solid color-mix(in srgb, var(--marca-rojo-osc) 14%, transparent);
+  color: var(--marca-rojo-osc);
   text-decoration: none;
   font-size: 0.82rem;
   font-weight: 600;
@@ -6070,33 +5577,31 @@ button.btn-cta-cocina.btn-modo-cocina .cta-icon {
 }
 
 .acceso-card:hover {
-  background: #F8EBDD;
-  border-color: rgba(124, 26, 26, 0.28);
+  background: var(--marca-beige);
+  border-color: color-mix(in srgb, var(--marca-rojo-osc) 28%, transparent);
 }
 
 .acceso-card:active { transform: scale(0.97); }
 
-.acceso-icon { display: inline-flex; color: #c8102e; }
+.acceso-icon { display: inline-flex; color: var(--marca-rojo); }
 .acceso-icon svg { width: 22px; height: 22px; }
+.acceso-texto { color: var(--marca-rojo-osc); }
 
-.acceso-texto { color: #7c1a1a; }
-
-/* AEO */
 .resumen-aeo-nuevo {
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
   margin: 0 1rem 1.25rem;
   padding: 1rem 1rem 1rem 1.1rem;
-  background: #ffffff;
-  border-left: 4px solid #c8102e;
+  background: var(--marca-card);
+  border-left: 4px solid var(--marca-rojo);
   border-radius: 8px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 }
 
 .aeo-icon-wrap {
   flex-shrink: 0;
-  color: #c8102e;
+  color: var(--marca-rojo);
   display: inline-flex;
   padding-top: 0.1rem;
 }
@@ -6107,7 +5612,7 @@ button.btn-cta-cocina.btn-modo-cocina .cta-icon {
 
 .aeo-titulo {
   display: block;
-  color: #7c1a1a;
+  color: var(--marca-rojo-osc);
   font-size: 1rem;
   font-weight: 700;
   margin-bottom: 0.2rem;
@@ -6115,22 +5620,25 @@ button.btn-cta-cocina.btn-modo-cocina .cta-icon {
 
 .aeo-texto {
   margin: 0;
-  color: #2d2520;
+  color: var(--marca-texto);
   font-size: 0.94rem;
   line-height: 1.45;
 }
 
-/* === FIN BLOQUE NUEVO 4 === */
+@media (max-width: 720px) {
+  .accesos-rapidos { gap: 0.4rem; }
+  .acceso-card { font-size: 0.76rem; padding: 0.65rem 0.3rem; }
+  .acceso-icon svg { width: 20px; height: 20px; }
+}
 
-
-/* === INICIO BLOQUE NUEVO 5: INGREDIENTES + STEPPER === */
+/* ---------- 6. INGREDIENTES Y SELECTOR DE PORCIONES ---------- */
 .ingredientes-header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
   flex-wrap: wrap;
-  margin-bottom: 0.8rem;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
 }
 
 .ingredientes-header h3 {
@@ -6139,55 +5647,64 @@ button.btn-cta-cocina.btn-modo-cocina .cta-icon {
   gap: 0.4rem;
   margin: 0;
   font-size: 1.1rem;
-  color: #7c1a1a;
+  color: var(--marca-rojo-osc);
 }
 
-.ing-header-icon { display: inline-flex; color: #c8102e; }
+.ing-header-icon { display: inline-flex; color: var(--marca-rojo); }
 .ing-header-icon svg { width: 20px; height: 20px; }
 
 .stepper-porciones {
   display: inline-flex;
   align-items: center;
-  gap: 0.25rem;
-  background: #F8EBDD;
-  border: 1px solid rgba(124, 26, 26, 0.18);
+  gap: 0.1rem;
+  background: var(--marca-beige);
+  border: 1px solid color-mix(in srgb, var(--marca-rojo-osc) 18%, transparent);
   border-radius: 999px;
-  padding: 0.2rem 0.3rem;
+  padding: 0.15rem 0.4rem;
 }
+
+.stepper-label-prefix,
+.stepper-label-suffix {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--marca-texto-suave);
+}
+.stepper-label-prefix { padding-left: 0.2rem; }
+.stepper-label-suffix { padding-right: 0.2rem; }
 
 .stepper-menos,
 .stepper-mas {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   border: none;
-  background: #ffffff;
-  color: #7c1a1a;
-  font-size: 1.2rem;
-  font-weight: 700;
-  cursor: pointer;
+  background: transparent;
+  color: var(--marca-rojo);
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: inherit;
+  line-height: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  line-height: 1;
+  cursor: pointer;
   transition: background 0.15s ease, transform 0.1s ease;
-  font-family: inherit;
 }
 
 .stepper-menos:hover,
-.stepper-mas:hover { background: #f1ddc4; }
+.stepper-mas:hover { background: var(--marca-beige-hover); }
 
 .stepper-menos:active,
 .stepper-mas:active { transform: scale(0.9); }
 
 .stepper-valor {
-  width: 38px;
+  width: 32px;
   height: 30px;
   text-align: center;
   border: none;
   background: transparent;
-  color: #2d2520;
-  font-size: 0.98rem;
+  color: var(--marca-texto);
+  font-size: 0.95rem;
   font-weight: 700;
   font-family: inherit;
   -moz-appearance: textfield;
@@ -6201,12 +5718,11 @@ button.btn-cta-cocina.btn-modo-cocina .cta-icon {
 }
 
 .stepper-valor:focus {
-  outline: 2px solid #c8102e;
+  outline: 2px solid var(--marca-rojo);
   outline-offset: 1px;
   border-radius: 6px;
 }
 
-/* Lista de ingredientes — layout limpio (el estilo inline anterior se reemplaza) */
 .ingredientes {
   list-style: none;
   padding: 0;
@@ -6220,7 +5736,7 @@ button.btn-cta-cocina.btn-modo-cocina .cta-icon {
   gap: 0.6rem;
   margin-bottom: 0.7rem;
   padding-bottom: 0.55rem;
-  border-bottom: 1px dashed rgba(124, 26, 26, 0.1);
+  border-bottom: 1px dashed color-mix(in srgb, var(--marca-rojo-osc) 10%, transparent);
 }
 
 .ingredientes li:last-child { border-bottom: none; }
@@ -6231,7 +5747,7 @@ button.btn-cta-cocina.btn-modo-cocina .cta-icon {
   align-items: flex-start;
   gap: 0.55rem;
   cursor: pointer;
-  color: #2d2520;
+  color: var(--marca-texto);
   font-size: 0.95rem;
   line-height: 1.4;
 }
@@ -6240,7 +5756,7 @@ button.btn-cta-cocina.btn-modo-cocina .cta-icon {
   margin-top: 3px;
   width: 18px;
   height: 18px;
-  accent-color: #c8102e;
+  accent-color: var(--marca-rojo);
   flex-shrink: 0;
   cursor: pointer;
 }
@@ -6257,9 +5773,9 @@ button.btn-cta-cocina.btn-modo-cocina .cta-icon {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  border: 1px solid rgba(124, 26, 26, 0.25);
-  background: #ffffff;
-  color: #7c1a1a;
+  border: 1px solid color-mix(in srgb, var(--marca-rojo-osc) 25%, transparent);
+  background: var(--marca-card);
+  color: var(--marca-rojo-osc);
   font-size: 1.1rem;
   font-weight: 700;
   cursor: pointer;
@@ -6270,245 +5786,158 @@ button.btn-cta-cocina.btn-modo-cocina .cta-icon {
   transition: background 0.15s ease, transform 0.1s ease;
 }
 
-.btn-add-ing:hover { background: #F8EBDD; }
+.btn-add-ing:hover { background: var(--marca-beige); }
 .btn-add-ing:active { transform: scale(0.9); }
 
-/* === FIN BLOQUE NUEVO 5 === */
+/* ---------- 7. ACORDEONES (ERRORES Y CONSERVACIÓN) ----------
+   Único dueño de .errores-box y .conservacion-box. Sin bordes de
+   colores laterales: ambos usan el mismo estilo de marca. */
+.accordion-receta { margin: 1rem; }
 
-
-/* === INICIO BLOQUE NUEVO 6: RESPONSIVE === */
-@media (max-width: 720px) {
-  .hero-nuevo { gap: 1rem; }
-  .hero-img-full { aspect-ratio: 16 / 10; }
-  .titulo-receta-nuevo { font-size: clamp(1.75rem, 7vw, 2.4rem); }
-  .subtitulo-receta-nuevo { font-size: 0.98rem; }
-  .meta-card-nuevo { padding: 0.8rem 0.3rem; }
-  .meta-col-valor { font-size: 0.88rem; }
-  .meta-col-label { font-size: 0.66rem; }
-  .meta-col-icon svg { width: 18px; height: 18px; }
-  .cta-chef { font-size: 1.8rem; }
-  .cta-textos strong { font-size: 1rem; }
-  .cta-textos small { font-size: 0.78rem; }
-  .cta-play-circle { width: 40px; height: 40px; }
-  .accesos-rapidos { gap: 0.4rem; }
-  .acceso-card { font-size: 0.76rem; padding: 0.65rem 0.3rem; }
-  .acceso-icon svg { width: 20px; height: 20px; }
-  .ingredientes-header { gap: 0.5rem; }
-  .stepper-menos,
-  .stepper-mas { width: 30px; height: 30px; font-size: 1.1rem; }
-  .stepper-valor { width: 34px; }
+.errores-box,
+.conservacion-box {
+  margin: 1rem;
+  padding: 1.8rem;
+  background: var(--marca-card);
+  border: 1px solid color-mix(in srgb, var(--marca-rojo-osc) 15%, transparent);
+  border-radius: 12px;
+  box-shadow: var(--sombra-sm);
+  overflow: hidden;
 }
 
-/* === FIN BLOQUE NUEVO 6 === */
-
-/* === INICIO BLOQUE NUEVO 7: FIXES HERO Y META CARD === */
-.hero-nuevo {
-  padding-top: 0.5rem;
-}
-
-.bc-home,
-.bc-home svg {
-  width: 18px;
-  height: 18px;
-}
-
-.meta-col-valor {
-  font-size: 0.9rem;
-  line-height: 1.1;
-  word-break: break-word;
-}
-
-.meta-col-label {
-  margin-top: 0.1rem;
-}
-/* === FIN BLOQUE NUEVO 7 === */
-
-
-/* === INICIO BLOQUE NUEVO 8: FIX CTA REDISEÑADO (SIN CORTAR TEXTO) === */
-.cta-nuevo {
-  padding: 1rem !important;
-  gap: 0.6rem !important;
-  display: flex !important;
-  align-items: center !important;
-}
-
-.cta-chef {
-  font-size: 1.8rem !important; /* Un poco más chico para dar espacio */
-}
-
-.cta-textos {
-  flex: 1 1 auto !important;
-  min-width: 0;
-  text-align: left;
-}
-
-.cta-textos strong {
-  font-size: 0.98rem !important; 
-  white-space: normal !important; /* Deja que fluya naturalmente */
-  line-height: 1.2 !important;
-  display: block;
-}
-
-.cta-textos small {
-  white-space: normal;
-  display: block;
-  margin-top: 3px;
-  font-size: 0.75rem !important;
-  line-height: 1.2 !important;
-}
-
-.cta-play-circle {
-  width: 38px !important;
-  height: 38px !important;
-  flex-shrink: 0;
-}
-
-.cta-play-icon svg {
-  width: 16px !important;
-  height: 16px !important;
-}
-/* === FIN BLOQUE NUEVO 8 === */
-
-
-/* === INICIO BLOQUE NUEVO 9: STEPPER PERSONAS === */
-.ingredientes-header {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 1.2rem !important;
-}
-
-.ingredientes-header h3 {
-  font-size: 1.1rem !important; 
-  margin: 0;
-}
-
-.stepper-porciones {
-  display: inline-flex;
-  align-items: center;
-  background: #F8EBDD;
-  border: 1px solid rgba(124, 26, 26, 0.18);
-  border-radius: 999px;
-  padding: 0.15rem 0.4rem;
-  gap: 0.1rem;
-}
-
-.stepper-label-prefix,
-.stepper-label-suffix {
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: #7a6a5a;
-}
-.stepper-label-prefix { padding-left: 0.2rem; }
-.stepper-label-suffix { padding-right: 0.2rem; }
-
-.stepper-menos,
-.stepper-mas {
-  width: 28px !important;
-  height: 28px !important;
-  font-size: 1.1rem !important;
-  border: none;
-  background: transparent;
-  color: #c8102e;
-  font-weight: bold;
+.errores-box h3,
+.conservacion-box h3 {
   display: flex;
   align-items: center;
-  justify-content: center;
-  cursor: pointer;
+  gap: 0.5rem;
+  padding-bottom: 0;
+  border-bottom: none;
 }
 
-.stepper-valor {
-  width: 32px !important;
-  font-size: 0.95rem !important;
-  font-weight: 700;
-  text-align: center;
-  border: none;
-  background: transparent;
-  color: #2d2520;
-}
-/* === FIN BLOQUE NUEVO 9 === */
-
-
-/* === INICIO BLOQUE NUEVO 10: FIX ACORDEONES (ERRORES Y CONSERVACIÓN) === */
-.accordion-receta {
-  margin: 1rem !important; /* Margen uniforme */
-}
+.errores-box h3::before { content: "⚠️"; font-size: 1.5rem; }
+.conservacion-box h3::before { content: "🧊"; font-size: 1.5rem; }
 
 .accordion-receta-summary {
-  padding: 0.9rem 1rem !important;
-  background: #ffffff !important;
-  border: 1px solid rgba(124, 26, 26, 0.15) !important;
-  border-radius: 12px !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03) !important;
+  padding: 0.9rem 1rem;
+  background: var(--marca-card);
+  border: 1px solid color-mix(in srgb, var(--marca-rojo-osc) 15%, transparent);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
 }
 
 .accordion-receta-summary h3 {
-  font-size: 1.05rem !important; 
-  color: #7c1a1a !important;
-  text-transform: none !important; 
-  font-family: 'Inter', sans-serif !important;
-  font-weight: 600 !important;
-  letter-spacing: normal !important;
-  margin: 0 !important;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: normal;
+  text-transform: none;
+  color: var(--marca-rojo-osc);
 }
 
 .accordion-receta[open] .accordion-receta-summary {
-  border-radius: 12px 12px 0 0 !important;
-  border-bottom: none !important;
+  border-radius: 12px 12px 0 0;
+  border-bottom: none;
 }
 
 .accordion-receta[open] .accordion-receta-contenido {
-  background: #ffffff;
-  border: 1px solid rgba(124, 26, 26, 0.15);
+  background: var(--marca-card);
+  border: 1px solid color-mix(in srgb, var(--marca-rojo-osc) 15%, transparent);
   border-top: none;
   border-radius: 0 0 12px 12px;
   padding: 0 1rem 1rem 1rem;
 }
-/* === FIN BLOQUE NUEVO 10 === */
 
-
-/* === INICIO BLOQUE NUEVO 11: COMPACTAR ZONA INFERIOR (MÁS CORTA) === */
-/* Acortar espacios verticales entre bloques finales */
-.receta-tags, 
-.receta-guia-box, 
-.recetas-relacionadas, 
-.compartir-receta, 
-.acciones-footer {
-  margin-top: 0.8rem !important;
-  margin-bottom: 0.8rem !important;
+/* Dentro de las cajas, el summary se funde con la caja (sin marco propio) */
+.errores-box .accordion-receta-summary,
+.conservacion-box .accordion-receta-summary {
+  padding: 1rem;
+  border: none;
+  border-radius: 0;
 }
 
-/* Agrupar estrellas, imprimir y offline en una fila sin que ocupen tanto alto */
-.acciones-footer {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  justify-content: center !important;
-  align-items: center !important;
-  gap: 0.5rem !important;
-  padding: 0.5rem 1rem !important;
+@media (max-width: 720px) {
+  .errores-box,
+  .conservacion-box { padding: 1.1rem 1rem; }
 }
+
+/* ---------- 8. ZONA INFERIOR ---------- */
+.receta-tags,
+.receta-guia-box,
+.recetas-relacionadas,
+.compartir-receta,
+.acciones-footer {
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.acciones-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.acciones-footer .rating-container {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 100%; /* las estrellas ocupan su propia línea */
+  justify-content: center;
+}
+
+.acciones-footer .rating-text { display: none; }
 
 .rating-container {
-  flex: 1 1 100%; /* Estrellas ocupan su propia línea si no caben */
+  flex: 1 1 100%;
   display: flex;
   justify-content: center;
   margin-bottom: 0.5rem;
 }
 
-/* Compartir: 2 botones lado a lado, más compactos */
+.btn-secundario {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  height: 38px;
+  padding: 0 1.2rem;
+  border-radius: 99px;
+  border: 1.5px solid var(--borde);
+  background: transparent;
+  color: var(--suave);
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, background-color 0.2s;
+}
+
+.btn-secundario:hover {
+  border-color: var(--rojo);
+  color: var(--rojo);
+  background: var(--marca-card);
+}
+
+[data-theme="dark"] .btn-secundario:hover {
+  border-color: var(--rojo-osc);
+  color: var(--rojo-osc);
+}
+
 .compartir-receta {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.6rem;
-  padding: 0.5rem 1rem !important;
+  padding: 0.5rem 1rem;
 }
 
 .compartir-titulo {
   font-weight: 600;
-  color: #7c1a1a;
+  color: var(--marca-rojo-osc);
   font-size: 0.95rem;
 }
 
@@ -6522,25 +5951,19 @@ button.btn-cta-cocina.btn-modo-cocina .cta-icon {
 .compartir-botones a {
   flex: 1;
   justify-content: center;
-  padding: 0.5rem 0.2rem !important;
-  font-size: 0.8rem !important;
-  border-radius: 8px !important;
+  padding: 0.5rem 0.2rem;
+  font-size: 0.8rem;
+  border-radius: 8px;
 }
 
-.compartir-botones svg {
-  width: 16px !important;
-  height: 16px !important;
-}
+.compartir-botones svg { width: 16px; height: 16px; }
 
-/* Recetas relacionadas compactas */
-.recetas-relacionadas {
-  padding: 1rem !important;
-}
+.recetas-relacionadas { padding: 1rem; }
 
 .recetas-relacionadas h3 {
-  margin-top: 0 !important;
-  margin-bottom: 0.5rem !important;
-  font-size: 1.1rem !important;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
 }
 
 .recetas-relacionadas ul {
@@ -6552,70 +5975,34 @@ button.btn-cta-cocina.btn-modo-cocina .cta-icon {
 }
 
 .recetas-relacionadas li a {
-  background: #F8EBDD;
+  background: var(--marca-beige);
   padding: 0.4rem 0.8rem;
   border-radius: 999px;
   font-size: 0.85rem;
   display: inline-block;
 }
 
-/* Evitar que el carrito flotante tape el enlace final, sin alargar la página */
-.receta-page-nuevo {
-  padding-bottom: 5rem !important; /* Espacio para que la tabbar y el FAB no tapen */
-}
+/* Espacio final: el footer sigue a continuación y el body ya reserva el
+   espacio de la tabbar, así que aquí basta un respiro corto. */
+.receta-page-nuevo { padding-bottom: 1rem; }
 
 .receta-nav {
-  padding-bottom: 1rem !important;
-  margin-top: 1rem !important;
-}
-/* === FIN BLOQUE NUEVO 11 === */
-
-/* === INICIO BLOQUE NUEVO 12: LIMPIEZA ACORDEONES Y ESPACIO FINAL === */
-
-/* 1. Matar los bordes y colores viejos de los acordeones */
-.errores-box,
-.conservacion-box {
-  border: 1px solid rgba(124, 26, 26, 0.15) !important; /* Borde gris/rojo sutil */
-  border-left: 1px solid rgba(124, 26, 26, 0.15) !important; /* Mata el borde naranja/azul gordo */
-  background: #ffffff !important;
-  border-radius: 12px !important;
-  margin: 1rem !important;
-  overflow: hidden;
+  padding-bottom: 1rem;
+  margin-top: 1rem;
 }
 
-/* 2. Forzar el color del título (especialmente el de Conservación que salía azul) */
-.errores-box .accordion-receta-summary h3,
-.conservacion-box .accordion-receta-summary h3 {
-  color: #7c1a1a !important; /* Rojo oscuro del tema */
-  text-transform: none !important;
-  font-family: 'Inter', sans-serif !important;
-  font-size: 1.05rem !important;
-}
+/* ---------- 9. BOTÓN FLOTANTE DE COMPRAS (MÓVIL) ---------- */
+@media (max-width: 720px) {
+  .shopping-fab {
+    width: 44px;
+    height: 44px;
+    right: 12px;
+    bottom: 85px; /* por encima de la tabbar */
+    box-shadow: 0 4px 10px color-mix(in srgb, var(--rojo) 30%, transparent);
+  }
 
-/* 3. Ajustar el resumen para que el fondo blanco no se rompa */
-.errores-box .accordion-receta-summary,
-.conservacion-box .accordion-receta-summary {
-  background: #ffffff !important;
-  border: none !important;
-  border-bottom: 1px solid rgba(124, 26, 26, 0.1) !important;
-  padding: 1rem !important;
-  border-radius: 0 !important;
+  .shopping-fab svg {
+    width: 20px;
+    height: 20px;
+  }
 }
-
-/* Si está cerrado, que no tenga la línea de abajo */
-.errores-box:not([open]) .accordion-receta-summary,
-.conservacion-box:not([open]) .accordion-receta-summary {
-  border-bottom: none !important;
-}
-
-/* 4. Arreglar el espacio gigante al final de la página */
-.receta-page-nuevo {
-  padding-bottom: 2rem !important; /* Reducimos de 5rem a 2rem */
-}
-
-/* Darle un pequeño respiro al último enlace para que la tabbar no lo tape */
-.receta-nav {
-  padding-bottom: 3rem !important; 
-  margin-top: 1rem !important;
-}
-/* === FIN BLOQUE NUEVO 12 === */
