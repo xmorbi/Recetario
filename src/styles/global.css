@@ -6569,3 +6569,53 @@ button.btn-cta-cocina.btn-modo-cocina .cta-icon {
   margin-top: 1rem !important;
 }
 /* === FIN BLOQUE NUEVO 11 === */
+
+/* === INICIO BLOQUE NUEVO 12: LIMPIEZA ACORDEONES Y ESPACIO FINAL === */
+
+/* 1. Matar los bordes y colores viejos de los acordeones */
+.errores-box,
+.conservacion-box {
+  border: 1px solid rgba(124, 26, 26, 0.15) !important; /* Borde gris/rojo sutil */
+  border-left: 1px solid rgba(124, 26, 26, 0.15) !important; /* Mata el borde naranja/azul gordo */
+  background: #ffffff !important;
+  border-radius: 12px !important;
+  margin: 1rem !important;
+  overflow: hidden;
+}
+
+/* 2. Forzar el color del título (especialmente el de Conservación que salía azul) */
+.errores-box .accordion-receta-summary h3,
+.conservacion-box .accordion-receta-summary h3 {
+  color: #7c1a1a !important; /* Rojo oscuro del tema */
+  text-transform: none !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 1.05rem !important;
+}
+
+/* 3. Ajustar el resumen para que el fondo blanco no se rompa */
+.errores-box .accordion-receta-summary,
+.conservacion-box .accordion-receta-summary {
+  background: #ffffff !important;
+  border: none !important;
+  border-bottom: 1px solid rgba(124, 26, 26, 0.1) !important;
+  padding: 1rem !important;
+  border-radius: 0 !important;
+}
+
+/* Si está cerrado, que no tenga la línea de abajo */
+.errores-box:not([open]) .accordion-receta-summary,
+.conservacion-box:not([open]) .accordion-receta-summary {
+  border-bottom: none !important;
+}
+
+/* 4. Arreglar el espacio gigante al final de la página */
+.receta-page-nuevo {
+  padding-bottom: 2rem !important; /* Reducimos de 5rem a 2rem */
+}
+
+/* Darle un pequeño respiro al último enlace para que la tabbar no lo tape */
+.receta-nav {
+  padding-bottom: 3rem !important; 
+  margin-top: 1rem !important;
+}
+/* === FIN BLOQUE NUEVO 12 === */
