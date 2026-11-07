@@ -194,9 +194,18 @@ body{background:var(--crema);color:var(--tinta);font-family:var(--fuente-texto);
 .hero-copy .lema{display:inline-flex;align-items:center;gap:.7rem;margin-top:1.4rem;font-size:.78rem;text-transform:uppercase;letter-spacing:.22em;color:var(--rojo);font-weight:600;padding:.5rem 1.2rem;background:#fff;border:1px solid var(--borde);border-radius:99px;box-shadow:var(--sombra-sm)}
 .hero-copy .lema::before,.hero-copy .lema::after{content:"✦";color:var(--dorado);font-size:.9rem;letter-spacing:0}
 @media(max-width:640px){.hero{padding:3rem 1rem 3rem}}
+/* Escritorio: la portada vive dentro del <main> (1000px). El fondo y la línea
+   inferior se dibujan en un ::before a todo el ancho para que no se vean los
+   bordes de la caja, y se compensa el padding superior del <main>. */
+@media(min-width:769px){
+  .hero{margin-top:-2.5rem;padding:4rem 1.2rem 2.5rem;background:none;border-bottom:none}
+  [data-theme="dark"] .hero{background:none}
+  .hero::before{content:"";position:absolute;top:0;bottom:0;left:50%;width:100vw;transform:translateX(-50%);z-index:0;pointer-events:none;background:radial-gradient(circle at 50% 0%,rgba(200,150,62,.10),transparent 65%),linear-gradient(180deg,#fefaf3 0%,var(--crema) 100%);border-bottom:1px solid var(--borde)}
+  [data-theme="dark"] .hero::before{background:linear-gradient(180deg,#1a1a1a 0%,var(--crema) 100%)}
+}
 
 /* ===== RECETA DESTACADA ===== */
-.receta-destacada-section{max-width:var(--max-width);margin:0 auto;padding:3rem var(--pad-x) 1rem;min-height:var(--destacada-min)}
+.receta-destacada-section{max-width:var(--max-width);margin:0 auto;padding:1.5rem var(--pad-x) 1rem;min-height:var(--destacada-min)}
 .receta-destacada-eyebrow{font-size:.72rem;text-transform:uppercase;letter-spacing:.24em;color:var(--suave);font-weight:600;text-align:center;margin-bottom:1rem}
 .receta-destacada{position:relative;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);background:#fff;border:1px solid var(--borde);border-radius:var(--radio);box-shadow:var(--sombra-lg);overflow:hidden;text-decoration:none;color:var(--tinta);transition:transform .3s,box-shadow .3s}
 .receta-destacada:hover{transform:translateY(-4px);box-shadow:0 20px 48px rgba(90,60,30,.20)}
@@ -4953,15 +4962,9 @@ details[open] > .tabbar-tools-menu {
   }
 }
 
-/* 8.3.B — aspect-ratio explícito en la media de la destacada (desktop).
-   La regla existente tiene min-height:360px; añadimos aspect-ratio
-   para que la reserva sea predecible si el body queda más bajo que
-   la media. */
-@media (min-width: 769px) {
-  .receta-destacada-media {
-    aspect-ratio: 3 / 2;
-  }
-}
+/* 8.3.B — (retirado) En escritorio la media de la destacada se estira a la
+   altura del texto y su min-height:360px ya reserva el espacio. Un
+   aspect-ratio aquí ensanchaba la foto por encima de la columna de texto. */
 
 /* 8.3.C — Background de carga en la imagen de receta (receta-page).
    Coherente con .receta-img del listado y .receta-card-foto, que ya
@@ -5264,6 +5267,20 @@ details[open] > .tabbar-tools-menu {
   aspect-ratio: 16 / 9;
   overflow: hidden;
   background: var(--marca-beige-img);
+}
+
+/* Escritorio: la foto deja de ser un banner de 100vw y pasa a ser una
+   tarjeta dentro del ancho del contenido, con altura máxima. */
+@media (min-width: 721px) {
+  .hero-nuevo { margin-top: 0; }
+
+  .hero-img-full {
+    width: 100%;
+    margin-left: 0;
+    max-height: 460px;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra-md);
+  }
 }
 
 .hero-img-nuevo {
