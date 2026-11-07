@@ -5660,3 +5660,643 @@ button.btn-cta-cocina.btn-modo-cocina .cta-icon {
   margin: 0 !important;
 }
 /* === FIN BLOQUE DEFINITIVO CTA === */
+
+/* === INICIO BLOQUE DARK HERO FICHA === */
+[data-theme="dark"] .hero-receta {
+  background: linear-gradient(180deg, #1a1a1a 0%, var(--crema) 100%);
+  border-bottom-color: #333;
+}
+[data-theme="dark"] .hero-receta h1 {
+  color: #e57373;
+}
+[data-theme="dark"] .hero-receta .hero-sub {
+  color: #bbb;
+}
+[data-theme="dark"] .hero-receta .breadcrumb,
+[data-theme="dark"] .hero-receta .breadcrumb a {
+  color: #aaa;
+}
+[data-theme="dark"] .hero-receta .breadcrumb a:hover {
+  color: var(--rojo-osc);
+}
+/* === FIN BLOQUE DARK HERO FICHA === */
+
+/* === INICIO BLOQUE DARK CTA FICHA === */
+[data-theme="dark"] button.btn-cta-cocina.btn-modo-cocina {
+  background: var(--rojo);
+  color: #fff;
+  border-color: var(--rojo);
+  box-shadow: 0 6px 22px rgba(176, 58, 46, 0.5);
+}
+[data-theme="dark"] button.btn-cta-cocina.btn-modo-cocina:hover,
+[data-theme="dark"] button.btn-cta-cocina.btn-modo-cocina:active {
+  background: var(--rojo-osc);
+  border-color: var(--rojo-osc);
+  box-shadow: 0 8px 26px rgba(176, 58, 46, 0.6);
+}
+/* === FIN BLOQUE DARK CTA FICHA === */
+
+/* === INICIO BLOQUE DARK CTA FICHA (v8 - Burbuja Estilizada) === */
+[data-theme="dark"] button.btn-cta-cocina.btn-modo-cocina {
+  background: var(--rojo) !important;
+  color: #fff !important;
+  box-shadow: 0 6px 22px rgba(176, 58, 46, 0.5) !important;
+}
+[data-theme="dark"] button.btn-cta-cocina.btn-modo-cocina:hover,
+[data-theme="dark"] button.btn-cta-cocina.btn-modo-cocina:active {
+  background: var(--rojo-osc) !important;
+  box-shadow: 0 8px 26px rgba(176, 58, 46, 0.6) !important;
+}
+
+@media (max-width: 720px) {
+  /* 1. El botón vuelve a ser casi full width, dejando solo un pequeño respiro */
+  button.btn-cta-cocina.btn-modo-cocina {
+    width: calc(100% - 3rem) !important; 
+    margin-right: auto !important; 
+    padding: 1.2rem 1rem !important;
+    justify-content: flex-start !important;
+    gap: 0.8rem !important;
+    height: auto !important;
+    min-height: 95px !important;
+  }
+
+  /* 2. Ajuste del texto */
+  button.btn-cta-cocina.btn-modo-cocina .cta-textos strong {
+    font-size: 1.1rem !important; 
+    line-height: 1.15 !important;
+    margin-bottom: 0.2rem !important;
+  }
+
+  button.btn-cta-cocina.btn-modo-cocina .cta-textos small {
+    font-size: 0.75rem !important;
+    line-height: 1.25 !important; 
+    display: block !important; 
+  }
+
+  /* 3. LA SOLUCIÓN: Achicamos la burbuja (FAB) en móvil */
+  .shopping-fab {
+    width: 44px !important;
+    height: 44px !important;
+    right: 12px !important; /* La pegamos un poco más al borde */
+    bottom: 85px !important; /* La subimos un poco para que no choque con la tabbar */
+    box-shadow: 0 4px 10px rgba(176, 58, 46, 0.3) !important;
+  }
+  
+  .shopping-fab svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+}
+/* === FIN BLOQUE DARK CTA FICHA (v8) === */
+
+/* === INICIO BLOQUE DESKTOP FICHA === */
+@media (min-width: 1024px) {
+  .hero-receta-inner {
+    max-width: 980px;
+  }
+  .hero-media {
+    max-height: 520px;
+  }
+  .hero-media img {
+    max-height: 520px;
+    object-fit: contain;
+  }
+  .btn-cta-cocina,
+  button.btn-cta-cocina.btn-modo-cocina {
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* === FIN BLOQUE DESKTOP FICHA === */
+
+/* === INICIO BLOQUE NUEVO 1: HERO EDITORIAL === */
+.hero-nuevo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: -2.5rem; /* Elimina el aire perdido del Layout */
+  padding-bottom: 0.5rem;
+}
+
+.hero-img-full {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #e9d8c4;
+}
+
+.hero-img-nuevo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-placeholder-nuevo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f8ebdd 0%, #e9d8c4 100%);
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.hero-placeholder-titulo {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  color: #7c1a1a;
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.fav-hero-flotante {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.94);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+  z-index: 2;
+  transition: transform 0.15s ease;
+}
+
+.fav-hero-flotante:hover { transform: scale(1.06); }
+.fav-hero-flotante:active { transform: scale(0.96); }
+.fav-hero-flotante svg { width: 22px; height: 22px; color: #7c1a1a; }
+.fav-hero-flotante[aria-pressed="true"] svg { fill: #c8102e; color: #c8102e; }
+
+.hero-contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 0 1rem;
+}
+
+.breadcrumb-nuevo {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  color: #7a6a5a;
+}
+
+.bc-link {
+  color: #7a6a5a;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.bc-link:hover { color: #c8102e; text-decoration: underline; }
+.bc-home { display: inline-flex; width: 16px; height: 16px; }
+.bc-home svg { width: 16px; height: 16px; }
+.bc-sep { color: #b9a894; }
+.bc-current { color: #c8102e; font-weight: 600; }
+
+.titulo-receta-nuevo {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: #7c1a1a;
+  margin: 0;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.subtitulo-receta-nuevo {
+  font-size: 1.05rem;
+  color: #5a4a3a;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* === FIN BLOQUE NUEVO 1 === */
+
+
+/* === INICIO BLOQUE NUEVO 2: META CARD BEIGE + TÉCNICA === */
+.meta-card-nuevo {
+  display: flex;
+  align-items: stretch;
+  background: #F8EBDD;
+  border-radius: 14px;
+  padding: 0.9rem 0.5rem;
+  margin-top: 0.4rem;
+  box-shadow: 0 1px 3px rgba(124, 26, 26, 0.06);
+}
+
+.meta-col {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  padding: 0 0.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.meta-col + .meta-col::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 15%;
+  bottom: 15%;
+  width: 1px;
+  background: rgba(124, 26, 26, 0.16);
+}
+
+.meta-col-icon { display: inline-flex; color: #c8102e; }
+.meta-col-icon svg { width: 20px; height: 20px; }
+
+.meta-col-valor {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #2d2520;
+  line-height: 1.2;
+}
+
+.meta-col-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #8a7a6a;
+  font-weight: 600;
+}
+
+.tecnica-capsule-nuevo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  align-self: center;
+  background: #F8EBDD;
+  color: #7c1a1a;
+  border: 1px solid rgba(124, 26, 26, 0.14);
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-top: 0.35rem;
+}
+
+.tecnica-icon { display: inline-flex; }
+.tecnica-icon svg { width: 16px; height: 16px; }
+
+/* === FIN BLOQUE NUEVO 2 === */
+
+
+/* === INICIO BLOQUE NUEVO 3: CTA REDISEÑADO === */
+.cta-wrapper-nuevo {
+  padding: 0 1rem;
+  margin: 1.25rem 0 0.9rem;
+}
+
+.cta-nuevo {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.9rem !important;
+  width: 100% !important;
+  padding: 1rem 1.1rem !important;
+  background: linear-gradient(135deg, #9b1c1c 0%, #7c1414 100%) !important;
+  border-radius: 16px !important;
+  border: none !important;
+  color: #ffffff !important;
+  text-align: left !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 14px rgba(124, 26, 26, 0.25) !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease !important;
+}
+
+.cta-nuevo:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 18px rgba(124, 26, 26, 0.32) !important;
+}
+
+.cta-nuevo:active { transform: translateY(0) scale(0.99) !important; }
+
+.cta-chef {
+  font-size: 2.1rem;
+  line-height: 1;
+  flex-shrink: 0;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+}
+
+.cta-textos {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  color: #ffffff;
+}
+
+.cta-textos strong {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.cta-textos small {
+  font-size: 0.82rem;
+  line-height: 1.3;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.cta-play-circle {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.cta-play-icon {
+  display: inline-flex;
+  color: #9b1c1c;
+  margin-left: 3px; /* centra ópticamente el play */
+}
+
+.cta-play-icon svg { width: 18px; height: 18px; fill: currentColor; }
+
+/* === FIN BLOQUE NUEVO 3 === */
+
+
+/* === INICIO BLOQUE NUEVO 4: ACCESOS RÁPIDOS + AEO === */
+.accesos-rapidos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.55rem;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+.acceso-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.75rem 0.4rem;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid rgba(124, 26, 26, 0.14);
+  color: #7c1a1a;
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.15s ease, border-color 0.15s ease;
+  font-family: inherit;
+}
+
+.acceso-card:hover {
+  background: #F8EBDD;
+  border-color: rgba(124, 26, 26, 0.28);
+}
+
+.acceso-card:active { transform: scale(0.97); }
+
+.acceso-icon { display: inline-flex; color: #c8102e; }
+.acceso-icon svg { width: 22px; height: 22px; }
+
+.acceso-texto { color: #7c1a1a; }
+
+/* AEO */
+.resumen-aeo-nuevo {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin: 0 1rem 1.25rem;
+  padding: 1rem 1rem 1rem 1.1rem;
+  background: #ffffff;
+  border-left: 4px solid #c8102e;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.aeo-icon-wrap {
+  flex-shrink: 0;
+  color: #c8102e;
+  display: inline-flex;
+  padding-top: 0.1rem;
+}
+
+.aeo-icon-wrap svg { width: 22px; height: 22px; }
+
+.aeo-body { flex: 1 1 auto; }
+
+.aeo-titulo {
+  display: block;
+  color: #7c1a1a;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.aeo-texto {
+  margin: 0;
+  color: #2d2520;
+  font-size: 0.94rem;
+  line-height: 1.45;
+}
+
+/* === FIN BLOQUE NUEVO 4 === */
+
+
+/* === INICIO BLOQUE NUEVO 5: INGREDIENTES + STEPPER === */
+.ingredientes-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.8rem;
+}
+
+.ingredientes-header h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0;
+  font-size: 1.1rem;
+  color: #7c1a1a;
+}
+
+.ing-header-icon { display: inline-flex; color: #c8102e; }
+.ing-header-icon svg { width: 20px; height: 20px; }
+
+.stepper-porciones {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: #F8EBDD;
+  border: 1px solid rgba(124, 26, 26, 0.18);
+  border-radius: 999px;
+  padding: 0.2rem 0.3rem;
+}
+
+.stepper-menos,
+.stepper-mas {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: #ffffff;
+  color: #7c1a1a;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  transition: background 0.15s ease, transform 0.1s ease;
+  font-family: inherit;
+}
+
+.stepper-menos:hover,
+.stepper-mas:hover { background: #f1ddc4; }
+
+.stepper-menos:active,
+.stepper-mas:active { transform: scale(0.9); }
+
+.stepper-valor {
+  width: 38px;
+  height: 30px;
+  text-align: center;
+  border: none;
+  background: transparent;
+  color: #2d2520;
+  font-size: 0.98rem;
+  font-weight: 700;
+  font-family: inherit;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.stepper-valor::-webkit-outer-spin-button,
+.stepper-valor::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.stepper-valor:focus {
+  outline: 2px solid #c8102e;
+  outline-offset: 1px;
+  border-radius: 6px;
+}
+
+/* Lista de ingredientes — layout limpio (el estilo inline anterior se reemplaza) */
+.ingredientes {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+
+.ingredientes li {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.6rem;
+  margin-bottom: 0.7rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 1px dashed rgba(124, 26, 26, 0.1);
+}
+
+.ingredientes li:last-child { border-bottom: none; }
+
+.ing-label {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  cursor: pointer;
+  color: #2d2520;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.ing-check {
+  margin-top: 3px;
+  width: 18px;
+  height: 18px;
+  accent-color: #c8102e;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.ing-texto { flex: 1 1 auto; }
+
+.ing-label:has(.ing-check:checked) .ing-texto {
+  text-decoration: line-through;
+  opacity: 0.55;
+}
+
+.btn-add-ing {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(124, 26, 26, 0.25);
+  background: #ffffff;
+  color: #7c1a1a;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.btn-add-ing:hover { background: #F8EBDD; }
+.btn-add-ing:active { transform: scale(0.9); }
+
+/* === FIN BLOQUE NUEVO 5 === */
+
+
+/* === INICIO BLOQUE NUEVO 6: RESPONSIVE === */
+@media (max-width: 720px) {
+  .hero-nuevo { gap: 1rem; }
+  .hero-img-full { aspect-ratio: 16 / 10; }
+  .titulo-receta-nuevo { font-size: clamp(1.75rem, 7vw, 2.4rem); }
+  .subtitulo-receta-nuevo { font-size: 0.98rem; }
+  .meta-card-nuevo { padding: 0.8rem 0.3rem; }
+  .meta-col-valor { font-size: 0.88rem; }
+  .meta-col-label { font-size: 0.66rem; }
+  .meta-col-icon svg { width: 18px; height: 18px; }
+  .cta-chef { font-size: 1.8rem; }
+  .cta-textos strong { font-size: 1rem; }
+  .cta-textos small { font-size: 0.78rem; }
+  .cta-play-circle { width: 40px; height: 40px; }
+  .accesos-rapidos { gap: 0.4rem; }
+  .acceso-card { font-size: 0.76rem; padding: 0.65rem 0.3rem; }
+  .acceso-icon svg { width: 20px; height: 20px; }
+  .ingredientes-header { gap: 0.5rem; }
+  .stepper-menos,
+  .stepper-mas { width: 30px; height: 30px; font-size: 1.1rem; }
+  .stepper-valor { width: 34px; }
+}
+
+/* === FIN BLOQUE NUEVO 6 === */
