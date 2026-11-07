@@ -5618,31 +5618,45 @@ details[open] > .tabbar-tools-menu {
   .cta-textos strong { font-size: 1.1rem; }
   .cta-icon { font-size: 1.8rem; }
 }
-/* === FIN BLOQUE FASE 2 y 3 (OPCIÓN 1 - CTA PROTAGONISTA) === */
 
-/* === FIX: Evitar que el carrito tape la Respuesta Rápida === */
-@media (max-width: 720px) {
-  .resumen-aeo {
-    /* Dejamos un margen a la derecha para que el texto respire lejos del carrito */
-    margin-right: 4rem !important; 
-  }
-}
-
-/* === FIX: Arreglar desborde del botón "Atajos y ayuda" en el menú === */
-.mc-sheet-details > summary.mc-sheet-item {
+/* === INICIO BLOQUE DEFINITIVO CTA === */
+button.btn-cta-cocina.btn-modo-cocina {
   display: flex !important;
-  align-items: center !important;
   width: 100% !important;
-  height: auto !important;
-  border-radius: 12px !important;
-  padding: .85rem .9rem !important;
-  background: rgba(255,255,255,.06) !important;
-  border: 1px solid rgba(255,255,255,.12) !important;
+  height: auto !important;          /* Mata la altura fija de 42px */
+  min-height: 80px !important;
+  padding: 1.2rem !important;       /* Le devuelve el aire interno */
+  border-radius: 16px !important;   /* Mata la forma de píldora */
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 1.2rem !important;
+  background: linear-gradient(135deg, var(--rojo) 0%, var(--rojo-osc) 100%) !important;
+  color: #fff !important;
+  box-shadow: 0 8px 24px rgba(176, 58, 46, 0.35) !important;
+  border: none !important;
 }
 
-.mc-sheet-details > summary.mc-sheet-item .mc-sheet-item-texto {
-  flex: 1 !important;
-  text-align: left !important;
-  margin-left: 0.5rem;
+button.btn-cta-cocina.btn-modo-cocina .cta-textos {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  margin: 0 !important;
 }
-/* === FIN FIX === */
+
+button.btn-cta-cocina.btn-modo-cocina .cta-textos strong {
+  font-size: 1.3rem !important;
+  line-height: 1.2 !important;
+  margin-bottom: 0.2rem !important;
+}
+
+button.btn-cta-cocina.btn-modo-cocina .cta-textos small {
+  font-size: 0.9rem !important;
+  opacity: 0.9 !important;
+}
+
+button.btn-cta-cocina.btn-modo-cocina .cta-icon {
+  font-size: 2.2rem !important;
+  margin: 0 !important;
+}
+/* === FIN BLOQUE DEFINITIVO CTA === */
