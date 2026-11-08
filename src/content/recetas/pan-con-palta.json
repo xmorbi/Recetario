@@ -48,5 +48,81 @@
     "refrigerador": "No se guarda armado.",
     "congelador": "No aplica.",
     "recalentar": "El pan se puede recalentar. La palta, no."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "marraqueta o hallulla horneada",
+      "nota": "recién",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": null,
+      "nombre": "palta hass",
+      "nota": "madura",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal en escamas o sal",
+      "nota": "fina",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "aceite de oliva",
+      "nota": "opcional",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "gotas de limón",
+      "seccion": "Opcional",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Abre el pan por la mitad, sin separarlo del todo si es marraqueta.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Pisa la palta con un tenedor dentro de la cáscara, agregando una pizca de sal. La palta debe quedar rústica, no como puré.",
+      "ingredientes": [
+        2,
+        3
+      ]
+    },
+    {
+      "texto": "Unta generosamente sobre el pan caliente.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Añade unas gotas de aceite de oliva y una pizca más de sal en escamas.",
+      "ingredientes": [
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "texto": "Come inmediatamente. El pan caliente es la mitad del placer.",
+      "ingredientes": [
+        1
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 5
+  },
+  "revisado_v2": true
 }

@@ -51,5 +51,143 @@
     "congelador": "Se pueden congelar crudos ya formados y freír directamente",
     "refrigerador": "Una vez fritos, guardar en refrigerador hasta 3 días",
     "recalentar": "En horno o air fryer para recuperar la crocancia."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 250,
+      "unidad": "g",
+      "nombre": "garbanzos",
+      "nota": "remojados 12 horas, sin cocer, secos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cebolla",
+      "nota": "picada",
+      "escalable": true
+    },
+    {
+      "cantidad": 3,
+      "unidad": "diente",
+      "nombre": "ajo",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "taza",
+      "nombre": "perejil",
+      "nota": "picado, fresco",
+      "escalable": false
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "taza",
+      "nombre": "cilantro",
+      "nota": "picado, fresco",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "comino molido",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "polvo de hornear",
+      "escalable": true
+    },
+    {
+      "cantidad": 3,
+      "unidad": "cucharada",
+      "nombre": "harina de garbanzos",
+      "nota": "30 g, o harina común",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal y pimienta",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "aceite",
+      "nota": "250 ml, para freír",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "La noche anterior, lavar los garbanzos y dejarlos en remojo en abundante agua. No cocerlos.",
+      "ingredientes": [
+        1,
+        8
+      ],
+      "previo": true
+    },
+    {
+      "texto": "Al día siguiente, escurrir muy bien los garbanzos y secarlos con un paño.",
+      "ingredientes": [
+        1,
+        8
+      ]
+    },
+    {
+      "texto": "Procesar los garbanzos junto con la cebolla, el ajo, el perejil, el cilantro, el comino, la sal y la pimienta hasta obtener una pasta granulosa. No procesar en exceso para que no se convierta en puré.",
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "texto": "Transferir la mezcla a un bol, agregar el polvo de hornear y la harina de garbanzos. Mezclar bien y refrigerar por 30 minutos para que la masa tome firmeza.",
+      "ingredientes": [
+        7,
+        10
+      ],
+      "timers": [
+        {
+          "minutos": 30,
+          "etiqueta": "30 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Formar bolitas del tamaño de una nuez y aplastarlas ligeramente."
+    },
+    {
+      "texto": "Calentar abundante aceite en una sartén profunda y freír los falafel por tandas a 170-180 °C hasta que estén dorados y crujientes (aproximadamente 3-4 minutos por lado).",
+      "ingredientes": [
+        10
+      ],
+      "timers": [
+        {
+          "minutos": 4,
+          "etiqueta": "3-4 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Escurrir sobre papel absorbente y servir calientes, idealmente con pan pita y salsa de yogur o hummus.",
+      "ingredientes": [
+        9
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 480,
+    "coccion": 34
+  },
+  "revisado_v2": true
 }

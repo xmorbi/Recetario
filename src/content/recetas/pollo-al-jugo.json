@@ -42,5 +42,97 @@
     "refrigerador": "Hasta 3 días en recipiente hermético.",
     "congelador": "Hasta 2 meses.",
     "recalentar": "A fuego lento, bañando el pollo con su propia salsa."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 4,
+      "unidad": "trutro",
+      "nombre": "pollo",
+      "nota": "sin piel",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cebolla",
+      "nota": "en pluma",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "zanahoria",
+      "nota": "en rodajas",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "ajo",
+      "nota": "picado",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "aceite, sal, pimienta, laurel y orégano",
+      "nota": "a gusto",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "L",
+      "nombre": "agua hirviendo",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Dora el pollo en aceite hasta sellar. Retira y reserva.",
+      "ingredientes": [
+        1,
+        5
+      ]
+    },
+    {
+      "texto": "Sofríe la cebolla 5 min hasta que esté transparente.",
+      "ingredientes": [
+        2,
+        5
+      ],
+      "timers": [
+        {
+          "minutos": 5,
+          "etiqueta": "5 min"
+        }
+      ]
+    },
+    {
+      "texto": "Agrega el ajo, la zanahoria, el laurel, el orégano y el pollo.",
+      "ingredientes": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "texto": "Cubre con el agua hirviendo y cocina 30 min.",
+      "ingredientes": [
+        6
+      ],
+      "timers": [
+        {
+          "minutos": 30,
+          "etiqueta": "30 min"
+        }
+      ]
+    },
+    {
+      "texto": "Sirve con puré, arroz o papas cocidas."
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 35
+  },
+  "revisado_v2": true
 }

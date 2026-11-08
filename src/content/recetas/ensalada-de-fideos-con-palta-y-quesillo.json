@@ -57,5 +57,150 @@
   ],
   "conservacion": {
     "refrigerador": "2 días en un recipiente hermético. La palta y el tomate pierden textura con el tiempo, así que se recomienda consumir el mismo día. Si se guarda, agregar la palta al momento de servir."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 250,
+      "unidad": "g",
+      "nombre": "fideos espirales",
+      "nota": "o tirabuzón",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "tomates",
+      "nota": "medianos, en cubos, pelados",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "paltas",
+      "nota": "en cubos, maduras",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "choclo",
+      "nota": "150 g, fresco, congelado o en conserva, cocido",
+      "escalable": true
+    },
+    {
+      "cantidad": 200,
+      "unidad": "g",
+      "nombre": "quesillo o queso",
+      "nota": "desmenuzado, en cubos, fresco",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "orégano",
+      "nota": "seco",
+      "escalable": false
+    },
+    {
+      "cantidad": 3,
+      "unidad": "cucharada",
+      "nombre": "aceite de oliva",
+      "nota": "45 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "jugo de limón",
+      "nota": "de 1 limón",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal y pimienta",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "carne: 300 g de carne molida de vacuno, carne molida de pollo, o 2 hamburguesas",
+      "nota": "de pollo o vacuno, picadas",
+      "seccion": "Opcional",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Cocer los fideos espirales en abundante agua con sal hasta que estén al dente. Escurrir, enjuagar con agua fría y reservar.",
+      "ingredientes": [
+        1,
+        9
+      ]
+    },
+    {
+      "texto": "Si usas choclo fresco, cocerlo y desgranarlo. Si es en conserva o congelado, escurrirlo bien.",
+      "ingredientes": [
+        4
+      ]
+    },
+    {
+      "texto": "Si preparas la versión con carne: cocinar la carne molida o las hamburguesas picadas en una sartén con un poco de aceite, sal, pimienta y una pizca de orégano, hasta que estén bien cocidas. Dejar enfriar.",
+      "ingredientes": [
+        6,
+        7,
+        9,
+        10
+      ]
+    },
+    {
+      "texto": "Pelar los tomates (opcional) y cortarlos en cubos. Escurrir el exceso de jugo.",
+      "ingredientes": [
+        2,
+        8
+      ]
+    },
+    {
+      "texto": "Pelar las paltas y cortarlas en cubos. Rociarlas con un poco de jugo de limón para que no se oxiden.",
+      "ingredientes": [
+        3,
+        8
+      ]
+    },
+    {
+      "texto": "Cortar el quesillo en cubos o desmenuzarlo.",
+      "ingredientes": [
+        5
+      ]
+    },
+    {
+      "texto": "En un bol grande, mezclar los fideos, el tomate, la palta, el choclo y el quesillo. Si usas carne, incorporarla también.",
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        10
+      ]
+    },
+    {
+      "texto": "Aliñar con el aceite de oliva, el resto del jugo de limón, el orégano, sal y pimienta. Revolver con cuidado para no deshacer la palta.",
+      "ingredientes": [
+        3,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "texto": "Servir fría o a temperatura ambiente."
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 25
+  },
+  "revisado_v2": true
 }

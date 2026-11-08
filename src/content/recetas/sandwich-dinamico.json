@@ -1,7 +1,14 @@
 {
   "titulo": "Sándwich dinámico",
   "categoria": "sandwiches",
-  "tags": ["sándwich", "dinámico", "palta", "tomate", "once", "completo"],
+  "tags": [
+    "sándwich",
+    "dinámico",
+    "palta",
+    "tomate",
+    "once",
+    "completo"
+  ],
   "imagen": null,
   "tiempo": "8 min",
   "porciones": "1 sándwich",
@@ -41,5 +48,99 @@
     "refrigerador": "No se guarda armado.",
     "congelador": "No aplica.",
     "recalentar": "La vienesa y el pan se recalentan. La palta y el tomate, no."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pan de completo o 1 marraqueta",
+      "nota": "alargado",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "vienesa de buena calidad",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": null,
+      "nombre": "palta hass",
+      "nota": "madura",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "tomate",
+      "nota": "maduro",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal y unas gotas de limón",
+      "nota": "para la palta",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Cuece la vienesa en agua hirviendo 5 minutos.",
+      "ingredientes": [
+        2
+      ],
+      "timers": [
+        {
+          "minutos": 5,
+          "etiqueta": "5 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Calienta el pan en el horno o plancha 2 minutos por lado.",
+      "ingredientes": [
+        1
+      ],
+      "timers": [
+        {
+          "minutos": 2,
+          "etiqueta": "2 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Pisa la palta con tenedor, agrégale sal y unas gotas de limón.",
+      "ingredientes": [
+        3,
+        5
+      ]
+    },
+    {
+      "texto": "Corta el tomate en cubos pequeños y sala ligeramente.",
+      "ingredientes": [
+        4,
+        5
+      ]
+    },
+    {
+      "texto": "Abre el pan, pon la vienesa, luego la palta, y encima el tomate.",
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "texto": "Sirve inmediatamente."
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 5,
+    "coccion": 2
+  },
+  "revisado_v2": true
 }

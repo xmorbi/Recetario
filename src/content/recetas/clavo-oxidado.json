@@ -1,14 +1,7 @@
 {
   "titulo": "Clavo Oxidado",
   "categoria": "bebidas",
-  "tags": [
-    "clavo oxidado",
-    "whisky",
-    "drambuie",
-    "angostura",
-    "cóctel",
-    "tragos"
-  ],
+  "tags": ["clavo oxidado", "whisky", "drambuie", "angostura", "cóctel", "tragos"],
   "imagen": null,
   "tiempo": "5 min",
   "porciones": "1 persona",
@@ -31,12 +24,24 @@
   ],
   "dato": "El drambuie aporta dulzor y notas de miel y especias; la angostura es opcional y añade un amargor aromático. El clavo oxidado es un cóctel clásico de bares chilenos, y se sirve bien frío, en vaso corto.",
   "errores": [
-    {
-      "error": "El clavo oxidado me quedó demasiado dulce",
-      "solucion": "Ajusta la cantidad de drambuie o añade las gotas de angostura para equilibrar el dulzor."
-    }
+    { "error": "El clavo oxidado me quedó demasiado dulce", "solucion": "Ajusta la cantidad de drambuie o añade las gotas de angostura para equilibrar el dulzor." }
   ],
-  "conservacion": {
-    "refrigerador": "Servir de inmediato. No se recomienda guardar preparado."
-  }
+  "conservacion": { "refrigerador": "Servir de inmediato. No se recomienda guardar preparado." },
+  "ingredientes_v2": [
+    { "cantidad": 50, "unidad": "cc", "nombre": "whisky", "escalable": true },
+    { "cantidad": 50, "unidad": "cc", "nombre": "drambuie", "escalable": true },
+    { "cantidad": 2, "unidad": "gotas", "nombre": "angostura", "seccion": "Opcional", "escalable": true },
+    { "cantidad": 2, "unidad": null, "nombre": "clavos de olor", "seccion": "Opcional", "escalable": false },
+    { "cantidad": 1, "unidad": null, "nombre": "marrasquino", "seccion": "Opcional", "escalable": false },
+    { "cantidad": 1, "unidad": null, "nombre": "cáscara de limón", "seccion": "Opcional", "escalable": false },
+    { "cantidad": 1, "unidad": null, "nombre": "hielo", "nota": "a gusto", "escalable": false }
+  ],
+  "pasos_v2": [
+    { "texto": "Colocar 2 hielos en un vaso corto ancho (un vaso de whisky).", "ingredientes": [7] },
+    { "texto": "Agregar el whisky, el drambuie y las gotas de angostura.", "ingredientes": [1, 2, 3] },
+    { "texto": "Hay quienes prefieren beberlo sin el amargo de angostura, por lo que queda a gusto de quien se sirve." },
+    { "texto": "Puede agregar 1 clavo y un trozo de cáscara de limón.", "ingredientes": [4, 5, 6] }
+  ],
+  "tiempo_v2": { "preparacion": 5 },
+  "revisado_v2": true
 }

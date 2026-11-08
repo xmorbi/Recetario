@@ -48,5 +48,115 @@
   "conservacion": {
     "refrigerador": "2 días",
     "recalentar": "En horno suave."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 4,
+      "unidad": null,
+      "nombre": "huevos",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "cebollas",
+      "escalable": true
+    },
+    {
+      "cantidad": 3,
+      "unidad": null,
+      "nombre": "tallos de cebollines",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "chorizos colorados",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "leche",
+      "escalable": true
+    },
+    {
+      "cantidad": 4,
+      "unidad": "cucharada",
+      "nombre": "aceite",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "orégano",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pimienta",
+      "nota": "a gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Picar la cebolla en pluma, los cebollines en redondelas, aliñar con sal, pimienta y orégano.",
+      "ingredientes": [
+        2,
+        3,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "texto": "Batir los huevos con la leche y mezclar con las verduras.",
+      "ingredientes": [
+        1,
+        2,
+        5
+      ]
+    },
+    {
+      "texto": "Calentar el aceite, vaciarlo en una fuente y untar bien.",
+      "ingredientes": [
+        6
+      ]
+    },
+    {
+      "texto": "Revolver la mezcla en la fuente y cubrir con el chorizo cortado en trocitos.",
+      "ingredientes": [
+        4
+      ]
+    },
+    {
+      "texto": "Cocinar a horno caliente unos 10 minutos.",
+      "timers": [
+        {
+          "minutos": 10,
+          "etiqueta": "10 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Servir acompañada de ensaladas.",
+      "ingredientes": [
+        8
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 10
+  },
+  "revisado_v2": true
 }

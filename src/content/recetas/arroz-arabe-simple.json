@@ -1,14 +1,7 @@
 {
   "titulo": "Arroz Árabe Simple",
   "categoria": "principales",
-  "tags": [
-    "arroz árabe simple",
-    "arroz",
-    "fideos",
-    "pasas",
-    "curry",
-    "arroces"
-  ],
+  "tags": ["arroz árabe simple", "arroz", "fideos", "pasas", "curry", "arroces"],
   "imagen": null,
   "tiempo": "30 min",
   "porciones": "4 personas",
@@ -34,17 +27,31 @@
   ],
   "dato": "El arroz debe quedar cristalino al sofreírse: así absorbe mejor el líquido y queda suelto. El tostador de pan es un clásico de las cocinas chilenas: se usa para tostar pan, pero también como difusor de calor para cocinar arroz y otros guisos a fuego suave.",
   "errores": [
-    {
-      "error": "El arroz me quedó pasado o pegado",
-      "solucion": "No revolviste bien o lo cocinaste a fuego muy alto. No revuelvas durante la cocción y respeta el reposo tapado de 10 minutos para que se termine de cocinar al vapor."
-    },
-    {
-      "error": "Los fideos se me quemaron",
-      "solucion": "Los freíste a fuego muy alto. Dóralos a fuego medio, revolviendo constantemente, y retíralos antes de que se quemen."
-    }
+    { "error": "El arroz me quedó pasado o pegado", "solucion": "No revolviste bien o lo cocinaste a fuego muy alto. No revuelvas durante la cocción y respeta el reposo tapado de 10 minutos para que se termine de cocinar al vapor." },
+    { "error": "Los fideos se me quemaron", "solucion": "Los freíste a fuego muy alto. Dóralos a fuego medio, revolviendo constantemente, y retíralos antes de que se quemen." }
   ],
   "conservacion": {
     "refrigerador": "2 días",
     "recalentar": "Al vapor o en microondas con un poco de agua."
-  }
+  },
+  "ingredientes_v2": [
+    { "cantidad": 1.5, "unidad": "taza", "nombre": "arroz", "nota": "300 g", "escalable": true },
+    { "cantidad": 0.5, "unidad": "taza", "nombre": "fideos cabellos de ángel", "nota": "50 g, cortos", "escalable": true },
+    { "cantidad": 1, "unidad": "diente", "nombre": "ajo", "nota": "pelado", "escalable": true },
+    { "cantidad": 0.5, "unidad": "taza", "nombre": "pasas rubias", "nota": "80 g", "escalable": true },
+    { "cantidad": 3, "unidad": "taza", "nombre": "agua hirviendo", "nota": "750 ml", "escalable": true },
+    { "cantidad": 1, "unidad": null, "nombre": "sal", "nota": "a gusto", "escalable": false },
+    { "cantidad": 1, "unidad": null, "nombre": "pimienta", "nota": "a gusto", "escalable": false },
+    { "cantidad": 1, "unidad": null, "nombre": "aceite", "nota": "a gusto", "escalable": false },
+    { "cantidad": 1, "unidad": "cucharadita", "nombre": "curry", "seccion": "Opcional", "escalable": true }
+  ],
+  "pasos_v2": [
+    { "texto": "En una olla con un poco de aceite, freír el ajo y los cabellos de ángel hasta que estén dorados.", "ingredientes": [2, 3, 8] },
+    { "texto": "Agregar el arroz y sofreír hasta que esté cristalino, sin dorarse.", "ingredientes": [1, 8] },
+    { "texto": "Agregar las pasas, sal, curry y el agua hirviendo.", "ingredientes": [4, 5, 6, 9] },
+    { "texto": "Tapar la olla, poner un tostador de pan (difusor metálico) sobre la hornilla y dejar a fuego lento por 15 minutos. El tostador ayuda a distribuir el calor parejo y evita que el arroz se pegue.", "ingredientes": [1], "timers": [{ "minutos": 15, "etiqueta": "15 minutos" }] },
+    { "texto": "Apagar el fuego y dejar reposar sin abrir por 10 minutos antes de servir.", "timers": [{ "minutos": 10, "etiqueta": "10 minutos" }] }
+  ],
+  "tiempo_v2": { "reposo": 10, "coccion": 15 },
+  "revisado_v2": true
 }

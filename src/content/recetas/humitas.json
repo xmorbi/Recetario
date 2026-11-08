@@ -45,5 +45,107 @@
     "refrigerador": "Hasta 3 días cocidas con su hoja.",
     "congelador": "Hasta 3 meses, bien envueltas en papel plástico.",
     "recalentar": "Al vapor o en el microondas por 2-3 minutos (con un poco de agua para que no se sequen)."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 6,
+      "unidad": null,
+      "nombre": "choclos",
+      "nota": "rallados, tiernos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cebolla",
+      "nota": "muy fina, picada",
+      "escalable": true
+    },
+    {
+      "cantidad": 100,
+      "unidad": "g",
+      "nombre": "manteca",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "ají de color",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "albahaca y sal",
+      "nota": "fresca",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "hojas de choclo para envolver",
+      "nota": "a gusto",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Sofríe la cebolla en la manteca. Agrega el ají de color y revuelve.",
+      "ingredientes": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "texto": "Mezcla el choclo rallado con el sofrito, la albahaca y sal.",
+      "ingredientes": [
+        1,
+        5
+      ]
+    },
+    {
+      "texto": "Cocina a fuego bajo 10 minutos, revolviendo. Deja enfriar.",
+      "timers": [
+        {
+          "minutos": 10,
+          "etiqueta": "10 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Blanquea las hojas de choclo en agua caliente.",
+      "ingredientes": [
+        1,
+        6
+      ]
+    },
+    {
+      "texto": "Pon dos cucharadas de mezcla en cada hoja, envuelve y amarra.",
+      "ingredientes": [
+        6
+      ]
+    },
+    {
+      "texto": "Cocina en agua con sal hirviendo 30 a 40 minutos, o al horno a 180 °C por 40 minutos.",
+      "ingredientes": [
+        5
+      ],
+      "timers": [
+        {
+          "minutos": 40,
+          "etiqueta": "30 a 40 minutos"
+        },
+        {
+          "minutos": 40,
+          "etiqueta": "40 minutos"
+        }
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 10,
+    "coccion": 80
+  },
+  "revisado_v2": true
 }

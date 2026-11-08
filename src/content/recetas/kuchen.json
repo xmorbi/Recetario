@@ -50,5 +50,139 @@
     "refrigerador": "Hasta 3 días en recipiente hermético.",
     "congelador": "Hasta 2 meses.",
     "recalentar": "Horno a 180 °C por 5-8 minutos."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 300,
+      "unidad": "g",
+      "nombre": "harina",
+      "escalable": true,
+      "seccion": "Masa"
+    },
+    {
+      "cantidad": 150,
+      "unidad": "g",
+      "nombre": "mantequilla",
+      "nota": "fría",
+      "escalable": true,
+      "seccion": "Masa"
+    },
+    {
+      "cantidad": 100,
+      "unidad": "g",
+      "nombre": "azúcar",
+      "escalable": true,
+      "seccion": "Masa"
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "huevo",
+      "escalable": true,
+      "seccion": "Masa"
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "polvos de hornear",
+      "escalable": true,
+      "seccion": "Masa"
+    },
+    {
+      "cantidad": 1,
+      "unidad": "kg",
+      "nombre": "frutas",
+      "nota": "manzanas, ciruelas, duraznos o frutillas",
+      "escalable": true,
+      "seccion": "Relleno"
+    },
+    {
+      "cantidad": 3,
+      "unidad": "cucharada",
+      "nombre": "azúcar",
+      "escalable": true,
+      "seccion": "Relleno"
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "canela",
+      "escalable": true,
+      "seccion": "Relleno"
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "azúcar flor",
+      "escalable": false,
+      "seccion": "Cubierta"
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Precalienta el horno a 180 °C. Engrasa un molde redondo."
+    },
+    {
+      "texto": "Prepara la masa: mezcla la harina con los polvos de hornear y el azúcar. Agrega la mantequilla fría en cubos y trabaja con los dedos hasta que quede como arena. Añade el huevo y amasa hasta formar una masa lisa. Refrigera 30 minutos.",
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        9
+      ],
+      "timers": [
+        {
+          "minutos": 30,
+          "etiqueta": "30 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Estira la masa y forra el molde. Pincha con un tenedor."
+    },
+    {
+      "texto": "Pela y corta las frutas. Mezcla con el azúcar y la canela.",
+      "ingredientes": [
+        3,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "texto": "Distribuye las frutas sobre la masa.",
+      "ingredientes": [
+        6
+      ]
+    },
+    {
+      "texto": "Hornea 45-50 minutos, hasta que la masa esté dorada y las frutas tiernas.",
+      "ingredientes": [
+        6
+      ],
+      "timers": [
+        {
+          "minutos": 50,
+          "etiqueta": "45-50 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Deja enfriar y espolvorea azúcar flor antes de servir.",
+      "ingredientes": [
+        3,
+        5,
+        7,
+        9
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 80
+  },
+  "revisado_v2": true
 }

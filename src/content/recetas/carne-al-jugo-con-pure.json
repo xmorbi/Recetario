@@ -47,5 +47,133 @@
     "refrigerador": "Hasta 3 días por separado (carne y puré).",
     "congelador": "La carne hasta 2 meses. El puré no se recomienda congelar.",
     "recalentar": "La carne a fuego lento. El puré en microondas con un poco de leche."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": "kg",
+      "nombre": "tapapecho o posta",
+      "nota": "en trozos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cebolla",
+      "nota": "en pluma",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "diente",
+      "nombre": "ajo",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "zanahoria",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pimentón",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal, pimienta, orégano, comino y laurel",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "agua o caldo para cubrir",
+      "nota": "a gusto",
+      "escalable": true
+    },
+    {
+      "cantidad": 6,
+      "unidad": null,
+      "nombre": "papas",
+      "nota": "para el puré, medianas",
+      "escalable": true
+    },
+    {
+      "cantidad": 3,
+      "unidad": "cucharada",
+      "nombre": "mantequilla",
+      "nota": "45 g",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "taza",
+      "nombre": "leche",
+      "nota": "125 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal",
+      "nota": "para el puré",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Sofríe la cebolla, el ajo, la zanahoria y el pimentón.",
+      "ingredientes": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "texto": "Agrega la carne y dórala. Condimenta.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Cubre con agua o caldo y cocina a fuego lento hasta que la carne esté blanda (1 hora aprox.).",
+      "ingredientes": [
+        1,
+        7
+      ],
+      "timers": [
+        {
+          "minutos": 60,
+          "etiqueta": "1 hora"
+        }
+      ]
+    },
+    {
+      "texto": "Cuece las papas, mójalas con mantequilla, leche tibia y sal hasta obtener un puré cremoso.",
+      "ingredientes": [
+        6,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "texto": "Sirve la carne con su jugo sobre el puré.",
+      "ingredientes": [
+        1,
+        8,
+        11
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 60
+  },
+  "revisado_v2": true
 }

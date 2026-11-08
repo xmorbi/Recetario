@@ -44,5 +44,90 @@
   "conservacion": {
     "refrigerador": "5 días",
     "recalentar": "En microondas o horno suave."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 2,
+      "unidad": "taza",
+      "nombre": "queso cheddar",
+      "nota": "200 g, rallado",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "tarro",
+      "nombre": "ajíes verdes",
+      "nota": "con su jugo, 200 g, picados",
+      "escalable": true
+    },
+    {
+      "cantidad": 6,
+      "unidad": null,
+      "nombre": "huevos",
+      "nota": "grandes",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal y pimienta",
+      "nota": "a gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Precalentar el horno a 175 °C y engrasar un molde rectangular de aproximadamente 23x33 cm."
+    },
+    {
+      "texto": "Esparcir la mitad del queso cheddar en el fondo del molde.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Distribuir los ajíes verdes picados sobre el queso y cubrir con el resto del queso.",
+      "ingredientes": [
+        1,
+        2
+      ]
+    },
+    {
+      "texto": "En una licuadora, batir los huevos con el jugo reservado de los ajíes hasta que estén espumosos.",
+      "ingredientes": [
+        2,
+        3
+      ]
+    },
+    {
+      "texto": "Verter la mezcla de huevo sobre el queso de manera uniforme.",
+      "ingredientes": [
+        1,
+        3
+      ]
+    },
+    {
+      "texto": "Hornear por 30 minutos, hasta que la superficie esté dorada y el centro firme.",
+      "timers": [
+        {
+          "minutos": 30,
+          "etiqueta": "30 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Dejar enfriar al menos 10 minutos antes de cortar en cuadritos.",
+      "timers": [
+        {
+          "minutos": 10,
+          "etiqueta": "10 minutos"
+        }
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 10,
+    "coccion": 30
+  },
+  "revisado_v2": true
 }

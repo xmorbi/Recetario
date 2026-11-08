@@ -39,5 +39,80 @@
   ],
   "conservacion": {
     "refrigerador": "Servir de inmediato para evitar que la crema y las pulpas se separen."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 0.1,
+      "unidad": null,
+      "nombre": "ron blanco",
+      "nota": "25 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.2,
+      "unidad": null,
+      "nombre": "ron coco",
+      "nota": "50 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.1,
+      "unidad": null,
+      "nombre": "pulpa de piña",
+      "nota": "25 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.2,
+      "unidad": null,
+      "nombre": "pulpa de frambuesa",
+      "nota": "50 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.1,
+      "unidad": null,
+      "nombre": "crema de leche",
+      "nota": "25 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "azúcar",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "hielo",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "frutillas y hojas de menta",
+      "nota": "para decorar",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Colocar todos los ingredientes en la juguera y licuarlos hasta conseguir una consistencia homogénea.",
+      "ingredientes": [1, 2, 3, 4, 5, 6, 7]
+    },
+    {
+      "texto": "Servir en copa grande."
+    },
+    {
+      "texto": "Decorar con frutillas y hojas de menta.",
+      "ingredientes": [8]
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 5
+  },
+  "revisado_v2": true
 }

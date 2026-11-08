@@ -51,5 +51,119 @@
     "refrigerador": "Hasta 3 días en recipiente hermético o copas cubiertas con papel plástico.",
     "congelador": "No recomendado, la crema se separa.",
     "recalentar": "Se consume bien fría."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": "L",
+      "nombre": "leche entera",
+      "escalable": true
+    },
+    {
+      "cantidad": 4,
+      "unidad": null,
+      "nombre": "huevos",
+      "nota": "separar claras y yemas",
+      "escalable": true
+    },
+    {
+      "cantidad": 150,
+      "unidad": "g",
+      "nombre": "azúcar",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "rama",
+      "nombre": "canela",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "esencia de vainilla",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "maicena",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "canela molida",
+      "nota": "para servir",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Calienta la leche con la canela en rama sin que hierva.",
+      "ingredientes": [
+        1,
+        4,
+        7
+      ]
+    },
+    {
+      "texto": "Bate las yemas con el azúcar hasta que estén pálidas. Añade la maicena y mezcla.",
+      "ingredientes": [
+        2,
+        3,
+        6
+      ]
+    },
+    {
+      "texto": "Vierte un poco de leche caliente sobre las yemas (templar) y luego devuelve todo a la olla.",
+      "ingredientes": [
+        1,
+        2
+      ]
+    },
+    {
+      "texto": "Cocina a fuego bajo, revolviendo constantemente, hasta que espese (unos 5-7 minutos). No dejes que hierva.",
+      "timers": [
+        {
+          "minutos": 7,
+          "etiqueta": "5-7 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Retira la canela, añade la vainilla y vierte en un molde o en copas individuales.",
+      "ingredientes": [
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "texto": "Bate las claras a punto de nieve con un poco de azúcar. Cocínalas en la leche caliente (o al baño María) por cucharadas, hasta que cuajen. Colócalas encima del postre.",
+      "ingredientes": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "texto": "Refrigera al menos 3 horas. Sirve con canela molida encima.",
+      "ingredientes": [
+        4,
+        7
+      ],
+      "timers": [
+        {
+          "minutos": 180,
+          "etiqueta": "3 horas"
+        }
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 180,
+    "coccion": 7
+  },
+  "revisado_v2": true
 }

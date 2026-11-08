@@ -49,5 +49,140 @@
     "refrigerador": "A temperatura ambiente 2 días. En frío el merengue se humedece.",
     "congelador": "No recomendado, el merengue se estropea.",
     "recalentar": "A temperatura ambiente."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "harina",
+      "escalable": true,
+      "seccion": "Masa"
+    },
+    {
+      "cantidad": 3,
+      "unidad": null,
+      "nombre": "huevos",
+      "escalable": true,
+      "seccion": "Masa"
+    },
+    {
+      "cantidad": 50,
+      "unidad": "g",
+      "nombre": "mantequilla",
+      "escalable": true,
+      "seccion": "Masa"
+    },
+    {
+      "cantidad": 120,
+      "unidad": "g",
+      "nombre": "azúcar",
+      "escalable": true,
+      "seccion": "Masa"
+    },
+    {
+      "cantidad": 15,
+      "unidad": "g",
+      "nombre": "levadura",
+      "escalable": true,
+      "seccion": "Masa"
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "ralladura de limón o naranja",
+      "nota": "a gusto",
+      "escalable": true,
+      "seccion": "Masa"
+    },
+    {
+      "cantidad": 100,
+      "unidad": "ml",
+      "nombre": "agua o leche",
+      "nota": "tibia",
+      "escalable": true,
+      "seccion": "Masa"
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "claras de huevo",
+      "escalable": true,
+      "seccion": "Merengue"
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "azúcar flor",
+      "escalable": false,
+      "seccion": "Merengue"
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "vainilla y chispas de colores",
+      "nota": "opcional",
+      "escalable": true,
+      "seccion": "Merengue"
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Activa la levadura en el agua tibia con una cucharada de azúcar.",
+      "ingredientes": [
+        4,
+        5,
+        7,
+        9
+      ]
+    },
+    {
+      "texto": "Mezcla la harina con los huevos, mantequilla, azúcar y ralladura. Agrega la levadura y forma una masa suave.",
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "texto": "Deja reposar tapada hasta que doble su volumen."
+    },
+    {
+      "texto": "Forma bolitas de unos 70 g, colócalas en una bandeja engrasada y deja levar 30 min más.",
+      "timers": [
+        {
+          "minutos": 30,
+          "etiqueta": "30 min"
+        }
+      ]
+    },
+    {
+      "texto": "Hornea a 180 °C por 25-30 min. Deja enfriar.",
+      "timers": [
+        {
+          "minutos": 30,
+          "etiqueta": "25-30 min"
+        }
+      ]
+    },
+    {
+      "texto": "Bate las claras a nieve, añade el azúcar flor y la vainilla. Cubre los pancitos con el merengue y decora.",
+      "ingredientes": [
+        2,
+        4,
+        8,
+        9,
+        10
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 30,
+    "reposo": 30
+  },
+  "revisado_v2": true
 }

@@ -37,5 +37,77 @@
   ],
   "conservacion": {
     "refrigerador": "Se recomienda servir de inmediato para conservar el gas de la soda y la frescura de la menta."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 0.25,
+      "unidad": null,
+      "nombre": "ron blanco",
+      "escalable": true
+    },
+    {
+      "cantidad": 8,
+      "unidad": "hoja",
+      "nombre": "menta",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "limón de pica",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "soda",
+      "nota": "a gusto",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "azúcar",
+      "nota": "a gusto",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "hielo",
+      "nota": "picado",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Colocar en un vaso largo la menta, el azúcar y el jugo del limón; machacar cuidando de no moler las hojas.",
+      "ingredientes": [
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "texto": "Colocar el hielo, el ron y completar con soda.",
+      "ingredientes": [
+        1,
+        4,
+        6
+      ]
+    },
+    {
+      "texto": "Revolver bien."
+    },
+    {
+      "texto": "Decorar con una rodaja de limón.",
+      "ingredientes": [
+        3
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 5
+  },
+  "revisado_v2": true
 }

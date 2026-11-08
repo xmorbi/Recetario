@@ -48,5 +48,99 @@
     "refrigerador": "Hasta 3 días en frasco de vidrio cerrado.",
     "congelador": "No recomendado, pierde textura el tomate.",
     "recalentar": "Se consume a temperatura ambiente o frío."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": "kg",
+      "nombre": "tomates",
+      "nota": "maduros, bien",
+      "escalable": true
+    },
+    {
+      "cantidad": 3,
+      "unidad": "diente",
+      "nombre": "ajo",
+      "nota": "grandes",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "atado",
+      "nombre": "cilantro y 1 de perejil",
+      "escalable": false
+    },
+    {
+      "cantidad": 3,
+      "unidad": null,
+      "nombre": "ajíes verdes",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "orégano",
+      "nota": "fresco, seco",
+      "escalable": false
+    },
+    {
+      "cantidad": 0.3333333333333333,
+      "unidad": "taza",
+      "nombre": "aceite",
+      "nota": "80 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": 10,
+      "unidad": null,
+      "nombre": "granos de pimienta",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "sal",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "En un mortero de piedra, muele la sal, los ajos y la pimienta hasta formar una pasta.",
+      "ingredientes": [
+        2,
+        7,
+        8
+      ]
+    },
+    {
+      "texto": "Pica los ajíes, elimina las pepas y muélelos en el mortero.",
+      "ingredientes": [
+        4
+      ]
+    },
+    {
+      "texto": "Agrega el orégano, perejil y cilantro picados.",
+      "ingredientes": [
+        3,
+        5
+      ]
+    },
+    {
+      "texto": "Incorpora dos tomates para licuar la pasta y vacía en una fuente.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Añade el resto de los tomates pelados y trozados. Mezcla con el aceite.",
+      "ingredientes": [
+        1,
+        6
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 20
+  },
+  "revisado_v2": true
 }

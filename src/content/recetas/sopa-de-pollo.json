@@ -1,7 +1,14 @@
 {
   "titulo": "Sopa de pollo",
   "categoria": "sopas",
-  "tags": ["sopa", "pollo", "caldo", "olla", "casero", "invierno"],
+  "tags": [
+    "sopa",
+    "pollo",
+    "caldo",
+    "olla",
+    "casero",
+    "invierno"
+  ],
   "imagen": null,
   "tiempo": "50 min",
   "porciones": "4 personas",
@@ -41,5 +48,127 @@
     "refrigerador": "Hasta 3 días en recipiente hermético.",
     "congelador": "Hasta 2 meses, idealmente sin fideos.",
     "recalentar": "A fuego lento con un poco de caldo."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pollo trozado o 4 presas de pollo",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cebolla",
+      "nota": "picada",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "zanahorias",
+      "nota": "en rodajas",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "ramita",
+      "nombre": "apio",
+      "nota": "picada",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "papas",
+      "nota": "en cubos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "fideos o arroz",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "L",
+      "nombre": "agua",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal, pimienta y orégano",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "perejil",
+      "nota": "fresco",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Cocina el pollo en agua con sal por 30 minutos. Retira, desmenuza y reserva el caldo.",
+      "ingredientes": [
+        1,
+        7,
+        8
+      ],
+      "timers": [
+        {
+          "minutos": 30,
+          "etiqueta": "30 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "En otra olla, sofríe la cebolla, la zanahoria y el apio.",
+      "ingredientes": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "texto": "Agrega el caldo de pollo colado y lleva a hervor.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Añade las papas y cocina 15 minutos.",
+      "ingredientes": [
+        5
+      ],
+      "timers": [
+        {
+          "minutos": 15,
+          "etiqueta": "15 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Incorpora el pollo desmenuzado y los fideos o arroz. Cocina según el tiempo indicado.",
+      "ingredientes": [
+        1,
+        6
+      ]
+    },
+    {
+      "texto": "Condimenta con sal, pimienta y orégano. Sirve con perejil fresco.",
+      "ingredientes": [
+        8,
+        9
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 45
+  },
+  "revisado_v2": true
 }

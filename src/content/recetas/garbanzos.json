@@ -49,5 +49,133 @@
     "refrigerador": "Hasta 3 días en recipiente hermético.",
     "congelador": "Hasta 2 meses.",
     "recalentar": "A fuego lento con un poco de agua."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "garbanzos",
+      "nota": "remojados desde la noche anterior",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cebolla",
+      "nota": "picada, fina",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "diente",
+      "nombre": "ajo",
+      "nota": "picados",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "zanahoria",
+      "nota": "en cubos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pimentón rojo",
+      "nota": "en cubos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "longaniza",
+      "nota": "opcional, en rodajas",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "ají de color",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "orégano",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "hoja",
+      "nombre": "laurel",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "agua o caldo para cubrir",
+      "nota": "a gusto",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal, pimienta y aceite",
+      "nota": "a gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Remoja los garbanzos la noche anterior. Escurre y enjuaga.",
+      "ingredientes": [
+        1
+      ],
+      "previo": true
+    },
+    {
+      "texto": "Sofríe la cebolla, el ajo, la zanahoria y el pimentón hasta que estén tiernos.",
+      "ingredientes": [
+        2,
+        3,
+        4,
+        5,
+        11
+      ]
+    },
+    {
+      "texto": "Agrega la longaniza si usas, el ají de color, el orégano y el laurel.",
+      "ingredientes": [
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "texto": "Incorpora los garbanzos y cubre con agua o caldo. Cocina a fuego medio 45-60 minutos, hasta que estén blandos.",
+      "ingredientes": [
+        1,
+        10
+      ],
+      "timers": [
+        {
+          "minutos": 60,
+          "etiqueta": "45-60 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Condimenta con sal y pimienta al final. Sirve caliente con arroz o pan.",
+      "ingredientes": [
+        11
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 480,
+    "coccion": 60
+  },
+  "revisado_v2": true
 }

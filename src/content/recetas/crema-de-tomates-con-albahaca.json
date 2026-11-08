@@ -50,5 +50,154 @@
   "conservacion": {
     "refrigerador": "3 días",
     "congelador": "Se puede congelar hasta 2 meses."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": "kg",
+      "nombre": "tomates",
+      "nota": "maduros",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "0.5 cucharadas de harina",
+      "nota": "25 g",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "salsa inglesa",
+      "nota": "15 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cebolla",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "vino blanco",
+      "nota": "250 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "diente",
+      "nombre": "ajo",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "salsa de ají",
+      "nota": "a gusto",
+      "escalable": true
+    },
+    {
+      "cantidad": 3,
+      "unidad": "cucharada",
+      "nombre": "aceite",
+      "nota": "45 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": 3,
+      "unidad": "cucharada",
+      "nombre": "albahaca",
+      "nota": "picada, fina",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "ciboulette",
+      "nota": "picado",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pimienta",
+      "nota": "a gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Pelar los tomates, quitar las pepas y trocearlos.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Picar finamente la cebolla y el ajo, y freírlos en el aceite caliente revolviendo para que no se doren.",
+      "ingredientes": [
+        4,
+        6,
+        8
+      ]
+    },
+    {
+      "texto": "Agregar los tomates, sal, pimienta y cocinar unos 10 minutos.",
+      "ingredientes": [
+        1,
+        11,
+        12
+      ],
+      "timers": [
+        {
+          "minutos": 10,
+          "etiqueta": "10 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Disolver la harina en 1/4 taza de agua fría y agregarla a la olla, revolviendo constantemente para que no se formen grumos.",
+      "ingredientes": [
+        2
+      ]
+    },
+    {
+      "texto": "Sazonar con salsa inglesa, ají al gusto y el vino. Cocinar durante unos 20 minutos.",
+      "ingredientes": [
+        3,
+        5,
+        7,
+        11
+      ],
+      "timers": [
+        {
+          "minutos": 20,
+          "etiqueta": "20 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Retirar, dejar enfriar y batir en la licuadora hasta formar una crema."
+    },
+    {
+      "texto": "Servir en tazones, espolvorear albahaca y ciboulette picados finos.",
+      "ingredientes": [
+        9,
+        10
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 30
+  },
+  "revisado_v2": true
 }

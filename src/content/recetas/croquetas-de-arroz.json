@@ -47,5 +47,125 @@
     "refrigerador": "2 días",
     "congelador": "Se pueden congelar ya formadas y freír directamente.",
     "recalentar": "Horno o freidora de aire a 180 °C por 5-8 minutos."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "0.5 taza de arroz ya",
+      "nota": "300 g, graneado, cocido, frío",
+      "escalable": true
+    },
+    {
+      "cantidad": 150,
+      "unidad": "g",
+      "nombre": "champiñones",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "huevos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "pan",
+      "nota": "100 g, rallado",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "jugo de 0.5 limón",
+      "nota": "a gusto",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "perejil",
+      "nota": "picado",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "aceite",
+      "nota": "250 ml, para freír",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pimienta",
+      "nota": "a gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Mezclar el arroz graneado frío con los champiñones salteados y cortados en tiritas.",
+      "ingredientes": [
+        1,
+        2,
+        7,
+        8
+      ]
+    },
+    {
+      "texto": "Aliñar con sal, jugo de limón, pimienta y perejil.",
+      "ingredientes": [
+        5,
+        6,
+        8,
+        9
+      ]
+    },
+    {
+      "texto": "Formar croquetas, pasar por huevo batido y luego por pan rallado.",
+      "ingredientes": [
+        3,
+        4
+      ]
+    },
+    {
+      "texto": "Refrigerar 20 minutos para que firmen y no se desarmen al freír.",
+      "ingredientes": [
+        7
+      ],
+      "timers": [
+        {
+          "minutos": 20,
+          "etiqueta": "20 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Freír en aceite caliente (170-180 °C) hasta dorar por ambos lados.",
+      "ingredientes": [
+        7
+      ]
+    },
+    {
+      "texto": "Servir acompañadas de ensaladas y espolvoreadas con perejil picado.",
+      "ingredientes": [
+        4,
+        6,
+        8
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 20
+  },
+  "revisado_v2": true
 }

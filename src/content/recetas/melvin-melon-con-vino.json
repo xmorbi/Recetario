@@ -46,5 +46,88 @@
     "refrigerador": "Hasta 2 días en recipiente cerrado. El melón se pone blando.",
     "congelador": "No recomendado, el melón pierde textura.",
     "recalentar": "Se consume bien frío."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "melón tuna",
+      "nota": "o calameño, maduro, grande, bien",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "botella",
+      "nombre": "vino blanco",
+      "nota": "Chardonnay, Sauvignon Blanc o pipeño, helado, bien",
+      "escalable": true
+    },
+    {
+      "cantidad": 3,
+      "unidad": "cucharada",
+      "nombre": "azúcar",
+      "nota": "ajustar al dulzor del melón",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "hielo",
+      "nota": "a gusto",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "hojas de menta jengibre",
+      "nota": "rallado, fresca",
+      "seccion": "Opcional",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Corta el melón por la mitad a lo largo. Retira las semillas con una cuchara.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Con una cuchara, ahueca ligeramente la pulpa para hacer espacio para el vino.",
+      "ingredientes": [
+        2
+      ]
+    },
+    {
+      "texto": "Espolvorea el azúcar dentro de las mitades y deja reposar 15 minutos para que el melón suelte su jugo.",
+      "ingredientes": [
+        1,
+        3
+      ],
+      "timers": [
+        {
+          "minutos": 15,
+          "etiqueta": "15 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Rellena con el vino blanco bien helado. Añade hielo y, si quieres, menta o jengibre.",
+      "ingredientes": [
+        2,
+        4
+      ]
+    },
+    {
+      "texto": "Sirve con cuchara y bombilla. Se come el melón y se bebe el vino.",
+      "ingredientes": [
+        1,
+        2
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 15
+  },
+  "revisado_v2": true
 }

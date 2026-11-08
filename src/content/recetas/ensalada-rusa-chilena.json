@@ -44,5 +44,96 @@
     "refrigerador": "Hasta 3 días en recipiente hermético.",
     "congelador": "No recomendado, la mayonesa se corta y las papas se aguadan.",
     "recalentar": "Se consume fría."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 5,
+      "unidad": null,
+      "nombre": "papas",
+      "nota": "medianas",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "zanahorias",
+      "nota": "medianas",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "taza",
+      "nombre": "arvejas",
+      "nota": "75 g, cocidas",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "taza",
+      "nombre": "mayonesa",
+      "nota": "125 g",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "taza",
+      "nombre": "yogur griego",
+      "nota": "125 g, opcional",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cilantro, sal y pimienta",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": null,
+      "nombre": "cebolla",
+      "nota": "opcional, pequeña",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Cuece las papas y zanahorias en agua con sal hasta que estén tiernas. Escurre y enfría.",
+      "ingredientes": [
+        1,
+        2
+      ]
+    },
+    {
+      "texto": "Pélalas y córtalas en cubos pequeños."
+    },
+    {
+      "texto": "Mezcla con las arvejas y la cebolla si la usas.",
+      "ingredientes": [
+        3,
+        7
+      ]
+    },
+    {
+      "texto": "Incorpora la mayonesa y el yogur. Salpimenta y añade cilantro.",
+      "ingredientes": [
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "texto": "Refrigera al menos 30 min antes de servir.",
+      "timers": [
+        {
+          "minutos": 30,
+          "etiqueta": "30 min"
+        }
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 30
+  },
+  "revisado_v2": true
 }

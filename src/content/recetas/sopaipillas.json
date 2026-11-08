@@ -1,7 +1,14 @@
 {
   "titulo": "Sopaipillas",
   "categoria": "panes",
-  "tags": ["sopaipilla", "fritura", "invierno", "pan", "merienda", "once"],
+  "tags": [
+    "sopaipilla",
+    "fritura",
+    "invierno",
+    "pan",
+    "merienda",
+    "once"
+  ],
   "imagen": "img/sopaipillas.jpg",
   "tiempo": "45 min",
   "porciones": "20 unidades",
@@ -39,5 +46,95 @@
     "refrigerador": "A temperatura ambiente 2 días. En frío se ponen duras.",
     "congelador": "Hasta 3 meses en bolsa hermética.",
     "recalentar": "En horno o freidora de aire a 180°C por 5 minutos para recuperar la textura."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "zapallo y molido",
+      "nota": "cocido",
+      "escalable": true
+    },
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "harina",
+      "escalable": true
+    },
+    {
+      "cantidad": 100,
+      "unidad": "g",
+      "nombre": "manteca derretida",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "sal",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "polvos de hornear",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "aceite",
+      "nota": "para freír",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "chancaca, canela y cáscara de naranja",
+      "nota": "a gusto",
+      "seccion": "Opcional",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Mezcla el zapallo molido con la harina, la sal y los polvos de hornear.",
+      "ingredientes": [
+        1,
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "texto": "Agrega la manteca derretida y amasa hasta que la masa no se pegue en las manos.",
+      "ingredientes": [
+        3
+      ]
+    },
+    {
+      "texto": "Reposa 20 minutos tapada con un paño.",
+      "timers": [
+        {
+          "minutos": 20,
+          "etiqueta": "20 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Estira a 5 mm de grosor y corta discos de unos 8 cm."
+    },
+    {
+      "texto": "Pincha cada disco con un tenedor."
+    },
+    {
+      "texto": "Fríe en aceite caliente hasta dorar. Escurre sobre papel absorbente.",
+      "ingredientes": [
+        6
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 20
+  },
+  "revisado_v2": true
 }

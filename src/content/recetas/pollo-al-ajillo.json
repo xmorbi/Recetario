@@ -45,5 +45,97 @@
     "refrigerador": "Hasta 3 días en recipiente hermético.",
     "congelador": "Hasta 2 meses.",
     "recalentar": "A fuego lento con su salsa."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 4,
+      "unidad": "trutro",
+      "nombre": "pollo",
+      "escalable": true
+    },
+    {
+      "cantidad": 8,
+      "unidad": "diente",
+      "nombre": "ajo laminados",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "taza",
+      "nombre": "aceite de oliva",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "taza",
+      "nombre": "vino blanco",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "hoja",
+      "nombre": "laurel",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "ají de color",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal, pimienta y perejil",
+      "nota": "a gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Sazona el pollo con sal, pimienta y ají de color.",
+      "ingredientes": [
+        1,
+        6,
+        7
+      ]
+    },
+    {
+      "texto": "Calienta el aceite en una sartén grande. Dora los ajos laminados y retíralos antes de que se quemen.",
+      "ingredientes": [
+        2,
+        3
+      ]
+    },
+    {
+      "texto": "Dora el pollo en el mismo aceite por ambos lados.",
+      "ingredientes": [
+        1,
+        3
+      ]
+    },
+    {
+      "texto": "Agrega el vino blanco y el laurel. Tapa y cocina 25-30 minutos a fuego medio, dando vuelta cada tanto.",
+      "ingredientes": [
+        4,
+        5
+      ],
+      "timers": [
+        {
+          "minutos": 30,
+          "etiqueta": "25-30 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Devuelve los ajos a la sartén, espolvorea perejil y sirve con papas o arroz.",
+      "ingredientes": [
+        2
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 30
+  },
+  "revisado_v2": true
 }

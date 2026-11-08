@@ -44,5 +44,96 @@
     "refrigerador": "Hasta 2 días en recipiente hermético.",
     "congelador": "No recomendado.",
     "recalentar": "Sartén a fuego medio 2 minutos por lado."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": "atado",
+      "nombre": "espinacas",
+      "nota": "frescas",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cebolla",
+      "nota": "pequeña, picada, fina",
+      "escalable": true
+    },
+    {
+      "cantidad": 6,
+      "unidad": null,
+      "nombre": "huevos",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "aceite",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal, pimienta y nuez moscada",
+      "nota": "opcional",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Lava bien las espinacas y pícalas finas. Escúrrelas bien.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Sofríe la cebolla en aceite hasta que esté transparente. Agrega la espinaca y cocina 3-4 minutos, hasta que se ablande.",
+      "ingredientes": [
+        1,
+        2,
+        4
+      ],
+      "timers": [
+        {
+          "minutos": 4,
+          "etiqueta": "3-4 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Bate los huevos con sal, pimienta y nuez moscada. Agrega la espinaca y la cebolla.",
+      "ingredientes": [
+        1,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "texto": "Vierte la mezcla en la sartén y cocina a fuego medio 5-7 minutos, hasta que los bordes se despeguen.",
+      "timers": [
+        {
+          "minutos": 7,
+          "etiqueta": "5-7 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Da vuelta la tortilla con un plato y cocina 3-4 minutos más.",
+      "timers": [
+        {
+          "minutos": 4,
+          "etiqueta": "3-4 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Sirve tibia o fría, cortada en porciones."
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 15
+  },
+  "revisado_v2": true
 }

@@ -43,5 +43,90 @@
   ],
   "conservacion": {
     "refrigerador": "Servir de inmediato. El pescado crudo no se conserva bien una vez aliñado."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 400,
+      "unidad": "g",
+      "nombre": "salmón",
+      "nota": "cortado, muy fino, fresco",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "taza",
+      "nombre": "jugo de limón",
+      "nota": "125 ml",
+      "escalable": false
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "alcaparras",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "queso parmesano",
+      "nota": "en hebras, rallado, gruesas",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "aceite de oliva",
+      "nota": "30 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pimienta negra de molinillo",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal",
+      "nota": "a gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Poner el salmón en un plato, agregarle sal, pimienta y el aceite de oliva.",
+      "ingredientes": [
+        1,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "texto": "Añadir el jugo de limón y dejar macerar 10-15 minutos en el refrigerador.",
+      "ingredientes": [
+        2
+      ],
+      "timers": [
+        {
+          "minutos": 15,
+          "etiqueta": "10-15 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Al momento de servir, escurrir el exceso de limón, y poner encima el queso rallado y las alcaparras.",
+      "ingredientes": [
+        2,
+        3,
+        4
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 15
+  },
+  "revisado_v2": true
 }

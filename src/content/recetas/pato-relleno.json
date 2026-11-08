@@ -47,5 +47,142 @@
   "conservacion": {
     "refrigerador": "2 días",
     "recalentar": "En horno suave con un poco de caldo."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pato",
+      "nota": "tierno",
+      "escalable": true
+    },
+    {
+      "cantidad": 300,
+      "unidad": "g",
+      "nombre": "castañas",
+      "nota": "peladas, cocidas",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "huevos",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "taza",
+      "nombre": "jugo de limón",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "vaso",
+      "nombre": "vino blanco",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "ciruelas",
+      "nota": "deshuesadas, secas",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "nuez moscada",
+      "nota": "a gusto",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pimienta",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "taza",
+      "nombre": "crema",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Limpiar bien el pato y rociarlo con jugo de limón y sal por dentro y por fuera.",
+      "ingredientes": [
+        1,
+        4,
+        8
+      ]
+    },
+    {
+      "texto": "Dejarlo en el refrigerador de un día para otro.",
+      "previo": true
+    },
+    {
+      "texto": "Preparar un relleno con las castañas pasadas por cedazo, las ciruelas, huevos, la mitad de la crema, pimienta, sal y nuez moscada.",
+      "ingredientes": [
+        2,
+        3,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "texto": "Estilar el pato, rellenar con esta mezcla y coserlo con hilo blanco firme.",
+      "ingredientes": [
+        1,
+        5
+      ]
+    },
+    {
+      "texto": "Amarrar alas y piernas, rociar de nuevo con jugo de limón y un poco de sal.",
+      "ingredientes": [
+        4,
+        8
+      ]
+    },
+    {
+      "texto": "Dejar en cocción en horno caliente."
+    },
+    {
+      "texto": "Mezclar la crema restante con el vino, sazonar, batir y bañar con esto el pato cuando esté dorándose.",
+      "ingredientes": [
+        1,
+        5,
+        10
+      ]
+    },
+    {
+      "texto": "Antes de retirarlo del horno, agregar una taza de agua a la fuente para que se desprenda bien el jugo que se haya resecado.",
+      "ingredientes": [
+        4
+      ]
+    },
+    {
+      "texto": "Servir los trozos de pato bañados con su jugo acompañado con una porción del relleno y ensaladas.",
+      "ingredientes": [
+        1,
+        4,
+        8
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 1440
+  },
+  "revisado_v2": true
 }

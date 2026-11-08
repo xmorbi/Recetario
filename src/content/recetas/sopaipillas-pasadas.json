@@ -1,7 +1,14 @@
 {
   "titulo": "Sopaipillas pasadas",
   "categoria": "panes",
-  "tags": ["sopaipilla", "dulce", "chancaca", "invierno", "merienda", "once"],
+  "tags": [
+    "sopaipilla",
+    "dulce",
+    "chancaca",
+    "invierno",
+    "merienda",
+    "once"
+  ],
   "imagen": "img/Sopaipillas-pasadas.jpg",
   "tiempo": "45 min",
   "porciones": "20 unidades",
@@ -40,5 +47,120 @@
     "refrigerador": "Hasta 2 días en recipiente hermético.",
     "congelador": "Hasta 2 meses sin el almíbar. Congela las sopaipillas fritas y luego prepara el almíbar al servir.",
     "recalentar": "En horno o freidora de aire por 5 minutos. Luego bañar con almíbar caliente."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "harina",
+      "escalable": true,
+      "seccion": "Masa"
+    },
+    {
+      "cantidad": 300,
+      "unidad": "g",
+      "nombre": "zapallo y molido",
+      "nota": "cocido",
+      "escalable": true,
+      "seccion": "Masa"
+    },
+    {
+      "cantidad": 100,
+      "unidad": "g",
+      "nombre": "manteca derretida",
+      "escalable": true,
+      "seccion": "Masa"
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "sal y 1 cdta de polvos de hornear",
+      "escalable": false,
+      "seccion": "Masa"
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "aceite",
+      "nota": "para freír",
+      "escalable": true,
+      "seccion": "Masa"
+    },
+    {
+      "cantidad": 250,
+      "unidad": "g",
+      "nombre": "chancaca",
+      "escalable": true,
+      "seccion": "Chancaca"
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "taza",
+      "nombre": "agua",
+      "escalable": true,
+      "seccion": "Chancaca"
+    },
+    {
+      "cantidad": 1,
+      "unidad": "rama",
+      "nombre": "canela",
+      "escalable": true,
+      "seccion": "Chancaca"
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cáscara de 1 naranja",
+      "nota": "a gusto",
+      "escalable": true,
+      "seccion": "Chancaca"
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "clavos de olor",
+      "escalable": true,
+      "seccion": "Chancaca"
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Mezcla el zapallo, la harina, la sal y los polvos de hornear. Agrega la manteca y amasa hasta obtener una masa suave.",
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "texto": "Reposa 20 min, estira a 5 mm y corta discos de 8 cm. Pincha con un tenedor y fríe en aceite caliente hasta dorar.",
+      "ingredientes": [
+        5
+      ],
+      "timers": [
+        {
+          "minutos": 20,
+          "etiqueta": "20 min"
+        }
+      ]
+    },
+    {
+      "texto": "Aparte, hierve la chancaca con el agua, la canela, la cáscara de naranja y los clavos hasta formar un almíbar.",
+      "ingredientes": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "texto": "Baña las sopaipillas recién fritas con el almíbar caliente y sirve."
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 20
+  },
+  "revisado_v2": true
 }

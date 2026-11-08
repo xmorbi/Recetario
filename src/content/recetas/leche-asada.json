@@ -43,5 +43,83 @@
     "refrigerador": "Hasta 3 días en un recipiente hermético o cubierto con papel plástico.",
     "congelador": "No recomendado, la textura del huevo se estropea.",
     "recalentar": "Se consume fría. Si la quieres tibia, sácala del refrigerador 15 minutos antes."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": "L",
+      "nombre": "leche",
+      "escalable": true
+    },
+    {
+      "cantidad": 6,
+      "unidad": null,
+      "nombre": "huevos",
+      "escalable": true
+    },
+    {
+      "cantidad": 150,
+      "unidad": "g",
+      "nombre": "azúcar",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "vainilla",
+      "escalable": true
+    },
+    {
+      "cantidad": 100,
+      "unidad": "g",
+      "nombre": "azúcar",
+      "nota": "para el caramelo",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Derrite el azúcar en una sartén hasta que tome color dorado. Vierte en el fondo del molde.",
+      "ingredientes": [
+        3,
+        5
+      ]
+    },
+    {
+      "texto": "Bate los huevos con el azúcar hasta que estén cremosos.",
+      "ingredientes": [
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "texto": "Agrega la leche tibia y la vainilla, mezclando suavemente.",
+      "ingredientes": [
+        1,
+        4
+      ]
+    },
+    {
+      "texto": "Vierte en el molde caramelizado y cúbrelo con papel aluminio."
+    },
+    {
+      "texto": "Hornea al baño María a 180 °C por 50 a 60 minutos.",
+      "timers": [
+        {
+          "minutos": 60,
+          "etiqueta": "50 a 60 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Deja enfriar y refrigera al menos 2 horas antes de desmoldar.",
+      "previo": true
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 120,
+    "coccion": 60
+  },
+  "revisado_v2": true
 }

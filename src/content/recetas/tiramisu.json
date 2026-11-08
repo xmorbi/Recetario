@@ -1,7 +1,14 @@
 {
   "titulo": "Tiramisú",
   "categoria": "dulces",
-  "tags": ["postre", "tiramisú", "café", "mascarpone", "italiano", "reposteria"],
+  "tags": [
+    "postre",
+    "tiramisú",
+    "café",
+    "mascarpone",
+    "italiano",
+    "reposteria"
+  ],
   "imagen": null,
   "tiempo": "30 min + frío",
   "porciones": "8 porciones",
@@ -40,5 +47,109 @@
     "refrigerador": "Hasta 3 días en recipiente hermético.",
     "congelador": "No recomendado.",
     "recalentar": "Se consume frío."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "queso mascarpone",
+      "escalable": true
+    },
+    {
+      "cantidad": 4,
+      "unidad": null,
+      "nombre": "huevos",
+      "nota": "separar claras y yemas",
+      "escalable": true
+    },
+    {
+      "cantidad": 100,
+      "unidad": "g",
+      "nombre": "azúcar",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "café espresso",
+      "nota": "frío",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "licor",
+      "nota": "amaretto o ron",
+      "escalable": true
+    },
+    {
+      "cantidad": 200,
+      "unidad": "g",
+      "nombre": "galletas de champaña o bizcochos de soletilla",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cacao",
+      "nota": "para espolvorear, en polvo",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Bate las yemas con el azúcar hasta que estén pálidas. Agrega el mascarpone y mezcla bien.",
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "texto": "Bate las claras a punto de nieve e incorpóralas a la mezcla de mascarpone con movimientos envolventes.",
+      "ingredientes": [
+        1,
+        2
+      ]
+    },
+    {
+      "texto": "Mezcla el café con el licor en un plato hondo.",
+      "ingredientes": [
+        4,
+        5
+      ]
+    },
+    {
+      "texto": "Moja las galletas en el café (solo 1-2 segundos por lado) y colócalas en el fondo de una fuente.",
+      "ingredientes": [
+        4,
+        6
+      ]
+    },
+    {
+      "texto": "Cubre con la mitad de la crema de mascarpone. Repite con otra capa de galletas y el resto de la crema.",
+      "ingredientes": [
+        1,
+        6
+      ]
+    },
+    {
+      "texto": "Refrigera al menos 4 horas (mejor toda la noche).",
+      "previo": true
+    },
+    {
+      "texto": "Espolvorea cacao en polvo antes de servir.",
+      "ingredientes": [
+        7
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 240
+  },
+  "revisado_v2": true
 }

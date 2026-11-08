@@ -48,5 +48,90 @@
     "refrigerador": "No se guarda armado.",
     "congelador": "No aplica.",
     "recalentar": "En plancha o sándwichera 2 minutos."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "panes amasados individuales",
+      "nota": "o 2 marraquetas pequeñas",
+      "escalable": true
+    },
+    {
+      "cantidad": 200,
+      "unidad": "g",
+      "nombre": "jamón de pierna",
+      "nota": "en láminas, gruesas",
+      "escalable": true
+    },
+    {
+      "cantidad": 200,
+      "unidad": "g",
+      "nombre": "queso mantecoso o chanco",
+      "nota": "en láminas, gruesas",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "mantequilla",
+      "nota": "para la plancha",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Calienta la plancha o sartén a fuego medio con un poco de mantequilla.",
+      "ingredientes": [
+        4
+      ]
+    },
+    {
+      "texto": "Abre los panes por la mitad y tuéstalos 1 minuto por lado.",
+      "ingredientes": [
+        1
+      ],
+      "timers": [
+        {
+          "minutos": 1,
+          "etiqueta": "1 minuto"
+        }
+      ]
+    },
+    {
+      "texto": "En la misma plancha, pon el jamón 30 segundos por lado hasta que tome temperatura. No lo cocines de más: el jamón se seca.",
+      "ingredientes": [
+        2,
+        4
+      ]
+    },
+    {
+      "texto": "Pon el jamón sobre la mitad inferior del pan, encima el queso, y tapa con la otra mitad.",
+      "ingredientes": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "texto": "Pasa el sándwich armado a la plancha, tapado con una tapa o peso, 1-2 minutos hasta que el queso se derrita.",
+      "ingredientes": [
+        3,
+        4
+      ],
+      "timers": [
+        {
+          "minutos": 2,
+          "etiqueta": "1-2 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Sirve inmediatamente, cortado en diagonal si quieres."
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 3
+  },
+  "revisado_v2": true
 }

@@ -42,5 +42,72 @@
     "refrigerador": "Se consume al momento.",
     "congelador": "No recomendado.",
     "recalentar": "No aplica."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 2,
+      "unidad": "taza",
+      "nombre": "leche",
+      "nota": "fría",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "plátano",
+      "nota": "maduro",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "azúcar",
+      "nota": "opcional",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "pizca",
+      "nombre": "canela",
+      "nota": "opcional",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "hielo",
+      "nota": "opcional",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Pela el plátano y córtalo en trozos.",
+      "ingredientes": [
+        2
+      ]
+    },
+    {
+      "texto": "Licúa la leche con el plátano, el azúcar y la canela hasta obtener una mezcla homogénea.",
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "texto": "Si quieres, agrega hielo y licúa de nuevo.",
+      "ingredientes": [
+        5
+      ]
+    },
+    {
+      "texto": "Sirve inmediatamente en vasos altos."
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 5
+  },
+  "revisado_v2": true
 }

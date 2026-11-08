@@ -37,5 +37,64 @@
   ],
   "conservacion": {
     "refrigerador": "1 semana."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "manjar blanco",
+      "nota": "250 g",
+      "escalable": true
+    },
+    {
+      "cantidad": 4,
+      "unidad": "taza",
+      "nombre": "azúcar flor cernida",
+      "nota": "500 g",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "nueces",
+      "nota": "unas 30, en mitades, partidas, peladas",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "vainilla",
+      "nota": "5 ml",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Mezclar el manjar con el azúcar y la vainilla revolviendo con cuchara de madera.",
+      "ingredientes": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "texto": "Formar bolitas y colocar una mitad de nuez encima de cada una.",
+      "ingredientes": [
+        3
+      ]
+    },
+    {
+      "texto": "Dejar secar a temperatura ambiente por 2 horas, hasta que firmen.",
+      "timers": [
+        {
+          "minutos": 120,
+          "etiqueta": "2 horas"
+        }
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 120
+  },
+  "revisado_v2": true
 }

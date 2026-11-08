@@ -48,5 +48,133 @@
   ],
   "conservacion": {
     "refrigerador": "Se pueden preparar con anticipación y mantener en el refrigerador tapadas hasta 2 días."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 6,
+      "unidad": null,
+      "nombre": "betarragas",
+      "nota": "1 kg aprox., medianas",
+      "escalable": true
+    },
+    {
+      "cantidad": 250,
+      "unidad": "g",
+      "nombre": "quesillo",
+      "escalable": true
+    },
+    {
+      "cantidad": 200,
+      "unidad": "g",
+      "nombre": "mayonesa",
+      "escalable": true
+    },
+    {
+      "cantidad": 60,
+      "unidad": "g",
+      "nombre": "nueces",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "lechuga",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "jugo de limón",
+      "nota": "de 1 limón",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pimienta",
+      "nota": "a gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Lavar muy bien las betarragas y quitarles los tallos.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Ponerlas a cocer en agua fría con 1 cucharada rasa de sal por 30-40 minutos, hasta que estén blandas pero firmes.",
+      "ingredientes": [
+        7
+      ],
+      "timers": [
+        {
+          "minutos": 40,
+          "etiqueta": "30-40 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Retirarlas del fuego, enfriar y ahuecar con una cuchara, con cuidado de no romperlas."
+    },
+    {
+      "texto": "Tostar las nueces en el horno a 180 °C por 5-8 minutos. Cuando estén tibias, refregarlas con un paño hasta que se suelte el hollejo y luego molerlas.",
+      "ingredientes": [
+        4
+      ],
+      "timers": [
+        {
+          "minutos": 8,
+          "etiqueta": "5-8 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Moler el quesillo y mezclarlo con la mitad de la mayonesa y las nueces.",
+      "ingredientes": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "texto": "Aliñar las betarragas con sal, pimienta y jugo de limón, por dentro y por fuera.",
+      "ingredientes": [
+        1,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "texto": "Rellenar las betarragas con la mezcla.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Cubrir la parte superior con el resto de la mayonesa.",
+      "ingredientes": [
+        3
+      ]
+    },
+    {
+      "texto": "Acompañar con hojas de lechuga.",
+      "ingredientes": [
+        5
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 48
+  },
+  "revisado_v2": true
 }

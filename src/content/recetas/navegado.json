@@ -48,5 +48,86 @@
     "refrigerador": "Hasta 2 días en botella cerrada. Recalienta suavemente antes de servir.",
     "congelador": "No recomendado.",
     "recalentar": "A fuego muy bajo, sin hervir, hasta que esté caliente."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": "botella",
+      "nombre": "vino de buena calidad",
+      "nota": "Cabernet Sauvignon, Merlot o vino de la zona, tinto",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "naranjas",
+      "nota": "con cáscara bien lavada, en rodajas",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "rama",
+      "nombre": "canela",
+      "escalable": true
+    },
+    {
+      "cantidad": 3,
+      "unidad": null,
+      "nombre": "clavos de olor",
+      "escalable": true
+    },
+    {
+      "cantidad": 3,
+      "unidad": "cucharada",
+      "nombre": "azúcar",
+      "nota": "ajustar al gusto",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "chorrito de pisco o aguardiente",
+      "seccion": "Opcional",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "En una olla, pon el vino tinto con las rodajas de naranja, la canela y los clavos de olor.",
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "texto": "Calienta a fuego muy bajo. No dejes que hierva: el alcohol se evapora y el vino se amarga.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Cuando esté caliente, añade el azúcar y revuelve hasta disolver.",
+      "ingredientes": [
+        5
+      ]
+    },
+    {
+      "texto": "Prueba y ajusta el dulzor y las especias. Si quieres, añade un chorrito de pisco.",
+      "ingredientes": [
+        6
+      ]
+    },
+    {
+      "texto": "Cuela si prefieres y sirve caliente en vasos o tazas. Decora con una rodaja de naranja.",
+      "ingredientes": [
+        2
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 15
+  },
+  "revisado_v2": true
 }

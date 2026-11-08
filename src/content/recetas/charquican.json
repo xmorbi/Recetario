@@ -49,5 +49,101 @@
     "refrigerador": "Hasta 3 días en recipiente hermético.",
     "congelador": "Hasta 2 meses.",
     "recalentar": "A fuego lento en la olla. Si está muy espeso, agrega un chorrito de agua o leche."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "carne",
+      "nota": "o charqui remojado y desmenuzado, picada",
+      "escalable": true
+    },
+    {
+      "cantidad": 3,
+      "unidad": null,
+      "nombre": "papas",
+      "nota": "en cubos",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": null,
+      "nombre": "zapallo",
+      "nota": "en cubos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cebolla",
+      "nota": "picada",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "choclo o 1 taza de arvejas",
+      "nota": "150 g, desgranado",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "comino, ají de color, orégano y sal",
+      "nota": "a gusto",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "huevos",
+      "nota": "para freír al servir",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Hierve papas y zapallo en agua con sal hasta que estén blandos. Reserva un poco del agua.",
+      "ingredientes": [
+        2,
+        3
+      ]
+    },
+    {
+      "texto": "Sofríe la cebolla en otra olla. Agrega la carne y condimenta.",
+      "ingredientes": [
+        1,
+        4
+      ]
+    },
+    {
+      "texto": "Incorpora el choclo o las arvejas y cocina 5 minutos.",
+      "ingredientes": [
+        5
+      ],
+      "timers": [
+        {
+          "minutos": 5,
+          "etiqueta": "5 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Agrega las papas y el zapallo escurridos. Maja la mezcla con un tenedor.",
+      "ingredientes": [
+        2,
+        3
+      ]
+    },
+    {
+      "texto": "Sirve con un huevo frito encima.",
+      "ingredientes": [
+        7
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 5
+  },
+  "revisado_v2": true
 }

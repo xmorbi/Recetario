@@ -52,5 +52,131 @@
     "refrigerador": "Hasta 3 días en recipiente hermético.",
     "congelador": "La salsa se puede congelar hasta 2 meses. Los tallarines no.",
     "recalentar": "Sartén a fuego medio 3 minutos."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "tallarines",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "kg",
+      "nombre": "tomates",
+      "nota": "o 1 tarro de 400 g de tomates pelados, maduros",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cebolla",
+      "nota": "picada",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "diente",
+      "nombre": "ajo",
+      "nota": "picados",
+      "escalable": true
+    },
+    {
+      "cantidad": 3,
+      "unidad": "cucharada",
+      "nombre": "aceite de oliva",
+      "nota": "45 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "azúcar",
+      "nota": "5 g",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "hojas de albahaca",
+      "nota": "fresca",
+      "escalable": true
+    },
+    {
+      "cantidad": 50,
+      "unidad": "g",
+      "nombre": "queso parmesano o mantecoso",
+      "nota": "rallado",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal y pimienta",
+      "nota": "a gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Pon el aceite de oliva a calentar en una olla y sofríe la cebolla y el ajo hasta que estén transparentes.",
+      "ingredientes": [
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "texto": "Agrega los tomates pelados y picados (o el tarro). Condimenta con sal, pimienta y azúcar.",
+      "ingredientes": [
+        2,
+        6,
+        9
+      ]
+    },
+    {
+      "texto": "Cocina la salsa a fuego medio-bajo por 15-20 minutos, hasta que espese. Mientras la salsa se cocina, pon a hervir abundante agua con sal en otra olla.",
+      "ingredientes": [
+        4,
+        9
+      ],
+      "timers": [
+        {
+          "minutos": 20,
+          "etiqueta": "15-20 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Cuando el agua esté hirviendo, cocina los tallarines según las instrucciones del paquete (8-12 minutos). Revuelve los primeros minutos para que no se peguen.",
+      "ingredientes": [
+        1
+      ],
+      "timers": [
+        {
+          "minutos": 12,
+          "etiqueta": "8-12 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Cuando la salsa esté lista, agrega la albahaca fresca y prueba el punto de sal.",
+      "ingredientes": [
+        7,
+        9
+      ]
+    },
+    {
+      "texto": "Escurre los tallarines y mézclalos con la salsa. Sirve con el queso rallado por encima.",
+      "ingredientes": [
+        1,
+        8,
+        9
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 32
+  },
+  "revisado_v2": true
 }

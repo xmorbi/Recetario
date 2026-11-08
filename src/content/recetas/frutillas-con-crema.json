@@ -45,5 +45,72 @@
     "refrigerador": "Hasta 1 día, con la crema batida aparte. Se recomienda consumir al momento.",
     "congelador": "No recomendado, la crema se corta.",
     "recalentar": "Se consume bien frío."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "frutillas",
+      "nota": "frescas",
+      "escalable": true
+    },
+    {
+      "cantidad": 300,
+      "unidad": "ml",
+      "nombre": "crema para batir",
+      "nota": "fría, bien",
+      "escalable": true
+    },
+    {
+      "cantidad": 3,
+      "unidad": "cucharada",
+      "nombre": "azúcar flor",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "esencia de vainilla",
+      "nota": "opcional",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Lava las frutillas con cuidado y retira los tallos. Córtalas por la mitad o en rodajas.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Bate la crema bien fría con el azúcar flor y la vainilla hasta que forme picos suaves. No la batas de más o se cortará.",
+      "ingredientes": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "texto": "Reparte las frutillas en copas o platos.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Cubre con la crema batida. Refrigera 20 minutos antes de servir.",
+      "ingredientes": [
+        2
+      ],
+      "timers": [
+        {
+          "minutos": 20,
+          "etiqueta": "20 minutos"
+        }
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 20
+  },
+  "revisado_v2": true
 }

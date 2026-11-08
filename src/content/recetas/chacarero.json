@@ -50,5 +50,121 @@
     "refrigerador": "No se guarda armado. Los componentes se guardan hasta 3 días.",
     "congelador": "No aplica.",
     "recalentar": "La carne y el pan se recalentan. Los vegetales, no."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "panes amasados individuales",
+      "nota": "o 2 marraquetas pequeñas",
+      "escalable": true
+    },
+    {
+      "cantidad": 300,
+      "unidad": "g",
+      "nombre": "churrasco de vacuno en 2 filetes",
+      "nota": "posta, lomo o asiento",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "porotos verdes y escurridos",
+      "nota": "150 g, cocidos",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "tomates",
+      "nota": "en rodajas, maduros",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "ají verde sin semillas",
+      "nota": "opcional, en tiras, finas",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "mayonesa casera o de buena calidad",
+      "nota": "a gusto",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal, pimienta y aceite",
+      "nota": "a gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Cocina los porotos verdes en agua con sal hirviendo por 5-7 minutos. Deben quedar tiernos pero firmes. Escurre y reserva.",
+      "ingredientes": [
+        3,
+        7
+      ],
+      "timers": [
+        {
+          "minutos": 7,
+          "etiqueta": "5-7 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Sazona los filetes con sal y pimienta. Calienta una plancha o sartén a fuego alto con un poco de aceite.",
+      "ingredientes": [
+        7
+      ]
+    },
+    {
+      "texto": "Sella la carne 2-3 minutos por lado. Debe quedar dorada por fuera y jugosa por dentro. Retira y deja reposar.",
+      "ingredientes": [
+        2
+      ],
+      "timers": [
+        {
+          "minutos": 3,
+          "etiqueta": "2-3 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Calienta los panes cortados por la mitad, 1 minuto por lado en la misma plancha.",
+      "ingredientes": [
+        1
+      ],
+      "timers": [
+        {
+          "minutos": 1,
+          "etiqueta": "1 minuto"
+        }
+      ]
+    },
+    {
+      "texto": "Arma: pan, carne, porotos verdes, tomate, ají (si usas), y mayonesa en línea.",
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "texto": "Sirve inmediatamente, apretando ligeramente el sándwich con la mano para que se compacte."
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 1,
+    "reposo": 3,
+    "coccion": 7
+  },
+  "revisado_v2": true
 }

@@ -47,5 +47,93 @@
     "refrigerador": "No guardar en frío. A temperatura ambiente 2 días en bolsa de tela o papel.",
     "congelador": "Hasta 3 meses en bolsa hermética.",
     "recalentar": "Rocía un poco de agua y hornea a 180°C por 5 minutos."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": "kg",
+      "nombre": "harina",
+      "escalable": true
+    },
+    {
+      "cantidad": 200,
+      "unidad": "g",
+      "nombre": "manteca",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharadita",
+      "nombre": "sal",
+      "escalable": false
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharadita",
+      "nombre": "polvos de hornear",
+      "escalable": true
+    },
+    {
+      "cantidad": 500,
+      "unidad": "ml",
+      "nombre": "agua o leche",
+      "nota": "tibia",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Mezcla la harina con la sal y los polvos de hornear.",
+      "ingredientes": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "texto": "Agrega la manteca y trabaja con las manos hasta que quede como arena gruesa.",
+      "ingredientes": [
+        2
+      ]
+    },
+    {
+      "texto": "Añade el agua tibia de a poco y amasa 10 minutos.",
+      "ingredientes": [
+        5
+      ],
+      "timers": [
+        {
+          "minutos": 10,
+          "etiqueta": "10 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Forma 12 bollos, aplánalos y ponlos en una bandeja engrasada."
+    },
+    {
+      "texto": "Pincha con un tenedor y deja reposar 20 minutos.",
+      "timers": [
+        {
+          "minutos": 20,
+          "etiqueta": "20 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Hornea a 200 °C por 25 a 30 minutos.",
+      "timers": [
+        {
+          "minutos": 30,
+          "etiqueta": "25 a 30 minutos"
+        }
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 10,
+    "reposo": 20,
+    "coccion": 30
+  },
+  "revisado_v2": true
 }

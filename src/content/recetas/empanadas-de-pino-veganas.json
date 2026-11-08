@@ -65,5 +65,286 @@
     "congelador": "Las empanadas crudas se pueden congelar hasta por 2 meses.",
     "refrigerador": "Una vez horneadas, guardar en refrigerador hasta 3 días.",
     "recalentar": "En horno suave."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 700,
+      "unidad": "g",
+      "nombre": "harina de trigo corriente",
+      "escalable": true,
+      "seccion": "Para la masa"
+    },
+    {
+      "cantidad": 90,
+      "unidad": "g",
+      "nombre": "aceite de coco",
+      "nota": "caliente",
+      "escalable": true,
+      "seccion": "Para la masa"
+    },
+    {
+      "cantidad": 260,
+      "unidad": "ml",
+      "nombre": "agua hirviendo",
+      "escalable": true,
+      "seccion": "Para la masa"
+    },
+    {
+      "cantidad": 70,
+      "unidad": "ml",
+      "nombre": "vino blanco vegano",
+      "escalable": true,
+      "seccion": "Para la masa"
+    },
+    {
+      "cantidad": 12,
+      "unidad": "g",
+      "nombre": "sal",
+      "escalable": false,
+      "seccion": "Para la masa"
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "para el pino: 45 ml de aceite vegetal",
+      "nota": "a gusto",
+      "escalable": true,
+      "seccion": "Para la masa"
+    },
+    {
+      "cantidad": 750,
+      "unidad": "g",
+      "nombre": "cebolla",
+      "nota": "6 cebollas grandes, picada, fina",
+      "escalable": true,
+      "seccion": "Para la masa"
+    },
+    {
+      "cantidad": 150,
+      "unidad": "g",
+      "nombre": "proteína de soya texturizada",
+      "nota": "TVP",
+      "escalable": true,
+      "seccion": "Para la masa"
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cubo o sobre de caldo vegetal sabor carne u hongos",
+      "escalable": true,
+      "seccion": "Para la masa"
+    },
+    {
+      "cantidad": 150,
+      "unidad": "ml",
+      "nombre": "agua",
+      "nota": "caliente",
+      "escalable": true,
+      "seccion": "Para la masa"
+    },
+    {
+      "cantidad": 200,
+      "unidad": "g",
+      "nombre": "champiñones",
+      "nota": "picados",
+      "escalable": true,
+      "seccion": "Para la masa"
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharadita",
+      "nombre": "ají de color",
+      "escalable": false,
+      "seccion": "Para la masa"
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "comino molido",
+      "escalable": true,
+      "seccion": "Para la masa"
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "cucharadita",
+      "nombre": "orégano",
+      "nota": "en polvo",
+      "escalable": false,
+      "seccion": "Para la masa"
+    },
+    {
+      "cantidad": 0.25,
+      "unidad": "cucharadita",
+      "nombre": "semilla de cilantro",
+      "nota": "en polvo",
+      "escalable": true,
+      "seccion": "Para la masa"
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "cucharadita",
+      "nombre": "pimienta negra",
+      "escalable": false,
+      "seccion": "Para la masa"
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "vinagre balsámico",
+      "escalable": true,
+      "seccion": "Para la masa"
+    },
+    {
+      "cantidad": 50,
+      "unidad": "g",
+      "nombre": "zapallo italiano",
+      "nota": "rallado",
+      "escalable": true,
+      "seccion": "Para la masa"
+    },
+    {
+      "cantidad": 8,
+      "unidad": "g",
+      "nombre": "sal",
+      "escalable": false,
+      "seccion": "Para la masa"
+    },
+    {
+      "cantidad": 12,
+      "unidad": null,
+      "nombre": "pasas",
+      "escalable": true,
+      "seccion": "Para el armado"
+    },
+    {
+      "cantidad": 12,
+      "unidad": null,
+      "nombre": "aceitunas negras",
+      "escalable": true,
+      "seccion": "Para el armado"
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "huevo vegano",
+      "nota": "opcional, duro",
+      "escalable": true,
+      "seccion": "Para el armado"
+    },
+    {
+      "cantidad": 30,
+      "unidad": "ml",
+      "nombre": "aquafaba",
+      "nota": "opcional, para pincelar",
+      "escalable": true,
+      "seccion": "Para el armado"
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Para el pino: picar la cebolla finamente y sofreírla en el aceite a fuego medio-bajo con la sal. Cocinar hasta que esté tierna y transparente, sin dorarse (unos 20 minutos).",
+      "ingredientes": [
+        2,
+        5,
+        6,
+        7,
+        19
+      ],
+      "timers": [
+        {
+          "minutos": 20,
+          "etiqueta": "20 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Remojar la soya texturizada en el agua caliente con el caldo vegetal disuelto por 15 minutos.",
+      "ingredientes": [
+        2,
+        3,
+        9,
+        10
+      ],
+      "timers": [
+        {
+          "minutos": 15,
+          "etiqueta": "15 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Picar los champiñones finamente y rallar el zapallo italiano. Agregarlos a la cebolla junto con los condimentos (ají de color, comino, orégano, cilantro, pimienta).",
+      "ingredientes": [
+        6,
+        7,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        18
+      ]
+    },
+    {
+      "texto": "Incorporar la soya remojada con todo su líquido y el vinagre balsámico. Mezclar bien y cocinar hasta que la mezcla esté jugosa pero no aguada. Rectificar la sal. Dejar enfriar (idealmente preparar el pino el día anterior).",
+      "ingredientes": [
+        1,
+        4,
+        8,
+        17,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "texto": "Para la masa: en un bol, mezclar la harina con la sal. Agregar el aceite de coco caliente y el agua hirviendo, y luego el vino blanco. Amasar hasta formar una masa firme y suave. Dejar reposar tapada por 30 minutos.",
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        10,
+        19
+      ],
+      "timers": [
+        {
+          "minutos": 30,
+          "etiqueta": "30 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Estirar la masa y cortar discos del tamaño deseado. Poner una cucharada generosa de pino, una pasa, una aceituna y, si se usa, un trozo de huevo duro vegano.",
+      "ingredientes": [
+        6,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "texto": "Cerrar las empanadas doblando la masa y sellando bien los bordes con los dedos o un tenedor. Pincelar con aquafaba si se desea un dorado brillante.",
+      "ingredientes": [
+        23
+      ]
+    },
+    {
+      "texto": "Hornear a 180 °C por 25-30 minutos, o hasta que estén doradas. Servir calientes.",
+      "timers": [
+        {
+          "minutos": 30,
+          "etiqueta": "25-30 minutos"
+        }
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 45,
+    "coccion": 50
+  },
+  "revisado_v2": true
 }

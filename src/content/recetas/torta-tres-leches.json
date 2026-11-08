@@ -52,5 +52,153 @@
     "refrigerador": "Hasta 4 días en recipiente hermético.",
     "congelador": "No recomendado, la crema se corta.",
     "recalentar": "Se consume fría."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 5,
+      "unidad": null,
+      "nombre": "huevos",
+      "escalable": true,
+      "seccion": "Bizcocho"
+    },
+    {
+      "cantidad": 200,
+      "unidad": "g",
+      "nombre": "azúcar",
+      "escalable": true,
+      "seccion": "Bizcocho"
+    },
+    {
+      "cantidad": 200,
+      "unidad": "g",
+      "nombre": "harina",
+      "escalable": true,
+      "seccion": "Bizcocho"
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "polvos de hornear",
+      "escalable": true,
+      "seccion": "Bizcocho"
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "vainilla",
+      "escalable": true,
+      "seccion": "Bizcocho"
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "mezcla de tres leches: 1 tarro de leche condensada",
+      "nota": "397 g",
+      "escalable": true,
+      "seccion": "Bizcocho"
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "mezcla de tres leches: 1 tarro de leche evaporada",
+      "nota": "354 ml",
+      "escalable": true,
+      "seccion": "Bizcocho"
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "mezcla de tres leches: 1 taza de crema",
+      "nota": "a gusto",
+      "escalable": true,
+      "seccion": "Bizcocho"
+    },
+    {
+      "cantidad": 300,
+      "unidad": "ml",
+      "nombre": "crema para batir",
+      "escalable": true,
+      "seccion": "Cubierta"
+    },
+    {
+      "cantidad": 3,
+      "unidad": "cucharada",
+      "nombre": "azúcar flor",
+      "escalable": false,
+      "seccion": "Cubierta"
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "canela",
+      "nota": "opcional, en polvo",
+      "escalable": true,
+      "seccion": "Cubierta"
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Precalienta el horno a 180 °C. Engrasa un molde rectangular."
+    },
+    {
+      "texto": "Bate los huevos con el azúcar hasta que estén pálidos y espumosos. Agrega la vainilla.",
+      "ingredientes": [
+        1,
+        2,
+        5,
+        10
+      ]
+    },
+    {
+      "texto": "Incorpora la harina cernida con los polvos de hornear con movimientos envolventes.",
+      "ingredientes": [
+        3,
+        4
+      ]
+    },
+    {
+      "texto": "Vierte en el molde y hornea 25-30 minutos. Deja enfriar.",
+      "timers": [
+        {
+          "minutos": 30,
+          "etiqueta": "25-30 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Mezcla la leche condensada, evaporada y crema.",
+      "ingredientes": [
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "texto": "Pincha el bizcocho con un tenedor y vierte la mezcla de tres leches lentamente, dejando que absorba.",
+      "ingredientes": [
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "texto": "Refrigera al menos 4 horas (mejor toda la noche).",
+      "previo": true
+    },
+    {
+      "texto": "Bate la crema con el azúcar y cubre la torta. Espolvorea canela si quieres.",
+      "ingredientes": [
+        2,
+        4,
+        9,
+        10,
+        11
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 270
+  },
+  "revisado_v2": true
 }

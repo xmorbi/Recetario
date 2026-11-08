@@ -46,5 +46,115 @@
     "refrigerador": "A temperatura ambiente 2 días en bolsa de tela.",
     "congelador": "Hasta 3 meses en bolsa hermética.",
     "recalentar": "Horno a 180 °C por 5 minutos."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "harina sin polvos de hornear",
+      "escalable": true
+    },
+    {
+      "cantidad": 250,
+      "unidad": "g",
+      "nombre": "papas y hechas puré",
+      "nota": "cocidas",
+      "escalable": true
+    },
+    {
+      "cantidad": 150,
+      "unidad": "ml",
+      "nombre": "leche",
+      "nota": "tibia",
+      "escalable": true
+    },
+    {
+      "cantidad": 10,
+      "unidad": "g",
+      "nombre": "levadura granulada",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "sal",
+      "escalable": false
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "manteca derretida",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "azúcar",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Activa la levadura en la leche tibia con el azúcar. Reposa 10 minutos.",
+      "ingredientes": [
+        3,
+        4,
+        7
+      ],
+      "timers": [
+        {
+          "minutos": 10,
+          "etiqueta": "10 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Mezcla el puré de papas con la harina, la sal y la manteca.",
+      "ingredientes": [
+        1,
+        2,
+        5,
+        6
+      ]
+    },
+    {
+      "texto": "Agrega la levadura y amasa hasta obtener una masa suave.",
+      "ingredientes": [
+        4
+      ]
+    },
+    {
+      "texto": "Deja levar tapada 1 hora, hasta que doble su volumen.",
+      "timers": [
+        {
+          "minutos": 60,
+          "etiqueta": "1 hora"
+        }
+      ]
+    },
+    {
+      "texto": "Forma 10 bollos y colócalos en bandeja engrasada. Deja levar 30 minutos más.",
+      "timers": [
+        {
+          "minutos": 30,
+          "etiqueta": "30 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Hornea a 190 °C por 25-30 minutos, hasta dorar.",
+      "timers": [
+        {
+          "minutos": 30,
+          "etiqueta": "25-30 minutos"
+        }
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 90,
+    "reposo": 10,
+    "coccion": 30
+  },
+  "revisado_v2": true
 }

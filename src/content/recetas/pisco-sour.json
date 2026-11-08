@@ -51,5 +51,116 @@
     "refrigerador": "Se consume al momento. No se guarda.",
     "congelador": "No aplica.",
     "recalentar": "No aplica."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 3,
+      "unidad": "parte",
+      "nombre": "pisco",
+      "nota": "40° o más, que te guste tomar solo",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "parte",
+      "nombre": "jugo de limón de pica exprimido",
+      "nota": "recién",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "parte",
+      "nombre": "jarabe de goma",
+      "nota": "o 2 cucharaditas de azúcar flor",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "clara de huevo por cada 2 vasos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "hielo",
+      "nota": "en cubos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "3-4 gotas de amargo de angostura por vaso",
+      "nota": "a gusto",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "canela",
+      "nota": "para decorar, en polvo",
+      "seccion": "Opcional",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Enfría la coctelera y los vasos 10 minutos en el congelador. Un pisco sour tibio no es un pisco sour.",
+      "ingredientes": [
+        1
+      ],
+      "timers": [
+        {
+          "minutos": 10,
+          "etiqueta": "10 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Pon en la coctelera: pisco, jugo de limón, jarabe de goma, la clara de huevo y 4-5 cubos de hielo.",
+      "ingredientes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "texto": "Primero agita en seco (sin hielo) por 10 segundos. Esto airea la clara y es lo que crea la espuma.",
+      "ingredientes": [
+        4,
+        5
+      ]
+    },
+    {
+      "texto": "Agrega el hielo y agita de nuevo 15 segundos hasta que la coctelera escarche y se empañe.",
+      "ingredientes": [
+        5
+      ]
+    },
+    {
+      "texto": "Cuela con colador doble en un vaso helado, sin hielo dentro del vaso.",
+      "ingredientes": [
+        5
+      ]
+    },
+    {
+      "texto": "Añade 3-4 gotas de amargo de Angostura sobre la espuma. Se dibuja solo.",
+      "ingredientes": [
+        6
+      ]
+    },
+    {
+      "texto": "Decora con una pizca de canela si quieres. Sirve de inmediato.",
+      "ingredientes": [
+        7
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 10
+  },
+  "revisado_v2": true
 }

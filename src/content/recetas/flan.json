@@ -49,5 +49,90 @@
     "refrigerador": "Hasta 3 días en recipiente hermético.",
     "congelador": "No recomendado, el huevo se estropea.",
     "recalentar": "Se consume frío."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": "L",
+      "nombre": "leche",
+      "escalable": true
+    },
+    {
+      "cantidad": 6,
+      "unidad": null,
+      "nombre": "huevos",
+      "escalable": true
+    },
+    {
+      "cantidad": 150,
+      "unidad": "g",
+      "nombre": "azúcar",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "vainilla",
+      "nota": "5 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": 100,
+      "unidad": "g",
+      "nombre": "azúcar",
+      "nota": "para el caramelo",
+      "escalable": true
+    },
+    {
+      "cantidad": 3,
+      "unidad": "cucharada",
+      "nombre": "agua",
+      "nota": "45 ml",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Precalienta el horno a 180 °C. Prepara el caramelo: derrite el azúcar con el agua en una sartén hasta que tome color ámbar. Vierte en el fondo del molde.",
+      "ingredientes": [
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "texto": "Bate los huevos con el azúcar hasta que estén cremosos. Agrega la leche tibia y la vainilla, mezclando suavemente.",
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "texto": "Cuela la mezcla para eliminar impurezas y burbujas."
+    },
+    {
+      "texto": "Vierte en el molde caramelizado."
+    },
+    {
+      "texto": "Hornea al baño María a 180 °C por 50-60 minutos, hasta que el flan esté cuajado (un palillo debe salir limpio).",
+      "timers": [
+        {
+          "minutos": 60,
+          "etiqueta": "50-60 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Deja enfriar y refrigera al menos 4 horas antes de desmoldar.",
+      "previo": true
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 240,
+    "coccion": 60
+  },
+  "revisado_v2": true
 }

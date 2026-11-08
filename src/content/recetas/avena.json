@@ -43,5 +43,87 @@
     "refrigerador": "Hasta 2 días en recipiente hermético.",
     "congelador": "No recomendado.",
     "recalentar": "A fuego lento con un poco de leche."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "avena",
+      "nota": "90 g",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "taza",
+      "nombre": "leche",
+      "nota": "500 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "azúcar",
+      "nota": "25 g, o miel",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "pizca",
+      "nombre": "sal",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "rama",
+      "nombre": "canela",
+      "nota": "opcional",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pasas, nueces, plátano",
+      "nota": "en rodajas",
+      "seccion": "Opcional",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "En una olla, calienta la leche con la canela y la sal.",
+      "ingredientes": [
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "texto": "Agrega la avena y cocina a fuego medio-bajo, revolviendo constantemente, por 5-7 minutos, hasta que espese.",
+      "ingredientes": [
+        1
+      ],
+      "timers": [
+        {
+          "minutos": 7,
+          "etiqueta": "5-7 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Endulza con azúcar o miel al gusto.",
+      "ingredientes": [
+        3
+      ]
+    },
+    {
+      "texto": "Sirve caliente en tazones y agrega pasas, nueces o plátano si quieres.",
+      "ingredientes": [
+        6
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 7
+  },
+  "revisado_v2": true
 }

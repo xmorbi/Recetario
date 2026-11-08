@@ -55,5 +55,182 @@
     "refrigerador": "Hasta 3 días en un recipiente hermético.",
     "congelador": "Hasta 2 meses en porciones.",
     "recalentar": "A fuego lento en una olla, añadiendo un poco de agua si es necesario."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "carne de soya texturizada",
+      "nota": "100 g",
+      "escalable": true
+    },
+    {
+      "cantidad": 5,
+      "unidad": null,
+      "nombre": "papas",
+      "nota": "medianas, en cubos, peladas",
+      "escalable": true
+    },
+    {
+      "cantidad": 200,
+      "unidad": "g",
+      "nombre": "zapallo",
+      "nota": "en cubos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cebolla",
+      "nota": "picada, fina",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "zanahoria en cubitos",
+      "nota": "rallada",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "tomate",
+      "nota": "sin pepas, en cubos",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "diente",
+      "nombre": "ajo",
+      "nota": "picados",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "taza",
+      "nombre": "choclo",
+      "nota": "75 g, en grano",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "taza",
+      "nombre": "arvejas congeladas",
+      "nota": "75 g",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "hoja",
+      "nombre": "laurel",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "orégano",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "ají de color",
+      "escalable": false
+    },
+    {
+      "cantidad": 200,
+      "unidad": "ml",
+      "nombre": "agua",
+      "nota": "aprox.",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "aceite de oliva, sal y pimienta",
+      "nota": "a gusto",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Remoja la carne de soya en agua caliente por 10 minutos (puedes añadir condimentos al agua para más sabor) y luego cuélala.",
+      "ingredientes": [
+        1,
+        13
+      ],
+      "timers": [
+        {
+          "minutos": 10,
+          "etiqueta": "10 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Calienta el aceite a fuego medio y sofríe la cebolla con el ajo y los condimentos hasta que la cebolla esté transparente.",
+      "ingredientes": [
+        4,
+        7,
+        14
+      ]
+    },
+    {
+      "texto": "Sube un poco el fuego, agrega la zanahoria, el tomate y la carne de soya. Sofríe por unos minutos más.",
+      "ingredientes": [
+        1,
+        5,
+        6,
+        14
+      ]
+    },
+    {
+      "texto": "Incorpora las papas y el zapallo. Cubre con agua fría y cocina tapado por 10 minutos desde que hierva.",
+      "ingredientes": [
+        2,
+        3,
+        13
+      ],
+      "timers": [
+        {
+          "minutos": 10,
+          "etiqueta": "10 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Agrega las arvejas y el choclo. Tapa y cocina por 5 minutos más.",
+      "ingredientes": [
+        8,
+        9
+      ],
+      "timers": [
+        {
+          "minutos": 5,
+          "etiqueta": "5 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Machaca a gusto las verduras con un tenedor o cuchara de madera para darle la textura rústica del charquicán. Salpimenta.",
+      "ingredientes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "texto": "Rectifica los sabores y sirve caliente. Puedes espolvorear cilantro picado por encima."
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 10,
+    "coccion": 15
+  },
+  "revisado_v2": true
 }

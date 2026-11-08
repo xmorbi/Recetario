@@ -47,5 +47,104 @@
   "conservacion": {
     "refrigerador": "Servir de inmediato",
     "recalentar": "Se puede recalentar en horno suave."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": "kg",
+      "nombre": "espárragos",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "queso",
+      "nota": "20 g, rallado",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "huevos",
+      "escalable": true
+    },
+    {
+      "cantidad": 6,
+      "unidad": "tajada",
+      "nombre": "jamón",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "crema",
+      "nota": "250 ml, fresca",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "pizca",
+      "nombre": "nuez moscada",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pimienta",
+      "nota": "a gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Pelar los espárragos, quitar la parte dura del tallo, lavar y cocinar en agua caliente con sal.",
+      "ingredientes": [
+        1,
+        7
+      ]
+    },
+    {
+      "texto": "Cuando estén blandos, estilar y dejar enfriar."
+    },
+    {
+      "texto": "Distribuir una porción de espárragos sobre cada tajada de jamón y enrollar, dejando las cabecitas asomadas.",
+      "ingredientes": [
+        1,
+        4
+      ]
+    },
+    {
+      "texto": "Disponerlos en una fuente, cuidando que no queden muy juntos."
+    },
+    {
+      "texto": "Batir los huevos hasta que estén espumosos, agregar la crema, sal, nuez moscada y pimienta.",
+      "ingredientes": [
+        3,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "texto": "Mezclar y vaciar sobre los rollos."
+    },
+    {
+      "texto": "Espolvorear queso rallado y llevar a horno a 200 °C hasta que se dore.",
+      "ingredientes": [
+        2
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 30
+  },
+  "revisado_v2": true
 }

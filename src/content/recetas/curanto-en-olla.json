@@ -59,5 +59,163 @@
     "refrigerador": "Hasta 2 días en recipiente hermético.",
     "congelador": "No recomendado.",
     "recalentar": "Al vapor o en olla tapada a fuego bajo con un poco de agua."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": "kg",
+      "nombre": "almejas",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "kg",
+      "nombre": "choritos",
+      "escalable": true
+    },
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "cholgas",
+      "escalable": true
+    },
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "pollo en presas",
+      "escalable": true
+    },
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "carne de cerdo",
+      "nota": "en trozos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "longaniza",
+      "nota": "en rodajas",
+      "escalable": true
+    },
+    {
+      "cantidad": 4,
+      "unidad": null,
+      "nombre": "papas",
+      "nota": "medianas",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "camotes",
+      "escalable": true
+    },
+    {
+      "cantidad": 4,
+      "unidad": null,
+      "nombre": "milcaos",
+      "nota": "ver receta",
+      "escalable": true
+    },
+    {
+      "cantidad": 4,
+      "unidad": null,
+      "nombre": "chapaleles",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cebolla",
+      "nota": "en pluma, grande",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "vino blanco",
+      "nota": "250 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "hojas de repollo o de nalca",
+      "nota": "a gusto",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal y merkén",
+      "nota": "a gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "En el fondo de una olla grande (o paila de greda), pon una cama de hojas de repollo o nalca.",
+      "ingredientes": [
+        4,
+        13
+      ]
+    },
+    {
+      "texto": "Encima distribuye la cebolla en pluma y las carnes: pollo, cerdo y longaniza.",
+      "ingredientes": [
+        4,
+        5,
+        6,
+        11
+      ]
+    },
+    {
+      "texto": "Añade el vino blanco y 1/2 taza (125 ml) de agua. Tapa y cocina 20 minutos a fuego medio.",
+      "ingredientes": [
+        12
+      ],
+      "timers": [
+        {
+          "minutos": 20,
+          "etiqueta": "20 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Agrega los mariscos con concha hacia abajo, encima las papas y los camotes pelados.",
+      "ingredientes": [
+        1,
+        2,
+        3,
+        7,
+        8
+      ]
+    },
+    {
+      "texto": "Coloca encima los milcaos y chapaleles, envueltos en hojas si quieres que no se deshagan.",
+      "ingredientes": [
+        9,
+        10,
+        13
+      ]
+    },
+    {
+      "texto": "Tapa la olla con fuerza y cocina 30-40 minutos más a fuego medio-bajo, sin destapar.",
+      "timers": [
+        {
+          "minutos": 40,
+          "etiqueta": "30-40 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Sirve todo junto en una fuente grande, con el caldo de cocción aparte."
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 60
+  },
+  "revisado_v2": true
 }

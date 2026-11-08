@@ -45,5 +45,93 @@
     "refrigerador": "Hasta 1 semana en frasco cerrado.",
     "congelador": "No recomendado, pierden textura.",
     "recalentar": "Se consumen fríos."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": "kg",
+      "nombre": "duraznos pero firmes",
+      "nota": "maduros",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "taza",
+      "nombre": "agua",
+      "nota": "500 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "azúcar",
+      "nota": "200 g",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "rama",
+      "nombre": "canela",
+      "escalable": true
+    },
+    {
+      "cantidad": 3,
+      "unidad": null,
+      "nombre": "clavos de olor",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cáscara de 0.5 naranja",
+      "nota": "opcional",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Lava los duraznos y hazles una cruz en la base. Sumérgelos en agua hirviendo 30 segundos, luego en agua fría. Pélalos fácilmente.",
+      "ingredientes": [
+        1,
+        2
+      ]
+    },
+    {
+      "texto": "Córtalos por la mitad y retira el carozo."
+    },
+    {
+      "texto": "En una olla, hierve el agua con el azúcar, la canela, los clavos y la cáscara de naranja hasta disolver el azúcar.",
+      "ingredientes": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "texto": "Agrega los duraznos y cocina a fuego bajo 10-15 minutos, hasta que estén tiernos pero firmes.",
+      "ingredientes": [
+        1
+      ],
+      "timers": [
+        {
+          "minutos": 15,
+          "etiqueta": "10-15 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Retira del fuego y deja enfriar en el almíbar."
+    },
+    {
+      "texto": "Refrigera al menos 4 horas antes de servir. Se pueden servir solos o con manjar.",
+      "previo": true
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 240,
+    "coccion": 15
+  },
+  "revisado_v2": true
 }

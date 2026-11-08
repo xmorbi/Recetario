@@ -1,7 +1,13 @@
 {
   "titulo": "Té con leche",
   "categoria": "once",
-  "tags": ["once", "bebida", "té", "tradicional", "invierno"],
+  "tags": [
+    "once",
+    "bebida",
+    "té",
+    "tradicional",
+    "invierno"
+  ],
   "imagen": null,
   "tiempo": "5 min",
   "porciones": "1 taza",
@@ -39,5 +45,74 @@
     "refrigerador": "Se consume al momento. El té recalentado pierde aroma.",
     "congelador": "No aplica.",
     "recalentar": "No recomendado."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "bolsita de té negro",
+      "nota": "o 1 cucharadita de té suelto",
+      "escalable": true
+    },
+    {
+      "cantidad": 150,
+      "unidad": "ml",
+      "nombre": "agua hirviendo",
+      "escalable": true
+    },
+    {
+      "cantidad": 100,
+      "unidad": "ml",
+      "nombre": "leche entera",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "azúcar",
+      "nota": "1-2 cucharaditas, al gusto",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Hierve el agua. Mientras hierve, calienta la leche aparte en una ollita o en el microondas. No debe hervir: solo calentarse hasta que salga vapor.",
+      "ingredientes": [
+        2,
+        3
+      ]
+    },
+    {
+      "texto": "Pon la bolsita de té en la taza. Vierte el agua hirviendo sobre ella y deja reposar 3-4 minutos. Más tiempo lo pone amargo.",
+      "ingredientes": [
+        1,
+        2
+      ],
+      "timers": [
+        {
+          "minutos": 4,
+          "etiqueta": "3-4 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Retira la bolsita sin apretarla contra la taza (si la aprietas, sale más tanino y amarga).",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Vierte la leche caliente sobre el té. La proporción clásica chilena es 60% té, 40% leche.",
+      "ingredientes": [
+        3
+      ]
+    },
+    {
+      "texto": "Endulza al gusto y revuelve. Sirve inmediatamente."
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 4
+  },
+  "revisado_v2": true
 }

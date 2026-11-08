@@ -1,7 +1,12 @@
 {
   "titulo": "Salmón al horno",
   "categoria": "principales",
-  "tags": ["pescado", "horno", "plato principal", "sano"],
+  "tags": [
+    "pescado",
+    "horno",
+    "plato principal",
+    "sano"
+  ],
   "imagen": "img/Salmón-al-Horno.JPG",
   "tiempo": "25 min",
   "porciones": "2 personas",
@@ -38,5 +43,101 @@
     "refrigerador": "Hasta 2 días en recipiente hermético.",
     "congelador": "Hasta 2 meses.",
     "recalentar": "Horno a 150°C por 10 minutos o microondas con cuidado para que no se seque."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 2,
+      "unidad": "filete",
+      "nombre": "salmón",
+      "nota": "aprox. 200 g cada uno, fresco",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "aceite de oliva",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "jugo de limón",
+      "nota": "de 1 limón",
+      "escalable": false
+    },
+    {
+      "cantidad": 2,
+      "unidad": "diente",
+      "nombre": "ajo",
+      "nota": "picados",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal y pimienta",
+      "nota": "al gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "perejil",
+      "nota": "picado, fresco",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "rodajas de limón",
+      "nota": "a gusto",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Precalienta el horno a 200 °C. Forra una bandeja con papel de horno."
+    },
+    {
+      "texto": "Coloca los filetes de salmón en la bandeja. Sazona con sal, pimienta y ajo picado.",
+      "ingredientes": [
+        1,
+        4,
+        5
+      ]
+    },
+    {
+      "texto": "Rocía con el aceite de oliva y el jugo de limón. Coloca rodajas de limón encima.",
+      "ingredientes": [
+        2,
+        3,
+        7
+      ]
+    },
+    {
+      "texto": "Hornea por 12-15 minutos, dependiendo del grosor del filete, hasta que el salmón esté cocido pero aún jugoso.",
+      "ingredientes": [
+        1,
+        3,
+        5
+      ],
+      "timers": [
+        {
+          "minutos": 15,
+          "etiqueta": "12-15 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Espolvorea con perejil fresco y sirve con ensalada o papas al horno.",
+      "ingredientes": [
+        5,
+        6
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 15
+  },
+  "revisado_v2": true
 }

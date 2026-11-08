@@ -46,5 +46,125 @@
   "conservacion": {
     "refrigerador": "2 días",
     "recalentar": "En horno suave."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 750,
+      "unidad": "g",
+      "nombre": "carne molida",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "tomates",
+      "nota": "grandes, maduros",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "taza",
+      "nombre": "pan",
+      "nota": "50 g, rallado",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "marraqueta remojada",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "huevos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pimienta",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "perejil",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "orégano molido",
+      "nota": "a gusto",
+      "escalable": true
+    },
+    {
+      "cantidad": 50,
+      "unidad": "g",
+      "nombre": "aceitunas",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cebolla",
+      "nota": "pequeña",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Picar la cebolla y el perejil muy finos, mezclar con la carne, huevos, aliños, aceitunas picadas y pan remojado.",
+      "ingredientes": [
+        1,
+        3,
+        4,
+        5,
+        8,
+        10,
+        11
+      ]
+    },
+    {
+      "texto": "Formar las croquetas y pasarlas por pan rallado.",
+      "ingredientes": [
+        3,
+        4
+      ]
+    },
+    {
+      "texto": "Aceitar una asadera, distribuir las croquetas y cubrir con rebanadas de tomate.",
+      "ingredientes": [
+        2
+      ]
+    },
+    {
+      "texto": "Cocinar a fuego lento una 1/2 hora aproximadamente y servir acompañadas de puré o ensaladas.",
+      "ingredientes": [
+        3,
+        4,
+        6
+      ],
+      "timers": [
+        {
+          "minutos": 120,
+          "etiqueta": "2 hora"
+        }
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 120
+  },
+  "revisado_v2": true
 }

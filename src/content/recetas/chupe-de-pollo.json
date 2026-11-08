@@ -54,5 +54,155 @@
     "refrigerador": "Hasta 3 días en recipiente hermético.",
     "congelador": "Hasta 2 meses, idealmente sin papas.",
     "recalentar": "A fuego lento en la olla, agregando un poco de caldo si espesa demasiado."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pollo trozado",
+      "nota": "o 4 trutros, 1 kg aprox.",
+      "escalable": true
+    },
+    {
+      "cantidad": 4,
+      "unidad": null,
+      "nombre": "papas",
+      "nota": "medianas, en cubos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cebolla",
+      "nota": "picada, grande",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "diente",
+      "nombre": "ajo",
+      "nota": "picados",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pimentón rojo",
+      "nota": "en cubos",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "tomates",
+      "nota": "picados, maduros",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "crema o leche evaporada",
+      "nota": "250 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "pan",
+      "nota": "100 g, rallado",
+      "escalable": true
+    },
+    {
+      "cantidad": 100,
+      "unidad": "g",
+      "nombre": "queso parmesano o mantecoso",
+      "nota": "rallado",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "mantequilla",
+      "nota": "30 g",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal, pimienta, orégano y merkén",
+      "nota": "a gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Cocina el pollo en agua con sal por 20 minutos. Retira, desmenuza la carne y reserva el caldo.",
+      "ingredientes": [
+        1,
+        11
+      ],
+      "timers": [
+        {
+          "minutos": 20,
+          "etiqueta": "20 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Sofríe la cebolla, el ajo y el pimentón en mantequilla hasta que estén transparentes. Agrega el tomate y condimenta.",
+      "ingredientes": [
+        3,
+        4,
+        5,
+        6,
+        10
+      ]
+    },
+    {
+      "texto": "Añade las papas y el caldo de pollo (unos 2 litros). Cocina 15 minutos hasta que las papas estén tiernas.",
+      "ingredientes": [
+        1,
+        2
+      ],
+      "timers": [
+        {
+          "minutos": 15,
+          "etiqueta": "15 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Incorpora el pollo desmenuzado y la crema. Cocina 5 minutos más.",
+      "ingredientes": [
+        1,
+        7
+      ],
+      "timers": [
+        {
+          "minutos": 5,
+          "etiqueta": "5 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Reparte en pailas de greda individuales o en una fuente para horno."
+    },
+    {
+      "texto": "Espolvorea pan rallado y queso por encima. Gratina 5 minutos en el horno a 200 °C, hasta dorar.",
+      "ingredientes": [
+        8,
+        9
+      ],
+      "timers": [
+        {
+          "minutos": 5,
+          "etiqueta": "5 minutos"
+        }
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 45
+  },
+  "revisado_v2": true
 }

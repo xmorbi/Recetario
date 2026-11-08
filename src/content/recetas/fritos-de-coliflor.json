@@ -45,5 +45,101 @@
     "refrigerador": "Hasta 2 días en recipiente hermético.",
     "congelador": "No recomendado.",
     "recalentar": "Horno o freidora de aire a 180 °C por 5 minutos."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "coliflor",
+      "nota": "mediana",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "huevos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "harina",
+      "nota": "120 g",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "taza",
+      "nombre": "leche",
+      "nota": "125 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "polvos de hornear",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal, pimienta y nuez moscada",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "aceite",
+      "nota": "250 ml, para freír",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Corta la coliflor en ramilletes y cuécela en agua con sal 5-7 minutos, hasta que esté tierna pero firme. Escurre bien.",
+      "ingredientes": [
+        1,
+        6
+      ],
+      "timers": [
+        {
+          "minutos": 7,
+          "etiqueta": "5-7 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Prepara la mezcla: bate los huevos con la harina, la leche, los polvos de hornear, sal, pimienta y nuez moscada. Debe quedar como una pasta espesa.",
+      "ingredientes": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "texto": "Pasa los ramilletes de coliflor por la mezcla.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Fríe en abundante aceite caliente (170-180 °C) hasta que estén dorados. Escurre sobre papel absorbente.",
+      "ingredientes": [
+        7
+      ]
+    },
+    {
+      "texto": "Sirve calientes con sal y limón, o con salsa de tomate.",
+      "ingredientes": [
+        6
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 7
+  },
+  "revisado_v2": true
 }

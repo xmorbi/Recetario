@@ -34,5 +34,54 @@
   "conservacion": {
     "refrigerador": "Se pueden preparar con anticipación",
     "recalentar": "En horno suave antes de servir."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 0.25,
+      "unidad": "kg",
+      "nombre": "ciruelas",
+      "nota": "secas",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.25,
+      "unidad": "kg",
+      "nombre": "cintas delgadas de tocino desgrasado",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Lavar bien las ciruelas y remojarlas unas 2 horas.",
+      "ingredientes": [
+        1
+      ],
+      "timers": [
+        {
+          "minutos": 120,
+          "etiqueta": "2 horas"
+        }
+      ]
+    },
+    {
+      "texto": "Estilar y sacar el carozo."
+    },
+    {
+      "texto": "Envolver cada ciruela en una cinta de tocino y poner al horno.",
+      "ingredientes": [
+        1,
+        2
+      ]
+    },
+    {
+      "texto": "Retirar cuando el tocino esté dorado."
+    },
+    {
+      "texto": "Servir calientes."
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 120
+  },
+  "revisado_v2": true
 }

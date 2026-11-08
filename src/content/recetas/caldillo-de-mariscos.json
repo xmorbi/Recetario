@@ -51,5 +51,148 @@
     "refrigerador": "Hasta 2 días en recipiente hermético.",
     "congelador": "Hasta 2 meses, idealmente sin papas.",
     "recalentar": "A fuego muy suave, evitando hervir."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "mariscos variados",
+      "nota": "choritos, almejas, camarones",
+      "escalable": true
+    },
+    {
+      "cantidad": 200,
+      "unidad": "g",
+      "nombre": "pescado blanco",
+      "nota": "en trozos",
+      "escalable": true
+    },
+    {
+      "cantidad": 3,
+      "unidad": null,
+      "nombre": "papas",
+      "nota": "medianas, en cubos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cebolla",
+      "nota": "picada, grande",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "diente",
+      "nombre": "ajo",
+      "nota": "picados",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pimentón rojo",
+      "nota": "en cubos",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "tomates",
+      "nota": "picados, maduros",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "zanahoria",
+      "nota": "en rodajas",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "1,5 l de caldo de pescado",
+      "nota": "a gusto",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "taza",
+      "nombre": "vino blanco",
+      "nota": "125 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal, pimienta, orégano y merkén",
+      "nota": "a gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Sofríe la cebolla, el ajo y el pimentón hasta que estén transparentes.",
+      "ingredientes": [
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "texto": "Agrega el tomate y la zanahoria. Condimenta y cocina 5 minutos.",
+      "ingredientes": [
+        7,
+        8
+      ],
+      "timers": [
+        {
+          "minutos": 5,
+          "etiqueta": "5 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Vierte el vino blanco y deja evaporar.",
+      "ingredientes": [
+        2,
+        10
+      ]
+    },
+    {
+      "texto": "Añade el caldo y las papas. Cocina 15 minutos.",
+      "ingredientes": [
+        3,
+        9
+      ],
+      "timers": [
+        {
+          "minutos": 15,
+          "etiqueta": "15 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Incorpora los mariscos y el pescado. Cocina 5-7 minutos más.",
+      "ingredientes": [
+        1,
+        2,
+        9
+      ],
+      "timers": [
+        {
+          "minutos": 7,
+          "etiqueta": "5-7 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Sirve caliente con perejil fresco y pan."
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 27
+  },
+  "revisado_v2": true
 }

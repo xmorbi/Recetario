@@ -44,5 +44,118 @@
     "refrigerador": "Hasta 3 días en recipiente hermético.",
     "congelador": "Hasta 2 meses.",
     "recalentar": "A fuego lento en una olla con un poco de agua."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 300,
+      "unidad": "g",
+      "nombre": "carne de vacuno",
+      "nota": "posta o asiento, en cubos",
+      "escalable": true
+    },
+    {
+      "cantidad": 4,
+      "unidad": null,
+      "nombre": "papas",
+      "nota": "en cubos, grandes",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "zanahorias",
+      "nota": "en rodajas",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cebolla",
+      "nota": "picada",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "ajos, 0.5 pimentón rojo",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "tomate",
+      "nota": "picado",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "laurel, tomillo, merkén",
+      "nota": "a gusto",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "L",
+      "nombre": "agua",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "caldo en tableta",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "aceite",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Sofríe cebolla, ajo y pimentón hasta dorar.",
+      "ingredientes": [
+        4,
+        5,
+        10
+      ]
+    },
+    {
+      "texto": "Agrega el tomate y la carne de vacuno en cubos. Cocina unos minutos hasta que la carne cambie de color.",
+      "ingredientes": [
+        1,
+        6
+      ]
+    },
+    {
+      "texto": "Vierte el agua con el caldo, laurel y tomillo. Lleva a ebullición.",
+      "ingredientes": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "texto": "Incorpora las papas y zanahorias. Cocina 20-30 min hasta que estén tiernas.",
+      "ingredientes": [
+        2,
+        3
+      ],
+      "timers": [
+        {
+          "minutos": 30,
+          "etiqueta": "20-30 min"
+        }
+      ]
+    },
+    {
+      "texto": "Sirve caliente."
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 30
+  },
+  "revisado_v2": true
 }

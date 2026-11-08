@@ -46,5 +46,145 @@
   "conservacion": {
     "refrigerador": "2 días",
     "recalentar": "A fuego lento."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 0.5,
+      "unidad": "kg",
+      "nombre": "panitas de pollo",
+      "escalable": true
+    },
+    {
+      "cantidad": 100,
+      "unidad": "g",
+      "nombre": "tocino",
+      "escalable": true
+    },
+    {
+      "cantidad": 10,
+      "unidad": null,
+      "nombre": "cebollines",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "vaso",
+      "nombre": "vino",
+      "nota": "tinto",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "harina",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "azúcar",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "hoja",
+      "nombre": "laurel",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "tomillo",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "aceite",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pimienta",
+      "nota": "a gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Limpiar, lavar las panitas y partir en mitades, espolvorear sal y pimienta.",
+      "ingredientes": [
+        1,
+        10,
+        11
+      ]
+    },
+    {
+      "texto": "Cortar el tocino en trozos pequeños y poner en una sartén hasta que se derrita, añadir las panitas y cocinar a fuego suave por 5 minutos.",
+      "ingredientes": [
+        1,
+        2
+      ],
+      "timers": [
+        {
+          "minutos": 5,
+          "etiqueta": "5 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Limpiar los cebollines, dejando sólo lo más tierno.",
+      "ingredientes": [
+        3
+      ]
+    },
+    {
+      "texto": "Calentar el aceite en una cacerola y freír los cebollines; cuando empiecen a dorarse agregar el azúcar y la harina, revolviendo para evitar que se formen grumos.",
+      "ingredientes": [
+        3,
+        5,
+        6,
+        9
+      ]
+    },
+    {
+      "texto": "Agregar el vino, 1/2 taza de agua caliente, laurel, tomillo, sal y pimienta.",
+      "ingredientes": [
+        4,
+        7,
+        8,
+        10,
+        11
+      ]
+    },
+    {
+      "texto": "Cocinar a fuego suave por 1/4 de hora, procurando que se reduzca la salsa.",
+      "ingredientes": [
+        10
+      ]
+    },
+    {
+      "texto": "A último momento incorporar las panitas a la salsa para calentar.",
+      "ingredientes": [
+        1,
+        10
+      ]
+    },
+    {
+      "texto": "Servir acompañado de arroz blanco."
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 5
+  },
+  "revisado_v2": true
 }

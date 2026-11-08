@@ -49,5 +49,132 @@
     "refrigerador": "Hasta 4 días en recipiente hermético.",
     "congelador": "No recomendado.",
     "recalentar": "A temperatura ambiente."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "harina",
+      "escalable": true,
+      "seccion": "Masa"
+    },
+    {
+      "cantidad": 250,
+      "unidad": "g",
+      "nombre": "mantequilla",
+      "escalable": true,
+      "seccion": "Masa"
+    },
+    {
+      "cantidad": 100,
+      "unidad": "g",
+      "nombre": "azúcar",
+      "escalable": true,
+      "seccion": "Masa"
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "yemas",
+      "escalable": true,
+      "seccion": "Masa"
+    },
+    {
+      "cantidad": 100,
+      "unidad": "ml",
+      "nombre": "agua",
+      "nota": "fría",
+      "escalable": true,
+      "seccion": "Masa"
+    },
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "manjar",
+      "escalable": true,
+      "seccion": "Relleno"
+    },
+    {
+      "cantidad": 200,
+      "unidad": "g",
+      "nombre": "nueces",
+      "nota": "picadas",
+      "escalable": true,
+      "seccion": "Relleno"
+    },
+    {
+      "cantidad": 100,
+      "unidad": "g",
+      "nombre": "pasas",
+      "escalable": true,
+      "seccion": "Relleno"
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "azúcar flor",
+      "nota": "a gusto",
+      "escalable": false,
+      "seccion": "Cubierta"
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Mezcla la harina con el azúcar. Agrega la mantequilla fría en cubos y trabaja con los dedos hasta que quede como arena.",
+      "ingredientes": [
+        1,
+        2,
+        3,
+        9
+      ]
+    },
+    {
+      "texto": "Agrega las yemas y el agua fría. Amasa hasta obtener una masa lisa.",
+      "ingredientes": [
+        4,
+        5
+      ]
+    },
+    {
+      "texto": "Envuelve en papel plástico y refrigera 1 hora.",
+      "timers": [
+        {
+          "minutos": 60,
+          "etiqueta": "1 hora"
+        }
+      ]
+    },
+    {
+      "texto": "Divide la masa en 6 porciones. Estira cada una en un disco delgado."
+    },
+    {
+      "texto": "Hornea cada disco a 180 °C por 10-12 minutos, hasta que esté dorado.",
+      "timers": [
+        {
+          "minutos": 12,
+          "etiqueta": "10-12 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Mezcla el manjar con las nueces y pasas.",
+      "ingredientes": [
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "texto": "Arma la torta: disco, relleno, disco, relleno, hasta terminar. Cubre con azúcar flor.",
+      "ingredientes": [
+        3,
+        9
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 60,
+    "coccion": 12
+  },
+  "revisado_v2": true
 }

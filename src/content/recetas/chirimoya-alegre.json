@@ -48,5 +48,78 @@
     "refrigerador": "Hasta 1 día en jarra cerrada. Agítala antes de servir.",
     "congelador": "No recomendado, la chirimoya se oxida y pierde textura.",
     "recalentar": "Se consume bien frío."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "chirimoya",
+      "nota": "madura, grande",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "taza",
+      "nombre": "jugo de naranja exprimido",
+      "nota": "500 ml, recién",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "azúcar",
+      "nota": "25 g, ajustar al gusto",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "hielo",
+      "nota": "a gusto",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "hojas de menta",
+      "nota": "a gusto",
+      "seccion": "Opcional",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Pela la chirimoya y retira las semillas. Corta la pulpa en trozos.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "En una juguera, mezcla la pulpa con el jugo de naranja y el azúcar.",
+      "ingredientes": [
+        2,
+        3
+      ]
+    },
+    {
+      "texto": "Licúa hasta obtener una mezcla homogénea pero con un poco de textura."
+    },
+    {
+      "texto": "Prueba y ajusta el azúcar.",
+      "ingredientes": [
+        3
+      ]
+    },
+    {
+      "texto": "Sirve bien frío en vasos altos con hielo. Decora con menta si quieres.",
+      "ingredientes": [
+        4,
+        5
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 10
+  },
+  "revisado_v2": true
 }

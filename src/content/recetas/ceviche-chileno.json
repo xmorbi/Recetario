@@ -51,5 +51,131 @@
     "refrigerador": "Hasta 1 día. El pescado se sigue \"cocinando\" en el limón: no lo guardes mucho.",
     "congelador": "No recomendado. La textura cambia completamente.",
     "recalentar": "Se consume bien frío."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "pescado blanco",
+      "nota": "reineta, corvina, lenguado o merluza, fresco",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "jugo de 4-5 limones de pica",
+      "nota": "o limón sutil",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cebolla morada",
+      "nota": "grande",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "ají verde sin semillas",
+      "nota": "opcional, picado, fino",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "cilantro",
+      "nota": "picado, fresco",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal y pimienta",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "aceite de oliva",
+      "seccion": "Opcional",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Corta el pescado en cubos de 1,5 cm. Debe estar muy fresco: si tiene olor fuerte, no sirve.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Sala el pescado con sal y pimienta y déjalo reposar 5 minutos.",
+      "ingredientes": [
+        1,
+        6
+      ],
+      "timers": [
+        {
+          "minutos": 5,
+          "etiqueta": "5 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Corta la cebolla en pluma muy fina y remójala en agua fría 10 minutos. Escurre muy bien.",
+      "ingredientes": [
+        3
+      ],
+      "timers": [
+        {
+          "minutos": 10,
+          "etiqueta": "10 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Exprime los limones y cuela el jugo. Debe ser suficiente para cubrir el pescado.",
+      "ingredientes": [
+        1,
+        2
+      ]
+    },
+    {
+      "texto": "Mezcla el pescado con el jugo de limón. Refrigera 10-15 minutos: el pescado se \"cocina\" en el ácido.",
+      "ingredientes": [
+        1,
+        2
+      ],
+      "timers": [
+        {
+          "minutos": 15,
+          "etiqueta": "10-15 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Escurre el exceso de jugo, agrega la cebolla, el ají, el cilantro y el aceite. Mezcla suavemente.",
+      "ingredientes": [
+        2,
+        3,
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "texto": "Rectifica la sal. Sirve frío, con pan amasado, galletas de soda o marraqueta.",
+      "ingredientes": [
+        6
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 10,
+    "reposo": 5,
+    "coccion": 15
+  },
+  "revisado_v2": true
 }

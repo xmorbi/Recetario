@@ -43,5 +43,81 @@
     "refrigerador": "Hasta 2 días por separado.",
     "congelador": "No recomendado.",
     "recalentar": "Puré en microondas con un poco de leche. Huevo al momento."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 6,
+      "unidad": null,
+      "nombre": "papas",
+      "nota": "medianas",
+      "escalable": true
+    },
+    {
+      "cantidad": 3,
+      "unidad": "cucharada",
+      "nombre": "mantequilla",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "taza",
+      "nombre": "leche",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal y pimienta",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 4,
+      "unidad": null,
+      "nombre": "huevos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "aceite",
+      "nota": "para freír",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Cuece las papas en agua con sal hasta que estén tiernas. Escurre.",
+      "ingredientes": [
+        1,
+        4
+      ]
+    },
+    {
+      "texto": "Haz un puré con la mantequilla, la leche, sal y pimienta. Bate hasta que quede cremoso.",
+      "ingredientes": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "texto": "Fríe los huevos en aceite con sal y pimienta.",
+      "ingredientes": [
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "texto": "Sirve el puré en platos y pon un huevo frito encima de cada porción.",
+      "ingredientes": [
+        5
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 25
+  },
+  "revisado_v2": true
 }

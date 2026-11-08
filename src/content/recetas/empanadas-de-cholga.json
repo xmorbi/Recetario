@@ -53,5 +53,173 @@
     "refrigerador": "Hasta 3 días cocidas.",
     "congelador": "Hasta 3 meses crudas o cocidas.",
     "recalentar": "Horno o freidora de aire a 180 °C por 5-10 minutos."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "harina sin polvos de hornear",
+      "escalable": true,
+      "seccion": "Masa"
+    },
+    {
+      "cantidad": 120,
+      "unidad": "g",
+      "nombre": "manteca derretida",
+      "escalable": true,
+      "seccion": "Masa"
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "huevo",
+      "escalable": true,
+      "seccion": "Masa"
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "sal",
+      "escalable": false,
+      "seccion": "Masa"
+    },
+    {
+      "cantidad": 200,
+      "unidad": "ml",
+      "nombre": "agua",
+      "nota": "aprox., tibia",
+      "escalable": true,
+      "seccion": "Masa"
+    },
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "carne de cholga",
+      "nota": "picada, cocida",
+      "escalable": true,
+      "seccion": "Relleno"
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cebolla",
+      "nota": "picada, grande, fina",
+      "escalable": true,
+      "seccion": "Relleno"
+    },
+    {
+      "cantidad": 2,
+      "unidad": "diente",
+      "nombre": "ajo",
+      "nota": "picados",
+      "escalable": true,
+      "seccion": "Relleno"
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "tomate",
+      "nota": "picado, maduro",
+      "escalable": true,
+      "seccion": "Relleno"
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "merkén",
+      "escalable": true,
+      "seccion": "Relleno"
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "pan",
+      "nota": "20 g, rallado",
+      "escalable": true,
+      "seccion": "Relleno"
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal, pimienta y orégano",
+      "nota": "a gusto",
+      "escalable": false,
+      "seccion": "Relleno"
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "huevo batido",
+      "escalable": true,
+      "seccion": "Pintar"
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Prepara el relleno: sofríe la cebolla y el ajo. Agrega el tomate y condimenta con merkén, sal, pimienta y orégano.",
+      "ingredientes": [
+        4,
+        7,
+        8,
+        9,
+        10,
+        12
+      ]
+    },
+    {
+      "texto": "Agrega la cholga picada y cocina 3 minutos. Añade el pan rallado para absorber el líquido. Deja enfriar por completo.",
+      "ingredientes": [
+        6,
+        11
+      ],
+      "timers": [
+        {
+          "minutos": 3,
+          "etiqueta": "3 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Prepara la masa: mezcla la harina con la sal, agrega la manteca, el huevo y el agua tibia. Amasa hasta que esté lisa.",
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        12,
+        13
+      ]
+    },
+    {
+      "texto": "Reposa 30 minutos. Divide en 12 bollos y estira discos de 15 cm.",
+      "timers": [
+        {
+          "minutos": 30,
+          "etiqueta": "30 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Rellena con 2 cucharadas del relleno frío. Cierra con repulgue y pincha con tenedor."
+    },
+    {
+      "texto": "Pinta con huevo batido. Hornea a 200 °C por 20-25 minutos, o fríe en aceite caliente (170-180 °C) hasta dorar.",
+      "ingredientes": [
+        3,
+        13
+      ],
+      "timers": [
+        {
+          "minutos": 25,
+          "etiqueta": "20-25 minutos"
+        }
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 33,
+    "coccion": 25
+  },
+  "revisado_v2": true
 }

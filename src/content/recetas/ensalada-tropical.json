@@ -43,5 +43,89 @@
   ],
   "conservacion": {
     "refrigerador": "Consumir el mismo día. Las frutas pierden textura con el tiempo."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "lechuga",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "naranjas",
+      "nota": "medianas",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": null,
+      "nombre": "piña",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "manzanas",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "taza",
+      "nombre": "mayonesa delgada",
+      "nota": "125 g, mezclada con un poco de jugo de limón",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "crema",
+      "nota": "30 g",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Lavar bien la lechuga y cortarla en trozos pequeños.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Pelar las naranjas y separar los gajos.",
+      "ingredientes": [
+        2
+      ]
+    },
+    {
+      "texto": "Pelar las manzanas y picarlas en cubos pequeños.",
+      "ingredientes": [
+        4
+      ]
+    },
+    {
+      "texto": "Picar la piña en cubos y dejar reposando con jugo de limón por 1 hora.",
+      "ingredientes": [
+        3
+      ],
+      "timers": [
+        {
+          "minutos": 60,
+          "etiqueta": "1 hora"
+        }
+      ]
+    },
+    {
+      "texto": "Unir todos los ingredientes, revolver con la mayonesa sazonada y la crema.",
+      "ingredientes": [
+        5,
+        6
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 60
+  },
+  "revisado_v2": true
 }

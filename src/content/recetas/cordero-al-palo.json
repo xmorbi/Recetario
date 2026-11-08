@@ -56,5 +56,143 @@
     "refrigerador": "Hasta 3 días en recipiente hermético.",
     "congelador": "Hasta 2 meses, en porciones.",
     "recalentar": "Horno o parrilla a 180 °C por 15 minutos para que recupere la textura."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cordero entero o 1 pierna",
+      "nota": "10-12 kg, 3-4 kg, grande",
+      "escalable": false
+    },
+    {
+      "cantidad": 3,
+      "unidad": "cucharada",
+      "nombre": "sal",
+      "nota": "45 g, gruesa",
+      "escalable": false
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "merkén",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "orégano",
+      "nota": "seco",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "pimienta negra molida",
+      "escalable": false
+    },
+    {
+      "cantidad": 4,
+      "unidad": "diente",
+      "nombre": "ajo machacados",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "leña de roble o espino",
+      "nota": "o carbón de leña",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "palo largo de madera para ensartar",
+      "nota": "o hierro, dura",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "alambre o cordel para atar",
+      "nota": "a gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Prepara el fuego: enciende la leña en un hoyo poco profundo o en un asador. Necesitas brasas abundantes y parejas. La leña de roble o espino da el mejor sabor.",
+      "ingredientes": [
+        7
+      ]
+    },
+    {
+      "texto": "Sazona el cordero generosamente por dentro y por fuera con sal, merkén, orégano, pimienta y ajo. La sal debe cubrir toda la superficie.",
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "texto": "Ensarta el cordero en el palo largo, de la cabeza a la cola si es entero. Ata las patas y las costillas con alambre o cordel para que no se muevan.",
+      "ingredientes": [
+        1,
+        8,
+        9
+      ]
+    },
+    {
+      "texto": "Coloca el palo sobre el fuego, a unos 30-40 cm de las brasas. El cordero debe girar lentamente para cocinarse parejo.",
+      "ingredientes": [
+        1,
+        8
+      ]
+    },
+    {
+      "texto": "Cocina por 4-5 horas, girando constantemente. La clave es la paciencia: el cordero se cocina por irradiación del calor, no directamente sobre las llamas.",
+      "ingredientes": [
+        1
+      ],
+      "timers": [
+        {
+          "minutos": 300,
+          "etiqueta": "4-5 horas"
+        }
+      ]
+    },
+    {
+      "texto": "A medida que se cocine, la piel se va dorando y crujiendo. Si algún punto se dora demasiado rápido, mueve las brasas o sube el palo.",
+      "ingredientes": [
+        8
+      ]
+    },
+    {
+      "texto": "Está listo cuando la carne se separa del hueso fácilmente y la piel está crujiente y dorada.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Retira del fuego, deja reposar 15 minutos y corta en presas. Sirve con papas cocidas o ensalada a la chilena.",
+      "ingredientes": [
+        2,
+        7
+      ],
+      "timers": [
+        {
+          "minutos": 15,
+          "etiqueta": "15 minutos"
+        }
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 15,
+    "coccion": 300
+  },
+  "revisado_v2": true
 }

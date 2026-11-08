@@ -49,5 +49,134 @@
   "conservacion": {
     "refrigerador": "Guardar en un recipiente hermético en el refrigerador hasta por 4 días",
     "congelador": "Se puede congelar hasta por 2 meses."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 2,
+      "unidad": "taza",
+      "nombre": "garbanzos",
+      "nota": "aprox. 400 g, secos",
+      "escalable": true
+    },
+    {
+      "cantidad": 3,
+      "unidad": "cucharada",
+      "nombre": "aceite de oliva",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "jugo de limones",
+      "nota": "de 2 limones",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "pasta de ajo",
+      "nota": "o 2 dientes de ajo machacados",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "canela",
+      "nota": "en polvo",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "pimienta negra",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "agua de cocción de los garbanzos",
+      "nota": "aproximadamente",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal",
+      "nota": "al gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pimentón dulce y perejil o cilantro",
+      "nota": "para decorar, fresco",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "La noche anterior, lavar los garbanzos y dejarlos en remojo en abundante agua (mínimo 12 horas).",
+      "ingredientes": [
+        1,
+        7
+      ],
+      "previo": true
+    },
+    {
+      "texto": "Al día siguiente, escurrir el agua de remojo y enjuagar bien los garbanzos.",
+      "ingredientes": [
+        1,
+        7
+      ]
+    },
+    {
+      "texto": "Cocer los garbanzos en una olla con agua fresca (que los cubra) hasta que estén muy blandos, aproximadamente 30 a 40 minutos. Reservar 1 taza del líquido de cocción.",
+      "ingredientes": [
+        1,
+        7
+      ],
+      "timers": [
+        {
+          "minutos": 40,
+          "etiqueta": "30 a 40 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Escurrir los garbanzos cocidos y colocarlos en la licuadora o procesadora de alimentos.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Agregar el aceite de oliva, el jugo de limón, la pasta de ajo, la canela, la pimienta y la sal.",
+      "ingredientes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        8
+      ]
+    },
+    {
+      "texto": "Procesar, agregando poco a poco el agua de cocción reservada, hasta obtener un puré homogéneo y cremoso. Ajustar la sal si es necesario.",
+      "ingredientes": [
+        7,
+        8
+      ]
+    },
+    {
+      "texto": "Servir en un plato hondo, rociar con un chorrito de aceite de oliva y espolvorear pimentón dulce y perejil o cilantro picado.",
+      "ingredientes": [
+        2,
+        9
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 480,
+    "coccion": 40
+  },
+  "revisado_v2": true
 }

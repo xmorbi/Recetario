@@ -41,5 +41,68 @@
     "refrigerador": "No se guarda armado.",
     "congelador": "No aplica.",
     "recalentar": "No aplica."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "marraqueta o hallulla horneada",
+      "nota": "recién",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "láminas de queso mantecoso o chanco",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "mantequilla",
+      "nota": "a gusto",
+      "seccion": "Opcional",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Abre el pan por la mitad.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Si quieres, úntalo con un poco de mantequilla.",
+      "ingredientes": [
+        3
+      ]
+    },
+    {
+      "texto": "Pon las láminas de queso dentro del pan.",
+      "ingredientes": [
+        1,
+        2
+      ]
+    },
+    {
+      "texto": "Si quieres el queso derretido, calienta el pan armado 1 minuto en el horno o sandwichera.",
+      "ingredientes": [
+        1
+      ],
+      "timers": [
+        {
+          "minutos": 1,
+          "etiqueta": "1 minuto"
+        }
+      ]
+    },
+    {
+      "texto": "Come inmediatamente."
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 1
+  },
+  "revisado_v2": true
 }

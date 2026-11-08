@@ -51,5 +51,152 @@
   "conservacion": {
     "refrigerador": "24 horas",
     "recalentar": "A fuego lento con un poco de agua."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 2,
+      "unidad": "taza",
+      "nombre": "arroz",
+      "nota": "400 g",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "kg",
+      "nombre": "choritos",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": null,
+      "nombre": "cebolla",
+      "nota": "picada, fina",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "trozo",
+      "nombre": "pimentón verde",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "trozo",
+      "nombre": "pimentón rojo",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "diente",
+      "nombre": "ajo",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "zanahoria",
+      "escalable": true
+    },
+    {
+      "cantidad": 3,
+      "unidad": "cucharada",
+      "nombre": "aceite",
+      "nota": "45 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "jugo de limón",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "comino",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "perejil",
+      "nota": "picado",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pimienta",
+      "nota": "a gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Calentar el aceite y freír la cebolla, ajo, pimentón cortado en tiras delgadas y la zanahoria en rodajas.",
+      "ingredientes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "texto": "Sazonar y aliñar."
+    },
+    {
+      "texto": "Agregar el arroz y dejar que se fría por unos minutos; revolver y agregar 4 tazas (1 L) de agua hirviendo.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Dejar en cocción a fuego lento por 20-25 minutos, hasta que el arroz esté casi listo.",
+      "ingredientes": [
+        1
+      ],
+      "timers": [
+        {
+          "minutos": 25,
+          "etiqueta": "20-25 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Agregar los choritos lavados y escobillados, el perejil picado y jugo de limón. Tapar y cocinar 5-7 minutos más, hasta que los choritos se abran.",
+      "ingredientes": [
+        2,
+        9,
+        11
+      ],
+      "timers": [
+        {
+          "minutos": 7,
+          "etiqueta": "5-7 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Servir caliente, con los choritos arriba para que se vean.",
+      "ingredientes": [
+        2
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 25,
+    "coccion": 7
+  },
+  "revisado_v2": true
 }

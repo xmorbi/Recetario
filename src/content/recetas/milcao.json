@@ -51,5 +51,111 @@
     "refrigerador": "Hasta 3 días cocidos en recipiente hermético.",
     "congelador": "Hasta 3 meses crudos o cocidos, en bolsa hermética.",
     "recalentar": "Fritos en sartén 2-3 minutos. O al vapor si eran cocidos."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": "kg",
+      "nombre": "papas crudas",
+      "escalable": true
+    },
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "papas y hechas puré",
+      "nota": "cocidas",
+      "escalable": true
+    },
+    {
+      "cantidad": 100,
+      "unidad": "g",
+      "nombre": "manteca derretida",
+      "nota": "o chicharrones picados",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharadita",
+      "nombre": "sal",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "chicharrones de cerdo para rellenar",
+      "nota": "picados",
+      "seccion": "Opcional",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "aceite",
+      "nota": "si se fríen, para freír",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Ralla las papas crudas por el lado fino del rallador. Colócalas en un paño limpio y exprímelas muy bien para sacar todo el líquido. Deben quedar secas.",
+      "ingredientes": [
+        1,
+        2
+      ]
+    },
+    {
+      "texto": "Pela y cuece las otras 500 g de papas. Hazlas puré y mézclalas con la manteca derretida y la sal.",
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "texto": "Combina las papas ralladas (bien escurridas) con el puré de papas. Amasa hasta obtener una masa homogénea y firme.",
+      "ingredientes": [
+        1,
+        2
+      ]
+    },
+    {
+      "texto": "Toma porciones del tamaño de una naranja y aplánalas en la palma de la mano. Si quieres, pon una cucharadita de chicharrones al centro, cierra y aplana de nuevo.",
+      "ingredientes": [
+        5
+      ]
+    },
+    {
+      "texto": "Para la versión tradicional (cocida): envuelve cada milcao en un paño de algodón (o en hoja de repollo), átalo con cordel y cuécelo en agua hirviendo con sal por 30-40 minutos.",
+      "ingredientes": [
+        4
+      ],
+      "timers": [
+        {
+          "minutos": 40,
+          "etiqueta": "30-40 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Para la versión frita: fríe los milcaos en abundante aceite caliente hasta que estén dorados por ambos lados (3-4 minutos por lado).",
+      "ingredientes": [
+        6
+      ],
+      "timers": [
+        {
+          "minutos": 4,
+          "etiqueta": "3-4 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Sirve calientes, con pebre o como acompañamiento de curanto y cazuelas."
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 40,
+    "coccion": 4
+  },
+  "revisado_v2": true
 }

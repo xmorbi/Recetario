@@ -48,5 +48,91 @@
     "refrigerador": "No se guarda armado.",
     "congelador": "No aplica.",
     "recalentar": "En plancha o sándwichera 2 minutos."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "panes amasados individuales",
+      "nota": "o 2 marraquetas pequeñas",
+      "escalable": true
+    },
+    {
+      "cantidad": 300,
+      "unidad": "g",
+      "nombre": "churrasco de vacuno en 2 filetes",
+      "nota": "posta o asiento",
+      "escalable": true
+    },
+    {
+      "cantidad": 150,
+      "unidad": "g",
+      "nombre": "queso mantecoso o chanco",
+      "nota": "en láminas, gruesas",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal, pimienta y aceite",
+      "nota": "a gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Sazona los bistecs con sal y pimienta. Calienta la plancha a fuego alto.",
+      "ingredientes": [
+        4
+      ]
+    },
+    {
+      "texto": "Sella la carne 2 minutos por lado. Retira y deja reposar mientras preparas el pan.",
+      "ingredientes": [
+        1,
+        2
+      ],
+      "timers": [
+        {
+          "minutos": 2,
+          "etiqueta": "2 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Calienta los panes cortados por la mitad en la misma plancha, 1 minuto por lado.",
+      "ingredientes": [
+        1
+      ],
+      "timers": [
+        {
+          "minutos": 1,
+          "etiqueta": "1 minuto"
+        }
+      ]
+    },
+    {
+      "texto": "Pon el queso encima de la carne aún caliente para que se derrita con el calor residual.",
+      "ingredientes": [
+        2,
+        3
+      ]
+    },
+    {
+      "texto": "Arma el sándwich: pan, carne con queso derretido, pan.",
+      "ingredientes": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "texto": "Sirve inmediatamente. Si quieres, corta en diagonal."
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 1,
+    "reposo": 2
+  },
+  "revisado_v2": true
 }

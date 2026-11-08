@@ -44,5 +44,95 @@
   "conservacion": {
     "refrigerador": "3 días",
     "recalentar": "En horno suave o microondas."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 4,
+      "unidad": null,
+      "nombre": "claras de huevo",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "huevos enteros",
+      "escalable": true
+    },
+    {
+      "cantidad": 40,
+      "unidad": "g",
+      "nombre": "queso parmesano",
+      "nota": "rallado",
+      "escalable": true
+    },
+    {
+      "cantidad": 40,
+      "unidad": "g",
+      "nombre": "queso mantecoso",
+      "nota": "rallado",
+      "escalable": true
+    },
+    {
+      "cantidad": 40,
+      "unidad": "g",
+      "nombre": "queso chanco",
+      "nota": "rallado",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "mantequilla",
+      "nota": "para el molde",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Precalentar el horno a 180 °C."
+    },
+    {
+      "texto": "Rallar los tres tipos de queso y mezclarlos en un bol.",
+      "ingredientes": [
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "texto": "Batir las claras y los huevos enteros hasta que estén espumosos.",
+      "ingredientes": [
+        1,
+        2
+      ]
+    },
+    {
+      "texto": "Verter los huevos batidos sobre el bol de los quesos y mezclar bien.",
+      "ingredientes": [
+        6
+      ]
+    },
+    {
+      "texto": "Engrasar una budinera con mantequilla.",
+      "ingredientes": [
+        6
+      ]
+    },
+    {
+      "texto": "Verter la mezcla en el molde y hornear por unos 20 minutos, hasta que esté cuajado y dorado.",
+      "ingredientes": [
+        6
+      ],
+      "timers": [
+        {
+          "minutos": 20,
+          "etiqueta": "20 minutos"
+        }
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 20
+  },
+  "revisado_v2": true
 }

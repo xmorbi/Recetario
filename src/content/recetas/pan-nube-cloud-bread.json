@@ -40,5 +40,82 @@
   "conservacion": {
     "refrigerador": "Guardar en recipiente hermético en refrigerador hasta 3 días",
     "congelador": "Se pueden congelar hasta 1 mes."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 3,
+      "unidad": null,
+      "nombre": "huevos",
+      "nota": "a temperatura ambiente",
+      "escalable": true
+    },
+    {
+      "cantidad": 50,
+      "unidad": "g",
+      "nombre": "queso crema",
+      "nota": "3 cucharadas",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.25,
+      "unidad": "cucharadita",
+      "nombre": "cremor tártaro",
+      "nota": "o polvo de hornear",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "pizca",
+      "nombre": "sal",
+      "nota": "opcional, Una",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Precalentar el horno a 150 °C y preparar una bandeja con papel para hornear."
+    },
+    {
+      "texto": "Separar las claras de las yemas.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Batir las claras con el cremor tártaro a punto de nieve firme.",
+      "ingredientes": [
+        1,
+        3
+      ]
+    },
+    {
+      "texto": "En otro bol, mezclar las yemas con el queso crema hasta que queden bien integradas.",
+      "ingredientes": [
+        1,
+        2
+      ]
+    },
+    {
+      "texto": "Incorporar las claras batidas a la mezcla de yemas con movimientos envolventes, con cuidado de no perder el aire.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Formar montoncitos con una cuchara sobre la bandeja, dando forma de discos de aproximadamente 1 cm de grosor."
+    },
+    {
+      "texto": "Hornear por 20 a 25 minutos, hasta que estén dorados y firmes al tacto.",
+      "timers": [
+        {
+          "minutos": 25,
+          "etiqueta": "20 a 25 minutos"
+        }
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 25
+  },
+  "revisado_v2": true
 }

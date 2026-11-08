@@ -49,5 +49,156 @@
   "conservacion": {
     "refrigerador": "2 días",
     "recalentar": "A fuego lento."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 2,
+      "unidad": "taza",
+      "nombre": "arroz",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "panitas",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "kg",
+      "nombre": "arvejitas",
+      "nota": "cocidas",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "kg",
+      "nombre": "queso mantecoso",
+      "escalable": true
+    },
+    {
+      "cantidad": 4,
+      "unidad": null,
+      "nombre": "yemas",
+      "escalable": true
+    },
+    {
+      "cantidad": 4,
+      "unidad": "cucharada",
+      "nombre": "colmadas de crema",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "maicena",
+      "escalable": true
+    },
+    {
+      "cantidad": 3,
+      "unidad": "cucharada",
+      "nombre": "aceite",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "ramita",
+      "nombre": "apio",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "mantequilla",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "diente",
+      "nombre": "ajo",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pimienta",
+      "nota": "a gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Freír el arroz con el diente de ajo y sal.",
+      "ingredientes": [
+        1,
+        8,
+        11,
+        12
+      ]
+    },
+    {
+      "texto": "Agregar la ramita de apio y el agua hirviendo.",
+      "ingredientes": [
+        9
+      ]
+    },
+    {
+      "texto": "Cocer a fuego lento unos 20 minutos.",
+      "timers": [
+        {
+          "minutos": 20,
+          "etiqueta": "20 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Freír las panitas en mantequilla aliñadas con sal y pimienta.",
+      "ingredientes": [
+        2,
+        8,
+        10,
+        12,
+        13
+      ]
+    },
+    {
+      "texto": "Agregar las arvejitas, revolver y luego incorporar esta preparación al arroz.",
+      "ingredientes": [
+        1,
+        3
+      ]
+    },
+    {
+      "texto": "Batir las yemas con la maicena, añadir la crema, diluir en 1 taza de agua caliente y poner a fuego suave revolviendo constantemente hasta que espese.",
+      "ingredientes": [
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "texto": "Agregar el queso cortado en trocitos y dejar que se funda sin que hierva.",
+      "ingredientes": [
+        4
+      ]
+    },
+    {
+      "texto": "Servir el arroz bañado con esta salsa.",
+      "ingredientes": [
+        1,
+        12
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 20
+  },
+  "revisado_v2": true
 }

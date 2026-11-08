@@ -42,5 +42,86 @@
     "refrigerador": "Hasta 1 mes en frasco esterilizado cerrado. Una vez abierta, consumir en 2 semanas.",
     "congelador": "Hasta 6 meses.",
     "recalentar": "A temperatura ambiente."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": "kg",
+      "nombre": "fruta",
+      "nota": "frutilla, damasco, ciruela, durazno o la que prefieras",
+      "escalable": true
+    },
+    {
+      "cantidad": 700,
+      "unidad": "g",
+      "nombre": "azúcar",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "jugo de limón",
+      "nota": "de 1 limón",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "rama",
+      "nombre": "canela",
+      "nota": "opcional",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Lava y pela la fruta. Córtala en trozos.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "En una olla, mezcla la fruta con el azúcar y el jugo de limón. Deja reposar 30 minutos para que la fruta suelte su jugo.",
+      "ingredientes": [
+        1,
+        2,
+        3
+      ],
+      "timers": [
+        {
+          "minutos": 30,
+          "etiqueta": "30 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Cocina a fuego medio-bajo, revolviendo de vez en cuando, por 40-50 minutos, hasta que la mermelada espese.",
+      "timers": [
+        {
+          "minutos": 50,
+          "etiqueta": "40-50 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Si usas canela, agrégala en los últimos 10 minutos.",
+      "ingredientes": [
+        4
+      ],
+      "timers": [
+        {
+          "minutos": 10,
+          "etiqueta": "10 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Envasa en frascos esterilizados calientes y tapa. Deja enfriar y refrigera."
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 10,
+    "reposo": 30,
+    "coccion": 50
+  },
+  "revisado_v2": true
 }

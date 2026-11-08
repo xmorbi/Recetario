@@ -46,5 +46,106 @@
     "refrigerador": "Hasta 3 días en recipiente hermético.",
     "congelador": "No recomendado, el manjar se estropea.",
     "recalentar": "A temperatura ambiente."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "harina",
+      "escalable": true
+    },
+    {
+      "cantidad": 250,
+      "unidad": "g",
+      "nombre": "mantequilla",
+      "nota": "fría",
+      "escalable": true
+    },
+    {
+      "cantidad": 100,
+      "unidad": "ml",
+      "nombre": "agua",
+      "nota": "fría",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "pizca",
+      "nombre": "sal",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "huevo",
+      "nota": "para pintar",
+      "escalable": true
+    },
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "manjar",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "azúcar flor",
+      "nota": "para espolvorear",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Mezcla la harina con la sal. Agrega la mantequilla fría en cubos y trabaja con los dedos hasta que quede como arena. Añade el agua fría y amasa hasta formar una masa lisa. Refrigera 1 hora.",
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "timers": [
+        {
+          "minutos": 60,
+          "etiqueta": "1 hora"
+        }
+      ]
+    },
+    {
+      "texto": "Estira la masa muy fina y corta discos del tamaño del molde. Necesitas 6 discos."
+    },
+    {
+      "texto": "Pincha cada disco con un tenedor, pinta con el huevo batido y hornea a 180 °C por 10-12 minutos, hasta que estén dorados. Deja enfriar.",
+      "ingredientes": [
+        5
+      ],
+      "timers": [
+        {
+          "minutos": 12,
+          "etiqueta": "10-12 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Arma la torta: disco, capa de manjar, disco, capa de manjar, hasta terminar con un disco.",
+      "ingredientes": [
+        6
+      ]
+    },
+    {
+      "texto": "Espolvorea azúcar flor generosamente por encima.",
+      "ingredientes": [
+        7
+      ]
+    },
+    {
+      "texto": "Refrigera al menos 2 horas antes de cortar.",
+      "previo": true
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 60,
+    "reposo": 132
+  },
+  "revisado_v2": true
 }

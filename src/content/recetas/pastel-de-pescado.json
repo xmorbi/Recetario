@@ -1,13 +1,7 @@
 {
   "titulo": "Pastel de pescado",
   "categoria": "principales",
-  "tags": [
-    "pescado",
-    "pastel",
-    "horno",
-    "casero",
-    "tradicional"
-  ],
+  "tags": ["pescado", "pastel", "horno", "casero", "tradicional"],
   "imagen": null,
   "tiempo": "1 h",
   "porciones": "4 personas",
@@ -37,22 +31,37 @@
   ],
   "dato": "El pastel de pescado es el hermano marino del pastel de choclo y del pastel de papas. Se hace en las casas chilenas sobre todo en Cuaresma y en la costa. Se puede usar pescado fresco o congelado. En el sur se hace con salmón o con congrio; en la zona central con merluza.",
   "errores": [
-    {
-      "error": "Queda aguado",
-      "solucion": "No escurrir bien el pescado o el tomate. Escurre el pescado y cocina el guiso hasta que se seque un poco. El puré debe quedar espeso."
-    },
-    {
-      "error": "Sabe a pescado fuerte",
-      "solucion": "Usar pescado que no está fresco o no condimentar bien. Usa pescado fresco y condimenta generosamente con orégano y ají de color."
-    },
-    {
-      "error": "Se desarma al servir",
-      "solucion": "No dejar reposar antes de cortar. Deja reposar 10 minutos fuera del horno antes de porcionar."
-    }
+    { "error": "Queda aguado", "solucion": "No escurrir bien el pescado o el tomate. Escurre el pescado y cocina el guiso hasta que se seque un poco. El puré debe quedar espeso." },
+    { "error": "Sabe a pescado fuerte", "solucion": "Usar pescado que no está fresco o no condimentar bien. Usa pescado fresco y condimenta generosamente con orégano y ají de color." },
+    { "error": "Se desarma al servir", "solucion": "No dejar reposar antes de cortar. Deja reposar 10 minutos fuera del horno antes de porcionar." }
   ],
   "conservacion": {
     "refrigerador": "Hasta 2 días en recipiente hermético.",
     "congelador": "No recomendado, el puré se aguada.",
     "recalentar": "Horno a 180 °C por 15 minutos."
-  }
+  },
+  "ingredientes_v2": [
+    { "cantidad": 600, "unidad": "g", "nombre": "filetes de pescado blanco", "nota": "merluza, reineta o congrio", "escalable": true },
+    { "cantidad": 4, "unidad": null, "nombre": "papas", "nota": "grandes", "escalable": true },
+    { "cantidad": 0.5, "unidad": "taza", "nombre": "leche", "escalable": true },
+    { "cantidad": 2, "unidad": "cucharada", "nombre": "mantequilla", "escalable": true },
+    { "cantidad": 1, "unidad": null, "nombre": "cebolla", "nota": "picada, grande, fina", "escalable": true },
+    { "cantidad": 2, "unidad": "diente", "nombre": "ajo", "nota": "picados", "escalable": true },
+    { "cantidad": 1, "unidad": null, "nombre": "pimentón rojo", "nota": "en cubos", "escalable": true },
+    { "cantidad": 2, "unidad": null, "nombre": "tomates", "nota": "picados, maduros", "escalable": true },
+    { "cantidad": 1, "unidad": "taza", "nombre": "pan", "nota": "rallado", "escalable": true },
+    { "cantidad": 50, "unidad": "g", "nombre": "queso parmesano", "nota": "rallado", "escalable": true },
+    { "cantidad": 1, "unidad": null, "nombre": "sal, pimienta, orégano y ají de color", "nota": "a gusto", "escalable": false }
+  ],
+  "pasos_v2": [
+    { "texto": "Cuece las papas en agua con sal hasta que estén tiernas. Haz un puré con la leche y la mantequilla. Reserva.", "ingredientes": [2, 3, 4, 11] },
+    { "texto": "Sofríe la cebolla, el ajo y el pimentón hasta que estén transparentes. Agrega el tomate y condimenta con sal, pimienta, orégano y ají de color. Cocina 5 minutos.", "ingredientes": [5, 6, 7, 8, 11], "timers": [{ "minutos": 5, "etiqueta": "5 minutos" }] },
+    { "texto": "Agrega el pescado en trozos y cocina 3-4 minutos, hasta que se desmenuce fácilmente. Rectifica la sal.", "ingredientes": [1, 11], "timers": [{ "minutos": 4, "etiqueta": "3-4 minutos" }] },
+    { "texto": "En una fuente para horno, extiende la mitad del puré. Encima distribuye el guiso de pescado." },
+    { "texto": "Cubre con el resto del puré y alisa la superficie con un tenedor." },
+    { "texto": "Espolvorea pan rallado y queso parmesano por encima.", "ingredientes": [9, 10] },
+    { "texto": "Hornea a 200 °C por 20-25 minutos, hasta que la superficie esté dorada.", "timers": [{ "minutos": 25, "etiqueta": "20-25 minutos" }] }
+  ],
+  "tiempo_v2": { "coccion": 34 },
+  "revisado_v2": true
 }

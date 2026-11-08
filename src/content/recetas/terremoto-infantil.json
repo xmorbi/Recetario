@@ -1,7 +1,14 @@
 {
   "titulo": "Terremoto infantil",
   "categoria": "bebidas",
-  "tags": ["bebida", "sin alcohol", "niños", "fiestas patrias", "verano", "tradicional"],
+  "tags": [
+    "bebida",
+    "sin alcohol",
+    "niños",
+    "fiestas patrias",
+    "verano",
+    "tradicional"
+  ],
   "imagen": null,
   "tiempo": "5 min",
   "porciones": "1 vaso",
@@ -33,5 +40,47 @@
     "refrigerador": "Se consume al momento.",
     "congelador": "No aplica.",
     "recalentar": "No aplica. Siempre se sirve helado."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "bebida blanca",
+      "nota": "Sprite, 7Up o Canada Dry, bien helada",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "bolas de helado de piña",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "chorrito",
+      "nombre": "granadina",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Pon 2 bolas de helado de piña en un vaso alto.",
+      "ingredientes": [2]
+    },
+    {
+      "texto": "Vierte la bebida blanca bien helada hasta casi llenar el vaso.",
+      "ingredientes": [1]
+    },
+    {
+      "texto": "Añade un chorrito de granadina para el color rosado.",
+      "ingredientes": [3]
+    },
+    {
+      "texto": "Sirve inmediatamente con cuchara o bombilla."
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 5
+  },
+  "revisado_v2": true
 }

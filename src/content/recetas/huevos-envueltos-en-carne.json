@@ -47,5 +47,123 @@
   "conservacion": {
     "refrigerador": "2 días",
     "recalentar": "En horno suave."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 3,
+      "unidad": null,
+      "nombre": "huevos",
+      "nota": "duros",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "huevo crudo",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "yema",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.25,
+      "unidad": "kg",
+      "nombre": "carne molida",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.25,
+      "unidad": "kg",
+      "nombre": "jamón molido",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "chuño",
+      "nota": "colmada",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pan",
+      "nota": "rallado",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "orégano",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pimienta",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "aceite",
+      "nota": "para freír",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Mezclar la carne y el jamón con el chuño, la yema, sal, pimienta y orégano.",
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "texto": "Envolver los huevos duros con esta mezcla, pasar por huevo batido, pan rallado y freír en una olla con aceite bien caliente.",
+      "ingredientes": [
+        1,
+        2,
+        3,
+        7,
+        11
+      ]
+    },
+    {
+      "texto": "Retirar del fuego y poner sobre papel absorbente."
+    },
+    {
+      "texto": "Partir los huevos a lo largo y servirlos acompañados de ensaladas cocidas (porotitos verdes, habas o arvejitas).",
+      "ingredientes": [
+        1,
+        2,
+        3,
+        7,
+        9
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 35
+  },
+  "revisado_v2": true
 }

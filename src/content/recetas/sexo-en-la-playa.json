@@ -36,5 +36,62 @@
   ],
   "conservacion": {
     "refrigerador": "Servir de inmediato."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": "parte",
+      "nombre": "ron blanco",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "parte",
+      "nombre": "jugo de piña",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "parte",
+      "nombre": "curazao azul",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "parte",
+      "nombre": "crema de coco",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cereza de marrasquino",
+      "nota": "para decorar",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "hielo",
+      "nota": "a gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Colocar todos los ingredientes en una coctelera y batir enérgicamente.",
+      "ingredientes": [1, 2, 3, 4, 5, 6]
+    },
+    {
+      "texto": "Servir en un vaso largo."
+    },
+    {
+      "texto": "Decorar con 1 cereza de marrasquino.",
+      "ingredientes": [5]
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 5
+  },
+  "revisado_v2": true
 }

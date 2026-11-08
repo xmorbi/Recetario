@@ -36,5 +36,60 @@
   ],
   "conservacion": {
     "refrigerador": "Servir de inmediato."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 2,
+      "unidad": "parte",
+      "nombre": "whisky",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "parte",
+      "nombre": "vermut",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "chorrito",
+      "nombre": "amargo",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cerezas marrasquino",
+      "nota": "a gusto, para decorar",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "hielo",
+      "nota": "a gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Picar el hielo en la licuadora.",
+      "ingredientes": [5]
+    },
+    {
+      "texto": "Incorporar los licores y batir.",
+      "ingredientes": [1, 2, 3]
+    },
+    {
+      "texto": "Servir en vasos de cóctel."
+    },
+    {
+      "texto": "Agregar 1 cereza marrasquino.",
+      "ingredientes": [4]
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 5
+  },
+  "revisado_v2": true
 }

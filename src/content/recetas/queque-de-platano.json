@@ -50,5 +50,126 @@
     "refrigerador": "Hasta 4 días en recipiente hermético.",
     "congelador": "Hasta 2 meses, en porciones.",
     "recalentar": "A temperatura ambiente o tibio en microondas 15 segundos."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 3,
+      "unidad": null,
+      "nombre": "plátanos",
+      "nota": "maduros",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "huevos",
+      "escalable": true
+    },
+    {
+      "cantidad": 150,
+      "unidad": "g",
+      "nombre": "azúcar",
+      "escalable": true
+    },
+    {
+      "cantidad": 100,
+      "unidad": "g",
+      "nombre": "mantequilla derretida",
+      "escalable": true
+    },
+    {
+      "cantidad": 200,
+      "unidad": "g",
+      "nombre": "harina",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "polvos de hornear",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "bicarbonato",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "pizca",
+      "nombre": "sal",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "vainilla",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "taza",
+      "nombre": "nueces",
+      "nota": "opcional, picadas",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Precalienta el horno a 180 °C. Engrasa un molde de queque."
+    },
+    {
+      "texto": "Pisa los plátanos con un tenedor hasta hacer un puré.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Bate los huevos con el azúcar hasta que estén espumosos. Agrega la mantequilla derretida y la vainilla.",
+      "ingredientes": [
+        2,
+        3,
+        4,
+        9
+      ]
+    },
+    {
+      "texto": "Incorpora el puré de plátano.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Añade la harina cernida con los polvos de hornear, el bicarbonato y la sal. Mezcla con movimientos envolventes.",
+      "ingredientes": [
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "texto": "Si usas nueces, incorpóralas ahora. Vierte en el molde.",
+      "ingredientes": [
+        10
+      ]
+    },
+    {
+      "texto": "Hornea 45-50 minutos, hasta que un palillo salga limpio.",
+      "ingredientes": [
+        8
+      ],
+      "timers": [
+        {
+          "minutos": 50,
+          "etiqueta": "45-50 minutos"
+        }
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 50
+  },
+  "revisado_v2": true
 }

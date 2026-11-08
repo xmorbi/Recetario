@@ -41,5 +41,73 @@
     "refrigerador": "Hasta 1 mes en frasco esterilizado cerrado.",
     "congelador": "Hasta 6 meses.",
     "recalentar": "A temperatura ambiente."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": "kg",
+      "nombre": "membrillos",
+      "escalable": true
+    },
+    {
+      "cantidad": 800,
+      "unidad": "g",
+      "nombre": "azúcar",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "jugo de limón",
+      "nota": "de 1 limón",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "rama",
+      "nombre": "canela",
+      "nota": "opcional",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Lava los membrillos, córtalos en cuartos y retira las semillas y el corazón.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Cocínalos en agua hirviendo 30-40 minutos, hasta que estén tiernos. Escurre y pásalos por un colador o procesador hasta obtener un puré.",
+      "timers": [
+        {
+          "minutos": 40,
+          "etiqueta": "30-40 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "En una olla, mezcla el puré con el azúcar y el jugo de limón.",
+      "ingredientes": [
+        2,
+        3
+      ]
+    },
+    {
+      "texto": "Cocina a fuego medio-bajo, revolviendo constantemente, por 40-50 minutos, hasta que el dulce espese y tome color.",
+      "timers": [
+        {
+          "minutos": 50,
+          "etiqueta": "40-50 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Envasa en frascos esterilizados calientes y tapa. Deja enfriar y refrigera."
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 90
+  },
+  "revisado_v2": true
 }

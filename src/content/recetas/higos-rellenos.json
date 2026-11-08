@@ -45,5 +45,89 @@
     "refrigerador": "Hasta 2 semanas en recipiente hermético.",
     "congelador": "No recomendado.",
     "recalentar": "A temperatura ambiente."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 20,
+      "unidad": null,
+      "nombre": "higos",
+      "nota": "secos",
+      "escalable": true
+    },
+    {
+      "cantidad": 100,
+      "unidad": "g",
+      "nombre": "nueces",
+      "nota": "picadas",
+      "escalable": true
+    },
+    {
+      "cantidad": 50,
+      "unidad": "g",
+      "nombre": "almendras",
+      "nota": "picadas",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "miel",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "azúcar flor",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "canela",
+      "nota": "en polvo",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "pisco o ron",
+      "seccion": "Opcional",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Abre los higos por la mitad, sin separarlos del todo.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Mezcla las nueces, almendras, miel, azúcar flor, canela y el licor si usas.",
+      "ingredientes": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "texto": "Rellena cada higo con la mezcla.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Presiona ligeramente para cerrar."
+    },
+    {
+      "texto": "Deja reposar al menos 2 horas antes de servir para que los sabores se integren.",
+      "previo": true
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 120
+  },
+  "revisado_v2": true
 }

@@ -49,5 +49,143 @@
     "refrigerador": "A temperatura ambiente 2 días en bolsa de tela.",
     "congelador": "Hasta 3 meses en bolsa hermética.",
     "recalentar": "Horno a 180 °C por 5 minutos."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "harina sin polvos de hornear",
+      "escalable": true
+    },
+    {
+      "cantidad": 150,
+      "unidad": "g",
+      "nombre": "azúcar",
+      "escalable": true
+    },
+    {
+      "cantidad": 100,
+      "unidad": "g",
+      "nombre": "mantequilla",
+      "nota": "a temperatura ambiente",
+      "escalable": true
+    },
+    {
+      "cantidad": 4,
+      "unidad": null,
+      "nombre": "huevos",
+      "escalable": true
+    },
+    {
+      "cantidad": 15,
+      "unidad": "g",
+      "nombre": "levadura granulada",
+      "escalable": true
+    },
+    {
+      "cantidad": 100,
+      "unidad": "ml",
+      "nombre": "leche",
+      "nota": "tibia",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "vainilla",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "ralladura de 1 limón",
+      "nota": "a gusto",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "pizca",
+      "nombre": "sal",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "huevo batido",
+      "nota": "para pintar",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Activa la levadura en la leche tibia con una cucharadita de azúcar. Reposa 10 minutos hasta que espume.",
+      "ingredientes": [
+        2,
+        5,
+        6
+      ],
+      "timers": [
+        {
+          "minutos": 10,
+          "etiqueta": "10 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Bate la mantequilla con el azúcar. Agrega los huevos uno a uno, la vainilla y la ralladura.",
+      "ingredientes": [
+        2,
+        3,
+        4,
+        7,
+        8,
+        10
+      ]
+    },
+    {
+      "texto": "Incorpora la levadura y la harina cernida con la sal. Amasa hasta obtener una masa suave.",
+      "ingredientes": [
+        1,
+        5,
+        9
+      ]
+    },
+    {
+      "texto": "Deja levar tapada 1 hora, hasta que doble su volumen.",
+      "timers": [
+        {
+          "minutos": 60,
+          "etiqueta": "1 hora"
+        }
+      ]
+    },
+    {
+      "texto": "Forma 12 bollos y colócalos en una bandeja engrasada. Deja levar 30 minutos más.",
+      "timers": [
+        {
+          "minutos": 30,
+          "etiqueta": "30 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Pinta con huevo batido y hornea a 180 °C por 20-25 minutos, hasta dorar.",
+      "ingredientes": [
+        4,
+        10
+      ],
+      "timers": [
+        {
+          "minutos": 25,
+          "etiqueta": "20-25 minutos"
+        }
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 90,
+    "reposo": 10,
+    "coccion": 25
+  },
+  "revisado_v2": true
 }

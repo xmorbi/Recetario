@@ -46,5 +46,145 @@
   ],
   "conservacion": {
     "refrigerador": "Mantener refrigerada hasta 2 días. Decorar con palta al momento de servir."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 3,
+      "unidad": "taza",
+      "nombre": "arroz",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "kg",
+      "nombre": "hígados de pollo",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "bolsa",
+      "nombre": "pickles",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "kg",
+      "nombre": "jamón planchado",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "taza",
+      "nombre": "mayonesa",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "perejil",
+      "nota": "picado",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "aceite",
+      "nota": "a gusto",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pimienta",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "palta",
+      "nota": "a gusto",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pimiento",
+      "nota": "a gusto",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "aceitunas",
+      "nota": "para decorar",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Cocer el arroz en abundante agua con sal, escurrir, enjuagar con agua caliente y enfriar.",
+      "ingredientes": [
+        1,
+        8
+      ]
+    },
+    {
+      "texto": "Picar el jamón y los pickles finos.",
+      "ingredientes": [
+        3,
+        4
+      ]
+    },
+    {
+      "texto": "Cocer los hígados y luego saltearlos en un poco de aceite y aliños.",
+      "ingredientes": [
+        2,
+        7,
+        8
+      ]
+    },
+    {
+      "texto": "Molerlos bien y mezclarlos con la mitad de los pickles, perejil y 1 cucharada de mayonesa.",
+      "ingredientes": [
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "texto": "Mezclar el arroz con la mayonesa y el resto de los pickles. Aliñar y sazonar.",
+      "ingredientes": [
+        1,
+        3,
+        5
+      ]
+    },
+    {
+      "texto": "Poner una capa de arroz en una fuente redonda, cubrir con los hígados molidos y completar la otra capa de la torta con el resto del arroz.",
+      "ingredientes": [
+        1,
+        2
+      ]
+    },
+    {
+      "texto": "Decorar con redondelas de palta, aceitunas y tiritas de pimiento asado y pelado.",
+      "ingredientes": [
+        10,
+        11,
+        12
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 75
+  },
+  "revisado_v2": true
 }

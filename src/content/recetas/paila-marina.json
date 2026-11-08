@@ -53,5 +53,146 @@
     "refrigerador": "Hasta 2 días máximo. Al ser mariscos, es muy perecedero.",
     "congelador": "Hasta 2 meses (idealmente sin papas).",
     "recalentar": "A fuego muy suave, evitando hervir para que los mariscos no se endurezcan."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "pescado blanco",
+      "nota": "congrio, merluza, en trozos",
+      "escalable": true
+    },
+    {
+      "cantidad": 250,
+      "unidad": "g",
+      "nombre": "choritos con concha",
+      "nota": "mejillones",
+      "escalable": true
+    },
+    {
+      "cantidad": 250,
+      "unidad": "g",
+      "nombre": "almejas con concha",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "camarones",
+      "nota": "pelados",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cebolla",
+      "nota": "picada, fina",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "diente",
+      "nombre": "ajo",
+      "nota": "picados",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pimentón rojo",
+      "nota": "en cubos",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "tomates",
+      "nota": "picados, pelados",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "taza",
+      "nombre": "vino blanco",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "L",
+      "nombre": "caldo de pescado",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "aceite, sal, pimienta, ají de color y orégano",
+      "nota": "a gusto",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "En una olla grande, sofríe la cebolla, el ajo y el pimentón en aceite hasta que estén transparentes.",
+      "ingredientes": [
+        5,
+        6,
+        7,
+        11
+      ]
+    },
+    {
+      "texto": "Agrega el tomate, el ají de color, orégano, sal y pimienta. Cocina por 5 minutos.",
+      "ingredientes": [
+        8
+      ],
+      "timers": [
+        {
+          "minutos": 5,
+          "etiqueta": "5 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Vierte el vino blanco y el caldo de pescado. Lleva a ebullición.",
+      "ingredientes": [
+        1,
+        9,
+        10
+      ]
+    },
+    {
+      "texto": "Incorpora los choritos y las almejas. Tapa y cocina hasta que se abran (unos 5 minutos).",
+      "ingredientes": [
+        2,
+        3
+      ],
+      "timers": [
+        {
+          "minutos": 5,
+          "etiqueta": "5 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Agrega los trozos de pescado y los camarones. Cocina por 5-7 minutos más, hasta que el pescado esté cocido.",
+      "ingredientes": [
+        1,
+        4,
+        10
+      ],
+      "timers": [
+        {
+          "minutos": 7,
+          "etiqueta": "5-7 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Rectifica la sal y sirve caliente en platos hondos o en una paila de greda."
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 17
+  },
+  "revisado_v2": true
 }

@@ -54,5 +54,147 @@
     "refrigerador": "Hasta 5 días en recipiente hermético, en su jugo.",
     "congelador": "Hasta 2 meses en porciones.",
     "recalentar": "Horno a 160 °C por 15-20 minutos, cubierto con aluminio y bañado con su jugo."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pernil de cerdo de 4 a 5 kg",
+      "nota": "con hueso",
+      "escalable": true
+    },
+    {
+      "cantidad": 6,
+      "unidad": "diente",
+      "nombre": "ajo machacados",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "sal",
+      "nota": "gruesa",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "pimienta negra molida",
+      "escalable": false
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "ají de color",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "orégano",
+      "nota": "seco",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "vinagre de vino",
+      "nota": "tinto",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "vino blanco",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "cebollas",
+      "nota": "en pluma",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "zanahorias",
+      "nota": "en rodajas",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "hoja",
+      "nombre": "laurel",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Mezcla el ajo, la sal, la pimienta, el ají de color y el orégano para formar una pasta. Unta el pernil por todos lados.",
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "texto": "Coloca el pernil en una fuente para horno con las cebollas, zanahorias y laurel. Vierte el vinagre y el vino.",
+      "ingredientes": [
+        1,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "texto": "Marina en el refrigerador al menos 12 horas (mejor 24), dando vuelta cada tanto.",
+      "previo": true
+    },
+    {
+      "texto": "Precalienta el horno a 180 °C. Cubre el pernil con papel aluminio y hornea 2 horas, bañándolo con su jugo cada 30 minutos.",
+      "ingredientes": [
+        1
+      ],
+      "timers": [
+        {
+          "minutos": 120,
+          "etiqueta": "2 horas"
+        }
+      ]
+    },
+    {
+      "texto": "Sube el horno a 200 °C, retira el aluminio y hornea 30-40 minutos más, hasta que la piel esté dorada y crujiente.",
+      "timers": [
+        {
+          "minutos": 40,
+          "etiqueta": "30-40 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Deja reposar 15 minutos antes de cortar. Sirve en láminas, con su jugo y las verduras asadas.",
+      "ingredientes": [
+        2,
+        9,
+        10
+      ],
+      "timers": [
+        {
+          "minutos": 15,
+          "etiqueta": "15 minutos"
+        }
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 735,
+    "coccion": 160
+  },
+  "revisado_v2": true
 }

@@ -46,5 +46,114 @@
     "refrigerador": "Hasta 3 días en recipiente hermético, ya cocidos.",
     "congelador": "Hasta 2 meses, ya cocidos y sin freír.",
     "recalentar": "Sartén a fuego alto 2-3 minutos para que recuperen la textura crujiente."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": "kg",
+      "nombre": "chunchules",
+      "nota": "tripas delgadas de vacuno",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cebolla",
+      "nota": "en cuartos",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "diente",
+      "nombre": "ajo",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "hoja",
+      "nombre": "laurel",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "vinagre",
+      "nota": "15 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "aceite",
+      "nota": "para freír",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pebre",
+      "nota": "para acompañar",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Lava muy bien los chunchules con agua fría y limón varias veces. Este paso es clave para quitarles el olor fuerte.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "En una olla, pon los chunchules con la cebolla, el ajo, el laurel, el vinagre y sal. Cubre con agua y cocina 1 hora y 30 minutos a fuego medio, hasta que estén tiernos.",
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "timers": [
+        {
+          "minutos": 90,
+          "etiqueta": "1 hora y 30 minutos"
+        },
+        {
+          "minutos": 60,
+          "etiqueta": "1 hora"
+        },
+        {
+          "minutos": 30,
+          "etiqueta": "30 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Escurre y corta en trozos de 5 cm. Sécalos bien con papel absorbente."
+    },
+    {
+      "texto": "Fríe en abundante aceite caliente (170-180 °C) hasta que estén dorados y crujientes. Escurre sobre papel absorbente.",
+      "ingredientes": [
+        7
+      ]
+    },
+    {
+      "texto": "Sala al gusto y sirve calientes con pebre y pan amasado.",
+      "ingredientes": [
+        6,
+        8
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 180
+  },
+  "revisado_v2": true
 }

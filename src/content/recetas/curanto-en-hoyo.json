@@ -61,5 +61,181 @@
     "refrigerador": "Hasta 3 días en recipiente hermético.",
     "congelador": "No recomendado: los mariscos y las papas pierden textura.",
     "recalentar": "Horno a 180 °C por 15 minutos, cubierto con papel aluminio, o al vapor."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 2,
+      "unidad": "kg",
+      "nombre": "almejas",
+      "nota": "frescas",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "kg",
+      "nombre": "cholgas",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "kg",
+      "nombre": "choritos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "kg",
+      "nombre": "picorocos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "kg",
+      "nombre": "pollo en presas",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "kg",
+      "nombre": "carne de cerdo",
+      "nota": "en trozos",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "longanizas",
+      "escalable": true
+    },
+    {
+      "cantidad": 6,
+      "unidad": null,
+      "nombre": "papas",
+      "nota": "grandes",
+      "escalable": true
+    },
+    {
+      "cantidad": 6,
+      "unidad": null,
+      "nombre": "camotes",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "kg",
+      "nombre": "milcaos",
+      "nota": "ver receta",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "kg",
+      "nombre": "chapaleles",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "hojas de nalca, pangue o repollo",
+      "nota": "grandes",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "piedras volcánicas o de río",
+      "nota": "grandes",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "leña abundante",
+      "nota": "seca",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Escoge un terreno sin raíces. Excava un hoyo de 1 m de diámetro por 60 cm de profundidad. Reserva la tierra."
+    },
+    {
+      "texto": "Enciende una fogata abundante dentro del hoyo y coloca encima las piedras. Deja que se calienten al rojo vivo por 1,5 a 2 horas.",
+      "ingredientes": [
+        13,
+        14
+      ],
+      "timers": [
+        {
+          "minutos": 120,
+          "etiqueta": "5 a 2 horas"
+        }
+      ]
+    },
+    {
+      "texto": "Mientras se calientan las piedras, lava bien los mariscos y prepara las carnes. Sala todo generosamente.",
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        13
+      ]
+    },
+    {
+      "texto": "Retira la mitad de las piedras calientes con una pala (con mucho cuidado) y reserva.",
+      "ingredientes": [
+        13
+      ]
+    },
+    {
+      "texto": "Coloca una cama de hojas de nalca o pangue en el fondo. Encima pon la mitad de las piedras calientes y cubre con más hojas.",
+      "ingredientes": [
+        12,
+        13
+      ]
+    },
+    {
+      "texto": "Ordena por capas: primero las carnes y longanizas, luego los mariscos con concha hacia abajo (para que suelten su jugo), después las papas, camotes, milcaos y chapaleles.",
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "texto": "Cubre todo con el resto de las piedras calientes y una capa gruesa de hojas.",
+      "ingredientes": [
+        12,
+        13
+      ]
+    },
+    {
+      "texto": "Sella el hoyo con la tierra que sacaste. La tierra atrapa el calor y cocina al vapor."
+    },
+    {
+      "texto": "Deja cocinar 1,5 a 2 horas sin destapar. Destapa con cuidado y sirve en una mesa grande, todo junto, para compartir.",
+      "timers": [
+        {
+          "minutos": 120,
+          "etiqueta": "5 a 2 horas"
+        }
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 120,
+    "coccion": 120
+  },
+  "revisado_v2": true
 }

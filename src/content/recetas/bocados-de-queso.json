@@ -47,5 +47,119 @@
   "conservacion": {
     "refrigerador": "3 días",
     "recalentar": "En horno suave antes de servir."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 90,
+      "unidad": "g",
+      "nombre": "harina",
+      "escalable": true
+    },
+    {
+      "cantidad": 90,
+      "unidad": "g",
+      "nombre": "migas de pan",
+      "escalable": true
+    },
+    {
+      "cantidad": 45,
+      "unidad": "g",
+      "nombre": "queso",
+      "nota": "rallado",
+      "escalable": true
+    },
+    {
+      "cantidad": 90,
+      "unidad": "g",
+      "nombre": "mantequilla",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "rasa de polvos de hornear",
+      "nota": "3 g",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.25,
+      "unidad": "cucharadita",
+      "nombre": "sal",
+      "escalable": false
+    },
+    {
+      "cantidad": 0.25,
+      "unidad": "cucharadita",
+      "nombre": "pimienta",
+      "escalable": false
+    },
+    {
+      "cantidad": 0.25,
+      "unidad": "cucharadita",
+      "nombre": "ají de color",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "yema",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Mezclar todos los ingredientes, menos la yema, uniendo con la mano.",
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "texto": "Cuando se tiene una masa blanda, uslerear hasta dejarla de 3 mm de grosor."
+    },
+    {
+      "texto": "Cortar en rectángulos de 3 cm de ancho por 12 cm de largo. Con un cuchillo afilado y enharinado, hacer tiras de 1/2 cm de ancho por 6 cm de largo.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Formar figuras con las tiras: nudos, rosas o argollas."
+    },
+    {
+      "texto": "Diluir la yema en un poco de leche y pintar los bocados.",
+      "ingredientes": [
+        9
+      ]
+    },
+    {
+      "texto": "Cocer en una lata enmantequillada a horno a 180 °C por 15 minutos, hasta que comiencen a dorarse.",
+      "ingredientes": [
+        4
+      ],
+      "timers": [
+        {
+          "minutos": 15,
+          "etiqueta": "15 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Espolvorear pimienta al sacarlos del horno.",
+      "ingredientes": [
+        7
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 15
+  },
+  "revisado_v2": true
 }

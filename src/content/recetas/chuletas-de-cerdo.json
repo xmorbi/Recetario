@@ -45,5 +45,113 @@
     "refrigerador": "Hasta 2 días en recipiente hermético.",
     "congelador": "No recomendado, pierden jugosidad.",
     "recalentar": "Sartén a fuego medio 1 minuto por lado."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 4,
+      "unidad": null,
+      "nombre": "chuletas de cerdo de 1,5 cm de grosor",
+      "nota": "lomo o centro",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "diente",
+      "nombre": "ajo machacados",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "orégano",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "ají de color",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal y pimienta",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "aceite",
+      "nota": "30 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "jugo de 0.5 limón",
+      "nota": "a gusto",
+      "seccion": "Opcional",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Sazona las chuletas con ajo, orégano, ají de color, sal y pimienta. Déjalas reposar 15 minutos.",
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "timers": [
+        {
+          "minutos": 15,
+          "etiqueta": "15 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Calienta el aceite en una sartén o plancha a fuego medio-alto.",
+      "ingredientes": [
+        6
+      ]
+    },
+    {
+      "texto": "Cocina las chuletas 3-4 minutos por lado, hasta que estén doradas y cocidas por dentro.",
+      "ingredientes": [
+        1
+      ],
+      "timers": [
+        {
+          "minutos": 4,
+          "etiqueta": "3-4 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Si quieres, rocía con jugo de limón al final.",
+      "ingredientes": [
+        7
+      ]
+    },
+    {
+      "texto": "Deja reposar 3 minutos antes de servir. Acompaña con papas o ensalada.",
+      "ingredientes": [
+        5
+      ],
+      "timers": [
+        {
+          "minutos": 3,
+          "etiqueta": "3 minutos"
+        }
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 18,
+    "coccion": 4
+  },
+  "revisado_v2": true
 }

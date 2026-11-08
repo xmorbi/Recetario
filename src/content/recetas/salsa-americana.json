@@ -1,7 +1,12 @@
 {
   "titulo": "Salsa americana",
   "categoria": "ensaladas",
-  "tags": ["salsa", "picoteo", "acompañamiento", "frio"],
+  "tags": [
+    "salsa",
+    "picoteo",
+    "acompañamiento",
+    "frio"
+  ],
   "imagen": null,
   "tiempo": "15 min",
   "porciones": "1 taza",
@@ -38,5 +43,91 @@
     "refrigerador": "Hasta 3 días en frasco de vidrio cerrado.",
     "congelador": "No recomendado, la mayonesa se corta.",
     "recalentar": "Se consume fría."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 6,
+      "unidad": null,
+      "nombre": "cebollitas perla encurtidas",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "zanahorias encurtidas",
+      "nota": "en rodajas",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "pepinillos encurtidos",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "taza",
+      "nombre": "mayonesa",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "ketchup",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "mostaza",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal y pimienta",
+      "nota": "al gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Escurre bien las cebollitas, las zanahorias y los pepinillos. Pícalos en trozos muy pequeños.",
+      "ingredientes": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "texto": "En un bol, mezcla la mayonesa, el ketchup y la mostaza hasta integrar.",
+      "ingredientes": [
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "texto": "Incorpora los encurtidos picados y mezcla bien. Salpimenta al gusto.",
+      "ingredientes": [
+        7
+      ]
+    },
+    {
+      "texto": "Refrigera por al menos 30 minutos para que los sabores se mezclen antes de servir.",
+      "timers": [
+        {
+          "minutos": 30,
+          "etiqueta": "30 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Sirve como acompañamiento de carnes, papas fritas o completos."
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 30
+  },
+  "revisado_v2": true
 }

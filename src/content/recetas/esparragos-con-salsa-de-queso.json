@@ -41,5 +41,89 @@
   "conservacion": {
     "refrigerador": "Servir de inmediato",
     "recalentar": "La salsa no se conserva bien recalentada."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 2,
+      "unidad": "kg",
+      "nombre": "espárragos",
+      "escalable": true
+    },
+    {
+      "cantidad": 250,
+      "unidad": "g",
+      "nombre": "queso",
+      "nota": "rallado",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "camarones",
+      "nota": "150 g",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "colmada de mantequilla",
+      "nota": "20 g",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "colmada de harina",
+      "nota": "15 g",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "0.5 taza de leche",
+      "nota": "375 ml",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Cocer los espárragos.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Preparar una salsa con la mantequilla derretida, harina y leche.",
+      "ingredientes": [
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "texto": "Cocer la mezcla a fuego suave revolviendo constantemente hasta que espese."
+    },
+    {
+      "texto": "Agregar el queso y revolver hasta que se derrita.",
+      "ingredientes": [
+        2
+      ]
+    },
+    {
+      "texto": "Añadir los camarones.",
+      "ingredientes": [
+        3
+      ]
+    },
+    {
+      "texto": "Volver a calentar y cubrir con la salsa los espárragos dispuestos en los platos.",
+      "ingredientes": [
+        1
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 25
+  },
+  "revisado_v2": true
 }

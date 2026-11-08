@@ -43,5 +43,80 @@
     "refrigerador": "Hasta 3 días en recipiente hermético.",
     "congelador": "No recomendado.",
     "recalentar": "Horno o freidora de aire a 180 °C por 5-8 minutos."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 6,
+      "unidad": null,
+      "nombre": "papas",
+      "nota": "medianas",
+      "escalable": true
+    },
+    {
+      "cantidad": 3,
+      "unidad": "cucharada",
+      "nombre": "aceite de oliva",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "sal",
+      "nota": "gruesa",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "pimentón",
+      "nota": "opcional",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "romero o tomillo",
+      "nota": "opcional",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Precalienta el horno a 200 °C."
+    },
+    {
+      "texto": "Lava bien las papas y córtalas en gajos o cubos. No las peles si quieres que queden más crujientes.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Mezcla las papas con el aceite, la sal, el pimentón y las hierbas.",
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "texto": "Extiéndelas en una bandeja para horno en una sola capa."
+    },
+    {
+      "texto": "Hornea 30-40 minutos, dando vuelta a mitad de cocción, hasta que estén doradas y crujientes.",
+      "timers": [
+        {
+          "minutos": 40,
+          "etiqueta": "30-40 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Sirve como acompañamiento de carnes o pollo."
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 40
+  },
+  "revisado_v2": true
 }

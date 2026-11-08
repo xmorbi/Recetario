@@ -43,5 +43,85 @@
     "refrigerador": "Hasta 2 días en recipiente cerrado.",
     "congelador": "No recomendado, el melón pierde textura.",
     "recalentar": "Se consume bien frío."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "melón tuna",
+      "nota": "o calameño, maduro, grande, bien",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "taza",
+      "nombre": "jugo de uva blanco o bebida blanca",
+      "nota": "helado, bien",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "azúcar",
+      "nota": "opcional, según el dulzor del melón",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "hielo",
+      "nota": "a gusto",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "hojas de menta",
+      "nota": "fresca",
+      "seccion": "Opcional",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Corta el melón por la mitad y retira las semillas.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Ahueca ligeramente la pulpa con una cuchara."
+    },
+    {
+      "texto": "Espolvorea el azúcar dentro de las mitades y deja reposar 10 minutos.",
+      "ingredientes": [
+        3
+      ],
+      "timers": [
+        {
+          "minutos": 10,
+          "etiqueta": "10 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Rellena con el jugo de uva o bebida blanca bien helada. Añade hielo y menta si usas.",
+      "ingredientes": [
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "texto": "Sirve con cuchara. Se come el melón y se bebe el jugo.",
+      "ingredientes": [
+        1,
+        2
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 10
+  },
+  "revisado_v2": true
 }

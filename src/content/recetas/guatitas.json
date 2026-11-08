@@ -55,5 +55,156 @@
     "refrigerador": "Hasta 3 días en recipiente hermético.",
     "congelador": "Hasta 2 meses, idealmente sin papas.",
     "recalentar": "A fuego lento en la olla, agregando un poco de agua o caldo."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": "kg",
+      "nombre": "guatitas de vacuno",
+      "nota": "mondongo",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "cebollas",
+      "nota": "grandes, picadas, finas",
+      "escalable": true
+    },
+    {
+      "cantidad": 4,
+      "unidad": "diente",
+      "nombre": "ajo",
+      "nota": "picados",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "zanahorias",
+      "nota": "en cubos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pimentón rojo",
+      "nota": "en cubos",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "tomates",
+      "nota": "picados, maduros",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "ají de color",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "orégano",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "hoja",
+      "nombre": "laurel",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "agua o caldo para cubrir",
+      "nota": "a gusto",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal, pimienta y aceite",
+      "nota": "a gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Lava muy bien las guatitas con agua fría y limón varias veces. Este paso es clave: las guatitas tienen olor fuerte y hay que lavarlas hasta que el agua salga clara.",
+      "ingredientes": [
+        1,
+        10,
+        11
+      ]
+    },
+    {
+      "texto": "Cocina las guatitas en agua hirviendo con laurel y un chorrito de vinagre por 1 hora a 1 hora y media, hasta que estén tiernas. Escurre y corta en tiras o trozos.",
+      "ingredientes": [
+        1,
+        9,
+        10
+      ],
+      "timers": [
+        {
+          "minutos": 90,
+          "etiqueta": "1 hora y media"
+        },
+        {
+          "minutos": 60,
+          "etiqueta": "1 hora"
+        }
+      ]
+    },
+    {
+      "texto": "En otra olla, sofríe la cebolla, el ajo, la zanahoria y el pimentón hasta que estén transparentes.",
+      "ingredientes": [
+        2,
+        3,
+        4,
+        5,
+        11
+      ]
+    },
+    {
+      "texto": "Agrega el tomate, el ají de color y el orégano. Cocina 5 minutos.",
+      "ingredientes": [
+        6,
+        7,
+        8
+      ],
+      "timers": [
+        {
+          "minutos": 5,
+          "etiqueta": "5 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Incorpora las guatitas cocidas y cubre con agua o caldo. Cocina a fuego lento 30 minutos más.",
+      "ingredientes": [
+        1,
+        10
+      ],
+      "timers": [
+        {
+          "minutos": 30,
+          "etiqueta": "30 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Condimenta con sal y pimienta. Sirve caliente con papas cocidas o arroz.",
+      "ingredientes": [
+        11
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 185
+  },
+  "revisado_v2": true
 }

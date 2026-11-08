@@ -50,5 +50,83 @@
     "refrigerador": "Hasta 2 semanas en botellas cerradas en el refrigerador. Una vez abierta, consumir en 3-4 días.",
     "congelador": "No recomendado, la fermentación se detiene pero pierde textura.",
     "recalentar": "Se consume bien fría. No se recalienta."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 4,
+      "unidad": "kg",
+      "nombre": "uva país o uva de mesa",
+      "nota": "madura, bien",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "L",
+      "nombre": "agua hervida",
+      "nota": "fría",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "kg",
+      "nombre": "azúcar",
+      "nota": "ajustar al dulzor de la uva",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "rama",
+      "nombre": "canela",
+      "nota": "opcional",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "puñado",
+      "nombre": "pasas",
+      "nota": "opcional, para acelerar la fermentación",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Lava bien las uvas y sepáralas de los tallos.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "En un recipiente grande de vidrio o barro (bien limpio y seco), pon las uvas y machácalas ligeramente con las manos o un pisón.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Agrega el agua hervida fría y el azúcar. Revuelve hasta disolver.",
+      "ingredientes": [
+        2,
+        3
+      ]
+    },
+    {
+      "texto": "Añade la canela y las pasas si usas.",
+      "ingredientes": [
+        4,
+        5
+      ]
+    },
+    {
+      "texto": "Tapa con un paño limpio o gasa (no hermético) y deja fermentar en un lugar oscuro y fresco por 7 a 10 días, revolviendo una vez al día."
+    },
+    {
+      "texto": "Cuando el líquido deje de burbujear y tenga olor a vino, cuela con un paño fino o filtro de café."
+    },
+    {
+      "texto": "Envasa en botellas de vidrio bien limpias. Tapa sin apretar del todo los primeros 2 días para que salgan los gases, y luego cierra bien. Deja reposar 2 días más antes de servir. Sirve bien fría."
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 15
+  },
+  "revisado_v2": true
 }
