@@ -1,0 +1,173 @@
+{
+  "titulo": "Porotos partidos",
+  "categoria": "principales",
+  "tags": [
+    "porotos",
+    "legumbre",
+    "guiso",
+    "olla",
+    "invierno",
+    "cotidiano"
+  ],
+  "imagen": null,
+  "tiempo": "1 h + remojo",
+  "porciones": "4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "500 g de porotos partidos (remojados desde la noche anterior)",
+    "1 cebolla picada fina",
+    "2 dientes de ajo picados",
+    "1 zanahoria en cubos",
+    "1 pimentón rojo en cubos",
+    "1 longaniza en rodajas (opcional)",
+    "1 cucharadita de ají de color",
+    "1 cucharadita de orégano",
+    "Agua o caldo para cubrir",
+    "Sal, pimienta y aceite"
+  ],
+  "pasos": [
+    "Remoja los porotos partidos la noche anterior. Escurre y enjuaga.",
+    "Sofríe la cebolla, el ajo, la zanahoria y el pimentón hasta que estén tiernos.",
+    "Agrega la longaniza si usas, el ají de color y el orégano.",
+    "Incorpora los porotos y cubre con agua o caldo. Cocina a fuego medio 45-60 minutos, hasta que estén blandos y el caldo espese.",
+    "Condimenta con sal y pimienta al final. Sirve caliente con pan."
+  ],
+  "dato": "Los porotos partidos son un clásico de invierno chileno. Se hacen con longaniza o sin ella, y se sirven con pan amasado para \"mojar\". Son primos de los porotos granados, pero con porotos secos partidos, lo que da una textura más cremosa.",
+  "errores": [
+    {
+      "error": "Porotos duros",
+      "solucion": "No remojarlos o agregar sal al principio. Remoja desde la noche anterior y agrega la sal al final."
+    },
+    {
+      "error": "Quedan aguados",
+      "solucion": "No dejar reducir el caldo. Si están muy líquidos, destapa y cocina 10 minutos más a fuego medio."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días en recipiente hermético.",
+    "congelador": "Hasta 2 meses.",
+    "recalentar": "A fuego lento con un poco de agua."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "porotos",
+      "nota": "remojados desde la noche anterior, partidos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cebolla",
+      "nota": "picada, fina",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "diente",
+      "nombre": "ajo",
+      "nota": "picados",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "zanahoria",
+      "nota": "en cubos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pimentón rojo",
+      "nota": "en cubos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "longaniza",
+      "nota": "opcional, en rodajas",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "ají de color",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "orégano",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "agua o caldo para cubrir",
+      "nota": "a gusto",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal, pimienta y aceite",
+      "nota": "a gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Remoja los porotos partidos la noche anterior. Escurre y enjuaga.",
+      "ingredientes": [
+        1
+      ],
+      "previo": true
+    },
+    {
+      "texto": "Sofríe la cebolla, el ajo, la zanahoria y el pimentón hasta que estén tiernos.",
+      "ingredientes": [
+        2,
+        3,
+        4,
+        5,
+        10
+      ]
+    },
+    {
+      "texto": "Agrega la longaniza si usas, el ají de color y el orégano.",
+      "ingredientes": [
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "texto": "Incorpora los porotos y cubre con agua o caldo. Cocina a fuego medio 45-60 minutos, hasta que estén blandos y el caldo espese.",
+      "ingredientes": [
+        1,
+        9
+      ],
+      "timers": [
+        {
+          "minutos": 60,
+          "etiqueta": "45-60 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Condimenta con sal y pimienta al final. Sirve caliente con pan.",
+      "ingredientes": [
+        10
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 480,
+    "coccion": 60
+  },
+  "revisado_v2": false
+}

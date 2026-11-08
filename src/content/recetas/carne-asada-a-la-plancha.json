@@ -53,8 +53,8 @@
     {
       "cantidad": 2,
       "unidad": null,
-      "nombre": "bistecs de vacuno  de 200 g cada uno",
-      "nota": "lomo, posta o asiento",
+      "nombre": "bistecs de vacuno",
+      "nota": "lomo, posta o asiento, de 200 g cada uno",
       "escalable": true
     },
     {
@@ -65,16 +65,18 @@
       "escalable": true
     },
     {
-      "cantidad": null,
+      "cantidad": 1,
       "unidad": null,
-      "nombre": "Sal gruesa",
-      "escalable": true
+      "nombre": "sal gruesa",
+      "nota": "a gusto",
+      "escalable": false
     },
     {
-      "cantidad": null,
+      "cantidad": 1,
       "unidad": null,
-      "nombre": "Pimienta negra molida",
-      "escalable": true
+      "nombre": "pimienta negra molida",
+      "nota": "a gusto",
+      "escalable": false
     },
     {
       "cantidad": 1,
@@ -87,43 +89,51 @@
   "pasos_v2": [
     {
       "texto": "Saca la carne del refrigerador 20 minutos antes de cocinar. Debe estar a temperatura ambiente.",
+      "ingredientes": [1],
       "timers": [
         {
           "minutos": 20,
-          "etiqueta": "20 min"
+          "etiqueta": "atemperar carne"
         }
       ]
     },
     {
-      "texto": "Calienta la plancha a fuego alto hasta que humee ligeramente. Agrega el aceite."
+      "texto": "Calienta la plancha a fuego alto hasta que humee ligeramente. Agrega el aceite.",
+      "ingredientes": [2]
     },
     {
-      "texto": "Sala la carne justo antes de ponerla en la plancha."
+      "texto": "Sala la carne justo antes de ponerla en la plancha.",
+      "ingredientes": [1, 3]
     },
     {
       "texto": "Cocina 2-3 minutos por lado para término medio. No la muevas mientras se cocina.",
+      "ingredientes": [1],
       "timers": [
         {
-          "minutos": 2,
-          "etiqueta": "2–3 min"
+          "minutos": 3,
+          "etiqueta": "2–3 min por lado"
         }
       ]
     },
     {
       "texto": "Retira y deja reposar 5 minutos sobre una tabla antes de cortar.",
+      "ingredientes": [1],
       "timers": [
         {
           "minutos": 5,
-          "etiqueta": "5 min"
+          "etiqueta": "reposo antes de cortar"
         }
       ]
     },
     {
-      "texto": "Sirve con sal gruesa y pimienta, y acompañamientos a gusto."
+      "texto": "Sirve con sal gruesa y pimienta, y acompañamientos a gusto.",
+      "ingredientes": [3, 4]
     }
   ],
   "tiempo_v2": {
-    "coccion": 20
+    "preparacion": 5,
+    "coccion": 6,
+    "reposo": 25
   },
-  "revisado_v2": false
+  "revisado_v2": true
 }

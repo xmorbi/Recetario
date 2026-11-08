@@ -1,0 +1,295 @@
+{
+  "titulo": "Shawarma",
+  "categoria": "principales",
+  "tags": [
+    "shawarma",
+    "pollo",
+    "medio oriente",
+    "comida callejera",
+    "pan pita",
+    "especias",
+    "yogur",
+    "plato principal"
+  ],
+  "imagen": null,
+  "tiempo": "40 min (más marinado de 1 a 12 horas)",
+  "porciones": "4 personas",
+  "dificultad": "media",
+  "tecnica": "Sartén u horno",
+  "ingredientes": [
+    "Para la carne y el marinado:",
+    "500 g de pechuga o muslos de pollo deshuesados, cortados en tiras finas",
+    "1/4 taza de yogur natural",
+    "2 cucharadas de aceite de oliva",
+    "Jugo de 1 limón",
+    "3 a 4 dientes de ajo, picados finamente",
+    "1 cucharadita de comino molido",
+    "1 cucharadita de pimentón dulce",
+    "1/2 cucharadita de cúrcuma molida",
+    "1/2 cucharadita de canela molida",
+    "1/2 cucharadita de pimienta de Jamaica (opcional)",
+    "Sal y pimienta negra al gusto",
+    "Para el armado:",
+    "4 panes de pita",
+    "Lechuga, tomate y cebolla morada en rodajas o tiras",
+    "Para la salsa de yogur:",
+    "1 yogur natural (sin azúcar)",
+    "1 diente de ajo picado",
+    "Jugo de limón a gusto",
+    "Sal"
+  ],
+  "pasos": [
+    "En un bol grande, mezclar el yogur, el aceite de oliva, el jugo de limón, el ajo picado y todas las especias (comino, pimentón, cúrcuma, canela, pimienta de Jamaica, sal y pimienta).",
+    "Incorporar las tiras de pollo y mezclar bien para que queden completamente cubiertas con la marinada.",
+    "Tapar y dejar marinar en el refrigerador por al menos 1 hora. Idealmente, dejarlo toda la noche para que el sabor sea más profundo.",
+    "Para la salsa de yogur, mezclar el yogur natural con el ajo picado, el jugo de limón y una pizca de sal. Reservar en el refrigerador hasta el momento de servir.",
+    "Calentar una sartén grande o plancha a fuego medio-alto con un poco de aceite.",
+    "Cocinar las tiras de pollo marinadas por 5 a 8 minutos, hasta que estén doradas por fuera y cocidas por dentro. También se pueden asar en el horno a 200 °C por 20 a 25 minutos.",
+    "Calentar el pan de pita en la misma sartén o en el horno por unos segundos.",
+    "Armar el shawarma colocando las tiras de pollo sobre el pan, agregando lechuga, tomate, cebolla morada y un chorrito de salsa de yogur.",
+    "Enrollar el pan y servir de inmediato."
+  ],
+  "dato": "El secreto del shawarma está en el marinado: cuanto más tiempo repose la carne con las especias, más profundo será su sabor. La pimienta de Jamaica y la canela son las especias que le dan el aroma característico de Medio Oriente. Si no tienes pimienta de Jamaica, puedes omitirla o reemplazarla por una pizca extra de comino.",
+  "errores": [
+    {
+      "error": "Pollo seco",
+      "solucion": "Usa muslos de pollo en lugar de pechuga si prefieres una carne más jugosa, y no cocines en exceso. El pollo debe quedar dorado por fuera pero tierno por dentro."
+    },
+    {
+      "error": "Shawarma sin sabor",
+      "solucion": "Respeta el tiempo de marinado (mínimo 1 hora, ideal toda la noche) y asegúrate de que la carne esté bien cubierta con la mezcla de especias."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "El pollo marinado crudo se puede guardar en el refrigerador hasta 24 horas antes de cocinar. Una vez cocido, guardar en refrigerador hasta 3 días. El shawarma armado se debe consumir de inmediato para que el pan no se humedezca.",
+    "recalentar": "En sartén"
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "pechuga o muslos de pollo",
+      "nota": "deshuesados, cortados, en tiras, finas",
+      "escalable": true,
+      "seccion": "carne y el marinado"
+    },
+    {
+      "cantidad": 0.25,
+      "unidad": "taza",
+      "nombre": "yogur natural",
+      "escalable": true,
+      "seccion": "carne y el marinado"
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "aceite de oliva",
+      "escalable": true,
+      "seccion": "carne y el marinado"
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "jugo de limón",
+      "nota": "de 1 limón",
+      "escalable": false,
+      "seccion": "carne y el marinado"
+    },
+    {
+      "cantidad": 3,
+      "unidad": "diente",
+      "nombre": "ajo",
+      "nota": "rango 3-4, finamente, picados",
+      "escalable": true,
+      "seccion": "carne y el marinado"
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "comino molido",
+      "escalable": true,
+      "seccion": "carne y el marinado"
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "pimentón dulce",
+      "escalable": true,
+      "seccion": "carne y el marinado"
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "cucharadita",
+      "nombre": "cúrcuma molida",
+      "escalable": true,
+      "seccion": "carne y el marinado"
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "cucharadita",
+      "nombre": "canela molida",
+      "escalable": true,
+      "seccion": "carne y el marinado"
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "cucharadita",
+      "nombre": "pimienta de jamaica",
+      "nota": "opcional",
+      "escalable": false,
+      "seccion": "carne y el marinado"
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal y pimienta negra",
+      "nota": "al gusto",
+      "escalable": false,
+      "seccion": "carne y el marinado"
+    },
+    {
+      "cantidad": 4,
+      "unidad": null,
+      "nombre": "panes de pita",
+      "escalable": true,
+      "seccion": "armado"
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "lechuga, tomate y cebolla morada",
+      "nota": "en rodajas o tiras",
+      "escalable": true,
+      "seccion": "armado"
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "yogur natural",
+      "nota": "sin azúcar",
+      "escalable": true,
+      "seccion": "salsa de yogur"
+    },
+    {
+      "cantidad": 1,
+      "unidad": "diente",
+      "nombre": "ajo",
+      "nota": "picado",
+      "escalable": true,
+      "seccion": "salsa de yogur"
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "jugo de limón",
+      "nota": "a gusto",
+      "escalable": false,
+      "seccion": "salsa de yogur"
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal",
+      "nota": "a gusto",
+      "escalable": false,
+      "seccion": "salsa de yogur"
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "En un bol grande, mezclar el yogur, el aceite de oliva, el jugo de limón, el ajo picado y todas las especias (comino, pimentón, cúrcuma, canela, pimienta de Jamaica, sal y pimienta).",
+      "ingredientes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "texto": "Incorporar las tiras de pollo y mezclar bien para que queden completamente cubiertas con la marinada.",
+      "ingredientes": [
+        1,
+        12,
+        13
+      ]
+    },
+    {
+      "texto": "Tapar y dejar marinar en el refrigerador por al menos 1 hora. Idealmente, dejarlo toda la noche para que el sabor sea más profundo.",
+      "previo": true
+    },
+    {
+      "texto": "Para la salsa de yogur, mezclar el yogur natural con el ajo picado, el jugo de limón y una pizca de sal. Reservar en el refrigerador hasta el momento de servir.",
+      "ingredientes": [
+        2,
+        4,
+        5,
+        11,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "texto": "Calentar una sartén grande o plancha a fuego medio-alto con un poco de aceite.",
+      "ingredientes": [
+        3
+      ]
+    },
+    {
+      "texto": "Cocinar las tiras de pollo marinadas por 5 a 8 minutos, hasta que estén doradas por fuera y cocidas por dentro. También se pueden asar en el horno a 200 °C por 20 a 25 minutos.",
+      "ingredientes": [
+        1
+      ],
+      "timers": [
+        {
+          "minutos": 8,
+          "etiqueta": "5 a 8 minutos"
+        },
+        {
+          "minutos": 25,
+          "etiqueta": "20 a 25 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Calentar el pan de pita en la misma sartén o en el horno por unos segundos.",
+      "ingredientes": [
+        12
+      ]
+    },
+    {
+      "texto": "Armar el shawarma colocando las tiras de pollo sobre el pan, agregando lechuga, tomate, cebolla morada y un chorrito de salsa de yogur.",
+      "ingredientes": [
+        1,
+        2,
+        11,
+        12,
+        13,
+        14,
+        17
+      ]
+    },
+    {
+      "texto": "Enrollar el pan y servir de inmediato.",
+      "ingredientes": [
+        12
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 60,
+    "coccion": 25
+  },
+  "revisado_v2": false
+}

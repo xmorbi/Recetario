@@ -1,0 +1,139 @@
+{
+  "titulo": "Pollo asado",
+  "categoria": "principales",
+  "tags": [
+    "pollo",
+    "horno",
+    "plato principal",
+    "domingo",
+    "asado"
+  ],
+  "imagen": "img/pollo-asado.JPG",
+  "tiempo": "1 h 30 min",
+  "porciones": "4 a 6 personas",
+  "dificultad": "media",
+  "tecnica": "Horno",
+  "ingredientes": [
+    "1 pollo entero",
+    "4 cdas de mostaza",
+    "2 tabletas de caldo de pollo o verduras",
+    "1 taza de vinagre",
+    "1 taza de agua",
+    "4 cdas de aceite, sal y pimienta"
+  ],
+  "pasos": [
+    "Mezcla la mostaza, el caldo disuelto, el vinagre, el agua y el aceite.",
+    "Embadurna el pollo por dentro y por fuera. Marina al menos 3 horas (mejor toda la noche) siempre en el refrigerador, nunca a temperatura ambiente.",
+    "Precalienta el horno a 200 °C.",
+    "Hornea 1 hora a 1 hora 15 min, bañándolo con su jugo cada 20 min.",
+    "Deja reposar 10 min antes de cortar."
+  ],
+  "dato": "El vinagre y la mostaza ayudan a que la piel quede dorada y crujiente.",
+  "errores": [
+    {
+      "error": "Piel pálida y blanda",
+      "solucion": "Hornear el pollo húmedo o a temperatura muy baja. Seca muy bien el pollo y hornea a temperatura alta (200°C) los primeros minutos."
+    },
+    {
+      "error": "Pechuga seca",
+      "solucion": "El tiempo de cocción es excesivo. Cubre las pechugas con papel aluminio a mitad de cocción para que no se sequen."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días en recipiente hermético.",
+    "congelador": "Hasta 3 meses (desmenuzado o en porciones).",
+    "recalentar": "Horno o freidora de aire a 180°C por 10 minutos para que la piel recupere textura."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pollo entero",
+      "escalable": false
+    },
+    {
+      "cantidad": 4,
+      "unidad": "cucharada",
+      "nombre": "mostaza",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "tableta",
+      "nombre": "caldo de pollo o verduras",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "vinagre",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "agua",
+      "escalable": true
+    },
+    {
+      "cantidad": 4,
+      "unidad": "cucharada",
+      "nombre": "aceite, sal y pimienta",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Mezcla la mostaza, el caldo disuelto, el vinagre, el agua y el aceite.",
+      "ingredientes": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "texto": "Embadurna el pollo por dentro y por fuera. Marina al menos 3 horas (mejor toda la noche) siempre en el refrigerador, nunca a temperatura ambiente.",
+      "ingredientes": [
+        1,
+        3
+      ],
+      "previo": true
+    },
+    {
+      "texto": "Precalienta el horno a 200 °C."
+    },
+    {
+      "texto": "Hornea 1 hora a 1 hora 15 min, bañándolo con su jugo cada 20 min.",
+      "timers": [
+        {
+          "minutos": 75,
+          "etiqueta": "1 hora 15 min"
+        },
+        {
+          "minutos": 60,
+          "etiqueta": "1 hora"
+        },
+        {
+          "minutos": 15,
+          "etiqueta": "15 min"
+        }
+      ]
+    },
+    {
+      "texto": "Deja reposar 10 min antes de cortar.",
+      "timers": [
+        {
+          "minutos": 10,
+          "etiqueta": "10 min"
+        }
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 190,
+    "coccion": 150
+  },
+  "revisado_v2": false
+}

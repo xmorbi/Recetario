@@ -49,5 +49,116 @@
   ],
   "conservacion": {
     "refrigerador": "Consumir el mismo día. Los crutones se agregan al momento de servir."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pechuga de pollo",
+      "escalable": true
+    },
+    {
+      "cantidad": 200,
+      "unidad": "g",
+      "nombre": "lechuga",
+      "escalable": true
+    },
+    {
+      "cantidad": 100,
+      "unidad": "g",
+      "nombre": "queso parmesano",
+      "nota": "rallado grueso",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "rebanadas",
+      "nombre": "pan",
+      "nota": "frío",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "mostaza",
+      "nota": "15 g",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "mayonesa",
+      "nota": "15 g",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "vinagre",
+      "nota": "15 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharadas",
+      "nombre": "aceite",
+      "nota": "30 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "jugo de limón",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pimienta",
+      "nota": "a gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Cocer la pechuga en agua con sal hasta que esté cocida. Dejar enfriar y cortarla en trozos pequeños.",
+      "ingredientes": [1, 10]
+    },
+    {
+      "texto": "Lavar muy bien la lechuga y picarla en trozos.",
+      "ingredientes": [2]
+    },
+    {
+      "texto": "Freír el pan cortado en cubos y reservar.",
+      "ingredientes": [4, 8]
+    },
+    {
+      "texto": "Preparar el aderezo: mezclar la mayonesa, la mostaza, el aceite, el vinagre, el jugo de limón, sal y pimienta. Revolver hasta integrar.",
+      "ingredientes": [5, 6, 7, 8, 9, 10, 11]
+    },
+    {
+      "texto": "Colocar la lechuga en una fuente y encima el pollo.",
+      "ingredientes": [1, 2]
+    },
+    {
+      "texto": "Rociar con el aderezo y al momento de servir agregar los crutones (pan frito) y el queso rallado.",
+      "ingredientes": [3, 4]
+    },
+    {
+      "texto": "Servir frío."
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 15,
+    "coccion": 15
+  },
+  "revisado_v2": true
 }

@@ -1,0 +1,160 @@
+{
+  "titulo": "Ensalada de Apio con Nueces (Waldorf)",
+  "categoria": "ensaladas",
+  "tags": [
+    "ensalada waldorf",
+    "apio",
+    "manzana",
+    "nueces",
+    "naranja",
+    "ensalada"
+  ],
+  "imagen": null,
+  "tiempo": "20 min",
+  "porciones": "4 a 6 personas",
+  "dificultad": "fácil",
+  "tecnica": "Sin cocción",
+  "ingredientes": [
+    "1 mata de apio tierno",
+    "2 manzanas jugosas",
+    "1 naranja",
+    "1 limón",
+    "1/2 taza (60 g) de nueces",
+    "500 g de aceitunas negras",
+    "3 cucharadas (45 ml) de aceite",
+    "Sal",
+    "Pimienta"
+  ],
+  "pasos": [
+    "Lavar y picar el apio en trozos pequeños.",
+    "Pelar las manzanas y cortarlas en cubos; rociarlas con jugo de limón para que no se oxiden.",
+    "Pelar la naranja y separar los gajos, cortándolos en trozos.",
+    "Picar las nueces y las aceitunas negras.",
+    "Mezclar todos los ingredientes en una ensaladera.",
+    "Aliñar con aceite, sal, pimienta y el resto del jugo de limón."
+  ],
+  "dato": "La ensalada Waldorf es una ensalada de origen estadounidense que en Chile se adoptó en las mesas de once y celebraciones. Combina apio, manzana, nueces y naranja con un aliño de aceite y limón. Es fresca y crocante, ideal para acompañar carnes.",
+  "errores": [
+    {
+      "error": "Las manzanas se me oxidaron",
+      "solucion": "Rocía los cubos de manzana con jugo de limón inmediatamente después de cortarlos."
+    },
+    {
+      "error": "El apio me quedó con hilos",
+      "solucion": "Retira las hebras exteriores del apio antes de picarlo para mejorar la textura."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Consumir el mismo día. Las manzanas y el apio pierden textura con el tiempo."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "mata de apio",
+      "nota": "tierno",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "manzanas jugosas",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "naranja",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "limón",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "taza",
+      "nombre": "nueces",
+      "nota": "60 g",
+      "escalable": true
+    },
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "aceitunas negras",
+      "escalable": true
+    },
+    {
+      "cantidad": 3,
+      "unidad": "cucharada",
+      "nombre": "aceite",
+      "nota": "45 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pimienta",
+      "nota": "a gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Lavar y picar el apio en trozos pequeños.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Pelar las manzanas y cortarlas en cubos; rociarlas con jugo de limón para que no se oxiden.",
+      "ingredientes": [
+        2,
+        4
+      ]
+    },
+    {
+      "texto": "Pelar la naranja y separar los gajos, cortándolos en trozos.",
+      "ingredientes": [
+        3
+      ]
+    },
+    {
+      "texto": "Picar las nueces y las aceitunas negras.",
+      "ingredientes": [
+        5,
+        6
+      ]
+    },
+    {
+      "texto": "Mezclar todos los ingredientes en una ensaladera.",
+      "ingredientes": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "texto": "Aliñar con aceite, sal, pimienta y el resto del jugo de limón.",
+      "ingredientes": [
+        4,
+        7,
+        8,
+        9
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 20
+  },
+  "revisado_v2": false
+}

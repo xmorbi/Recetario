@@ -1,0 +1,155 @@
+{
+  "titulo": "Tiramisú",
+  "categoria": "dulces",
+  "tags": [
+    "postre",
+    "tiramisú",
+    "café",
+    "mascarpone",
+    "italiano",
+    "reposteria"
+  ],
+  "imagen": null,
+  "tiempo": "30 min + frío",
+  "porciones": "8 porciones",
+  "dificultad": "media",
+  "tecnica": "Sin horno",
+  "ingredientes": [
+    "500 g de queso mascarpone",
+    "4 huevos (separar claras y yemas)",
+    "100 g de azúcar",
+    "1 taza de café espresso frío",
+    "2 cucharadas de licor (amaretto o ron)",
+    "200 g de galletas de champaña o bizcochos de soletilla",
+    "Cacao en polvo para espolvorear"
+  ],
+  "pasos": [
+    "Bate las yemas con el azúcar hasta que estén pálidas. Agrega el mascarpone y mezcla bien.",
+    "Bate las claras a punto de nieve e incorpóralas a la mezcla de mascarpone con movimientos envolventes.",
+    "Mezcla el café con el licor en un plato hondo.",
+    "Moja las galletas en el café (solo 1-2 segundos por lado) y colócalas en el fondo de una fuente.",
+    "Cubre con la mitad de la crema de mascarpone. Repite con otra capa de galletas y el resto de la crema.",
+    "Refrigera al menos 4 horas (mejor toda la noche).",
+    "Espolvorea cacao en polvo antes de servir."
+  ],
+  "dato": "El tiramisú es un postre italiano que en Chile se volvió muy popular en las últimas décadas. El nombre significa \"levántame\" en italiano, por el café y el azúcar. En Chile se hace con queso mascarpone (que se encuentra en supermercados) o con una mezcla de queso crema y crema.",
+  "errores": [
+    {
+      "error": "Me quedaron muy blandas las galletas",
+      "solucion": "No mojes las galletas demasiado; solo necesitan 1-2 segundos por lado, o se deshacen."
+    },
+    {
+      "error": "Me quedó muy líquida la crema",
+      "solucion": "No uses mascarpone a temperatura ambiente ni omitas batir bien las claras; el mascarpone debe estar frío y las claras bien batidas."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días en recipiente hermético.",
+    "congelador": "No recomendado.",
+    "recalentar": "Se consume frío."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "queso mascarpone",
+      "escalable": true
+    },
+    {
+      "cantidad": 4,
+      "unidad": null,
+      "nombre": "huevos",
+      "nota": "separar claras y yemas",
+      "escalable": true
+    },
+    {
+      "cantidad": 100,
+      "unidad": "g",
+      "nombre": "azúcar",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "café espresso",
+      "nota": "frío",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "licor",
+      "nota": "amaretto o ron",
+      "escalable": true
+    },
+    {
+      "cantidad": 200,
+      "unidad": "g",
+      "nombre": "galletas de champaña o bizcochos de soletilla",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cacao",
+      "nota": "para espolvorear, en polvo",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Bate las yemas con el azúcar hasta que estén pálidas. Agrega el mascarpone y mezcla bien.",
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "texto": "Bate las claras a punto de nieve e incorpóralas a la mezcla de mascarpone con movimientos envolventes.",
+      "ingredientes": [
+        1,
+        2
+      ]
+    },
+    {
+      "texto": "Mezcla el café con el licor en un plato hondo.",
+      "ingredientes": [
+        4,
+        5
+      ]
+    },
+    {
+      "texto": "Moja las galletas en el café (solo 1-2 segundos por lado) y colócalas en el fondo de una fuente.",
+      "ingredientes": [
+        4,
+        6
+      ]
+    },
+    {
+      "texto": "Cubre con la mitad de la crema de mascarpone. Repite con otra capa de galletas y el resto de la crema.",
+      "ingredientes": [
+        1,
+        6
+      ]
+    },
+    {
+      "texto": "Refrigera al menos 4 horas (mejor toda la noche).",
+      "previo": true
+    },
+    {
+      "texto": "Espolvorea cacao en polvo antes de servir.",
+      "ingredientes": [
+        7
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 240
+  },
+  "revisado_v2": false
+}

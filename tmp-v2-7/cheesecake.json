@@ -1,0 +1,196 @@
+{
+  "titulo": "Cheesecake",
+  "categoria": "dulces",
+  "tags": [
+    "postre",
+    "queso",
+    "cheesecake",
+    "horno",
+    "reposteria",
+    "clásico"
+  ],
+  "imagen": null,
+  "tiempo": "1 h 30 min + frío",
+  "porciones": "12 porciones",
+  "dificultad": "media",
+  "tecnica": "Horno",
+  "ingredientes": [
+    "Base: 200 g de galletas de champaña o de agua",
+    "Base: 100 g de mantequilla derretida",
+    "Relleno: 600 g de queso crema",
+    "Relleno: 200 g de azúcar",
+    "Relleno: 3 huevos",
+    "Relleno: 200 ml de crema",
+    "Relleno: 1 cucharadita (5 ml) de vainilla",
+    "Relleno: 2 cucharadas (20 g) de maicena",
+    "Cubierta: mermelada de frutillas o frutos rojos (opcional)"
+  ],
+  "pasos": [
+    "Precalienta el horno a 160 °C. Tritura las galletas y mézclalas con la mantequilla derretida. Presiona en el fondo de un molde desmontable.",
+    "Hornea la base 10 minutos. Deja enfriar.",
+    "Bate el queso crema con el azúcar hasta que esté liso. Agrega los huevos uno a uno, la crema, la vainilla y la maicena.",
+    "Vierte el relleno sobre la base.",
+    "Cubre el fondo y los lados del molde con papel aluminio. Pon el molde dentro de una fuente más grande y agrega agua caliente hasta la mitad del molde: esto es el baño María, y evita que el cheesecake se agriete.",
+    "Hornea a 160 °C por 50-60 minutos, hasta que el centro esté casi cuajado (puede temblar ligeramente).",
+    "Apaga el horno y deja el cheesecake dentro con la puerta entreabierta 1 hora. Esto también ayuda a que no se agriete.",
+    "Refrigera al menos 4 horas. Cubre con mermelada si quieres."
+  ],
+  "dato": "El cheesecake tiene raíces europeas, pero en Chile se volvió favorito de las cartas de restaurantes y de las casas. Se hace con queso crema y se hornea a baño María para que no se agriete. La versión chilena suele llevar mermelada de frutillas encima.",
+  "errores": [
+    {
+      "error": "Se me agrietó el cheesecake",
+      "solucion": "Lo horneaste a temperatura muy alta o no lo enfriaste lento. Hornea a 160 °C, usa baño María y deja enfriar dentro del horno con la puerta entreabierta."
+    },
+    {
+      "error": "El cheesecake me quedó líquido en el centro",
+      "solucion": "Le faltó horno. Debe hornearse hasta que el centro esté casi cuajado, pero puede temblar ligeramente. Si pasado el tiempo sigue líquido, déjalo 10 minutos más."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 4 días en recipiente hermético.",
+    "congelador": "Hasta 2 meses, bien envuelto.",
+    "recalentar": "Se consume frío."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 200,
+      "unidad": "g",
+      "nombre": "galletas de champaña o de agua",
+      "escalable": true,
+      "seccion": "Base"
+    },
+    {
+      "cantidad": 100,
+      "unidad": "g",
+      "nombre": "mantequilla derretida",
+      "escalable": true,
+      "seccion": "Base"
+    },
+    {
+      "cantidad": 600,
+      "unidad": "g",
+      "nombre": "queso crema",
+      "escalable": true,
+      "seccion": "Relleno"
+    },
+    {
+      "cantidad": 200,
+      "unidad": "g",
+      "nombre": "azúcar",
+      "escalable": true,
+      "seccion": "Relleno"
+    },
+    {
+      "cantidad": 3,
+      "unidad": null,
+      "nombre": "huevos",
+      "escalable": true,
+      "seccion": "Relleno"
+    },
+    {
+      "cantidad": 200,
+      "unidad": "ml",
+      "nombre": "crema",
+      "escalable": true,
+      "seccion": "Relleno"
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "vainilla",
+      "nota": "5 ml",
+      "escalable": true,
+      "seccion": "Relleno"
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "maicena",
+      "nota": "20 g",
+      "escalable": true,
+      "seccion": "Relleno"
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "mermelada de frutillas o frutos rojos",
+      "nota": "opcional",
+      "escalable": true,
+      "seccion": "Cubierta"
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Precalienta el horno a 160 °C. Tritura las galletas y mézclalas con la mantequilla derretida. Presiona en el fondo de un molde desmontable.",
+      "ingredientes": [
+        1,
+        2
+      ]
+    },
+    {
+      "texto": "Hornea la base 10 minutos. Deja enfriar.",
+      "timers": [
+        {
+          "minutos": 10,
+          "etiqueta": "10 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Bate el queso crema con el azúcar hasta que esté liso. Agrega los huevos uno a uno, la crema, la vainilla y la maicena.",
+      "ingredientes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "texto": "Vierte el relleno sobre la base."
+    },
+    {
+      "texto": "Cubre el fondo y los lados del molde con papel aluminio. Pon el molde dentro de una fuente más grande y agrega agua caliente hasta la mitad del molde: esto es el baño María, y evita que el cheesecake se agriete.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Hornea a 160 °C por 50-60 minutos, hasta que el centro esté casi cuajado (puede temblar ligeramente).",
+      "timers": [
+        {
+          "minutos": 60,
+          "etiqueta": "50-60 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Apaga el horno y deja el cheesecake dentro con la puerta entreabierta 1 hora. Esto también ayuda a que no se agriete.",
+      "timers": [
+        {
+          "minutos": 60,
+          "etiqueta": "1 hora"
+        }
+      ]
+    },
+    {
+      "texto": "Refrigera al menos 4 horas. Cubre con mermelada si quieres.",
+      "ingredientes": [
+        9
+      ],
+      "timers": [
+        {
+          "minutos": 240,
+          "etiqueta": "4 horas"
+        }
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 240,
+    "reposo": 10,
+    "coccion": 120
+  },
+  "revisado_v2": false
+}

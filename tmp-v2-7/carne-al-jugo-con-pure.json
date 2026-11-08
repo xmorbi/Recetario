@@ -1,0 +1,179 @@
+{
+  "titulo": "Carne al jugo con puré",
+  "categoria": "principales",
+  "tags": [
+    "carne",
+    "olla",
+    "plato principal",
+    "pure",
+    "guiso",
+    "vacuno"
+  ],
+  "imagen": "img/carne-al-jugo-con-pure.jpg",
+  "tiempo": "1 h 30 min",
+  "porciones": "4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "1 kg de tapapecho o posta en trozos",
+    "1 cebolla en pluma, 2 dientes de ajo",
+    "1 zanahoria, 1 pimentón",
+    "Sal, pimienta, orégano, comino y laurel",
+    "Agua o caldo para cubrir",
+    "6 papas medianas (para el puré)",
+    "3 cucharadas (45 g) de mantequilla",
+    "1/2 taza (125 ml) de leche",
+    "Sal (para el puré)"
+  ],
+  "pasos": [
+    "Sofríe la cebolla, el ajo, la zanahoria y el pimentón.",
+    "Agrega la carne y dórala. Condimenta.",
+    "Cubre con agua o caldo y cocina a fuego lento hasta que la carne esté blanda (1 hora aprox.).",
+    "Cuece las papas, mójalas con mantequilla, leche tibia y sal hasta obtener un puré cremoso.",
+    "Sirve la carne con su jugo sobre el puré."
+  ],
+  "dato": "Si el jugo está muy líquido, déjalo reducir unos minutos. La carne al jugo es plato de domingo chileno, y el puré es el acompañamiento clásico para aprovechar la salsa.",
+  "errores": [
+    {
+      "error": "La carne me quedó dura",
+      "solucion": "Usaste un corte inadecuado o no la cocinaste el tiempo suficiente. Usa tapapecho, asiento o posta y cocina lento por 1 a 1,5 horas."
+    },
+    {
+      "error": "El puré me quedó con grumos",
+      "solucion": "Batiste las papas calientes con leche fría. Usa leche tibia y mantequilla a temperatura ambiente, y bate solo hasta que el puré esté cremoso."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días por separado (carne y puré).",
+    "congelador": "La carne hasta 2 meses. El puré no se recomienda congelar.",
+    "recalentar": "La carne a fuego lento. El puré en microondas con un poco de leche."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": "kg",
+      "nombre": "tapapecho o posta",
+      "nota": "en trozos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cebolla",
+      "nota": "en pluma",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "diente",
+      "nombre": "ajo",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "zanahoria",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pimentón",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal, pimienta, orégano, comino y laurel",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "agua o caldo para cubrir",
+      "nota": "a gusto",
+      "escalable": true
+    },
+    {
+      "cantidad": 6,
+      "unidad": null,
+      "nombre": "papas",
+      "nota": "para el puré, medianas",
+      "escalable": true
+    },
+    {
+      "cantidad": 3,
+      "unidad": "cucharada",
+      "nombre": "mantequilla",
+      "nota": "45 g",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "taza",
+      "nombre": "leche",
+      "nota": "125 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal",
+      "nota": "para el puré",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Sofríe la cebolla, el ajo, la zanahoria y el pimentón.",
+      "ingredientes": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "texto": "Agrega la carne y dórala. Condimenta.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Cubre con agua o caldo y cocina a fuego lento hasta que la carne esté blanda (1 hora aprox.).",
+      "ingredientes": [
+        1,
+        7
+      ],
+      "timers": [
+        {
+          "minutos": 60,
+          "etiqueta": "1 hora"
+        }
+      ]
+    },
+    {
+      "texto": "Cuece las papas, mójalas con mantequilla, leche tibia y sal hasta obtener un puré cremoso.",
+      "ingredientes": [
+        6,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "texto": "Sirve la carne con su jugo sobre el puré.",
+      "ingredientes": [
+        1,
+        8,
+        11
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 60
+  },
+  "revisado_v2": false
+}

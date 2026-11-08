@@ -43,5 +43,101 @@
     "refrigerador": "Hasta 3 días en recipiente hermético.",
     "congelador": "Hasta 2 meses (idealmente sin papas).",
     "recalentar": "A fuego lento con un poco de caldo."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "carne asada",
+      "nota": "vacuno, cerdo o pollo",
+      "escalable": true
+    },
+    {
+      "cantidad": 4,
+      "unidad": null,
+      "nombre": "papas",
+      "nota": "medianas, en cubos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cebolla",
+      "nota": "grande",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "dientes",
+      "nombre": "ajo",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "zanahoria",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pimentón",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "orégano, ají de color y comino",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "L",
+      "nombre": "caldo de carne",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal y pimienta",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "ají seco",
+      "nota": "a gusto",
+      "seccion": "Opcional",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Sofríe la cebolla, zanahoria, pimentón y ajo en aceite.",
+      "ingredientes": [3, 5, 6, 4]
+    },
+    {
+      "texto": "Agrega la carne asada en trozos y las papas.",
+      "ingredientes": [1, 2]
+    },
+    {
+      "texto": "Condimenta con orégano, ají de color, comino, sal y pimienta.",
+      "ingredientes": [7, 9]
+    },
+    {
+      "texto": "Cubre con el caldo y cocina hasta que las papas estén tiernas.",
+      "ingredientes": [8]
+    },
+    {
+      "texto": "Rectifica la sal y sirve caliente.",
+      "ingredientes": [9]
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 15,
+    "coccion": 25
+  },
+  "revisado_v2": true
 }

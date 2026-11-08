@@ -1,0 +1,133 @@
+{
+  "titulo": "Lomo a la plancha",
+  "categoria": "principales",
+  "tags": [
+    "lomo",
+    "carne",
+    "plancha",
+    "vacuno",
+    "simple"
+  ],
+  "imagen": null,
+  "tiempo": "15 min",
+  "porciones": "2 personas",
+  "dificultad": "muy fácil",
+  "tecnica": "Plancha",
+  "ingredientes": [
+    "2 medallones de lomo liso de 200 g cada uno",
+    "1 cucharada de mantequilla",
+    "1 cucharada de aceite",
+    "Sal y pimienta",
+    "Opcional: 1 ramita de romero o tomillo"
+  ],
+  "pasos": [
+    "Saca el lomo del refrigerador 20 minutos antes. Sazona con sal y pimienta.",
+    "Calienta la plancha a fuego alto con el aceite.",
+    "Sella el lomo 2-3 minutos por lado. Agrega la mantequilla y las hierbas en el último minuto, bañando la carne con la espuma.",
+    "Retira y deja reposar 5 minutos antes de cortar.",
+    "Sirve con sal gruesa y acompañamientos."
+  ],
+  "dato": "El lomo a la plancha es el corte más tierno del vacuno. Se cocina rápido y se sirve con sal gruesa. Es el plato de las ocasiones especiales en las casas chilenas. A diferencia del bistec, el lomo es más magro y suave.",
+  "errores": [
+    {
+      "error": "Lomo seco",
+      "solucion": "Cocinarlo de más. El lomo es magro y se seca rápido. 2-3 minutos por lado es suficiente para término medio."
+    },
+    {
+      "error": "No se dora",
+      "solucion": "Plancha fría o lomo húmedo. La plancha debe estar muy caliente y la carne seca."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 2 días.",
+    "congelador": "No recomendado.",
+    "recalentar": "Sartén a fuego alto 1 minuto por lado."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "medallones de lomo liso de 200 g cada uno",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "mantequilla",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "aceite",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal y pimienta",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "ramita",
+      "nombre": "romero o tomillo",
+      "seccion": "Opcional",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Saca el lomo del refrigerador 20 minutos antes. Sazona con sal y pimienta.",
+      "ingredientes": [
+        4
+      ],
+      "timers": [
+        {
+          "minutos": 20,
+          "etiqueta": "20 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Calienta la plancha a fuego alto con el aceite.",
+      "ingredientes": [
+        3
+      ]
+    },
+    {
+      "texto": "Sella el lomo 2-3 minutos por lado. Agrega la mantequilla y las hierbas en el último minuto, bañando la carne con la espuma.",
+      "ingredientes": [
+        2
+      ],
+      "timers": [
+        {
+          "minutos": 3,
+          "etiqueta": "2-3 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Retira y deja reposar 5 minutos antes de cortar.",
+      "timers": [
+        {
+          "minutos": 5,
+          "etiqueta": "5 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Sirve con sal gruesa y acompañamientos.",
+      "ingredientes": [
+        4
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 3,
+    "reposo": 5,
+    "coccion": 20
+  },
+  "revisado_v2": false
+}

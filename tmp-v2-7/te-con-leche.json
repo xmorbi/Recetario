@@ -1,0 +1,118 @@
+{
+  "titulo": "Té con leche",
+  "categoria": "once",
+  "tags": [
+    "once",
+    "bebida",
+    "té",
+    "tradicional",
+    "invierno"
+  ],
+  "imagen": null,
+  "tiempo": "5 min",
+  "porciones": "1 taza",
+  "dificultad": "muy fácil",
+  "tecnica": "Hervidor",
+  "ingredientes": [
+    "1 bolsita de té negro (o 1 cucharadita de té suelto)",
+    "150 ml de agua hirviendo",
+    "100 ml de leche entera",
+    "Azúcar al gusto (1-2 cucharaditas)"
+  ],
+  "pasos": [
+    "Hierve el agua. Mientras hierve, calienta la leche aparte en una ollita o en el microondas. No debe hervir: solo calentarse hasta que salga vapor.",
+    "Pon la bolsita de té en la taza. Vierte el agua hirviendo sobre ella y deja reposar 3-4 minutos. Más tiempo lo pone amargo.",
+    "Retira la bolsita sin apretarla contra la taza (si la aprietas, sale más tanino y amarga).",
+    "Vierte la leche caliente sobre el té. La proporción clásica chilena es 60% té, 40% leche.",
+    "Endulza al gusto y revuelve. Sirve inmediatamente."
+  ],
+  "dato": "El té con leche es la bebida de la once chilena por excelencia. Se calcula que Chile es uno de los mayores consumidores de té del mundo, solo superado por Turquía, Irlanda y el Reino Unido. La proporción té/leche varía por familia: hay quienes lo toman \"cortado\" (más leche que té) y quienes lo toman \"cargado\" (más té).",
+  "errores": [
+    {
+      "error": "Me quedó amargo el té",
+      "solucion": "No dejes la bolsita demasiado tiempo ni la aprietes; con 3-4 minutos es suficiente, y apretarla contra la taza libera taninos amargos."
+    },
+    {
+      "error": "Se me cortó la leche",
+      "solucion": "No hiervas la leche ni la eches en té aún hirviendo; caliéntala hasta que salga vapor, sin llegar a hervir."
+    },
+    {
+      "error": "Me quedó tibio el té",
+      "solucion": "No sirvas en taza fría; calienta la taza con agua hirviendo, espera 30 segundos, bota el agua y sirve el té."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Se consume al momento. El té recalentado pierde aroma.",
+    "congelador": "No aplica.",
+    "recalentar": "No recomendado."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "bolsita de té negro",
+      "nota": "o 1 cucharadita de té suelto",
+      "escalable": true
+    },
+    {
+      "cantidad": 150,
+      "unidad": "ml",
+      "nombre": "agua hirviendo",
+      "escalable": true
+    },
+    {
+      "cantidad": 100,
+      "unidad": "ml",
+      "nombre": "leche entera",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "azúcar",
+      "nota": "1-2 cucharaditas, al gusto",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Hierve el agua. Mientras hierve, calienta la leche aparte en una ollita o en el microondas. No debe hervir: solo calentarse hasta que salga vapor.",
+      "ingredientes": [
+        2,
+        3
+      ]
+    },
+    {
+      "texto": "Pon la bolsita de té en la taza. Vierte el agua hirviendo sobre ella y deja reposar 3-4 minutos. Más tiempo lo pone amargo.",
+      "ingredientes": [
+        1,
+        2
+      ],
+      "timers": [
+        {
+          "minutos": 4,
+          "etiqueta": "3-4 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Retira la bolsita sin apretarla contra la taza (si la aprietas, sale más tanino y amarga).",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Vierte la leche caliente sobre el té. La proporción clásica chilena es 60% té, 40% leche.",
+      "ingredientes": [
+        3
+      ]
+    },
+    {
+      "texto": "Endulza al gusto y revuelve. Sirve inmediatamente."
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 4
+  },
+  "revisado_v2": false
+}

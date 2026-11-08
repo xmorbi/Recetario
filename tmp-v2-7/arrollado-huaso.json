@@ -1,0 +1,228 @@
+{
+  "titulo": "Arrollado huaso",
+  "categoria": "principales",
+  "tags": [
+    "arrollado",
+    "cordero",
+    "cerdo",
+    "frio",
+    "picoteo",
+    "tradicional",
+    "campo"
+  ],
+  "imagen": null,
+  "tiempo": "3 h + reposo de 12 h",
+  "porciones": "8 a 10 personas",
+  "dificultad": "media",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "1 kg de pulpa de cerdo (o mezcla de cerdo y vacuno)",
+    "200 g de tocino en tiras",
+    "3 dientes de ajo picados",
+    "1 cucharada de ají de color",
+    "1 cucharadita de orégano",
+    "1 cucharadita de comino",
+    "1/2 cucharadita de pimienta negra molida",
+    "1 cucharada de sal gruesa",
+    "1 taza (250 ml) de vinagre de vino tinto",
+    "1 taza (250 ml) de agua",
+    "1 hoja de laurel",
+    "Un paño de algodón limpio (o gasa quirúrgica)",
+    "Cordel de cocina"
+  ],
+  "pasos": [
+    "Extiende la carne sobre una superficie plana. Si tiene partes gruesas, ábrelas en mariposa para que quede pareja. Sazona con sal, ajo, ají de color, orégano, comino y pimienta.",
+    "Coloca las tiras de tocino a lo largo sobre la carne. Enrolla la carne sobre sí misma, apretando bien para que no queden huecos.",
+    "Ata el arrollado con cordel de cocina dando vueltas cada 3 cm, como si fuera un asado. Esto mantiene la forma durante la cocción.",
+    "Envuelve el arrollado en el paño de algodón, apretando firmemente. Ata el paño con más cordel en varios puntos para que quede compacto.",
+    "En una olla grande, pon el arrollado envuelto, el vinagre, el agua, el laurel y sal. El líquido debe cubrir el arrollado por la mitad.",
+    "Cocina tapado a fuego medio-bajo por 2 horas, dando vuelta cada 30 minutos. El arrollado debe estar muy tierno.",
+    "Retira del fuego y deja enfriar en el líquido de cocción. Refrigera al menos 12 horas con el paño puesto.",
+    "Al día siguiente, retira el paño y el cordel. Corta en láminas finas y sirve frío con pebre, pan amasado y ensalada chilena."
+  ],
+  "dato": "El arrollado huaso es un plato tradicional del campo chileno, especialmente de la zona central. Se sirve en Fiestas Patrias, matrimonios y celebraciones. La clave es la cocción lenta y el reposo en frío, que le da esa textura firme y compacta. El nombre \"huaso\" hace referencia al campesino chileno, y es un plato que se comía tradicionalmente después de las faenas agrícolas.",
+  "errores": [
+    {
+      "error": "El arrollado se me desarmó al cortar",
+      "solucion": "No lo ataste bien o no lo dejaste reposar en frío. El cordel y el paño son esenciales, y el reposo en frío (mínimo 12 horas) es lo que permite cortar en láminas sin que se deshaga."
+    },
+    {
+      "error": "El arrollado me supo a \"cerdo viejo\"",
+      "solucion": "Usaste carne que no estaba fresca o no usaste suficientes especias. Los aliños (ají de color, comino, orégano) son esenciales para darle carácter. Usa carne fresca de buena calidad."
+    },
+    {
+      "error": "El arrollado me quedó seco",
+      "solucion": "Lo cocinaste demasiado o con poca grasa. Usa carne con algo de grasa (el tocino ayuda), y cocina con el líquido cubriendo la mitad del arrollado, dando vuelta cada 30 min."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 5 días bien envuelto en paño o papel aluminio.",
+    "congelador": "Hasta 2 meses, en porciones.",
+    "recalentar": "Se sirve frío. No se recalienta."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": "kg",
+      "nombre": "pulpa de cerdo",
+      "nota": "o mezcla de cerdo y vacuno",
+      "escalable": true
+    },
+    {
+      "cantidad": 200,
+      "unidad": "g",
+      "nombre": "tocino",
+      "nota": "en tiras",
+      "escalable": true
+    },
+    {
+      "cantidad": 3,
+      "unidad": "diente",
+      "nombre": "ajo",
+      "nota": "picados",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "ají de color",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "orégano",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "comino",
+      "escalable": false
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "cucharadita",
+      "nombre": "pimienta negra molida",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "sal",
+      "nota": "gruesa",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "vinagre de vino",
+      "nota": "250 ml, tinto",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "agua",
+      "nota": "250 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "hoja",
+      "nombre": "laurel",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "paño de algodón",
+      "nota": "o gasa quirúrgica, limpio",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cordel de cocina",
+      "nota": "a gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Extiende la carne sobre una superficie plana. Si tiene partes gruesas, ábrelas en mariposa para que quede pareja. Sazona con sal, ajo, ají de color, orégano, comino y pimienta.",
+      "ingredientes": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "texto": "Coloca las tiras de tocino a lo largo sobre la carne. Enrolla la carne sobre sí misma, apretando bien para que no queden huecos.",
+      "ingredientes": [
+        1,
+        2
+      ]
+    },
+    {
+      "texto": "Ata el arrollado con cordel de cocina dando vueltas cada 3 cm, como si fuera un asado. Esto mantiene la forma durante la cocción.",
+      "ingredientes": [
+        13
+      ]
+    },
+    {
+      "texto": "Envuelve el arrollado en el paño de algodón, apretando firmemente. Ata el paño con más cordel en varios puntos para que quede compacto.",
+      "ingredientes": [
+        12,
+        13
+      ]
+    },
+    {
+      "texto": "En una olla grande, pon el arrollado envuelto, el vinagre, el agua, el laurel y sal. El líquido debe cubrir el arrollado por la mitad.",
+      "ingredientes": [
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "texto": "Cocina tapado a fuego medio-bajo por 2 horas, dando vuelta cada 30 minutos. El arrollado debe estar muy tierno.",
+      "ingredientes": [
+        3,
+        13
+      ],
+      "timers": [
+        {
+          "minutos": 120,
+          "etiqueta": "2 horas"
+        }
+      ]
+    },
+    {
+      "texto": "Retira del fuego y deja enfriar en el líquido de cocción. Refrigera al menos 12 horas con el paño puesto.",
+      "ingredientes": [
+        12
+      ],
+      "previo": true
+    },
+    {
+      "texto": "Al día siguiente, retira el paño y el cordel. Corta en láminas finas y sirve frío con pebre, pan amasado y ensalada chilena.",
+      "ingredientes": [
+        4,
+        8,
+        12,
+        13
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 720,
+    "coccion": 120
+  },
+  "revisado_v2": false
+}

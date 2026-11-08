@@ -1,0 +1,136 @@
+{
+  "titulo": "Suspiros Salados",
+  "categoria": "ensaladas",
+  "tags": [
+    "suspiros salados",
+    "jamón",
+    "queso",
+    "fritura",
+    "aperitivo"
+  ],
+  "imagen": null,
+  "tiempo": "30 min",
+  "porciones": "6 a 8 personas",
+  "dificultad": "media",
+  "tecnica": "Fritura",
+  "ingredientes": [
+    "1/4 taza de harina",
+    "1 cucharada de margarina",
+    "5 huevos",
+    "2 cucharadas de jamón picado fino",
+    "1 cucharada de queso rallado",
+    "Sal",
+    "Aceite para freír"
+  ],
+  "pasos": [
+    "Hervir 3 tazas de agua con margarina y sal.",
+    "Retirar del fuego y agregar la harina de una sola vez.",
+    "Poner al fuego nuevamente. Revolver hasta que la pasta se despegue del fondo de la olla.",
+    "Una vez tibio agregar los huevos uno a uno mezclando bien.",
+    "Agregar el jamón y el queso.",
+    "Dejar reposar un momento y luego freír por cucharaditas en aceite hirviendo."
+  ],
+  "dato": "La masa debe quedar firme pero maleable; si está muy líquida, añade un poco más de harina.",
+  "errores": [
+    {
+      "error": "Suspiros que no inflan",
+      "solucion": "Asegúrate de que el aceite esté bien caliente y de incorporar los huevos cuando la masa esté tibia, no caliente."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Servir de inmediato",
+    "recalentar": "Se pueden recalentar en horno suave."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 0.25,
+      "unidad": "taza",
+      "nombre": "harina",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "margarina",
+      "escalable": true
+    },
+    {
+      "cantidad": 5,
+      "unidad": null,
+      "nombre": "huevos",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "jamón",
+      "nota": "picado, fino",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "queso",
+      "nota": "rallado",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "aceite",
+      "nota": "para freír",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Hervir 3 tazas de agua con margarina y sal.",
+      "ingredientes": [
+        2,
+        6
+      ]
+    },
+    {
+      "texto": "Retirar del fuego y agregar la harina de una sola vez.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Poner al fuego nuevamente. Revolver hasta que la pasta se despegue del fondo de la olla."
+    },
+    {
+      "texto": "Una vez tibio agregar los huevos uno a uno mezclando bien.",
+      "ingredientes": [
+        3,
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "texto": "Agregar el jamón y el queso.",
+      "ingredientes": [
+        4,
+        5
+      ]
+    },
+    {
+      "texto": "Dejar reposar un momento y luego freír por cucharaditas en aceite hirviendo.",
+      "ingredientes": [
+        7
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 30
+  },
+  "revisado_v2": false
+}

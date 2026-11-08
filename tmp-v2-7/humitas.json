@@ -1,0 +1,151 @@
+{
+  "titulo": "Humitas",
+  "categoria": "panes",
+  "tags": [
+    "humita",
+    "choclo",
+    "horno",
+    "olla",
+    "plato principal",
+    "vegetariano"
+  ],
+  "imagen": "img/Humitas.jpg",
+  "tiempo": "80 min",
+  "porciones": "8 unidades",
+  "dificultad": "media",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "6 choclos tiernos rallados",
+    "1 cebolla picada muy fina",
+    "100 g de manteca",
+    "1 cucharadita de ají de color",
+    "Albahaca fresca y sal",
+    "Hojas de choclo para envolver"
+  ],
+  "pasos": [
+    "Sofríe la cebolla en la manteca. Agrega el ají de color y revuelve.",
+    "Mezcla el choclo rallado con el sofrito, la albahaca y sal.",
+    "Cocina a fuego bajo 10 minutos, revolviendo. Deja enfriar.",
+    "Blanquea las hojas de choclo en agua caliente.",
+    "Pon dos cucharadas de mezcla en cada hoja, envuelve y amarra.",
+    "Cocina en agua con sal hirviendo 30 a 40 minutos, o al horno a 180 °C por 40 minutos."
+  ],
+  "dato": "Si el choclo está muy seco, agrega un poco de leche a la mezcla.",
+  "errores": [
+    {
+      "error": "Humitas secas",
+      "solucion": "El choclo utilizado no es lo suficientemente tierno. Agrega un chorrito de leche y una cucharada extra de mantequilla a la mezcla."
+    },
+    {
+      "error": "Se desarman al hervir",
+      "solucion": "Asegúrate de amarrar las hojas firme, pero sin apretar demasiado para que el vapor circule."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días cocidas con su hoja.",
+    "congelador": "Hasta 3 meses, bien envueltas en papel plástico.",
+    "recalentar": "Al vapor o en el microondas por 2-3 minutos (con un poco de agua para que no se sequen)."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 6,
+      "unidad": null,
+      "nombre": "choclos",
+      "nota": "rallados, tiernos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cebolla",
+      "nota": "muy fina, picada",
+      "escalable": true
+    },
+    {
+      "cantidad": 100,
+      "unidad": "g",
+      "nombre": "manteca",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "ají de color",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "albahaca y sal",
+      "nota": "fresca",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "hojas de choclo para envolver",
+      "nota": "a gusto",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Sofríe la cebolla en la manteca. Agrega el ají de color y revuelve.",
+      "ingredientes": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "texto": "Mezcla el choclo rallado con el sofrito, la albahaca y sal.",
+      "ingredientes": [
+        1,
+        5
+      ]
+    },
+    {
+      "texto": "Cocina a fuego bajo 10 minutos, revolviendo. Deja enfriar.",
+      "timers": [
+        {
+          "minutos": 10,
+          "etiqueta": "10 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Blanquea las hojas de choclo en agua caliente.",
+      "ingredientes": [
+        1,
+        6
+      ]
+    },
+    {
+      "texto": "Pon dos cucharadas de mezcla en cada hoja, envuelve y amarra.",
+      "ingredientes": [
+        6
+      ]
+    },
+    {
+      "texto": "Cocina en agua con sal hirviendo 30 a 40 minutos, o al horno a 180 °C por 40 minutos.",
+      "ingredientes": [
+        5
+      ],
+      "timers": [
+        {
+          "minutos": 40,
+          "etiqueta": "30 a 40 minutos"
+        },
+        {
+          "minutos": 40,
+          "etiqueta": "40 minutos"
+        }
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 10,
+    "coccion": 80
+  },
+  "revisado_v2": false
+}

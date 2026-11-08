@@ -1,0 +1,251 @@
+{
+  "titulo": "Empanadas de mariscos",
+  "categoria": "mar",
+  "tags": [
+    "empanada",
+    "marisco",
+    "horno",
+    "fritura",
+    "picoteo",
+    "fiestas patrias"
+  ],
+  "imagen": null,
+  "tiempo": "90 min",
+  "porciones": "12 unidades",
+  "dificultad": "media",
+  "tecnica": "Horno o fritura",
+  "ingredientes": [
+    "Masa: 500 g de harina sin polvos de hornear",
+    "Masa: 120 g de manteca derretida",
+    "Masa: 1 huevo",
+    "Masa: 1 cucharadita de sal",
+    "Masa: 200 ml de agua tibia (aprox.)",
+    "Relleno: 300 g de mariscos variados (camarones, choritos, almejas)",
+    "Relleno: 200 g de pescado blanco en cubos pequeños",
+    "Relleno: 1 cebolla grande picada fina",
+    "Relleno: 2 dientes de ajo picados",
+    "Relleno: 1 tomate maduro picado",
+    "Relleno: 1 cucharadita de merkén",
+    "Relleno: 2 cucharadas (20 g) de pan rallado",
+    "Relleno: Sal, pimienta, orégano",
+    "Pintar: 1 huevo batido"
+  ],
+  "pasos": [
+    "Prepara el relleno: sofríe la cebolla y el ajo en aceite. Agrega el tomate y condimenta con merkén, sal, pimienta y orégano.",
+    "Cuando la cebolla esté transparente, agrega los mariscos y el pescado. Cocina 5 minutos, solo hasta que los mariscos se abran.",
+    "Agrega el pan rallado para absorber el líquido. Mezcla bien y deja enfriar por completo. Es clave que el relleno esté frío al armar.",
+    "Prepara la masa: mezcla la harina con la sal, agrega la manteca, el huevo y el agua tibia. Amasa hasta que la masa esté lisa.",
+    "Reposa la masa 30 minutos. Divídela en 12 bollos y estira cada uno en un disco de 15 cm.",
+    "Rellena con 2 cucharadas del relleno frío. Humedece el borde, cierra con repulgue y pincha con un tenedor.",
+    "Pinta con huevo batido. Hornea a 200 °C por 20-25 minutos, o fríe en abundante aceite caliente (170-180 °C) hasta dorar."
+  ],
+  "dato": "Las empanadas de mariscos son el orgullo de las panaderías y restaurantes de la costa chilena. En Valparaíso, Viña del Mar y los pueblos del sur se venden en las calles. Tradicionalmente se hacen con mariscos locales: en Chiloé con cholgas, en el norte con camarones y machas, en la zona central con choritos y almejas.",
+  "advertencia": "Usa mariscos muy frescos o congelados de buena calidad, descongelados en el refrigerador la noche anterior. Descarta los que estén abiertos antes de cocinar y los que no se abran durante la cocción.",
+  "errores": [
+    {
+      "error": "El relleno me quedó aguado",
+      "solucion": "No escurriste los mariscos o no agregaste pan rallado. Los mariscos sueltan mucho líquido. Escúrrelos bien y agrega suficiente pan rallado para absorber."
+    },
+    {
+      "error": "Las empanadas se me abrieron en el horno",
+      "solucion": "El relleno estaba caliente o el repulgue no estaba bien sellado. El relleno debe estar completamente frío. Haz un repulgue firme y pincha la superficie para que salga el vapor."
+    },
+    {
+      "error": "Las empanadas me supieron a \"mar viejo\"",
+      "solucion": "Usaste mariscos que no estaban frescos. Usa mariscos muy frescos o congelados de buena calidad, descongelados en el refrigerador."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días cocidas.",
+    "congelador": "Hasta 3 meses crudas (armadas) o cocidas.",
+    "recalentar": "Horno o freidora de aire a 180 °C por 5-10 minutos. Evita el microondas."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "harina sin polvos de hornear",
+      "escalable": true,
+      "seccion": "Masa"
+    },
+    {
+      "cantidad": 120,
+      "unidad": "g",
+      "nombre": "manteca derretida",
+      "escalable": true,
+      "seccion": "Masa"
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "huevo",
+      "escalable": true,
+      "seccion": "Masa"
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "sal",
+      "escalable": false,
+      "seccion": "Masa"
+    },
+    {
+      "cantidad": 200,
+      "unidad": "ml",
+      "nombre": "agua",
+      "nota": "aprox., tibia",
+      "escalable": true,
+      "seccion": "Masa"
+    },
+    {
+      "cantidad": 300,
+      "unidad": "g",
+      "nombre": "mariscos variados",
+      "nota": "camarones, choritos, almejas",
+      "escalable": true,
+      "seccion": "Relleno"
+    },
+    {
+      "cantidad": 200,
+      "unidad": "g",
+      "nombre": "pescado blanco",
+      "nota": "pequeños, en cubos",
+      "escalable": true,
+      "seccion": "Relleno"
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cebolla",
+      "nota": "picada, grande, fina",
+      "escalable": true,
+      "seccion": "Relleno"
+    },
+    {
+      "cantidad": 2,
+      "unidad": "diente",
+      "nombre": "ajo",
+      "nota": "picados",
+      "escalable": true,
+      "seccion": "Relleno"
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "tomate",
+      "nota": "picado, maduro",
+      "escalable": true,
+      "seccion": "Relleno"
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "merkén",
+      "escalable": true,
+      "seccion": "Relleno"
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "pan",
+      "nota": "20 g, rallado",
+      "escalable": true,
+      "seccion": "Relleno"
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal, pimienta, orégano",
+      "nota": "a gusto",
+      "escalable": false,
+      "seccion": "Relleno"
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "huevo batido",
+      "escalable": true,
+      "seccion": "Pintar"
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Prepara el relleno: sofríe la cebolla y el ajo en aceite. Agrega el tomate y condimenta con merkén, sal, pimienta y orégano.",
+      "ingredientes": [
+        4,
+        8,
+        9,
+        10,
+        11,
+        13
+      ]
+    },
+    {
+      "texto": "Cuando la cebolla esté transparente, agrega los mariscos y el pescado. Cocina 5 minutos, solo hasta que los mariscos se abran.",
+      "ingredientes": [
+        6,
+        7,
+        8
+      ],
+      "timers": [
+        {
+          "minutos": 5,
+          "etiqueta": "5 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Agrega el pan rallado para absorber el líquido. Mezcla bien y deja enfriar por completo. Es clave que el relleno esté frío al armar.",
+      "ingredientes": [
+        1,
+        2,
+        3,
+        5,
+        12,
+        14
+      ]
+    },
+    {
+      "texto": "Prepara la masa: mezcla la harina con la sal, agrega la manteca, el huevo y el agua tibia. Amasa hasta que la masa esté lisa.",
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        13,
+        14
+      ]
+    },
+    {
+      "texto": "Reposa la masa 30 minutos. Divídela en 12 bollos y estira cada uno en un disco de 15 cm.",
+      "timers": [
+        {
+          "minutos": 30,
+          "etiqueta": "30 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Rellena con 2 cucharadas del relleno frío. Humedece el borde, cierra con repulgue y pincha con un tenedor."
+    },
+    {
+      "texto": "Pinta con huevo batido. Hornea a 200 °C por 20-25 minutos, o fríe en abundante aceite caliente (170-180 °C) hasta dorar.",
+      "ingredientes": [
+        3,
+        14
+      ],
+      "timers": [
+        {
+          "minutos": 25,
+          "etiqueta": "20-25 minutos"
+        }
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 30,
+    "coccion": 30
+  },
+  "revisado_v2": false
+}

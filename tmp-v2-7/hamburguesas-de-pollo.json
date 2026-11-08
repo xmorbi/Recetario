@@ -1,0 +1,185 @@
+{
+  "titulo": "Hamburguesas de Pollo",
+  "categoria": "principales",
+  "tags": [
+    "hamburguesas de pollo",
+    "pollo",
+    "fritura",
+    "aves"
+  ],
+  "imagen": null,
+  "tiempo": "35 min",
+  "porciones": "4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Fritura",
+  "ingredientes": [
+    "2 pechugas de pollo",
+    "1/2 marraqueta añeja",
+    "1/2 taza de leche",
+    "1 huevo",
+    "2 cucharadas de mantequilla",
+    "Harina",
+    "Una pizca de nuez moscada",
+    "Pan rallado",
+    "Jugo de limón",
+    "Sal",
+    "Pimienta",
+    "Aceite para freír"
+  ],
+  "pasos": [
+    "Remojar el pan añejo con la leche.",
+    "Moler las pechugas de pollo en la máquina de moler.",
+    "Agregar el pan remojado (estrujado), la mantequilla, sal, nuez moscada y pimienta.",
+    "Trabajar bien la mezcla para formar una pasta homogénea.",
+    "Dividir en porciones iguales, pasar por harina y con la palma de la mano aplastar para dar la forma de hamburguesas.",
+    "Pasarlas por el huevo batido, luego por el pan rallado y freír en aceite caliente por ambos lados; estilar y disponerlas en una fuente para llevar a la mesa.",
+    "Verter el jugo de limón sobre las hamburguesas y decorar con trozos de limón, ganchos de perejil crespo o con lo que sea de su agrado."
+  ],
+  "dato": "El pan remojado en leche aporta jugosidad; escúrrelo bien antes de incorporarlo para que la mezcla no quede demasiado húmeda.",
+  "errores": [
+    {
+      "error": "Hamburguesas secas",
+      "solucion": "No cocines en exceso; el pollo se seca rápido. Sella a fuego medio-alto y termina a fuego suave."
+    }
+  ],
+  "conservacion": {
+    "congelador": "Se pueden congelar crudas ya formadas",
+    "refrigerador": "2 días."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "pechugas de pollo",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": null,
+      "nombre": "marraqueta añeja",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "taza",
+      "nombre": "leche",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "huevo",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "mantequilla",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "harina",
+      "nota": "a gusto",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "pizca",
+      "nombre": "nuez moscada",
+      "nota": "Una",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pan",
+      "nota": "rallado",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "jugo de limón",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pimienta",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "aceite",
+      "nota": "para freír",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Remojar el pan añejo con la leche.",
+      "ingredientes": [
+        2,
+        3,
+        8
+      ]
+    },
+    {
+      "texto": "Moler las pechugas de pollo en la máquina de moler.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Agregar el pan remojado (estrujado), la mantequilla, sal, nuez moscada y pimienta.",
+      "ingredientes": [
+        2,
+        5,
+        7,
+        8,
+        10,
+        11
+      ]
+    },
+    {
+      "texto": "Trabajar bien la mezcla para formar una pasta homogénea."
+    },
+    {
+      "texto": "Dividir en porciones iguales, pasar por harina y con la palma de la mano aplastar para dar la forma de hamburguesas.",
+      "ingredientes": [
+        6
+      ]
+    },
+    {
+      "texto": "Pasarlas por el huevo batido, luego por el pan rallado y freír en aceite caliente por ambos lados; estilar y disponerlas en una fuente para llevar a la mesa.",
+      "ingredientes": [
+        2,
+        4,
+        8,
+        12
+      ]
+    },
+    {
+      "texto": "Verter el jugo de limón sobre las hamburguesas y decorar con trozos de limón, ganchos de perejil crespo o con lo que sea de su agrado.",
+      "ingredientes": [
+        9
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 35
+  },
+  "revisado_v2": false
+}

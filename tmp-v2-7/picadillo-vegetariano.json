@@ -1,0 +1,98 @@
+{
+  "titulo": "Picadillo Vegetariano",
+  "categoria": "ensaladas",
+  "tags": [
+    "picadillo vegetariano",
+    "huevos de codorniz",
+    "verduras",
+    "aperitivo",
+    "cóctel"
+  ],
+  "imagen": null,
+  "tiempo": "15 min",
+  "porciones": "4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Sin cocción",
+  "ingredientes": [
+    "12 huevos de codorniz",
+    "2 zanahorias",
+    "1 pepino de ensalada",
+    "Palitos de apio",
+    "Salsa golf o americana"
+  ],
+  "pasos": [
+    "Cocer los huevos de codorniz y pelarlos, dejándolos enteros.",
+    "Cortar las verduras en bastones.",
+    "Colocar en plato para servir, junto con salsa golf o americana."
+  ],
+  "dato": "Ideal para acompañar con palitos de apio, zanahoria y pepino; la salsa se sirve aparte para untar.",
+  "errores": [
+    {
+      "error": "Huevos de codorniz difíciles de pelar",
+      "solucion": "Cocínalos en agua con un poco de vinagre y pásalos a agua fría inmediatamente; así se pelan más fácil."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Mantener refrigerado hasta el momento de servir. Consumir el mismo día."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 12,
+      "unidad": null,
+      "nombre": "huevos de codorniz",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "zanahorias",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pepino de ensalada",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "apio",
+      "nota": "palitos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "salsa golf o americana",
+      "nota": "a gusto",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Cocer los huevos de codorniz y pelarlos, dejándolos enteros.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Cortar las verduras en bastones.",
+      "ingredientes": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "texto": "Colocar en plato para servir, junto con salsa golf o americana.",
+      "ingredientes": [
+        5
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 15
+  },
+  "revisado_v2": false
+}

@@ -1,0 +1,177 @@
+{
+  "titulo": "Torta de manjar",
+  "categoria": "dulces",
+  "tags": [
+    "torta",
+    "manjar",
+    "dulce",
+    "horno",
+    "cumpleaños",
+    "reposteria"
+  ],
+  "imagen": null,
+  "tiempo": "1 h",
+  "porciones": "12 porciones",
+  "dificultad": "media",
+  "tecnica": "Horno",
+  "ingredientes": [
+    "Bizcocho: 4 huevos",
+    "Bizcocho: 120 g de azúcar",
+    "Bizcocho: 100 g de harina",
+    "Bizcocho: 1 cucharadita de polvos de hornear",
+    "Bizcocho: 1 cucharadita de vainilla",
+    "Relleno y cubierta: 500 g de manjar",
+    "Relleno y cubierta: 300 ml de crema para batir",
+    "Relleno y cubierta: 2 cucharadas de azúcar flor"
+  ],
+  "pasos": [
+    "Precalienta el horno a 180 °C. Engrasa y enharina un molde redondo.",
+    "Bate los huevos con el azúcar hasta que estén pálidos y hayan triplicado su volumen (unos 8 minutos).",
+    "Incorpora la harina cernida con los polvos de hornear y la vainilla con movimientos envolventes.",
+    "Vierte en el molde y hornea 25-30 minutos. Deja enfriar y corta en 3 discos.",
+    "Bate la crema con el azúcar flor hasta que monte.",
+    "Arma la torta: disco, manjar, crema; repite. Cubre toda la torta con manjar y decora con crema.",
+    "Refrigera al menos 2 horas antes de servir."
+  ],
+  "dato": "La torta de manjar es la torta de cumpleaños chilena por excelencia. Se hace con bizcocho liviano, manjar entre las capas y crema batida. Hay familias que le agregan nueces, chocolate rallado o merengue. El manjar (dulce de leche) puede ser casero o comprado.",
+  "errores": [
+    {
+      "error": "Se me bajó el bizcocho",
+      "solucion": "No abras el horno los primeros 20 minutos ni batas de menos los huevos; hornea sin abrir y bate hasta que estén bien espumosos."
+    },
+    {
+      "error": "Me quedó seco el bizcocho",
+      "solucion": "No hornees de más; sácalo apenas se despegue del borde del molde."
+    },
+    {
+      "error": "No me montó la crema",
+      "solucion": "No uses crema tibia ni batas de más; usa crema para batir bien fría y detente cuando forme picos suaves."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días en recipiente hermético.",
+    "congelador": "No recomendado, la crema se corta.",
+    "recalentar": "Se consume fría o a temperatura ambiente."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 4,
+      "unidad": null,
+      "nombre": "huevos",
+      "escalable": true,
+      "seccion": "Bizcocho"
+    },
+    {
+      "cantidad": 120,
+      "unidad": "g",
+      "nombre": "azúcar",
+      "escalable": true,
+      "seccion": "Bizcocho"
+    },
+    {
+      "cantidad": 100,
+      "unidad": "g",
+      "nombre": "harina",
+      "escalable": true,
+      "seccion": "Bizcocho"
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "polvos de hornear",
+      "escalable": true,
+      "seccion": "Bizcocho"
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "vainilla",
+      "escalable": true,
+      "seccion": "Bizcocho"
+    },
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "manjar",
+      "escalable": true,
+      "seccion": "Relleno y cubierta"
+    },
+    {
+      "cantidad": 300,
+      "unidad": "ml",
+      "nombre": "crema para batir",
+      "escalable": true,
+      "seccion": "Relleno y cubierta"
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "azúcar flor",
+      "escalable": false,
+      "seccion": "Relleno y cubierta"
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Precalienta el horno a 180 °C. Engrasa y enharina un molde redondo.",
+      "ingredientes": [
+        3
+      ]
+    },
+    {
+      "texto": "Bate los huevos con el azúcar hasta que estén pálidos y hayan triplicado su volumen (unos 8 minutos).",
+      "ingredientes": [
+        1,
+        2,
+        8
+      ],
+      "timers": [
+        {
+          "minutos": 8,
+          "etiqueta": "8 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Incorpora la harina cernida con los polvos de hornear y la vainilla con movimientos envolventes.",
+      "ingredientes": [
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "texto": "Vierte en el molde y hornea 25-30 minutos. Deja enfriar y corta en 3 discos.",
+      "timers": [
+        {
+          "minutos": 30,
+          "etiqueta": "25-30 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Bate la crema con el azúcar flor hasta que monte.",
+      "ingredientes": [
+        2,
+        7,
+        8
+      ]
+    },
+    {
+      "texto": "Arma la torta: disco, manjar, crema; repite. Cubre toda la torta con manjar y decora con crema.",
+      "ingredientes": [
+        6,
+        7
+      ]
+    },
+    {
+      "texto": "Refrigera al menos 2 horas antes de servir.",
+      "previo": true
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 8,
+    "reposo": 150
+  },
+  "revisado_v2": false
+}

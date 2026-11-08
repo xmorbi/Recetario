@@ -55,7 +55,8 @@
     {
       "cantidad": 1,
       "unidad": null,
-      "nombre": "ají verde grande",
+      "nombre": "ají verde",
+      "nota": "grande",
       "escalable": true
     },
     {
@@ -79,37 +80,51 @@
       "escalable": true
     },
     {
-      "cantidad": null,
+      "cantidad": 1,
       "unidad": null,
-      "nombre": "Sal",
-      "escalable": true
+      "nombre": "sal",
+      "nota": "a gusto",
+      "escalable": false
     },
     {
-      "cantidad": null,
+      "cantidad": 1,
       "unidad": null,
-      "nombre": "Pimienta",
-      "escalable": true
+      "nombre": "pimienta",
+      "nota": "a gusto",
+      "escalable": false
     }
   ],
   "pasos_v2": [
     {
-      "texto": "Cortar la carne en trozos pequeños."
+      "texto": "Cortar la carne en trozos pequeños.",
+      "ingredientes": [1]
     },
     {
-      "texto": "Limpiar los cebollines y picarlos en trozos; limpiar el ají y cortarlo en tiras."
+      "texto": "Limpiar los cebollines y picarlos en trozos; limpiar el ají y cortarlo en tiras.",
+      "ingredientes": [2, 3]
     },
     {
-      "texto": "Dorar la carne en el aceite previamente calentado en un wok o sartén amplia, evitando que se seque."
+      "texto": "Dorar la carne en el aceite previamente calentado en un wok o sartén amplia, evitando que se seque.",
+      "ingredientes": [1, 4]
     },
     {
-      "texto": "Agregar los cebollines, el ají, sal y pimienta y revolver muy bien."
+      "texto": "Agregar los cebollines, el ají, sal y pimienta y revolver muy bien.",
+      "ingredientes": [2, 3, 6, 7]
     },
     {
-      "texto": "Un minuto antes de servir agregar la salsa de soja."
+      "texto": "Un minuto antes de servir agregar la salsa de soja.",
+      "ingredientes": [5],
+      "timers": [
+        {
+          "minutos": 1,
+          "etiqueta": "antes de servir"
+        }
+      ]
     }
   ],
   "tiempo_v2": {
-    "coccion": 20
+    "preparacion": 10,
+    "coccion": 10
   },
-  "revisado_v2": false
+  "revisado_v2": true
 }

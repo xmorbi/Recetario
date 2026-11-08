@@ -1,0 +1,160 @@
+{
+  "titulo": "Pescado frito",
+  "categoria": "principales",
+  "tags": [
+    "pescado",
+    "fritura",
+    "plato principal",
+    "sarten",
+    "merluza",
+    "reineta",
+    "congrio"
+  ],
+  "imagen": "img/pescado-frito.jpg",
+  "tiempo": "30 min",
+  "porciones": "4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Fritura",
+  "ingredientes": [
+    "4 filetes de pescado blanco (merluza, reineta o congrio)",
+    "1 taza de harina",
+    "1 cucharadita de polvos de hornear",
+    "1 huevo",
+    "1/2 taza de agua o cerveza fría",
+    "Sal, pimienta y orégano al gusto",
+    "Aceite para freír",
+    "Limón para servir"
+  ],
+  "pasos": [
+    "Sazona los filetes de pescado con sal, pimienta y orégano. Déjalos reposar por 10 minutos.",
+    "Prepara la mezcla del rebozado: en un bol, mezcla la harina, los polvos de hornear, el huevo y el agua o cerveza hasta obtener una consistencia espesa pero fluida.",
+    "Calienta abundante aceite en una sartén honda o freidora a unos 180 °C.",
+    "Pasa cada filete por la mezcla, dejando que escurra el exceso, y fríe en el aceite caliente por 3-4 minutos por lado, hasta que estén dorados y crujientes.",
+    "Escurre sobre papel absorbente y sirve con rodajas de limón y ensalada a la chilena."
+  ],
+  "dato": "La cerveza fría en el rebozado le da una textura extra crujiente al pescado frito. Es un secreto de cocina muy popular.",
+  "errores": [
+    {
+      "error": "Rebozado que se cae o queda grasoso",
+      "solucion": "El pescado está muy húmedo o el aceite no está caliente. Seca los filetes con papel absorbente y asegúrate de que el aceite esté a 180°C."
+    },
+    {
+      "error": "Pescado crudo por dentro y quemado por fuera",
+      "solucion": "Fuego demasiado alto. Regula el fuego a medio para que el pescado se cocine por dentro sin quemarse."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 2 días en recipiente hermético.",
+    "congelador": "No recomendado, el rebozado pierde textura.",
+    "recalentar": "Horno o freidora de aire a 180°C por 5-8 minutos para recuperar la crocancia."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 4,
+      "unidad": "filete",
+      "nombre": "pescado blanco",
+      "nota": "merluza, reineta o congrio",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "harina",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "polvos de hornear",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "huevo",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "taza",
+      "nombre": "agua o cerveza",
+      "nota": "fría",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal, pimienta y orégano",
+      "nota": "al gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "aceite",
+      "nota": "para freír",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "limón",
+      "nota": "para servir",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Sazona los filetes de pescado con sal, pimienta y orégano. Déjalos reposar por 10 minutos.",
+      "ingredientes": [
+        1,
+        6
+      ],
+      "timers": [
+        {
+          "minutos": 10,
+          "etiqueta": "10 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Prepara la mezcla del rebozado: en un bol, mezcla la harina, los polvos de hornear, el huevo y el agua o cerveza hasta obtener una consistencia espesa pero fluida.",
+      "ingredientes": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "texto": "Calienta abundante aceite en una sartén honda o freidora a unos 180 °C.",
+      "ingredientes": [
+        7
+      ]
+    },
+    {
+      "texto": "Pasa cada filete por la mezcla, dejando que escurra el exceso, y fríe en el aceite caliente por 3-4 minutos por lado, hasta que estén dorados y crujientes.",
+      "ingredientes": [
+        7
+      ],
+      "timers": [
+        {
+          "minutos": 4,
+          "etiqueta": "3-4 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Escurre sobre papel absorbente y sirve con rodajas de limón y ensalada a la chilena.",
+      "ingredientes": [
+        6,
+        8
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 10,
+    "coccion": 4
+  },
+  "revisado_v2": false
+}

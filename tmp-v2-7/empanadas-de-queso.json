@@ -1,0 +1,166 @@
+{
+  "titulo": "Empanadas de queso",
+  "categoria": "once",
+  "tags": [
+    "empanada",
+    "horno",
+    "queso",
+    "picoteo",
+    "fritura",
+    "vegetariano"
+  ],
+  "imagen": "img/Empanada-de-queso.jpg",
+  "tiempo": "60 min",
+  "porciones": "12 unidades",
+  "dificultad": "fácil",
+  "tecnica": "Horno o fritura",
+  "ingredientes": [
+    "Masa: 500 g de harina sin polvos de hornear",
+    "Masa: 120 g de manteca derretida",
+    "Masa: 1 huevo",
+    "Masa: 1 cucharadita de sal",
+    "Masa: 200 ml de agua tibia (aprox.)",
+    "Relleno: 500 g de queso chanco o mantecoso rallado",
+    "Relleno: 1 cucharadita de orégano (opcional)",
+    "Pintar: 1 huevo batido"
+  ],
+  "pasos": [
+    "Mezcla la harina con la sal, agrega la manteca, el huevo y el agua tibia. Amasa hasta obtener una masa lisa.",
+    "Reposa 30 minutos tapada con un paño.",
+    "Divide en 12 bollos y estira cada uno en discos de unos 15 cm.",
+    "Rellena con abundante queso rallado (y orégano si usas).",
+    "Humedece el borde, cierra con un repulgue y pincha la superficie con un tenedor.",
+    "Pinta con huevo batido y hornea a 200 °C por 20 a 25 minutos, o fríelas en aceite caliente (170-180 °C) hasta dorar."
+  ],
+  "dato": "El queso mantecoso suelta grasa al hornearse; pinchar la masa evita que se abra. Las empanadas de queso son un clásico de la once chilena y de las picadas de barrio. Se hacen al horno o fritas, y se comen calientes.",
+  "advertencia": "Si las fríes, usa aceite a 170-180 °C: si está muy caliente, se doran por fuera y quedan crudas por dentro. Si está muy frío, absorben grasa.",
+  "errores": [
+    {
+      "error": "El queso se me salió",
+      "solucion": "El queso se derrite y escapa por bordes mal sellados. Haz un repulgue firme y pincha la masa para que salga el vapor."
+    },
+    {
+      "error": "La masa me quedó dura o elástica",
+      "solucion": "Estiraste toda la masa de una vez y volviste a amasar los recortes. Estira porciones individuales."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días cocidas.",
+    "congelador": "Hasta 3 meses crudas (armadas) o cocidas.",
+    "recalentar": "Horno o freidora de aire por 5-10 minutos. Evita el microondas."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "harina sin polvos de hornear",
+      "escalable": true,
+      "seccion": "Masa"
+    },
+    {
+      "cantidad": 120,
+      "unidad": "g",
+      "nombre": "manteca derretida",
+      "escalable": true,
+      "seccion": "Masa"
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "huevo",
+      "escalable": true,
+      "seccion": "Masa"
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "sal",
+      "escalable": false,
+      "seccion": "Masa"
+    },
+    {
+      "cantidad": 200,
+      "unidad": "ml",
+      "nombre": "agua",
+      "nota": "aprox., tibia",
+      "escalable": true,
+      "seccion": "Masa"
+    },
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "queso chanco o mantecoso",
+      "nota": "rallado",
+      "escalable": true,
+      "seccion": "Relleno"
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "orégano",
+      "nota": "opcional",
+      "escalable": false,
+      "seccion": "Relleno"
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "huevo batido",
+      "escalable": true,
+      "seccion": "Pintar"
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Mezcla la harina con la sal, agrega la manteca, el huevo y el agua tibia. Amasa hasta obtener una masa lisa.",
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        8
+      ]
+    },
+    {
+      "texto": "Reposa 30 minutos tapada con un paño.",
+      "timers": [
+        {
+          "minutos": 30,
+          "etiqueta": "30 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Divide en 12 bollos y estira cada uno en discos de unos 15 cm."
+    },
+    {
+      "texto": "Rellena con abundante queso rallado (y orégano si usas).",
+      "ingredientes": [
+        6,
+        7
+      ]
+    },
+    {
+      "texto": "Humedece el borde, cierra con un repulgue y pincha la superficie con un tenedor."
+    },
+    {
+      "texto": "Pinta con huevo batido y hornea a 200 °C por 20 a 25 minutos, o fríelas en aceite caliente (170-180 °C) hasta dorar.",
+      "ingredientes": [
+        3,
+        8
+      ],
+      "timers": [
+        {
+          "minutos": 25,
+          "etiqueta": "20 a 25 minutos"
+        }
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 30,
+    "coccion": 25
+  },
+  "revisado_v2": false
+}

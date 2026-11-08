@@ -1,0 +1,198 @@
+{
+  "titulo": "Caldillo de congrio",
+  "categoria": "sopas",
+  "tags": [
+    "caldillo",
+    "sopa",
+    "pescado",
+    "marisco",
+    "olla"
+  ],
+  "imagen": "img/Caldillo-de-congrio.JPG",
+  "tiempo": "50 min",
+  "porciones": "4 personas",
+  "dificultad": "media",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "1 kg de congrio en medallones",
+    "Cabeza y espinas del congrio",
+    "4-5 papas en gajos",
+    "1 cebolla grande en pluma",
+    "1 zanahoria, 1 pimentón rojo, 2 tomates, 3 ajos",
+    "200 ml de vino blanco",
+    "100 ml de crema (opcional)",
+    "Ají de color, orégano, comino, sal, pimienta y cilantro"
+  ],
+  "pasos": [
+    "Hierve la cabeza y espinas con verduras y 2 L de agua por 20-30 min. Cuela.",
+    "Haz un sofrito con cebolla, pimentón, zanahoria y ajo. Agrega tomate y condimentos.",
+    "Vierte el vino y deja evaporar. Añade las papas y cúbrelas con el caldo.",
+    "Cocina 15 min hasta que las papas ablanden.",
+    "Pon los medallones encima y cocina tapado 8-10 min a fuego mínimo.",
+    "Opcional: añade crema antes de apagar. Sirve con cilantro."
+  ],
+  "dato": "El caldo de la cabeza es lo que le da ese sabor profundo; no lo omitas. El caldillo de congrio es plato de caleta: en las costas chilenas se prepara con el pescado fresco del día, y se sirve con pan para mojar.",
+  "errores": [
+    {
+      "error": "El pescado se me deshizo en el caldillo",
+      "solucion": "Herviste a borbotones después de agregar el congrio. Baja el fuego al mínimo y cocina el pescado pochado por no más de 8-10 minutos."
+    },
+    {
+      "error": "El caldo me quedó turbio y amargo",
+      "solucion": "Herviste las espinas y la cabeza a fuego fuerte. Usa fuego lento y retira la espuma que sube a la superficie los primeros minutos."
+    },
+    {
+      "error": "El caldillo me quedó con sabor plano",
+      "solucion": "No hiciste el caldo con la cabeza y las espinas. Ese caldo es el que le da la profundidad al plato."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 2 días máximo. Al ser pescado, es muy perecedero.",
+    "congelador": "Hasta 2 meses, idealmente sin papas.",
+    "recalentar": "A fuego muy suave, evitando hervir para que el pescado no se deshaga."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": "kg",
+      "nombre": "congrio en medallones",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cabeza y espinas del congrio",
+      "nota": "a gusto",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "4-5 papas",
+      "nota": "en gajos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cebolla",
+      "nota": "en pluma, grande",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "zanahoria",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pimentón rojo",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "tomates",
+      "escalable": true
+    },
+    {
+      "cantidad": 3,
+      "unidad": null,
+      "nombre": "ajos",
+      "escalable": true
+    },
+    {
+      "cantidad": 200,
+      "unidad": "ml",
+      "nombre": "vino blanco",
+      "escalable": true
+    },
+    {
+      "cantidad": 100,
+      "unidad": "ml",
+      "nombre": "crema",
+      "nota": "opcional",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "ají de color, orégano, comino, sal, pimienta y cilantro",
+      "nota": "a gusto",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Hierve la cabeza y espinas con verduras y 2 L de agua por 20-30 min. Cuela.",
+      "ingredientes": [
+        2,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "timers": [
+        {
+          "minutos": 30,
+          "etiqueta": "20-30 min"
+        }
+      ]
+    },
+    {
+      "texto": "Haz un sofrito con cebolla, pimentón, zanahoria y ajo. Agrega tomate y condimentos.",
+      "ingredientes": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "texto": "Vierte el vino y deja evaporar. Añade las papas y cúbrelas con el caldo.",
+      "ingredientes": [
+        3,
+        9
+      ]
+    },
+    {
+      "texto": "Cocina 15 min hasta que las papas ablanden.",
+      "ingredientes": [
+        3
+      ],
+      "timers": [
+        {
+          "minutos": 15,
+          "etiqueta": "15 min"
+        }
+      ]
+    },
+    {
+      "texto": "Pon los medallones encima y cocina tapado 8-10 min a fuego mínimo.",
+      "ingredientes": [
+        1
+      ],
+      "timers": [
+        {
+          "minutos": 10,
+          "etiqueta": "8-10 min"
+        }
+      ]
+    },
+    {
+      "texto": "Opcional: añade crema antes de apagar. Sirve con cilantro.",
+      "ingredientes": [
+        10
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 30,
+    "coccion": 25
+  },
+  "revisado_v2": false
+}

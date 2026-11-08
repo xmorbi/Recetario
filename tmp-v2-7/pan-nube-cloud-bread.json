@@ -1,0 +1,121 @@
+{
+  "titulo": "Pan Nube (Cloud Bread)",
+  "categoria": "panes",
+  "tags": [
+    "pan nube",
+    "cloud bread",
+    "keto",
+    "sin gluten",
+    "sin harina",
+    "huevo",
+    "queso crema"
+  ],
+  "imagen": null,
+  "tiempo": "30 min",
+  "porciones": "6 unidades",
+  "dificultad": "media",
+  "tecnica": "Horno",
+  "ingredientes": [
+    "3 huevos a temperatura ambiente",
+    "50 g (3 cucharadas) de queso crema",
+    "1/4 cucharadita de cremor tártaro (o polvo de hornear)",
+    "Una pizca de sal (opcional)"
+  ],
+  "pasos": [
+    "Precalentar el horno a 150 °C y preparar una bandeja con papel para hornear.",
+    "Separar las claras de las yemas.",
+    "Batir las claras con el cremor tártaro a punto de nieve firme.",
+    "En otro bol, mezclar las yemas con el queso crema hasta que queden bien integradas.",
+    "Incorporar las claras batidas a la mezcla de yemas con movimientos envolventes, con cuidado de no perder el aire.",
+    "Formar montoncitos con una cuchara sobre la bandeja, dando forma de discos de aproximadamente 1 cm de grosor.",
+    "Hornear por 20 a 25 minutos, hasta que estén dorados y firmes al tacto."
+  ],
+  "dato": "El pan nube no es un pan tradicional, sino una alternativa esponjosa y baja en carbohidratos. Se puede usar para sándwiches o tostadas. Si no tienes cremor tártaro, puedes usar polvo de hornear o unas gotas de limón.",
+  "errores": [
+    {
+      "error": "Pan que se baja al enfriar",
+      "solucion": "No abras el horno durante los primeros 15 minutos de cocción. Deja que se enfríe ligeramente dentro del horno apagado para evitar cambios bruscos de temperatura."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Guardar en recipiente hermético en refrigerador hasta 3 días",
+    "congelador": "Se pueden congelar hasta 1 mes."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 3,
+      "unidad": null,
+      "nombre": "huevos",
+      "nota": "a temperatura ambiente",
+      "escalable": true
+    },
+    {
+      "cantidad": 50,
+      "unidad": "g",
+      "nombre": "queso crema",
+      "nota": "3 cucharadas",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.25,
+      "unidad": "cucharadita",
+      "nombre": "cremor tártaro",
+      "nota": "o polvo de hornear",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "pizca",
+      "nombre": "sal",
+      "nota": "opcional, Una",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Precalentar el horno a 150 °C y preparar una bandeja con papel para hornear."
+    },
+    {
+      "texto": "Separar las claras de las yemas.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Batir las claras con el cremor tártaro a punto de nieve firme.",
+      "ingredientes": [
+        1,
+        3
+      ]
+    },
+    {
+      "texto": "En otro bol, mezclar las yemas con el queso crema hasta que queden bien integradas.",
+      "ingredientes": [
+        1,
+        2
+      ]
+    },
+    {
+      "texto": "Incorporar las claras batidas a la mezcla de yemas con movimientos envolventes, con cuidado de no perder el aire.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Formar montoncitos con una cuchara sobre la bandeja, dando forma de discos de aproximadamente 1 cm de grosor."
+    },
+    {
+      "texto": "Hornear por 20 a 25 minutos, hasta que estén dorados y firmes al tacto.",
+      "timers": [
+        {
+          "minutos": 25,
+          "etiqueta": "20 a 25 minutos"
+        }
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 25
+  },
+  "revisado_v2": false
+}

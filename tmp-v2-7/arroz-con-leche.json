@@ -1,0 +1,149 @@
+{
+  "titulo": "Arroz con leche",
+  "categoria": "dulces",
+  "tags": [
+    "postre",
+    "dulce",
+    "olla",
+    "arroz",
+    "leche",
+    "tradicional"
+  ],
+  "imagen": "img/Arroz-con-leche.jpg",
+  "tiempo": "50 min",
+  "porciones": "6 personas",
+  "dificultad": "fácil",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "1 L de leche entera",
+    "100 g de arroz de grano corto",
+    "150 g de azúcar",
+    "1 rama de canela",
+    "Cáscara de 1 limón (sin la parte blanca)",
+    "Canela molida para servir"
+  ],
+  "pasos": [
+    "Lava el arroz y cuécelo en agua hirviendo 10 minutos. Escurre.",
+    "Calienta la leche con la canela en rama y la cáscara de limón hasta que hierva.",
+    "Agrega el arroz escurrido y cocina a fuego bajo 30 a 40 minutos, revolviendo seguido.",
+    "Añade el azúcar y cocina 5 minutos más, hasta que espese.",
+    "Retira la canela y el limón, sirve tibio o frío con canela molida encima."
+  ],
+  "dato": "Si te gusta más cremoso, agrega 100 ml más de leche al final y cocina 5 minutos extra. El arroz con leche es un postre tradicional chileno, de esos que se hacen en casa para la once o para las celebraciones.",
+  "errores": [
+    {
+      "error": "El arroz con leche se me pegó en la olla",
+      "solucion": "No revolviste con frecuencia o usaste fuego muy alto. Cocina a fuego bajo y revuelve constantemente raspando el fondo."
+    },
+    {
+      "error": "Los granos me quedaron duros",
+      "solucion": "El arroz no se cocinó lo suficiente. Usa arroz de grano corto y cocínalo por al menos 30-40 minutos."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días en recipiente hermético.",
+    "congelador": "No recomendado, el arroz se cristaliza y la leche se separa.",
+    "recalentar": "En olla a fuego bajo con un chorrito de leche fresca, revolviendo constantemente."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": "L",
+      "nombre": "leche entera",
+      "escalable": true
+    },
+    {
+      "cantidad": 100,
+      "unidad": "g",
+      "nombre": "arroz de grano",
+      "nota": "corto",
+      "escalable": true
+    },
+    {
+      "cantidad": 150,
+      "unidad": "g",
+      "nombre": "azúcar",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "rama",
+      "nombre": "canela",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cáscara de 1 limón",
+      "nota": "sin la parte blanca",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "canela molida",
+      "nota": "para servir",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Lava el arroz y cuécelo en agua hirviendo 10 minutos. Escurre.",
+      "ingredientes": [
+        2
+      ],
+      "timers": [
+        {
+          "minutos": 10,
+          "etiqueta": "10 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Calienta la leche con la canela en rama y la cáscara de limón hasta que hierva.",
+      "ingredientes": [
+        1,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "texto": "Agrega el arroz escurrido y cocina a fuego bajo 30 a 40 minutos, revolviendo seguido.",
+      "ingredientes": [
+        2
+      ],
+      "timers": [
+        {
+          "minutos": 40,
+          "etiqueta": "30 a 40 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Añade el azúcar y cocina 5 minutos más, hasta que espese.",
+      "ingredientes": [
+        3
+      ],
+      "timers": [
+        {
+          "minutos": 5,
+          "etiqueta": "5 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Retira la canela y el limón, sirve tibio o frío con canela molida encima.",
+      "ingredientes": [
+        4,
+        5,
+        6
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 10,
+    "coccion": 45
+  },
+  "revisado_v2": false
+}

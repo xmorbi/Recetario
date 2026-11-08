@@ -103,7 +103,8 @@
     {
       "cantidad": 60,
       "unidad": "g",
-      "nombre": "dátiles sin cuesco picados",
+      "nombre": "dátiles",
+      "nota": "sin cuesco, picados",
       "escalable": true
     },
     {
@@ -114,21 +115,22 @@
     },
     {
       "cantidad": 1,
-      "unidad": null,
-      "nombre": "cdta. de café instantáneo o café de cebada",
+      "unidad": "cdta.",
+      "nombre": "café instantáneo o café de cebada",
       "escalable": true
     },
     {
       "cantidad": 1,
-      "unidad": null,
-      "nombre": "cda. de licor  - opcional",
+      "unidad": "cda.",
+      "nombre": "licor",
       "nota": "ron, pisco o aguardiente",
+      "seccion": "Opcional",
       "escalable": true
     },
     {
       "cantidad": 0.5,
-      "unidad": null,
-      "nombre": "cdta. de canela en polvo",
+      "unidad": "cdta.",
+      "nombre": "canela en polvo",
       "escalable": true
     },
     {
@@ -139,14 +141,15 @@
     },
     {
       "cantidad": 1,
-      "unidad": null,
-      "nombre": "cda. de esencia de ron",
+      "unidad": "cda.",
+      "nombre": "esencia de ron",
       "escalable": true
     },
     {
-      "cantidad": null,
+      "cantidad": 1,
       "unidad": null,
-      "nombre": "Ralladura de naranja",
+      "nombre": "ralladura de naranja",
+      "nota": "de 1 naranja",
       "escalable": true
     },
     {
@@ -163,8 +166,8 @@
     },
     {
       "cantidad": 1,
-      "unidad": null,
-      "nombre": "cdta. de esencia de vainilla",
+      "unidad": "cdta.",
+      "nombre": "esencia de vainilla",
       "escalable": true
     },
     {
@@ -174,9 +177,9 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
-      "unidad": null,
-      "nombre": "½ cda. de polvo de hornear",
+      "cantidad": 1.5,
+      "unidad": "cda.",
+      "nombre": "polvo de hornear",
       "escalable": true
     },
     {
@@ -193,63 +196,67 @@
     },
     {
       "cantidad": 0.25,
-      "unidad": null,
-      "nombre": "cdta. de goma xantana",
-      "opcional": true,
+      "unidad": "cdta.",
+      "nombre": "goma xantana",
+      "seccion": "Opcional",
       "escalable": true
     },
     {
       "cantidad": 3,
       "unidad": "g",
       "nombre": "proteína de soya aislada sin sabor",
-      "opcional": true,
+      "seccion": "Opcional",
       "escalable": true
     },
     {
       "cantidad": 0.25,
-      "unidad": null,
-      "nombre": "cdta. de bicarbonato de sodio",
+      "unidad": "cdta.",
+      "nombre": "bicarbonato de sodio",
       "escalable": true
     },
     {
-      "cantidad": null,
+      "cantidad": 1,
       "unidad": null,
-      "nombre": "Perlas de azúcar",
-      "opcional": true,
-      "escalable": true
+      "nombre": "perlas de azúcar",
+      "nota": "a gusto, para decorar",
+      "seccion": "Opcional",
+      "escalable": false
     }
   ],
   "pasos_v2": [
     {
       "texto": "Picar los dátiles y mezclarlos con las pasas y el resto de la fruta seca. Agregar una cucharadita de melaza, las especias (canela, anís, clavo, nuez moscada), las esencias, el café instantáneo, el licor (si se usa) y 80 ml de agua. Dejar reposar al menos 15 minutos (idealmente 1 hora).",
+      "ingredientes": [2, 6, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17],
       "timers": [
         {
           "minutos": 15,
-          "etiqueta": "15 min"
-        },
-        {
-          "minutos": 60,
-          "etiqueta": "60 min"
+          "etiqueta": "reposo de fruta (mín., ideal 1 h)"
         }
       ]
     },
     {
-      "texto": "Preparar el reemplazo de huevo: mezclar el aquafaba, el almidón de papa o maíz, la goma xantana y la proteína de soya (si se usa) hasta integrar sin grumos. Batir hasta que esté espumoso."
+      "texto": "Preparar el reemplazo de huevo: mezclar el aquafaba, el almidón de papa o maíz, la goma xantana y la proteína de soya (si se usa) hasta integrar sin grumos. Batir hasta que esté espumoso.",
+      "ingredientes": [19, 20, 21, 22]
     },
     {
-      "texto": "Agregar la melaza y el aceite a la mezcla de aquafaba y batir bien."
+      "texto": "Agregar la melaza y el aceite a la mezcla de aquafaba y batir bien.",
+      "ingredientes": [2, 3]
     },
     {
-      "texto": "En un bol aparte, mezclar la harina, el polvo de hornear, el bicarbonato y la sal. Espolvorear los frutos secos con un poco de harina para que no se hundan."
+      "texto": "En un bol aparte, mezclar la harina, el polvo de hornear, el bicarbonato y la sal. Espolvorear los frutos secos con un poco de harina para que no se hundan.",
+      "ingredientes": [1, 4, 5, 18, 23]
     },
     {
-      "texto": "Escurrir la fruta especiada (reservar el líquido) y agregar el líquido al batido de aquafaba."
+      "texto": "Escurrir la fruta especiada (reservar el líquido) y agregar el líquido al batido de aquafaba.",
+      "ingredientes": [6, 7, 17]
     },
     {
-      "texto": "Incorporar la mezcla de harina de a poco al batido, usando batidora hasta que la masa lo permita, luego espátula."
+      "texto": "Incorporar la mezcla de harina de a poco al batido, usando batidora hasta que la masa lo permita, luego espátula.",
+      "ingredientes": [1]
     },
     {
-      "texto": "Agregar la fruta escurrida, las nueces y almendras enharinadas. Incorporar con espátula sin sobremezclar."
+      "texto": "Agregar la fruta escurrida, las nueces y almendras enharinadas. Incorporar con espátula sin sobremezclar.",
+      "ingredientes": [4, 5, 6, 17]
     },
     {
       "texto": "Precalentar el horno a 175 °C. Verter la masa en un molde para pan de Pascua (18 cm) enmantequillado o con papel."
@@ -259,15 +266,7 @@
       "timers": [
         {
           "minutos": 60,
-          "etiqueta": "60 min"
-        },
-        {
-          "minutos": 60,
-          "etiqueta": "60 min"
-        },
-        {
-          "minutos": 10,
-          "etiqueta": "10 min"
+          "etiqueta": "hornear (60–70 min)"
         }
       ]
     },
@@ -276,13 +275,15 @@
       "timers": [
         {
           "minutos": 10,
-          "etiqueta": "10 min"
+          "etiqueta": "enfriar en molde"
         }
       ]
     }
   ],
   "tiempo_v2": {
-    "coccion": 90
+    "preparacion": 15,
+    "reposo": 15,
+    "coccion": 60
   },
-  "revisado_v2": false
+  "revisado_v2": true
 }

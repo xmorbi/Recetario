@@ -56,25 +56,29 @@
     {
       "cantidad": 6,
       "unidad": null,
-      "nombre": "trutros de pollo sin piel",
+      "nombre": "trutros de pollo",
+      "nota": "sin piel",
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": 2,
       "unidad": null,
-      "nombre": "zanahoria en rodajas + 1 rallada",
+      "nombre": "zanahoria",
+      "nota": "1 en rodajas + 1 rallada",
       "escalable": true
     },
     {
       "cantidad": 0.5,
       "unidad": null,
-      "nombre": "pimentón rojo en tiras",
+      "nombre": "pimentón rojo",
+      "nota": "en tiras",
       "escalable": true
     },
     {
       "cantidad": 6,
       "unidad": null,
-      "nombre": "papas peladas",
+      "nombre": "papas",
+      "nota": "peladas",
       "escalable": true
     },
     {
@@ -92,8 +96,8 @@
     {
       "cantidad": 1,
       "unidad": "taza",
-      "nombre": "porotos verdes picados",
-      "nota": "150 g",
+      "nombre": "porotos verdes",
+      "nota": "picados, 150 g",
       "escalable": true
     },
     {
@@ -104,10 +108,11 @@
       "escalable": true
     },
     {
-      "cantidad": null,
+      "cantidad": 1,
       "unidad": null,
-      "nombre": "Sal, pimienta, orégano",
-      "escalable": true
+      "nombre": "sal, pimienta y orégano",
+      "nota": "a gusto",
+      "escalable": false
     },
     {
       "cantidad": 1,
@@ -119,40 +124,46 @@
   "pasos_v2": [
     {
       "texto": "Dora el pollo en aceite 5 min por lado en una olla grande.",
+      "ingredientes": [1],
       "timers": [
         {
           "minutos": 5,
-          "etiqueta": "5 min"
+          "etiqueta": "5 min por lado"
         }
       ]
     },
     {
       "texto": "Agrega la zanahoria, el pimentón, sal, pimienta y orégano. Saltea 5 min.",
+      "ingredientes": [2, 3, 9],
       "timers": [
         {
           "minutos": 5,
-          "etiqueta": "5 min"
+          "etiqueta": "saltear"
         }
       ]
     },
     {
-      "texto": "Vierte el agua caliente y cocina a fuego lento."
+      "texto": "Vierte el agua caliente y cocina a fuego lento.",
+      "ingredientes": [10]
     },
     {
       "texto": "A los 30 min, añade las papas, el zapallo y el choclo.",
+      "ingredientes": [4, 5, 6],
       "timers": [
         {
           "minutos": 30,
-          "etiqueta": "30 min"
+          "etiqueta": "cocción antes de agregar verduras"
         }
       ]
     },
     {
-      "texto": "Encima pon los porotos verdes y el arroz sin revolver. Cocina hasta que todo esté tierno."
+      "texto": "Encima pon los porotos verdes y el arroz sin revolver. Cocina hasta que todo esté tierno.",
+      "ingredientes": [7, 8]
     }
   ],
   "tiempo_v2": {
-    "coccion": 120
+    "preparacion": 20,
+    "coccion": 90
   },
-  "revisado_v2": false
+  "revisado_v2": true
 }

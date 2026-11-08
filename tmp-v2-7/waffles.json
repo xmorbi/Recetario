@@ -1,0 +1,148 @@
+{
+  "titulo": "Waffles",
+  "categoria": "dulces",
+  "tags": [
+    "waffles",
+    "desayuno",
+    "once",
+    "dulce",
+    "reposteria",
+    "simple"
+  ],
+  "imagen": null,
+  "tiempo": "25 min",
+  "porciones": "6 waffles",
+  "dificultad": "fácil",
+  "tecnica": "Waflera",
+  "ingredientes": [
+    "2 huevos",
+    "1 taza de leche",
+    "1 taza de harina",
+    "2 cucharadas de azúcar",
+    "1 cucharadita de polvos de hornear",
+    "1 pizca de sal",
+    "50 g de mantequilla derretida",
+    "1 cucharadita de vainilla"
+  ],
+  "pasos": [
+    "Bate los huevos con el azúcar y la vainilla.",
+    "Agrega la leche y la mantequilla derretida.",
+    "Incorpora la harina cernida con los polvos de hornear y la sal. Mezcla hasta obtener una masa lisa.",
+    "Calienta la waflera y engrásala ligeramente.",
+    "Vierte la masa y cocina según las instrucciones de tu waflera (3-5 minutos), hasta que estén dorados y crujientes.",
+    "Sirve calientes con manjar, mermelada, frutas o miel."
+  ],
+  "dato": "Los waffles son el desayuno de fin de semana chileno. Se hacen en waflera y se sirven con manjar, mermelada o frutas. Son crujientes por fuera y suaves por dentro. Si no tienes waflera, puedes hacerlos en sartén como panqueques.",
+  "errores": [
+    {
+      "error": "Me quedaron blandos",
+      "solucion": "No uses la waflera sin precalentar ni omitas la grasa; precaliéntala y engrásala ligeramente."
+    },
+    {
+      "error": "Se me pegaron a la waflera",
+      "solucion": "No omitas engrasar la waflera ni uses masa muy líquida; engrásala y verifica que la masa tenga la consistencia correcta."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 2 días en recipiente hermético.",
+    "congelador": "Hasta 2 meses, separados con papel.",
+    "recalentar": "Tostador u horno a 180 °C por 3 minutos."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "huevos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "leche",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "harina",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "azúcar",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "polvos de hornear",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "pizca",
+      "nombre": "sal",
+      "escalable": false
+    },
+    {
+      "cantidad": 50,
+      "unidad": "g",
+      "nombre": "mantequilla derretida",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "vainilla",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Bate los huevos con el azúcar y la vainilla.",
+      "ingredientes": [
+        1,
+        4,
+        8
+      ]
+    },
+    {
+      "texto": "Agrega la leche y la mantequilla derretida.",
+      "ingredientes": [
+        2,
+        7
+      ]
+    },
+    {
+      "texto": "Incorpora la harina cernida con los polvos de hornear y la sal. Mezcla hasta obtener una masa lisa.",
+      "ingredientes": [
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "texto": "Calienta la waflera y engrásala ligeramente.",
+      "ingredientes": [
+        6
+      ]
+    },
+    {
+      "texto": "Vierte la masa y cocina según las instrucciones de tu waflera (3-5 minutos), hasta que estén dorados y crujientes.",
+      "timers": [
+        {
+          "minutos": 5,
+          "etiqueta": "3-5 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Sirve calientes con manjar, mermelada, frutas o miel."
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 5
+  },
+  "revisado_v2": false
+}

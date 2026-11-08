@@ -1,0 +1,179 @@
+{
+  "titulo": "Arroz Chaufán",
+  "categoria": "principales",
+  "tags": [
+    "arroz chaufán",
+    "arroz",
+    "cerdo",
+    "camarones",
+    "jamón",
+    "huevo",
+    "arroces"
+  ],
+  "imagen": null,
+  "tiempo": "40 min",
+  "porciones": "4 a 6 personas",
+  "dificultad": "media",
+  "tecnica": "Olla y sartén",
+  "ingredientes": [
+    "4 tazas (800 g) de arroz",
+    "500 g de lomo de chancho",
+    "500 g de camarones",
+    "500 g de jamón",
+    "5 huevos",
+    "1/2 vaso (125 ml) de vino blanco",
+    "1 diente de ajo",
+    "1 cucharadita de salsa de soya",
+    "Aceite",
+    "Sal"
+  ],
+  "pasos": [
+    "Dorar la carne de chancho en aceite y luego dejar en cocción con el vino, 1/2 taza (125 ml) de agua, la salsa de soya y sal.",
+    "Cuando esté lista, retirar la carne, cortarla en trocitos pequeños y guardar el jugo.",
+    "Freír las colas de camarones, igualmente el jamón picado.",
+    "Batir los huevos y vaciar en aceite caliente. Revolver hasta que queden bien cocidos y luego mezclar con el jamón, chancho y los camarones.",
+    "Lavar bien el arroz, poner a cocinar con agua fría cuidando que ésta sobrepase el arroz.",
+    "Dejar a fuego fuerte hasta que comience a disminuir el agua y luego bajar el calor.",
+    "Calentar aceite, dorar 1 diente de ajo, agregar el arroz cocido y sal; revolver y finalmente incorporar el resto de los ingredientes."
+  ],
+  "dato": "El arroz chaufán es una versión chilena del arroz frito; usar arroz cocido del día anterior da mejor textura. Es un plato de origen cantones que en Chile se adaptó con los ingredientes locales y se volvió un clásico de las casas y de los restaurantes de barrio.",
+  "advertencia": "Los camarones deben quedar bien cocidos: cambian de color a rosado opaco. Si usas congelados, descongélalos completamente y escúrrelos antes de cocinar.",
+  "errores": [
+    {
+      "error": "El arroz me quedó pastoso",
+      "solucion": "Usa arroz cocido y bien frío; si está recién hecho, extiéndelo en una bandeja y enfría antes de sofreír."
+    },
+    {
+      "error": "El chaufán me quedó con sabor plano",
+      "solucion": "No usaste el jugo de la carne ni la salsa de soya. Guarda el jugo de la cocción del chancho y úsalo para darle sabor al arroz."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "2 días",
+    "recalentar": "En sartén con un poco de aceite."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 4,
+      "unidad": "taza",
+      "nombre": "arroz",
+      "nota": "800 g",
+      "escalable": true
+    },
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "lomo de chancho",
+      "escalable": true
+    },
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "camarones",
+      "escalable": true
+    },
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "jamón",
+      "escalable": true
+    },
+    {
+      "cantidad": 5,
+      "unidad": null,
+      "nombre": "huevos",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "vaso",
+      "nombre": "vino blanco",
+      "nota": "125 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "diente",
+      "nombre": "ajo",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "salsa de soya",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "aceite",
+      "nota": "a gusto",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal",
+      "nota": "a gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Dorar la carne de chancho en aceite y luego dejar en cocción con el vino, 1/2 taza (125 ml) de agua, la salsa de soya y sal.",
+      "ingredientes": [
+        2,
+        6,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "texto": "Cuando esté lista, retirar la carne, cortarla en trocitos pequeños y guardar el jugo.",
+      "ingredientes": [
+        2
+      ]
+    },
+    {
+      "texto": "Freír las colas de camarones, igualmente el jamón picado.",
+      "ingredientes": [
+        3,
+        4,
+        9
+      ]
+    },
+    {
+      "texto": "Batir los huevos y vaciar en aceite caliente. Revolver hasta que queden bien cocidos y luego mezclar con el jamón, chancho y los camarones.",
+      "ingredientes": [
+        2,
+        3,
+        4,
+        5,
+        9
+      ]
+    },
+    {
+      "texto": "Lavar bien el arroz, poner a cocinar con agua fría cuidando que ésta sobrepase el arroz.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Dejar a fuego fuerte hasta que comience a disminuir el agua y luego bajar el calor."
+    },
+    {
+      "texto": "Calentar aceite, dorar 1 diente de ajo, agregar el arroz cocido y sal; revolver y finalmente incorporar el resto de los ingredientes.",
+      "ingredientes": [
+        1,
+        7,
+        9,
+        10
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 40
+  },
+  "revisado_v2": false
+}

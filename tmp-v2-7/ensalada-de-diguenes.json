@@ -1,0 +1,125 @@
+{
+  "titulo": "Ensalada de Digüeñes",
+  "categoria": "ensaladas",
+  "tags": [
+    "ensalada de digüeñes",
+    "digüeñes",
+    "hongo",
+    "cilantro",
+    "cebolla",
+    "ensalada chilena"
+  ],
+  "imagen": null,
+  "tiempo": "20 min",
+  "porciones": "4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Sin cocción",
+  "ingredientes": [
+    "1 kg de digüeñes",
+    "1 atado (30 g) de cilantro",
+    "1 cebolla chica",
+    "Vinagre",
+    "Aceite",
+    "Sal",
+    "Pimienta"
+  ],
+  "pasos": [
+    "Limpiar muy bien los digüeñes y lavarlos en agua corriente procurando eliminar la sustancia gelatinosa.",
+    "Dejarlos que eliminen el agua en un colador.",
+    "Picar la cebolla y el cilantro muy finos e incorporarlos a los digüeñes en la ensaladera.",
+    "Aliñar con sal, aceite, vinagre y pimienta."
+  ],
+  "dato": "Los digüeñes son hongos silvestres chilenos de temporada, típicos del sur de Chile. Se comen crudos, en ensalada, con cebolla y cilantro. Si no los encuentras, no los reemplaces por champiñones: el sabor y la textura son muy distintos.",
+  "errores": [
+    {
+      "error": "Los digüeñes me quedaron con textura babosa",
+      "solucion": "Lávalos bien bajo el chorro de agua y déjalos escurrir en un colador; la sustancia gelatinosa debe eliminarse."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Consumir el mismo día. Los hongos frescos pierden textura rápidamente."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": "kg",
+      "nombre": "digüeñes",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "atado",
+      "nombre": "cilantro",
+      "nota": "30 g",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cebolla",
+      "nota": "chica",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "vinagre",
+      "nota": "a gusto",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "aceite",
+      "nota": "a gusto",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pimienta",
+      "nota": "a gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Limpiar muy bien los digüeñes y lavarlos en agua corriente procurando eliminar la sustancia gelatinosa.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Dejarlos que eliminen el agua en un colador."
+    },
+    {
+      "texto": "Picar la cebolla y el cilantro muy finos e incorporarlos a los digüeñes en la ensaladera.",
+      "ingredientes": [
+        1,
+        2,
+        3,
+        6
+      ]
+    },
+    {
+      "texto": "Aliñar con sal, aceite, vinagre y pimienta.",
+      "ingredientes": [
+        4,
+        5,
+        6,
+        7
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 20
+  },
+  "revisado_v2": false
+}

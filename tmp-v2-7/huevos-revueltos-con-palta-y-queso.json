@@ -1,0 +1,108 @@
+{
+  "titulo": "Huevos Revueltos con Palta y Queso",
+  "categoria": "once",
+  "tags": [
+    "huevos revueltos",
+    "palta",
+    "queso",
+    "keto",
+    "desayuno",
+    "low carb"
+  ],
+  "imagen": null,
+  "tiempo": "10 min",
+  "porciones": "1 persona",
+  "dificultad": "fácil",
+  "tecnica": "Sartén",
+  "ingredientes": [
+    "2 huevos",
+    "1/2 palta madura",
+    "60 g de queso fresco o semiduro",
+    "1 cucharadita de aceite de oliva",
+    "Sal y pimienta a gusto"
+  ],
+  "pasos": [
+    "Batir ligeramente los huevos en un bol con una pizca de sal y pimienta.",
+    "Calentar el aceite de oliva en una sartén antiadherente a fuego medio-bajo.",
+    "Verter los huevos y revolver suavemente con una espátula hasta que cuajen pero queden cremosos.",
+    "Servir los huevos en un plato y acompañar con la palta cortada en cubos o pisada y el queso en trozos."
+  ],
+  "dato": "La palta aporta grasas saludables y el queso suma proteína y calcio, convirtiendo este plato en un desayuno keto completo. Puedes usar queso de cabra, mantecoso o mozzarella.",
+  "errores": [
+    {
+      "error": "Huevos secos",
+      "solucion": "Cocina a fuego lento y retira del calor cuando aún estén ligeramente húmedos; el calor residual termina de cocinarlos."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Servir de inmediato. No se recomienda guardar huevos revueltos."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "huevos",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": null,
+      "nombre": "palta",
+      "nota": "madura",
+      "escalable": true
+    },
+    {
+      "cantidad": 60,
+      "unidad": "g",
+      "nombre": "queso o semiduro",
+      "nota": "fresco",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "aceite de oliva",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal y pimienta",
+      "nota": "a gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Batir ligeramente los huevos en un bol con una pizca de sal y pimienta.",
+      "ingredientes": [
+        1,
+        5
+      ]
+    },
+    {
+      "texto": "Calentar el aceite de oliva en una sartén antiadherente a fuego medio-bajo.",
+      "ingredientes": [
+        4
+      ]
+    },
+    {
+      "texto": "Verter los huevos y revolver suavemente con una espátula hasta que cuajen pero queden cremosos.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Servir los huevos en un plato y acompañar con la palta cortada en cubos o pisada y el queso en trozos.",
+      "ingredientes": [
+        1,
+        2,
+        3
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 10
+  },
+  "revisado_v2": false
+}

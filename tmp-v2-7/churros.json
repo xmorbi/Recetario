@@ -1,0 +1,150 @@
+{
+  "titulo": "Churros",
+  "categoria": "dulces",
+  "tags": [
+    "churros",
+    "fritura",
+    "dulce",
+    "once",
+    "merienda",
+    "reposteria"
+  ],
+  "imagen": null,
+  "tiempo": "30 min",
+  "porciones": "15 churros",
+  "dificultad": "fácil",
+  "tecnica": "Fritura",
+  "ingredientes": [
+    "250 ml de agua",
+    "150 g de harina",
+    "1 cucharada de azúcar",
+    "1 pizca de sal",
+    "1 cucharadita de polvos de hornear",
+    "Aceite para freír",
+    "Azúcar granulada y canela para espolvorear",
+    "Opcional: manjar o chocolate para rellenar"
+  ],
+  "pasos": [
+    "Hierve el agua con el azúcar y la sal. Retira del fuego y agrega la harina de golpe. Revuelve hasta formar una masa espesa.",
+    "Agrega los polvos de hornear y mezcla.",
+    "Pon la masa en una manga pastelera con boquilla de estrella.",
+    "Calienta abundante aceite a 180 °C.",
+    "Forma churros de 10 cm directamente en el aceite caliente. Fríe hasta que estén dorados por ambos lados.",
+    "Escurre sobre papel absorbente. Pasa por azúcar con canela y sirve calientes."
+  ],
+  "dato": "Los churros son el dulce frito de las tardes chilenas, sobre todo en invierno y en las ferias. Se hacen con masa de agua y harina, y se espolvorean con azúcar y canela. Si quieres, se pueden rellenar con manjar o chocolate.",
+  "advertencia": "Fríe a 180 °C: si el aceite está muy caliente, los churros se doran por fuera y quedan crudos por dentro. Si está muy frío, absorben grasa.",
+  "errores": [
+    {
+      "error": "Los churros me quedaron duros",
+      "solucion": "La masa quedó muy seca o el aceite estaba muy caliente. La masa debe quedar espesa pero maleable, y el aceite a 180 °C."
+    },
+    {
+      "error": "Los churros se me deshicieron en el aceite",
+      "solucion": "La masa quedó muy líquida. Agrega un poco más de harina hasta que la masa sostenga la forma."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "No se recomienda, se ablandan.",
+    "congelador": "No recomendado.",
+    "recalentar": "Horno o freidora de aire a 180 °C por 3-5 minutos."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 250,
+      "unidad": "ml",
+      "nombre": "agua",
+      "escalable": true
+    },
+    {
+      "cantidad": 150,
+      "unidad": "g",
+      "nombre": "harina",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "azúcar",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "pizca",
+      "nombre": "sal",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "polvos de hornear",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "aceite",
+      "nota": "para freír",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "azúcar granulada y canela",
+      "nota": "para espolvorear",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "manjar o chocolate para rellenar",
+      "nota": "a gusto",
+      "seccion": "Opcional",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Hierve el agua con el azúcar y la sal. Retira del fuego y agrega la harina de golpe. Revuelve hasta formar una masa espesa.",
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        7
+      ]
+    },
+    {
+      "texto": "Agrega los polvos de hornear y mezcla.",
+      "ingredientes": [
+        5
+      ]
+    },
+    {
+      "texto": "Pon la masa en una manga pastelera con boquilla de estrella."
+    },
+    {
+      "texto": "Calienta abundante aceite a 180 °C.",
+      "ingredientes": [
+        6
+      ]
+    },
+    {
+      "texto": "Forma churros de 10 cm directamente en el aceite caliente. Fríe hasta que estén dorados por ambos lados.",
+      "ingredientes": [
+        6
+      ]
+    },
+    {
+      "texto": "Escurre sobre papel absorbente. Pasa por azúcar con canela y sirve calientes.",
+      "ingredientes": [
+        3,
+        7
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 30
+  },
+  "revisado_v2": false
+}

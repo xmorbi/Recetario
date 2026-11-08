@@ -1,0 +1,176 @@
+{
+  "titulo": "Cazuela de vacuno",
+  "categoria": "principales",
+  "tags": [
+    "cazuela",
+    "sopa",
+    "olla",
+    "invierno",
+    "plato principal",
+    "vacuno"
+  ],
+  "imagen": "img/Cazuela-de-vacuno.jpg",
+  "tiempo": "70 min",
+  "porciones": "4 a 6 personas",
+  "dificultad": "fácil",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "1 kg de carne de vacuno con hueso (osobuco o costilla)",
+    "2 papas medianas (400 g aprox.)",
+    "1/2 zapallo en trozos (500 g aprox.)",
+    "1 zanahoria en rodajas",
+    "1 choclo cortado en trozos",
+    "1 cebolla y 2 dientes de ajo",
+    "1/2 taza (100 g) de arroz",
+    "Orégano, sal y pimienta"
+  ],
+  "pasos": [
+    "Dora la carne en aceite caliente en una olla grande, hasta que esté bien dorada por todos lados. Ese dorado es el que le da sabor al caldo.",
+    "Agrega la cebolla y el ajo, y sofríe hasta que estén transparentes.",
+    "Cubre con agua fría, lleva a hervor y retira la espuma que sube a la superficie.",
+    "Cocina a fuego medio por 40 minutos.",
+    "Agrega la zanahoria y el zapallo. Cocina 10 minutos.",
+    "Incorpora las papas, el choclo y el arroz. Cocina 20 minutos más.",
+    "Condimenta con orégano, sal y pimienta. Sirve caliente con el caldo abundante."
+  ],
+  "dato": "Cada casa tiene su orden. Algunos agregan el arroz al final para que el caldo quede más limpio.",
+  "errores": [
+    {
+      "error": "El caldo me quedó turbio",
+      "solucion": "Herviste demasiado fuerte. Retira la espuma los primeros minutos y mantén un hervor suave; si el agua hierve a borbotones, la grasa y las impurezas se emulsionan."
+    },
+    {
+      "error": "Las verduras se me deshicieron",
+      "solucion": "Las agregaste todas juntas. Ve por tandas: primero la carne, luego zanahoria, después papas y zapallo, y al final el choclo y el arroz."
+    },
+    {
+      "error": "La cazuela me quedó sosa",
+      "solucion": "No doraste bien la carne. Dora la carne en aceite caliente antes de agregar el agua: esa costra marrón es puro sabor que se transfiere al caldo."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días en un recipiente hermético.",
+    "congelador": "Hasta 2 meses. Idealmente congela sin papas, ya que se ponen aguadas al descongelar.",
+    "recalentar": "A fuego lento en la olla, añadiendo un poco de agua o caldo para evitar que se seque."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": "kg",
+      "nombre": "carne de vacuno con hueso",
+      "nota": "osobuco o costilla",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "papas",
+      "nota": "400 g aprox., medianas",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": null,
+      "nombre": "zapallo",
+      "nota": "500 g aprox., en trozos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "zanahoria",
+      "nota": "en rodajas",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "choclo",
+      "nota": "en trozos, cortado",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cebolla y 2 dientes de ajo",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "taza",
+      "nombre": "arroz",
+      "nota": "100 g",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "orégano, sal y pimienta",
+      "nota": "a gusto",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Dora la carne en aceite caliente en una olla grande, hasta que esté bien dorada por todos lados. Ese dorado es el que le da sabor al caldo.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Agrega la cebolla y el ajo, y sofríe hasta que estén transparentes.",
+      "ingredientes": [
+        6
+      ]
+    },
+    {
+      "texto": "Cubre con agua fría, lleva a hervor y retira la espuma que sube a la superficie."
+    },
+    {
+      "texto": "Cocina a fuego medio por 40 minutos.",
+      "timers": [
+        {
+          "minutos": 40,
+          "etiqueta": "40 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Agrega la zanahoria y el zapallo. Cocina 10 minutos.",
+      "ingredientes": [
+        3,
+        4
+      ],
+      "timers": [
+        {
+          "minutos": 10,
+          "etiqueta": "10 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Incorpora las papas, el choclo y el arroz. Cocina 20 minutos más.",
+      "ingredientes": [
+        2,
+        5,
+        7
+      ],
+      "timers": [
+        {
+          "minutos": 20,
+          "etiqueta": "20 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Condimenta con orégano, sal y pimienta. Sirve caliente con el caldo abundante.",
+      "ingredientes": [
+        8
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 70
+  },
+  "revisado_v2": false
+}

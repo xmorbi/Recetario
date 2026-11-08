@@ -1,0 +1,116 @@
+{
+  "titulo": "Frutillas con crema",
+  "categoria": "dulces",
+  "tags": [
+    "postre",
+    "frutilla",
+    "crema",
+    "verano",
+    "simple",
+    "tradicional"
+  ],
+  "imagen": null,
+  "tiempo": "10 min + frío",
+  "porciones": "4 personas",
+  "dificultad": "muy fácil",
+  "tecnica": "Sin cocción",
+  "ingredientes": [
+    "500 g de frutillas frescas",
+    "300 ml de crema para batir bien fría",
+    "3 cucharadas de azúcar flor",
+    "1 cucharadita de esencia de vainilla (opcional)"
+  ],
+  "pasos": [
+    "Lava las frutillas con cuidado y retira los tallos. Córtalas por la mitad o en rodajas.",
+    "Bate la crema bien fría con el azúcar flor y la vainilla hasta que forme picos suaves. No la batas de más o se cortará.",
+    "Reparte las frutillas en copas o platos.",
+    "Cubre con la crema batida. Refrigera 20 minutos antes de servir."
+  ],
+  "dato": "Las frutillas con crema son el postre de verano chileno por excelencia. En Chile se consumen sobre todo entre noviembre y febrero. La tradición dice que se sirven en copas de vidrio y que la crema debe batirse a mano. En el sur, las frutillas de Huilo Huilo o de la zona de Talca son famosas.",
+  "errores": [
+    {
+      "error": "La crema no monta",
+      "solucion": "La crema no está bien fría o tiene poca grasa. Usa crema para batir con al menos 35% de grasa y mantenla en el refrigerador hasta el momento de batir."
+    },
+    {
+      "error": "La crema se corta",
+      "solucion": "Batir de más o a temperatura ambiente. Bate hasta que forme picos suaves y detente. Si se corta, agrega 1 cucharada de crema fría y vuelve a batir."
+    },
+    {
+      "error": "Sabe aguada",
+      "solucion": "Frutillas muy maduras o mal escurridas. Lava y seca bien las frutillas antes de usar."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 1 día, con la crema batida aparte. Se recomienda consumir al momento.",
+    "congelador": "No recomendado, la crema se corta.",
+    "recalentar": "Se consume bien frío."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "frutillas",
+      "nota": "frescas",
+      "escalable": true
+    },
+    {
+      "cantidad": 300,
+      "unidad": "ml",
+      "nombre": "crema para batir",
+      "nota": "fría, bien",
+      "escalable": true
+    },
+    {
+      "cantidad": 3,
+      "unidad": "cucharada",
+      "nombre": "azúcar flor",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "esencia de vainilla",
+      "nota": "opcional",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Lava las frutillas con cuidado y retira los tallos. Córtalas por la mitad o en rodajas.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Bate la crema bien fría con el azúcar flor y la vainilla hasta que forme picos suaves. No la batas de más o se cortará.",
+      "ingredientes": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "texto": "Reparte las frutillas en copas o platos.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Cubre con la crema batida. Refrigera 20 minutos antes de servir.",
+      "ingredientes": [
+        2
+      ],
+      "timers": [
+        {
+          "minutos": 20,
+          "etiqueta": "20 minutos"
+        }
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 20
+  },
+  "revisado_v2": false
+}

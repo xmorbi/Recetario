@@ -1,0 +1,128 @@
+{
+  "titulo": "Pan con palta",
+  "categoria": "once",
+  "tags": [
+    "once",
+    "pan",
+    "palta",
+    "desayuno",
+    "simple",
+    "vegetariano",
+    "tradicional"
+  ],
+  "imagen": null,
+  "tiempo": "5 min",
+  "porciones": "1 persona",
+  "dificultad": "muy fácil",
+  "tecnica": "Sin cocción",
+  "ingredientes": [
+    "1 marraqueta o hallulla recién horneada",
+    "1/2 palta Hass madura",
+    "Sal en escamas o sal fina",
+    "Aceite de oliva (opcional)",
+    "Opcional: unas gotas de limón"
+  ],
+  "pasos": [
+    "Abre el pan por la mitad, sin separarlo del todo si es marraqueta.",
+    "Pisa la palta con un tenedor dentro de la cáscara, agregando una pizca de sal. La palta debe quedar rústica, no como puré.",
+    "Unta generosamente sobre el pan caliente.",
+    "Añade unas gotas de aceite de oliva y una pizca más de sal en escamas.",
+    "Come inmediatamente. El pan caliente es la mitad del placer."
+  ],
+  "dato": "El pan con palta es probablemente la preparación más chilena que existe. Se come al desayuno, en la once, como colación, a cualquier hora. Chile es el tercer consumidor de pan del mundo y uno de los mayores consumidores de palta. La combinación es casi inevitable. En la casa tradicional se unta con la mano, sin cubiertos.",
+  "errores": [
+    {
+      "error": "Palta negra o marrón",
+      "solucion": "Usar palta poco madura o muy madura. La palta debe ceder al presionar sin deshacerse. Si está dura, guárdala con una manzana 2 días."
+    },
+    {
+      "error": "Pan frío",
+      "solucion": "Usar pan del día anterior sin calentar. Calienta el pan 2 minutos en el horno o tostador. El pan caliente es la mitad del placer."
+    },
+    {
+      "error": "Falta de sabor",
+      "solucion": "Usar poca sal. La sal es esencial: realza la palta y la hace más cremosa. Prueba antes de servir."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "No se guarda armado.",
+    "congelador": "No aplica.",
+    "recalentar": "El pan se puede recalentar. La palta, no."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "marraqueta o hallulla horneada",
+      "nota": "recién",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": null,
+      "nombre": "palta hass",
+      "nota": "madura",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal en escamas o sal",
+      "nota": "fina",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "aceite de oliva",
+      "nota": "opcional",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "gotas de limón",
+      "seccion": "Opcional",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Abre el pan por la mitad, sin separarlo del todo si es marraqueta.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Pisa la palta con un tenedor dentro de la cáscara, agregando una pizca de sal. La palta debe quedar rústica, no como puré.",
+      "ingredientes": [
+        2,
+        3
+      ]
+    },
+    {
+      "texto": "Unta generosamente sobre el pan caliente.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Añade unas gotas de aceite de oliva y una pizca más de sal en escamas.",
+      "ingredientes": [
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "texto": "Come inmediatamente. El pan caliente es la mitad del placer.",
+      "ingredientes": [
+        1
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 5
+  },
+  "revisado_v2": false
+}

@@ -1,0 +1,155 @@
+{
+  "titulo": "Empanadas de pera",
+  "categoria": "dulces",
+  "tags": [
+    "dulce",
+    "empanada",
+    "horno",
+    "postre",
+    "pera"
+  ],
+  "imagen": "img/empanadas-de-pera.jpg",
+  "tiempo": "1 h + remojo",
+  "porciones": "12 unidades",
+  "dificultad": "media",
+  "tecnica": "Horno",
+  "ingredientes": [
+    "Relleno: 300 g de peras secas, remojadas desde la noche anterior",
+    "Relleno: 300 g de azúcar",
+    "Relleno: 3 clavos de olor y 1 rama de canela",
+    "Masa: 3 tazas (450 g) de harina",
+    "Masa: 5 yemas de huevo",
+    "Masa: 4 cucharadas (60 g) de manteca vegetal tibia",
+    "Masa: 1/2 taza (125 ml) de leche (aprox.)"
+  ],
+  "pasos": [
+    "Cocina las peras molidas con el azúcar, el líquido del remojo, los clavos y la canela hasta que espese. Enfría por completo.",
+    "Forma la masa con la harina, las yemas, la manteca y la leche. Amasa hasta que quede elástica.",
+    "Refrigera la masa 30 minutos.",
+    "Estira fina (3 mm) y corta círculos de 12 cm.",
+    "Rellena con el dulce de pera frío y sella los bordes con un repulgue.",
+    "Hornea a 180 °C por 15-20 min, hasta dorar."
+  ],
+  "dato": "Las empanadas de pera son típicas del centro-sur de Chile, donde la pera seca es parte de la despensa de invierno. Se sirven tibias o frías, y son un clásico de la once y de las celebraciones.",
+  "errores": [
+    {
+      "error": "El relleno se me salió o quedó aguado",
+      "solucion": "Usaste el relleno caliente al armar. El dulce de pera debe estar completamente frío y espeso antes de rellenar."
+    },
+    {
+      "error": "La masa me quedó dura",
+      "solucion": "No dejaste reposar la masa. Debe reposar en frío al menos 30 minutos antes de estirarla."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días cocidas.",
+    "congelador": "Hasta 3 meses (crudas o cocidas).",
+    "recalentar": "Horno o freidora de aire a 180 °C por 5-8 minutos."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 300,
+      "unidad": "g",
+      "nombre": "peras remojadas desde la noche anterior",
+      "nota": "secas",
+      "escalable": true,
+      "seccion": "Relleno"
+    },
+    {
+      "cantidad": 300,
+      "unidad": "g",
+      "nombre": "azúcar",
+      "escalable": true,
+      "seccion": "Relleno"
+    },
+    {
+      "cantidad": 3,
+      "unidad": null,
+      "nombre": "clavos de olor y 1 rama de canela",
+      "escalable": true,
+      "seccion": "Relleno"
+    },
+    {
+      "cantidad": 3,
+      "unidad": "taza",
+      "nombre": "harina",
+      "nota": "450 g",
+      "escalable": true,
+      "seccion": "Masa"
+    },
+    {
+      "cantidad": 5,
+      "unidad": null,
+      "nombre": "yemas de huevo",
+      "escalable": true,
+      "seccion": "Masa"
+    },
+    {
+      "cantidad": 4,
+      "unidad": "cucharada",
+      "nombre": "manteca vegetal",
+      "nota": "60 g, tibia",
+      "escalable": true,
+      "seccion": "Masa"
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "taza",
+      "nombre": "leche",
+      "nota": "125 ml, aprox.",
+      "escalable": true,
+      "seccion": "Masa"
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Cocina las peras molidas con el azúcar, el líquido del remojo, los clavos y la canela hasta que espese. Enfría por completo.",
+      "ingredientes": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "texto": "Forma la masa con la harina, las yemas, la manteca y la leche. Amasa hasta que quede elástica.",
+      "ingredientes": [
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "texto": "Refrigera la masa 30 minutos.",
+      "timers": [
+        {
+          "minutos": 30,
+          "etiqueta": "30 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Estira fina (3 mm) y corta círculos de 12 cm."
+    },
+    {
+      "texto": "Rellena con el dulce de pera frío y sella los bordes con un repulgue.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Hornea a 180 °C por 15-20 min, hasta dorar.",
+      "timers": [
+        {
+          "minutos": 20,
+          "etiqueta": "15-20 min"
+        }
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 30,
+    "coccion": 20
+  },
+  "revisado_v2": false
+}

@@ -71,8 +71,9 @@
     {
       "cantidad": 1,
       "unidad": null,
-      "nombre": "pavo de 4 kg aproximadamente",
-      "escalable": true
+      "nombre": "pavo",
+      "nota": "de 4 kg aproximadamente",
+      "escalable": false
     },
     {
       "cantidad": 0.25,
@@ -129,10 +130,11 @@
       "escalable": true
     },
     {
-      "cantidad": null,
+      "cantidad": 1,
       "unidad": null,
-      "nombre": "Canela en polvo",
-      "escalable": true
+      "nombre": "canela en polvo",
+      "nota": "a gusto",
+      "escalable": false
     },
     {
       "cantidad": 2,
@@ -142,8 +144,8 @@
     },
     {
       "cantidad": 1,
-      "unidad": null,
-      "nombre": "ramito de perejil",
+      "unidad": "ramito",
+      "nombre": "perejil",
       "escalable": true
     },
     {
@@ -153,84 +155,112 @@
       "escalable": true
     },
     {
-      "cantidad": null,
+      "cantidad": 1,
       "unidad": null,
-      "nombre": "Sal",
-      "escalable": true
+      "nombre": "sal",
+      "nota": "a gusto",
+      "escalable": false
     },
     {
-      "cantidad": null,
+      "cantidad": 1,
       "unidad": null,
-      "nombre": "Pimienta",
-      "escalable": true
+      "nombre": "pimienta",
+      "nota": "a gusto",
+      "escalable": false
     }
   ],
   "pasos_v2": [
     {
-      "texto": "Lavar las ciruelas y las pasas, dejar en remojo de un día para otro."
+      "texto": "Lavar las ciruelas y las pasas, dejar en remojo de un día para otro.",
+      "ingredientes": [5, 7],
+      "previo": true
     },
     {
-      "texto": "Con el cogote y las patas preparar un caldo. Cuando esté preparado llevar al refrigerador, porque al enfriarse la grasa se va encima y es más fácil retirarla."
+      "texto": "Con el cogote y las patas preparar un caldo. Cuando esté preparado llevar al refrigerador, porque al enfriarse la grasa se va encima y es más fácil retirarla.",
+      "ingredientes": [1],
+      "previo": true
     },
     {
-      "texto": "Picar el lomo de chancho y el jamón en dados."
+      "texto": "Picar el lomo de chancho y el jamón en dados.",
+      "ingredientes": [2, 3]
     },
     {
-      "texto": "Pelar las manzanas y cortar en láminas delgadas."
+      "texto": "Pelar las manzanas y cortar en láminas delgadas.",
+      "ingredientes": [8]
     },
     {
-      "texto": "Pelar las castañas cocidas."
+      "texto": "Pelar las castañas cocidas.",
+      "ingredientes": [6]
     },
     {
-      "texto": "En una cacerola derretir la manteca de chancho, añadir el lomo, jamón, ciruelas, pasas estiladas, manzanas, castañas, sal, pimienta y canela; revolver con cuchara de madera para que los ingredientes se impregnen."
+      "texto": "En una cacerola derretir la manteca de chancho, añadir el lomo, jamón, ciruelas, pasas estiladas, manzanas, castañas, sal, pimienta y canela; revolver con cuchara de madera para que los ingredientes se impregnen.",
+      "ingredientes": [2, 3, 4, 5, 6, 7, 8, 11, 15, 16]
     },
     {
-      "texto": "Agregar un vaso de vino y dejar cocinar unos minutos para que éste se evapore. Retirar del fuego y enfriar."
-    },
-    {
-      "texto": "Limpiar y acomodar el pavo para rellenarlo."
-    },
-    {
-      "texto": "Primero untar el interior del pavo con un poco de manteca derretida que se preparó para el relleno, espolvorear sal y pimienta."
-    },
-    {
-      "texto": "Finalmente, incorporar al pavo el preparado, apretando bien de modo que no queden huecos."
-    },
-    {
-      "texto": "Coser con cordel blanco lo más firme posible, dándole forma al pavo."
-    },
-    {
-      "texto": "Untar con manteca una fuente de buen tamaño, colocar el pavo y el sobrante del relleno."
-    },
-    {
-      "texto": "Asimismo, untar el pavo con manteca, sazonar con sal y pimienta, agregar el resto del vino y las hierbas aromáticas."
-    },
-    {
-      "texto": "Llevar al horno con temperatura regular, a los 10 minutos tapar con papel de aluminio la fuente y cocinar a horno suave durante 2 horas.",
+      "texto": "Agregar un vaso de vino y dejar cocinar unos minutos para que éste se evapore. Retirar del fuego y enfriar.",
+      "ingredientes": [9],
       "timers": [
         {
-          "minutos": 10,
-          "etiqueta": "10 min"
-        },
-        {
-          "minutos": 120,
-          "etiqueta": "120 min"
+          "minutos": 5,
+          "etiqueta": "evaporar vino"
         }
       ]
     },
     {
-      "texto": "Mientras está en cocción, rociar varias veces con el jugo que ha desprendido. En caso de que sea necesario, mojar con caldo caliente que se preparó anteriormente."
+      "texto": "Limpiar y acomodar el pavo para rellenarlo.",
+      "ingredientes": [1]
     },
     {
-      "texto": "Dar vuelta el pavo de modo que se cocine y dore en forma pareja."
+      "texto": "Primero untar el interior del pavo con un poco de manteca derretida que se preparó para el relleno, espolvorear sal y pimienta.",
+      "ingredientes": [1, 4, 15, 16]
     },
     {
-      "texto": "Al momento de servir, acompañar con el sobrante del relleno en una fuente y el jugo en una salsera."
+      "texto": "Finalmente, incorporar al pavo el preparado, apretando bien de modo que no queden huecos.",
+      "ingredientes": [1]
+    },
+    {
+      "texto": "Coser con cordel blanco lo más firme posible, dándole forma al pavo.",
+      "ingredientes": [1]
+    },
+    {
+      "texto": "Untar con manteca una fuente de buen tamaño, colocar el pavo y el sobrante del relleno.",
+      "ingredientes": [1, 4]
+    },
+    {
+      "texto": "Asimismo, untar el pavo con manteca, sazonar con sal y pimienta, agregar el resto del vino y las hierbas aromáticas.",
+      "ingredientes": [1, 4, 9, 10, 12, 13, 14, 15, 16]
+    },
+    {
+      "texto": "Llevar al horno con temperatura regular, a los 10 minutos tapar con papel de aluminio la fuente y cocinar a horno suave durante 2 horas.",
+      "ingredientes": [1],
+      "timers": [
+        {
+          "minutos": 10,
+          "etiqueta": "tapar con aluminio"
+        },
+        {
+          "minutos": 120,
+          "etiqueta": "hornear pavo"
+        }
+      ]
+    },
+    {
+      "texto": "Mientras está en cocción, rociar varias veces con el jugo que ha desprendido. En caso de que sea necesario, mojar con caldo caliente que se preparó anteriormente.",
+      "ingredientes": [1]
+    },
+    {
+      "texto": "Dar vuelta el pavo de modo que se cocine y dore en forma pareja.",
+      "ingredientes": [1]
+    },
+    {
+      "texto": "Al momento de servir, acompañar con el sobrante del relleno en una fuente y el jugo en una salsera.",
+      "ingredientes": [1]
     }
   ],
   "tiempo_v2": {
-    "reposo": 180,
-    "coccion": 180
+    "preparacion": 60,
+    "reposo": 1440,
+    "coccion": 120
   },
-  "revisado_v2": false
+  "revisado_v2": true
 }

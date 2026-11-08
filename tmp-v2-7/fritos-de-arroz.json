@@ -1,0 +1,160 @@
+{
+  "titulo": "Fritos de Arroz",
+  "categoria": "principales",
+  "tags": [
+    "fritos de arroz",
+    "arroz",
+    "carne molida",
+    "huevo",
+    "fritura",
+    "arroces"
+  ],
+  "imagen": null,
+  "tiempo": "40 min",
+  "porciones": "4 a 6 personas",
+  "dificultad": "media",
+  "tecnica": "Fritura",
+  "ingredientes": [
+    "1 taza (200 g) de arroz",
+    "1/2 taza (100 g) de carne molida",
+    "4 huevos",
+    "1 cucharada de cebolla picada",
+    "1 cucharada de perejil picado",
+    "1 cucharada (15 g) de mantequilla",
+    "1 taza (250 ml) de aceite para freír",
+    "Sal",
+    "Pimienta"
+  ],
+  "pasos": [
+    "Calentar el aceite con la mantequilla y freír el arroz.",
+    "Agregar 1 taza (250 ml) de agua hirviendo, sal y dejar en cocción a fuego lento.",
+    "Freír la carne con la cebolla, el perejil picado y el huevo duro.",
+    "Mezclar este pino con el arroz cocido.",
+    "Batir las claras, agregar las yemas e incorporar a la preparación anterior.",
+    "Formar los fritos con ayuda de una cuchara y freír en aceite caliente (170-180 °C)."
+  ],
+  "dato": "Las claras batidas a nieve le dan una textura aireada a los fritos; no las incorpores con demasiada fuerza para que no se bajen. Los fritos de arroz son un plato de aprovechamiento chileno: con arroz del día anterior y un pino de carne, se arma una cena distinta.",
+  "advertencia": "Fríe a 170-180 °C: si el aceite está muy caliente, los fritos se doran por fuera y quedan crudos por dentro. Si está muy frío, absorben grasa.",
+  "errores": [
+    {
+      "error": "Los fritos se me desarman",
+      "solucion": "Asegúrate de que la mezcla esté bien ligada; si es necesario, agrega un poco más de pan rallado o harina."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Servir de inmediato",
+    "recalentar": "Se pueden recalentar en horno suave."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "arroz",
+      "nota": "200 g",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "taza",
+      "nombre": "carne molida",
+      "nota": "100 g",
+      "escalable": true
+    },
+    {
+      "cantidad": 4,
+      "unidad": null,
+      "nombre": "huevos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "cebolla",
+      "nota": "picada",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "perejil",
+      "nota": "picado",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "mantequilla",
+      "nota": "15 g",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "aceite",
+      "nota": "250 ml, para freír",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pimienta",
+      "nota": "a gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Calentar el aceite con la mantequilla y freír el arroz.",
+      "ingredientes": [
+        1,
+        6,
+        7
+      ]
+    },
+    {
+      "texto": "Agregar 1 taza (250 ml) de agua hirviendo, sal y dejar en cocción a fuego lento.",
+      "ingredientes": [
+        8
+      ]
+    },
+    {
+      "texto": "Freír la carne con la cebolla, el perejil picado y el huevo duro.",
+      "ingredientes": [
+        2,
+        3,
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "texto": "Mezclar este pino con el arroz cocido.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Batir las claras, agregar las yemas e incorporar a la preparación anterior.",
+      "ingredientes": [
+        3
+      ]
+    },
+    {
+      "texto": "Formar los fritos con ayuda de una cuchara y freír en aceite caliente (170-180 °C).",
+      "ingredientes": [
+        7
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 40
+  },
+  "revisado_v2": false
+}

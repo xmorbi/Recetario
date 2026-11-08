@@ -1,7 +1,13 @@
 {
   "titulo": "Tomaticán",
   "categoria": "principales",
-  "tags": ["tomatican", "olla", "plato principal", "tomate", "verano"],
+  "tags": [
+    "tomatican",
+    "olla",
+    "plato principal",
+    "tomate",
+    "verano"
+  ],
   "imagen": "img/Tomatican.jpg",
   "tiempo": "30 min",
   "porciones": "4 personas",
@@ -42,5 +48,96 @@
     "refrigerador": "Hasta 3 días en recipiente hermético.",
     "congelador": "Hasta 2 meses.",
     "recalentar": "A fuego lento en una olla, moviendo de vez en cuando."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": "kg",
+      "nombre": "tomates",
+      "nota": "maduros",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "choclo",
+      "nota": "picado",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cebolla",
+      "nota": "en pluma",
+      "escalable": true
+    },
+    {
+      "cantidad": 250,
+      "unidad": "g",
+      "nombre": "lomo, asiento o posta",
+      "nota": "en tiras",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "dientes",
+      "nombre": "ajo",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "perejil",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": null,
+      "nombre": "pimentón",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal, pimienta, orégano, ají de color y aceite",
+      "nota": "a gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Corta la carne en tiritas y los tomates en trozos.",
+      "ingredientes": [1, 4]
+    },
+    {
+      "texto": "Sofríe la cebolla, el ajo, el perejil y el pimentón con aliños.",
+      "ingredientes": [3, 5, 6, 7, 8]
+    },
+    {
+      "texto": "Agrega la carne y fríe unos minutos.",
+      "ingredientes": [4]
+    },
+    {
+      "texto": "Incorpora el choclo y los tomates. Mezcla bien.",
+      "ingredientes": [1, 2]
+    },
+    {
+      "texto": "Cuando hierva, tapa y cocina a fuego lento 15 min.",
+      "timers": [
+        {
+          "minutos": 15,
+          "etiqueta": "cocción a fuego lento"
+        }
+      ]
+    },
+    {
+      "texto": "Sirve con arroz o papas cocidas."
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 10,
+    "coccion": 20
+  },
+  "revisado_v2": true
 }

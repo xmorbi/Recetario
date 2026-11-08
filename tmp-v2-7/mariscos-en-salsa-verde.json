@@ -1,0 +1,179 @@
+{
+  "titulo": "Mariscos en salsa verde",
+  "categoria": "principales",
+  "tags": [
+    "marisco",
+    "salsa verde",
+    "olla",
+    "plato principal",
+    "costa"
+  ],
+  "imagen": null,
+  "tiempo": "30 min",
+  "porciones": "4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "500 g de mariscos variados (choritos, almejas, camarones)",
+    "200 g de pescado blanco en trozos",
+    "1 cebolla grande picada fina",
+    "3 dientes de ajo picados",
+    "1 pimentón verde en cubos",
+    "1 taza de perejil fresco picado",
+    "½ taza de vino blanco",
+    "½ taza de aceite de oliva",
+    "1 cucharada de harina",
+    "Sal, pimienta y ají verde al gusto"
+  ],
+  "pasos": [
+    "Sofríe la cebolla, el ajo y el pimentón en aceite de oliva hasta que estén tiernos.",
+    "Agrega la harina y revuelve 1 minuto. Vierte el vino blanco y deja evaporar.",
+    "Incorpora los mariscos y el pescado. Cocina 5-7 minutos, hasta que los mariscos se abran.",
+    "Agrega el perejil, el ají, sal y pimienta. Cocina 2 minutos más.",
+    "Sirve caliente con arroz o pan."
+  ],
+  "dato": "Los mariscos en salsa verde son un plato típico de la costa chilena. La salsa verde se hace con perejil, ajo, vino blanco y aceite de oliva. Es una preparación simple que resalta el sabor del marisco. Se puede hacer con mariscos frescos o congelados.",
+  "errores": [
+    {
+      "error": "Mariscos gomosos",
+      "solucion": "Cocinarlos demasiado. Los mariscos se hacen en 5-7 minutos. Agrega el pescado al final."
+    },
+    {
+      "error": "Salsa sin sabor",
+      "solucion": "No usar suficiente perejil o ajo. La salsa verde depende del perejil fresco y el ajo."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 2 días en recipiente hermético.",
+    "congelador": "Hasta 2 meses, idealmente sin papas.",
+    "recalentar": "A fuego muy suave, sin hervir."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "mariscos variados",
+      "nota": "choritos, almejas, camarones",
+      "escalable": true
+    },
+    {
+      "cantidad": 200,
+      "unidad": "g",
+      "nombre": "pescado blanco",
+      "nota": "en trozos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cebolla",
+      "nota": "picada, grande, fina",
+      "escalable": true
+    },
+    {
+      "cantidad": 3,
+      "unidad": "diente",
+      "nombre": "ajo",
+      "nota": "picados",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pimentón verde",
+      "nota": "en cubos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "perejil",
+      "nota": "picado, fresco",
+      "escalable": false
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "taza",
+      "nombre": "vino blanco",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "taza",
+      "nombre": "aceite de oliva",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "harina",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal, pimienta y ají verde",
+      "nota": "al gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Sofríe la cebolla, el ajo y el pimentón en aceite de oliva hasta que estén tiernos.",
+      "ingredientes": [
+        3,
+        4,
+        5,
+        8
+      ]
+    },
+    {
+      "texto": "Agrega la harina y revuelve 1 minuto. Vierte el vino blanco y deja evaporar.",
+      "ingredientes": [
+        2,
+        7,
+        9
+      ],
+      "timers": [
+        {
+          "minutos": 1,
+          "etiqueta": "1 minuto"
+        }
+      ]
+    },
+    {
+      "texto": "Incorpora los mariscos y el pescado. Cocina 5-7 minutos, hasta que los mariscos se abran.",
+      "ingredientes": [
+        1,
+        2
+      ],
+      "timers": [
+        {
+          "minutos": 7,
+          "etiqueta": "5-7 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Agrega el perejil, el ají, sal y pimienta. Cocina 2 minutos más.",
+      "ingredientes": [
+        6,
+        10
+      ],
+      "timers": [
+        {
+          "minutos": 2,
+          "etiqueta": "2 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Sirve caliente con arroz o pan."
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 1,
+    "coccion": 9
+  },
+  "revisado_v2": false
+}

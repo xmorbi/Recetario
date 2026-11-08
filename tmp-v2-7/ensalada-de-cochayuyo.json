@@ -1,0 +1,131 @@
+{
+  "titulo": "Ensalada de Cochayuyo",
+  "categoria": "ensaladas",
+  "tags": [
+    "ensalada de cochayuyo",
+    "cochayuyo",
+    "alga",
+    "cebolla",
+    "limón",
+    "ensalada chilena"
+  ],
+  "imagen": null,
+  "tiempo": "30 min (más remojo de un día)",
+  "porciones": "4 a 6 personas",
+  "dificultad": "fácil",
+  "tecnica": "Hervido",
+  "ingredientes": [
+    "1 paquete (250 g) de cochayuyo",
+    "1 cebolla",
+    "2 limones",
+    "Perejil",
+    "Aceite",
+    "Sal"
+  ],
+  "pasos": [
+    "Cocer el cochayuyo previamente remojado (la noche anterior).",
+    "Rasparlo con un cuchillo de hoja ancha antes que se enfríe totalmente.",
+    "Lavarlo para que elimine la sustancia gelatinosa y luego cortarlo en trozos de regular tamaño.",
+    "Cortar la cebolla en pluma, amortiguarla con sal o azúcar y lavarla con agua fría.",
+    "Mezclar el cochayuyo con la cebolla.",
+    "Añadir el perejil picado muy fino y aliñar con el jugo de los limones, sal y aceite."
+  ],
+  "dato": "El cochayuyo debe remojarse la noche anterior para hidratarse bien. Rasparlo caliente ayuda a retirar la capa gelatinosa. Es un alga endémica de Chile, y su ensalada es un clásico de la cocina chilota y de la zona central.",
+  "errores": [
+    {
+      "error": "El cochayuyo me quedó duro o gelatinoso",
+      "solucion": "Respeta el remojo de un día y lávalo bien después de cocerlo para eliminar la sustancia gelatinosa."
+    },
+    {
+      "error": "La cebolla me quedó muy picante",
+      "solucion": "Amortigua la cebolla con sal o azúcar y enjuágala con agua fría antes de mezclarla."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Mantener refrigerada hasta 2 días. Aliñar justo antes de servir para que no se ablande."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": "paquete",
+      "nombre": "cochayuyo",
+      "nota": "250 g",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cebolla",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "limones",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "perejil",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "aceite",
+      "nota": "a gusto",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal",
+      "nota": "a gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Cocer el cochayuyo previamente remojado (la noche anterior).",
+      "ingredientes": [
+        1
+      ],
+      "previo": true
+    },
+    {
+      "texto": "Rasparlo con un cuchillo de hoja ancha antes que se enfríe totalmente."
+    },
+    {
+      "texto": "Lavarlo para que elimine la sustancia gelatinosa y luego cortarlo en trozos de regular tamaño."
+    },
+    {
+      "texto": "Cortar la cebolla en pluma, amortiguarla con sal o azúcar y lavarla con agua fría.",
+      "ingredientes": [
+        2,
+        6
+      ]
+    },
+    {
+      "texto": "Mezclar el cochayuyo con la cebolla.",
+      "ingredientes": [
+        1,
+        2
+      ]
+    },
+    {
+      "texto": "Añadir el perejil picado muy fino y aliñar con el jugo de los limones, sal y aceite.",
+      "ingredientes": [
+        3,
+        4,
+        5,
+        6
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 480
+  },
+  "revisado_v2": false
+}

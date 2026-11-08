@@ -1,0 +1,161 @@
+{
+  "titulo": "Colegial",
+  "categoria": "dulces",
+  "tags": [
+    "dulce",
+    "postre",
+    "horno",
+    "pan",
+    "reposteria"
+  ],
+  "imagen": "img/colegial-budin-de-pan.jpg",
+  "tiempo": "1 h 30 min",
+  "porciones": "6 personas",
+  "dificultad": "fácil",
+  "tecnica": "Horno",
+  "ingredientes": [
+    "4 marraquetas o 500 g de pan duro",
+    "2 tazas (500 ml) de leche",
+    "1 taza (200 g) de azúcar",
+    "3 huevos",
+    "1 cucharadita (5 ml) de esencia de vainilla",
+    "1 manzana en láminas finas",
+    "1/2 taza (75 g) de pasas (opcional)",
+    "Mantequilla para engrasar"
+  ],
+  "pasos": [
+    "Desmenuza el pan y remójalo en la leche caliente 15-20 min.",
+    "Bate los huevos con el azúcar y la vainilla.",
+    "Mezcla con el pan remojado, la manzana y las pasas.",
+    "Vierte en un molde engrasado y hornea a 180 °C por 45-50 min.",
+    "Deja enfriar y espolvorea azúcar flor o leche condensada."
+  ],
+  "dato": "Es la receta perfecta para aprovechar el pan de días anteriores. El colegial es un budín de pan tradicional chileno, típico de la once y de las casas donde no se bota el pan.",
+  "errores": [
+    {
+      "error": "El colegial me quedó seco como una piedra",
+      "solucion": "No usaste suficiente líquido o lo horneaste sin protección. Pon un recipiente con agua en el horno para generar vapor y cubre con aluminio a mitad de horneado."
+    },
+    {
+      "error": "El colegial me quedó crudo en el centro",
+      "solucion": "Lo sacaste antes de tiempo o el molde era muy profundo. Pincha con un palillo: debe salir limpio. Si no, hornea 5-10 minutos más."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días en recipiente hermético.",
+    "congelador": "Hasta 2 meses en porciones.",
+    "recalentar": "En horno a 180 °C por 10 minutos, o en microondas con un poco de leche."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 4,
+      "unidad": null,
+      "nombre": "marraquetas o 500 g de pan",
+      "nota": "duro",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "taza",
+      "nombre": "leche",
+      "nota": "500 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "azúcar",
+      "nota": "200 g",
+      "escalable": true
+    },
+    {
+      "cantidad": 3,
+      "unidad": null,
+      "nombre": "huevos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "esencia de vainilla",
+      "nota": "5 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "manzana",
+      "nota": "en láminas, finas",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "taza",
+      "nombre": "pasas",
+      "nota": "75 g, opcional",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "mantequilla",
+      "nota": "para engrasar",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Desmenuza el pan y remójalo en la leche caliente 15-20 min.",
+      "ingredientes": [
+        1,
+        2
+      ],
+      "timers": [
+        {
+          "minutos": 20,
+          "etiqueta": "15-20 min"
+        }
+      ]
+    },
+    {
+      "texto": "Bate los huevos con el azúcar y la vainilla.",
+      "ingredientes": [
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "texto": "Mezcla con el pan remojado, la manzana y las pasas.",
+      "ingredientes": [
+        1,
+        6,
+        7
+      ]
+    },
+    {
+      "texto": "Vierte en un molde engrasado y hornea a 180 °C por 45-50 min.",
+      "ingredientes": [
+        8
+      ],
+      "timers": [
+        {
+          "minutos": 50,
+          "etiqueta": "45-50 min"
+        }
+      ]
+    },
+    {
+      "texto": "Deja enfriar y espolvorea azúcar flor o leche condensada.",
+      "ingredientes": [
+        2,
+        3
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 20,
+    "coccion": 50
+  },
+  "revisado_v2": false
+}

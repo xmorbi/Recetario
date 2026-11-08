@@ -1,0 +1,225 @@
+{
+  "titulo": "Curry de Lentejas",
+  "categoria": "principales",
+  "tags": [
+    "curry de lentejas",
+    "lentejas",
+    "curry",
+    "leche de coco",
+    "vegetariano",
+    "legumbres",
+    "plato principal"
+  ],
+  "imagen": null,
+  "tiempo": "45 min",
+  "porciones": "4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "1 taza (200 g) de lentejas crudas",
+    "1 cebolla picada",
+    "2 dientes de ajo picados",
+    "1 cucharadita de jengibre rallado",
+    "2 cucharadas de curry en polvo",
+    "1 cucharadita de comino molido",
+    "1/2 cucharadita de cúrcuma",
+    "400 g de tomates en conserva picados",
+    "400 ml de leche de coco",
+    "2 tazas (500 ml) de agua o caldo de verduras",
+    "2 cucharadas (30 ml) de aceite de oliva",
+    "Sal y pimienta a gusto",
+    "Cilantro fresco para decorar"
+  ],
+  "pasos": [
+    "Enjuagar bien las lentejas bajo el chorro de agua y escurrirlas.",
+    "En una olla grande, calentar el aceite a fuego medio y sofreír la cebolla hasta que esté transparente.",
+    "Agregar el ajo y el jengibre y cocinar por 1 minuto más, hasta que suelten aroma.",
+    "Incorporar el curry en polvo, el comino y la cúrcuma, y revolver por 30 segundos para que las especias se tuesten ligeramente.",
+    "Añadir los tomates picados con su jugo, la leche de coco y el agua o caldo. Revolver bien.",
+    "Agregar las lentejas enjuagadas y llevar a ebullición. Luego bajar el fuego, tapar y cocinar a fuego lento por 25 a 30 minutos, hasta que las lentejas estén tiernas.",
+    "Sazonar con sal y pimienta. Si el curry queda muy espeso, agregar un poco más de agua o caldo; si queda muy líquido, cocinar destapado unos minutos más.",
+    "Servir caliente, decorado con cilantro fresco, y acompañado de arroz basmati o pan naan."
+  ],
+  "dato": "Las lentejas no necesitan remojo previo, lo que hace de este curry un plato rápido y económico. Si usas lentejas rojas, se cocinan en menos tiempo (15-20 minutos) y tienden a deshacerse, logrando una textura más cremosa. Es una receta de origen hindú que en Chile se adoptó como plato vegetariano de día de semana.",
+  "errores": [
+    {
+      "error": "Las lentejas me quedaron duras",
+      "solucion": "Cocina el tiempo suficiente y verifica que el líquido las cubra. Si usas lentejas verdes o pardinas, pueden necesitar hasta 40 minutos."
+    },
+    {
+      "error": "El curry me quedó sin sabor",
+      "solucion": "Tuesta las especias en el aceite antes de agregar los líquidos. Ajusta la sal al final y añade unas gotas de limón para realzar los sabores."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "4 días",
+    "congelador": "Se puede congelar hasta 2 meses",
+    "recalentar": "A fuego lento con un poco de agua o caldo, ya que espesa al enfriarse."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "lentejas crudas",
+      "nota": "200 g",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cebolla",
+      "nota": "picada",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "diente",
+      "nombre": "ajo",
+      "nota": "picados",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "jengibre",
+      "nota": "rallado",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "curry",
+      "nota": "en polvo",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "comino molido",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "cucharadita",
+      "nombre": "cúrcuma",
+      "escalable": true
+    },
+    {
+      "cantidad": 400,
+      "unidad": "g",
+      "nombre": "tomates",
+      "nota": "en conserva, picados",
+      "escalable": true
+    },
+    {
+      "cantidad": 400,
+      "unidad": "ml",
+      "nombre": "leche de coco",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "taza",
+      "nombre": "agua o caldo de verduras",
+      "nota": "500 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "aceite de oliva",
+      "nota": "30 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal y pimienta",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cilantro",
+      "nota": "para decorar, fresco",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Enjuagar bien las lentejas bajo el chorro de agua y escurrirlas.",
+      "ingredientes": [
+        1,
+        3,
+        10
+      ]
+    },
+    {
+      "texto": "En una olla grande, calentar el aceite a fuego medio y sofreír la cebolla hasta que esté transparente.",
+      "ingredientes": [
+        2,
+        11
+      ]
+    },
+    {
+      "texto": "Agregar el ajo y el jengibre y cocinar por 1 minuto más, hasta que suelten aroma.",
+      "ingredientes": [
+        3,
+        4
+      ],
+      "timers": [
+        {
+          "minutos": 1,
+          "etiqueta": "1 minuto"
+        }
+      ]
+    },
+    {
+      "texto": "Incorporar el curry en polvo, el comino y la cúrcuma, y revolver por 30 segundos para que las especias se tuesten ligeramente.",
+      "ingredientes": [
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "texto": "Añadir los tomates picados con su jugo, la leche de coco y el agua o caldo. Revolver bien.",
+      "ingredientes": [
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "texto": "Agregar las lentejas enjuagadas y llevar a ebullición. Luego bajar el fuego, tapar y cocinar a fuego lento por 25 a 30 minutos, hasta que las lentejas estén tiernas.",
+      "ingredientes": [
+        1
+      ],
+      "timers": [
+        {
+          "minutos": 30,
+          "etiqueta": "25 a 30 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Sazonar con sal y pimienta. Si el curry queda muy espeso, agregar un poco más de agua o caldo; si queda muy líquido, cocinar destapado unos minutos más.",
+      "ingredientes": [
+        5,
+        10,
+        12
+      ]
+    },
+    {
+      "texto": "Servir caliente, decorado con cilantro fresco, y acompañado de arroz basmati o pan naan.",
+      "ingredientes": [
+        13
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 31
+  },
+  "revisado_v2": false
+}

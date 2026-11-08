@@ -1,0 +1,186 @@
+{
+  "titulo": "Cazuela de cerdo",
+  "categoria": "principales",
+  "tags": [
+    "cazuela",
+    "sopa",
+    "olla",
+    "invierno",
+    "cerdo"
+  ],
+  "imagen": null,
+  "tiempo": "1 h 30 min",
+  "porciones": "4 a 6 personas",
+  "dificultad": "fácil",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "500 g de pulpa de cerdo en cubos",
+    "200-250 g de costillar ahumado",
+    "2 puerros picados gruesos",
+    "2 zanahorias en trozos",
+    "4 papas medianas",
+    "1/4 de repollo crespo (o 250 g de repollitos de Bruselas)",
+    "1 cucharada (15 ml) de aceite",
+    "1 diente de ajo",
+    "1 cucharadita de ají de color",
+    "Ramo de olores (perejil, orégano, laurel, apio)",
+    "Sal y pimienta"
+  ],
+  "pasos": [
+    "Calienta el aceite y sofríe el ajo 30 segundos. Agrega el ají de color.",
+    "Incorpora los puerros, zanahorias y carnes. Añade 1 cucharada de agua y tapa.",
+    "Vierte 2 litros de agua fría, sal y el ramo de olores. Cocina tapado 1 hora.",
+    "Agrega el repollo y las papas. Cocina 30 min más.",
+    "Retira el ramo de olores, corrige la sal y sirve con perejil fresco."
+  ],
+  "dato": "El costillar ahumado le da un sabor profundo que no se logra solo con la pulpa. La cazuela de cerdo es una variante de la cazuela de vacuno, típica de las casas del sur de Chile, donde el cerdo es tradición.",
+  "errores": [
+    {
+      "error": "La carne me quedó dura y seca",
+      "solucion": "El cerdo se seca rápido si se cocina muy fuerte. Usa un corte con algo de grasa y cocina a fuego muy bajo por al menos 1 hora."
+    },
+    {
+      "error": "El caldo me quedó demasiado grasiento",
+      "solucion": "A mitad de la cocción, con una cuchara, retira la capa de grasa que flota en la superficie del caldo."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días en recipiente hermético.",
+    "congelador": "Hasta 2 meses (idealmente sin papas).",
+    "recalentar": "A fuego lento en la olla con un poco de caldo."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "pulpa de cerdo",
+      "nota": "en cubos",
+      "escalable": true
+    },
+    {
+      "cantidad": 200,
+      "unidad": "g",
+      "nombre": "costillar ahumado",
+      "nota": "rango 200-250",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "puerros",
+      "nota": "picados, gruesos",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "zanahorias",
+      "nota": "en trozos",
+      "escalable": true
+    },
+    {
+      "cantidad": 4,
+      "unidad": null,
+      "nombre": "papas",
+      "nota": "medianas",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.25,
+      "unidad": null,
+      "nombre": "repollo crespo",
+      "nota": "o 250 g de repollitos de Bruselas",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "aceite",
+      "nota": "15 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "diente",
+      "nombre": "ajo",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "ají de color",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "ramo de olores",
+      "nota": "perejil, orégano, laurel, apio",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal y pimienta",
+      "nota": "a gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Calienta el aceite y sofríe el ajo 30 segundos. Agrega el ají de color.",
+      "ingredientes": [
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "texto": "Incorpora los puerros, zanahorias y carnes. Añade 1 cucharada de agua y tapa.",
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "texto": "Vierte 2 litros de agua fría, sal y el ramo de olores. Cocina tapado 1 hora.",
+      "ingredientes": [
+        10,
+        11
+      ],
+      "timers": [
+        {
+          "minutos": 60,
+          "etiqueta": "1 hora"
+        }
+      ]
+    },
+    {
+      "texto": "Agrega el repollo y las papas. Cocina 30 min más.",
+      "ingredientes": [
+        5,
+        6
+      ],
+      "timers": [
+        {
+          "minutos": 30,
+          "etiqueta": "30 min"
+        }
+      ]
+    },
+    {
+      "texto": "Retira el ramo de olores, corrige la sal y sirve con perejil fresco.",
+      "ingredientes": [
+        10,
+        11
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 90
+  },
+  "revisado_v2": false
+}

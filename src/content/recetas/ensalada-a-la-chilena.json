@@ -41,5 +41,56 @@
     "refrigerador": "Hasta 2 días. Se recomienda consumir el mismo día.",
     "congelador": "No recomendado.",
     "recalentar": "Se consume fresca."
-  }
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 4,
+      "unidad": null,
+      "nombre": "tomates",
+      "nota": "maduros",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": null,
+      "nombre": "cebolla blanca",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cilantro fresco",
+      "nota": "picado, a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal y aceite",
+      "nota": "a gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Pela y corta los tomates en cubos.",
+      "ingredientes": [1]
+    },
+    {
+      "texto": "Corta la cebolla en pluma fina y pásala por agua fría para suavizarla.",
+      "ingredientes": [2]
+    },
+    {
+      "texto": "Mezcla tomates y cebolla. Condimenta con sal y aceite.",
+      "ingredientes": [1, 2, 4]
+    },
+    {
+      "texto": "Decora con cilantro picado.",
+      "ingredientes": [3]
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 15
+  },
+  "revisado_v2": true
 }

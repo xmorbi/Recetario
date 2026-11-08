@@ -1,0 +1,152 @@
+{
+  "titulo": "Atún con arroz o pasta",
+  "categoria": "principales",
+  "tags": [
+    "atún",
+    "arroz",
+    "pasta",
+    "cotidiano",
+    "rápido",
+    "economico"
+  ],
+  "imagen": null,
+  "tiempo": "20 min",
+  "porciones": "2 personas",
+  "dificultad": "fácil",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "1 taza (200 g) de arroz (o 200 g de pasta)",
+    "1 tarro de 180 g de atún al agua o al aceite",
+    "1 cebolla pequeña picada fina",
+    "1 diente de ajo picado",
+    "1 tomate maduro picado (o 2 cucharadas de salsa de tomate)",
+    "2 cucharadas (30 ml) de aceite",
+    "Sal, pimienta y orégano"
+  ],
+  "pasos": [
+    "Cocina el arroz o la pasta según las instrucciones del paquete.",
+    "Mientras tanto, sofríe la cebolla y el ajo en aceite hasta que estén transparentes.",
+    "Agrega el tomate y cocina 3 minutos. Añade el atún escurrido y desmenuzado.",
+    "Condimenta con sal, pimienta y orégano. Cocina 2 minutos.",
+    "Mezcla con el arroz o la pasta cocida. Sirve caliente."
+  ],
+  "dato": "El atún con arroz o pasta es el clásico \"no hay nada en la casa\" chileno. Se hace en 20 minutos y salva cualquier almuerzo o cena. Se le puede agregar choclo, arvejas o lo que haya en el refrigerador.",
+  "errores": [
+    {
+      "error": "El plato me quedó seco",
+      "solucion": "No agregaste suficiente tomate o salsa. El atún necesita algo de líquido para no quedar seco."
+    },
+    {
+      "error": "El plato me supo muy fuerte a atún",
+      "solucion": "No escurriste bien el atún. Escúrrelo bien y desmenúzalo antes de agregarlo."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 2 días en recipiente hermético.",
+    "congelador": "No recomendado.",
+    "recalentar": "Sartén a fuego medio 3 minutos."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "arroz",
+      "nota": "200 g, o 200 g de pasta",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "tarro",
+      "nombre": "atún al agua o al aceite",
+      "nota": "180 g",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cebolla",
+      "nota": "pequeña, picada, fina",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "diente",
+      "nombre": "ajo",
+      "nota": "picado",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "tomate",
+      "nota": "o 2 cucharadas de salsa de tomate, picado, maduro",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "aceite",
+      "nota": "30 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal, pimienta y orégano",
+      "nota": "a gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Cocina el arroz o la pasta según las instrucciones del paquete.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Mientras tanto, sofríe la cebolla y el ajo en aceite hasta que estén transparentes.",
+      "ingredientes": [
+        2,
+        3,
+        4,
+        6
+      ]
+    },
+    {
+      "texto": "Agrega el tomate y cocina 3 minutos. Añade el atún escurrido y desmenuzado.",
+      "ingredientes": [
+        2,
+        5
+      ],
+      "timers": [
+        {
+          "minutos": 3,
+          "etiqueta": "3 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Condimenta con sal, pimienta y orégano. Cocina 2 minutos.",
+      "ingredientes": [
+        7
+      ],
+      "timers": [
+        {
+          "minutos": 2,
+          "etiqueta": "2 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Mezcla con el arroz o la pasta cocida. Sirve caliente.",
+      "ingredientes": [
+        1
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 5
+  },
+  "revisado_v2": false
+}

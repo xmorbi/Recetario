@@ -1,0 +1,126 @@
+{
+  "titulo": "Mote con huesillo",
+  "categoria": "dulces",
+  "tags": [
+    "postre",
+    "dulce",
+    "verano",
+    "bebida",
+    "tradicional"
+  ],
+  "imagen": "img/Mote-con-Huesillo.JPG",
+  "tiempo": "40 min + frío",
+  "porciones": "6 vasos",
+  "dificultad": "fácil",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "200 g de mote de trigo cocido",
+    "200 g de huesillos secos, remojados desde la noche anterior",
+    "1 taza de azúcar o chancaca",
+    "1 rama de canela",
+    "Cáscara de naranja"
+  ],
+  "pasos": [
+    "Remoja los huesillos la noche anterior. Reserva el agua del remojo.",
+    "Cocina los huesillos con el agua de remojo, el azúcar, la canela y la cáscara de naranja.",
+    "Cocina a fuego medio 30 minutos hasta que los huesillos estén blandos y el jugo tenga consistencia de almíbar.",
+    "Deja enfriar y refrigera varias horas.",
+    "Sirve en vaso alto: mote escurrido, huesillos y jugo bien frío."
+  ],
+  "dato": "Se toma con cuchara. El jugo se bebe y el mote se come al final.",
+  "errores": [
+    {
+      "error": "Huesillos duros",
+      "solucion": "No remojarlos la noche anterior. Si se te olvidó, cocínalos en agua fría y deja reposar. Usa siempre el líquido del remojo para el jugo."
+    },
+    {
+      "error": "Mote pastoso y sin jugo",
+      "solucion": "Mezclar el mote con los huesillos y el jugo antes de servir. Mezcla solo al momento de servir en el vaso para evitar que absorba todo el líquido."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días. Mantén el mote y el jugo en recipientes separados.",
+    "congelador": "No recomendado, el mote se cristaliza.",
+    "recalentar": "Se consume bien frío. No requiere recalentamiento."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 200,
+      "unidad": "g",
+      "nombre": "mote de trigo",
+      "nota": "cocido",
+      "escalable": true
+    },
+    {
+      "cantidad": 200,
+      "unidad": "g",
+      "nombre": "huesillos remojados desde la noche anterior",
+      "nota": "secos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "azúcar o chancaca",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "rama",
+      "nombre": "canela",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cáscara de naranja",
+      "nota": "a gusto",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Remoja los huesillos la noche anterior. Reserva el agua del remojo.",
+      "ingredientes": [
+        2
+      ],
+      "previo": true
+    },
+    {
+      "texto": "Cocina los huesillos con el agua de remojo, el azúcar, la canela y la cáscara de naranja.",
+      "ingredientes": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "texto": "Cocina a fuego medio 30 minutos hasta que los huesillos estén blandos y el jugo tenga consistencia de almíbar.",
+      "ingredientes": [
+        2
+      ],
+      "timers": [
+        {
+          "minutos": 30,
+          "etiqueta": "30 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Deja enfriar y refrigera varias horas."
+    },
+    {
+      "texto": "Sirve en vaso alto: mote escurrido, huesillos y jugo bien frío.",
+      "ingredientes": [
+        1,
+        2
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 480,
+    "coccion": 30
+  },
+  "revisado_v2": false
+}

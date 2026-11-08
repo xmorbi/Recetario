@@ -1,0 +1,221 @@
+{
+  "titulo": "Curanto en olla",
+  "categoria": "principales",
+  "tags": [
+    "curanto",
+    "chiloé",
+    "olla",
+    "marisco",
+    "tradicional",
+    "fiesta"
+  ],
+  "imagen": null,
+  "tiempo": "1 h 30 min",
+  "porciones": "6 personas",
+  "dificultad": "media",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "1 kg de almejas",
+    "1 kg de choritos",
+    "500 g de cholgas",
+    "500 g de pollo en presas",
+    "500 g de carne de cerdo en trozos",
+    "1 longaniza en rodajas",
+    "4 papas medianas",
+    "2 camotes",
+    "4 milcaos (ver receta)",
+    "4 chapaleles",
+    "1 cebolla grande en pluma",
+    "1 taza (250 ml) de vino blanco",
+    "Hojas de repollo o de nalca",
+    "Sal y merkén"
+  ],
+  "pasos": [
+    "En el fondo de una olla grande (o paila de greda), pon una cama de hojas de repollo o nalca.",
+    "Encima distribuye la cebolla en pluma y las carnes: pollo, cerdo y longaniza.",
+    "Añade el vino blanco y 1/2 taza (125 ml) de agua. Tapa y cocina 20 minutos a fuego medio.",
+    "Agrega los mariscos con concha hacia abajo, encima las papas y los camotes pelados.",
+    "Coloca encima los milcaos y chapaleles, envueltos en hojas si quieres que no se deshagan.",
+    "Tapa la olla con fuerza y cocina 30-40 minutos más a fuego medio-bajo, sin destapar.",
+    "Sirve todo junto en una fuente grande, con el caldo de cocción aparte."
+  ],
+  "dato": "El curanto en olla (o \"curanto al chilote\") es la versión doméstica del curanto en hoyo. Nació para poder preparar el plato en casa, sin tener que cavar un hoyo. El sabor es similar, aunque menos ahumado. Es el plato típico de las fiestas chilotes en cualquier casa.",
+  "advertencia": "Descarta los mariscos que estén abiertos antes de cocinar y los que no se abran durante la cocción. No destapes la olla durante la cocción: el vapor es lo que cocina los ingredientes.",
+  "errores": [
+    {
+      "error": "Los mariscos me quedaron gomosos o crudos",
+      "solucion": "Cocinaste demasiado tiempo o destapaste la olla. Los mariscos se abren solos con el vapor. No destapes la olla durante la cocción, o el vapor se escapa y no se cocinan."
+    },
+    {
+      "error": "Se me quemó el fondo de la olla",
+      "solucion": "No pusiste suficiente líquido. La cama de hojas evita que se pegue, pero agrega medio vaso de agua o vino si ves que se está secando."
+    },
+    {
+      "error": "El curanto me supo a \"mar viejo\"",
+      "solucion": "Usaste mariscos que no estaban frescos. El curanto depende de mariscos muy frescos. Lávalos bien y descarta los que estén abiertos antes de cocinar."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 2 días en recipiente hermético.",
+    "congelador": "No recomendado.",
+    "recalentar": "Al vapor o en olla tapada a fuego bajo con un poco de agua."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": "kg",
+      "nombre": "almejas",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "kg",
+      "nombre": "choritos",
+      "escalable": true
+    },
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "cholgas",
+      "escalable": true
+    },
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "pollo en presas",
+      "escalable": true
+    },
+    {
+      "cantidad": 500,
+      "unidad": "g",
+      "nombre": "carne de cerdo",
+      "nota": "en trozos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "longaniza",
+      "nota": "en rodajas",
+      "escalable": true
+    },
+    {
+      "cantidad": 4,
+      "unidad": null,
+      "nombre": "papas",
+      "nota": "medianas",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "camotes",
+      "escalable": true
+    },
+    {
+      "cantidad": 4,
+      "unidad": null,
+      "nombre": "milcaos",
+      "nota": "ver receta",
+      "escalable": true
+    },
+    {
+      "cantidad": 4,
+      "unidad": null,
+      "nombre": "chapaleles",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cebolla",
+      "nota": "en pluma, grande",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "vino blanco",
+      "nota": "250 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "hojas de repollo o de nalca",
+      "nota": "a gusto",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal y merkén",
+      "nota": "a gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "En el fondo de una olla grande (o paila de greda), pon una cama de hojas de repollo o nalca.",
+      "ingredientes": [
+        4,
+        13
+      ]
+    },
+    {
+      "texto": "Encima distribuye la cebolla en pluma y las carnes: pollo, cerdo y longaniza.",
+      "ingredientes": [
+        4,
+        5,
+        6,
+        11
+      ]
+    },
+    {
+      "texto": "Añade el vino blanco y 1/2 taza (125 ml) de agua. Tapa y cocina 20 minutos a fuego medio.",
+      "ingredientes": [
+        12
+      ],
+      "timers": [
+        {
+          "minutos": 20,
+          "etiqueta": "20 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Agrega los mariscos con concha hacia abajo, encima las papas y los camotes pelados.",
+      "ingredientes": [
+        1,
+        2,
+        3,
+        7,
+        8
+      ]
+    },
+    {
+      "texto": "Coloca encima los milcaos y chapaleles, envueltos en hojas si quieres que no se deshagan.",
+      "ingredientes": [
+        9,
+        10,
+        13
+      ]
+    },
+    {
+      "texto": "Tapa la olla con fuerza y cocina 30-40 minutos más a fuego medio-bajo, sin destapar.",
+      "timers": [
+        {
+          "minutos": 40,
+          "etiqueta": "30-40 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Sirve todo junto en una fuente grande, con el caldo de cocción aparte."
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 60
+  },
+  "revisado_v2": false
+}

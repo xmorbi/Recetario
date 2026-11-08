@@ -1,0 +1,100 @@
+{
+  "titulo": "Rompon",
+  "categoria": "bebidas",
+  "tags": [
+    "rompon",
+    "coñac",
+    "leche",
+    "crema",
+    "yemas",
+    "tragos"
+  ],
+  "imagen": null,
+  "tiempo": "15 min",
+  "porciones": "6 a 8 personas",
+  "dificultad": "fácil",
+  "tecnica": "Licuadora",
+  "ingredientes": [
+    "1 taza de coñac",
+    "1 taza de leche",
+    "1 taza de crema fresca",
+    "1 taza de azúcar",
+    "5 yemas"
+  ],
+  "pasos": [
+    "Mezclar todos los ingredientes en la licuadora y batir a velocidad moderada.",
+    "Dejar en reposo unos 10 minutos.",
+    "Embotellar y guardar en el refrigerador."
+  ],
+  "dato": "El rompon es una bebida cremosa tipo eggnog; servir bien frío y agitar antes de servir.",
+  "errores": [
+    {
+      "error": "Mezcla cortada o grumosa",
+      "solucion": "Licúa a velocidad moderada y no en exceso; si queda grumosa, cuela antes de embotellar."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Guardar en el refrigerador y consumir dentro de 2 a 3 días."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "coñac",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "leche",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "crema",
+      "nota": "fresca",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "azúcar",
+      "escalable": true
+    },
+    {
+      "cantidad": 5,
+      "unidad": null,
+      "nombre": "yemas",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Mezclar todos los ingredientes en la licuadora y batir a velocidad moderada.",
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "texto": "Dejar en reposo unos 10 minutos.",
+      "timers": [
+        {
+          "minutos": 10,
+          "etiqueta": "10 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Embotellar y guardar en el refrigerador."
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 10
+  },
+  "revisado_v2": false
+}

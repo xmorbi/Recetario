@@ -1,0 +1,145 @@
+{
+  "titulo": "Fritos de coliflor",
+  "categoria": "principales",
+  "tags": [
+    "coliflor",
+    "fritura",
+    "vegetariano",
+    "cotidiano",
+    "entrada"
+  ],
+  "imagen": null,
+  "tiempo": "30 min",
+  "porciones": "4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Fritura",
+  "ingredientes": [
+    "1 coliflor mediana",
+    "2 huevos",
+    "1 taza (120 g) de harina",
+    "1/2 taza (125 ml) de leche",
+    "1 cucharadita de polvos de hornear",
+    "Sal, pimienta y nuez moscada",
+    "1 taza (250 ml) de aceite para freír"
+  ],
+  "pasos": [
+    "Corta la coliflor en ramilletes y cuécela en agua con sal 5-7 minutos, hasta que esté tierna pero firme. Escurre bien.",
+    "Prepara la mezcla: bate los huevos con la harina, la leche, los polvos de hornear, sal, pimienta y nuez moscada. Debe quedar como una pasta espesa.",
+    "Pasa los ramilletes de coliflor por la mezcla.",
+    "Fríe en abundante aceite caliente (170-180 °C) hasta que estén dorados. Escurre sobre papel absorbente.",
+    "Sirve calientes con sal y limón, o con salsa de tomate."
+  ],
+  "dato": "Los fritos de coliflor son un clásico de la cocina chilena de invierno. Se hacen rebozados y fritos, y se sirven como entrada o acompañamiento. Son una forma rica de comer coliflor, que a muchos no les gusta hervida.",
+  "advertencia": "Fríe a 170-180 °C: si el aceite está muy caliente, los fritos se doran por fuera y quedan crudos por dentro. Si está muy frío, absorben grasa.",
+  "errores": [
+    {
+      "error": "Los fritos me quedaron aceitosos",
+      "solucion": "El aceite no estaba caliente o la coliflor estaba muy húmeda. Seca bien la coliflor y fríe a fuego medio (170-180 °C)."
+    },
+    {
+      "error": "El rebozado se me cayó",
+      "solucion": "La coliflor estaba muy húmeda o la mezcla muy líquida. Seca bien la coliflor y haz la mezcla más espesa."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 2 días en recipiente hermético.",
+    "congelador": "No recomendado.",
+    "recalentar": "Horno o freidora de aire a 180 °C por 5 minutos."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "coliflor",
+      "nota": "mediana",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "huevos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "harina",
+      "nota": "120 g",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "taza",
+      "nombre": "leche",
+      "nota": "125 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "polvos de hornear",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal, pimienta y nuez moscada",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "aceite",
+      "nota": "250 ml, para freír",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Corta la coliflor en ramilletes y cuécela en agua con sal 5-7 minutos, hasta que esté tierna pero firme. Escurre bien.",
+      "ingredientes": [
+        1,
+        6
+      ],
+      "timers": [
+        {
+          "minutos": 7,
+          "etiqueta": "5-7 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Prepara la mezcla: bate los huevos con la harina, la leche, los polvos de hornear, sal, pimienta y nuez moscada. Debe quedar como una pasta espesa.",
+      "ingredientes": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "texto": "Pasa los ramilletes de coliflor por la mezcla.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Fríe en abundante aceite caliente (170-180 °C) hasta que estén dorados. Escurre sobre papel absorbente.",
+      "ingredientes": [
+        7
+      ]
+    },
+    {
+      "texto": "Sirve calientes con sal y limón, o con salsa de tomate.",
+      "ingredientes": [
+        6
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 7
+  },
+  "revisado_v2": false
+}

@@ -1,0 +1,139 @@
+{
+  "titulo": "Ensalada rusa chilena",
+  "categoria": "ensaladas",
+  "tags": [
+    "ensalada",
+    "papas",
+    "mayonesa",
+    "fresca",
+    "acompañamiento"
+  ],
+  "imagen": "img/Ensalada-rusa-chilena.JPG",
+  "tiempo": "30 min + frío",
+  "porciones": "6 personas",
+  "dificultad": "fácil",
+  "tecnica": "Fresca",
+  "ingredientes": [
+    "5 papas medianas",
+    "2 zanahorias medianas",
+    "1/2 taza (75 g) de arvejas cocidas",
+    "1/2 taza (125 g) de mayonesa",
+    "1/2 taza (125 g) de yogur griego (opcional)",
+    "Cilantro, sal y pimienta",
+    "1/2 cebolla pequeña (opcional)"
+  ],
+  "pasos": [
+    "Cuece las papas y zanahorias en agua con sal hasta que estén tiernas. Escurre y enfría.",
+    "Pélalas y córtalas en cubos pequeños.",
+    "Mezcla con las arvejas y la cebolla si la usas.",
+    "Incorpora la mayonesa y el yogur. Salpimenta y añade cilantro.",
+    "Refrigera al menos 30 min antes de servir."
+  ],
+  "dato": "El yogur griego aligera la mayonesa y le da un toque más fresco. La ensalada rusa es un clásico de las once y de las celebraciones chilenas, y cada familia tiene su versión: con o sin cebolla, con o sin yogur.",
+  "errores": [
+    {
+      "error": "La ensalada me quedó con textura pastosa",
+      "solucion": "Usaste papas que se deshacen o las cocinaste demasiado. Usa papas firmes, cuécelas con cáscara y déjalas enfriar."
+    },
+    {
+      "error": "La mayonesa se me cortó o quedó aguada",
+      "solucion": "Mezclaste los ingredientes cuando aún estaban calientes. Todos los ingredientes deben estar fríos al incorporar la mayonesa."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días en recipiente hermético.",
+    "congelador": "No recomendado, la mayonesa se corta y las papas se aguadan.",
+    "recalentar": "Se consume fría."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 5,
+      "unidad": null,
+      "nombre": "papas",
+      "nota": "medianas",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "zanahorias",
+      "nota": "medianas",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "taza",
+      "nombre": "arvejas",
+      "nota": "75 g, cocidas",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "taza",
+      "nombre": "mayonesa",
+      "nota": "125 g",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "taza",
+      "nombre": "yogur griego",
+      "nota": "125 g, opcional",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cilantro, sal y pimienta",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": null,
+      "nombre": "cebolla",
+      "nota": "opcional, pequeña",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Cuece las papas y zanahorias en agua con sal hasta que estén tiernas. Escurre y enfría.",
+      "ingredientes": [
+        1,
+        2
+      ]
+    },
+    {
+      "texto": "Pélalas y córtalas en cubos pequeños."
+    },
+    {
+      "texto": "Mezcla con las arvejas y la cebolla si la usas.",
+      "ingredientes": [
+        3,
+        7
+      ]
+    },
+    {
+      "texto": "Incorpora la mayonesa y el yogur. Salpimenta y añade cilantro.",
+      "ingredientes": [
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "texto": "Refrigera al menos 30 min antes de servir.",
+      "timers": [
+        {
+          "minutos": 30,
+          "etiqueta": "30 min"
+        }
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 30
+  },
+  "revisado_v2": false
+}

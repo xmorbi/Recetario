@@ -1,0 +1,168 @@
+{
+  "titulo": "Carne mechada",
+  "categoria": "principales",
+  "tags": [
+    "carne",
+    "olla",
+    "plato principal",
+    "sandwich",
+    "guiso",
+    "vacuno"
+  ],
+  "imagen": "img/carne-mechada.jpg",
+  "tiempo": "2 h 30 min",
+  "porciones": "4 a 6 personas",
+  "dificultad": "media",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "1 kg de posta negra o pollo ganso (corte para mechar)",
+    "1 zanahoria grande en bastones",
+    "2 cebollas cortadas en pluma",
+    "2 dientes de ajo",
+    "1 pimentón rojo en tiras",
+    "1 taza (250 ml) de vino tinto (opcional)",
+    "1 taza (250 ml) de caldo de carne",
+    "Aceite, sal, pimienta, orégano y comino"
+  ],
+  "pasos": [
+    "Sazona la carne con sal, pimienta y comino. En una olla grande, sella la carne en aceite caliente hasta que dore por todos lados.",
+    "Agrega la cebolla, el ajo y el pimentón. Sofríe por unos minutos.",
+    "Incorpora el vino tinto (si usas) y deja evaporar un poco. Luego agrega el caldo de carne y los bastones de zanahoria.",
+    "Tapa la olla y cocina a fuego lento por 2 horas, hasta que la carne se deshaga fácilmente con un tenedor.",
+    "Retira la carne, desmenúzala con dos tenedores y devuélvela a la olla para que se mezcle con la salsa.",
+    "Sirve con puré, arroz o en un sándwich."
+  ],
+  "dato": "La carne mechada es un clásico de la cocina chilena de olla. Se usa en sándwiches, empanadas y guisos. Ojo: el Barros Luco se hace con churrasco de vacuno y queso, y el Barros Jarpa con jamón y queso. La carne mechada va en preparaciones como el sándwich \"mechada\" o el \"as\" callejero, y también en empanadas de pino.",
+  "errores": [
+    {
+      "error": "La carne me quedó seca y dura",
+      "solucion": "Elegiste un corte demasiado magro o cocinaste a fuego fuerte. Usa posta negra o pollo ganso y cocina a fuego muy lento por 2 horas."
+    },
+    {
+      "error": "Deshebré mal la carne",
+      "solucion": "No la piques con cuchillo. Usa dos tenedores para separar las fibras en hebras largas: así la carne mechada queda como debe."
+    },
+    {
+      "error": "La carne me quedó nadando en salsa",
+      "solucion": "Agregaste demasiado líquido durante la cocción. Agrega solo el líquido justo para cubrir la mitad de la carne."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 4 días en recipiente hermético.",
+    "congelador": "Hasta 3 meses en porciones con un poco de salsa.",
+    "recalentar": "En olla a fuego lento con su salsa, o en microondas con un poco de caldo."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": "kg",
+      "nombre": "posta negra o pollo ganso",
+      "nota": "corte para mechar",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "zanahoria",
+      "nota": "en bastones, grande",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "cebollas",
+      "nota": "cortadas, en pluma",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "diente",
+      "nombre": "ajo",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pimentón rojo",
+      "nota": "en tiras",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "vino",
+      "nota": "250 ml, opcional, tinto",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "caldo de carne",
+      "nota": "250 ml",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "aceite, sal, pimienta, orégano y comino",
+      "nota": "a gusto",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Sazona la carne con sal, pimienta y comino. En una olla grande, sella la carne en aceite caliente hasta que dore por todos lados.",
+      "ingredientes": [
+        1,
+        7,
+        8
+      ]
+    },
+    {
+      "texto": "Agrega la cebolla, el ajo y el pimentón. Sofríe por unos minutos.",
+      "ingredientes": [
+        3,
+        4,
+        5,
+        8
+      ]
+    },
+    {
+      "texto": "Incorpora el vino tinto (si usas) y deja evaporar un poco. Luego agrega el caldo de carne y los bastones de zanahoria.",
+      "ingredientes": [
+        1,
+        2,
+        6,
+        7
+      ]
+    },
+    {
+      "texto": "Tapa la olla y cocina a fuego lento por 2 horas, hasta que la carne se deshaga fácilmente con un tenedor.",
+      "ingredientes": [
+        1,
+        7
+      ],
+      "timers": [
+        {
+          "minutos": 120,
+          "etiqueta": "2 horas"
+        }
+      ]
+    },
+    {
+      "texto": "Retira la carne, desmenúzala con dos tenedores y devuélvela a la olla para que se mezcle con la salsa.",
+      "ingredientes": [
+        1,
+        7,
+        8
+      ]
+    },
+    {
+      "texto": "Sirve con puré, arroz o en un sándwich."
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 120
+  },
+  "revisado_v2": false
+}

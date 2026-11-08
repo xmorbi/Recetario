@@ -64,13 +64,15 @@
     {
       "cantidad": 500,
       "unidad": "g",
-      "nombre": "harina sin polvos de hornear",
+      "nombre": "harina",
+      "nota": "sin polvos de hornear",
       "escalable": true
     },
     {
       "cantidad": 200,
       "unidad": "g",
-      "nombre": "mantequilla a temperatura ambiente",
+      "nombre": "mantequilla",
+      "nota": "a temperatura ambiente",
       "escalable": true
     },
     {
@@ -94,20 +96,22 @@
     {
       "cantidad": 250,
       "unidad": "g",
-      "nombre": "frutas confitadas picadas",
-      "nota": "naranja, limón, cereza",
+      "nombre": "frutas confitadas",
+      "nota": "picadas (naranja, limón, cereza)",
       "escalable": true
     },
     {
       "cantidad": 150,
       "unidad": "g",
-      "nombre": "pasas remojadas en ron o pisco",
+      "nombre": "pasas",
+      "nota": "remojadas en ron o pisco",
       "escalable": true
     },
     {
       "cantidad": 100,
       "unidad": "g",
-      "nombre": "nueces picadas",
+      "nombre": "nueces",
+      "nota": "picadas",
       "escalable": true
     },
     {
@@ -129,9 +133,10 @@
       "escalable": true
     },
     {
-      "cantidad": null,
+      "cantidad": 2,
       "unidad": null,
-      "nombre": "Ralladura de 1 naranja y 1 limón",
+      "nombre": "ralladura de cítricos",
+      "nota": "1 naranja + 1 limón",
       "escalable": true
     },
     {
@@ -143,54 +148,58 @@
     {
       "cantidad": 0.5,
       "unidad": "taza",
-      "nombre": "leche si es necesario",
+      "nombre": "leche",
+      "nota": "si es necesario",
       "escalable": true
     },
     {
-      "cantidad": null,
+      "cantidad": 1,
       "unidad": null,
-      "nombre": "Azúcar flor para decorar",
-      "escalable": true
+      "nombre": "azúcar flor",
+      "nota": "a gusto, para decorar",
+      "escalable": false
     }
   ],
   "pasos_v2": [
     {
       "texto": "Remoja las pasas en ron o pisco al menos 2 horas antes. Escurre y reserva.",
-      "timers": [
-        {
-          "minutos": 120,
-          "etiqueta": "120 min"
-        }
-      ]
+      "ingredientes": [7],
+      "previo": true
     },
     {
-      "texto": "Bate la mantequilla con el azúcar hasta obtener una crema. Agrega los huevos uno a uno."
+      "texto": "Bate la mantequilla con el azúcar hasta obtener una crema. Agrega los huevos uno a uno.",
+      "ingredientes": [2, 3, 4]
     },
     {
-      "texto": "Añade la vainilla, las ralladuras de naranja y limón, y las especias."
+      "texto": "Añade la vainilla, las ralladuras de naranja y limón, y las especias.",
+      "ingredientes": [9, 10, 11, 12, 13]
     },
     {
-      "texto": "Incorpora la harina cernida con los polvos de hornear, mezclando suavemente."
+      "texto": "Incorpora la harina cernida con los polvos de hornear, mezclando suavemente.",
+      "ingredientes": [1, 5]
     },
     {
-      "texto": "Agrega las frutas confitadas, las pasas y las nueces. Si la masa está muy seca, añade leche cucharada a cucharada."
+      "texto": "Agrega las frutas confitadas, las pasas y las nueces. Si la masa está muy seca, añade leche cucharada a cucharada.",
+      "ingredientes": [6, 7, 8, 14]
     },
     {
       "texto": "Vierte la mezcla en un molde engrasado y enharinado. Hornea a 170 °C por 50-60 minutos.",
       "timers": [
         {
-          "minutos": 50,
-          "etiqueta": "50–60 min"
+          "minutos": 60,
+          "etiqueta": "hornear (50–60 min)"
         }
       ]
     },
     {
-      "texto": "Deja enfriar, desmolda y espolvorea con azúcar flor antes de servir."
+      "texto": "Deja enfriar, desmolda y espolvorea con azúcar flor antes de servir.",
+      "ingredientes": [15]
     }
   ],
   "tiempo_v2": {
-    "reposo": 90,
-    "coccion": 90
+    "preparacion": 30,
+    "reposo": 120,
+    "coccion": 60
   },
-  "revisado_v2": false
+  "revisado_v2": true
 }

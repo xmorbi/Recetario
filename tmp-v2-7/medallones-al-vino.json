@@ -1,0 +1,253 @@
+{
+  "titulo": "Medallones al Vino",
+  "categoria": "principales",
+  "tags": [
+    "medallones al vino",
+    "filete",
+    "vino tinto",
+    "champiñones",
+    "queso",
+    "carnes"
+  ],
+  "imagen": null,
+  "tiempo": "50 min (más maceración de 2 horas)",
+  "porciones": "4 a 6 personas",
+  "dificultad": "media",
+  "tecnica": "Sartén y horno",
+  "ingredientes": [
+    "6 medallones de filete",
+    "1 1/2 cucharada de vino blanco",
+    "1 1/2 cucharada de vino tinto",
+    "1 cucharada de coñac",
+    "1 cucharadita de salsa inglesa",
+    "4 cucharadas de harina",
+    "3 huevos",
+    "1/4 taza de mantequilla",
+    "2 lonjas de jamón",
+    "2 cucharadas de champiñones frescos",
+    "1/2 cebolla",
+    "2 dientes de ajo",
+    "6 rebanadas de queso mantecoso",
+    "Pimienta",
+    "Sal"
+  ],
+  "pasos": [
+    "Limpiar y lavar los medallones de filete, condimentar con sal, pimienta, un poco de los vinos y el coñac.",
+    "Dejar macerando durante 2 horas.",
+    "Espolvorearles harina, pasarlos por los huevos batidos y freírlos en la mitad de la mantequilla caliente durante unos 5 minutos por cada lado.",
+    "Retirarlos de la sartén.",
+    "Agregar el resto de la mantequilla y freír la cebolla con el ajo picado en trozos, los champiñones cortados en láminas, el jamón cortado en tiras delgadas.",
+    "Agregar sal y pimienta, revolver con cuchara de madera durante 8 minutos.",
+    "Añadir el vino, coñac, salsa inglesa y cocinar unos minutos para evaporar los licores.",
+    "Colar los ingredientes de modo de formar una salsa.",
+    "Verter sobre los medallones que se han dispuesto en una fuente para horno, cubrir con las tajadas de queso y llevar a horno caliente hasta que esté derretido y empiece a dorarse el queso.",
+    "Servir inmediatamente bañados con la salsa."
+  ],
+  "dato": "La maceración de 2 horas con los vinos y el coñac aporta sabor a la carne; no la omitas.",
+  "errores": [
+    {
+      "error": "Medallones secos",
+      "solucion": "Cocínalos 5 minutos por lado y termínalos en el horno con el queso; el filete se seca si se cocina en exceso."
+    },
+    {
+      "error": "Salsa sin sabor",
+      "solucion": "Cuela la salsa y rectifica la sal; los licores deben evaporarse pero dejar su aroma."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Servir de inmediato. 1 día pero el queso pierde textura."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 6,
+      "unidad": null,
+      "nombre": "medallones de filete",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "0.5 cucharada de vino blanco",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "0.5 cucharada de vino",
+      "nota": "tinto",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "coñac",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "salsa inglesa",
+      "escalable": true
+    },
+    {
+      "cantidad": 4,
+      "unidad": "cucharada",
+      "nombre": "harina",
+      "escalable": true
+    },
+    {
+      "cantidad": 3,
+      "unidad": null,
+      "nombre": "huevos",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.25,
+      "unidad": "taza",
+      "nombre": "mantequilla",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "lonja",
+      "nombre": "jamón",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "champiñones",
+      "nota": "frescos",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": null,
+      "nombre": "cebolla",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "diente",
+      "nombre": "ajo",
+      "escalable": true
+    },
+    {
+      "cantidad": 6,
+      "unidad": "rebanada",
+      "nombre": "queso mantecoso",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pimienta",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal",
+      "nota": "a gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Limpiar y lavar los medallones de filete, condimentar con sal, pimienta, un poco de los vinos y el coñac.",
+      "ingredientes": [
+        1,
+        3,
+        4,
+        14,
+        15
+      ]
+    },
+    {
+      "texto": "Dejar macerando durante 2 horas.",
+      "timers": [
+        {
+          "minutos": 120,
+          "etiqueta": "2 horas"
+        }
+      ]
+    },
+    {
+      "texto": "Espolvorearles harina, pasarlos por los huevos batidos y freírlos en la mitad de la mantequilla caliente durante unos 5 minutos por cada lado.",
+      "ingredientes": [
+        6,
+        7,
+        8
+      ],
+      "timers": [
+        {
+          "minutos": 5,
+          "etiqueta": "5 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Retirarlos de la sartén."
+    },
+    {
+      "texto": "Agregar el resto de la mantequilla y freír la cebolla con el ajo picado en trozos, los champiñones cortados en láminas, el jamón cortado en tiras delgadas.",
+      "ingredientes": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "texto": "Agregar sal y pimienta, revolver con cuchara de madera durante 8 minutos.",
+      "ingredientes": [
+        14,
+        15
+      ],
+      "timers": [
+        {
+          "minutos": 8,
+          "etiqueta": "8 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Añadir el vino, coñac, salsa inglesa y cocinar unos minutos para evaporar los licores.",
+      "ingredientes": [
+        3,
+        4,
+        5,
+        15
+      ]
+    },
+    {
+      "texto": "Colar los ingredientes de modo de formar una salsa.",
+      "ingredientes": [
+        5,
+        15
+      ]
+    },
+    {
+      "texto": "Verter sobre los medallones que se han dispuesto en una fuente para horno, cubrir con las tajadas de queso y llevar a horno caliente hasta que esté derretido y empiece a dorarse el queso.",
+      "ingredientes": [
+        1,
+        13
+      ]
+    },
+    {
+      "texto": "Servir inmediatamente bañados con la salsa.",
+      "ingredientes": [
+        5,
+        15
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 8,
+    "reposo": 120,
+    "coccion": 5
+  },
+  "revisado_v2": false
+}

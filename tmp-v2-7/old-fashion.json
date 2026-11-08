@@ -1,0 +1,95 @@
+{
+  "titulo": "Old Fashion",
+  "categoria": "bebidas",
+  "tags": [
+    "old fashion",
+    "whisky",
+    "piña",
+    "cereza marrasquino",
+    "tragos"
+  ],
+  "imagen": null,
+  "tiempo": "5 min",
+  "porciones": "1 persona",
+  "dificultad": "fácil",
+  "tecnica": "Vaso",
+  "ingredientes": [
+    "1/2 copa de whisky",
+    "1 terrón de azúcar tostado",
+    "1/2 tajada de piña",
+    "1 cereza marrasquino",
+    "1 cucharadita de jugo de marrasquino"
+  ],
+  "pasos": [
+    "Poner en un vaso de base ancha la piña, la cereza y el terrón de azúcar.",
+    "Agregar el whisky y la cucharadita de jugo de marrasquino.",
+    "Servir con bombilla."
+  ],
+  "dato": "El azúcar tostado aporta un sabor caramelizado que se diferencia del azúcar blanco tradicional.",
+  "errores": [
+    {
+      "error": "Azúcar que no se disuelve",
+      "solucion": "Usa un terrón tostado pequeño y remueve con la bombilla antes de beber; también puedes machacarlo suavemente en el vaso."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Servir de inmediato."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 0.5,
+      "unidad": "copa",
+      "nombre": "whisky",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "terrón de azúcar tostado",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.5,
+      "unidad": "tajada",
+      "nombre": "piña",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cereza marrasquino",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "jugo de marrasquino",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Poner en un vaso de base ancha la piña, la cereza y el terrón de azúcar.",
+      "ingredientes": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "texto": "Agregar el whisky y la cucharadita de jugo de marrasquino.",
+      "ingredientes": [
+        1,
+        4,
+        5
+      ]
+    },
+    {
+      "texto": "Servir con bombilla."
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 5
+  },
+  "revisado_v2": false
+}

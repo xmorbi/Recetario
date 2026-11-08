@@ -1,0 +1,197 @@
+{
+  "titulo": "Estofado con Alcachofas",
+  "categoria": "principales",
+  "tags": [
+    "estofado con alcachofas",
+    "posta paleta",
+    "alcachofas",
+    "guiso",
+    "carnes"
+  ],
+  "imagen": null,
+  "tiempo": "1 h 15 min",
+  "porciones": "4 a 6 personas",
+  "dificultad": "media",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "250 g de posta paleta",
+    "1 cebolla",
+    "250 g de papas",
+    "250 g de arvejas",
+    "1/4 pimiento rojo",
+    "3 alcachofas",
+    "2 zanahorias",
+    "2 dientes de ajo",
+    "3 cucharadas (30 g) de harina",
+    "Orégano",
+    "Comino",
+    "Ají de color",
+    "Pimienta",
+    "Sal"
+  ],
+  "pasos": [
+    "Cortar la carne en cubos de regular tamaño.",
+    "Picar la cebolla fina y freír en el aceite junto con la carne, ajo y aliños.",
+    "Agregar 2 tazas (500 ml) de agua caliente y dejar en cocción hasta que la carne se ablande.",
+    "Incorporar las papas cortadas en rodajas, el pimiento en tiras delgadas, arvejas, las alcachofas despuntadas y cortadas en mitades o cuartos.",
+    "Disolver la harina en agua fría y agregarla al jugo del estofado.",
+    "Cocer a fuego lento unos 20 minutos aproximadamente."
+  ],
+  "dato": "La posta paleta puede sustituirse por costilla de vaca, posta negra, espaldilla, asiento, etc. El estofado con alcachofas es un plato de olla chileno, típico de la zona central, donde las alcachofas son de temporada.",
+  "errores": [
+    {
+      "error": "La salsa me quedó con grumos",
+      "solucion": "Disuelve la harina en agua fría antes de incorporarla y revuelve constantemente."
+    },
+    {
+      "error": "Las alcachofas me quedaron amargas",
+      "solucion": "Retira las hojas duras externas y la parte fibrosa del tallo antes de trocear."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "2 días",
+    "recalentar": "A fuego lento."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 250,
+      "unidad": "g",
+      "nombre": "posta paleta",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cebolla",
+      "escalable": true
+    },
+    {
+      "cantidad": 250,
+      "unidad": "g",
+      "nombre": "papas",
+      "escalable": true
+    },
+    {
+      "cantidad": 250,
+      "unidad": "g",
+      "nombre": "arvejas",
+      "escalable": true
+    },
+    {
+      "cantidad": 0.25,
+      "unidad": null,
+      "nombre": "pimiento rojo",
+      "escalable": true
+    },
+    {
+      "cantidad": 3,
+      "unidad": null,
+      "nombre": "alcachofas",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "zanahorias",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "diente",
+      "nombre": "ajo",
+      "escalable": true
+    },
+    {
+      "cantidad": 3,
+      "unidad": "cucharada",
+      "nombre": "harina",
+      "nota": "30 g",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "orégano",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "comino",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "ají de color",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pimienta",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal",
+      "nota": "a gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Cortar la carne en cubos de regular tamaño.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Picar la cebolla fina y freír en el aceite junto con la carne, ajo y aliños.",
+      "ingredientes": [
+        1,
+        2,
+        8
+      ]
+    },
+    {
+      "texto": "Agregar 2 tazas (500 ml) de agua caliente y dejar en cocción hasta que la carne se ablande.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Incorporar las papas cortadas en rodajas, el pimiento en tiras delgadas, arvejas, las alcachofas despuntadas y cortadas en mitades o cuartos.",
+      "ingredientes": [
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "texto": "Disolver la harina en agua fría y agregarla al jugo del estofado.",
+      "ingredientes": [
+        9
+      ]
+    },
+    {
+      "texto": "Cocer a fuego lento unos 20 minutos aproximadamente.",
+      "timers": [
+        {
+          "minutos": 20,
+          "etiqueta": "20 minutos"
+        }
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 20
+  },
+  "revisado_v2": false
+}

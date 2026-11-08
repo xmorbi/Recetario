@@ -1,0 +1,129 @@
+{
+  "titulo": "Mousse de chocolate",
+  "categoria": "dulces",
+  "tags": [
+    "postre",
+    "chocolate",
+    "mousse",
+    "frio",
+    "simple",
+    "reposteria"
+  ],
+  "imagen": null,
+  "tiempo": "20 min + frío",
+  "porciones": "4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Sin horno",
+  "ingredientes": [
+    "200 g de chocolate amargo",
+    "3 huevos (separar claras y yemas)",
+    "2 cucharadas de azúcar",
+    "200 ml de crema para batir bien fría",
+    "1 pizca de sal"
+  ],
+  "pasos": [
+    "Derrite el chocolate a baño María o en el microondas. Deja templar.",
+    "Bate las yemas y agrégalas al chocolate derretido. Mezcla bien.",
+    "Bate las claras con la sal y el azúcar hasta que formen picos firmes.",
+    "Bate la crema hasta que monte.",
+    "Incorpora las claras y la crema al chocolate con movimientos envolventes, con cuidado de no bajar el aire.",
+    "Reparte en copas y refrigera al menos 4 horas antes de servir."
+  ],
+  "dato": "El mousse de chocolate es un postre de origen francés que en Chile se volvió favorito de las cenas y celebraciones. Se sirve en copas y se puede decorar con crema, chocolate rallado o frutillas. La clave es no batir de más al incorporar las claras y la crema.",
+  "errores": [
+    {
+      "error": "Mousse se baja",
+      "solucion": "Batir de más al incorporar o chocolate muy caliente. El chocolate debe estar tibio, no caliente, y se mezcla con movimientos suaves."
+    },
+    {
+      "error": "Textura granulada",
+      "solucion": "Chocolate quemado o yemas cocidas. Derrite el chocolate a baño María y deja templar antes de agregar las yemas."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días en copas cubiertas con papel plástico.",
+    "congelador": "No recomendado, la textura cambia.",
+    "recalentar": "Se consume frío."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 200,
+      "unidad": "g",
+      "nombre": "chocolate amargo",
+      "escalable": true
+    },
+    {
+      "cantidad": 3,
+      "unidad": null,
+      "nombre": "huevos",
+      "nota": "separar claras y yemas",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "azúcar",
+      "escalable": true
+    },
+    {
+      "cantidad": 200,
+      "unidad": "ml",
+      "nombre": "crema para batir",
+      "nota": "fría, bien",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "pizca",
+      "nombre": "sal",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Derrite el chocolate a baño María o en el microondas. Deja templar.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Bate las yemas y agrégalas al chocolate derretido. Mezcla bien.",
+      "ingredientes": [
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "texto": "Bate las claras con la sal y el azúcar hasta que formen picos firmes.",
+      "ingredientes": [
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "texto": "Bate la crema hasta que monte.",
+      "ingredientes": [
+        4
+      ]
+    },
+    {
+      "texto": "Incorpora las claras y la crema al chocolate con movimientos envolventes, con cuidado de no bajar el aire.",
+      "ingredientes": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "texto": "Reparte en copas y refrigera al menos 4 horas antes de servir.",
+      "previo": true
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 240
+  },
+  "revisado_v2": false
+}

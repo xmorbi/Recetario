@@ -1,0 +1,171 @@
+{
+  "titulo": "Fondos de Alcachofas Rellenos",
+  "categoria": "once",
+  "tags": [
+    "fondos de alcachofas rellenos",
+    "alcachofas",
+    "atún",
+    "mayonesa",
+    "entrada"
+  ],
+  "imagen": null,
+  "tiempo": "45 min",
+  "porciones": "6 personas",
+  "dificultad": "media",
+  "tecnica": "Hervido",
+  "ingredientes": [
+    "12 alcachofas tiernas",
+    "1 tarro de 180 g de atún en aceite",
+    "Jugo de limón",
+    "Sal",
+    "Pimienta",
+    "Aceite",
+    "1 cucharada de cebolla picada fina",
+    "6 cucharadas (90 g) de mayonesa",
+    "Pimiento rojo",
+    "Perejil"
+  ],
+  "pasos": [
+    "Cocer las alcachofas, enfriarlas y retirarles las hojas.",
+    "Limpiar los fondos, aliñarlos con sal, pimienta, aceite y jugo de limón.",
+    "Dejar en reposo por 1/2 hora.",
+    "Sacar la parte comestible de las hojas y mezclar con el atún desmenuzado, cebolla picada y la mayonesa.",
+    "Rellenar los fondos y decorar con mayonesa, tiras de pimiento y perejil picado.",
+    "Acompañar con ensaladas."
+  ],
+  "dato": "Reserva las hojas más tiernas para raspar su parte comestible; las hojas duras se descartan. Los fondos de alcachofa rellenos son una entrada clásica de las celebraciones chilenas.",
+  "errores": [
+    {
+      "error": "Los fondos se me rompieron al ahuecar",
+      "solucion": "Cocina las alcachofas hasta que estén tiernas pero firmes; retira las hojas con cuidado y ahueca con una cuchara pequeña."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Se pueden preparar con unas horas de anticipación y mantener refrigerados."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 12,
+      "unidad": null,
+      "nombre": "alcachofas",
+      "nota": "tiernas",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "tarro",
+      "nombre": "atún en aceite",
+      "nota": "180 g",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "jugo de limón",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pimienta",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "aceite",
+      "nota": "a gusto",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "cebolla",
+      "nota": "picada, fina",
+      "escalable": true
+    },
+    {
+      "cantidad": 6,
+      "unidad": "cucharada",
+      "nombre": "mayonesa",
+      "nota": "90 g",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pimiento rojo",
+      "nota": "a gusto",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "perejil",
+      "nota": "a gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Cocer las alcachofas, enfriarlas y retirarles las hojas.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Limpiar los fondos, aliñarlos con sal, pimienta, aceite y jugo de limón.",
+      "ingredientes": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "texto": "Dejar en reposo por 1/2 hora.",
+      "timers": [
+        {
+          "minutos": 120,
+          "etiqueta": "2 hora"
+        }
+      ]
+    },
+    {
+      "texto": "Sacar la parte comestible de las hojas y mezclar con el atún desmenuzado, cebolla picada y la mayonesa.",
+      "ingredientes": [
+        2,
+        7,
+        8
+      ]
+    },
+    {
+      "texto": "Rellenar los fondos y decorar con mayonesa, tiras de pimiento y perejil picado.",
+      "ingredientes": [
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "texto": "Acompañar con ensaladas.",
+      "ingredientes": [
+        4
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "reposo": 120
+  },
+  "revisado_v2": false
+}

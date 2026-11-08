@@ -1,0 +1,77 @@
+{
+  "titulo": "Confites de Coco",
+  "categoria": "dulces",
+  "tags": [
+    "confites de coco",
+    "coco",
+    "leche condensada",
+    "dulce",
+    "aperitivo"
+  ],
+  "imagen": null,
+  "tiempo": "20 min",
+  "porciones": "6 a 8 personas",
+  "dificultad": "fácil",
+  "tecnica": "Horno",
+  "ingredientes": [
+    "250 g de coco rallado",
+    "1 tarro de 397 g de leche condensada"
+  ],
+  "pasos": [
+    "Mezclar la leche condensada con el coco rallado.",
+    "Formar bolitas y revolcarlas en coco.",
+    "Ponerlas unos minutos al horno suave (150 °C) para que se sequen, sin dorar."
+  ],
+  "dato": "El horno debe estar muy suave para secar sin dorar; si prefieres, puedes dejarlas secar al aire. Los confites de coco son un dulce tradicional de la once chilena, y se hacen en pocos minutos con dos ingredientes.",
+  "errores": [
+    {
+      "error": "Los confites me quedaron muy húmedos",
+      "solucion": "Añade un poco más de coco rallado a la mezcla o déjalos más tiempo en horno suave."
+    },
+    {
+      "error": "Los confites se me doraron de más",
+      "solucion": "El horno estaba muy fuerte. Usa horno suave (150 °C) y retíralos apenas estén secos, antes de que tomen color."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "5 días."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 250,
+      "unidad": "g",
+      "nombre": "coco",
+      "nota": "rallado",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "tarro",
+      "nombre": "leche condensada",
+      "nota": "397 g",
+      "escalable": true
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Mezclar la leche condensada con el coco rallado.",
+      "ingredientes": [
+        1,
+        2
+      ]
+    },
+    {
+      "texto": "Formar bolitas y revolcarlas en coco.",
+      "ingredientes": [
+        1
+      ]
+    },
+    {
+      "texto": "Ponerlas unos minutos al horno suave (150 °C) para que se sequen, sin dorar."
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 20
+  },
+  "revisado_v2": false
+}

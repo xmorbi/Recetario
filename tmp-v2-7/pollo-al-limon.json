@@ -1,0 +1,159 @@
+{
+  "titulo": "Pollo al limón",
+  "categoria": "principales",
+  "tags": [
+    "pollo",
+    "limón",
+    "sartén",
+    "horno",
+    "plato principal",
+    "simple"
+  ],
+  "imagen": null,
+  "tiempo": "50 min",
+  "porciones": "4 personas",
+  "dificultad": "fácil",
+  "tecnica": "Sartén u horno",
+  "ingredientes": [
+    "4 trutros de pollo (o 1 pollo trozado)",
+    "Jugo de 3 limones",
+    "2 cucharadas de mantequilla",
+    "2 cucharadas de aceite",
+    "2 dientes de ajo picados",
+    "1 cucharadita de azúcar",
+    "Sal, pimienta y orégano"
+  ],
+  "pasos": [
+    "Sazona el pollo con sal, pimienta y orégano. Marina en el jugo de 2 limones por 30 minutos.",
+    "Calienta la mantequilla y el aceite en una sartén grande. Dora el pollo por ambos lados.",
+    "Agrega el ajo, el jugo del tercer limón y el azúcar. Tapa y cocina 25-30 minutos a fuego medio, dando vuelta cada tanto.",
+    "Destapa y deja reducir la salsa 5 minutos. Rectifica la sal.",
+    "Sirve con la salsa por encima y acompañado de arroz o papas."
+  ],
+  "dato": "El pollo al limón es un plato simple pero elegante, típico de las casas chilenas. Se puede hacer en sartén o al horno. El limón le da un sabor ácido que equilibra la grasa del pollo. Es una de esas recetas que cada familia hace a su manera.",
+  "errores": [
+    {
+      "error": "Sabe muy ácido",
+      "solucion": "Usar demasiado limón. Empieza con 2 limones y ajusta. El azúcar equilibra la acidez."
+    },
+    {
+      "error": "Pollo seco",
+      "solucion": "Cocinarlo demasiado o sin tapar. Cocina tapado para que el pollo se mantenga jugoso."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días en recipiente hermético.",
+    "congelador": "Hasta 2 meses.",
+    "recalentar": "A fuego lento con su salsa."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 4,
+      "unidad": "trutro",
+      "nombre": "pollo",
+      "nota": "o 1 pollo trozado",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "jugo de limones",
+      "nota": "de 3 limones",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "mantequilla",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "aceite",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "diente",
+      "nombre": "ajo",
+      "nota": "picados",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharadita",
+      "nombre": "azúcar",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal, pimienta y orégano",
+      "nota": "a gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Sazona el pollo con sal, pimienta y orégano. Marina en el jugo de 2 limones por 30 minutos.",
+      "ingredientes": [
+        1,
+        2,
+        7
+      ],
+      "timers": [
+        {
+          "minutos": 30,
+          "etiqueta": "30 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Calienta la mantequilla y el aceite en una sartén grande. Dora el pollo por ambos lados.",
+      "ingredientes": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "texto": "Agrega el ajo, el jugo del tercer limón y el azúcar. Tapa y cocina 25-30 minutos a fuego medio, dando vuelta cada tanto.",
+      "ingredientes": [
+        2,
+        5,
+        6
+      ],
+      "timers": [
+        {
+          "minutos": 30,
+          "etiqueta": "25-30 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Destapa y deja reducir la salsa 5 minutos. Rectifica la sal.",
+      "ingredientes": [
+        7
+      ],
+      "timers": [
+        {
+          "minutos": 5,
+          "etiqueta": "5 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Sirve con la salsa por encima y acompañado de arroz o papas.",
+      "ingredientes": [
+        7
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "preparacion": 5,
+    "reposo": 30,
+    "coccion": 30
+  },
+  "revisado_v2": false
+}

@@ -1,0 +1,182 @@
+{
+  "titulo": "Sopa de verduras",
+  "categoria": "sopas",
+  "tags": [
+    "sopa",
+    "verduras",
+    "olla",
+    "saludable",
+    "cotidiano",
+    "vegetariano"
+  ],
+  "imagen": null,
+  "tiempo": "35 min",
+  "porciones": "4 personas",
+  "dificultad": "muy fácil",
+  "tecnica": "Olla",
+  "ingredientes": [
+    "1 cebolla picada",
+    "2 zanahorias en cubos",
+    "2 papas en cubos",
+    "1 ramita de apio picada",
+    "1 pimiento rojo en cubos",
+    "1 taza de porotos verdes picados",
+    "1 taza de arroz o fideos (opcional)",
+    "1,5 L de caldo de verduras",
+    "2 cucharadas de aceite",
+    "Sal, pimienta y orégano"
+  ],
+  "pasos": [
+    "Sofríe la cebolla y el apio en aceite hasta que estén tiernos.",
+    "Agrega la zanahoria y el pimiento. Cocina 5 minutos.",
+    "Vierte el caldo y lleva a hervor.",
+    "Añade las papas y los porotos verdes. Cocina 15 minutos.",
+    "Si usas arroz o fideos, agrégalos y cocina según el tiempo indicado.",
+    "Condimenta con sal, pimienta y orégano. Sirve caliente."
+  ],
+  "dato": "La sopa de verduras es la sopa más versátil y cotidiana de Chile. Se hace con las verduras que haya en la casa. Es el plato de invierno por excelencia y se sirve como entrada o plato único. Cada familia tiene su versión.",
+  "errores": [
+    {
+      "error": "Se me deshicieron las verduras",
+      "solucion": "No las cocines todas juntas ni de más; agrega las verduras por tandas, primero las duras (zanahoria, papa) y después las blandas (porotos verdes)."
+    },
+    {
+      "error": "Me quedó soso el caldo",
+      "solucion": "No omitas el sofrito inicial; sofríe las verduras al principio para darle sabor a la sopa."
+    }
+  ],
+  "conservacion": {
+    "refrigerador": "Hasta 3 días en recipiente hermético.",
+    "congelador": "Hasta 2 meses, idealmente sin papas.",
+    "recalentar": "A fuego lento con un poco de caldo."
+  },
+  "ingredientes_v2": [
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cebolla",
+      "nota": "picada",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "zanahorias",
+      "nota": "en cubos",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "papas",
+      "nota": "en cubos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "ramita",
+      "nombre": "apio",
+      "nota": "picada",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pimiento rojo",
+      "nota": "en cubos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "porotos verdes",
+      "nota": "picados",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "taza",
+      "nombre": "arroz o fideos",
+      "nota": "opcional",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "1,5 l de caldo de verduras",
+      "nota": "a gusto",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "aceite",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal, pimienta y orégano",
+      "nota": "a gusto",
+      "escalable": false
+    }
+  ],
+  "pasos_v2": [
+    {
+      "texto": "Sofríe la cebolla y el apio en aceite hasta que estén tiernos.",
+      "ingredientes": [
+        1,
+        4,
+        9
+      ]
+    },
+    {
+      "texto": "Agrega la zanahoria y el pimiento. Cocina 5 minutos.",
+      "ingredientes": [
+        2,
+        5
+      ],
+      "timers": [
+        {
+          "minutos": 5,
+          "etiqueta": "5 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Vierte el caldo y lleva a hervor.",
+      "ingredientes": [
+        8
+      ]
+    },
+    {
+      "texto": "Añade las papas y los porotos verdes. Cocina 15 minutos.",
+      "ingredientes": [
+        3,
+        6
+      ],
+      "timers": [
+        {
+          "minutos": 15,
+          "etiqueta": "15 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Si usas arroz o fideos, agrégalos y cocina según el tiempo indicado.",
+      "ingredientes": [
+        7
+      ]
+    },
+    {
+      "texto": "Condimenta con sal, pimienta y orégano. Sirve caliente.",
+      "ingredientes": [
+        10
+      ]
+    }
+  ],
+  "tiempo_v2": {
+    "coccion": 20
+  },
+  "revisado_v2": false
+}

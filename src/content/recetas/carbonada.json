@@ -59,7 +59,8 @@
     {
       "cantidad": 500,
       "unidad": "g",
-      "nombre": "posta de vacuno picada en cubos",
+      "nombre": "posta de vacuno",
+      "nota": "picada en cubos",
       "escalable": true
     },
     {
@@ -71,37 +72,43 @@
     {
       "cantidad": 1,
       "unidad": null,
-      "nombre": "cebolla picada en cubitos",
+      "nombre": "cebolla",
+      "nota": "picada en cubitos",
       "escalable": true
     },
     {
       "cantidad": 0.25,
       "unidad": null,
-      "nombre": "pimentón rojo picado",
+      "nombre": "pimentón rojo",
+      "nota": "picado",
       "escalable": true
     },
     {
       "cantidad": 2,
       "unidad": null,
-      "nombre": "papas medianas en cubos",
+      "nombre": "papas",
+      "nota": "medianas, en cubos",
       "escalable": true
     },
     {
       "cantidad": 1,
       "unidad": null,
-      "nombre": "zanahoria en rodajas",
+      "nombre": "zanahoria",
+      "nota": "en rodajas",
       "escalable": true
     },
     {
       "cantidad": 1,
       "unidad": "taza",
-      "nombre": "zapallo en cubos",
+      "nombre": "zapallo",
+      "nota": "en cubos",
       "escalable": true
     },
     {
       "cantidad": 1,
       "unidad": null,
-      "nombre": "choclo desgranado",
+      "nombre": "choclo",
+      "nota": "desgranado",
       "escalable": true
     },
     {
@@ -112,14 +119,15 @@
     },
     {
       "cantidad": 1,
-      "unidad": "litro",
+      "unidad": "L",
       "nombre": "agua caliente o caldo de carne",
       "escalable": true
     },
     {
-      "cantidad": null,
+      "cantidad": 1,
       "unidad": null,
-      "nombre": "Sal, pimienta, orégano, comino y ají de color",
+      "nombre": "sal, pimienta, orégano, comino y ají de color",
+      "nota": "a gusto",
       "escalable": false
     }
   ],
@@ -130,34 +138,47 @@
     },
     {
       "texto": "Incorpora la cebolla, el pimentón y los condimentos (ají de color, orégano, comino, sal y pimienta). Sofríe por 5 minutos.",
+      "ingredientes": [3, 4, 11],
       "timers": [
-        { "minutos": 5, "etiqueta": "5 min" }
-      ],
-      "ingredientes": [3, 4, 11]
+        {
+          "minutos": 5,
+          "etiqueta": "sofreír aliños"
+        }
+      ]
     },
     {
       "texto": "Vierte el agua o caldo caliente, tapa y cocina a fuego medio por 20 minutos.",
+      "ingredientes": [10],
       "timers": [
-        { "minutos": 20, "etiqueta": "20 min" }
-      ],
-      "ingredientes": [10]
+        {
+          "minutos": 20,
+          "etiqueta": "cocción inicial de la carne"
+        }
+      ]
     },
     {
       "texto": "Agrega las papas, la zanahoria, el zapallo y el choclo. Cocina por 15 minutos más.",
+      "ingredientes": [5, 6, 7, 8],
       "timers": [
-        { "minutos": 15, "etiqueta": "15 min" }
-      ],
-      "ingredientes": [5, 6, 7, 8]
+        {
+          "minutos": 15,
+          "etiqueta": "cocinar verduras"
+        }
+      ]
     },
     {
       "texto": "Añade el arroz y cocina hasta que los granos estén tiernos y las verduras blandas (unos 15 minutos).",
+      "ingredientes": [9],
       "timers": [
-        { "minutos": 15, "etiqueta": "15 min" }
-      ],
-      "ingredientes": [9]
+        {
+          "minutos": 15,
+          "etiqueta": "cocinar arroz"
+        }
+      ]
     },
     {
-      "texto": "Rectifica la sal y sirve caliente en platos hondos."
+      "texto": "Rectifica la sal y sirve caliente en platos hondos.",
+      "ingredientes": [11]
     }
   ],
   "tiempo_v2": {
