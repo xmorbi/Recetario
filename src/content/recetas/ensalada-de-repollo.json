@@ -1,34 +1,12 @@
 {
   "titulo": "Ensalada de repollo",
   "categoria": "ensaladas",
-  "tags": [
-    "ensalada",
-    "repollo",
-    "fresca",
-    "acompañamiento",
-    "vegetariano",
-    "economico"
-  ],
+  "tags": ["ensalada", "repollo", "fresca", "acompañamiento", "vegetariano", "economico"],
   "imagen": null,
   "tiempo": "10 min",
   "porciones": "4 personas",
   "dificultad": "fácil",
   "tecnica": "Fresca",
-  "ingredientes": [
-    "1/2 repollo mediano",
-    "1 zanahoria rallada",
-    "2 cucharadas (30 ml) de aceite",
-    "1 cucharada (15 ml) de vinagre",
-    "Sal y pimienta",
-    "Jugo de limón (opcional)"
-  ],
-  "pasos": [
-    "Corta el repollo en tiras finas. Lávalo y escúrrelo bien.",
-    "Ralla la zanahoria.",
-    "Mezcla el repollo con la zanahoria.",
-    "Condimenta con aceite, vinagre, sal y pimienta. Si quieres, agrega jugo de limón.",
-    "Sirve fría."
-  ],
   "dato": "La ensalada de repollo es la ensalada más económica de la cocina chilena. Se hace con repollo y zanahoria, y se condimenta con aceite y vinagre. Es crocante y fresca, y acompaña muy bien las carnes y los guisos.",
   "errores": [
     {
@@ -92,31 +70,19 @@
   "pasos_v2": [
     {
       "texto": "Corta el repollo en tiras finas. Lávalo y escúrrelo bien.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Ralla la zanahoria.",
-      "ingredientes": [
-        2
-      ]
+      "ingredientes": [2]
     },
     {
       "texto": "Mezcla el repollo con la zanahoria.",
-      "ingredientes": [
-        1,
-        2
-      ]
+      "ingredientes": [1, 2]
     },
     {
       "texto": "Condimenta con aceite, vinagre, sal y pimienta. Si quieres, agrega jugo de limón.",
-      "ingredientes": [
-        3,
-        4,
-        5,
-        6
-      ]
+      "ingredientes": [3, 4, 5, 6]
     },
     {
       "texto": "Sirve fría."

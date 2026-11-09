@@ -31,12 +31,11 @@ const NUM = '(?:\\d+\\s+\\d+\\/\\d+|\\d+\\/\\d+|\\d+[.,]\\d+|\\d+)';
 const WORD_NUM = '(?:\\bun[ao]?\\b|\\bmedi[ao]?\\b)';
 const ANY_NUM = '(?:' + WORD_NUM + '|' + NUM + ')';
 const RANGE_SEP = '(?:[-–]|\\ba\\b|\\bal\\b)';
-const UNIT = '(?:hrs?|horas?|h|mins?|minutos?|min|segs?|segundos?|s(?![\\wáéíóúüñÁÉÍÓÚÜÑ])|d[ií]as?)';
+const UNIT =
+  '(?:hrs?|horas?|h|mins?|minutos?|min|segs?|segundos?|s(?![\\wáéíóúüñÁÉÍÓÚÜÑ])|d[ií]as?)';
 
 const RE = new RegExp(
-  '(' + ANY_NUM + ')' +
-  '(?:\\s*' + RANGE_SEP + '\\s*(' + ANY_NUM + '))?' +
-  '\\s*(' + UNIT + ')\\b',
+  '(' + ANY_NUM + ')' + '(?:\\s*' + RANGE_SEP + '\\s*(' + ANY_NUM + '))?' + '\\s*(' + UNIT + ')\\b',
   'gi'
 );
 
@@ -46,8 +45,12 @@ const RE = new RegExp(
    "N hora(s) y cuarto"      → N*60 + 15
 */
 const RE_HORA_MIN = new RegExp(
-  '(' + ANY_NUM + ')\\s*(?:hrs?|horas?|h)\\s+y\\s+' +
-  '(' + ANY_NUM + ')\\s*(?:mins?|minutos?|min)\\b',
+  '(' +
+    ANY_NUM +
+    ')\\s*(?:hrs?|horas?|h)\\s+y\\s+' +
+    '(' +
+    ANY_NUM +
+    ')\\s*(?:mins?|minutos?|min)\\b',
   'gi'
 );
 
@@ -56,15 +59,13 @@ const RE_HORA_MEDIA = new RegExp(
   'gi'
 );
 
-const RE_HORA_CUARTO = new RegExp(
-  '(' + ANY_NUM + ')\\s*(?:hrs?|horas?|h)\\s+y\\s+cuarto\\b',
-  'gi'
-);
+const RE_HORA_CUARTO = new RegExp('(' + ANY_NUM + ')\\s*(?:hrs?|horas?|h)\\s+y\\s+cuarto\\b', 'gi');
 
 // Verbos que indican que "antes de X" precede a una acción posterior.
 // Si la primera palabra tras "antes de [objeto]" coincide, es una
 // referencia temporal → descartar el timer.
-const RE_VERBO_ACCION = /^(?:agrega|agregar|añade|añadir|pon|pone|poner|saca|sacar|retira|retirar|mezcla|mezclar|revuelve|revolver|bate|batir|tapa|tapar|destapa|destapar|apaga|apagar|enciende|encender|incorpora|incorporar|vierte|verter|baña|bañar|rocía|rociar|espolvorea|espolvorear|sazona|sazonar|deja|dejar|reposa|reposar|refrigera|refrigerar|hornea|hornear|cocina|cocinar|calienta|calentar|sofríe|sofreír|saltea|saltear|sirve|servir|unta|untar|rellena|rellenar|amasa|amasar|estira|estirar|corta|cortar)$/i;
+const RE_VERBO_ACCION =
+  /^(?:agrega|agregar|añade|añadir|pon|pone|poner|saca|sacar|retira|retirar|mezcla|mezclar|revuelve|revolver|bate|batir|tapa|tapar|destapa|destapar|apaga|apagar|enciende|encender|incorpora|incorporar|vierte|verter|baña|bañar|rocía|rociar|espolvorea|espolvorear|sazona|sazonar|deja|dejar|reposa|reposar|refrigera|refrigerar|hornea|hornear|cocina|cocinar|calienta|calentar|sofríe|sofreír|saltea|saltear|sirve|servir|unta|untar|rellena|rellenar|amasa|amasar|estira|estirar|corta|cortar)$/i;
 
 function parseNum(str) {
   str = String(str).trim().toLowerCase();
@@ -169,9 +170,12 @@ export function detectarTiempos(texto) {
   while ((m = RE.exec(t)) !== null) {
     // Si el match cae dentro de una duración compuesta ya detectada,
     // no lo contamos dos veces.
-    if (compositeRanges.some(function (r) {
-      return m.index < r[1] && (m.index + m[0].length) > r[0];
-    })) continue;
+    if (
+      compositeRanges.some(function (r) {
+        return m.index < r[1] && m.index + m[0].length > r[0];
+      })
+    )
+      continue;
 
     const antes = t.slice(0, m.index);
     const despues = t.slice(m.index + m[0].length);
@@ -207,6 +211,10 @@ export function detectarTiempos(texto) {
   }
 
   // --- 5) Ordenar por posición en el texto y devolver ---
-  out.sort(function (a, b) { return a.pos - b.pos; });
-  return out.map(function (x) { return { minutos: x.minutos, etiqueta: x.etiqueta }; });
+  out.sort(function (a, b) {
+    return a.pos - b.pos;
+  });
+  return out.map(function (x) {
+    return { minutos: x.minutos, etiqueta: x.etiqueta };
+  });
 }

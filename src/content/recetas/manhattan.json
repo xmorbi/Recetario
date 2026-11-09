@@ -1,32 +1,12 @@
 {
   "titulo": "Manhattan",
   "categoria": "bebidas",
-  "tags": [
-    "manhattan",
-    "whisky",
-    "vermut",
-    "amargo",
-    "cereza marrasquino",
-    "tragos"
-  ],
+  "tags": ["manhattan", "whisky", "vermut", "amargo", "cereza marrasquino", "tragos"],
   "imagen": null,
   "tiempo": "5 min",
   "porciones": "1 persona",
   "dificultad": "fácil",
   "tecnica": "Licuadora",
-  "ingredientes": [
-    "2/3 de whisky",
-    "1/3 de vermut",
-    "Un chorrito de amargo",
-    "Cerezas marrasquino",
-    "Hielo"
-  ],
-  "pasos": [
-    "Picar el hielo en la licuadora.",
-    "Incorporar los licores y batir.",
-    "Servir en vasos de cóctel.",
-    "Agregar 1 cereza marrasquino."
-  ],
   "dato": "El chorrito de amargo equilibra el dulzor del vermut; la cereza marrasquino es el toque de decoración clásico.",
   "errores": [
     {

@@ -7,30 +7,20 @@
   "porciones": "2 personas",
   "dificultad": "muy fácil",
   "tecnica": "Mesa",
-  "ingredientes": [
-    "1 marraqueta o hallulla recién horneada (o 4 panes amasados pequeños)",
-    "1 palta Hass madura",
-    "2 huevos",
-    "150 g de queso chanco o mantecoso en láminas",
-    "2 cucharadas de mantequilla",
-    "2 cucharadas de manjar",
-    "2 bolsitas de té negro o 1 cucharada de café soluble",
-    "Leche para el té o café",
-    "Azúcar, sal y aceite"
-  ],
-  "pasos": [
-    "Pon el agua a hervir para el té. Mientras hierve, calienta los panes en el horno o tostador 2 minutos por lado.",
-    "Cocina los huevos fritos con un poco de aceite, dejando la yema líquida.",
-    "Pisa la palta con un tenedor, agrégale sal. No hace falta limón.",
-    "Pon en la mesa: el pan caliente, la palta, los huevos fritos, el queso en láminas, la mantequilla y el manjar.",
-    "Sirve el té con leche (o el café) bien caliente.",
-    "Cada persona arma el pan como prefiere: pan con palta, pan con queso, pan con huevo, pan con manjar. Los panes se repiten."
-  ],
   "dato": "La once es una institución chilena. Aunque su nombre viene de la hora inglesa (\"elevenses\", las 11 de la mañana), en Chile se consolidó como la merienda de la tarde (6-8 pm). Es una comida informal pero comunitaria: toda la familia se sienta alrededor de la mesa, se reparten los panes, se conversa. Hay lugares donde la once reemplaza la cena. En Chile se come pan a toda hora, y la once es la excusa perfecta.",
   "errores": [
-    { "error": "Pan frío", "solucion": "No calentar el pan antes de la once. Un pan recién horneado o tostado es la base. El pan del día anterior sin calentar arruina el ritual." },
-    { "error": "Palta negra o marrón", "solucion": "Usar palta poco madura. La palta debe ceder al presionar sin deshacerse. Si está dura, guárdala con una manzana 2 días." },
-    { "error": "Falta de variedad", "solucion": "Poner solo una cosa. La gracia de la once completa es la variedad: palta, queso, huevo, manjar. Cada uno elige." }
+    {
+      "error": "Pan frío",
+      "solucion": "No calentar el pan antes de la once. Un pan recién horneado o tostado es la base. El pan del día anterior sin calentar arruina el ritual."
+    },
+    {
+      "error": "Palta negra o marrón",
+      "solucion": "Usar palta poco madura. La palta debe ceder al presionar sin deshacerse. Si está dura, guárdala con una manzana 2 días."
+    },
+    {
+      "error": "Falta de variedad",
+      "solucion": "Poner solo una cosa. La gracia de la once completa es la variedad: palta, queso, huevo, manjar. Cada uno elige."
+    }
   ],
   "conservacion": {
     "refrigerador": "Los componentes se guardan por separado hasta 3 días.",
@@ -38,25 +28,107 @@
     "recalentar": "El pan en tostador u horno. Los huevos se hacen al momento."
   },
   "ingredientes_v2": [
-    { "cantidad": 1, "unidad": null, "nombre": "marraqueta o hallulla", "nota": "recién horneada; o 4 panes amasados pequeños", "escalable": true },
-    { "cantidad": 1, "unidad": null, "nombre": "palta hass", "nota": "madura", "escalable": true },
-    { "cantidad": 2, "unidad": null, "nombre": "huevos", "escalable": true },
-    { "cantidad": 150, "unidad": "g", "nombre": "queso chanco o mantecoso", "nota": "en láminas", "escalable": true },
-    { "cantidad": 2, "unidad": "cucharada", "nombre": "mantequilla", "escalable": true },
-    { "cantidad": 2, "unidad": "cucharada", "nombre": "manjar", "escalable": true },
-    { "cantidad": 2, "unidad": null, "nombre": "bolsitas de té negro", "escalable": true },
-    { "cantidad": 1, "unidad": "cucharada", "nombre": "café soluble", "seccion": "Opcional", "escalable": true },
-    { "cantidad": 1, "unidad": null, "nombre": "leche", "nota": "para el té o café", "escalable": true },
-    { "cantidad": 1, "unidad": null, "nombre": "azúcar, sal y aceite", "nota": "a gusto", "escalable": false }
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "marraqueta o hallulla",
+      "nota": "recién horneada; o 4 panes amasados pequeños",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "palta hass",
+      "nota": "madura",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "huevos",
+      "escalable": true
+    },
+    {
+      "cantidad": 150,
+      "unidad": "g",
+      "nombre": "queso chanco o mantecoso",
+      "nota": "en láminas",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "mantequilla",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "manjar",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "bolsitas de té negro",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "café soluble",
+      "seccion": "Opcional",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "leche",
+      "nota": "para el té o café",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "azúcar, sal y aceite",
+      "nota": "a gusto",
+      "escalable": false
+    }
   ],
   "pasos_v2": [
-    { "texto": "Pon el agua a hervir para el té. Mientras hierve, calienta los panes en el horno o tostador 2 minutos por lado.", "ingredientes": [1, 7], "timers": [{ "minutos": 2, "etiqueta": "2 min por lado" }] },
-    { "texto": "Cocina los huevos fritos con un poco de aceite, dejando la yema líquida.", "ingredientes": [3, 10] },
-    { "texto": "Pisa la palta con un tenedor, agrégale sal. No hace falta limón.", "ingredientes": [2, 10] },
-    { "texto": "Pon en la mesa: el pan caliente, la palta, los huevos fritos, el queso en láminas, la mantequilla y el manjar.", "ingredientes": [1, 2, 3, 4, 5, 6] },
-    { "texto": "Sirve el té con leche (o el café) bien caliente.", "ingredientes": [7, 8, 9] },
-    { "texto": "Cada persona arma el pan como prefiere: pan con palta, pan con queso, pan con huevo, pan con manjar. Los panes se repiten.", "ingredientes": [1, 2, 3, 4, 6] }
+    {
+      "texto": "Pon el agua a hervir para el té. Mientras hierve, calienta los panes en el horno o tostador 2 minutos por lado.",
+      "ingredientes": [1, 7],
+      "timers": [
+        {
+          "minutos": 2,
+          "etiqueta": "2 min por lado"
+        }
+      ]
+    },
+    {
+      "texto": "Cocina los huevos fritos con un poco de aceite, dejando la yema líquida.",
+      "ingredientes": [3, 10]
+    },
+    {
+      "texto": "Pisa la palta con un tenedor, agrégale sal. No hace falta limón.",
+      "ingredientes": [2, 10]
+    },
+    {
+      "texto": "Pon en la mesa: el pan caliente, la palta, los huevos fritos, el queso en láminas, la mantequilla y el manjar.",
+      "ingredientes": [1, 2, 3, 4, 5, 6]
+    },
+    {
+      "texto": "Sirve el té con leche (o el café) bien caliente.",
+      "ingredientes": [7, 8, 9]
+    },
+    {
+      "texto": "Cada persona arma el pan como prefiere: pan con palta, pan con queso, pan con huevo, pan con manjar. Los panes se repiten.",
+      "ingredientes": [1, 2, 3, 4, 6]
+    }
   ],
-  "tiempo_v2": { "preparacion": 20 },
+  "tiempo_v2": {
+    "preparacion": 20
+  },
   "revisado_v2": true
 }

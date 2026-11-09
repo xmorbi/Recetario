@@ -1,39 +1,12 @@
 {
   "titulo": "Cazuela de pescado",
   "categoria": "principales",
-  "tags": [
-    "cazuela",
-    "pescado",
-    "sopa",
-    "olla",
-    "costa",
-    "invierno"
-  ],
+  "tags": ["cazuela", "pescado", "sopa", "olla", "costa", "invierno"],
   "imagen": null,
   "tiempo": "40 min",
   "porciones": "4 personas",
   "dificultad": "fácil",
   "tecnica": "Olla",
-  "ingredientes": [
-    "600 g de pescado blanco en trozos (congrio, merluza, reineta)",
-    "4 papas medianas en trozos",
-    "1 cebolla grande picada",
-    "2 dientes de ajo picados",
-    "1 pimentón rojo en cubos",
-    "2 tomates maduros picados",
-    "1 zanahoria en rodajas",
-    "1,5 L de caldo de pescado o agua",
-    "1/2 taza (125 ml) de vino blanco",
-    "Sal, pimienta, orégano y merkén"
-  ],
-  "pasos": [
-    "Sofríe la cebolla, el ajo y el pimentón hasta que estén transparentes.",
-    "Agrega el tomate y la zanahoria. Condimenta y cocina 5 minutos.",
-    "Vierte el vino blanco y deja evaporar.",
-    "Añade el caldo y las papas. Cocina 15 minutos.",
-    "Incorpora el pescado y cocina 5-7 minutos, hasta que esté cocido pero firme.",
-    "Rectifica la sal y sirve con perejil fresco."
-  ],
   "dato": "La cazuela de pescado es la versión marina de la cazuela de vacuno. Es típica de la costa chilena y se prepara con el pescado de la zona. El pescado se agrega al final para que no se deshaga.",
   "errores": [
     {
@@ -125,18 +98,11 @@
   "pasos_v2": [
     {
       "texto": "Sofríe la cebolla, el ajo y el pimentón hasta que estén transparentes.",
-      "ingredientes": [
-        3,
-        4,
-        5
-      ]
+      "ingredientes": [3, 4, 5]
     },
     {
       "texto": "Agrega el tomate y la zanahoria. Condimenta y cocina 5 minutos.",
-      "ingredientes": [
-        6,
-        7
-      ],
+      "ingredientes": [6, 7],
       "timers": [
         {
           "minutos": 5,
@@ -146,17 +112,11 @@
     },
     {
       "texto": "Vierte el vino blanco y deja evaporar.",
-      "ingredientes": [
-        1,
-        9
-      ]
+      "ingredientes": [1, 9]
     },
     {
       "texto": "Añade el caldo y las papas. Cocina 15 minutos.",
-      "ingredientes": [
-        2,
-        8
-      ],
+      "ingredientes": [2, 8],
       "timers": [
         {
           "minutos": 15,
@@ -166,10 +126,7 @@
     },
     {
       "texto": "Incorpora el pescado y cocina 5-7 minutos, hasta que esté cocido pero firme.",
-      "ingredientes": [
-        1,
-        8
-      ],
+      "ingredientes": [1, 8],
       "timers": [
         {
           "minutos": 7,
@@ -179,9 +136,7 @@
     },
     {
       "texto": "Rectifica la sal y sirve con perejil fresco.",
-      "ingredientes": [
-        10
-      ]
+      "ingredientes": [10]
     }
   ],
   "tiempo_v2": {

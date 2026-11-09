@@ -1,45 +1,12 @@
 {
   "titulo": "Salpicón",
   "categoria": "ensaladas",
-  "tags": [
-    "salpicón",
-    "choritos",
-    "atún",
-    "papas",
-    "verduras",
-    "entrada"
-  ],
+  "tags": ["salpicón", "choritos", "atún", "papas", "verduras", "entrada"],
   "imagen": null,
   "tiempo": "40 min",
   "porciones": "6 a 8 personas",
   "dificultad": "fácil",
   "tecnica": "Hervido y mezcla",
-  "ingredientes": [
-    "6 papas",
-    "1 zanahoria grande",
-    "2 lechugas",
-    "1 tarro de atún",
-    "1 kg de choritos",
-    "1 cebolla",
-    "1 taza de aceitunas negras",
-    "2 tomates",
-    "3 pepinillos en vinagre",
-    "2 cucharaditas de salsa inglesa",
-    "Sal",
-    "Pimienta",
-    "Jugo de limón",
-    "Aceite"
-  ],
-  "pasos": [
-    "Cocer las papas con hollejo, pelarlas y cortarlas en cubos, igualmente la zanahoria.",
-    "Lavar la lechuga y picarla en tiras de regular tamaño.",
-    "Limpiar los choritos, cocerlos, desconchar y quitarles las piedrecillas.",
-    "Pelar los tomates y cortarlos en cubos.",
-    "Picar en cuadritos finos la cebolla y pepinillos.",
-    "Desmenuzar el atún.",
-    "Mezclar todos los ingredientes y aliñar con sal, pimienta, salsa inglesa, limón y aceite.",
-    "Decorar con huevo duro y perejil picado si se desea."
-  ],
   "dato": "El salpicón admite variaciones: puedes agregar arvejas, choclo o palta. Lo importante es aliñar justo antes de servir para que las verduras no se ablanden.",
   "errores": [
     {
@@ -144,52 +111,31 @@
   "pasos_v2": [
     {
       "texto": "Cocer las papas con hollejo, pelarlas y cortarlas en cubos, igualmente la zanahoria.",
-      "ingredientes": [
-        1,
-        2
-      ]
+      "ingredientes": [1, 2]
     },
     {
       "texto": "Lavar la lechuga y picarla en tiras de regular tamaño.",
-      "ingredientes": [
-        3
-      ]
+      "ingredientes": [3]
     },
     {
       "texto": "Limpiar los choritos, cocerlos, desconchar y quitarles las piedrecillas.",
-      "ingredientes": [
-        5
-      ]
+      "ingredientes": [5]
     },
     {
       "texto": "Pelar los tomates y cortarlos en cubos.",
-      "ingredientes": [
-        8
-      ]
+      "ingredientes": [8]
     },
     {
       "texto": "Picar en cuadritos finos la cebolla y pepinillos.",
-      "ingredientes": [
-        6,
-        9
-      ]
+      "ingredientes": [6, 9]
     },
     {
       "texto": "Desmenuzar el atún.",
-      "ingredientes": [
-        4
-      ]
+      "ingredientes": [4]
     },
     {
       "texto": "Mezclar todos los ingredientes y aliñar con sal, pimienta, salsa inglesa, limón y aceite.",
-      "ingredientes": [
-        7,
-        10,
-        11,
-        12,
-        13,
-        14
-      ]
+      "ingredientes": [7, 10, 11, 12, 13, 14]
     },
     {
       "texto": "Decorar con huevo duro y perejil picado si se desea."

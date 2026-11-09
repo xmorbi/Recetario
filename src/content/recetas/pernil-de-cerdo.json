@@ -1,40 +1,12 @@
 {
   "titulo": "Pernil de cerdo",
   "categoria": "principales",
-  "tags": [
-    "cerdo",
-    "pernil",
-    "horno",
-    "fiesta",
-    "sandwich",
-    "navidad"
-  ],
+  "tags": ["cerdo", "pernil", "horno", "fiesta", "sandwich", "navidad"],
   "imagen": null,
   "tiempo": "3 h + reposo",
   "porciones": "10 a 12 personas",
   "dificultad": "media",
   "tecnica": "Horno",
-  "ingredientes": [
-    "1 pernil de cerdo de 4 a 5 kg (con hueso)",
-    "6 dientes de ajo machacados",
-    "2 cucharadas de sal gruesa",
-    "1 cucharada de pimienta negra molida",
-    "2 cucharadas de ají de color",
-    "1 cucharada de orégano seco",
-    "1 taza de vinagre de vino tinto",
-    "1 taza de vino blanco",
-    "2 cebollas en pluma",
-    "2 zanahorias en rodajas",
-    "2 hojas de laurel"
-  ],
-  "pasos": [
-    "Mezcla el ajo, la sal, la pimienta, el ají de color y el orégano para formar una pasta. Unta el pernil por todos lados.",
-    "Coloca el pernil en una fuente para horno con las cebollas, zanahorias y laurel. Vierte el vinagre y el vino.",
-    "Marina en el refrigerador al menos 12 horas (mejor 24), dando vuelta cada tanto.",
-    "Precalienta el horno a 180 °C. Cubre el pernil con papel aluminio y hornea 2 horas, bañándolo con su jugo cada 30 minutos.",
-    "Sube el horno a 200 °C, retira el aluminio y hornea 30-40 minutos más, hasta que la piel esté dorada y crujiente.",
-    "Deja reposar 15 minutos antes de cortar. Sirve en láminas, con su jugo y las verduras asadas."
-  ],
   "dato": "El pernil de cerdo es el plato central de la Navidad y Año Nuevo chilenos, aunque también se sirve en cumpleaños y fiestas. Se come caliente con papas o ensalada, y frío en sándwiches. En Chile se suele adobar con ají de color, orégano y ajo. La clave es la cocción lenta y el reposo antes de cortar.",
   "errores": [
     {
@@ -132,25 +104,11 @@
   "pasos_v2": [
     {
       "texto": "Mezcla el ajo, la sal, la pimienta, el ají de color y el orégano para formar una pasta. Unta el pernil por todos lados.",
-      "ingredientes": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ]
+      "ingredientes": [1, 2, 3, 4, 5, 6]
     },
     {
       "texto": "Coloca el pernil en una fuente para horno con las cebollas, zanahorias y laurel. Vierte el vinagre y el vino.",
-      "ingredientes": [
-        1,
-        7,
-        8,
-        9,
-        10,
-        11
-      ]
+      "ingredientes": [1, 7, 8, 9, 10, 11]
     },
     {
       "texto": "Marina en el refrigerador al menos 12 horas (mejor 24), dando vuelta cada tanto.",
@@ -158,9 +116,7 @@
     },
     {
       "texto": "Precalienta el horno a 180 °C. Cubre el pernil con papel aluminio y hornea 2 horas, bañándolo con su jugo cada 30 minutos.",
-      "ingredientes": [
-        1
-      ],
+      "ingredientes": [1],
       "timers": [
         {
           "minutos": 120,
@@ -179,11 +135,7 @@
     },
     {
       "texto": "Deja reposar 15 minutos antes de cortar. Sirve en láminas, con su jugo y las verduras asadas.",
-      "ingredientes": [
-        2,
-        9,
-        10
-      ],
+      "ingredientes": [2, 9, 10],
       "timers": [
         {
           "minutos": 15,

@@ -1,48 +1,12 @@
 {
   "titulo": "Medallones al Vino",
   "categoria": "principales",
-  "tags": [
-    "medallones al vino",
-    "filete",
-    "vino tinto",
-    "champiñones",
-    "queso",
-    "carnes"
-  ],
+  "tags": ["medallones al vino", "filete", "vino tinto", "champiñones", "queso", "carnes"],
   "imagen": null,
   "tiempo": "50 min (más maceración de 2 horas)",
   "porciones": "4 a 6 personas",
   "dificultad": "media",
   "tecnica": "Sartén y horno",
-  "ingredientes": [
-    "6 medallones de filete",
-    "1 1/2 cucharada de vino blanco",
-    "1 1/2 cucharada de vino tinto",
-    "1 cucharada de coñac",
-    "1 cucharadita de salsa inglesa",
-    "4 cucharadas de harina",
-    "3 huevos",
-    "1/4 taza de mantequilla",
-    "2 lonjas de jamón",
-    "2 cucharadas de champiñones frescos",
-    "1/2 cebolla",
-    "2 dientes de ajo",
-    "6 rebanadas de queso mantecoso",
-    "Pimienta",
-    "Sal"
-  ],
-  "pasos": [
-    "Limpiar y lavar los medallones de filete, condimentar con sal, pimienta, un poco de los vinos y el coñac.",
-    "Dejar macerando durante 2 horas.",
-    "Espolvorearles harina, pasarlos por los huevos batidos y freírlos en la mitad de la mantequilla caliente durante unos 5 minutos por cada lado.",
-    "Retirarlos de la sartén.",
-    "Agregar el resto de la mantequilla y freír la cebolla con el ajo picado en trozos, los champiñones cortados en láminas, el jamón cortado en tiras delgadas.",
-    "Agregar sal y pimienta, revolver con cuchara de madera durante 8 minutos.",
-    "Añadir el vino, coñac, salsa inglesa y cocinar unos minutos para evaporar los licores.",
-    "Colar los ingredientes de modo de formar una salsa.",
-    "Verter sobre los medallones que se han dispuesto en una fuente para horno, cubrir con las tajadas de queso y llevar a horno caliente hasta que esté derretido y empiece a dorarse el queso.",
-    "Servir inmediatamente bañados con la salsa."
-  ],
   "dato": "La maceración de 2 horas con los vinos y el coñac aporta sabor a la carne; no la omitas.",
   "errores": [
     {

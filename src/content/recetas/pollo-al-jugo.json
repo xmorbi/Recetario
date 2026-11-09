@@ -1,32 +1,12 @@
 {
   "titulo": "Pollo al jugo",
   "categoria": "principales",
-  "tags": [
-    "pollo",
-    "olla",
-    "plato principal",
-    "guiso"
-  ],
+  "tags": ["pollo", "olla", "plato principal", "guiso"],
   "imagen": null,
   "tiempo": "45 min",
   "porciones": "4 personas",
   "dificultad": "fácil",
   "tecnica": "Olla",
-  "ingredientes": [
-    "4 trutros de pollo sin piel",
-    "1 cebolla en pluma",
-    "1 zanahoria en rodajas",
-    "1 ajo picado",
-    "Aceite, sal, pimienta, laurel y orégano",
-    "1 L de agua hirviendo"
-  ],
-  "pasos": [
-    "Dora el pollo en aceite hasta sellar. Retira y reserva.",
-    "Sofríe la cebolla 5 min hasta que esté transparente.",
-    "Agrega el ajo, la zanahoria, el laurel, el orégano y el pollo.",
-    "Cubre con el agua hirviendo y cocina 30 min.",
-    "Sirve con puré, arroz o papas cocidas."
-  ],
   "dato": "El jugo que queda en la olla es la salsa; viértelo sobre el puré.",
   "errores": [
     {
@@ -89,17 +69,11 @@
   "pasos_v2": [
     {
       "texto": "Dora el pollo en aceite hasta sellar. Retira y reserva.",
-      "ingredientes": [
-        1,
-        5
-      ]
+      "ingredientes": [1, 5]
     },
     {
       "texto": "Sofríe la cebolla 5 min hasta que esté transparente.",
-      "ingredientes": [
-        2,
-        5
-      ],
+      "ingredientes": [2, 5],
       "timers": [
         {
           "minutos": 5,
@@ -109,17 +83,11 @@
     },
     {
       "texto": "Agrega el ajo, la zanahoria, el laurel, el orégano y el pollo.",
-      "ingredientes": [
-        1,
-        3,
-        4
-      ]
+      "ingredientes": [1, 3, 4]
     },
     {
       "texto": "Cubre con el agua hirviendo y cocina 30 min.",
-      "ingredientes": [
-        6
-      ],
+      "ingredientes": [6],
       "timers": [
         {
           "minutos": 30,

@@ -15,25 +15,6 @@
   "porciones": "2 a 3 personas",
   "dificultad": "fácil",
   "tecnica": "Sartén u horno",
-  "ingredientes": [
-    "2 tazas (400 g) de lentejas cocidas",
-    "1 zanahoria rallada",
-    "1/2 taza (50 g) de avena en copos",
-    "1 diente de ajo picado",
-    "Perejil picado a gusto",
-    "Sal",
-    "Pimienta",
-    "Comino (opcional)",
-    "Merkén (opcional)",
-    "Aceite para cocinar"
-  ],
-  "pasos": [
-    "Procesar las lentejas cocidas hasta obtener una pasta. Reservar.",
-    "Sofreír la zanahoria rallada y el ajo picado en un poco de aceite.",
-    "Mezclar la pasta de lentejas con el sofrito, la avena, el perejil y los condimentos (sal, pimienta, comino o merkén si se desea).",
-    "Formar croquetas con las manos.",
-    "Cocinar en una sartén con un poco de aceite hasta dorar por ambos lados, o hornear a 180 °C por 30 minutos."
-  ],
   "dato": "La avena ayuda a ligar la mezcla y aporta fibra. Si la masa está muy húmeda, agrega más avena; si está muy seca, un poco de agua o caldo. Son una excelente alternativa a las croquetas de carne y se pueden servir como entrada o acompañamiento. Las lentejas son una de las legumbres más tradicionales de la cocina chilena.",
   "errores": [
     {
@@ -124,39 +105,22 @@
   "pasos_v2": [
     {
       "texto": "Procesar las lentejas cocidas hasta obtener una pasta. Reservar.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Sofreír la zanahoria rallada y el ajo picado en un poco de aceite.",
-      "ingredientes": [
-        2,
-        4,
-        10
-      ]
+      "ingredientes": [2, 4, 10]
     },
     {
       "texto": "Mezclar la pasta de lentejas con el sofrito, la avena, el perejil y los condimentos (sal, pimienta, comino o merkén si se desea).",
-      "ingredientes": [
-        1,
-        3,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ]
+      "ingredientes": [1, 3, 5, 6, 7, 8, 9, 10]
     },
     {
       "texto": "Formar croquetas con las manos."
     },
     {
       "texto": "Cocinar en una sartén con un poco de aceite hasta dorar por ambos lados, o hornear a 180 °C por 30 minutos.",
-      "ingredientes": [
-        10
-      ],
+      "ingredientes": [10],
       "timers": [
         {
           "minutos": 30,

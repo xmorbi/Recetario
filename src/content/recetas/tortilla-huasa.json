@@ -1,39 +1,12 @@
 {
   "titulo": "Tortilla Huasa",
   "categoria": "once",
-  "tags": [
-    "tortilla huasa",
-    "huevos",
-    "cebolla",
-    "chorizo",
-    "horno",
-    "tortilla",
-    "huevos"
-  ],
+  "tags": ["tortilla huasa", "huevos", "cebolla", "chorizo", "horno", "tortilla", "huevos"],
   "imagen": null,
   "tiempo": "25 min",
   "porciones": "4 personas",
   "dificultad": "fácil",
   "tecnica": "Horno",
-  "ingredientes": [
-    "4 huevos",
-    "2 cebollas",
-    "3 tallos de cebollines",
-    "2 chorizos colorados",
-    "1 cucharada de leche",
-    "4 cucharadas de aceite",
-    "Orégano",
-    "Sal",
-    "Pimienta"
-  ],
-  "pasos": [
-    "Picar la cebolla en pluma, los cebollines en redondelas, aliñar con sal, pimienta y orégano.",
-    "Batir los huevos con la leche y mezclar con las verduras.",
-    "Calentar el aceite, vaciarlo en una fuente y untar bien.",
-    "Revolver la mezcla en la fuente y cubrir con el chorizo cortado en trocitos.",
-    "Cocinar a horno caliente unos 10 minutos.",
-    "Servir acompañada de ensaladas."
-  ],
   "dato": "A diferencia de otras tortillas, la huasa se cocina al horno en una fuente aceitada; el chorizo se distribuye encima para que se dore.",
   "errores": [
     {
@@ -111,33 +84,19 @@
   "pasos_v2": [
     {
       "texto": "Picar la cebolla en pluma, los cebollines en redondelas, aliñar con sal, pimienta y orégano.",
-      "ingredientes": [
-        2,
-        3,
-        7,
-        8,
-        9
-      ]
+      "ingredientes": [2, 3, 7, 8, 9]
     },
     {
       "texto": "Batir los huevos con la leche y mezclar con las verduras.",
-      "ingredientes": [
-        1,
-        2,
-        5
-      ]
+      "ingredientes": [1, 2, 5]
     },
     {
       "texto": "Calentar el aceite, vaciarlo en una fuente y untar bien.",
-      "ingredientes": [
-        6
-      ]
+      "ingredientes": [6]
     },
     {
       "texto": "Revolver la mezcla en la fuente y cubrir con el chorizo cortado en trocitos.",
-      "ingredientes": [
-        4
-      ]
+      "ingredientes": [4]
     },
     {
       "texto": "Cocinar a horno caliente unos 10 minutos.",
@@ -150,9 +109,7 @@
     },
     {
       "texto": "Servir acompañada de ensaladas.",
-      "ingredientes": [
-        8
-      ]
+      "ingredientes": [8]
     }
   ],
   "tiempo_v2": {

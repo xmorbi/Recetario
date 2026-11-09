@@ -1,30 +1,12 @@
 {
   "titulo": "Pan con manjar",
   "categoria": "once",
-  "tags": [
-    "once",
-    "pan",
-    "manjar",
-    "dulce",
-    "desayuno",
-    "tradicional"
-  ],
+  "tags": ["once", "pan", "manjar", "dulce", "desayuno", "tradicional"],
   "imagen": null,
   "tiempo": "3 min",
   "porciones": "1 persona",
   "dificultad": "muy fácil",
   "tecnica": "Sin cocción",
-  "ingredientes": [
-    "1 marraqueta o hallulla recién horneada",
-    "2-3 cucharadas de manjar (dulce de leche)",
-    "Opcional: mantequilla"
-  ],
-  "pasos": [
-    "Abre el pan por la mitad. Si quieres, úntalo ligeramente con mantequilla antes del manjar: el contraste salado/dulce es clave.",
-    "Unta una capa generosa de manjar.",
-    "Si está muy frío, calienta el pan armado 10 segundos en el microondas para que el manjar se derrita ligeramente.",
-    "Come inmediatamente. Acompaña con té o café con leche."
-  ],
   "dato": "El manjar (llamado \"dulce de leche\" en Argentina y Uruguay) es una de las preparaciones más queridas de la once chilena. Cada familia tiene su marca favorita y hay verdaderas guerras entre \"manjar de marca\" y \"manjar casero\". Las versiones más antiguas se hacían en casa, hirviendo leche con azúcar por horas.",
   "errores": [
     {
@@ -72,30 +54,19 @@
   "pasos_v2": [
     {
       "texto": "Abre el pan por la mitad. Si quieres, úntalo ligeramente con mantequilla antes del manjar: el contraste salado/dulce es clave.",
-      "ingredientes": [
-        1,
-        2,
-        3
-      ]
+      "ingredientes": [1, 2, 3]
     },
     {
       "texto": "Unta una capa generosa de manjar.",
-      "ingredientes": [
-        2
-      ]
+      "ingredientes": [2]
     },
     {
       "texto": "Si está muy frío, calienta el pan armado 10 segundos en el microondas para que el manjar se derrita ligeramente.",
-      "ingredientes": [
-        1,
-        2
-      ]
+      "ingredientes": [1, 2]
     },
     {
       "texto": "Come inmediatamente. Acompaña con té o café con leche.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     }
   ],
   "tiempo_v2": {

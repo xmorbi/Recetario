@@ -1,32 +1,12 @@
 {
   "titulo": "Terremoto",
   "categoria": "bebidas",
-  "tags": [
-    "bebida",
-    "alcohol",
-    "pipeño",
-    "fiestas patrias",
-    "verano",
-    "tradicional"
-  ],
+  "tags": ["bebida", "alcohol", "pipeño", "fiestas patrias", "verano", "tradicional"],
   "imagen": null,
   "tiempo": "5 min",
   "porciones": "1 vaso",
   "dificultad": "muy fácil",
   "tecnica": "Sin cocción",
-  "ingredientes": [
-    "Vino pipeño (o vino blanco dulce joven), bien helado",
-    "2 bolas de helado de piña",
-    "1 chorrito de granadina (para dar color)",
-    "Opcional: 1 chorrito de fernet (versión \"con afán\")"
-  ],
-  "pasos": [
-    "Saca el pipeño y el helado de piña del frío justo antes de servir; ambos deben estar muy helados.",
-    "Pon 2 bolas de helado de piña en un vaso alto.",
-    "Vierte el pipeño hasta casi llenar el vaso, dejando espacio para la espuma.",
-    "Añade un chorrito de granadina para darle el color rosado característico.",
-    "Sirve inmediatamente con cuchara larga o bombilla. Se toma rápido, antes de que el helado se derrita."
-  ],
   "dato": "Según la tradición, el nombre nació en Santiago en la década de 1980: la mezcla de pipeño, helado de piña y granadina era tan fuerte que \"movía la tierra\". El pipeño es un vino blanco joven y dulce, típico del sur de Chile. Existen otras versiones sobre su origen exacto.",
   "errores": [
     {
@@ -81,29 +61,19 @@
   "pasos_v2": [
     {
       "texto": "Saca el pipeño y el helado de piña del frío justo antes de servir; ambos deben estar muy helados.",
-      "ingredientes": [
-        1,
-        2
-      ]
+      "ingredientes": [1, 2]
     },
     {
       "texto": "Pon 2 bolas de helado de piña en un vaso alto.",
-      "ingredientes": [
-        2
-      ]
+      "ingredientes": [2]
     },
     {
       "texto": "Vierte el pipeño hasta casi llenar el vaso, dejando espacio para la espuma.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Añade un chorrito de granadina para darle el color rosado característico.",
-      "ingredientes": [
-        3,
-        4
-      ]
+      "ingredientes": [3, 4]
     },
     {
       "texto": "Sirve inmediatamente con cuchara larga o bombilla. Se toma rápido, antes de que el helado se derrita."

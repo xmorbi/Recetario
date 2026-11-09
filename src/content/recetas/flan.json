@@ -1,35 +1,12 @@
 {
   "titulo": "Flan",
   "categoria": "dulces",
-  "tags": [
-    "postre",
-    "flan",
-    "horno",
-    "baño maría",
-    "clásico",
-    "huevo"
-  ],
+  "tags": ["postre", "flan", "horno", "baño maría", "clásico", "huevo"],
   "imagen": null,
   "tiempo": "1 h 15 min",
   "porciones": "6 personas",
   "dificultad": "fácil",
   "tecnica": "Horno",
-  "ingredientes": [
-    "1 litro de leche",
-    "6 huevos",
-    "150 g de azúcar",
-    "1 cucharadita (5 ml) de vainilla",
-    "100 g de azúcar para el caramelo",
-    "3 cucharadas (45 ml) de agua"
-  ],
-  "pasos": [
-    "Precalienta el horno a 180 °C. Prepara el caramelo: derrite el azúcar con el agua en una sartén hasta que tome color ámbar. Vierte en el fondo del molde.",
-    "Bate los huevos con el azúcar hasta que estén cremosos. Agrega la leche tibia y la vainilla, mezclando suavemente.",
-    "Cuela la mezcla para eliminar impurezas y burbujas.",
-    "Vierte en el molde caramelizado.",
-    "Hornea al baño María a 180 °C por 50-60 minutos, hasta que el flan esté cuajado (un palillo debe salir limpio).",
-    "Deja enfriar y refrigera al menos 4 horas antes de desmoldar."
-  ],
   "dato": "El flan es un postre de origen español que en Chile se volvió clásico de la once y de las celebraciones. Se diferencia de la leche asada en que el flan es más suave y cremoso, mientras la leche asada es más rústica y lleva más huevo. El baño María es obligatorio para que no se corte.",
   "errores": [
     {
@@ -94,21 +71,11 @@
   "pasos_v2": [
     {
       "texto": "Precalienta el horno a 180 °C. Prepara el caramelo: derrite el azúcar con el agua en una sartén hasta que tome color ámbar. Vierte en el fondo del molde.",
-      "ingredientes": [
-        3,
-        5,
-        6
-      ]
+      "ingredientes": [3, 5, 6]
     },
     {
       "texto": "Bate los huevos con el azúcar hasta que estén cremosos. Agrega la leche tibia y la vainilla, mezclando suavemente.",
-      "ingredientes": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
+      "ingredientes": [1, 2, 3, 4, 5]
     },
     {
       "texto": "Cuela la mezcla para eliminar impurezas y burbujas."

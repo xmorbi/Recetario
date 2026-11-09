@@ -2,22 +2,41 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Calculadora de Porciones" description="Calcula la cantidad exacta de carne, harina, arroz, papas y carbón por persona según el número de comensales." activePage="calculadora">
-  
+<Layout
+  title="Calculadora de Porciones"
+  description="Calcula la cantidad exacta de carne, harina, arroz, papas y carbón por persona según el número de comensales."
+  activePage="calculadora"
+>
   <header class="hero-receta">
     <div class="hero-receta-inner">
       <h1>Calculadora de Porciones</h1>
       <p class="hero-sub">Cuánto comprar por persona, sin que sobre ni falte.</p>
-      
+
       <div class="hero-chips" aria-label="Accesos rápidos a ingredientes">
-        <button type="button" class="hero-chip-btn" data-ingrediente="carne_asado">🥩 Carne</button>
-        <button type="button" class="hero-chip-btn" data-ingrediente="pollo">🍗 Pollo</button>
-        <button type="button" class="hero-chip-btn" data-ingrediente="pescado">🐟 Pescado</button>
-        <button type="button" class="hero-chip-btn" data-ingrediente="arroz">🍚 Arroz</button>
-        <button type="button" class="hero-chip-btn" data-ingrediente="papa">🥔 Papas</button>
-        <button type="button" class="hero-chip-btn" data-ingrediente="harina">🌾 Harina</button>
-        <button type="button" class="hero-chip-btn" data-ingrediente="pasta">🍝 Pasta</button>
-        <button type="button" class="hero-chip-btn" data-ingrediente="carbon">🔥 Carbón</button>
+        <button type="button" class="hero-chip-btn" data-ingrediente="carne_asado">
+          🥩 Carne
+        </button>
+        <button type="button" class="hero-chip-btn" data-ingrediente="pollo">
+          🍗 Pollo
+        </button>
+        <button type="button" class="hero-chip-btn" data-ingrediente="pescado">
+          🐟 Pescado
+        </button>
+        <button type="button" class="hero-chip-btn" data-ingrediente="arroz">
+          🍚 Arroz
+        </button>
+        <button type="button" class="hero-chip-btn" data-ingrediente="papa">
+          🥔 Papas
+        </button>
+        <button type="button" class="hero-chip-btn" data-ingrediente="harina">
+          🌾 Harina
+        </button>
+        <button type="button" class="hero-chip-btn" data-ingrediente="pasta">
+          🍝 Pasta
+        </button>
+        <button type="button" class="hero-chip-btn" data-ingrediente="carbon">
+          🔥 Carbón
+        </button>
       </div>
     </div>
   </header>
@@ -25,8 +44,12 @@ import Layout from '../layouts/Layout.astro';
   <main class="legal-page">
     <div class="calc-container">
       <div class="calc-tabs" role="tablist">
-        <button type="button" id="tab-ingrediente" class="calc-tab activo" data-tab="ingrediente">Por ingrediente</button>
-        <button type="button" id="tab-plato" class="calc-tab" data-tab="plato">Por plato</button>
+        <button type="button" id="tab-ingrediente" class="calc-tab activo" data-tab="ingrediente">
+          Por ingrediente
+        </button>
+        <button type="button" id="tab-plato" class="calc-tab" data-tab="plato">
+          Por plato
+        </button>
       </div>
 
       <div id="panel-ingrediente" role="tabpanel">
@@ -64,8 +87,14 @@ import Layout from '../layouts/Layout.astro';
         <fieldset class="calc-group" id="contexto-group" hidden>
           <legend id="contexto-label">¿Es el plato principal o un acompañamiento?</legend>
           <div class="toggle-group">
-            <label><input type="radio" name="contexto" value="principal" checked><span id="contexto-principal-label">Plato principal</span></label>
-            <label><input type="radio" name="contexto" value="guarnicion"><span id="contexto-guarnicion-label">Acompañamiento</span></label>
+            <label>
+              <input type="radio" name="contexto" value="principal" checked />
+              <span id="contexto-principal-label">Plato principal</span>
+            </label>
+            <label>
+              <input type="radio" name="contexto" value="guarnicion" />
+              <span id="contexto-guarnicion-label">Acompañamiento</span>
+            </label>
           </div>
         </fieldset>
 
@@ -74,17 +103,25 @@ import Layout from '../layouts/Layout.astro';
             <div>
               <label class="stepper-label">Adultos</label>
               <div class="stepper">
-                <button type="button" id="menos-adultos">−</button>
-                <input type="number" id="num-adultos" value="4" min="1" max="999">
-                <button type="button" id="mas-adultos">+</button>
+                <button type="button" id="menos-adultos">
+                  −
+                </button>
+                <input type="number" id="num-adultos" value="4" min="1" max="999" />
+                <button type="button" id="mas-adultos">
+                  +
+                </button>
               </div>
             </div>
             <div>
               <label class="stepper-label">Niños</label>
               <div class="stepper">
-                <button type="button" id="menos-ninos">−</button>
-                <input type="number" id="num-ninos" value="0" min="0" max="999">
-                <button type="button" id="mas-ninos">+</button>
+                <button type="button" id="menos-ninos">
+                  −
+                </button>
+                <input type="number" id="num-ninos" value="0" min="0" max="999" />
+                <button type="button" id="mas-ninos">
+                  +
+                </button>
               </div>
             </div>
           </div>
@@ -92,25 +129,37 @@ import Layout from '../layouts/Layout.astro';
 
         <div class="calc-group calc-options">
           <label class="checkbox-label">
-            <input type="checkbox" id="opcion-sobras">
+            <input type="checkbox" id="opcion-sobras" />
             <span>Cocinar un poco de más (+10% para sobras)</span>
           </label>
         </div>
 
         <div class="calc-result">
-          <div class="calc-result-label" id="resultado-label">Cantidad a comprar (peso crudo)</div>
-          <div class="calc-result-number" id="resultado">---</div>
+          <div class="calc-result-label" id="resultado-label">
+            Cantidad a comprar (peso crudo)
+          </div>
+          <div class="calc-result-number" id="resultado">
+            ---
+          </div>
           <div class="calc-breakdown" id="desglose"></div>
           <div class="calc-note" id="nota"></div>
         </div>
 
         <div class="calc-acciones">
-          <button type="button" class="btn-calc btn-calc-primary" id="btn-lista">Añadir a mi lista</button>
-          <button type="button" class="btn-calc btn-calc-secondary" id="btn-compartir">Compartir</button>
-          <button type="button" class="btn-calc btn-calc-ghost" id="btn-reset">Reiniciar</button>
+          <button type="button" class="btn-calc btn-calc-primary" id="btn-lista">
+            Añadir a mi lista
+          </button>
+          <button type="button" class="btn-calc btn-calc-secondary" id="btn-compartir">
+            Compartir
+          </button>
+          <button type="button" class="btn-calc btn-calc-ghost" id="btn-reset">
+            Reiniciar
+          </button>
         </div>
 
-        <a href="/conversor/" class="calc-conversor-link">¿Necesitas convertir gramos a tazas? Usa el conversor →</a>
+        <a href="/conversor/" class="calc-conversor-link">
+          ¿Necesitas convertir gramos a tazas? Usa el conversor →
+        </a>
       </div>
 
       <div id="panel-plato" role="tabpanel" hidden>
@@ -123,40 +172,58 @@ import Layout from '../layouts/Layout.astro';
             <div>
               <label class="stepper-label">Adultos</label>
               <div class="stepper">
-                <button type="button" id="plato-menos-adultos">−</button>
-                <input type="number" id="plato-adultos" value="4" min="1" max="999">
-                <button type="button" id="plato-mas-adultos">+</button>
+                <button type="button" id="plato-menos-adultos">
+                  −
+                </button>
+                <input type="number" id="plato-adultos" value="4" min="1" max="999" />
+                <button type="button" id="plato-mas-adultos">
+                  +
+                </button>
               </div>
             </div>
             <div>
               <label class="stepper-label">Niños</label>
               <div class="stepper">
-                <button type="button" id="plato-menos-ninos">−</button>
-                <input type="number" id="plato-ninos" value="0" min="0" max="999">
-                <button type="button" id="plato-mas-ninos">+</button>
+                <button type="button" id="plato-menos-ninos">
+                  −
+                </button>
+                <input type="number" id="plato-ninos" value="0" min="0" max="999" />
+                <button type="button" id="plato-mas-ninos">
+                  +
+                </button>
               </div>
             </div>
           </div>
         </div>
         <div class="calc-group calc-options">
           <label class="checkbox-label">
-            <input type="checkbox" id="plato-sobras">
+            <input type="checkbox" id="plato-sobras" />
             <span>Cocinar un poco de más (+10% para sobras)</span>
           </label>
         </div>
         <div class="calc-result">
-          <div class="calc-result-label" id="plato-resultado-label">Ingredientes para tu plato</div>
+          <div class="calc-result-label" id="plato-resultado-label">
+            Ingredientes para tu plato
+          </div>
           <ul class="plato-lista" id="plato-resultado"></ul>
           <div class="calc-note" id="plato-nota"></div>
         </div>
         <div class="calc-acciones">
-          <button type="button" class="btn-calc btn-calc-primary" id="plato-btn-lista">Añadir todo a mi lista</button>
+          <button type="button" class="btn-calc btn-calc-primary" id="plato-btn-lista">
+            Añadir todo a mi lista
+          </button>
           <!-- NUEVO BOTÓN COMPARTIR -->
-          <button type="button" class="btn-calc btn-calc-secondary" id="plato-btn-compartir">Compartir</button>
-          <a class="btn-calc btn-calc-ghost" id="plato-btn-receta" href="#" hidden>Ver receta →</a>
+          <button type="button" class="btn-calc btn-calc-secondary" id="plato-btn-compartir">
+            Compartir
+          </button>
+          <a class="btn-calc btn-calc-ghost" id="plato-btn-receta" href="#" hidden>
+            Ver receta →
+          </a>
         </div>
 
-        <a href="/conversor/" class="calc-conversor-link">¿Necesitas convertir gramos a tazas? Usa el conversor →</a>
+        <a href="/conversor/" class="calc-conversor-link">
+          ¿Necesitas convertir gramos a tazas? Usa el conversor →
+        </a>
       </div>
     </div>
 
@@ -168,52 +235,75 @@ import Layout from '../layouts/Layout.astro';
 
       <h2 style="margin-top:3rem;">Respuestas rápidas a tus dudas</h2>
       <div class="faq-item">
-        <h3 style="font-family:var(--fuente-titulos); color:var(--rojo-osc); font-size:1.2rem; margin-top:1.5rem;">¿Cuánta harina necesito para hacer pan para 3 personas?</h3>
-        <p>La proporción estándar es de <strong>200 gramos de harina por persona</strong>. Por lo tanto, para 3 personas necesitarás <strong>600 gramos de harina</strong>.</p>
+        <h3 style="font-family:var(--fuente-titulos); color:var(--rojo-osc); font-size:1.2rem; margin-top:1.5rem;">
+          ¿Cuánta harina necesito para hacer pan para 3 personas?
+        </h3>
+        <p>
+          La proporción estándar es de <strong>200 gramos de harina por persona</strong>. Por lo
+          tanto, para 3 personas necesitarás <strong>600 gramos de harina</strong>.
+        </p>
       </div>
       <div class="faq-item">
-        <h3 style="font-family:var(--fuente-titulos); color:var(--rojo-osc); font-size:1.2rem; margin-top:1.5rem;">¿Cuánta carne calcular por persona para un asado?</h3>
-        <p>Para un asado con acompañamientos, la regla general es calcular <strong>400 gramos de carne cruda por adulto</strong>. Si la carne es el único plato fuerte, sube a <strong>500 gramos</strong>.</p>
+        <h3 style="font-family:var(--fuente-titulos); color:var(--rojo-osc); font-size:1.2rem; margin-top:1.5rem;">
+          ¿Cuánta carne calcular por persona para un asado?
+        </h3>
+        <p>
+          Para un asado con acompañamientos, la regla general es calcular{' '}
+          <strong>400 gramos de carne cruda por adulto</strong>. Si la carne es el único plato
+          fuerte, sube a <strong>500 gramos</strong>.
+        </p>
       </div>
       <div class="faq-item">
-        <h3 style="font-family:var(--fuente-titulos); color:var(--rojo-osc); font-size:1.2rem; margin-top:1.5rem;">¿Cuánto carbón necesito para asar X kilos de carne?</h3>
-        <p>La regla más usada es <strong>1 kilo de carbón por cada 1 kilo de carne</strong> para un asado tradicional de 1 a 2 horas.</p>
+        <h3 style="font-family:var(--fuente-titulos); color:var(--rojo-osc); font-size:1.2rem; margin-top:1.5rem;">
+          ¿Cuánto carbón necesito para asar X kilos de carne?
+        </h3>
+        <p>
+          La regla más usada es <strong>1 kilo de carbón por cada 1 kilo de carne</strong> para un
+          asado tradicional de 1 a 2 horas.
+        </p>
       </div>
       <div class="calc-faq">
         <h2>Preguntas frecuentes sobre porciones</h2>
         <details>
           <summary>¿Cuánto arroz crudo por persona?</summary>
-          <div class="faq-content">Para un plato principal, se calculan 90 gramos de arroz crudo por persona. Si es para guarnición, 60 gramos es más que suficiente.</div>
+          <div class="faq-content">
+            Para un plato principal, se calculan 90 gramos de arroz crudo por persona. Si es para
+            guarnición, 60 gramos es más que suficiente.
+          </div>
         </details>
         <details>
           <summary>¿Cuánta papa cocinar por persona?</summary>
-          <div class="faq-content">Para acompañar un plato, calcula 250 gramos de papa cruda por persona. Si vas a hacer un puré como plato principal, sube a 350 gramos.</div>
+          <div class="faq-content">
+            Para acompañar un plato, calcula 250 gramos de papa cruda por persona. Si vas a hacer un
+            puré como plato principal, sube a 350 gramos.
+          </div>
         </details>
       </div>
     </div>
   </main>
 
-  <script is:inline src="/platos-data.js"></script>
-  <script is:inline src="/calculadora.js"></script>
-    
-  <script is:inline>
-  document.addEventListener('DOMContentLoaded', function() {
-    const chips = document.querySelectorAll('.hero-chip-btn');
-    const select = document.getElementById('ingrediente');
-    const calcContainer = document.querySelector('.calc-container');
+  <script>
+    import '../scripts/calculadora.js';
+  </script>
 
-    chips.forEach(chip => {
-      chip.addEventListener('click', function() {
-        const valor = this.getAttribute('data-ingrediente');
-        if (select && valor) {
-          select.value = valor;
-          select.dispatchEvent(new Event('change', { bubbles: true }));
-          if (calcContainer) {
-            calcContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', function () {
+      const chips = document.querySelectorAll('.hero-chip-btn');
+      const select = document.getElementById('ingrediente');
+      const calcContainer = document.querySelector('.calc-container');
+
+      chips.forEach((chip) => {
+        chip.addEventListener('click', function () {
+          const valor = this.getAttribute('data-ingrediente');
+          if (select && valor) {
+            select.value = valor;
+            select.dispatchEvent(new Event('change', { bubbles: true }));
+            if (calcContainer) {
+              calcContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
           }
-        }
+        });
       });
     });
-  });
   </script>
 </Layout>

@@ -7,23 +7,16 @@
   "porciones": "4 personas",
   "dificultad": "muy fácil",
   "tecnica": "Fritura",
-  "ingredientes": [
-    "4 papas grandes cortadas en bastones",
-    "6 salchichas de buena calidad",
-    "Aceite para freír",
-    "Ketchup, mayonesa o mostaza al gusto"
-  ],
-  "pasos": [
-    "Pela y corta las papas en bastones. Lava bien para quitar el almidón y sécalas.",
-    "Fríe las papas en abundante aceite caliente hasta que estén doradas y crujientes. Escurre y sala al gusto.",
-    "Corta las salchichas en rodajas o en trozos y fríelas en una sartén hasta que estén doradas.",
-    "Mezcla las papas fritas con las salchichas o sirve las salchichas encima de las papas.",
-    "Acompaña con tus salsas favoritas."
-  ],
   "dato": "Es el plato favorito de los niños y también un clásico de las picadas chilenas. Puedes agregar queso derretido encima para una versión aún más contundente.",
   "errores": [
-    { "error": "Papas blandas o grasosas", "solucion": "Freír a temperatura muy baja. Haz doble fritura: una a fuego medio para cocinarlas y otra a fuego alto antes de servir para que doren." },
-    { "error": "Salchichas insípidas", "solucion": "Hervirlas o freírlas enteras. Córtalas en rodajas y sofríelas con un poquito de cebolla hasta que estén doradas por los bordes." }
+    {
+      "error": "Papas blandas o grasosas",
+      "solucion": "Freír a temperatura muy baja. Haz doble fritura: una a fuego medio para cocinarlas y otra a fuego alto antes de servir para que doren."
+    },
+    {
+      "error": "Salchichas insípidas",
+      "solucion": "Hervirlas o freírlas enteras. Córtalas en rodajas y sofríelas con un poquito de cebolla hasta que estén doradas por los bordes."
+    }
   ],
   "conservacion": {
     "refrigerador": "No recomendado, las papas se ablandan.",
@@ -31,18 +24,59 @@
     "recalentar": "Se consume recién hecha."
   },
   "ingredientes_v2": [
-    { "cantidad": 4, "unidad": null, "nombre": "papas", "nota": "grandes, en bastones", "escalable": true },
-    { "cantidad": 6, "unidad": null, "nombre": "salchichas", "nota": "de buena calidad", "escalable": true },
-    { "cantidad": 1, "unidad": null, "nombre": "aceite", "nota": "para freír", "escalable": true },
-    { "cantidad": 1, "unidad": null, "nombre": "ketchup, mayonesa o mostaza", "nota": "al gusto", "escalable": false }
+    {
+      "cantidad": 4,
+      "unidad": null,
+      "nombre": "papas",
+      "nota": "grandes, en bastones",
+      "escalable": true
+    },
+    {
+      "cantidad": 6,
+      "unidad": null,
+      "nombre": "salchichas",
+      "nota": "de buena calidad",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "aceite",
+      "nota": "para freír",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "ketchup, mayonesa o mostaza",
+      "nota": "al gusto",
+      "escalable": false
+    }
   ],
   "pasos_v2": [
-    { "texto": "Pela y corta las papas en bastones. Lava bien para quitar el almidón y sécalas.", "ingredientes": [1] },
-    { "texto": "Fríe las papas en abundante aceite caliente hasta que estén doradas y crujientes. Escurre y sala al gusto.", "ingredientes": [1, 3] },
-    { "texto": "Corta las salchichas en rodajas o en trozos y fríelas en una sartén hasta que estén doradas.", "ingredientes": [2] },
-    { "texto": "Mezcla las papas fritas con las salchichas o sirve las salchichas encima de las papas.", "ingredientes": [1, 2] },
-    { "texto": "Acompaña con tus salsas favoritas.", "ingredientes": [4] }
+    {
+      "texto": "Pela y corta las papas en bastones. Lava bien para quitar el almidón y sécalas.",
+      "ingredientes": [1]
+    },
+    {
+      "texto": "Fríe las papas en abundante aceite caliente hasta que estén doradas y crujientes. Escurre y sala al gusto.",
+      "ingredientes": [1, 3]
+    },
+    {
+      "texto": "Corta las salchichas en rodajas o en trozos y fríelas en una sartén hasta que estén doradas.",
+      "ingredientes": [2]
+    },
+    {
+      "texto": "Mezcla las papas fritas con las salchichas o sirve las salchichas encima de las papas.",
+      "ingredientes": [1, 2]
+    },
+    {
+      "texto": "Acompaña con tus salsas favoritas.",
+      "ingredientes": [4]
+    }
   ],
-  "tiempo_v2": { "coccion": 25 },
+  "tiempo_v2": {
+    "coccion": 25
+  },
   "revisado_v2": true
 }

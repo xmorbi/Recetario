@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest';
 import { detectarTiempos } from './tiempos.js';
 
 function minutos(tiempos) {
-  return tiempos.map(t => t.minutos);
+  return tiempos.map((t) => t.minutos);
 }
 
 describe('detectarTiempos', () => {
@@ -12,14 +12,18 @@ describe('detectarTiempos', () => {
   });
 
   it('usa el límite inferior de un rango y lo pone en la etiqueta', () => {
-    const r = detectarTiempos('…girar los fierritos cada 2-3 minutos… Cocinar 15-20 minutos en total.');
+    const r = detectarTiempos(
+      '…girar los fierritos cada 2-3 minutos… Cocinar 15-20 minutos en total.'
+    );
     expect(r.length).toBe(1);
     expect(r[0].minutos).toBe(15);
     expect(r[0].etiqueta).toBe('15–20 min');
   });
 
   it('usa el límite inferior de un rango con decimales en horas', () => {
-    const r = detectarTiempos('Cocina tapado a fuego medio-bajo 1,5 a 2 horas, dando vuelta cada 30 min.');
+    const r = detectarTiempos(
+      'Cocina tapado a fuego medio-bajo 1,5 a 2 horas, dando vuelta cada 30 min.'
+    );
     expect(minutos(r)).toEqual([90]);
   });
 
@@ -29,12 +33,16 @@ describe('detectarTiempos', () => {
   });
 
   it('interpreta 1 1/2 hora como 90 min', () => {
-    const r = detectarTiempos('Cocinar a horno caliente durante 1 1/2 hora, rociándolo periódicamente con su jugo.');
+    const r = detectarTiempos(
+      'Cocinar a horno caliente durante 1 1/2 hora, rociándolo periódicamente con su jugo.'
+    );
     expect(minutos(r)).toEqual([90]);
   });
 
   it('detecta minutos simples', () => {
-    const r = detectarTiempos('Cocina el choclo rallado con la leche y la mantequilla a fuego bajo por 15 minutos hasta que espese.');
+    const r = detectarTiempos(
+      'Cocina el choclo rallado con la leche y la mantequilla a fuego bajo por 15 minutos hasta que espese.'
+    );
     expect(minutos(r)).toEqual([15]);
   });
 
@@ -162,7 +170,9 @@ describe('detectarTiempos — duraciones compuestas (Fase 4)', () => {
   });
 
   it('"1 hora y 30 minutos antes de servir, retira" descarta el timer', () => {
-    expect(detectarTiempos('Cocina 1 hora y 30 minutos antes de servir, retira la olla.')).toEqual([]);
+    expect(detectarTiempos('Cocina 1 hora y 30 minutos antes de servir, retira la olla.')).toEqual(
+      []
+    );
   });
 });
 
@@ -179,7 +189,9 @@ describe('detectarTiempos — regla "antes de" (Fase 4)', () => {
   });
 
   it('"reposar 5 minutos antes de servir la mesa" mantiene el timer', () => {
-    expect(minutos(detectarTiempos('Deja reposar 5 minutos antes de servir la mesa.'))).toEqual([5]);
+    expect(minutos(detectarTiempos('Deja reposar 5 minutos antes de servir la mesa.'))).toEqual([
+      5,
+    ]);
   });
 
   it('"1 minuto antes de servir, agrega" descarta el timer (coma)', () => {

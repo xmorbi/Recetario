@@ -1,34 +1,12 @@
 {
   "titulo": "Navegado infantil",
   "categoria": "bebidas",
-  "tags": [
-    "bebida",
-    "sin alcohol",
-    "niños",
-    "invierno",
-    "caliente",
-    "jugo"
-  ],
+  "tags": ["bebida", "sin alcohol", "niños", "invierno", "caliente", "jugo"],
   "imagen": null,
   "tiempo": "15 min",
   "porciones": "4 tazas",
   "dificultad": "muy fácil",
   "tecnica": "Olla",
-  "ingredientes": [
-    "1 litro de jugo de uva (blanco o tinto, sin azúcar añadida)",
-    "2 naranjas en rodajas (con cáscara bien lavada)",
-    "1 rama de canela",
-    "3 clavos de olor",
-    "2 cucharadas de azúcar (opcional, ajustar al dulzor del jugo)",
-    "Opcional: 1 cucharadita de esencia de ron sin alcohol"
-  ],
-  "pasos": [
-    "En una olla, pon el jugo de uva con las rodajas de naranja, la canela y los clavos de olor.",
-    "Calienta a fuego bajo, sin dejar que hierva.",
-    "Cuando esté caliente, añade el azúcar si es necesario y revuelve hasta disolver.",
-    "Prueba y ajusta. Si quieres, añade la esencia de ron sin alcohol para dar aroma.",
-    "Cuela si prefieres y sirve caliente en tazas. Decora con una rodaja de naranja."
-  ],
   "dato": "La versión sin alcohol del navegado. El jugo de uva caliente con especias es una bebida reconfortante para los niños en invierno, y les permite participar de la tradición familiar sin alcohol.",
   "errores": [
     {
@@ -90,33 +68,22 @@
   "pasos_v2": [
     {
       "texto": "En una olla, pon el jugo de uva con las rodajas de naranja, la canela y los clavos de olor.",
-      "ingredientes": [
-        1,
-        2,
-        3,
-        4
-      ]
+      "ingredientes": [1, 2, 3, 4]
     },
     {
       "texto": "Calienta a fuego bajo, sin dejar que hierva."
     },
     {
       "texto": "Cuando esté caliente, añade el azúcar si es necesario y revuelve hasta disolver.",
-      "ingredientes": [
-        5
-      ]
+      "ingredientes": [5]
     },
     {
       "texto": "Prueba y ajusta. Si quieres, añade la esencia de ron sin alcohol para dar aroma.",
-      "ingredientes": [
-        6
-      ]
+      "ingredientes": [6]
     },
     {
       "texto": "Cuela si prefieres y sirve caliente en tazas. Decora con una rodaja de naranja.",
-      "ingredientes": [
-        2
-      ]
+      "ingredientes": [2]
     }
   ],
   "tiempo_v2": {

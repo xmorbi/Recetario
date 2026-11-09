@@ -1,44 +1,12 @@
 {
   "titulo": "Goulasch",
   "categoria": "principales",
-  "tags": [
-    "goulasch",
-    "posta de paleta",
-    "ají de color",
-    "tomate",
-    "guiso",
-    "carnes"
-  ],
+  "tags": ["goulasch", "posta de paleta", "ají de color", "tomate", "guiso", "carnes"],
   "imagen": null,
   "tiempo": "1 h 30 min",
   "porciones": "6 a 8 personas",
   "dificultad": "media",
   "tecnica": "Olla",
-  "ingredientes": [
-    "1 1/2 kg de posta de paleta",
-    "2 cebollas",
-    "4 tomates maduros",
-    "2 cucharadas de zanahoria rallada",
-    "Una pizca de ají de color",
-    "Tomillo",
-    "1 hoja de laurel",
-    "2 dientes de ajo",
-    "Aceite",
-    "Sal",
-    "Pimienta"
-  ],
-  "pasos": [
-    "Limpiar la carne, quitar las telas, grasas y cortar en cubos de 3 cm.",
-    "Lavar y dejar estilar.",
-    "Cortar las cebollas en pluma.",
-    "Calentar un poco de aceite en una cacerola y freír la cebolla con la zanahoria y los ajos.",
-    "Añadir la carne, sazonar con sal, pimienta, ají de color y tomillo.",
-    "Revolver con cuchara de madera para impregnar los ingredientes, cuidando de dorar en forma pareja la carne.",
-    "Dejar en cocción a fuego suave.",
-    "Pelar los tomates, pasarlos por el cedazo y agregar a la cacerola junto con el laurel.",
-    "Rectificar la sal y cocinar hasta que la carne esté blanda y la salsa espesa.",
-    "Acompañar con papas cocidas."
-  ],
   "dato": "El ají de color es el sello del goulasch; úsalo con moderación para que no amargue y agrégalo junto con la carne para que se impregne bien. Es un guiso de origen húngaro que en Chile se adoptó como plato de invierno.",
   "errores": [
     {
@@ -133,61 +101,37 @@
   "pasos_v2": [
     {
       "texto": "Limpiar la carne, quitar las telas, grasas y cortar en cubos de 3 cm.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Lavar y dejar estilar."
     },
     {
       "texto": "Cortar las cebollas en pluma.",
-      "ingredientes": [
-        2
-      ]
+      "ingredientes": [2]
     },
     {
       "texto": "Calentar un poco de aceite en una cacerola y freír la cebolla con la zanahoria y los ajos.",
-      "ingredientes": [
-        2,
-        4,
-        8,
-        9
-      ]
+      "ingredientes": [2, 4, 8, 9]
     },
     {
       "texto": "Añadir la carne, sazonar con sal, pimienta, ají de color y tomillo.",
-      "ingredientes": [
-        1,
-        5,
-        6,
-        10,
-        11
-      ]
+      "ingredientes": [1, 5, 6, 10, 11]
     },
     {
       "texto": "Revolver con cuchara de madera para impregnar los ingredientes, cuidando de dorar en forma pareja la carne.",
-      "ingredientes": [
-        1,
-        9
-      ]
+      "ingredientes": [1, 9]
     },
     {
       "texto": "Dejar en cocción a fuego suave."
     },
     {
       "texto": "Pelar los tomates, pasarlos por el cedazo y agregar a la cacerola junto con el laurel.",
-      "ingredientes": [
-        3,
-        7
-      ]
+      "ingredientes": [3, 7]
     },
     {
       "texto": "Rectificar la sal y cocinar hasta que la carne esté blanda y la salsa espesa.",
-      "ingredientes": [
-        1,
-        10
-      ]
+      "ingredientes": [1, 10]
     },
     {
       "texto": "Acompañar con papas cocidas."

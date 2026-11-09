@@ -1,40 +1,12 @@
 {
   "titulo": "Falafel",
   "categoria": "once",
-  "tags": [
-    "falafel",
-    "garbanzos",
-    "medio oriente",
-    "vegetariano",
-    "fritura",
-    "aperitivo"
-  ],
+  "tags": ["falafel", "garbanzos", "medio oriente", "vegetariano", "fritura", "aperitivo"],
   "imagen": null,
   "tiempo": "30 min (más remojo de 12 horas)",
   "porciones": "4 personas",
   "dificultad": "media",
   "tecnica": "Fritura",
-  "ingredientes": [
-    "250 g de garbanzos secos (remojados 12 horas, sin cocer)",
-    "1 cebolla picada",
-    "3 dientes de ajo",
-    "1/2 taza de perejil fresco picado",
-    "1/2 taza de cilantro fresco picado",
-    "1 cucharadita de comino molido",
-    "1 cucharadita de polvo de hornear",
-    "3 cucharadas (30 g) de harina de garbanzos (o harina común)",
-    "Sal y pimienta a gusto",
-    "1 taza (250 ml) de aceite para freír"
-  ],
-  "pasos": [
-    "La noche anterior, lavar los garbanzos y dejarlos en remojo en abundante agua. No cocerlos.",
-    "Al día siguiente, escurrir muy bien los garbanzos y secarlos con un paño.",
-    "Procesar los garbanzos junto con la cebolla, el ajo, el perejil, el cilantro, el comino, la sal y la pimienta hasta obtener una pasta granulosa. No procesar en exceso para que no se convierta en puré.",
-    "Transferir la mezcla a un bol, agregar el polvo de hornear y la harina de garbanzos. Mezclar bien y refrigerar por 30 minutos para que la masa tome firmeza.",
-    "Formar bolitas del tamaño de una nuez y aplastarlas ligeramente.",
-    "Calentar abundante aceite en una sartén profunda y freír los falafel por tandas a 170-180 °C hasta que estén dorados y crujientes (aproximadamente 3-4 minutos por lado).",
-    "Escurrir sobre papel absorbente y servir calientes, idealmente con pan pita y salsa de yogur o hummus."
-  ],
   "dato": "La clave del falafel crujiente es usar garbanzos secos remojados, nunca cocidos ni de lata, ya que la humedad excesiva desarma la masa al freír. Es una receta de origen medio-oriental que en Chile se adoptó como aperitivo vegetariano.",
   "advertencia": "Fríe a 170-180 °C: si el aceite está muy caliente, los falafel se doran por fuera y quedan crudos por dentro. Si está muy frío, absorben grasa.",
   "errores": [
@@ -124,38 +96,20 @@
   "pasos_v2": [
     {
       "texto": "La noche anterior, lavar los garbanzos y dejarlos en remojo en abundante agua. No cocerlos.",
-      "ingredientes": [
-        1,
-        8
-      ],
+      "ingredientes": [1, 8],
       "previo": true
     },
     {
       "texto": "Al día siguiente, escurrir muy bien los garbanzos y secarlos con un paño.",
-      "ingredientes": [
-        1,
-        8
-      ]
+      "ingredientes": [1, 8]
     },
     {
       "texto": "Procesar los garbanzos junto con la cebolla, el ajo, el perejil, el cilantro, el comino, la sal y la pimienta hasta obtener una pasta granulosa. No procesar en exceso para que no se convierta en puré.",
-      "ingredientes": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        8,
-        9
-      ]
+      "ingredientes": [1, 2, 3, 4, 5, 6, 8, 9]
     },
     {
       "texto": "Transferir la mezcla a un bol, agregar el polvo de hornear y la harina de garbanzos. Mezclar bien y refrigerar por 30 minutos para que la masa tome firmeza.",
-      "ingredientes": [
-        7,
-        10
-      ],
+      "ingredientes": [7, 10],
       "timers": [
         {
           "minutos": 30,
@@ -168,9 +122,7 @@
     },
     {
       "texto": "Calentar abundante aceite en una sartén profunda y freír los falafel por tandas a 170-180 °C hasta que estén dorados y crujientes (aproximadamente 3-4 minutos por lado).",
-      "ingredientes": [
-        10
-      ],
+      "ingredientes": [10],
       "timers": [
         {
           "minutos": 4,
@@ -180,9 +132,7 @@
     },
     {
       "texto": "Escurrir sobre papel absorbente y servir calientes, idealmente con pan pita y salsa de yogur o hummus.",
-      "ingredientes": [
-        9
-      ]
+      "ingredientes": [9]
     }
   ],
   "tiempo_v2": {

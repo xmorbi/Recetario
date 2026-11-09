@@ -1,38 +1,12 @@
 {
   "titulo": "Espárragos Gratinados",
   "categoria": "principales",
-  "tags": [
-    "espárragos gratinados",
-    "espárragos",
-    "jamón",
-    "crema",
-    "gratinado",
-    "entrada"
-  ],
+  "tags": ["espárragos gratinados", "espárragos", "jamón", "crema", "gratinado", "entrada"],
   "imagen": null,
   "tiempo": "30 min",
   "porciones": "4 a 6 personas",
   "dificultad": "fácil",
   "tecnica": "Horno",
-  "ingredientes": [
-    "1 kg de espárragos",
-    "2 cucharadas (20 g) de queso rallado",
-    "2 huevos",
-    "6 tajadas de jamón",
-    "1 taza (250 ml) de crema fresca",
-    "1 pizca de nuez moscada",
-    "Sal",
-    "Pimienta"
-  ],
-  "pasos": [
-    "Pelar los espárragos, quitar la parte dura del tallo, lavar y cocinar en agua caliente con sal.",
-    "Cuando estén blandos, estilar y dejar enfriar.",
-    "Distribuir una porción de espárragos sobre cada tajada de jamón y enrollar, dejando las cabecitas asomadas.",
-    "Disponerlos en una fuente, cuidando que no queden muy juntos.",
-    "Batir los huevos hasta que estén espumosos, agregar la crema, sal, nuez moscada y pimienta.",
-    "Mezclar y vaciar sobre los rollos.",
-    "Espolvorear queso rallado y llevar a horno a 200 °C hasta que se dore."
-  ],
   "dato": "Los espárragos gratinados son una entrada clásica de las celebraciones chilenas. Se envuelven en jamón, se cubren con una mezcla de huevo y crema, y se gratinan hasta dorar. El horno a 200 °C es clave para que la superficie quede dorada sin secar los espárragos.",
   "errores": [
     {
@@ -105,42 +79,28 @@
   "pasos_v2": [
     {
       "texto": "Pelar los espárragos, quitar la parte dura del tallo, lavar y cocinar en agua caliente con sal.",
-      "ingredientes": [
-        1,
-        7
-      ]
+      "ingredientes": [1, 7]
     },
     {
       "texto": "Cuando estén blandos, estilar y dejar enfriar."
     },
     {
       "texto": "Distribuir una porción de espárragos sobre cada tajada de jamón y enrollar, dejando las cabecitas asomadas.",
-      "ingredientes": [
-        1,
-        4
-      ]
+      "ingredientes": [1, 4]
     },
     {
       "texto": "Disponerlos en una fuente, cuidando que no queden muy juntos."
     },
     {
       "texto": "Batir los huevos hasta que estén espumosos, agregar la crema, sal, nuez moscada y pimienta.",
-      "ingredientes": [
-        3,
-        5,
-        6,
-        7,
-        8
-      ]
+      "ingredientes": [3, 5, 6, 7, 8]
     },
     {
       "texto": "Mezclar y vaciar sobre los rollos."
     },
     {
       "texto": "Espolvorear queso rallado y llevar a horno a 200 °C hasta que se dore.",
-      "ingredientes": [
-        2
-      ]
+      "ingredientes": [2]
     }
   ],
   "tiempo_v2": {

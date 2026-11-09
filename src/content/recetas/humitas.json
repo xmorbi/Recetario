@@ -1,35 +1,12 @@
 {
   "titulo": "Humitas",
   "categoria": "panes",
-  "tags": [
-    "humita",
-    "choclo",
-    "horno",
-    "olla",
-    "plato principal",
-    "vegetariano"
-  ],
+  "tags": ["humita", "choclo", "horno", "olla", "plato principal", "vegetariano"],
   "imagen": "img/Humitas.jpg",
   "tiempo": "80 min",
   "porciones": "8 unidades",
   "dificultad": "media",
   "tecnica": "Olla",
-  "ingredientes": [
-    "6 choclos tiernos rallados",
-    "1 cebolla picada muy fina",
-    "100 g de manteca",
-    "1 cucharadita de ají de color",
-    "Albahaca fresca y sal",
-    "Hojas de choclo para envolver"
-  ],
-  "pasos": [
-    "Sofríe la cebolla en la manteca. Agrega el ají de color y revuelve.",
-    "Mezcla el choclo rallado con el sofrito, la albahaca y sal.",
-    "Cocina a fuego bajo 10 minutos, revolviendo. Deja enfriar.",
-    "Blanquea las hojas de choclo en agua caliente.",
-    "Pon dos cucharadas de mezcla en cada hoja, envuelve y amarra.",
-    "Cocina en agua con sal hirviendo 30 a 40 minutos, o al horno a 180 °C por 40 minutos."
-  ],
   "dato": "Si el choclo está muy seco, agrega un poco de leche a la mezcla.",
   "errores": [
     {
@@ -91,18 +68,11 @@
   "pasos_v2": [
     {
       "texto": "Sofríe la cebolla en la manteca. Agrega el ají de color y revuelve.",
-      "ingredientes": [
-        2,
-        3,
-        4
-      ]
+      "ingredientes": [2, 3, 4]
     },
     {
       "texto": "Mezcla el choclo rallado con el sofrito, la albahaca y sal.",
-      "ingredientes": [
-        1,
-        5
-      ]
+      "ingredientes": [1, 5]
     },
     {
       "texto": "Cocina a fuego bajo 10 minutos, revolviendo. Deja enfriar.",
@@ -115,22 +85,15 @@
     },
     {
       "texto": "Blanquea las hojas de choclo en agua caliente.",
-      "ingredientes": [
-        1,
-        6
-      ]
+      "ingredientes": [1, 6]
     },
     {
       "texto": "Pon dos cucharadas de mezcla en cada hoja, envuelve y amarra.",
-      "ingredientes": [
-        6
-      ]
+      "ingredientes": [6]
     },
     {
       "texto": "Cocina en agua con sal hirviendo 30 a 40 minutos, o al horno a 180 °C por 40 minutos.",
-      "ingredientes": [
-        5
-      ],
+      "ingredientes": [5],
       "timers": [
         {
           "minutos": 40,

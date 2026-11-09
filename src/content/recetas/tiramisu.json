@@ -1,37 +1,12 @@
 {
   "titulo": "Tiramisú",
   "categoria": "dulces",
-  "tags": [
-    "postre",
-    "tiramisú",
-    "café",
-    "mascarpone",
-    "italiano",
-    "reposteria"
-  ],
+  "tags": ["postre", "tiramisú", "café", "mascarpone", "italiano", "reposteria"],
   "imagen": null,
   "tiempo": "30 min + frío",
   "porciones": "8 porciones",
   "dificultad": "media",
   "tecnica": "Sin horno",
-  "ingredientes": [
-    "500 g de queso mascarpone",
-    "4 huevos (separar claras y yemas)",
-    "100 g de azúcar",
-    "1 taza de café espresso frío",
-    "2 cucharadas de licor (amaretto o ron)",
-    "200 g de galletas de champaña o bizcochos de soletilla",
-    "Cacao en polvo para espolvorear"
-  ],
-  "pasos": [
-    "Bate las yemas con el azúcar hasta que estén pálidas. Agrega el mascarpone y mezcla bien.",
-    "Bate las claras a punto de nieve e incorpóralas a la mezcla de mascarpone con movimientos envolventes.",
-    "Mezcla el café con el licor en un plato hondo.",
-    "Moja las galletas en el café (solo 1-2 segundos por lado) y colócalas en el fondo de una fuente.",
-    "Cubre con la mitad de la crema de mascarpone. Repite con otra capa de galletas y el resto de la crema.",
-    "Refrigera al menos 4 horas (mejor toda la noche).",
-    "Espolvorea cacao en polvo antes de servir."
-  ],
   "dato": "El tiramisú es un postre italiano que en Chile se volvió muy popular en las últimas décadas. El nombre significa \"levántame\" en italiano, por el café y el azúcar. En Chile se hace con queso mascarpone (que se encuentra en supermercados) o con una mezcla de queso crema y crema.",
   "errores": [
     {
@@ -99,43 +74,23 @@
   "pasos_v2": [
     {
       "texto": "Bate las yemas con el azúcar hasta que estén pálidas. Agrega el mascarpone y mezcla bien.",
-      "ingredientes": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7
-      ]
+      "ingredientes": [1, 2, 3, 4, 5, 6, 7]
     },
     {
       "texto": "Bate las claras a punto de nieve e incorpóralas a la mezcla de mascarpone con movimientos envolventes.",
-      "ingredientes": [
-        1,
-        2
-      ]
+      "ingredientes": [1, 2]
     },
     {
       "texto": "Mezcla el café con el licor en un plato hondo.",
-      "ingredientes": [
-        4,
-        5
-      ]
+      "ingredientes": [4, 5]
     },
     {
       "texto": "Moja las galletas en el café (solo 1-2 segundos por lado) y colócalas en el fondo de una fuente.",
-      "ingredientes": [
-        4,
-        6
-      ]
+      "ingredientes": [4, 6]
     },
     {
       "texto": "Cubre con la mitad de la crema de mascarpone. Repite con otra capa de galletas y el resto de la crema.",
-      "ingredientes": [
-        1,
-        6
-      ]
+      "ingredientes": [1, 6]
     },
     {
       "texto": "Refrigera al menos 4 horas (mejor toda la noche).",
@@ -143,9 +98,7 @@
     },
     {
       "texto": "Espolvorea cacao en polvo antes de servir.",
-      "ingredientes": [
-        7
-      ]
+      "ingredientes": [7]
     }
   ],
   "tiempo_v2": {

@@ -1,37 +1,12 @@
 {
   "titulo": "Strogonoff",
   "categoria": "principales",
-  "tags": [
-    "strogonoff",
-    "lomo liso",
-    "crema",
-    "páprika",
-    "carnes"
-  ],
+  "tags": ["strogonoff", "lomo liso", "crema", "páprika", "carnes"],
   "imagen": null,
   "tiempo": "25 min",
   "porciones": "4 personas",
   "dificultad": "fácil",
   "tecnica": "Sartén",
-  "ingredientes": [
-    "1/2 kg de lomo liso",
-    "1 cebolla mediana",
-    "3/4 taza de crema fresca",
-    "3 cucharadas de mantequilla",
-    "Páprika",
-    "Ají de color",
-    "Sal",
-    "Pimienta"
-  ],
-  "pasos": [
-    "Limpiar la carne, quitar telas y grasas, lavar, dejar estilar.",
-    "Picar la cebolla en cuadros finos.",
-    "Cortar el lomo en láminas delgadas, freírlas en la mitad de la mantequilla caliente.",
-    "Agregar sal, pimienta y páprika, cocinar a fuego suave.",
-    "Calentar el resto de la mantequilla y freír la cebolla, incorporarla a la preparación anterior junto con la crema.",
-    "Calentar cuidando que no hierva la salsa.",
-    "Rectificar la sal, añadir un poco de ají de color y servir muy caliente."
-  ],
   "dato": "La crema no debe hervir una vez incorporada, porque se corta. Calienta a fuego suave y revuelve constantemente.",
   "errores": [
     {
@@ -105,51 +80,31 @@
   "pasos_v2": [
     {
       "texto": "Limpiar la carne, quitar telas y grasas, lavar, dejar estilar.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Picar la cebolla en cuadros finos.",
-      "ingredientes": [
-        2
-      ]
+      "ingredientes": [2]
     },
     {
       "texto": "Cortar el lomo en láminas delgadas, freírlas en la mitad de la mantequilla caliente.",
-      "ingredientes": [
-        1,
-        4
-      ]
+      "ingredientes": [1, 4]
     },
     {
       "texto": "Agregar sal, pimienta y páprika, cocinar a fuego suave.",
-      "ingredientes": [
-        5,
-        7,
-        8
-      ]
+      "ingredientes": [5, 7, 8]
     },
     {
       "texto": "Calentar el resto de la mantequilla y freír la cebolla, incorporarla a la preparación anterior junto con la crema.",
-      "ingredientes": [
-        2,
-        3,
-        4
-      ]
+      "ingredientes": [2, 3, 4]
     },
     {
       "texto": "Calentar cuidando que no hierva la salsa.",
-      "ingredientes": [
-        7
-      ]
+      "ingredientes": [7]
     },
     {
       "texto": "Rectificar la sal, añadir un poco de ají de color y servir muy caliente.",
-      "ingredientes": [
-        6,
-        7
-      ]
+      "ingredientes": [6, 7]
     }
   ],
   "tiempo_v2": {

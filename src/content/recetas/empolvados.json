@@ -1,34 +1,12 @@
 {
   "titulo": "Empolvados",
   "categoria": "dulces",
-  "tags": [
-    "dulce",
-    "postre",
-    "horno",
-    "manjar",
-    "once"
-  ],
+  "tags": ["dulce", "postre", "horno", "manjar", "once"],
   "imagen": "img/empolvados.png",
   "tiempo": "40 min",
   "porciones": "20 unidades",
   "dificultad": "media",
   "tecnica": "Horno",
-  "ingredientes": [
-    "3 huevos a temperatura ambiente",
-    "1 pizca de sal",
-    "120 g de azúcar flor",
-    "120 g de harina cernida",
-    "500 g de manjar para rellenar",
-    "Azúcar flor para espolvorear"
-  ],
-  "pasos": [
-    "Precalienta el horno a 180 °C. Separa claras y yemas.",
-    "Bate las claras con la sal y añade el azúcar en partes hasta obtener un merengue firme.",
-    "Incorpora las yemas una a una batiendo poco.",
-    "Añade la harina con movimientos envolventes.",
-    "Forma copos de 5 cm en una bandeja con papel mantequilla.",
-    "Hornea 10-12 min. Enfría, rellena con manjar y espolvorea azúcar flor."
-  ],
   "dato": "No batas demasiado después de agregar la harina; perderás el aire y quedarán planos. Los empolvados son un clásico de la once chilena: dos tapas de masa liviana rellenas de manjar y espolvoreadas con azúcar flor.",
   "errores": [
     {
@@ -88,41 +66,26 @@
   "pasos_v2": [
     {
       "texto": "Precalienta el horno a 180 °C. Separa claras y yemas.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Bate las claras con la sal y añade el azúcar en partes hasta obtener un merengue firme.",
-      "ingredientes": [
-        1,
-        2,
-        3,
-        6
-      ]
+      "ingredientes": [1, 2, 3, 6]
     },
     {
       "texto": "Incorpora las yemas una a una batiendo poco.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Añade la harina con movimientos envolventes.",
-      "ingredientes": [
-        4
-      ]
+      "ingredientes": [4]
     },
     {
       "texto": "Forma copos de 5 cm en una bandeja con papel mantequilla."
     },
     {
       "texto": "Hornea 10-12 min. Enfría, rellena con manjar y espolvorea azúcar flor.",
-      "ingredientes": [
-        3,
-        5,
-        6
-      ],
+      "ingredientes": [3, 5, 6],
       "timers": [
         {
           "minutos": 12,

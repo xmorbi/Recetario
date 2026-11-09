@@ -1,40 +1,12 @@
 {
   "titulo": "Queque de plátano",
   "categoria": "dulces",
-  "tags": [
-    "queque",
-    "plátano",
-    "horno",
-    "once",
-    "dulce",
-    "reposteria"
-  ],
+  "tags": ["queque", "plátano", "horno", "once", "dulce", "reposteria"],
   "imagen": null,
   "tiempo": "1 h",
   "porciones": "10 porciones",
   "dificultad": "fácil",
   "tecnica": "Horno",
-  "ingredientes": [
-    "3 plátanos maduros",
-    "2 huevos",
-    "150 g de azúcar",
-    "100 g de mantequilla derretida",
-    "200 g de harina",
-    "1 cucharadita de polvos de hornear",
-    "1 cucharadita de bicarbonato",
-    "1 pizca de sal",
-    "1 cucharadita de vainilla",
-    "½ taza de nueces picadas (opcional)"
-  ],
-  "pasos": [
-    "Precalienta el horno a 180 °C. Engrasa un molde de queque.",
-    "Pisa los plátanos con un tenedor hasta hacer un puré.",
-    "Bate los huevos con el azúcar hasta que estén espumosos. Agrega la mantequilla derretida y la vainilla.",
-    "Incorpora el puré de plátano.",
-    "Añade la harina cernida con los polvos de hornear, el bicarbonato y la sal. Mezcla con movimientos envolventes.",
-    "Si usas nueces, incorpóralas ahora. Vierte en el molde.",
-    "Hornea 45-50 minutos, hasta que un palillo salga limpio."
-  ],
   "dato": "El queque de plátano es el queque de once chileno por excelencia. Se hace con plátanos muy maduros (mientras más negros, más dulce). Es húmedo y aromático, y se conserva bien por varios días.",
   "errores": [
     {
@@ -121,45 +93,27 @@
     },
     {
       "texto": "Pisa los plátanos con un tenedor hasta hacer un puré.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Bate los huevos con el azúcar hasta que estén espumosos. Agrega la mantequilla derretida y la vainilla.",
-      "ingredientes": [
-        2,
-        3,
-        4,
-        9
-      ]
+      "ingredientes": [2, 3, 4, 9]
     },
     {
       "texto": "Incorpora el puré de plátano.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Añade la harina cernida con los polvos de hornear, el bicarbonato y la sal. Mezcla con movimientos envolventes.",
-      "ingredientes": [
-        5,
-        6,
-        7,
-        8
-      ]
+      "ingredientes": [5, 6, 7, 8]
     },
     {
       "texto": "Si usas nueces, incorpóralas ahora. Vierte en el molde.",
-      "ingredientes": [
-        10
-      ]
+      "ingredientes": [10]
     },
     {
       "texto": "Hornea 45-50 minutos, hasta que un palillo salga limpio.",
-      "ingredientes": [
-        8
-      ],
+      "ingredientes": [8],
       "timers": [
         {
           "minutos": 50,

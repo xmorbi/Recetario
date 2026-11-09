@@ -1,35 +1,12 @@
 {
   "titulo": "Tomate relleno",
   "categoria": "ensaladas",
-  "tags": [
-    "tomate",
-    "relleno",
-    "atún",
-    "once",
-    "fresco",
-    "clásico"
-  ],
+  "tags": ["tomate", "relleno", "atún", "once", "fresco", "clásico"],
   "imagen": null,
   "tiempo": "20 min",
   "porciones": "4 personas",
   "dificultad": "muy fácil",
   "tecnica": "Sin cocción",
-  "ingredientes": [
-    "4 tomates grandes maduros pero firmes",
-    "1 tarro de atún (180 g) o 1 taza de pollo cocido desmenuzado",
-    "3 cucharadas de mayonesa",
-    "1 cucharadita de mostaza (opcional)",
-    "1 cucharada de cebolla picada muy fina",
-    "1 cucharada de perejil picado",
-    "Sal y pimienta"
-  ],
-  "pasos": [
-    "Lava los tomates y córtales la tapa (la parte de arriba). Reserva las tapas.",
-    "Con una cuchara, vacía ligeramente los tomates, sacando las semillas y un poco de pulpa. Reserva la pulpa.",
-    "Mezcla el atún (o pollo) con la mayonesa, la mostaza, la cebolla, el perejil, sal y pimienta. Agrega un poco de la pulpa del tomate picada.",
-    "Rellena los tomates con la mezcla.",
-    "Tapa con las tapas reservadas y refrigera 15 minutos antes de servir."
-  ],
   "dato": "El tomate relleno es un clásico de la once y de las entradas chilenas. Se rellena con atún, pollo o carne, mezclado con mayonesa. Es fresco, rápido y rico. Se sirve frío, como entrada o acompañamiento.",
   "errores": [
     {
@@ -99,33 +76,19 @@
   "pasos_v2": [
     {
       "texto": "Lava los tomates y córtales la tapa (la parte de arriba). Reserva las tapas.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Con una cuchara, vacía ligeramente los tomates, sacando las semillas y un poco de pulpa. Reserva la pulpa.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Mezcla el atún (o pollo) con la mayonesa, la mostaza, la cebolla, el perejil, sal y pimienta. Agrega un poco de la pulpa del tomate picada.",
-      "ingredientes": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7
-      ]
+      "ingredientes": [1, 2, 3, 4, 5, 6, 7]
     },
     {
       "texto": "Rellena los tomates con la mezcla.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Tapa con las tapas reservadas y refrigera 15 minutos antes de servir.",

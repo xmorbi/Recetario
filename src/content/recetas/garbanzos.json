@@ -1,39 +1,12 @@
 {
   "titulo": "Garbanzos",
   "categoria": "principales",
-  "tags": [
-    "garbanzos",
-    "legumbre",
-    "guiso",
-    "olla",
-    "invierno",
-    "cotidiano"
-  ],
+  "tags": ["garbanzos", "legumbre", "guiso", "olla", "invierno", "cotidiano"],
   "imagen": null,
   "tiempo": "1 h + remojo",
   "porciones": "4 personas",
   "dificultad": "fácil",
   "tecnica": "Olla",
-  "ingredientes": [
-    "500 g de garbanzos (remojados desde la noche anterior)",
-    "1 cebolla picada fina",
-    "2 dientes de ajo picados",
-    "1 zanahoria en cubos",
-    "1 pimentón rojo en cubos",
-    "1 longaniza en rodajas (opcional)",
-    "1 cucharadita de ají de color",
-    "1 cucharadita de orégano",
-    "1 hoja de laurel",
-    "Agua o caldo para cubrir",
-    "Sal, pimienta y aceite"
-  ],
-  "pasos": [
-    "Remoja los garbanzos la noche anterior. Escurre y enjuaga.",
-    "Sofríe la cebolla, el ajo, la zanahoria y el pimentón hasta que estén tiernos.",
-    "Agrega la longaniza si usas, el ají de color, el orégano y el laurel.",
-    "Incorpora los garbanzos y cubre con agua o caldo. Cocina a fuego medio 45-60 minutos, hasta que estén blandos.",
-    "Condimenta con sal y pimienta al final. Sirve caliente con arroz o pan."
-  ],
   "dato": "Los garbanzos son una legumbre muy querida en Chile, sobre todo en invierno. Se hacen guisados con longaniza o sin ella, y se sirven con arroz. En el sur se les agrega zapallo para espesar.",
   "errores": [
     {
@@ -129,36 +102,20 @@
   "pasos_v2": [
     {
       "texto": "Remoja los garbanzos la noche anterior. Escurre y enjuaga.",
-      "ingredientes": [
-        1
-      ],
+      "ingredientes": [1],
       "previo": true
     },
     {
       "texto": "Sofríe la cebolla, el ajo, la zanahoria y el pimentón hasta que estén tiernos.",
-      "ingredientes": [
-        2,
-        3,
-        4,
-        5,
-        11
-      ]
+      "ingredientes": [2, 3, 4, 5, 11]
     },
     {
       "texto": "Agrega la longaniza si usas, el ají de color, el orégano y el laurel.",
-      "ingredientes": [
-        6,
-        7,
-        8,
-        9
-      ]
+      "ingredientes": [6, 7, 8, 9]
     },
     {
       "texto": "Incorpora los garbanzos y cubre con agua o caldo. Cocina a fuego medio 45-60 minutos, hasta que estén blandos.",
-      "ingredientes": [
-        1,
-        10
-      ],
+      "ingredientes": [1, 10],
       "timers": [
         {
           "minutos": 60,
@@ -168,9 +125,7 @@
     },
     {
       "texto": "Condimenta con sal y pimienta al final. Sirve caliente con arroz o pan.",
-      "ingredientes": [
-        11
-      ]
+      "ingredientes": [11]
     }
   ],
   "tiempo_v2": {

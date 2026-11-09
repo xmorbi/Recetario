@@ -1,35 +1,12 @@
 {
   "titulo": "Tortillas de rescoldo",
   "categoria": "panes",
-  "tags": [
-    "pan",
-    "rescoldo",
-    "ceniza",
-    "campo",
-    "tradicional",
-    "patrimonio"
-  ],
+  "tags": ["pan", "rescoldo", "ceniza", "campo", "tradicional", "patrimonio"],
   "imagen": null,
   "tiempo": "40 min",
   "porciones": "8 tortillas",
   "dificultad": "media",
   "tecnica": "Brasas",
-  "ingredientes": [
-    "500 g de harina sin polvos de hornear",
-    "1 cucharadita de sal",
-    "1 cucharadita de polvos de hornear",
-    "100 g de manteca derretida",
-    "200 ml de agua tibia (aprox.)"
-  ],
-  "pasos": [
-    "Mezcla la harina con la sal y los polvos de hornear.",
-    "Agrega la manteca derretida y trabaja con las manos hasta que quede como arena gruesa.",
-    "Añade el agua tibia de a poco y amasa hasta obtener una masa suave que no se pegue.",
-    "Forma 8 bollos y aplánalos con la mano hasta que queden de 1 cm de grosor.",
-    "Prepara brasas abundantes (de leña o carbón). Deja que se forme una capa de ceniza blanca sobre las brasas.",
-    "Entierra las tortillas en la ceniza caliente, tapándolas bien. Cocina 5-7 minutos por lado.",
-    "Retira con cuidado, sacude la ceniza con un paño limpio y sirve calientes."
-  ],
   "dato": "La tortilla de rescoldo es el pan más antiguo de Chile. Se cocía en las brasas del fogón, enterrada en la ceniza caliente. Hoy se sigue haciendo en el campo, en fiestas costumbristas y en fondas. Su nombre viene de \"rescoldo\": la brasa o ceniza caliente. Es Patrimonio Cultural de Chile.",
   "errores": [
     {
@@ -86,23 +63,15 @@
   "pasos_v2": [
     {
       "texto": "Mezcla la harina con la sal y los polvos de hornear.",
-      "ingredientes": [
-        1,
-        2,
-        3
-      ]
+      "ingredientes": [1, 2, 3]
     },
     {
       "texto": "Agrega la manteca derretida y trabaja con las manos hasta que quede como arena gruesa.",
-      "ingredientes": [
-        4
-      ]
+      "ingredientes": [4]
     },
     {
       "texto": "Añade el agua tibia de a poco y amasa hasta obtener una masa suave que no se pegue.",
-      "ingredientes": [
-        5
-      ]
+      "ingredientes": [5]
     },
     {
       "texto": "Forma 8 bollos y aplánalos con la mano hasta que queden de 1 cm de grosor."

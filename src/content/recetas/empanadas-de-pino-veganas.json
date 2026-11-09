@@ -15,41 +15,6 @@
   "porciones": "12 unidades",
   "dificultad": "media",
   "tecnica": "Horno",
-  "ingredientes": [
-    "Para la masa: 700 g de harina de trigo corriente",
-    "90 g de aceite de coco caliente",
-    "260 ml de agua hirviendo",
-    "70 ml de vino blanco vegano",
-    "12 g de sal",
-    "Para el pino: 45 ml de aceite vegetal",
-    "750 g de cebolla (6 cebollas grandes), picada fina",
-    "150 g de proteína de soya texturizada (TVP)",
-    "1 cubo o sobre de caldo vegetal sabor carne u hongos",
-    "150 ml de agua caliente",
-    "200 g de champiñones picados",
-    "2 cucharaditas de ají de color",
-    "1 cucharada de comino molido",
-    "1/2 cucharadita de orégano en polvo",
-    "1/4 cucharadita de semilla de cilantro en polvo",
-    "1/2 cucharadita de pimienta negra",
-    "1 cucharada de vinagre balsámico",
-    "50 g de zapallo italiano rallado",
-    "8 g de sal",
-    "Para el armado: 12 pasas",
-    "12 aceitunas negras",
-    "1 huevo duro vegano (opcional)",
-    "30 ml de aquafaba (opcional, para pincelar)"
-  ],
-  "pasos": [
-    "Para el pino: picar la cebolla finamente y sofreírla en el aceite a fuego medio-bajo con la sal. Cocinar hasta que esté tierna y transparente, sin dorarse (unos 20 minutos).",
-    "Remojar la soya texturizada en el agua caliente con el caldo vegetal disuelto por 15 minutos.",
-    "Picar los champiñones finamente y rallar el zapallo italiano. Agregarlos a la cebolla junto con los condimentos (ají de color, comino, orégano, cilantro, pimienta).",
-    "Incorporar la soya remojada con todo su líquido y el vinagre balsámico. Mezclar bien y cocinar hasta que la mezcla esté jugosa pero no aguada. Rectificar la sal. Dejar enfriar (idealmente preparar el pino el día anterior).",
-    "Para la masa: en un bol, mezclar la harina con la sal. Agregar el aceite de coco caliente y el agua hirviendo, y luego el vino blanco. Amasar hasta formar una masa firme y suave. Dejar reposar tapada por 30 minutos.",
-    "Estirar la masa y cortar discos del tamaño deseado. Poner una cucharada generosa de pino, una pasa, una aceituna y, si se usa, un trozo de huevo duro vegano.",
-    "Cerrar las empanadas doblando la masa y sellando bien los bordes con los dedos o un tenedor. Pincelar con aquafaba si se desea un dorado brillante.",
-    "Hornear a 180 °C por 25-30 minutos, o hasta que estén doradas. Servir calientes."
-  ],
   "dato": "Preparar el pino el día anterior mejora el sabor y facilita el armado, ya que la mezcla fría no humedece la masa. La proteína de soya texturizada es el reemplazo más común de la carne molida en la versión vegana. Así, la tradición de las empanadas de pino se mantiene vigente para quienes no comen carne.",
   "errores": [
     {
@@ -243,13 +208,7 @@
   "pasos_v2": [
     {
       "texto": "Para el pino: picar la cebolla finamente y sofreírla en el aceite a fuego medio-bajo con la sal. Cocinar hasta que esté tierna y transparente, sin dorarse (unos 20 minutos).",
-      "ingredientes": [
-        2,
-        5,
-        6,
-        7,
-        19
-      ],
+      "ingredientes": [2, 5, 6, 7, 19],
       "timers": [
         {
           "minutos": 20,
@@ -259,12 +218,7 @@
     },
     {
       "texto": "Remojar la soya texturizada en el agua caliente con el caldo vegetal disuelto por 15 minutos.",
-      "ingredientes": [
-        2,
-        3,
-        9,
-        10
-      ],
+      "ingredientes": [2, 3, 9, 10],
       "timers": [
         {
           "minutos": 15,
@@ -274,42 +228,15 @@
     },
     {
       "texto": "Picar los champiñones finamente y rallar el zapallo italiano. Agregarlos a la cebolla junto con los condimentos (ají de color, comino, orégano, cilantro, pimienta).",
-      "ingredientes": [
-        6,
-        7,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        18
-      ]
+      "ingredientes": [6, 7, 11, 12, 13, 14, 15, 16, 18]
     },
     {
       "texto": "Incorporar la soya remojada con todo su líquido y el vinagre balsámico. Mezclar bien y cocinar hasta que la mezcla esté jugosa pero no aguada. Rectificar la sal. Dejar enfriar (idealmente preparar el pino el día anterior).",
-      "ingredientes": [
-        1,
-        4,
-        8,
-        17,
-        20,
-        21,
-        22,
-        23
-      ]
+      "ingredientes": [1, 4, 8, 17, 20, 21, 22, 23]
     },
     {
       "texto": "Para la masa: en un bol, mezclar la harina con la sal. Agregar el aceite de coco caliente y el agua hirviendo, y luego el vino blanco. Amasar hasta formar una masa firme y suave. Dejar reposar tapada por 30 minutos.",
-      "ingredientes": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        10,
-        19
-      ],
+      "ingredientes": [1, 2, 3, 4, 5, 10, 19],
       "timers": [
         {
           "minutos": 30,
@@ -319,18 +246,11 @@
     },
     {
       "texto": "Estirar la masa y cortar discos del tamaño deseado. Poner una cucharada generosa de pino, una pasa, una aceituna y, si se usa, un trozo de huevo duro vegano.",
-      "ingredientes": [
-        6,
-        20,
-        21,
-        22
-      ]
+      "ingredientes": [6, 20, 21, 22]
     },
     {
       "texto": "Cerrar las empanadas doblando la masa y sellando bien los bordes con los dedos o un tenedor. Pincelar con aquafaba si se desea un dorado brillante.",
-      "ingredientes": [
-        23
-      ]
+      "ingredientes": [23]
     },
     {
       "texto": "Hornear a 180 °C por 25-30 minutos, o hasta que estén doradas. Servir calientes.",

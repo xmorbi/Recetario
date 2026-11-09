@@ -1,38 +1,12 @@
 {
   "titulo": "Torta de manjar",
   "categoria": "dulces",
-  "tags": [
-    "torta",
-    "manjar",
-    "dulce",
-    "horno",
-    "cumpleaños",
-    "reposteria"
-  ],
+  "tags": ["torta", "manjar", "dulce", "horno", "cumpleaños", "reposteria"],
   "imagen": null,
   "tiempo": "1 h",
   "porciones": "12 porciones",
   "dificultad": "media",
   "tecnica": "Horno",
-  "ingredientes": [
-    "Bizcocho: 4 huevos",
-    "Bizcocho: 120 g de azúcar",
-    "Bizcocho: 100 g de harina",
-    "Bizcocho: 1 cucharadita de polvos de hornear",
-    "Bizcocho: 1 cucharadita de vainilla",
-    "Relleno y cubierta: 500 g de manjar",
-    "Relleno y cubierta: 300 ml de crema para batir",
-    "Relleno y cubierta: 2 cucharadas de azúcar flor"
-  ],
-  "pasos": [
-    "Precalienta el horno a 180 °C. Engrasa y enharina un molde redondo.",
-    "Bate los huevos con el azúcar hasta que estén pálidos y hayan triplicado su volumen (unos 8 minutos).",
-    "Incorpora la harina cernida con los polvos de hornear y la vainilla con movimientos envolventes.",
-    "Vierte en el molde y hornea 25-30 minutos. Deja enfriar y corta en 3 discos.",
-    "Bate la crema con el azúcar flor hasta que monte.",
-    "Arma la torta: disco, manjar, crema; repite. Cubre toda la torta con manjar y decora con crema.",
-    "Refrigera al menos 2 horas antes de servir."
-  ],
   "dato": "La torta de manjar es la torta de cumpleaños chilena por excelencia. Se hace con bizcocho liviano, manjar entre las capas y crema batida. Hay familias que le agregan nueces, chocolate rallado o merengue. El manjar (dulce de leche) puede ser casero o comprado.",
   "errores": [
     {
@@ -114,17 +88,11 @@
   "pasos_v2": [
     {
       "texto": "Precalienta el horno a 180 °C. Engrasa y enharina un molde redondo.",
-      "ingredientes": [
-        3
-      ]
+      "ingredientes": [3]
     },
     {
       "texto": "Bate los huevos con el azúcar hasta que estén pálidos y hayan triplicado su volumen (unos 8 minutos).",
-      "ingredientes": [
-        1,
-        2,
-        8
-      ],
+      "ingredientes": [1, 2, 8],
       "timers": [
         {
           "minutos": 8,
@@ -134,11 +102,7 @@
     },
     {
       "texto": "Incorpora la harina cernida con los polvos de hornear y la vainilla con movimientos envolventes.",
-      "ingredientes": [
-        3,
-        4,
-        5
-      ]
+      "ingredientes": [3, 4, 5]
     },
     {
       "texto": "Vierte en el molde y hornea 25-30 minutos. Deja enfriar y corta en 3 discos.",
@@ -151,18 +115,11 @@
     },
     {
       "texto": "Bate la crema con el azúcar flor hasta que monte.",
-      "ingredientes": [
-        2,
-        7,
-        8
-      ]
+      "ingredientes": [2, 7, 8]
     },
     {
       "texto": "Arma la torta: disco, manjar, crema; repite. Cubre toda la torta con manjar y decora con crema.",
-      "ingredientes": [
-        6,
-        7
-      ]
+      "ingredientes": [6, 7]
     },
     {
       "texto": "Refrigera al menos 2 horas antes de servir.",

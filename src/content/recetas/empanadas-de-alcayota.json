@@ -1,41 +1,12 @@
 {
   "titulo": "Empanadas de alcayota",
   "categoria": "dulces",
-  "tags": [
-    "empanada",
-    "dulce",
-    "alcayota",
-    "horno",
-    "postre",
-    "tradicional"
-  ],
+  "tags": ["empanada", "dulce", "alcayota", "horno", "postre", "tradicional"],
   "imagen": null,
   "tiempo": "1 h",
   "porciones": "12 unidades",
   "dificultad": "media",
   "tecnica": "Horno",
-  "ingredientes": [
-    "Masa: 500 g de harina sin polvos de hornear",
-    "Masa: 200 g de mantequilla a temperatura ambiente",
-    "Masa: 100 g de azúcar",
-    "Masa: 2 yemas de huevo",
-    "Masa: 100 ml de agua fría",
-    "Masa: 1 pizca de sal",
-    "Relleno: 500 g de dulce de alcayota (ver receta), frío y espeso",
-    "Relleno: 50 g de nueces picadas (opcional)",
-    "Pintar: 1 huevo batido",
-    "Azúcar flor para espolvorear"
-  ],
-  "pasos": [
-    "Mezcla la harina con el azúcar y la sal. Agrega la mantequilla fría en cubos y trabaja con los dedos hasta que quede como arena gruesa.",
-    "Añade las yemas y el agua fría de a poco, y amasa solo hasta que la masa se una. No amases de más o queda dura.",
-    "Envuelve la masa en papel plástico y refrigera por 30 minutos.",
-    "Estira la masa sobre una superficie enharinada hasta que tenga 3 mm de grosor. Corta círculos de 12-15 cm de diámetro.",
-    "Rellena cada círculo con 2 cucharadas de dulce de alcayota frío. Agrega nueces si quieres. No pongas demasiado relleno o la masa se humedece y se rompe.",
-    "Cierra con repulgue, presiona los bordes con un tenedor y pincha la superficie con un palillo para que no se infle.",
-    "Pinta con huevo batido y hornea a 180 °C por 20-25 minutos, hasta que estén doradas.",
-    "Espolvorea azúcar flor antes de servir."
-  ],
   "dato": "La alcayota es una fruta de la familia de la calabaza, típica de la zona central de Chile. Su dulce es un clásico de la repostería chilena, especialmente en Fiestas Patrias. Las empanadas de alcayota son primas de las de manzana, pero con un sabor más suave y dulce.",
   "errores": [
     {
@@ -136,21 +107,11 @@
   "pasos_v2": [
     {
       "texto": "Mezcla la harina con el azúcar y la sal. Agrega la mantequilla fría en cubos y trabaja con los dedos hasta que quede como arena gruesa.",
-      "ingredientes": [
-        1,
-        2,
-        3,
-        6,
-        10
-      ]
+      "ingredientes": [1, 2, 3, 6, 10]
     },
     {
       "texto": "Añade las yemas y el agua fría de a poco, y amasa solo hasta que la masa se una. No amases de más o queda dura.",
-      "ingredientes": [
-        4,
-        5,
-        9
-      ]
+      "ingredientes": [4, 5, 9]
     },
     {
       "texto": "Envuelve la masa en papel plástico y refrigera por 30 minutos.",
@@ -163,26 +124,18 @@
     },
     {
       "texto": "Estira la masa sobre una superficie enharinada hasta que tenga 3 mm de grosor. Corta círculos de 12-15 cm de diámetro.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Rellena cada círculo con 2 cucharadas de dulce de alcayota frío. Agrega nueces si quieres. No pongas demasiado relleno o la masa se humedece y se rompe.",
-      "ingredientes": [
-        7,
-        8
-      ]
+      "ingredientes": [7, 8]
     },
     {
       "texto": "Cierra con repulgue, presiona los bordes con un tenedor y pincha la superficie con un palillo para que no se infle."
     },
     {
       "texto": "Pinta con huevo batido y hornea a 180 °C por 20-25 minutos, hasta que estén doradas.",
-      "ingredientes": [
-        4,
-        9
-      ],
+      "ingredientes": [4, 9],
       "timers": [
         {
           "minutos": 25,
@@ -192,10 +145,7 @@
     },
     {
       "texto": "Espolvorea azúcar flor antes de servir.",
-      "ingredientes": [
-        3,
-        10
-      ]
+      "ingredientes": [3, 10]
     }
   ],
   "tiempo_v2": {

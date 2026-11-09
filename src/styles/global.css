@@ -5,6 +5,46 @@ html{scrollbar-gutter:stable}
 :root{--rojo:#b03a2e;--rojo-osc:#7a1b15;--azul:#1f3a5f;--dorado:#c8963e;--terracota:#c4643a;--crema:#fdf8f0;--crema-osc:#f6ecdd;--arena:#f2e6d6;--borde:#e6d6c1;--tinta:#2b2320;--suave:#6f6257;--radio:16px;--sombra-sm:0 1px 3px rgba(90,60,30,.08);--sombra-md:0 4px 16px rgba(90,60,30,.08);--sombra-lg:0 12px 32px rgba(90,60,30,.14);--fuente-titulos:'Fraunces','Fraunces-fallback',Georgia,'Playfair Display',serif;--fuente-texto:'Inter','Inter-fallback',system-ui,-apple-system,'Segoe UI',sans-serif;--max-width:1000px;--pad-x:1rem;--destacada-min:540px;--color-foco:#7a1b15}
 
 /* =====================================================================
+   PALETA CENTRALIZADA — MODO OSCURO
+   Variables de tema en un solo lugar. Las reglas oscuras de componentes
+   permanecen junto a sus respectivos componentes más abajo en el archivo.
+   ===================================================================== */
+[data-theme="dark"] {
+  /* Paleta global */
+  --crema: #121212;
+  --crema-osc: #1e1e1e;
+  --tinta: #f5f5f5;
+  --suave: #a0a0a0;
+  --borde: #333333;
+  --rojo-osc: #e57373;
+  --arena: #2a2a2a;
+  --color-foco: #e8b54a;
+  --focus-halo: rgba(232, 181, 74, 0.30);
+
+  /* Paleta específica de la ficha de receta */
+  --marca-rojo: #e57373;
+  --marca-rojo-osc: #e57373;
+  --marca-beige: #2a2a2a;
+  --marca-beige-hover: #333333;
+  --marca-beige-img: #1a1512;
+  --marca-texto: #f5f5f5;
+  --marca-texto-medio: #c4c4c4;
+  --marca-texto-suave: #a0a0a0;
+  --marca-texto-label: #a0a0a0;
+  --marca-sep: #666666;
+  --marca-card: #1e1e1e;
+
+  /* Materiales translúcidos y sombras */
+  --material-thin: rgba(18, 18, 18, 0.82);
+  --material-regular: rgba(18, 18, 18, 0.90);
+  --material-thick: rgba(30, 30, 30, 0.95);
+  --shadow-material:
+    0 1px 2px rgba(0, 0, 0, 0.35),
+    0 4px 12px rgba(0, 0, 0, 0.45),
+    0 16px 40px rgba(0, 0, 0, 0.55);
+}
+
+/* =====================================================================
    FASE 1 — SISTEMA DE DISEÑO (TOKENS)
    Solo variables. Ninguna regla existente se modifica ni se reemplaza.
    Los tokens semánticos apuntan a variables ya existentes
@@ -151,19 +191,6 @@ html{scrollbar-gutter:stable}
   --marca-blanco:       #ffffff;  /* texto/íconos sobre fondos rojos       */
 }
 
-[data-theme="dark"] {
-  --marca-rojo:         #e57373;
-  --marca-rojo-osc:     #e57373;
-  --marca-beige:        #2a2a2a;
-  --marca-beige-hover:  #333333;
-  --marca-beige-img:    #1a1512;
-  --marca-texto:        #f5f5f5;
-  --marca-texto-medio:  #c4c4c4;
-  --marca-texto-suave:  #a0a0a0;
-  --marca-texto-label:  #a0a0a0;
-  --marca-sep:          #666666;
-  --marca-card:         #1e1e1e;
-}
 
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--crema);color:var(--tinta);font-family:var(--fuente-texto);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -1288,16 +1315,6 @@ body.mc-bloqueado{overflow:hidden}
    ========================================================= */
 
 /* ===== MODO OSCURO ===== */
-[data-theme="dark"] {
-  --crema: #121212;
-  --crema-osc: #1e1e1e;
-  --tinta: #f5f5f5;
-  --suave: #a0a0a0;
-  --borde: #333333;
-  --rojo-osc: #e57373;
-  --arena: #2a2a2a;
-  --color-foco: #e57373;
-}
 
 [data-theme="dark"] .site-nav { background: #1a1a1a; border-bottom: 1px solid #333; }
 [data-theme="dark"] .receta-card, [data-theme="dark"] .receta, [data-theme="dark"] .categoria-card, [data-theme="dark"] .receta-destacada { background: #1e1e1e; }
@@ -4152,15 +4169,6 @@ body.mc-bloqueado{overflow:hidden}
     0 16px 40px rgba(90, 60, 30, 0.10);
 }
 
-[data-theme="dark"] {
-  --material-thin:    rgba(18, 18, 18, 0.82);
-  --material-regular: rgba(18, 18, 18, 0.90);
-  --material-thick:   rgba(30, 30, 30, 0.95);
-  --shadow-material:
-    0 1px 2px rgba(0, 0, 0, 0.35),
-    0 4px 12px rgba(0, 0, 0, 0.45),
-    0 16px 40px rgba(0, 0, 0, 0.55);
-}
 
 /* ----- 7B — Materiales translúcidos ----- */
 /* Menús flotantes: dropdown nav, dropdown tabbar, autocompletado */
@@ -4754,11 +4762,6 @@ details[open] > .tabbar-tools-menu {
   --focus-halo: rgba(31, 58, 95, 0.25);
 }
 
-[data-theme="dark"] {
-  /* Dorado: alto contraste contra #121212, #1a1a1a y #1e1e1e. */
-  --color-foco: #e8b54a;
-  --focus-halo: rgba(232, 181, 74, 0.30);
-}
 
 /* ---------- 8.1.B — Unificar color de foco en controles con --rojo ----------
    Estas reglas originales declaran `outline: 2px solid var(--rojo)`, que en
@@ -6022,4 +6025,188 @@ details[open] > .tabbar-tools-menu {
     width: 20px;
     height: 20px;
   }
+}
+
+/* =====================================================================
+   AJUSTE DE ACABADO — MODO OSCURO
+   Menús, avisos y superficies del Planificador Inteligente.
+   Solo afecta al tema oscuro; el modo claro queda intacto.
+   ===================================================================== */
+
+/* Menús flotantes: evita que estilos base o transparencias los aclaren */
+[data-theme="dark"] .dropdown-menu,
+[data-theme="dark"] details[open] > .dropdown-menu,
+[data-theme="dark"] .site-nav-links,
+[data-theme="dark"] .tabbar-tools-menu,
+[data-theme="dark"] .ac-dropdown {
+  background-color: #202020 !important;
+  color: #f5f5f5;
+  border-color: #3b3b3b;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, .48);
+}
+
+[data-theme="dark"] .dropdown-menu a,
+[data-theme="dark"] .tabbar-tools-menu a,
+[data-theme="dark"] .ac-dropdown li {
+  color: #eeeeee;
+}
+
+[data-theme="dark"] .dropdown-menu a:hover,
+[data-theme="dark"] .dropdown-menu a:focus-visible,
+[data-theme="dark"] .tabbar-tools-menu a:hover,
+[data-theme="dark"] .ac-dropdown li:hover,
+[data-theme="dark"] .ac-dropdown li.activo {
+  background: #343434;
+  color: #ff9a91;
+}
+
+[data-theme="dark"] .dropdown-menu a.activo {
+  background: #343434;
+  color: #ff9a91;
+}
+
+/* Aviso sanitario del Planificador: panel cálido, pero legible.
+   Se contemplan nombres habituales para cubrir variantes de clase. */
+[data-theme="dark"] .aviso-salud,
+[data-theme="dark"] .alerta-salud,
+[data-theme="dark"] .aviso-importante-salud,
+[data-theme="dark"] .alerta-importante-salud,
+[data-theme="dark"] .aviso-medico,
+[data-theme="dark"] .alerta-medica,
+[data-theme="dark"] .health-notice,
+[data-theme="dark"] .health-alert,
+[data-theme="dark"] .planificador-aviso-salud,
+[data-theme="dark"] .aviso-seguridad-alimentaria {
+  background: #332b18 !important;
+  color: #f3e8c8 !important;
+  border: 1px solid #6e5928;
+  border-left: 5px solid #e7b94f;
+  border-radius: 0 16px 16px 0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .18);
+}
+
+[data-theme="dark"] .aviso-salud *,
+[data-theme="dark"] .alerta-salud *,
+[data-theme="dark"] .aviso-importante-salud *,
+[data-theme="dark"] .alerta-importante-salud *,
+[data-theme="dark"] .aviso-medico *,
+[data-theme="dark"] .alerta-medica *,
+[data-theme="dark"] .health-notice *,
+[data-theme="dark"] .health-alert *,
+[data-theme="dark"] .planificador-aviso-salud *,
+[data-theme="dark"] .aviso-seguridad-alimentaria * {
+  color: inherit;
+}
+
+[data-theme="dark"] .aviso-salud strong,
+[data-theme="dark"] .alerta-salud strong,
+[data-theme="dark"] .aviso-importante-salud strong,
+[data-theme="dark"] .alerta-importante-salud strong,
+[data-theme="dark"] .aviso-medico strong,
+[data-theme="dark"] .alerta-medica strong,
+[data-theme="dark"] .health-notice strong,
+[data-theme="dark"] .health-alert strong,
+[data-theme="dark"] .planificador-aviso-salud strong,
+[data-theme="dark"] .aviso-seguridad-alimentaria strong,
+[data-theme="dark"] .aviso-salud h1,
+[data-theme="dark"] .aviso-salud h2,
+[data-theme="dark"] .aviso-salud h3,
+[data-theme="dark"] .alerta-salud h1,
+[data-theme="dark"] .alerta-salud h2,
+[data-theme="dark"] .alerta-salud h3,
+[data-theme="dark"] .aviso-importante-salud h1,
+[data-theme="dark"] .aviso-importante-salud h2,
+[data-theme="dark"] .aviso-importante-salud h3,
+[data-theme="dark"] .health-notice h1,
+[data-theme="dark"] .health-notice h2,
+[data-theme="dark"] .health-alert h1,
+[data-theme="dark"] .health-alert h2 {
+  color: #ffd166 !important;
+}
+
+/* Superficies del planificador */
+[data-theme="dark"] .restriccion-item,
+[data-theme="dark"] .minuta-card,
+[data-theme="dark"] .modal-dinamico,
+[data-theme="dark"] .modal-dinamico-body {
+  background-color: #202020;
+  color: #f5f5f5;
+  border-color: #3b3b3b;
+}
+
+[data-theme="dark"] .restriccion-item span,
+[data-theme="dark"] .minuta-receta-nombre,
+[data-theme="dark"] .modal-dinamico-body,
+[data-theme="dark"] .modal-dinamico-body label {
+  color: #eeeeee;
+}
+
+[data-theme="dark"] .restriccion-item:has(input:checked) {
+  background: #302323;
+  border-color: #e57373;
+  box-shadow: inset 0 0 0 1px rgba(229, 115, 115, .16);
+}
+
+[data-theme="dark"] .restriccion-item:focus-within {
+  outline: 2px solid #e8b54a;
+  outline-offset: 3px;
+}
+
+/* Campos: evita controles blancos heredados del navegador */
+[data-theme="dark"] .restriccion-item input,
+[data-theme="dark"] .modal-dinamico input,
+[data-theme="dark"] .modal-dinamico select,
+[data-theme="dark"] .modal-dinamico textarea {
+  color-scheme: dark;
+  accent-color: #e57373;
+}
+
+[data-theme="dark"] .modal-dinamico input,
+[data-theme="dark"] .modal-dinamico select,
+[data-theme="dark"] .modal-dinamico textarea {
+  background: #151515;
+  color: #f5f5f5;
+  border-color: #454545;
+}
+
+[data-theme="dark"] .modal-dinamico input::placeholder,
+[data-theme="dark"] .modal-dinamico textarea::placeholder {
+  color: #a8a8a8;
+}
+
+/* Foco visible coherente con la identidad visual */
+[data-theme="dark"] :is(
+  .dropdown-menu a,
+  .tabbar-tools-menu a,
+  .restriccion-item,
+  .modal-dinamico button,
+  .modal-dinamico input,
+  .modal-dinamico select,
+  .modal-dinamico textarea
+):focus-visible {
+  outline: 2px solid #e8b54a;
+  outline-offset: 3px;
+}
+
+/* Corrección exacta del aviso de seguridad visible en el Planificador */
+[data-theme="dark"] .advertencia-box {
+  background: #332b18 !important;
+  border: 1px solid #6e5928 !important;
+  border-left: 5px solid #e7b94f !important;
+  color: #f3e8c8 !important;
+  border-radius: 0 16px 16px 0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .2);
+}
+
+[data-theme="dark"] .advertencia-box .advertencia-texto,
+[data-theme="dark"] .advertencia-box .advertencia-texto p {
+  color: #f3e8c8 !important;
+}
+
+[data-theme="dark"] .advertencia-box .advertencia-texto strong {
+  color: #ffd166 !important;
+}
+
+[data-theme="dark"] .advertencia-box .advertencia-icon {
+  color: #ffd166;
 }

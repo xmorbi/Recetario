@@ -1,33 +1,12 @@
 {
   "titulo": "Leche asada",
   "categoria": "dulces",
-  "tags": [
-    "postre",
-    "dulce",
-    "horno",
-    "leche",
-    "tradicional"
-  ],
+  "tags": ["postre", "dulce", "horno", "leche", "tradicional"],
   "imagen": "img/Leche-Asada.jpg",
   "tiempo": "70 min",
   "porciones": "6 personas",
   "dificultad": "fácil",
   "tecnica": "Horno",
-  "ingredientes": [
-    "1 litro de leche",
-    "6 huevos",
-    "150 g de azúcar",
-    "1 cucharadita de vainilla",
-    "100 g de azúcar para el caramelo"
-  ],
-  "pasos": [
-    "Derrite el azúcar en una sartén hasta que tome color dorado. Vierte en el fondo del molde.",
-    "Bate los huevos con el azúcar hasta que estén cremosos.",
-    "Agrega la leche tibia y la vainilla, mezclando suavemente.",
-    "Vierte en el molde caramelizado y cúbrelo con papel aluminio.",
-    "Hornea al baño María a 180 °C por 50 a 60 minutos.",
-    "Deja enfriar y refrigera al menos 2 horas antes de desmoldar."
-  ],
   "dato": "El baño María es obligatorio. Sin él, la leche se corta.",
   "errores": [
     {
@@ -80,25 +59,15 @@
   "pasos_v2": [
     {
       "texto": "Derrite el azúcar en una sartén hasta que tome color dorado. Vierte en el fondo del molde.",
-      "ingredientes": [
-        3,
-        5
-      ]
+      "ingredientes": [3, 5]
     },
     {
       "texto": "Bate los huevos con el azúcar hasta que estén cremosos.",
-      "ingredientes": [
-        2,
-        3,
-        5
-      ]
+      "ingredientes": [2, 3, 5]
     },
     {
       "texto": "Agrega la leche tibia y la vainilla, mezclando suavemente.",
-      "ingredientes": [
-        1,
-        4
-      ]
+      "ingredientes": [1, 4]
     },
     {
       "texto": "Vierte en el molde caramelizado y cúbrelo con papel aluminio."

@@ -1,35 +1,12 @@
 {
   "titulo": "Atún con arroz o pasta",
   "categoria": "principales",
-  "tags": [
-    "atún",
-    "arroz",
-    "pasta",
-    "cotidiano",
-    "rápido",
-    "economico"
-  ],
+  "tags": ["atún", "arroz", "pasta", "cotidiano", "rápido", "economico"],
   "imagen": null,
   "tiempo": "20 min",
   "porciones": "2 personas",
   "dificultad": "fácil",
   "tecnica": "Olla",
-  "ingredientes": [
-    "1 taza (200 g) de arroz (o 200 g de pasta)",
-    "1 tarro de 180 g de atún al agua o al aceite",
-    "1 cebolla pequeña picada fina",
-    "1 diente de ajo picado",
-    "1 tomate maduro picado (o 2 cucharadas de salsa de tomate)",
-    "2 cucharadas (30 ml) de aceite",
-    "Sal, pimienta y orégano"
-  ],
-  "pasos": [
-    "Cocina el arroz o la pasta según las instrucciones del paquete.",
-    "Mientras tanto, sofríe la cebolla y el ajo en aceite hasta que estén transparentes.",
-    "Agrega el tomate y cocina 3 minutos. Añade el atún escurrido y desmenuzado.",
-    "Condimenta con sal, pimienta y orégano. Cocina 2 minutos.",
-    "Mezcla con el arroz o la pasta cocida. Sirve caliente."
-  ],
   "dato": "El atún con arroz o pasta es el clásico \"no hay nada en la casa\" chileno. Se hace en 20 minutos y salva cualquier almuerzo o cena. Se le puede agregar choclo, arvejas o lo que haya en el refrigerador.",
   "errores": [
     {
@@ -100,25 +77,15 @@
   "pasos_v2": [
     {
       "texto": "Cocina el arroz o la pasta según las instrucciones del paquete.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Mientras tanto, sofríe la cebolla y el ajo en aceite hasta que estén transparentes.",
-      "ingredientes": [
-        2,
-        3,
-        4,
-        6
-      ]
+      "ingredientes": [2, 3, 4, 6]
     },
     {
       "texto": "Agrega el tomate y cocina 3 minutos. Añade el atún escurrido y desmenuzado.",
-      "ingredientes": [
-        2,
-        5
-      ],
+      "ingredientes": [2, 5],
       "timers": [
         {
           "minutos": 3,
@@ -128,9 +95,7 @@
     },
     {
       "texto": "Condimenta con sal, pimienta y orégano. Cocina 2 minutos.",
-      "ingredientes": [
-        7
-      ],
+      "ingredientes": [7],
       "timers": [
         {
           "minutos": 2,
@@ -140,9 +105,7 @@
     },
     {
       "texto": "Mezcla con el arroz o la pasta cocida. Sirve caliente.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     }
   ],
   "tiempo_v2": {

@@ -1,36 +1,12 @@
 {
   "titulo": "Cola de mono infantil",
   "categoria": "bebidas",
-  "tags": [
-    "bebida",
-    "sin alcohol",
-    "niños",
-    "café",
-    "navidad",
-    "invierno"
-  ],
+  "tags": ["bebida", "sin alcohol", "niños", "café", "navidad", "invierno"],
   "imagen": null,
   "tiempo": "20 min + enfriado",
   "porciones": "6 a 8 vasos",
   "dificultad": "fácil",
   "tecnica": "Olla",
-  "ingredientes": [
-    "1 litro de leche entera",
-    "2 cucharadas (20 g) de café instantáneo descafeinado",
-    "1 rama de canela",
-    "2 clavos de olor",
-    "1/2 taza (100 g) de azúcar (ajustar al gusto)",
-    "1 cucharadita (5 ml) de esencia de vainilla",
-    "1 cucharadita (5 ml) de esencia de ron sin alcohol (opcional, para dar aroma)",
-    "Ralladura de 1/2 naranja (opcional)"
-  ],
-  "pasos": [
-    "En una olla, calienta la leche con la canela, los clavos y la ralladura de naranja. No dejes que hierva.",
-    "Disuelve el café descafeinado en un poco de leche caliente aparte y viértelo a la olla.",
-    "Agrega el azúcar y revuelve hasta disolver.",
-    "Retira del fuego, añade la vainilla y la esencia de ron si usas. Deja enfriar.",
-    "Refrigera por al menos 3 horas. Sirve bien frío con una pizca de canela molida encima."
-  ],
   "dato": "La versión sin alcohol del clásico navideño. El café descafeinado y la esencia de ron (que no contiene alcohol, solo el aroma) permiten que los niños también disfruten de la tradición.",
   "errores": [
     {
@@ -105,38 +81,23 @@
   "pasos_v2": [
     {
       "texto": "En una olla, calienta la leche con la canela, los clavos y la ralladura de naranja. No dejes que hierva.",
-      "ingredientes": [
-        1,
-        3,
-        4,
-        8
-      ]
+      "ingredientes": [1, 3, 4, 8]
     },
     {
       "texto": "Disuelve el café descafeinado en un poco de leche caliente aparte y viértelo a la olla.",
-      "ingredientes": [
-        1,
-        2
-      ]
+      "ingredientes": [1, 2]
     },
     {
       "texto": "Agrega el azúcar y revuelve hasta disolver.",
-      "ingredientes": [
-        5
-      ]
+      "ingredientes": [5]
     },
     {
       "texto": "Retira del fuego, añade la vainilla y la esencia de ron si usas. Deja enfriar.",
-      "ingredientes": [
-        6,
-        7
-      ]
+      "ingredientes": [6, 7]
     },
     {
       "texto": "Refrigera por al menos 3 horas. Sirve bien frío con una pizca de canela molida encima.",
-      "ingredientes": [
-        3
-      ],
+      "ingredientes": [3],
       "timers": [
         {
           "minutos": 180,

@@ -1,39 +1,12 @@
 {
   "titulo": "Pastel de jaiba",
   "categoria": "mar",
-  "tags": [
-    "jaiba",
-    "marisco",
-    "horno",
-    "pastel",
-    "tradicional",
-    "restaurant"
-  ],
+  "tags": ["jaiba", "marisco", "horno", "pastel", "tradicional", "restaurant"],
   "imagen": null,
   "tiempo": "50 min",
   "porciones": "4 personas",
   "dificultad": "media",
   "tecnica": "Horno",
-  "ingredientes": [
-    "500 g de carne de jaiba (fresca o en conserva)",
-    "1 cebolla grande picada fina",
-    "1 pimentón rojo en cubos pequeños",
-    "2 dientes de ajo picados",
-    "1/2 taza de vino blanco",
-    "1/2 taza de crema",
-    "100 g de queso mantecoso o chanco rallado",
-    "1 taza de pan molido o miga de pan",
-    "Mantequilla, sal, pimienta, merkén y orégano"
-  ],
-  "pasos": [
-    "Sofríe la cebolla, el ajo y el pimentón en mantequilla hasta que estén transparentes.",
-    "Agrega la carne de jaiba y saltea 3 minutos. Condimenta con sal, pimienta, merkén y orégano.",
-    "Vierte el vino blanco y deja evaporar. Agrega la crema y cocina 2 minutos más.",
-    "Retira del fuego y mezcla con la mitad del pan molido. Rectifica la sal.",
-    "Reparte en pailas de greda individuales o en una fuente para horno.",
-    "Cubre con el pan molido restante y luego con el queso rallado.",
-    "Hornea a 200 °C por 15-20 minutos, hasta que el queso esté dorado y burbujeante."
-  ],
   "dato": "El pastel de jaiba es un clásico de los restaurantes chilenos de mariscos, especialmente en la zona central y sur. La jaiba es un cangrejo pequeño que se come mucho en Chile. Si usas jaiba fresca, el rendimiento es de aproximadamente 100 g de carne por jaiba entera.",
   "errores": [
     {
@@ -119,18 +92,11 @@
   "pasos_v2": [
     {
       "texto": "Sofríe la cebolla, el ajo y el pimentón en mantequilla hasta que estén transparentes.",
-      "ingredientes": [
-        2,
-        3,
-        4,
-        9
-      ]
+      "ingredientes": [2, 3, 4, 9]
     },
     {
       "texto": "Agrega la carne de jaiba y saltea 3 minutos. Condimenta con sal, pimienta, merkén y orégano.",
-      "ingredientes": [
-        1
-      ],
+      "ingredientes": [1],
       "timers": [
         {
           "minutos": 3,
@@ -140,10 +106,7 @@
     },
     {
       "texto": "Vierte el vino blanco y deja evaporar. Agrega la crema y cocina 2 minutos más.",
-      "ingredientes": [
-        5,
-        6
-      ],
+      "ingredientes": [5, 6],
       "timers": [
         {
           "minutos": 2,
@@ -153,25 +116,18 @@
     },
     {
       "texto": "Retira del fuego y mezcla con la mitad del pan molido. Rectifica la sal.",
-      "ingredientes": [
-        8
-      ]
+      "ingredientes": [8]
     },
     {
       "texto": "Reparte en pailas de greda individuales o en una fuente para horno."
     },
     {
       "texto": "Cubre con el pan molido restante y luego con el queso rallado.",
-      "ingredientes": [
-        7,
-        8
-      ]
+      "ingredientes": [7, 8]
     },
     {
       "texto": "Hornea a 200 °C por 15-20 minutos, hasta que el queso esté dorado y burbujeante.",
-      "ingredientes": [
-        7
-      ],
+      "ingredientes": [7],
       "timers": [
         {
           "minutos": 20,

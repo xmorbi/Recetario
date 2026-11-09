@@ -15,26 +15,6 @@
   "porciones": "4 personas",
   "dificultad": "fácil",
   "tecnica": "Olla y licuadora",
-  "ingredientes": [
-    "2 tazas de garbanzos secos (aprox. 400 g)",
-    "3 cucharadas de aceite de oliva",
-    "Jugo de 2 limones",
-    "1 cucharada de pasta de ajo (o 2 dientes de ajo machacados)",
-    "1 cucharadita de canela en polvo",
-    "1 cucharadita de pimienta negra",
-    "1 taza del agua de cocción de los garbanzos (aproximadamente)",
-    "Sal al gusto",
-    "Pimentón dulce y perejil o cilantro fresco para decorar"
-  ],
-  "pasos": [
-    "La noche anterior, lavar los garbanzos y dejarlos en remojo en abundante agua (mínimo 12 horas).",
-    "Al día siguiente, escurrir el agua de remojo y enjuagar bien los garbanzos.",
-    "Cocer los garbanzos en una olla con agua fresca (que los cubra) hasta que estén muy blandos, aproximadamente 30 a 40 minutos. Reservar 1 taza del líquido de cocción.",
-    "Escurrir los garbanzos cocidos y colocarlos en la licuadora o procesadora de alimentos.",
-    "Agregar el aceite de oliva, el jugo de limón, la pasta de ajo, la canela, la pimienta y la sal.",
-    "Procesar, agregando poco a poco el agua de cocción reservada, hasta obtener un puré homogéneo y cremoso. Ajustar la sal si es necesario.",
-    "Servir en un plato hondo, rociar con un chorrito de aceite de oliva y espolvorear pimentón dulce y perejil o cilantro picado."
-  ],
   "dato": "La canela en polvo es el toque secreto de muchas recetas chilenas de puré de garbanzos; le aporta un aroma cálido y sutil que lo diferencia del hummus tradicional. Se sirve como acompañamiento de carnes asadas, pollo o como parte de un almuerzo vegetariano.",
   "errores": [
     {
@@ -116,25 +96,16 @@
   "pasos_v2": [
     {
       "texto": "La noche anterior, lavar los garbanzos y dejarlos en remojo en abundante agua (mínimo 12 horas).",
-      "ingredientes": [
-        1,
-        7
-      ],
+      "ingredientes": [1, 7],
       "previo": true
     },
     {
       "texto": "Al día siguiente, escurrir el agua de remojo y enjuagar bien los garbanzos.",
-      "ingredientes": [
-        1,
-        7
-      ]
+      "ingredientes": [1, 7]
     },
     {
       "texto": "Cocer los garbanzos en una olla con agua fresca (que los cubra) hasta que estén muy blandos, aproximadamente 30 a 40 minutos. Reservar 1 taza del líquido de cocción.",
-      "ingredientes": [
-        1,
-        7
-      ],
+      "ingredientes": [1, 7],
       "timers": [
         {
           "minutos": 40,
@@ -144,34 +115,19 @@
     },
     {
       "texto": "Escurrir los garbanzos cocidos y colocarlos en la licuadora o procesadora de alimentos.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Agregar el aceite de oliva, el jugo de limón, la pasta de ajo, la canela, la pimienta y la sal.",
-      "ingredientes": [
-        2,
-        3,
-        4,
-        5,
-        6,
-        8
-      ]
+      "ingredientes": [2, 3, 4, 5, 6, 8]
     },
     {
       "texto": "Procesar, agregando poco a poco el agua de cocción reservada, hasta obtener un puré homogéneo y cremoso. Ajustar la sal si es necesario.",
-      "ingredientes": [
-        7,
-        8
-      ]
+      "ingredientes": [7, 8]
     },
     {
       "texto": "Servir en un plato hondo, rociar con un chorrito de aceite de oliva y espolvorear pimentón dulce y perejil o cilantro picado.",
-      "ingredientes": [
-        2,
-        9
-      ]
+      "ingredientes": [2, 9]
     }
   ],
   "tiempo_v2": {

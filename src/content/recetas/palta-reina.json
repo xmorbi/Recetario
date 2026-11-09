@@ -1,34 +1,12 @@
 {
   "titulo": "Palta reina",
   "categoria": "ensaladas",
-  "tags": [
-    "palta",
-    "relleno",
-    "pollo",
-    "mayonesa",
-    "entrada",
-    "clásico"
-  ],
+  "tags": ["palta", "relleno", "pollo", "mayonesa", "entrada", "clásico"],
   "imagen": null,
   "tiempo": "15 min",
   "porciones": "4 personas",
   "dificultad": "muy fácil",
   "tecnica": "Sin cocción",
-  "ingredientes": [
-    "2 paltas Hass maduras",
-    "1 taza de pollo cocido desmenuzado (o atún)",
-    "3 cucharadas de mayonesa",
-    "1 cucharadita de mostaza (opcional)",
-    "1 cucharada de cebolla picada muy fina",
-    "Sal y pimienta",
-    "Jugo de limón"
-  ],
-  "pasos": [
-    "Corta las paltas por la mitad y retira el carozo. Rocía con jugo de limón para que no se oxiden.",
-    "Mezcla el pollo (o atún) con la mayonesa, la mostaza, la cebolla, sal y pimienta.",
-    "Rellena las mitades de palta con la mezcla.",
-    "Sirve frío como entrada o acompañamiento."
-  ],
   "dato": "La palta reina es un clásico de la cocina chilena. Se hace con palta rellena de pollo o atún mezclado con mayonesa. Se sirve como entrada en las casas y restaurantes. Es fresca, cremosa y muy rica.",
   "errores": [
     {
@@ -98,26 +76,15 @@
   "pasos_v2": [
     {
       "texto": "Corta las paltas por la mitad y retira el carozo. Rocía con jugo de limón para que no se oxiden.",
-      "ingredientes": [
-        1,
-        7
-      ]
+      "ingredientes": [1, 7]
     },
     {
       "texto": "Mezcla el pollo (o atún) con la mayonesa, la mostaza, la cebolla, sal y pimienta.",
-      "ingredientes": [
-        2,
-        3,
-        4,
-        5,
-        6
-      ]
+      "ingredientes": [2, 3, 4, 5, 6]
     },
     {
       "texto": "Rellena las mitades de palta con la mezcla.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Sirve frío como entrada o acompañamiento."

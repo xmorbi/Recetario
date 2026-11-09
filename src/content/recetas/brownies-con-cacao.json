@@ -1,38 +1,12 @@
 {
   "titulo": "Brownies con cacao",
   "categoria": "dulces",
-  "tags": [
-    "dulce",
-    "postre",
-    "horno",
-    "chocolate",
-    "reposteria"
-  ],
+  "tags": ["dulce", "postre", "horno", "chocolate", "reposteria"],
   "imagen": "img/Brownie-con-cacao.jpg",
   "tiempo": "45 min",
   "porciones": "12 porciones",
   "dificultad": "fácil",
   "tecnica": "Horno",
-  "ingredientes": [
-    "200 g de chocolate amargo o cobertura (o 100 g de cacao en polvo)",
-    "150 g de mantequilla",
-    "200 g de azúcar",
-    "3 huevos",
-    "100 g de harina sin polvos de hornear",
-    "1 cucharadita (5 ml) de esencia de vainilla",
-    "1 pizca de sal",
-    "100 g de nueces picadas (opcional)"
-  ],
-  "pasos": [
-    "Precalienta el horno a 180 °C. Engrasa y enharina un molde cuadrado de unos 20x20 cm.",
-    "Derrite la mantequilla junto con el chocolate a baño María o en el microondas (con cuidado de no quemarlo). Si usas cacao en polvo, mézclalo con la mantequilla derretida.",
-    "En otro bol, bate los huevos con el azúcar hasta que estén espumosos y hayan duplicado un poco su volumen. Agrega la vainilla.",
-    "Incorpora la mezcla de chocolate derretido a los huevos y mezcla suavemente con una espátula.",
-    "Agrega la harina cernida con la sal y mezcla con movimientos envolventes solo hasta que no queden grumos. No sobrebatas, o los brownies quedarán duros.",
-    "Si usas nueces, incorpóralas ahora. Vierte la mezcla en el molde y alisa la superficie.",
-    "Hornea por 20 a 25 minutos. Para saber si están listos, inserta un palillo: debe salir con algunas migas húmedas pegadas, pero no con mezcla líquida. El centro debe verse ligeramente húmedo pero no crudo. Si usas termómetro, el centro debe alcanzar 74 °C.",
-    "Deja enfriar completamente en el molde antes de cortar en cuadrados."
-  ],
   "dato": "Para un brownie extra húmedo y denso, hornea solo 20 minutos: el centro queda blando, húmedo pero cocido. Si prefieres un brownie más tipo queque, hornea 5 minutos más.",
   "errores": [
     {
@@ -109,50 +83,31 @@
   "pasos_v2": [
     {
       "texto": "Precalienta el horno a 180 °C. Engrasa y enharina un molde cuadrado de unos 20x20 cm.",
-      "ingredientes": [
-        5
-      ]
+      "ingredientes": [5]
     },
     {
       "texto": "Derrite la mantequilla junto con el chocolate a baño María o en el microondas (con cuidado de no quemarlo). Si usas cacao en polvo, mézclalo con la mantequilla derretida.",
-      "ingredientes": [
-        1,
-        2
-      ]
+      "ingredientes": [1, 2]
     },
     {
       "texto": "En otro bol, bate los huevos con el azúcar hasta que estén espumosos y hayan duplicado un poco su volumen. Agrega la vainilla.",
-      "ingredientes": [
-        3,
-        4,
-        6
-      ]
+      "ingredientes": [3, 4, 6]
     },
     {
       "texto": "Incorpora la mezcla de chocolate derretido a los huevos y mezcla suavemente con una espátula.",
-      "ingredientes": [
-        1,
-        4
-      ]
+      "ingredientes": [1, 4]
     },
     {
       "texto": "Agrega la harina cernida con la sal y mezcla con movimientos envolventes solo hasta que no queden grumos. No sobrebatas, o los brownies quedarán duros.",
-      "ingredientes": [
-        5,
-        7
-      ]
+      "ingredientes": [5, 7]
     },
     {
       "texto": "Si usas nueces, incorpóralas ahora. Vierte la mezcla en el molde y alisa la superficie.",
-      "ingredientes": [
-        8
-      ]
+      "ingredientes": [8]
     },
     {
       "texto": "Hornea por 20 a 25 minutos. Para saber si están listos, inserta un palillo: debe salir con algunas migas húmedas pegadas, pero no con mezcla líquida. El centro debe verse ligeramente húmedo pero no crudo. Si usas termómetro, el centro debe alcanzar 74 °C.",
-      "ingredientes": [
-        7
-      ],
+      "ingredientes": [7],
       "timers": [
         {
           "minutos": 25,

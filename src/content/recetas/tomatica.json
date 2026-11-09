@@ -1,33 +1,12 @@
 {
   "titulo": "Tomática",
   "categoria": "ensaladas",
-  "tags": [
-    "ensalada",
-    "tomate",
-    "fresca",
-    "acompañamiento",
-    "verano"
-  ],
+  "tags": ["ensalada", "tomate", "fresca", "acompañamiento", "verano"],
   "imagen": null,
   "tiempo": "15 min",
   "porciones": "4 personas",
   "dificultad": "muy fácil",
   "tecnica": "Fresca",
-  "ingredientes": [
-    "4 tomates maduros",
-    "2 dientes de ajo",
-    "1 cucharada de aceite de oliva",
-    "Orégano fresco o seco",
-    "Sal y pimienta",
-    "Unas gotas de vinagre (opcional)"
-  ],
-  "pasos": [
-    "Pela los tomates y córtalos en cubos.",
-    "Pica los ajos muy finos.",
-    "Mezcla los tomates con el ajo, el aceite, el orégano, sal y pimienta.",
-    "Si queda muy dulce, añade unas gotas de vinagre.",
-    "Deja reposar 10 minutos antes de servir para que se mezclen los sabores."
-  ],
   "dato": "La tomática es una ensalada simple y fresca de la mesa chilena, típica del verano cuando los tomates están en su mejor momento. Se sirve junto a carnes asadas, arroz o puré, y es común en los almuerzos familiares.",
   "errores": [
     {
@@ -89,31 +68,19 @@
   "pasos_v2": [
     {
       "texto": "Pela los tomates y córtalos en cubos.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Pica los ajos muy finos.",
-      "ingredientes": [
-        2
-      ]
+      "ingredientes": [2]
     },
     {
       "texto": "Mezcla los tomates con el ajo, el aceite, el orégano, sal y pimienta.",
-      "ingredientes": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
+      "ingredientes": [1, 2, 3, 4, 5]
     },
     {
       "texto": "Si queda muy dulce, añade unas gotas de vinagre.",
-      "ingredientes": [
-        6
-      ]
+      "ingredientes": [6]
     },
     {
       "texto": "Deja reposar 10 minutos antes de servir para que se mezclen los sabores.",

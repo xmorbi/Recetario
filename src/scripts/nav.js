@@ -1,6 +1,8 @@
 /* =================================================================
    NAV.JS — Menú de navegación responsive (toggle + dropdown + buscador)
    ================================================================= */
+import { escaparHtml } from '../lib/html.js';
+
 (function () {
   'use strict';
 
@@ -9,12 +11,9 @@
   window.__navInicializado = true;
 
   /* ---------- Menú hamburguesa (móvil) ---------- */
-  // FASE 2: el botón hamburguesa ya no existe en el HTML.
-  // Esta IIFE retorna temprano (toggle === null) y no hace nada.
-  // Se conserva por si en el futuro se reactiva el patrón.
   (function initNavToggle() {
     var toggle = document.querySelector('.site-nav-toggle');
-    var links  = document.querySelector('.site-nav-links');
+    var links = document.querySelector('.site-nav-links');
     if (!toggle || !links) return;
 
     toggle.addEventListener('click', function () {
@@ -43,13 +42,17 @@
 
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') {
-        dropdowns.forEach(function (d) { d.open = false; });
+        dropdowns.forEach(function (d) {
+          d.open = false;
+        });
       }
     });
 
     dropdowns.forEach(function (d) {
       d.querySelectorAll('.dropdown-menu a').forEach(function (a) {
-        a.addEventListener('click', function () { d.open = false; });
+        a.addEventListener('click', function () {
+          d.open = false;
+        });
       });
     });
 
@@ -59,7 +62,13 @@
       var tieneActivo = false;
       d.querySelectorAll('.dropdown-menu a').forEach(function (a) {
         var href = (a.getAttribute('href') || '').toLowerCase();
-        var hrefFile = href.replace(/\.html$/, '').replace(/\/+$/, '').split('/').filter(Boolean).pop() || '';
+        var hrefFile =
+          href
+            .replace(/\.html$/, '')
+            .replace(/\/+$/, '')
+            .split('/')
+            .filter(Boolean)
+            .pop() || '';
         if (hrefFile === path) {
           a.classList.add('activo');
           a.setAttribute('aria-current', 'page');
@@ -90,15 +99,24 @@
     var sugerencias = [];
 
     function norm(s) {
-      return String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+      return String(s)
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '');
     }
 
     function cargarNav() {
       if (window.RECETAS_NAV) return Promise.resolve();
       return fetch('/api/recetas-nav.json')
-        .then(function (r) { return r.json(); })
-        .then(function (d) { window.RECETAS_NAV = d; })
-        .catch(function () { window.RECETAS_NAV = []; });
+        .then(function (r) {
+          return r.json();
+        })
+        .then(function (d) {
+          window.RECETAS_NAV = d;
+        })
+        .catch(function () {
+          window.RECETAS_NAV = [];
+        });
     }
 
     function buscar(q) {
@@ -139,7 +157,9 @@
         return b.score - a.score;
       });
 
-      return resultados.slice(0, 6).map(function(x) { return x.r; });
+      return resultados.slice(0, 6).map(function (x) {
+        return x.r;
+      });
     }
 
     function render() {
@@ -149,14 +169,27 @@
         return;
       }
 
-      dropdown.innerHTML = sugerencias.map(function (r, i) {
-        var isActivo = i === activo;
-        return '<li data-idx="' + i + '" role="option" aria-selected="' + (isActivo ? 'true' : 'false') + '"' +
-          (isActivo ? ' class="activo"' : '') + '>' +
-          '<span class="ac-titulo">' + escaparHtml(r.titulo) + '</span>' +
-          '<span class="ac-cat">' + escaparHtml(r.categoria || '') + '</span>' +
-        '</li>';
-      }).join('');
+      dropdown.innerHTML = sugerencias
+        .map(function (r, i) {
+          var isActivo = i === activo;
+          return (
+            '<li data-idx="' +
+            i +
+            '" role="option" aria-selected="' +
+            (isActivo ? 'true' : 'false') +
+            '"' +
+            (isActivo ? ' class="activo"' : '') +
+            '>' +
+            '<span class="ac-titulo">' +
+            escaparHtml(r.titulo) +
+            '</span>' +
+            '<span class="ac-cat">' +
+            escaparHtml(r.categoria || '') +
+            '</span>' +
+            '</li>'
+          );
+        })
+        .join('');
 
       dropdown.hidden = false;
       input.setAttribute('aria-expanded', 'true');
@@ -168,17 +201,15 @@
       window.location.href = '/recetas/' + r.slug + '/';
     }
 
-    function escaparHtml(s) {
-      return String(s).replace(/[&<>"']/g, function (c) {
-        return { '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c];
-      });
-    }
-
-    input.addEventListener('focus', function () {
-      cargarNav().then(function () {
-        if (input.value) input.dispatchEvent(new Event('input'));
-      });
-    }, { once: true });
+    input.addEventListener(
+      'focus',
+      function () {
+        cargarNav().then(function () {
+          if (input.value) input.dispatchEvent(new Event('input'));
+        });
+      },
+      { once: true }
+    );
 
     input.addEventListener('input', function () {
       sugerencias = buscar(input.value);
@@ -228,20 +259,18 @@
     var tools = document.querySelector('.tabbar-tools');
     if (!tools) return;
 
-    // Cerrar al hacer clic fuera
     document.addEventListener('click', function (e) {
       if (tools.open && !tools.contains(e.target)) tools.open = false;
     });
 
-    // Cerrar con Escape
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && tools.open) tools.open = false;
     });
 
-    // Cerrar al tocar cualquier enlace del panel
     tools.querySelectorAll('.tabbar-tools-menu a').forEach(function (a) {
-      a.addEventListener('click', function () { tools.open = false; });
+      a.addEventListener('click', function () {
+        tools.open = false;
+      });
     });
   })();
-
 })();

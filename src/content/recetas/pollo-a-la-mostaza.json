@@ -1,37 +1,12 @@
 {
   "titulo": "Pollo a la mostaza",
   "categoria": "principales",
-  "tags": [
-    "pollo",
-    "mostaza",
-    "sartén",
-    "plato principal",
-    "simple"
-  ],
+  "tags": ["pollo", "mostaza", "sartén", "plato principal", "simple"],
   "imagen": null,
   "tiempo": "45 min",
   "porciones": "4 personas",
   "dificultad": "fácil",
   "tecnica": "Sartén",
-  "ingredientes": [
-    "4 trutros de pollo",
-    "3 cucharadas de mostaza de Dijon",
-    "2 cucharadas de mantequilla",
-    "1 cucharada de aceite",
-    "1 cebolla picada",
-    "2 dientes de ajo picados",
-    "½ taza de vino blanco",
-    "½ taza de crema",
-    "Sal y pimienta"
-  ],
-  "pasos": [
-    "Sazona el pollo con sal y pimienta. Úntalo con 2 cucharadas de mostaza.",
-    "Calienta la mantequilla y el aceite en una sartén. Dora el pollo por ambos lados. Retira y reserva.",
-    "En la misma sartén, sofríe la cebolla y el ajo hasta que estén transparentes.",
-    "Agrega el vino blanco y deja evaporar. Añade la crema y la cucharada de mostaza restante. Revuelve.",
-    "Devuelve el pollo a la sartén, tapa y cocina 20-25 minutos a fuego medio.",
-    "Rectifica la sal y sirve con arroz o papas."
-  ],
   "dato": "El pollo a la mostaza es un plato de origen francés que en Chile se volvió clásico de las casas. La mostaza de Dijon le da un sabor intenso, y la crema suaviza. Es una receta elegante pero fácil.",
   "errores": [
     {
@@ -110,41 +85,23 @@
   "pasos_v2": [
     {
       "texto": "Sazona el pollo con sal y pimienta. Úntalo con 2 cucharadas de mostaza.",
-      "ingredientes": [
-        1,
-        2,
-        9
-      ]
+      "ingredientes": [1, 2, 9]
     },
     {
       "texto": "Calienta la mantequilla y el aceite en una sartén. Dora el pollo por ambos lados. Retira y reserva.",
-      "ingredientes": [
-        1,
-        3,
-        4
-      ]
+      "ingredientes": [1, 3, 4]
     },
     {
       "texto": "En la misma sartén, sofríe la cebolla y el ajo hasta que estén transparentes.",
-      "ingredientes": [
-        4,
-        5,
-        6
-      ]
+      "ingredientes": [4, 5, 6]
     },
     {
       "texto": "Agrega el vino blanco y deja evaporar. Añade la crema y la cucharada de mostaza restante. Revuelve.",
-      "ingredientes": [
-        2,
-        7,
-        8
-      ]
+      "ingredientes": [2, 7, 8]
     },
     {
       "texto": "Devuelve el pollo a la sartén, tapa y cocina 20-25 minutos a fuego medio.",
-      "ingredientes": [
-        1
-      ],
+      "ingredientes": [1],
       "timers": [
         {
           "minutos": 25,
@@ -154,9 +111,7 @@
     },
     {
       "texto": "Rectifica la sal y sirve con arroz o papas.",
-      "ingredientes": [
-        9
-      ]
+      "ingredientes": [9]
     }
   ],
   "tiempo_v2": {

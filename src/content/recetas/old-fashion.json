@@ -1,30 +1,12 @@
 {
   "titulo": "Old Fashion",
   "categoria": "bebidas",
-  "tags": [
-    "old fashion",
-    "whisky",
-    "piña",
-    "cereza marrasquino",
-    "tragos"
-  ],
+  "tags": ["old fashion", "whisky", "piña", "cereza marrasquino", "tragos"],
   "imagen": null,
   "tiempo": "5 min",
   "porciones": "1 persona",
   "dificultad": "fácil",
   "tecnica": "Vaso",
-  "ingredientes": [
-    "1/2 copa de whisky",
-    "1 terrón de azúcar tostado",
-    "1/2 tajada de piña",
-    "1 cereza marrasquino",
-    "1 cucharadita de jugo de marrasquino"
-  ],
-  "pasos": [
-    "Poner en un vaso de base ancha la piña, la cereza y el terrón de azúcar.",
-    "Agregar el whisky y la cucharadita de jugo de marrasquino.",
-    "Servir con bombilla."
-  ],
   "dato": "El azúcar tostado aporta un sabor caramelizado que se diferencia del azúcar blanco tradicional.",
   "errores": [
     {
@@ -70,19 +52,11 @@
   "pasos_v2": [
     {
       "texto": "Poner en un vaso de base ancha la piña, la cereza y el terrón de azúcar.",
-      "ingredientes": [
-        2,
-        3,
-        4
-      ]
+      "ingredientes": [2, 3, 4]
     },
     {
       "texto": "Agregar el whisky y la cucharadita de jugo de marrasquino.",
-      "ingredientes": [
-        1,
-        4,
-        5
-      ]
+      "ingredientes": [1, 4, 5]
     },
     {
       "texto": "Servir con bombilla."

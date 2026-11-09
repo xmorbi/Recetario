@@ -1,37 +1,12 @@
 {
   "titulo": "Ceviche chileno",
   "categoria": "mar",
-  "tags": [
-    "ceviche",
-    "pescado",
-    "marisco",
-    "fresco",
-    "verano",
-    "tradicional"
-  ],
+  "tags": ["ceviche", "pescado", "marisco", "fresco", "verano", "tradicional"],
   "imagen": null,
   "tiempo": "20 min + frío",
   "porciones": "4 personas",
   "dificultad": "fácil",
   "tecnica": "Sin cocción",
-  "ingredientes": [
-    "500 g de pescado blanco fresco (reineta, corvina, lenguado o merluza)",
-    "Jugo de 4-5 limones de Pica (o limón sutil)",
-    "1 cebolla morada grande",
-    "1 ají verde sin semillas, picado fino (opcional)",
-    "1 taza de cilantro fresco picado",
-    "Sal y pimienta",
-    "Opcional: 1 cucharada de aceite de oliva"
-  ],
-  "pasos": [
-    "Corta el pescado en cubos de 1,5 cm. Debe estar muy fresco: si tiene olor fuerte, no sirve.",
-    "Sala el pescado con sal y pimienta y déjalo reposar 5 minutos.",
-    "Corta la cebolla en pluma muy fina y remójala en agua fría 10 minutos. Escurre muy bien.",
-    "Exprime los limones y cuela el jugo. Debe ser suficiente para cubrir el pescado.",
-    "Mezcla el pescado con el jugo de limón. Refrigera 10-15 minutos: el pescado se \"cocina\" en el ácido.",
-    "Escurre el exceso de jugo, agrega la cebolla, el ají, el cilantro y el aceite. Mezcla suavemente.",
-    "Rectifica la sal. Sirve frío, con pan amasado, galletas de soda o marraqueta."
-  ],
   "dato": "El ceviche chileno es distinto del peruano: usa más cebolla, menos ají, y a veces lleva aceite de oliva. El pescado no se \"cocina\" tanto: el limón actúa 10-15 minutos, no horas. El limón de Pica (del oasis de Pica, en Tarapacá) es el más aromático de Chile. Chile tiene 4.300 km de costa: el ceviche no es solo peruano.",
   "errores": [
     {
@@ -106,16 +81,11 @@
   "pasos_v2": [
     {
       "texto": "Corta el pescado en cubos de 1,5 cm. Debe estar muy fresco: si tiene olor fuerte, no sirve.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Sala el pescado con sal y pimienta y déjalo reposar 5 minutos.",
-      "ingredientes": [
-        1,
-        6
-      ],
+      "ingredientes": [1, 6],
       "timers": [
         {
           "minutos": 5,
@@ -125,9 +95,7 @@
     },
     {
       "texto": "Corta la cebolla en pluma muy fina y remójala en agua fría 10 minutos. Escurre muy bien.",
-      "ingredientes": [
-        3
-      ],
+      "ingredientes": [3],
       "timers": [
         {
           "minutos": 10,
@@ -137,17 +105,11 @@
     },
     {
       "texto": "Exprime los limones y cuela el jugo. Debe ser suficiente para cubrir el pescado.",
-      "ingredientes": [
-        1,
-        2
-      ]
+      "ingredientes": [1, 2]
     },
     {
       "texto": "Mezcla el pescado con el jugo de limón. Refrigera 10-15 minutos: el pescado se \"cocina\" en el ácido.",
-      "ingredientes": [
-        1,
-        2
-      ],
+      "ingredientes": [1, 2],
       "timers": [
         {
           "minutos": 15,
@@ -157,19 +119,11 @@
     },
     {
       "texto": "Escurre el exceso de jugo, agrega la cebolla, el ají, el cilantro y el aceite. Mezcla suavemente.",
-      "ingredientes": [
-        2,
-        3,
-        4,
-        5,
-        7
-      ]
+      "ingredientes": [2, 3, 4, 5, 7]
     },
     {
       "texto": "Rectifica la sal. Sirve frío, con pan amasado, galletas de soda o marraqueta.",
-      "ingredientes": [
-        6
-      ]
+      "ingredientes": [6]
     }
   ],
   "tiempo_v2": {

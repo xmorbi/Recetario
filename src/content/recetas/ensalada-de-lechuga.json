@@ -1,31 +1,12 @@
 {
   "titulo": "Ensalada de lechuga",
   "categoria": "ensaladas",
-  "tags": [
-    "ensalada",
-    "lechuga",
-    "fresca",
-    "acompañamiento",
-    "simple",
-    "vegetariano"
-  ],
+  "tags": ["ensalada", "lechuga", "fresca", "acompañamiento", "simple", "vegetariano"],
   "imagen": null,
   "tiempo": "5 min",
   "porciones": "4 personas",
   "dificultad": "fácil",
   "tecnica": "Fresca",
-  "ingredientes": [
-    "1 lechuga grande (o 2 pequeñas)",
-    "2 cucharadas (30 ml) de aceite de oliva",
-    "1 cucharada (15 ml) de vinagre o jugo de limón",
-    "Sal y pimienta"
-  ],
-  "pasos": [
-    "Lava bien la lechuga y escúrrela. Córtala en trozos.",
-    "Pon la lechuga en una ensaladera.",
-    "Condimenta con aceite, vinagre o limón, sal y pimienta justo antes de servir.",
-    "Mezcla suavemente y sirve."
-  ],
   "dato": "La ensalada de lechuga es la ensalada más simple de Chile. Se sirve como acompañamiento de casi todos los platos. Se condimenta con aceite, vinagre o limón, y sal. Parece obvio, pero no puede faltar en un recetario chileno.",
   "errores": [
     {
@@ -75,24 +56,15 @@
   "pasos_v2": [
     {
       "texto": "Lava bien la lechuga y escúrrela. Córtala en trozos.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Pon la lechuga en una ensaladera.",
-      "ingredientes": [
-        1,
-        4
-      ]
+      "ingredientes": [1, 4]
     },
     {
       "texto": "Condimenta con aceite, vinagre o limón, sal y pimienta justo antes de servir.",
-      "ingredientes": [
-        2,
-        3,
-        4
-      ]
+      "ingredientes": [2, 3, 4]
     },
     {
       "texto": "Mezcla suavemente y sirve."

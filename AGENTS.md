@@ -1,22 +1,27 @@
-## Development
+# Guía para Agentes y Desarrolladores — Recetario Chileno
 
-When starting the dev server, use background mode:
+Este proyecto está construido con Astro y sigue una arquitectura estricta para mantener la deuda técnica al mínimo. Antes de modificar código, lee las siguientes reglas:
 
-```
-astro dev --background
-```
+## Arquitectura y Estructura
 
-Manage the background server with `astro dev stop`, `astro dev status`, and `astro dev logs`.
+- **`src/lib/`**: Solo lógica pura (sin DOM). Aquí viven el escalado, los tiempos y la voz. Todo debe ser testeable con Vitest.
+- **`src/scripts/`**: Lógica de cliente que interactúa con el DOM (Modo Cocina, carrito, calculadoras). Todos los scripts DEBEN pasar por Vite (usando `<script> import ... </script>`), NUNCA usar `<script src="/public/...">`.
+- **`public/`**: Solo archivos estáticos puros (imágenes, favicon, manifest, `sw.js` y verificación de Google). Cero archivos `.js` de lógica.
 
-## Documentation
+## Reglas de Datos (V2)
 
-Full documentation: https://docs.astro.build
+- Las recetas en `src/content/recetas/` usan exclusivamente la estructura `_v2` (`ingredientes_v2`, `pasos_v2`, `tiempo_v2`).
+- Los campos heredados de texto plano fueron eliminados. No los vuelvas a introducir.
+- Las cantidades de los ingredientes se escalan dinámicamente en el cliente usando `escalarIngrediente()` de `src/lib/escalado.js`.
 
-Consult these guides before working on related tasks:
+## Comandos de Desarrollo
 
-- [Adding pages, dynamic routes, or middleware](https://docs.astro.build/en/guides/routing/)
-- [Working with Astro components](https://docs.astro.build/en/basics/astro-components/)
-- [Using React, Vue, Svelte, or other framework components](https://docs.astro.build/en/guides/framework-components/)
-- [Adding or managing content](https://docs.astro.build/en/guides/content-collections/)
-- [Adding styles or using Tailwind](https://docs.astro.build/en/guides/styling/)
-- [Supporting multiple languages](https://docs.astro.build/en/guides/internationalization/)
+- `npm run dev`: Inicia el servidor local.
+- `npm run build`: Compila el sitio estático. Es obligatorio que pase en verde antes de hacer commit.
+- `npx vitest`: Ejecuta las pruebas unitarias (lógica pura).
+- `npx prettier --write .`: Formatea todo el código.
+- `npx eslint .`: Revisa errores de sintaxis y buenas prácticas.
+
+## Despliegue
+
+El sitio se compila a HTML estático. Las redirecciones y el manejo de errores 404 se configuran en `netlify.toml`.

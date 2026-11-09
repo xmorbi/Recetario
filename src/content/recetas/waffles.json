@@ -1,37 +1,12 @@
 {
   "titulo": "Waffles",
   "categoria": "dulces",
-  "tags": [
-    "waffles",
-    "desayuno",
-    "once",
-    "dulce",
-    "reposteria",
-    "simple"
-  ],
+  "tags": ["waffles", "desayuno", "once", "dulce", "reposteria", "simple"],
   "imagen": null,
   "tiempo": "25 min",
   "porciones": "6 waffles",
   "dificultad": "fácil",
   "tecnica": "Waflera",
-  "ingredientes": [
-    "2 huevos",
-    "1 taza de leche",
-    "1 taza de harina",
-    "2 cucharadas de azúcar",
-    "1 cucharadita de polvos de hornear",
-    "1 pizca de sal",
-    "50 g de mantequilla derretida",
-    "1 cucharadita de vainilla"
-  ],
-  "pasos": [
-    "Bate los huevos con el azúcar y la vainilla.",
-    "Agrega la leche y la mantequilla derretida.",
-    "Incorpora la harina cernida con los polvos de hornear y la sal. Mezcla hasta obtener una masa lisa.",
-    "Calienta la waflera y engrásala ligeramente.",
-    "Vierte la masa y cocina según las instrucciones de tu waflera (3-5 minutos), hasta que estén dorados y crujientes.",
-    "Sirve calientes con manjar, mermelada, frutas o miel."
-  ],
   "dato": "Los waffles son el desayuno de fin de semana chileno. Se hacen en waflera y se sirven con manjar, mermelada o frutas. Son crujientes por fuera y suaves por dentro. Si no tienes waflera, puedes hacerlos en sartén como panqueques.",
   "errores": [
     {
@@ -101,32 +76,19 @@
   "pasos_v2": [
     {
       "texto": "Bate los huevos con el azúcar y la vainilla.",
-      "ingredientes": [
-        1,
-        4,
-        8
-      ]
+      "ingredientes": [1, 4, 8]
     },
     {
       "texto": "Agrega la leche y la mantequilla derretida.",
-      "ingredientes": [
-        2,
-        7
-      ]
+      "ingredientes": [2, 7]
     },
     {
       "texto": "Incorpora la harina cernida con los polvos de hornear y la sal. Mezcla hasta obtener una masa lisa.",
-      "ingredientes": [
-        3,
-        5,
-        6
-      ]
+      "ingredientes": [3, 5, 6]
     },
     {
       "texto": "Calienta la waflera y engrásala ligeramente.",
-      "ingredientes": [
-        6
-      ]
+      "ingredientes": [6]
     },
     {
       "texto": "Vierte la masa y cocina según las instrucciones de tu waflera (3-5 minutos), hasta que estén dorados y crujientes.",

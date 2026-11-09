@@ -1,33 +1,12 @@
 {
   "titulo": "Salmón al horno",
   "categoria": "principales",
-  "tags": [
-    "pescado",
-    "horno",
-    "plato principal",
-    "sano"
-  ],
+  "tags": ["pescado", "horno", "plato principal", "sano"],
   "imagen": "img/Salmón-al-Horno.JPG",
   "tiempo": "25 min",
   "porciones": "2 personas",
   "dificultad": "muy fácil",
   "tecnica": "Horno",
-  "ingredientes": [
-    "2 filetes de salmón fresco (aprox. 200 g cada uno)",
-    "2 cucharadas de aceite de oliva",
-    "Jugo de 1 limón",
-    "2 dientes de ajo picados",
-    "Sal y pimienta al gusto",
-    "Perejil fresco picado",
-    "Rodajas de limón"
-  ],
-  "pasos": [
-    "Precalienta el horno a 200 °C. Forra una bandeja con papel de horno.",
-    "Coloca los filetes de salmón en la bandeja. Sazona con sal, pimienta y ajo picado.",
-    "Rocía con el aceite de oliva y el jugo de limón. Coloca rodajas de limón encima.",
-    "Hornea por 12-15 minutos, dependiendo del grosor del filete, hasta que el salmón esté cocido pero aún jugoso.",
-    "Espolvorea con perejil fresco y sirve con ensalada o papas al horno."
-  ],
   "dato": "El salmón chileno es famoso por su calidad. No necesitas muchos ingredientes para que quede delicioso; el limón y el ajo son suficientes.",
   "errores": [
     {
@@ -100,27 +79,15 @@
     },
     {
       "texto": "Coloca los filetes de salmón en la bandeja. Sazona con sal, pimienta y ajo picado.",
-      "ingredientes": [
-        1,
-        4,
-        5
-      ]
+      "ingredientes": [1, 4, 5]
     },
     {
       "texto": "Rocía con el aceite de oliva y el jugo de limón. Coloca rodajas de limón encima.",
-      "ingredientes": [
-        2,
-        3,
-        7
-      ]
+      "ingredientes": [2, 3, 7]
     },
     {
       "texto": "Hornea por 12-15 minutos, dependiendo del grosor del filete, hasta que el salmón esté cocido pero aún jugoso.",
-      "ingredientes": [
-        1,
-        3,
-        5
-      ],
+      "ingredientes": [1, 3, 5],
       "timers": [
         {
           "minutos": 15,
@@ -130,10 +97,7 @@
     },
     {
       "texto": "Espolvorea con perejil fresco y sirve con ensalada o papas al horno.",
-      "ingredientes": [
-        5,
-        6
-      ]
+      "ingredientes": [5, 6]
     }
   ],
   "tiempo_v2": {

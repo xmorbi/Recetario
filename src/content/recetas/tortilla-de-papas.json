@@ -1,34 +1,12 @@
 {
   "titulo": "Tortilla de papas",
   "categoria": "principales",
-  "tags": [
-    "tortilla",
-    "papa",
-    "huevo",
-    "sartén",
-    "español",
-    "simple"
-  ],
+  "tags": ["tortilla", "papa", "huevo", "sartén", "español", "simple"],
   "imagen": null,
   "tiempo": "40 min",
   "porciones": "4 personas",
   "dificultad": "fácil",
   "tecnica": "Sartén",
-  "ingredientes": [
-    "4 papas medianas peladas y en láminas finas",
-    "1 cebolla grande en pluma",
-    "6 huevos",
-    "½ taza de aceite de oliva",
-    "Sal y pimienta"
-  ],
-  "pasos": [
-    "Calienta el aceite en una sartén grande. Cocina las papas y la cebolla a fuego medio-bajo 15-20 minutos, hasta que estén tiernas pero no doradas. Escurre el exceso de aceite.",
-    "Bate los huevos con sal y pimienta. Agrega las papas y la cebolla y mezcla.",
-    "Deja reposar la mezcla 5 minutos para que los huevos absorban el sabor.",
-    "En la misma sartén (con un poco de aceite), vierte la mezcla y cocina a fuego medio 5-7 minutos, hasta que los bordes se despeguen.",
-    "Da vuelta la tortilla con un plato o tapa y cocina 3-4 minutos más.",
-    "Sirve tibia o fría, cortada en porciones."
-  ],
   "dato": "La tortilla de papas es de origen español y en Chile se volvió parte de la cocina casera, especialmente en la once. Se sirve tibia o fría, como entrada o plato principal. La versión chilena suele llevar cebolla, a diferencia de la española que a veces no la lleva.",
   "errores": [
     {
@@ -83,11 +61,7 @@
   "pasos_v2": [
     {
       "texto": "Calienta el aceite en una sartén grande. Cocina las papas y la cebolla a fuego medio-bajo 15-20 minutos, hasta que estén tiernas pero no doradas. Escurre el exceso de aceite.",
-      "ingredientes": [
-        1,
-        2,
-        4
-      ],
+      "ingredientes": [1, 2, 4],
       "timers": [
         {
           "minutos": 20,
@@ -97,18 +71,11 @@
     },
     {
       "texto": "Bate los huevos con sal y pimienta. Agrega las papas y la cebolla y mezcla.",
-      "ingredientes": [
-        1,
-        2,
-        3,
-        5
-      ]
+      "ingredientes": [1, 2, 3, 5]
     },
     {
       "texto": "Deja reposar la mezcla 5 minutos para que los huevos absorban el sabor.",
-      "ingredientes": [
-        3
-      ],
+      "ingredientes": [3],
       "timers": [
         {
           "minutos": 5,
@@ -118,9 +85,7 @@
     },
     {
       "texto": "En la misma sartén (con un poco de aceite), vierte la mezcla y cocina a fuego medio 5-7 minutos, hasta que los bordes se despeguen.",
-      "ingredientes": [
-        4
-      ],
+      "ingredientes": [4],
       "timers": [
         {
           "minutos": 7,

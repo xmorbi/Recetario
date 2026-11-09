@@ -1,37 +1,12 @@
 {
   "titulo": "Chancho en piedra",
   "categoria": "ensaladas",
-  "tags": [
-    "picoteo",
-    "salsa",
-    "tomate",
-    "acompañamiento",
-    "merienda",
-    "ensalada",
-    "tradicional"
-  ],
+  "tags": ["picoteo", "salsa", "tomate", "acompañamiento", "merienda", "ensalada", "tradicional"],
   "imagen": "img/Chancho-en-piedra.jpg",
   "tiempo": "20 min",
   "porciones": "6 personas",
   "dificultad": "fácil",
   "tecnica": "Salsa",
-  "ingredientes": [
-    "1 kg de tomates bien maduros",
-    "3 dientes grandes de ajo",
-    "2 atados de cilantro y 1 de perejil",
-    "3 ajíes verdes",
-    "Orégano fresco o seco",
-    "1/3 taza (80 ml) de aceite",
-    "10 granos de pimienta",
-    "1 cucharadita de sal"
-  ],
-  "pasos": [
-    "En un mortero de piedra, muele la sal, los ajos y la pimienta hasta formar una pasta.",
-    "Pica los ajíes, elimina las pepas y muélelos en el mortero.",
-    "Agrega el orégano, perejil y cilantro picados.",
-    "Incorpora dos tomates para licuar la pasta y vacía en una fuente.",
-    "Añade el resto de los tomates pelados y trozados. Mezcla con el aceite."
-  ],
   "dato": "Si el tomate no tiene suficiente acidez, unas gotas de vinagre tinto equilibran el sabor. El chancho en piedra es una salsa tradicional chilena, típica de la zona central, que se sirve con pan amasado o como acompañamiento de carnes y empanadas.",
   "advertencia": "Los ajíes varían mucho en picante. Prueba un trozo antes de usar todos, y lávate las manos después de manipularlos. No toques tus ojos ni tu cara.",
   "errores": [
@@ -106,37 +81,23 @@
   "pasos_v2": [
     {
       "texto": "En un mortero de piedra, muele la sal, los ajos y la pimienta hasta formar una pasta.",
-      "ingredientes": [
-        2,
-        7,
-        8
-      ]
+      "ingredientes": [2, 7, 8]
     },
     {
       "texto": "Pica los ajíes, elimina las pepas y muélelos en el mortero.",
-      "ingredientes": [
-        4
-      ]
+      "ingredientes": [4]
     },
     {
       "texto": "Agrega el orégano, perejil y cilantro picados.",
-      "ingredientes": [
-        3,
-        5
-      ]
+      "ingredientes": [3, 5]
     },
     {
       "texto": "Incorpora dos tomates para licuar la pasta y vacía en una fuente.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Añade el resto de los tomates pelados y trozados. Mezcla con el aceite.",
-      "ingredientes": [
-        1,
-        6
-      ]
+      "ingredientes": [1, 6]
     }
   ],
   "tiempo_v2": {

@@ -1,30 +1,12 @@
 {
   "titulo": "Pan con mermelada",
   "categoria": "once",
-  "tags": [
-    "once",
-    "pan",
-    "mermelada",
-    "dulce",
-    "desayuno",
-    "simple"
-  ],
+  "tags": ["once", "pan", "mermelada", "dulce", "desayuno", "simple"],
   "imagen": null,
   "tiempo": "3 min",
   "porciones": "1 persona",
   "dificultad": "muy fácil",
   "tecnica": "Sin cocción",
-  "ingredientes": [
-    "1 marraqueta o hallulla recién horneada",
-    "2 cucharadas de mermelada (de frutilla, damasco, membrillo o la que prefieras)",
-    "Opcional: mantequilla"
-  ],
-  "pasos": [
-    "Abre el pan por la mitad.",
-    "Si quieres, úntalo con un poco de mantequilla.",
-    "Unta la mermelada generosamente.",
-    "Come inmediatamente."
-  ],
   "dato": "El pan con mermelada es el desayuno y la once más simple de Chile. Se hace con mermelada casera o comprada. La mermelada de frutilla y la de membrillo son las favoritas. Se puede hacer con pan de molde o con marraqueta.",
   "errores": [
     {
@@ -68,21 +50,15 @@
   "pasos_v2": [
     {
       "texto": "Abre el pan por la mitad.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Si quieres, úntalo con un poco de mantequilla.",
-      "ingredientes": [
-        3
-      ]
+      "ingredientes": [3]
     },
     {
       "texto": "Unta la mermelada generosamente.",
-      "ingredientes": [
-        2
-      ]
+      "ingredientes": [2]
     },
     {
       "texto": "Come inmediatamente."

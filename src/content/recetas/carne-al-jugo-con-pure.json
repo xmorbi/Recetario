@@ -1,37 +1,12 @@
 {
   "titulo": "Carne al jugo con puré",
   "categoria": "principales",
-  "tags": [
-    "carne",
-    "olla",
-    "plato principal",
-    "pure",
-    "guiso",
-    "vacuno"
-  ],
+  "tags": ["carne", "olla", "plato principal", "pure", "guiso", "vacuno"],
   "imagen": "img/carne-al-jugo-con-pure.jpg",
   "tiempo": "1 h 30 min",
   "porciones": "4 personas",
   "dificultad": "fácil",
   "tecnica": "Olla",
-  "ingredientes": [
-    "1 kg de tapapecho o posta en trozos",
-    "1 cebolla en pluma, 2 dientes de ajo",
-    "1 zanahoria, 1 pimentón",
-    "Sal, pimienta, orégano, comino y laurel",
-    "Agua o caldo para cubrir",
-    "6 papas medianas (para el puré)",
-    "3 cucharadas (45 g) de mantequilla",
-    "1/2 taza (125 ml) de leche",
-    "Sal (para el puré)"
-  ],
-  "pasos": [
-    "Sofríe la cebolla, el ajo, la zanahoria y el pimentón.",
-    "Agrega la carne y dórala. Condimenta.",
-    "Cubre con agua o caldo y cocina a fuego lento hasta que la carne esté blanda (1 hora aprox.).",
-    "Cuece las papas, mójalas con mantequilla, leche tibia y sal hasta obtener un puré cremoso.",
-    "Sirve la carne con su jugo sobre el puré."
-  ],
   "dato": "Si el jugo está muy líquido, déjalo reducir unos minutos. La carne al jugo es plato de domingo chileno, y el puré es el acompañamiento clásico para aprovechar la salsa.",
   "errores": [
     {
@@ -127,25 +102,15 @@
   "pasos_v2": [
     {
       "texto": "Sofríe la cebolla, el ajo, la zanahoria y el pimentón.",
-      "ingredientes": [
-        2,
-        3,
-        4,
-        5
-      ]
+      "ingredientes": [2, 3, 4, 5]
     },
     {
       "texto": "Agrega la carne y dórala. Condimenta.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Cubre con agua o caldo y cocina a fuego lento hasta que la carne esté blanda (1 hora aprox.).",
-      "ingredientes": [
-        1,
-        7
-      ],
+      "ingredientes": [1, 7],
       "timers": [
         {
           "minutos": 60,
@@ -155,21 +120,11 @@
     },
     {
       "texto": "Cuece las papas, mójalas con mantequilla, leche tibia y sal hasta obtener un puré cremoso.",
-      "ingredientes": [
-        6,
-        8,
-        9,
-        10,
-        11
-      ]
+      "ingredientes": [6, 8, 9, 10, 11]
     },
     {
       "texto": "Sirve la carne con su jugo sobre el puré.",
-      "ingredientes": [
-        1,
-        8,
-        11
-      ]
+      "ingredientes": [1, 8, 11]
     }
   ],
   "tiempo_v2": {

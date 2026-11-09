@@ -1,32 +1,12 @@
 {
   "titulo": "Mermelada casera",
   "categoria": "dulces",
-  "tags": [
-    "mermelada",
-    "conserva",
-    "fruta",
-    "once",
-    "desayuno",
-    "tradicional"
-  ],
+  "tags": ["mermelada", "conserva", "fruta", "once", "desayuno", "tradicional"],
   "imagen": null,
   "tiempo": "1 h",
   "porciones": "4 frascos",
   "dificultad": "fácil",
   "tecnica": "Olla",
-  "ingredientes": [
-    "1 kg de fruta (frutilla, damasco, ciruela, durazno o la que prefieras)",
-    "700 g de azúcar",
-    "Jugo de 1 limón",
-    "1 rama de canela (opcional)"
-  ],
-  "pasos": [
-    "Lava y pela la fruta. Córtala en trozos.",
-    "En una olla, mezcla la fruta con el azúcar y el jugo de limón. Deja reposar 30 minutos para que la fruta suelte su jugo.",
-    "Cocina a fuego medio-bajo, revolviendo de vez en cuando, por 40-50 minutos, hasta que la mermelada espese.",
-    "Si usas canela, agrégala en los últimos 10 minutos.",
-    "Envasa en frascos esterilizados calientes y tapa. Deja enfriar y refrigera."
-  ],
   "dato": "La mermelada casera es un clásico de la once chilena. Se hace con la fruta de la estación y se guarda en frascos para todo el año. La frutilla y el damasco son las favoritas. El limón ayuda a que la mermelada cuaje y le da un toque ácido.",
   "errores": [
     {
@@ -75,17 +55,11 @@
   "pasos_v2": [
     {
       "texto": "Lava y pela la fruta. Córtala en trozos.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "En una olla, mezcla la fruta con el azúcar y el jugo de limón. Deja reposar 30 minutos para que la fruta suelte su jugo.",
-      "ingredientes": [
-        1,
-        2,
-        3
-      ],
+      "ingredientes": [1, 2, 3],
       "timers": [
         {
           "minutos": 30,
@@ -104,9 +78,7 @@
     },
     {
       "texto": "Si usas canela, agrégala en los últimos 10 minutos.",
-      "ingredientes": [
-        4
-      ],
+      "ingredientes": [4],
       "timers": [
         {
           "minutos": 10,

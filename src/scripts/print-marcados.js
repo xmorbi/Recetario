@@ -40,7 +40,9 @@
       btnTodo.addEventListener('click', function () {
         cerrarMenu(menu);
         // pequeño delay para que el details se cierre antes de print
-        setTimeout(function () { window.print(); }, 60);
+        setTimeout(function () {
+          window.print();
+        }, 60);
       });
     }
 
@@ -51,7 +53,9 @@
 
         if (marcados.length === 0) {
           cerrarMenu(menu);
-          alert('No has marcado ningún ingrediente.\n\nMarca con el checkbox los ingredientes que quieras incluir en la impresión.');
+          alert(
+            'No has marcado ningún ingrediente.\n\nMarca con el checkbox los ingredientes que quieras incluir en la impresión.'
+          );
           return;
         }
 

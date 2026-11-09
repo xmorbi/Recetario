@@ -1,35 +1,12 @@
 {
   "titulo": "Corvina al horno",
   "categoria": "principales",
-  "tags": [
-    "pescado",
-    "horno",
-    "plato principal",
-    "sano"
-  ],
+  "tags": ["pescado", "horno", "plato principal", "sano"],
   "imagen": "img/Corvina-al-horno.jpg",
   "tiempo": "40 min",
   "porciones": "2 personas",
   "dificultad": "fácil",
   "tecnica": "Horno",
-  "ingredientes": [
-    "2 filetes de corvina (o lubina) de unos 200 g cada uno",
-    "1 cebolla en rodajas",
-    "1 tomate en rodajas",
-    "2 dientes de ajo laminados",
-    "1/2 taza (125 ml) de vino blanco",
-    "2 cucharadas (30 ml) de aceite de oliva",
-    "Sal, pimienta y tomillo al gusto",
-    "Rodajas de limón"
-  ],
-  "pasos": [
-    "Precalienta el horno a 180 °C.",
-    "En una fuente para horno, coloca una base de cebolla y tomate en rodajas. Coloca los filetes de corvina encima.",
-    "Sazona con sal, pimienta y tomillo. Distribuye el ajo laminado sobre el pescado.",
-    "Rocía con el vino blanco y el aceite de oliva. Coloca unas rodajas de limón encima.",
-    "Hornea por 20 minutos, hasta que el pescado esté cocido y se desmenuce fácilmente con un tenedor.",
-    "Sirve con papas cocidas o arroz."
-  ],
   "dato": "La corvina es uno de los pescados más tradicionales de la costa chilena. Al hornearla con vino blanco y limón, su carne se mantiene jugosa y absorbe todos los sabores.",
   "errores": [
     {
@@ -109,27 +86,15 @@
     },
     {
       "texto": "En una fuente para horno, coloca una base de cebolla y tomate en rodajas. Coloca los filetes de corvina encima.",
-      "ingredientes": [
-        1,
-        2,
-        3,
-        8
-      ]
+      "ingredientes": [1, 2, 3, 8]
     },
     {
       "texto": "Sazona con sal, pimienta y tomillo. Distribuye el ajo laminado sobre el pescado.",
-      "ingredientes": [
-        4,
-        7
-      ]
+      "ingredientes": [4, 7]
     },
     {
       "texto": "Rocía con el vino blanco y el aceite de oliva. Coloca unas rodajas de limón encima.",
-      "ingredientes": [
-        5,
-        6,
-        8
-      ]
+      "ingredientes": [5, 6, 8]
     },
     {
       "texto": "Hornea por 20 minutos, hasta que el pescado esté cocido y se desmenuce fácilmente con un tenedor.",

@@ -1,34 +1,12 @@
 {
   "titulo": "Carne asada a la plancha",
   "categoria": "principales",
-  "tags": [
-    "carne",
-    "asado",
-    "plancha",
-    "vacuno",
-    "simple",
-    "cotidiano"
-  ],
+  "tags": ["carne", "asado", "plancha", "vacuno", "simple", "cotidiano"],
   "imagen": null,
   "tiempo": "20 min",
   "porciones": "2 personas",
   "dificultad": "fácil",
   "tecnica": "Plancha",
-  "ingredientes": [
-    "2 bistecs de vacuno (lomo, posta o asiento) de 200 g cada uno",
-    "1 cucharada (15 ml) de aceite",
-    "Sal gruesa",
-    "Pimienta negra molida",
-    "Opcional: 1 diente de ajo"
-  ],
-  "pasos": [
-    "Saca la carne del refrigerador 20 minutos antes de cocinar. Debe estar a temperatura ambiente.",
-    "Calienta la plancha a fuego alto hasta que humee ligeramente. Agrega el aceite.",
-    "Sala la carne justo antes de ponerla en la plancha.",
-    "Cocina 2-3 minutos por lado para término medio. No la muevas mientras se cocina.",
-    "Retira y deja reposar 5 minutos sobre una tabla antes de cortar.",
-    "Sirve con sal gruesa y pimienta, y acompañamientos a gusto."
-  ],
   "dato": "La carne asada a la plancha es la base de la cocina chilena. Un buen bistec solo necesita sal, pimienta y una plancha bien caliente. El reposo después de cocinar es clave: permite que los jugos se redistribuyan y la carne quede más jugosa.",
   "errores": [
     {

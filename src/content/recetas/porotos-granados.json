@@ -1,35 +1,12 @@
 {
   "titulo": "Porotos granados",
   "categoria": "principales",
-  "tags": [
-    "porotos",
-    "verano",
-    "choclo",
-    "plato principal",
-    "tradicional",
-    "vegetariano"
-  ],
+  "tags": ["porotos", "verano", "choclo", "plato principal", "tradicional", "vegetariano"],
   "imagen": "img/porotos-granados.jpg",
   "tiempo": "50 min",
   "porciones": "6 personas",
   "dificultad": "fácil",
   "tecnica": "Olla",
-  "ingredientes": [
-    "500 g de porotos granados frescos (o 300 g secos, remojados)",
-    "1/2 zapallo en cubos",
-    "2 choclos desgranados",
-    "1 cebolla picada",
-    "1 cucharadita de ají de color",
-    "Comino y albahaca fresca",
-    "Aceite, sal y pimienta"
-  ],
-  "pasos": [
-    "Sofríe la cebolla en aceite. Agrega el ají de color y el comino.",
-    "Incorpora los porotos, el zapallo y agua suficiente para cubrirlos.",
-    "Cocina 30 a 40 minutos hasta que los porotos estén tiernos y el zapallo se deshaga.",
-    "Agrega el choclo y la albahaca. Cocina 10 minutos más.",
-    "Condimenta y sirve con un chorrito de aceite crudo."
-  ],
   "dato": "Es el plato de verano por excelencia. Con choclo tierno el sabor cambia por completo.",
   "errores": [
     {
@@ -99,26 +76,15 @@
   "pasos_v2": [
     {
       "texto": "Sofríe la cebolla en aceite. Agrega el ají de color y el comino.",
-      "ingredientes": [
-        4,
-        5,
-        6,
-        7
-      ]
+      "ingredientes": [4, 5, 6, 7]
     },
     {
       "texto": "Incorpora los porotos, el zapallo y agua suficiente para cubrirlos.",
-      "ingredientes": [
-        1,
-        2
-      ]
+      "ingredientes": [1, 2]
     },
     {
       "texto": "Cocina 30 a 40 minutos hasta que los porotos estén tiernos y el zapallo se deshaga.",
-      "ingredientes": [
-        1,
-        2
-      ],
+      "ingredientes": [1, 2],
       "timers": [
         {
           "minutos": 40,
@@ -128,10 +94,7 @@
     },
     {
       "texto": "Agrega el choclo y la albahaca. Cocina 10 minutos más.",
-      "ingredientes": [
-        3,
-        6
-      ],
+      "ingredientes": [3, 6],
       "timers": [
         {
           "minutos": 10,
@@ -141,9 +104,7 @@
     },
     {
       "texto": "Condimenta y sirve con un chorrito de aceite crudo.",
-      "ingredientes": [
-        7
-      ]
+      "ingredientes": [7]
     }
   ],
   "tiempo_v2": {

@@ -1,35 +1,12 @@
 {
   "titulo": "Sopa de fideos",
   "categoria": "sopas",
-  "tags": [
-    "sopa",
-    "fideos",
-    "caldo",
-    "olla",
-    "simple",
-    "cotidiano"
-  ],
+  "tags": ["sopa", "fideos", "caldo", "olla", "simple", "cotidiano"],
   "imagen": null,
   "tiempo": "25 min",
   "porciones": "4 personas",
   "dificultad": "muy fácil",
   "tecnica": "Olla",
-  "ingredientes": [
-    "1,5 L de caldo de pollo o de verduras",
-    "200 g de fideos cabello de ángel o de sopa",
-    "1 cebolla pequeña picada fina",
-    "1 zanahoria en cubos pequeños",
-    "1 ramita de apio picada",
-    "1 cucharada de aceite",
-    "Sal, pimienta y orégano"
-  ],
-  "pasos": [
-    "Sofríe la cebolla, la zanahoria y el apio en aceite hasta que estén tiernos.",
-    "Agrega el caldo y lleva a hervor.",
-    "Añade los fideos y cocina según las instrucciones del paquete (3-5 minutos para cabello de ángel).",
-    "Condimenta con sal, pimienta y orégano.",
-    "Sirve caliente con perejil fresco si quieres."
-  ],
   "dato": "La sopa de fideos es la sopa más simple y cotidiana de Chile. Se hace con caldo de pollo o de verduras, fideos finos y verduras. Es el plato de invierno por excelencia en las casas chilenas, y se sirve como entrada o como plato único.",
   "errores": [
     {
@@ -98,24 +75,15 @@
   "pasos_v2": [
     {
       "texto": "Sofríe la cebolla, la zanahoria y el apio en aceite hasta que estén tiernos.",
-      "ingredientes": [
-        3,
-        4,
-        5,
-        6
-      ]
+      "ingredientes": [3, 4, 5, 6]
     },
     {
       "texto": "Agrega el caldo y lleva a hervor.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Añade los fideos y cocina según las instrucciones del paquete (3-5 minutos para cabello de ángel).",
-      "ingredientes": [
-        2
-      ],
+      "ingredientes": [2],
       "timers": [
         {
           "minutos": 5,
@@ -125,9 +93,7 @@
     },
     {
       "texto": "Condimenta con sal, pimienta y orégano.",
-      "ingredientes": [
-        7
-      ]
+      "ingredientes": [7]
     },
     {
       "texto": "Sirve caliente con perejil fresco si quieres."

@@ -4,7 +4,7 @@
    FASE 4B (deuda D5): aria-live="polite" movido al inicio del forEach
                        para que la PRIMERA calificación también se anuncie.
    ================================================================= */
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const containers = document.querySelectorAll('.rating-container');
   if (!containers.length) return;
 
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
     } catch (e) {}
   }
 
-  containers.forEach(container => {
+  containers.forEach((container) => {
     const slug = container.dataset.slug;
     const stars = container.querySelectorAll('.rating-star');
     const text = container.querySelector('.rating-text');
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Helper para limpiar el estado hover visual
     function limpiarHover() {
-      stars.forEach(s => s.classList.remove('hover'));
+      stars.forEach((s) => s.classList.remove('hover'));
     }
 
     // Helper para pintar hover hasta el índice dado

@@ -1,38 +1,12 @@
 {
   "titulo": "Pantrucas",
   "categoria": "sopas",
-  "tags": [
-    "sopa",
-    "olla",
-    "invierno",
-    "masa",
-    "vacuno"
-  ],
+  "tags": ["sopa", "olla", "invierno", "masa", "vacuno"],
   "imagen": "img/pantrucas.JPG",
   "tiempo": "50 min",
   "porciones": "4 personas",
   "dificultad": "media",
   "tecnica": "Olla",
-  "ingredientes": [
-    "Caldo: 400 g de carne de vacuno (posta o tapapecho)",
-    "Caldo: 1 cebolla, 1 zanahoria, ½ pimentón rojo, 1 ajo",
-    "Caldo: 3 papas en cubos",
-    "Caldo: 1 cdta de ají de color, orégano y ½ cdta de comino",
-    "Caldo: 1,5 L de agua hirviendo",
-    "Caldo: 2 huevos (opcional) y cilantro fresco",
-    "Masa: 2 tazas de harina sin polvos de hornear",
-    "Masa: 1 huevo",
-    "Masa: ¾ taza de agua tibia",
-    "Masa: 1 cdta de aceite o manteca, pizca de sal"
-  ],
-  "pasos": [
-    "Sofríe cebolla, ajo, pimentón y zanahoria 5 min. Condimenta.",
-    "Agrega la carne, cocina hasta que cambie de color. Añade las papas y el agua hirviendo. Tapa 15 min.",
-    "Mezcla la harina, huevo, aceite y sal. Agrega el agua tibia hasta formar masa suave.",
-    "Estira la masa fina (2 mm) y córtala en cuadrados.",
-    "Echa las pantrucas en el caldo hirviendo. Cocina 5-7 min.",
-    "Vierte los huevos batidos en hilo y sirve con cilantro picado."
-  ],
   "dato": "La masa no lleva polvos de hornear; debe quedar firme.",
   "errores": [
     {
@@ -147,12 +121,7 @@
   "pasos_v2": [
     {
       "texto": "Sofríe cebolla, ajo, pimentón y zanahoria 5 min. Condimenta.",
-      "ingredientes": [
-        2,
-        3,
-        4,
-        12
-      ],
+      "ingredientes": [2, 3, 4, 12],
       "timers": [
         {
           "minutos": 5,
@@ -162,12 +131,7 @@
     },
     {
       "texto": "Agrega la carne, cocina hasta que cambie de color. Añade las papas y el agua hirviendo. Tapa 15 min.",
-      "ingredientes": [
-        1,
-        5,
-        7,
-        11
-      ],
+      "ingredientes": [1, 5, 7, 11],
       "timers": [
         {
           "minutos": 15,
@@ -177,23 +141,14 @@
     },
     {
       "texto": "Mezcla la harina, huevo, aceite y sal. Agrega el agua tibia hasta formar masa suave.",
-      "ingredientes": [
-        7,
-        8,
-        9,
-        10,
-        11,
-        12
-      ]
+      "ingredientes": [7, 8, 9, 10, 11, 12]
     },
     {
       "texto": "Estira la masa fina (2 mm) y córtala en cuadrados."
     },
     {
       "texto": "Echa las pantrucas en el caldo hirviendo. Cocina 5-7 min.",
-      "ingredientes": [
-        7
-      ],
+      "ingredientes": [7],
       "timers": [
         {
           "minutos": 7,
@@ -203,10 +158,7 @@
     },
     {
       "texto": "Vierte los huevos batidos en hilo y sirve con cilantro picado.",
-      "ingredientes": [
-        8,
-        10
-      ]
+      "ingredientes": [8, 10]
     }
   ],
   "tiempo_v2": {

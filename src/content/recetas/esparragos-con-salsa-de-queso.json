@@ -14,22 +14,6 @@
   "porciones": "6 a 8 personas",
   "dificultad": "fácil",
   "tecnica": "Hervido y salsa",
-  "ingredientes": [
-    "2 kg de espárragos",
-    "250 g de queso rallado",
-    "1 taza (150 g) de camarones",
-    "1 cucharada colmada (20 g) de mantequilla",
-    "1 cucharada colmada (15 g) de harina",
-    "1 1/2 taza (375 ml) de leche"
-  ],
-  "pasos": [
-    "Cocer los espárragos.",
-    "Preparar una salsa con la mantequilla derretida, harina y leche.",
-    "Cocer la mezcla a fuego suave revolviendo constantemente hasta que espese.",
-    "Agregar el queso y revolver hasta que se derrita.",
-    "Añadir los camarones.",
-    "Volver a calentar y cubrir con la salsa los espárragos dispuestos en los platos."
-  ],
   "dato": "La salsa debe quedar espesa pero fluida; si queda muy densa, ajusta con un poco más de leche. Los espárragos con salsa de queso son una entrada clásica de las celebraciones chilenas.",
   "advertencia": "Los camarones deben quedar bien cocidos: cambian de color a rosado opaco. Si usas congelados, descongélalos completamente y escúrrelos antes de cocinar.",
   "errores": [
@@ -88,38 +72,26 @@
   "pasos_v2": [
     {
       "texto": "Cocer los espárragos.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Preparar una salsa con la mantequilla derretida, harina y leche.",
-      "ingredientes": [
-        4,
-        5,
-        6
-      ]
+      "ingredientes": [4, 5, 6]
     },
     {
       "texto": "Cocer la mezcla a fuego suave revolviendo constantemente hasta que espese."
     },
     {
       "texto": "Agregar el queso y revolver hasta que se derrita.",
-      "ingredientes": [
-        2
-      ]
+      "ingredientes": [2]
     },
     {
       "texto": "Añadir los camarones.",
-      "ingredientes": [
-        3
-      ]
+      "ingredientes": [3]
     },
     {
       "texto": "Volver a calentar y cubrir con la salsa los espárragos dispuestos en los platos.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     }
   ],
   "tiempo_v2": {

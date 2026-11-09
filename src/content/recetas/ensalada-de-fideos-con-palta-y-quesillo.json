@@ -17,29 +17,6 @@
   "porciones": "4 personas",
   "dificultad": "fácil",
   "tecnica": "Hervido y mezcla",
-  "ingredientes": [
-    "250 g de fideos espirales (o tirabuzón)",
-    "2 tomates medianos, pelados y en cubos",
-    "2 paltas maduras, en cubos",
-    "1 taza (150 g) de choclo cocido (fresco, congelado o en conserva)",
-    "200 g de quesillo o queso fresco, en cubos o desmenuzado",
-    "1 cucharadita de orégano seco",
-    "3 cucharadas (45 ml) de aceite de oliva",
-    "Jugo de 1 limón",
-    "Sal y pimienta a gusto",
-    "Carne opcional: 300 g de carne molida de vacuno, carne molida de pollo, o 2 hamburguesas (de pollo o vacuno) picadas"
-  ],
-  "pasos": [
-    "Cocer los fideos espirales en abundante agua con sal hasta que estén al dente. Escurrir, enjuagar con agua fría y reservar.",
-    "Si usas choclo fresco, cocerlo y desgranarlo. Si es en conserva o congelado, escurrirlo bien.",
-    "Si preparas la versión con carne: cocinar la carne molida o las hamburguesas picadas en una sartén con un poco de aceite, sal, pimienta y una pizca de orégano, hasta que estén bien cocidas. Dejar enfriar.",
-    "Pelar los tomates (opcional) y cortarlos en cubos. Escurrir el exceso de jugo.",
-    "Pelar las paltas y cortarlas en cubos. Rociarlas con un poco de jugo de limón para que no se oxiden.",
-    "Cortar el quesillo en cubos o desmenuzarlo.",
-    "En un bol grande, mezclar los fideos, el tomate, la palta, el choclo y el quesillo. Si usas carne, incorporarla también.",
-    "Aliñar con el aceite de oliva, el resto del jugo de limón, el orégano, sal y pimienta. Revolver con cuidado para no deshacer la palta.",
-    "Servir fría o a temperatura ambiente."
-  ],
   "dato": "La carne es completamente opcional. Puedes elegir una sola opción: carne molida de vacuno, carne molida de pollo, hamburguesas de pollo picadas o hamburguesas de vacuno picadas. Si prefieres una versión vegetariana, simplemente omítela. El quesillo puede reemplazarse por queso fresco o mozzarella en cubos.",
   "errores": [
     {
@@ -134,66 +111,35 @@
   "pasos_v2": [
     {
       "texto": "Cocer los fideos espirales en abundante agua con sal hasta que estén al dente. Escurrir, enjuagar con agua fría y reservar.",
-      "ingredientes": [
-        1,
-        9
-      ]
+      "ingredientes": [1, 9]
     },
     {
       "texto": "Si usas choclo fresco, cocerlo y desgranarlo. Si es en conserva o congelado, escurrirlo bien.",
-      "ingredientes": [
-        4
-      ]
+      "ingredientes": [4]
     },
     {
       "texto": "Si preparas la versión con carne: cocinar la carne molida o las hamburguesas picadas en una sartén con un poco de aceite, sal, pimienta y una pizca de orégano, hasta que estén bien cocidas. Dejar enfriar.",
-      "ingredientes": [
-        6,
-        7,
-        9,
-        10
-      ]
+      "ingredientes": [6, 7, 9, 10]
     },
     {
       "texto": "Pelar los tomates (opcional) y cortarlos en cubos. Escurrir el exceso de jugo.",
-      "ingredientes": [
-        2,
-        8
-      ]
+      "ingredientes": [2, 8]
     },
     {
       "texto": "Pelar las paltas y cortarlas en cubos. Rociarlas con un poco de jugo de limón para que no se oxiden.",
-      "ingredientes": [
-        3,
-        8
-      ]
+      "ingredientes": [3, 8]
     },
     {
       "texto": "Cortar el quesillo en cubos o desmenuzarlo.",
-      "ingredientes": [
-        5
-      ]
+      "ingredientes": [5]
     },
     {
       "texto": "En un bol grande, mezclar los fideos, el tomate, la palta, el choclo y el quesillo. Si usas carne, incorporarla también.",
-      "ingredientes": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        10
-      ]
+      "ingredientes": [1, 2, 3, 4, 5, 10]
     },
     {
       "texto": "Aliñar con el aceite de oliva, el resto del jugo de limón, el orégano, sal y pimienta. Revolver con cuidado para no deshacer la palta.",
-      "ingredientes": [
-        3,
-        6,
-        7,
-        8,
-        9
-      ]
+      "ingredientes": [3, 6, 7, 8, 9]
     },
     {
       "texto": "Servir fría o a temperatura ambiente."

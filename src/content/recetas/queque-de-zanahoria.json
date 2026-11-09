@@ -1,39 +1,12 @@
 {
   "titulo": "Queque de zanahoria",
   "categoria": "dulces",
-  "tags": [
-    "queque",
-    "zanahoria",
-    "horno",
-    "once",
-    "dulce",
-    "reposteria"
-  ],
+  "tags": ["queque", "zanahoria", "horno", "once", "dulce", "reposteria"],
   "imagen": null,
   "tiempo": "1 h",
   "porciones": "10 porciones",
   "dificultad": "fácil",
   "tecnica": "Horno",
-  "ingredientes": [
-    "3 zanahorias medianas ralladas",
-    "3 huevos",
-    "200 g de azúcar",
-    "150 ml de aceite",
-    "200 g de harina",
-    "1 cucharadita de polvos de hornear",
-    "1 cucharadita de bicarbonato",
-    "1 cucharadita de canela",
-    "1 pizca de sal",
-    "½ taza de nueces picadas (opcional)"
-  ],
-  "pasos": [
-    "Precalienta el horno a 180 °C. Engrasa un molde de queque.",
-    "Bate los huevos con el azúcar hasta que estén espumosos. Agrega el aceite y mezcla.",
-    "Incorpora la zanahoria rallada.",
-    "Añade la harina cernida con los polvos de hornear, el bicarbonato, la canela y la sal. Mezcla con movimientos envolventes.",
-    "Si usas nueces, incorpóralas. Vierte en el molde.",
-    "Hornea 45-50 minutos, hasta que un palillo salga limpio."
-  ],
   "dato": "El queque de zanahoria es el queque de once chileno más querido después del de plátano. Es húmedo, especiado con canela y muy fácil de hacer. Se puede cubrir con un glaseado de queso crema para una versión más elegante.",
   "errores": [
     {
@@ -120,39 +93,23 @@
     },
     {
       "texto": "Bate los huevos con el azúcar hasta que estén espumosos. Agrega el aceite y mezcla.",
-      "ingredientes": [
-        2,
-        3,
-        4
-      ]
+      "ingredientes": [2, 3, 4]
     },
     {
       "texto": "Incorpora la zanahoria rallada.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Añade la harina cernida con los polvos de hornear, el bicarbonato, la canela y la sal. Mezcla con movimientos envolventes.",
-      "ingredientes": [
-        5,
-        6,
-        7,
-        8,
-        9
-      ]
+      "ingredientes": [5, 6, 7, 8, 9]
     },
     {
       "texto": "Si usas nueces, incorpóralas. Vierte en el molde.",
-      "ingredientes": [
-        10
-      ]
+      "ingredientes": [10]
     },
     {
       "texto": "Hornea 45-50 minutos, hasta que un palillo salga limpio.",
-      "ingredientes": [
-        9
-      ],
+      "ingredientes": [9],
       "timers": [
         {
           "minutos": 50,

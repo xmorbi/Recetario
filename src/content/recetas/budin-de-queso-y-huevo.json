@@ -1,35 +1,12 @@
 {
   "titulo": "Budín de Queso y Huevo",
   "categoria": "once",
-  "tags": [
-    "budín de queso",
-    "huevo",
-    "keto",
-    "desayuno",
-    "sin harina",
-    "alto en proteína"
-  ],
+  "tags": ["budín de queso", "huevo", "keto", "desayuno", "sin harina", "alto en proteína"],
   "imagen": null,
   "tiempo": "25 min",
   "porciones": "4 personas",
   "dificultad": "fácil",
   "tecnica": "Horno",
-  "ingredientes": [
-    "4 claras de huevo",
-    "2 huevos enteros",
-    "40 g de queso parmesano rallado",
-    "40 g de queso mantecoso rallado",
-    "40 g de queso chanco rallado",
-    "Mantequilla para el molde"
-  ],
-  "pasos": [
-    "Precalentar el horno a 180 °C.",
-    "Rallar los tres tipos de queso y mezclarlos en un bol.",
-    "Batir las claras y los huevos enteros hasta que estén espumosos.",
-    "Verter los huevos batidos sobre el bol de los quesos y mezclar bien.",
-    "Engrasar una budinera con mantequilla.",
-    "Verter la mezcla en el molde y hornear por unos 20 minutos, hasta que esté cuajado y dorado."
-  ],
   "dato": "Este budín es una excelente manera de incorporar proteína y grasas saludables en el desayuno. Puedes variar los quesos según tus preferencias. En Chile, los quesos mantecoso y chanco son los más tradicionales y los que mejor se funden.",
   "errores": [
     {
@@ -93,36 +70,23 @@
     },
     {
       "texto": "Rallar los tres tipos de queso y mezclarlos en un bol.",
-      "ingredientes": [
-        3,
-        4,
-        5
-      ]
+      "ingredientes": [3, 4, 5]
     },
     {
       "texto": "Batir las claras y los huevos enteros hasta que estén espumosos.",
-      "ingredientes": [
-        1,
-        2
-      ]
+      "ingredientes": [1, 2]
     },
     {
       "texto": "Verter los huevos batidos sobre el bol de los quesos y mezclar bien.",
-      "ingredientes": [
-        6
-      ]
+      "ingredientes": [6]
     },
     {
       "texto": "Engrasar una budinera con mantequilla.",
-      "ingredientes": [
-        6
-      ]
+      "ingredientes": [6]
     },
     {
       "texto": "Verter la mezcla en el molde y hornear por unos 20 minutos, hasta que esté cuajado y dorado.",
-      "ingredientes": [
-        6
-      ],
+      "ingredientes": [6],
       "timers": [
         {
           "minutos": 20,

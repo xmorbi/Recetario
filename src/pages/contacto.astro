@@ -6,7 +6,6 @@ import Layout from '../layouts/Layout.astro';
   title="Contacto"
   description="Escríbenos si tienes una receta que compartir, una corrección, una duda o simplemente quieres saludar. Contacto del Recetario Chileno."
 >
-
   <header class="hero-receta">
     <div class="hero-receta-inner">
       <nav class="breadcrumb" aria-label="Migas de pan">
@@ -19,84 +18,138 @@ import Layout from '../layouts/Layout.astro';
   </header>
 
   <main class="legal-page legal-page--lectura">
+    <p class="legal-subtitle">
+      ¿Tienes una receta, una duda o simplemente quieres saludar? Escríbenos.
+    </p>
 
-    <p class="legal-subtitle">¿Tienes una receta, una duda o simplemente quieres saludar? Escríbenos.</p>
-
-    <p>Este recetario crece gracias a las personas que lo leen. Si tienes una receta familiar que crees que debería estar aquí, si encontraste un error, si una preparación no te resultó como esperabas o si simplemente quieres contar tu historia con alguna de estas comidas, nos encantaría leerte.</p>
+    <p>
+      Este recetario crece gracias a las personas que lo leen. Si tienes una receta familiar que
+      crees que debería estar aquí, si encontraste un error, si una preparación no te resultó como
+      esperabas o si simplemente quieres contar tu historia con alguna de estas comidas, nos
+      encantaría leerte.
+    </p>
 
     <h2>Formas de contacto</h2>
 
     <h3>Formulario</h3>
 
-    <p>Completa el formulario de abajo. Tu mensaje llegará directamente a nuestro correo. Solemos responder en 2-4 días hábiles.</p>
+    <p>
+      Completa el formulario de abajo. Tu mensaje llegará directamente a nuestro correo. Solemos
+      responder en 2-4 días hábiles.
+    </p>
 
-    <form class="contacto-form" name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/gracias/">
-      <input type="hidden" name="form-name" value="contacto">
+    <form
+      class="contacto-form"
+      name="contacto"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      action="/gracias/"
+    >
+      <input type="hidden" name="form-name" value="contacto" />
       <p style="display:none">
-        <label>No completar si eres humano: <input name="bot-field"></label>
+        <label>
+          No completar si eres humano: <input name="bot-field" />
+        </label>
       </p>
 
       <label for="nombre">Tu nombre</label>
-      <input type="text" id="nombre" name="nombre" required placeholder="¿Cómo te llamas?">
+      <input type="text" id="nombre" name="nombre" required placeholder="¿Cómo te llamas?" />
 
       <label for="email">Tu correo electrónico</label>
-      <input type="email" id="email" name="email" required placeholder="tu@correo.cl">
+      <input type="email" id="email" name="email" required placeholder="tu@correo.cl" />
 
       <label for="asunto">Asunto</label>
-      <input type="text" id="asunto" name="asunto" placeholder="Receta, corrección, saludo...">
+      <input type="text" id="asunto" name="asunto" placeholder="Receta, corrección, saludo..." />
 
       <label for="mensaje">Mensaje</label>
-      <textarea id="mensaje" name="mensaje" required placeholder="Cuéntanos lo que quieras. Si es sobre una receta, dinos cuál."></textarea>
+      <textarea
+        id="mensaje"
+        name="mensaje"
+        required
+        placeholder="Cuéntanos lo que quieras. Si es sobre una receta, dinos cuál."
+      ></textarea>
 
       <button type="submit">Enviar mensaje</button>
     </form>
 
     <h3>Correo electrónico directo</h3>
 
-    <p>Si prefieres escribir por fuera del formulario, nuestro correo es: <strong id="correo-protegido">cargando...</strong></p>
+    <p>
+      Si prefieres escribir por fuera del formulario, nuestro correo es:{' '}
+      <strong id="correo-protegido">cargando...</strong>
+    </p>
 
     <h2>Qué tipo de mensajes son bienvenidos</h2>
 
     <ul>
-      <li><strong>Recetas familiares</strong>: si tienes una receta que no está aquí y quieres compartirla, cuéntanos la historia y te decimos si la publicamos (siempre dando el crédito).</li>
-      <li><strong>Correcciones</strong>: si una receta tiene un error, un ingrediente mal escrito o un paso confuso, avísanos. Es la mejor forma de mejorar.</li>
-      <li><strong>Variantes regionales</strong>: si tu familia hace la cazuela con algo distinto, queremos saberlo. La cocina chilena es diversa.</li>
-      <li><strong>Sugerencias de recetas</strong>: si quieres que investiguemos algún plato, dínoslo.</li>
-      <li><strong>Colaboraciones</strong>: si tienes un proyecto relacionado con cocina chilena, escríbenos.</li>
-      <li><strong>Prensa o consultas comerciales</strong>: también bienvenidos.</li>
+      <li>
+        <strong>Recetas familiares</strong>: si tienes una receta que no está aquí y quieres
+        compartirla, cuéntanos la historia y te decimos si la publicamos (siempre dando el crédito).
+      </li>
+      <li>
+        <strong>Correcciones</strong>: si una receta tiene un error, un ingrediente mal escrito o un
+        paso confuso, avísanos. Es la mejor forma de mejorar.
+      </li>
+      <li>
+        <strong>Variantes regionales</strong>: si tu familia hace la cazuela con algo distinto,
+        queremos saberlo. La cocina chilena es diversa.
+      </li>
+      <li>
+        <strong>Sugerencias de recetas</strong>: si quieres que investiguemos algún plato, dínoslo.
+      </li>
+      <li>
+        <strong>Colaboraciones</strong>: si tienes un proyecto relacionado con cocina chilena,
+        escríbenos.
+      </li>
+      <li>
+        <strong>Prensa o consultas comerciales</strong>: también bienvenidos.
+      </li>
     </ul>
 
     <div class="legal-box">
-      <strong>Sobre la privacidad:</strong> tu nombre y correo solo se usan para responderte. No te agregamos a ninguna lista, no te enviamos publicidad, no compartimos tus datos con nadie. Para más detalle, consulta la <a href="/privacidad/">Política de Privacidad</a>.
+      <strong>Sobre la privacidad:</strong> tu nombre y correo solo se usan para responderte. No te
+      agregamos a ninguna lista, no te enviamos publicidad, no compartimos tus datos con nadie. Para
+      más detalle, consulta la <a href="/privacidad/">Política de Privacidad</a>.
     </div>
 
     <h2>Antes de escribir, quizás esto te sirva</h2>
 
     <ul>
-      <li>¿Buscas una receta específica? Usa el <a href="/recetario/">buscador del recetario</a> (funciona con o sin tildes).</li>
-      <li>¿No encuentras una receta? Puede que no la hayamos publicado aún. Escríbenos y consideraremos la sugerencia.</li>
-      <li>¿Tienes problemas con el sitio? Cuéntanos qué navegador usas y qué pasó. A veces los celulares viejos tienen limitaciones.</li>
+      <li>
+        ¿Buscas una receta específica? Usa el <a href="/recetario/">buscador del recetario</a>{' '}
+        (funciona con o sin tildes).
+      </li>
+      <li>
+        ¿No encuentras una receta? Puede que no la hayamos publicado aún. Escríbenos y
+        consideraremos la sugerencia.
+      </li>
+      <li>
+        ¿Tienes problemas con el sitio? Cuéntanos qué navegador usas y qué pasó. A veces los
+        celulares viejos tienen limitaciones.
+      </li>
     </ul>
 
-    <p style="margin-top:2.5rem;font-style:italic;color:var(--suave)">Gracias por tomarte el tiempo de escribir. Leer los mensajes de quienes cocinan con estas recetas es la mejor parte de mantener este sitio.</p>
-
+    <p style="margin-top:2.5rem;font-style:italic;color:var(--suave)">
+      Gracias por tomarte el tiempo de escribir. Leer los mensajes de quienes cocinan con estas
+      recetas es la mejor parte de mantener este sitio.
+    </p>
   </main>
 
   <!-- Ofuscación del correo: se arma letra por letra para que bots no lo lean -->
   <script is:inline>
-    (function() {
-      var correoInvertido = "lc.oiratecer@aloh";
+    (function () {
+      var correoInvertido = 'lc.oiratecer@aloh';
       var correoReal = correoInvertido.split('').reverse().join('');
       var elemento = document.getElementById('correo-protegido');
       if (elemento) {
         var enlace = document.createElement('a');
-        enlace.href = "mailto:" + correoReal;
+        enlace.href = 'mailto:' + correoReal;
         enlace.textContent = correoReal;
-        enlace.style.color = "var(--rojo)";
-        elemento.innerHTML = "";
+        enlace.style.color = 'var(--rojo)';
+        elemento.innerHTML = '';
         elemento.appendChild(enlace);
       }
     })();
   </script>
-
 </Layout>

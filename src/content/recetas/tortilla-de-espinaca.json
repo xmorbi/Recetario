@@ -1,34 +1,12 @@
 {
   "titulo": "Tortilla de espinaca",
   "categoria": "principales",
-  "tags": [
-    "tortilla",
-    "espinaca",
-    "huevo",
-    "sartén",
-    "vegetariano",
-    "cotidiano"
-  ],
+  "tags": ["tortilla", "espinaca", "huevo", "sartén", "vegetariano", "cotidiano"],
   "imagen": null,
   "tiempo": "25 min",
   "porciones": "4 personas",
   "dificultad": "muy fácil",
   "tecnica": "Sartén",
-  "ingredientes": [
-    "1 atado de espinacas frescas",
-    "1 cebolla pequeña picada fina",
-    "6 huevos",
-    "2 cucharadas de aceite",
-    "Sal, pimienta y nuez moscada (opcional)"
-  ],
-  "pasos": [
-    "Lava bien las espinacas y pícalas finas. Escúrrelas bien.",
-    "Sofríe la cebolla en aceite hasta que esté transparente. Agrega la espinaca y cocina 3-4 minutos, hasta que se ablande.",
-    "Bate los huevos con sal, pimienta y nuez moscada. Agrega la espinaca y la cebolla.",
-    "Vierte la mezcla en la sartén y cocina a fuego medio 5-7 minutos, hasta que los bordes se despeguen.",
-    "Da vuelta la tortilla con un plato y cocina 3-4 minutos más.",
-    "Sirve tibia o fría, cortada en porciones."
-  ],
   "dato": "La tortilla de espinaca es la hermana de la tortilla de acelga. Se hace igual, pero con espinaca. Es una forma rica de comer verduras y se sirve en la once o como entrada.",
   "errores": [
     {
@@ -83,17 +61,11 @@
   "pasos_v2": [
     {
       "texto": "Lava bien las espinacas y pícalas finas. Escúrrelas bien.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Sofríe la cebolla en aceite hasta que esté transparente. Agrega la espinaca y cocina 3-4 minutos, hasta que se ablande.",
-      "ingredientes": [
-        1,
-        2,
-        4
-      ],
+      "ingredientes": [1, 2, 4],
       "timers": [
         {
           "minutos": 4,
@@ -103,12 +75,7 @@
     },
     {
       "texto": "Bate los huevos con sal, pimienta y nuez moscada. Agrega la espinaca y la cebolla.",
-      "ingredientes": [
-        1,
-        2,
-        3,
-        5
-      ]
+      "ingredientes": [1, 2, 3, 5]
     },
     {
       "texto": "Vierte la mezcla en la sartén y cocina a fuego medio 5-7 minutos, hasta que los bordes se despeguen.",

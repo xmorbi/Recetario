@@ -1,33 +1,12 @@
 {
   "titulo": "Salsa americana",
   "categoria": "ensaladas",
-  "tags": [
-    "salsa",
-    "picoteo",
-    "acompañamiento",
-    "frio"
-  ],
+  "tags": ["salsa", "picoteo", "acompañamiento", "frio"],
   "imagen": null,
   "tiempo": "15 min",
   "porciones": "1 taza",
   "dificultad": "muy fácil",
   "tecnica": "Sin cocción",
-  "ingredientes": [
-    "6 cebollitas perla encurtidas",
-    "2 zanahorias encurtidas en rodajas",
-    "2 pepinillos encurtidos",
-    "1/2 taza de mayonesa",
-    "1 cucharada de ketchup",
-    "1 cucharadita de mostaza",
-    "Sal y pimienta al gusto"
-  ],
-  "pasos": [
-    "Escurre bien las cebollitas, las zanahorias y los pepinillos. Pícalos en trozos muy pequeños.",
-    "En un bol, mezcla la mayonesa, el ketchup y la mostaza hasta integrar.",
-    "Incorpora los encurtidos picados y mezcla bien. Salpimenta al gusto.",
-    "Refrigera por al menos 30 minutos para que los sabores se mezclen antes de servir.",
-    "Sirve como acompañamiento de carnes, papas fritas o completos."
-  ],
   "dato": "A pesar de su nombre, la salsa americana es un clásico chileno. Se usa mucho en las hamburguesas y completos para darles un toque ácido y crujiente.",
   "errores": [
     {
@@ -93,25 +72,15 @@
   "pasos_v2": [
     {
       "texto": "Escurre bien las cebollitas, las zanahorias y los pepinillos. Pícalos en trozos muy pequeños.",
-      "ingredientes": [
-        1,
-        2,
-        3
-      ]
+      "ingredientes": [1, 2, 3]
     },
     {
       "texto": "En un bol, mezcla la mayonesa, el ketchup y la mostaza hasta integrar.",
-      "ingredientes": [
-        4,
-        5,
-        6
-      ]
+      "ingredientes": [4, 5, 6]
     },
     {
       "texto": "Incorpora los encurtidos picados y mezcla bien. Salpimenta al gusto.",
-      "ingredientes": [
-        7
-      ]
+      "ingredientes": [7]
     },
     {
       "texto": "Refrigera por al menos 30 minutos para que los sabores se mezclen antes de servir.",

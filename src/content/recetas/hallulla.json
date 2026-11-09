@@ -1,34 +1,12 @@
 {
   "titulo": "Hallulla",
   "categoria": "panes",
-  "tags": [
-    "pan",
-    "horno",
-    "masa",
-    "desayuno",
-    "once"
-  ],
+  "tags": ["pan", "horno", "masa", "desayuno", "once"],
   "imagen": "img/hallulla.jpg",
   "tiempo": "2 h",
   "porciones": "6 panes",
   "dificultad": "media",
   "tecnica": "Horno",
-  "ingredientes": [
-    "500 g de harina",
-    "150 ml de leche tibia",
-    "10 g de levadura seca",
-    "1 1/2 cucharaditas de sal",
-    "80 g de manteca vegetal",
-    "1 cucharadita de azúcar (opcional)"
-  ],
-  "pasos": [
-    "Activa la levadura en la leche tibia con el azúcar. Deja reposar por 10 minutos.",
-    "Mezcla la harina con la sal. Agrega la levadura con la leche y la manteca. Amasa hasta que la masa esté suave y no se pegue.",
-    "Deja levar tapada por 1 hora, hasta que doble su volumen.",
-    "Divide la masa en 6 bollos. Estira cada uno en forma de disco plano de aproximadamente 1 cm de grosor.",
-    "Coloca en una bandeja engrasada y deja levar por 30 minutos más. Precalienta el horno a 200 °C.",
-    "Hornea por 15-20 minutos, hasta que estén doradas. Sirve tibias."
-  ],
   "dato": "La hallulla es un pan redondo y plano, ideal para sándwiches. Su textura es más suave y compacta que la marraqueta.",
   "errores": [
     {
@@ -93,11 +71,7 @@
   "pasos_v2": [
     {
       "texto": "Activa la levadura en la leche tibia con el azúcar. Deja reposar por 10 minutos.",
-      "ingredientes": [
-        2,
-        3,
-        6
-      ],
+      "ingredientes": [2, 3, 6],
       "timers": [
         {
           "minutos": 10,
@@ -107,13 +81,7 @@
     },
     {
       "texto": "Mezcla la harina con la sal. Agrega la levadura con la leche y la manteca. Amasa hasta que la masa esté suave y no se pegue.",
-      "ingredientes": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
+      "ingredientes": [1, 2, 3, 4, 5]
     },
     {
       "texto": "Deja levar tapada por 1 hora, hasta que doble su volumen.",

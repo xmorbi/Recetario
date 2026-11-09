@@ -1,34 +1,12 @@
 {
   "titulo": "Ensalada de Digüeñes",
   "categoria": "ensaladas",
-  "tags": [
-    "ensalada de digüeñes",
-    "digüeñes",
-    "hongo",
-    "cilantro",
-    "cebolla",
-    "ensalada chilena"
-  ],
+  "tags": ["ensalada de digüeñes", "digüeñes", "hongo", "cilantro", "cebolla", "ensalada chilena"],
   "imagen": null,
   "tiempo": "20 min",
   "porciones": "4 personas",
   "dificultad": "fácil",
   "tecnica": "Sin cocción",
-  "ingredientes": [
-    "1 kg de digüeñes",
-    "1 atado (30 g) de cilantro",
-    "1 cebolla chica",
-    "Vinagre",
-    "Aceite",
-    "Sal",
-    "Pimienta"
-  ],
-  "pasos": [
-    "Limpiar muy bien los digüeñes y lavarlos en agua corriente procurando eliminar la sustancia gelatinosa.",
-    "Dejarlos que eliminen el agua en un colador.",
-    "Picar la cebolla y el cilantro muy finos e incorporarlos a los digüeñes en la ensaladera.",
-    "Aliñar con sal, aceite, vinagre y pimienta."
-  ],
   "dato": "Los digüeñes son hongos silvestres chilenos de temporada, típicos del sur de Chile. Se comen crudos, en ensalada, con cebolla y cilantro. Si no los encuentras, no los reemplaces por champiñones: el sabor y la textura son muy distintos.",
   "errores": [
     {
@@ -92,30 +70,18 @@
   "pasos_v2": [
     {
       "texto": "Limpiar muy bien los digüeñes y lavarlos en agua corriente procurando eliminar la sustancia gelatinosa.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Dejarlos que eliminen el agua en un colador."
     },
     {
       "texto": "Picar la cebolla y el cilantro muy finos e incorporarlos a los digüeñes en la ensaladera.",
-      "ingredientes": [
-        1,
-        2,
-        3,
-        6
-      ]
+      "ingredientes": [1, 2, 3, 6]
     },
     {
       "texto": "Aliñar con sal, aceite, vinagre y pimienta.",
-      "ingredientes": [
-        4,
-        5,
-        6,
-        7
-      ]
+      "ingredientes": [4, 5, 6, 7]
     }
   ],
   "tiempo_v2": {

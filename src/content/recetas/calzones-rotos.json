@@ -1,39 +1,12 @@
 {
   "titulo": "Calzones rotos",
   "categoria": "dulces",
-  "tags": [
-    "dulce",
-    "fritura",
-    "invierno",
-    "once",
-    "merienda",
-    "reposteria"
-  ],
+  "tags": ["dulce", "fritura", "invierno", "once", "merienda", "reposteria"],
   "imagen": "img/calzones-rotos.JPG",
   "tiempo": "40 min",
   "porciones": "20 unidades",
   "dificultad": "fácil",
   "tecnica": "Fritura",
-  "ingredientes": [
-    "500 g de harina sin polvos de hornear",
-    "150 g de azúcar",
-    "100 g de mantequilla o manteca a temperatura ambiente",
-    "2 huevos",
-    "1 cucharadita de polvos de hornear",
-    "Ralladura de 1 limón o naranja",
-    "1 cucharadita de esencia de vainilla",
-    "Aceite para freír",
-    "Azúcar flor para espolvorear"
-  ],
-  "pasos": [
-    "En un bol grande, bate la mantequilla con el azúcar hasta obtener una crema. Agrega los huevos uno a uno y la vainilla.",
-    "Incorpora la harina cernida junto con los polvos de hornear y la ralladura de limón. Mezcla hasta formar una masa suave que no se pegue en las manos.",
-    "Envuelve la masa en papel plástico o un paño y déjala reposar en el refrigerador por 30 minutos.",
-    "Estira la masa sobre una superficie enharinada hasta que tenga unos 5 mm de grosor. Corta rectángulos de aproximadamente 5x10 cm.",
-    "Haz un corte longitudinal en el centro de cada rectángulo y pasa uno de los extremos por el agujero para formar la clásica trenza retorcida.",
-    "Calienta abundante aceite a fuego medio (unos 170 °C). Fríe los calzones hasta que estén dorados por ambos lados.",
-    "Escurre sobre papel absorbente y espolvorea generosamente con azúcar flor mientras aún están tibios."
-  ],
   "dato": "Se llaman \"rotos\" porque justamente tienen una forma irregular y rasgada. Se comen tradicionalmente en las tardes de lluvia con un té caliente. Son un clásico de la once chilena, sobre todo en invierno.",
   "advertencia": "Fríe a 170 °C: si el aceite está muy caliente, los calzones se doran por fuera y quedan crudos por dentro. Si el aceite está muy frío, absorben grasa y quedan pesados.",
   "errores": [
@@ -114,22 +87,11 @@
   "pasos_v2": [
     {
       "texto": "En un bol grande, bate la mantequilla con el azúcar hasta obtener una crema. Agrega los huevos uno a uno y la vainilla.",
-      "ingredientes": [
-        2,
-        3,
-        4,
-        7,
-        9
-      ]
+      "ingredientes": [2, 3, 4, 7, 9]
     },
     {
       "texto": "Incorpora la harina cernida junto con los polvos de hornear y la ralladura de limón. Mezcla hasta formar una masa suave que no se pegue en las manos.",
-      "ingredientes": [
-        1,
-        5,
-        6,
-        8
-      ]
+      "ingredientes": [1, 5, 6, 8]
     },
     {
       "texto": "Envuelve la masa en papel plástico o un paño y déjala reposar en el refrigerador por 30 minutos.",
@@ -142,26 +104,18 @@
     },
     {
       "texto": "Estira la masa sobre una superficie enharinada hasta que tenga unos 5 mm de grosor. Corta rectángulos de aproximadamente 5x10 cm.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Haz un corte longitudinal en el centro de cada rectángulo y pasa uno de los extremos por el agujero para formar la clásica trenza retorcida."
     },
     {
       "texto": "Calienta abundante aceite a fuego medio (unos 170 °C). Fríe los calzones hasta que estén dorados por ambos lados.",
-      "ingredientes": [
-        8
-      ]
+      "ingredientes": [8]
     },
     {
       "texto": "Escurre sobre papel absorbente y espolvorea generosamente con azúcar flor mientras aún están tibios.",
-      "ingredientes": [
-        2,
-        5,
-        9
-      ]
+      "ingredientes": [2, 5, 9]
     }
   ],
   "tiempo_v2": {

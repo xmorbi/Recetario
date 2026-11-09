@@ -7,34 +7,16 @@
   "porciones": "4 a 6 personas",
   "dificultad": "media",
   "tecnica": "Olla",
-  "ingredientes": [
-    "250 g de posta negra",
-    "250 g de tocino",
-    "1 cebolla",
-    "2 zanahorias",
-    "1 cucharada (15 g) de manteca de chancho",
-    "1 pata de ternera",
-    "4 nabos",
-    "2 vasos (500 ml) de vino tinto",
-    "Vinagre",
-    "Pimienta",
-    "Orégano",
-    "Tomillo",
-    "Sal"
-  ],
-  "pasos": [
-    "Cortar la carne en trozos de regular grosor.",
-    "Cortar la cebolla y los nabos en cascos medianos, el tocino en cuadritos finos, las zanahorias en rodajas y la pata en trozos regulares.",
-    "Calentar la manteca y freír la carne hasta que tome un color dorado.",
-    "Agregar las cebollas, tocino, zanahorias, nabos, la pata de ternera y el tocino.",
-    "Freír a fuego suave unos minutos agregando los aliños.",
-    "Cuando se aprecie todo bien impregnado, se vacía el vino sobre la preparación.",
-    "Se deja en cocción a fuego lento hasta que la carne esté tierna y la salsa espese."
-  ],
   "dato": "La pata de ternera aporta gelatina y cuerpo a la salsa; si no la encuentras, puedes reemplazarla por osobuco. El estofado al vino tinto es un plato de invierno chileno, de esos que se cocinan lento y llenan la casa de aroma.",
   "errores": [
-    { "error": "La carne me quedó dura", "solucion": "Cocina a fuego lento el tiempo suficiente; la posta negra necesita cocción prolongada para ablandar." },
-    { "error": "La salsa me quedó muy líquida", "solucion": "Destapa la olla los últimos minutos para que reduzca, o agrega un poco de harina disuelta en agua fría." }
+    {
+      "error": "La carne me quedó dura",
+      "solucion": "Cocina a fuego lento el tiempo suficiente; la posta negra necesita cocción prolongada para ablandar."
+    },
+    {
+      "error": "La salsa me quedó muy líquida",
+      "solucion": "Destapa la olla los últimos minutos para que reduzca, o agrega un poco de harina disuelta en agua fría."
+    }
   ],
   "conservacion": {
     "refrigerador": "3 días",
@@ -42,29 +24,124 @@
     "congelador": "Se puede congelar hasta 2 meses."
   },
   "ingredientes_v2": [
-    { "cantidad": 250, "unidad": "g", "nombre": "posta negra", "escalable": true },
-    { "cantidad": 250, "unidad": "g", "nombre": "tocino", "escalable": true },
-    { "cantidad": 1, "unidad": null, "nombre": "cebolla", "escalable": true },
-    { "cantidad": 2, "unidad": null, "nombre": "zanahorias", "escalable": true },
-    { "cantidad": 1, "unidad": "cucharada", "nombre": "manteca de chancho", "nota": "15 g", "escalable": true },
-    { "cantidad": 1, "unidad": null, "nombre": "pata de ternera", "escalable": false },
-    { "cantidad": 4, "unidad": null, "nombre": "nabos", "escalable": true },
-    { "cantidad": 2, "unidad": "vaso", "nombre": "vino", "nota": "500 ml, tinto", "escalable": true },
-    { "cantidad": 1, "unidad": null, "nombre": "vinagre", "nota": "a gusto", "escalable": false },
-    { "cantidad": 1, "unidad": null, "nombre": "pimienta", "nota": "a gusto", "escalable": false },
-    { "cantidad": 1, "unidad": null, "nombre": "orégano", "nota": "a gusto", "escalable": false },
-    { "cantidad": 1, "unidad": null, "nombre": "tomillo", "nota": "a gusto", "escalable": false },
-    { "cantidad": 1, "unidad": null, "nombre": "sal", "nota": "a gusto", "escalable": false }
+    {
+      "cantidad": 250,
+      "unidad": "g",
+      "nombre": "posta negra",
+      "escalable": true
+    },
+    {
+      "cantidad": 250,
+      "unidad": "g",
+      "nombre": "tocino",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cebolla",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "zanahorias",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": "cucharada",
+      "nombre": "manteca de chancho",
+      "nota": "15 g",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pata de ternera",
+      "escalable": false
+    },
+    {
+      "cantidad": 4,
+      "unidad": null,
+      "nombre": "nabos",
+      "escalable": true
+    },
+    {
+      "cantidad": 2,
+      "unidad": "vaso",
+      "nombre": "vino",
+      "nota": "500 ml, tinto",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "vinagre",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "pimienta",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "orégano",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "tomillo",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal",
+      "nota": "a gusto",
+      "escalable": false
+    }
   ],
   "pasos_v2": [
-    { "texto": "Cortar la carne en trozos de regular grosor.", "ingredientes": [1] },
-    { "texto": "Cortar la cebolla y los nabos en cascos medianos, el tocino en cuadritos finos, las zanahorias en rodajas y la pata en trozos regulares.", "ingredientes": [2, 3, 4, 6, 7] },
-    { "texto": "Calentar la manteca y freír la carne hasta que tome un color dorado.", "ingredientes": [1, 5] },
-    { "texto": "Agregar las cebollas, tocino, zanahorias, nabos, la pata de ternera y el tocino.", "ingredientes": [2, 3, 4, 6, 7] },
-    { "texto": "Freír a fuego suave unos minutos agregando los aliños.", "ingredientes": [9, 10, 11, 12, 13] },
-    { "texto": "Cuando se aprecie todo bien impregnado, se vacía el vino sobre la preparación.", "ingredientes": [8] },
-    { "texto": "Se deja en cocción a fuego lento hasta que la carne esté tierna y la salsa espese.", "ingredientes": [1] }
+    {
+      "texto": "Cortar la carne en trozos de regular grosor.",
+      "ingredientes": [1]
+    },
+    {
+      "texto": "Cortar la cebolla y los nabos en cascos medianos, el tocino en cuadritos finos, las zanahorias en rodajas y la pata en trozos regulares.",
+      "ingredientes": [2, 3, 4, 6, 7]
+    },
+    {
+      "texto": "Calentar la manteca y freír la carne hasta que tome un color dorado.",
+      "ingredientes": [1, 5]
+    },
+    {
+      "texto": "Agregar las cebollas, tocino, zanahorias, nabos, la pata de ternera y el tocino.",
+      "ingredientes": [2, 3, 4, 6, 7]
+    },
+    {
+      "texto": "Freír a fuego suave unos minutos agregando los aliños.",
+      "ingredientes": [9, 10, 11, 12, 13]
+    },
+    {
+      "texto": "Cuando se aprecie todo bien impregnado, se vacía el vino sobre la preparación.",
+      "ingredientes": [8]
+    },
+    {
+      "texto": "Se deja en cocción a fuego lento hasta que la carne esté tierna y la salsa espese.",
+      "ingredientes": [1]
+    }
   ],
-  "tiempo_v2": { "coccion": 90 },
+  "tiempo_v2": {
+    "coccion": 90
+  },
   "revisado_v2": true
 }

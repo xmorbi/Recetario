@@ -1,38 +1,12 @@
 {
   "titulo": "Gazpacho",
   "categoria": "sopas",
-  "tags": [
-    "gazpacho",
-    "tomate",
-    "pepino",
-    "pimiento",
-    "sopa fría",
-    "verano"
-  ],
+  "tags": ["gazpacho", "tomate", "pepino", "pimiento", "sopa fría", "verano"],
   "imagen": null,
   "tiempo": "1 h 20 min (incluye refrigeración)",
   "porciones": "4 a 6 personas",
   "dificultad": "fácil",
   "tecnica": "Licuadora",
-  "ingredientes": [
-    "3 tomates maduros",
-    "1 pepino de ensalada",
-    "2 pimientos verdes",
-    "4 cucharadas de cebolla picada",
-    "1 diente de ajo",
-    "2 huevos duros",
-    "1 marraqueta añeja",
-    "2 cucharadas de aceite",
-    "Sal",
-    "Vinagre"
-  ],
-  "pasos": [
-    "Mezclar en la licuadora 1/2 pepino, 1 pimiento, los tomates pelados, 2 cucharadas de cebolla picada, el diente de ajo, el aceite, 1/4 taza de agua, sal y vinagre; batir hasta obtener una crema consistente.",
-    "Dejar la crema en el refrigerador 1 hora aproximadamente.",
-    "Cortar el pan en cubos pequeños y freírlos.",
-    "Cortar el resto de las verduras (1/2 pepino, 1 pimiento, cebolla) en cuadritos pequeños, igualmente los huevos duros.",
-    "Distribuir la crema en tazones y agregar el pan frito, la verdura y los huevos picados a gusto."
-  ],
   "dato": "El gazpacho es una sopa fría; se sirve bien helado. Las verduras picadas y el pan frito se agregan al momento de servir para mantener las texturas.",
   "errores": [
     {
@@ -113,16 +87,7 @@
   "pasos_v2": [
     {
       "texto": "Mezclar en la licuadora 1/2 pepino, 1 pimiento, los tomates pelados, 2 cucharadas de cebolla picada, el diente de ajo, el aceite, 1/4 taza de agua, sal y vinagre; batir hasta obtener una crema consistente.",
-      "ingredientes": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        8,
-        9,
-        10
-      ]
+      "ingredientes": [1, 2, 3, 4, 5, 8, 9, 10]
     },
     {
       "texto": "Dejar la crema en el refrigerador 1 hora aproximadamente.",
@@ -135,33 +100,15 @@
     },
     {
       "texto": "Cortar el pan en cubos pequeños y freírlos.",
-      "ingredientes": [
-        7,
-        8
-      ]
+      "ingredientes": [7, 8]
     },
     {
       "texto": "Cortar el resto de las verduras (1/2 pepino, 1 pimiento, cebolla) en cuadritos pequeños, igualmente los huevos duros.",
-      "ingredientes": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ]
+      "ingredientes": [1, 2, 3, 4, 5, 6]
     },
     {
       "texto": "Distribuir la crema en tazones y agregar el pan frito, la verdura y los huevos picados a gusto.",
-      "ingredientes": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7
-      ]
+      "ingredientes": [1, 2, 3, 4, 5, 6, 7]
     }
   ],
   "tiempo_v2": {

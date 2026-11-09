@@ -1,38 +1,12 @@
 {
   "titulo": "Pie de limón",
   "categoria": "dulces",
-  "tags": [
-    "postre",
-    "pie",
-    "limón",
-    "horno",
-    "clásico",
-    "reposteria"
-  ],
+  "tags": ["postre", "pie", "limón", "horno", "clásico", "reposteria"],
   "imagen": null,
   "tiempo": "1 h + frío",
   "porciones": "8 porciones",
   "dificultad": "media",
   "tecnica": "Horno",
-  "ingredientes": [
-    "Masa: 200 g de galletas de champaña o de agua",
-    "Masa: 100 g de mantequilla derretida",
-    "Relleno: 1 tarro de leche condensada (397 g)",
-    "Relleno: 3 yemas de huevo",
-    "Relleno: ½ taza de jugo de limón recién exprimido",
-    "Relleno: 1 cucharadita de ralladura de limón",
-    "Merengue: 3 claras de huevo",
-    "Merengue: ½ taza de azúcar"
-  ],
-  "pasos": [
-    "Tritura las galletas y mézclalas con la mantequilla derretida. Presiona en el fondo y bordes de un molde para pie.",
-    "Hornea la base a 180 °C por 10 minutos. Deja enfriar.",
-    "Bate las yemas con la leche condensada, el jugo y la ralladura de limón hasta que espese.",
-    "Vierte el relleno sobre la base fría.",
-    "Bate las claras con el azúcar hasta que formen un merengue firme.",
-    "Cubre el pie con el merengue y dora en el horno a 200 °C por 5-8 minutos, hasta que el merengue esté dorado.",
-    "Refrigera al menos 4 horas antes de servir."
-  ],
   "dato": "El pie de limón es un clásico de la repostería chilena, especialmente en las casas de la zona central. Llegó con la influencia inglesa y se adaptó con limones chilenos. Se hace con leche condensada, lo que le da esa textura cremosa. Es el postre favorito de muchas familias en cumpleaños y once.",
   "errores": [
     {
@@ -116,10 +90,7 @@
   "pasos_v2": [
     {
       "texto": "Tritura las galletas y mézclalas con la mantequilla derretida. Presiona en el fondo y bordes de un molde para pie.",
-      "ingredientes": [
-        1,
-        2
-      ]
+      "ingredientes": [1, 2]
     },
     {
       "texto": "Hornea la base a 180 °C por 10 minutos. Deja enfriar.",
@@ -132,24 +103,14 @@
     },
     {
       "texto": "Bate las yemas con la leche condensada, el jugo y la ralladura de limón hasta que espese.",
-      "ingredientes": [
-        3,
-        4,
-        5,
-        6,
-        7
-      ]
+      "ingredientes": [3, 4, 5, 6, 7]
     },
     {
       "texto": "Vierte el relleno sobre la base fría."
     },
     {
       "texto": "Bate las claras con el azúcar hasta que formen un merengue firme.",
-      "ingredientes": [
-        4,
-        7,
-        8
-      ]
+      "ingredientes": [4, 7, 8]
     },
     {
       "texto": "Cubre el pie con el merengue y dora en el horno a 200 °C por 5-8 minutos, hasta que el merengue esté dorado.",

@@ -1,37 +1,12 @@
 {
   "titulo": "Croquetas Sabrosas",
   "categoria": "principales",
-  "tags": [
-    "croquetas sabrosas",
-    "carne molida",
-    "tomate",
-    "horno",
-    "carnes"
-  ],
+  "tags": ["croquetas sabrosas", "carne molida", "tomate", "horno", "carnes"],
   "imagen": null,
   "tiempo": "40 min",
   "porciones": "4 a 6 personas",
   "dificultad": "fácil",
   "tecnica": "Horno",
-  "ingredientes": [
-    "750 g de carne molida",
-    "2 tomates grandes maduros",
-    "1/2 taza (50 g) de pan rallado",
-    "1 marraqueta remojada",
-    "2 huevos",
-    "Sal",
-    "Pimienta",
-    "Perejil",
-    "Orégano molido",
-    "50 g de aceitunas",
-    "1 cebolla pequeña"
-  ],
-  "pasos": [
-    "Picar la cebolla y el perejil muy finos, mezclar con la carne, huevos, aliños, aceitunas picadas y pan remojado.",
-    "Formar las croquetas y pasarlas por pan rallado.",
-    "Aceitar una asadera, distribuir las croquetas y cubrir con rebanadas de tomate.",
-    "Cocinar a fuego lento una 1/2 hora aproximadamente y servir acompañadas de puré o ensaladas."
-  ],
   "dato": "El pan remojado debe escurrirse bien antes de incorporarlo para que la mezcla no quede demasiado húmeda. Las croquetas sabrosas son un clásico de las casas chilenas: carne molida, tomate y aceitunas, todo en una croqueta que se hornea.",
   "errores": [
     {
@@ -125,36 +100,19 @@
   "pasos_v2": [
     {
       "texto": "Picar la cebolla y el perejil muy finos, mezclar con la carne, huevos, aliños, aceitunas picadas y pan remojado.",
-      "ingredientes": [
-        1,
-        3,
-        4,
-        5,
-        8,
-        10,
-        11
-      ]
+      "ingredientes": [1, 3, 4, 5, 8, 10, 11]
     },
     {
       "texto": "Formar las croquetas y pasarlas por pan rallado.",
-      "ingredientes": [
-        3,
-        4
-      ]
+      "ingredientes": [3, 4]
     },
     {
       "texto": "Aceitar una asadera, distribuir las croquetas y cubrir con rebanadas de tomate.",
-      "ingredientes": [
-        2
-      ]
+      "ingredientes": [2]
     },
     {
       "texto": "Cocinar a fuego lento una 1/2 hora aproximadamente y servir acompañadas de puré o ensaladas.",
-      "ingredientes": [
-        3,
-        4,
-        6
-      ],
+      "ingredientes": [3, 4, 6],
       "timers": [
         {
           "minutos": 120,

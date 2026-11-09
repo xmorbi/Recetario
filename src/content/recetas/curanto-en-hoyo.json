@@ -1,47 +1,12 @@
 {
   "titulo": "Curanto en hoyo",
   "categoria": "principales",
-  "tags": [
-    "curanto",
-    "chiloé",
-    "patrimonio",
-    "hoyo",
-    "marisco",
-    "tradicional",
-    "fiesta"
-  ],
+  "tags": ["curanto", "chiloé", "patrimonio", "hoyo", "marisco", "tradicional", "fiesta"],
   "imagen": null,
   "tiempo": "4 h",
   "porciones": "10 a 12 personas",
   "dificultad": "alta",
   "tecnica": "Horno de tierra",
-  "ingredientes": [
-    "2 kg de almejas frescas",
-    "2 kg de cholgas",
-    "2 kg de choritos",
-    "1 kg de picorocos",
-    "1 kg de pollo en presas",
-    "1 kg de carne de cerdo en trozos",
-    "2 longanizas",
-    "6 papas grandes",
-    "6 camotes",
-    "1 kg de milcaos (ver receta)",
-    "1 kg de chapaleles",
-    "Hojas grandes de nalca, pangue o repollo",
-    "Piedras volcánicas o de río grandes",
-    "Leña seca abundante"
-  ],
-  "pasos": [
-    "Escoge un terreno sin raíces. Excava un hoyo de 1 m de diámetro por 60 cm de profundidad. Reserva la tierra.",
-    "Enciende una fogata abundante dentro del hoyo y coloca encima las piedras. Deja que se calienten al rojo vivo por 1,5 a 2 horas.",
-    "Mientras se calientan las piedras, lava bien los mariscos y prepara las carnes. Sala todo generosamente.",
-    "Retira la mitad de las piedras calientes con una pala (con mucho cuidado) y reserva.",
-    "Coloca una cama de hojas de nalca o pangue en el fondo. Encima pon la mitad de las piedras calientes y cubre con más hojas.",
-    "Ordena por capas: primero las carnes y longanizas, luego los mariscos con concha hacia abajo (para que suelten su jugo), después las papas, camotes, milcaos y chapaleles.",
-    "Cubre todo con el resto de las piedras calientes y una capa gruesa de hojas.",
-    "Sella el hoyo con la tierra que sacaste. La tierra atrapa el calor y cocina al vapor.",
-    "Deja cocinar 1,5 a 2 horas sin destapar. Destapa con cuidado y sirve en una mesa grande, todo junto, para compartir."
-  ],
   "dato": "El curanto en hoyo es Patrimonio Cultural Inmaterial de la Humanidad (UNESCO, 2006, junto con la cocina chilota). Su nombre viene del mapudungun \"curantü\": \"piedra caliente\". Es el plato más importante de Chiloé y se prepara en fiestas comunitarias. Los mariscos van con la concha hacia abajo para que su jugo no se pierda y se mezcle con los demás ingredientes.",
   "errores": [
     {
@@ -161,10 +126,7 @@
     },
     {
       "texto": "Enciende una fogata abundante dentro del hoyo y coloca encima las piedras. Deja que se calienten al rojo vivo por 1,5 a 2 horas.",
-      "ingredientes": [
-        13,
-        14
-      ],
+      "ingredientes": [13, 14],
       "timers": [
         {
           "minutos": 120,
@@ -174,51 +136,23 @@
     },
     {
       "texto": "Mientras se calientan las piedras, lava bien los mariscos y prepara las carnes. Sala todo generosamente.",
-      "ingredientes": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        13
-      ]
+      "ingredientes": [1, 2, 3, 4, 5, 6, 13]
     },
     {
       "texto": "Retira la mitad de las piedras calientes con una pala (con mucho cuidado) y reserva.",
-      "ingredientes": [
-        13
-      ]
+      "ingredientes": [13]
     },
     {
       "texto": "Coloca una cama de hojas de nalca o pangue en el fondo. Encima pon la mitad de las piedras calientes y cubre con más hojas.",
-      "ingredientes": [
-        12,
-        13
-      ]
+      "ingredientes": [12, 13]
     },
     {
       "texto": "Ordena por capas: primero las carnes y longanizas, luego los mariscos con concha hacia abajo (para que suelten su jugo), después las papas, camotes, milcaos y chapaleles.",
-      "ingredientes": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11
-      ]
+      "ingredientes": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
     },
     {
       "texto": "Cubre todo con el resto de las piedras calientes y una capa gruesa de hojas.",
-      "ingredientes": [
-        12,
-        13
-      ]
+      "ingredientes": [12, 13]
     },
     {
       "texto": "Sella el hoyo con la tierra que sacaste. La tierra atrapa el calor y cocina al vapor."

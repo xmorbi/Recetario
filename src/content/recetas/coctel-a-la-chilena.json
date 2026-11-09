@@ -1,30 +1,12 @@
 {
   "titulo": "Cóctel a la Chilena",
   "categoria": "bebidas",
-  "tags": [
-    "cóctel a la chilena",
-    "pisco",
-    "vermut",
-    "leche condensada",
-    "naranja",
-    "tragos"
-  ],
+  "tags": ["cóctel a la chilena", "pisco", "vermut", "leche condensada", "naranja", "tragos"],
   "imagen": null,
   "tiempo": "10 min",
   "porciones": "6 a 8 copas",
   "dificultad": "fácil",
   "tecnica": "Licuadora",
-  "ingredientes": [
-    "3 copas (135 ml) de pisco",
-    "1 copa (45 ml) de vermut",
-    "1 copa (45 ml) de leche condensada",
-    "3 copas (135 ml) de jugo de naranjas",
-    "Hielo picado"
-  ],
-  "pasos": [
-    "Mezclar todo y batir en la licuadora.",
-    "Servir las copas adornadas con un espiral de cáscara de naranja."
-  ],
   "dato": "La leche condensada le da una textura cremosa y dulce; si queda muy espeso, ajusta con más jugo de naranja. El cóctel a la chilena es un trago clásico de las celebraciones chilenas, sobre todo en matrimonios y fiestas de fin de año.",
   "errores": [
     {
@@ -75,19 +57,11 @@
   "pasos_v2": [
     {
       "texto": "Mezclar todo y batir en la licuadora.",
-      "ingredientes": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
+      "ingredientes": [1, 2, 3, 4, 5]
     },
     {
       "texto": "Servir las copas adornadas con un espiral de cáscara de naranja.",
-      "ingredientes": [
-        4
-      ]
+      "ingredientes": [4]
     }
   ],
   "tiempo_v2": {

@@ -1,39 +1,12 @@
 {
   "titulo": "Torta de chocolate",
   "categoria": "dulces",
-  "tags": [
-    "torta",
-    "chocolate",
-    "horno",
-    "dulce",
-    "cumpleaños",
-    "reposteria"
-  ],
+  "tags": ["torta", "chocolate", "horno", "dulce", "cumpleaños", "reposteria"],
   "imagen": null,
   "tiempo": "1 h",
   "porciones": "12 porciones",
   "dificultad": "media",
   "tecnica": "Horno",
-  "ingredientes": [
-    "Bizcocho: 3 huevos",
-    "Bizcocho: 150 g de azúcar",
-    "Bizcocho: 120 g de harina",
-    "Bizcocho: 40 g de cacao en polvo",
-    "Bizcocho: 1 cucharadita de polvos de hornear",
-    "Bizcocho: 100 ml de leche",
-    "Bizcocho: 100 g de mantequilla derretida",
-    "Cubierta: 200 g de chocolate amargo",
-    "Cubierta: 200 ml de crema para batir"
-  ],
-  "pasos": [
-    "Precalienta el horno a 180 °C. Engrasa un molde.",
-    "Bate los huevos con el azúcar hasta que estén pálidos y espumosos.",
-    "Incorpora la harina, el cacao y los polvos de hornear con movimientos envolventes.",
-    "Agrega la leche y la mantequilla derretida. Mezcla hasta integrar.",
-    "Vierte en el molde y hornea 30-35 minutos. Deja enfriar.",
-    "Para la cubierta, calienta la crema y viértela sobre el chocolate picado. Revuelve hasta obtener una ganache lisa.",
-    "Cubre la torta con la ganache y refrigera 2 horas antes de servir."
-  ],
   "dato": "La torta de chocolate es la favorita de los cumpleaños chilenos. Hay dos escuelas: la torta húmeda (con ganache) y la torta seca (con manjar y chocolate). Esta receta es la versión húmeda, con ganache de chocolate.",
   "errores": [
     {
@@ -122,27 +95,15 @@
     },
     {
       "texto": "Bate los huevos con el azúcar hasta que estén pálidos y espumosos.",
-      "ingredientes": [
-        1,
-        2
-      ]
+      "ingredientes": [1, 2]
     },
     {
       "texto": "Incorpora la harina, el cacao y los polvos de hornear con movimientos envolventes.",
-      "ingredientes": [
-        3,
-        4,
-        5
-      ]
+      "ingredientes": [3, 4, 5]
     },
     {
       "texto": "Agrega la leche y la mantequilla derretida. Mezcla hasta integrar.",
-      "ingredientes": [
-        6,
-        7,
-        8,
-        9
-      ]
+      "ingredientes": [6, 7, 8, 9]
     },
     {
       "texto": "Vierte en el molde y hornea 30-35 minutos. Deja enfriar.",
@@ -155,10 +116,7 @@
     },
     {
       "texto": "Para la cubierta, calienta la crema y viértela sobre el chocolate picado. Revuelve hasta obtener una ganache lisa.",
-      "ingredientes": [
-        8,
-        9
-      ]
+      "ingredientes": [8, 9]
     },
     {
       "texto": "Cubre la torta con la ganache y refrigera 2 horas antes de servir.",

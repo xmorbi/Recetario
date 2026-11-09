@@ -1,38 +1,12 @@
 {
   "titulo": "Bocados de Queso",
   "categoria": "once",
-  "tags": [
-    "bocados de queso",
-    "queso",
-    "horno",
-    "aperitivo",
-    "cóctel"
-  ],
+  "tags": ["bocados de queso", "queso", "horno", "aperitivo", "cóctel"],
   "imagen": null,
   "tiempo": "30 min",
   "porciones": "6 a 8 personas",
   "dificultad": "media",
   "tecnica": "Horno",
-  "ingredientes": [
-    "90 g de harina",
-    "90 g de migas de pan",
-    "45 g de queso rallado",
-    "90 g de mantequilla",
-    "1 cucharadita rasa (3 g) de polvos de hornear",
-    "1/4 cucharadita de sal",
-    "1/4 cucharadita de pimienta",
-    "1/4 cucharadita de ají de color",
-    "1 yema"
-  ],
-  "pasos": [
-    "Mezclar todos los ingredientes, menos la yema, uniendo con la mano.",
-    "Cuando se tiene una masa blanda, uslerear hasta dejarla de 3 mm de grosor.",
-    "Cortar en rectángulos de 3 cm de ancho por 12 cm de largo. Con un cuchillo afilado y enharinado, hacer tiras de 1/2 cm de ancho por 6 cm de largo.",
-    "Formar figuras con las tiras: nudos, rosas o argollas.",
-    "Diluir la yema en un poco de leche y pintar los bocados.",
-    "Cocer en una lata enmantequillada a horno a 180 °C por 15 minutos, hasta que comiencen a dorarse.",
-    "Espolvorear pimienta al sacarlos del horno."
-  ],
   "dato": "La masa debe trabajarse rápido para que la mantequilla no se derrita con el calor de las manos. Los bocados de queso son un aperitivo clásico de las celebraciones chilenas: se sirven en cócteles, matrimonios y reuniones familiares.",
   "errores": [
     {
@@ -109,41 +83,25 @@
   "pasos_v2": [
     {
       "texto": "Mezclar todos los ingredientes, menos la yema, uniendo con la mano.",
-      "ingredientes": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9
-      ]
+      "ingredientes": [1, 2, 3, 4, 5, 6, 7, 8, 9]
     },
     {
       "texto": "Cuando se tiene una masa blanda, uslerear hasta dejarla de 3 mm de grosor."
     },
     {
       "texto": "Cortar en rectángulos de 3 cm de ancho por 12 cm de largo. Con un cuchillo afilado y enharinado, hacer tiras de 1/2 cm de ancho por 6 cm de largo.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Formar figuras con las tiras: nudos, rosas o argollas."
     },
     {
       "texto": "Diluir la yema en un poco de leche y pintar los bocados.",
-      "ingredientes": [
-        9
-      ]
+      "ingredientes": [9]
     },
     {
       "texto": "Cocer en una lata enmantequillada a horno a 180 °C por 15 minutos, hasta que comiencen a dorarse.",
-      "ingredientes": [
-        4
-      ],
+      "ingredientes": [4],
       "timers": [
         {
           "minutos": 15,
@@ -153,9 +111,7 @@
     },
     {
       "texto": "Espolvorear pimienta al sacarlos del horno.",
-      "ingredientes": [
-        7
-      ]
+      "ingredientes": [7]
     }
   ],
   "tiempo_v2": {

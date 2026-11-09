@@ -14,25 +14,6 @@
   "porciones": "4 a 6 personas",
   "dificultad": "media",
   "tecnica": "Fritura",
-  "ingredientes": [
-    "3 huevos duros",
-    "1 huevo crudo",
-    "1 yema",
-    "1/4 kg de carne molida",
-    "1/4 kg de jamón molido",
-    "1 cucharada de chuño (colmada)",
-    "Pan rallado",
-    "Orégano",
-    "Sal",
-    "Pimienta",
-    "Aceite para freír"
-  ],
-  "pasos": [
-    "Mezclar la carne y el jamón con el chuño, la yema, sal, pimienta y orégano.",
-    "Envolver los huevos duros con esta mezcla, pasar por huevo batido, pan rallado y freír en una olla con aceite bien caliente.",
-    "Retirar del fuego y poner sobre papel absorbente.",
-    "Partir los huevos a lo largo y servirlos acompañados de ensaladas cocidas (porotitos verdes, habas o arvejitas)."
-  ],
   "dato": "El chuño ayuda a ligar la mezcla y le da una textura característica; si no tienes, puedes usar maicena.",
   "errores": [
     {
@@ -126,40 +107,18 @@
   "pasos_v2": [
     {
       "texto": "Mezclar la carne y el jamón con el chuño, la yema, sal, pimienta y orégano.",
-      "ingredientes": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        8,
-        9,
-        10
-      ]
+      "ingredientes": [1, 2, 3, 4, 5, 6, 8, 9, 10]
     },
     {
       "texto": "Envolver los huevos duros con esta mezcla, pasar por huevo batido, pan rallado y freír en una olla con aceite bien caliente.",
-      "ingredientes": [
-        1,
-        2,
-        3,
-        7,
-        11
-      ]
+      "ingredientes": [1, 2, 3, 7, 11]
     },
     {
       "texto": "Retirar del fuego y poner sobre papel absorbente."
     },
     {
       "texto": "Partir los huevos a lo largo y servirlos acompañados de ensaladas cocidas (porotitos verdes, habas o arvejitas).",
-      "ingredientes": [
-        1,
-        2,
-        3,
-        7,
-        9
-      ]
+      "ingredientes": [1, 2, 3, 7, 9]
     }
   ],
   "tiempo_v2": {

@@ -1,33 +1,12 @@
 {
   "titulo": "Papas al horno",
   "categoria": "principales",
-  "tags": [
-    "papa",
-    "horno",
-    "acompañamiento",
-    "simple",
-    "vegetariano"
-  ],
+  "tags": ["papa", "horno", "acompañamiento", "simple", "vegetariano"],
   "imagen": null,
   "tiempo": "45 min",
   "porciones": "4 personas",
   "dificultad": "muy fácil",
   "tecnica": "Horno",
-  "ingredientes": [
-    "6 papas medianas",
-    "3 cucharadas de aceite de oliva",
-    "1 cucharadita de sal gruesa",
-    "1 cucharadita de pimentón (opcional)",
-    "1 cucharadita de romero o tomillo (opcional)"
-  ],
-  "pasos": [
-    "Precalienta el horno a 200 °C.",
-    "Lava bien las papas y córtalas en gajos o cubos. No las peles si quieres que queden más crujientes.",
-    "Mezcla las papas con el aceite, la sal, el pimentón y las hierbas.",
-    "Extiéndelas en una bandeja para horno en una sola capa.",
-    "Hornea 30-40 minutos, dando vuelta a mitad de cocción, hasta que estén doradas y crujientes.",
-    "Sirve como acompañamiento de carnes o pollo."
-  ],
   "dato": "Las papas al horno son el acompañamiento más versátil de la cocina chilena. Se hacen con aceite de oliva, sal y las hierbas que tengas. Son más sanas que las fritas y quedan igual de ricas.",
   "errores": [
     {
@@ -86,18 +65,11 @@
     },
     {
       "texto": "Lava bien las papas y córtalas en gajos o cubos. No las peles si quieres que queden más crujientes.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Mezcla las papas con el aceite, la sal, el pimentón y las hierbas.",
-      "ingredientes": [
-        1,
-        2,
-        3,
-        4
-      ]
+      "ingredientes": [1, 2, 3, 4]
     },
     {
       "texto": "Extiéndelas en una bandeja para horno en una sola capa."

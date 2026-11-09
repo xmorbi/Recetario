@@ -1,38 +1,12 @@
 {
   "titulo": "Entrada de Lengua",
   "categoria": "ensaladas",
-  "tags": [
-    "entrada de lengua",
-    "lengua de vacuno",
-    "mayonesa",
-    "pickles",
-    "mostaza",
-    "entrada"
-  ],
+  "tags": ["entrada de lengua", "lengua de vacuno", "mayonesa", "pickles", "mostaza", "entrada"],
   "imagen": null,
   "tiempo": "2 a 3 horas (cocción de lengua)",
   "porciones": "6 a 8 personas",
   "dificultad": "media",
   "tecnica": "Hervido",
-  "ingredientes": [
-    "1 lengua de vacuno",
-    "1 taza (250 g) de mayonesa",
-    "1/2 taza (75 g) de pickles picados",
-    "1 cucharadita (5 g) de mostaza",
-    "1 cucharada de cilantro o perejil",
-    "1 palta",
-    "Ajo",
-    "Pimienta entera",
-    "Apio",
-    "Lechuga"
-  ],
-  "pasos": [
-    "Cocer la lengua en abundante agua con sal y verduras para el sabor (perejil, apio, ajo y pimienta entera).",
-    "Pelarla y volver a hervir hasta que se ablande.",
-    "Mezclar los pickles picados con la mostaza, el cilantro y la mayonesa.",
-    "Cortar la lengua en rebanadas y cubrir con la salsa de mayonesa.",
-    "Acompañar con una ensalada de apio que puede llevar palta o corazones de lechuga."
-  ],
   "dato": "La lengua se pela más fácilmente cuando todavía está caliente; luego se vuelve a hervir para que se ablande y tome sabor. La entrada de lengua es un clásico de las celebraciones chilenas, sobre todo en matrimonios y fiestas de fin de año.",
   "errores": [
     {
@@ -115,42 +89,22 @@
   "pasos_v2": [
     {
       "texto": "Cocer la lengua en abundante agua con sal y verduras para el sabor (perejil, apio, ajo y pimienta entera).",
-      "ingredientes": [
-        1,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ]
+      "ingredientes": [1, 5, 6, 7, 8, 9, 10]
     },
     {
       "texto": "Pelarla y volver a hervir hasta que se ablande."
     },
     {
       "texto": "Mezclar los pickles picados con la mostaza, el cilantro y la mayonesa.",
-      "ingredientes": [
-        2,
-        3,
-        4,
-        5
-      ]
+      "ingredientes": [2, 3, 4, 5]
     },
     {
       "texto": "Cortar la lengua en rebanadas y cubrir con la salsa de mayonesa.",
-      "ingredientes": [
-        1,
-        2
-      ]
+      "ingredientes": [1, 2]
     },
     {
       "texto": "Acompañar con una ensalada de apio que puede llevar palta o corazones de lechuga.",
-      "ingredientes": [
-        6,
-        9,
-        10
-      ]
+      "ingredientes": [6, 9, 10]
     }
   ],
   "tiempo_v2": {

@@ -1,39 +1,12 @@
 {
   "titulo": "Sopa de verduras",
   "categoria": "sopas",
-  "tags": [
-    "sopa",
-    "verduras",
-    "olla",
-    "saludable",
-    "cotidiano",
-    "vegetariano"
-  ],
+  "tags": ["sopa", "verduras", "olla", "saludable", "cotidiano", "vegetariano"],
   "imagen": null,
   "tiempo": "35 min",
   "porciones": "4 personas",
   "dificultad": "muy fácil",
   "tecnica": "Olla",
-  "ingredientes": [
-    "1 cebolla picada",
-    "2 zanahorias en cubos",
-    "2 papas en cubos",
-    "1 ramita de apio picada",
-    "1 pimiento rojo en cubos",
-    "1 taza de porotos verdes picados",
-    "1 taza de arroz o fideos (opcional)",
-    "1,5 L de caldo de verduras",
-    "2 cucharadas de aceite",
-    "Sal, pimienta y orégano"
-  ],
-  "pasos": [
-    "Sofríe la cebolla y el apio en aceite hasta que estén tiernos.",
-    "Agrega la zanahoria y el pimiento. Cocina 5 minutos.",
-    "Vierte el caldo y lleva a hervor.",
-    "Añade las papas y los porotos verdes. Cocina 15 minutos.",
-    "Si usas arroz o fideos, agrégalos y cocina según el tiempo indicado.",
-    "Condimenta con sal, pimienta y orégano. Sirve caliente."
-  ],
   "dato": "La sopa de verduras es la sopa más versátil y cotidiana de Chile. Se hace con las verduras que haya en la casa. Es el plato de invierno por excelencia y se sirve como entrada o plato único. Cada familia tiene su versión.",
   "errores": [
     {
@@ -124,18 +97,11 @@
   "pasos_v2": [
     {
       "texto": "Sofríe la cebolla y el apio en aceite hasta que estén tiernos.",
-      "ingredientes": [
-        1,
-        4,
-        9
-      ]
+      "ingredientes": [1, 4, 9]
     },
     {
       "texto": "Agrega la zanahoria y el pimiento. Cocina 5 minutos.",
-      "ingredientes": [
-        2,
-        5
-      ],
+      "ingredientes": [2, 5],
       "timers": [
         {
           "minutos": 5,
@@ -145,16 +111,11 @@
     },
     {
       "texto": "Vierte el caldo y lleva a hervor.",
-      "ingredientes": [
-        8
-      ]
+      "ingredientes": [8]
     },
     {
       "texto": "Añade las papas y los porotos verdes. Cocina 15 minutos.",
-      "ingredientes": [
-        3,
-        6
-      ],
+      "ingredientes": [3, 6],
       "timers": [
         {
           "minutos": 15,
@@ -164,15 +125,11 @@
     },
     {
       "texto": "Si usas arroz o fideos, agrégalos y cocina según el tiempo indicado.",
-      "ingredientes": [
-        7
-      ]
+      "ingredientes": [7]
     },
     {
       "texto": "Condimenta con sal, pimienta y orégano. Sirve caliente.",
-      "ingredientes": [
-        10
-      ]
+      "ingredientes": [10]
     }
   ],
   "tiempo_v2": {

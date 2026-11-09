@@ -2,18 +2,29 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Conversor de Medidas" description="Convierte tazas a gramos, libras a kilos y cucharadas a mililitros. La tabla de equivalencias exacta." activePage="conversor">
-  
+<Layout
+  title="Conversor de Medidas"
+  description="Convierte tazas a gramos, libras a kilos y cucharadas a mililitros. La tabla de equivalencias exacta."
+  activePage="conversor"
+>
   <header class="hero-receta">
     <div class="hero-receta-inner">
       <h1>Conversor de Medidas</h1>
       <p class="hero-sub">Equivalencias exactas para que tus recetas queden perfectas.</p>
-      
+
       <div class="hero-chips" aria-label="Accesos rápidos a conversiones">
-        <button type="button" class="hero-chip-btn" data-conversion="taza_a_gramos">🌾 Tazas a gramos</button>
-        <button type="button" class="hero-chip-btn" data-conversion="libra_a_kg">⚖️ Libras a kilos</button>
-        <button type="button" class="hero-chip-btn" data-conversion="cucharada_a_ml">🥄 Cucharadas a ml</button>
-        <button type="button" class="hero-chip-btn" data-conversion="taza_a_ml">💧 Tazas a ml</button>
+        <button type="button" class="hero-chip-btn" data-conversion="taza_a_gramos">
+          🌾 Tazas a gramos
+        </button>
+        <button type="button" class="hero-chip-btn" data-conversion="libra_a_kg">
+          ⚖️ Libras a kilos
+        </button>
+        <button type="button" class="hero-chip-btn" data-conversion="cucharada_a_ml">
+          🥄 Cucharadas a ml
+        </button>
+        <button type="button" class="hero-chip-btn" data-conversion="taza_a_ml">
+          💧 Tazas a ml
+        </button>
       </div>
     </div>
   </header>
@@ -46,18 +57,33 @@ import Layout from '../layouts/Layout.astro';
         </select>
       </div>
       <div class="calc-group">
-        <label id="label-cantidad" for="num-cantidad">Cantidad a convertir</label>
+        <label id="label-cantidad" for="num-cantidad">
+          Cantidad a convertir
+        </label>
         <div class="steppers-row" style="grid-template-columns: 1fr;">
           <div class="stepper">
-            <button type="button" id="menos-cantidad">−</button>
-            <input type="number" id="num-cantidad" value="1" min="0" step="any" style="border:none; background:transparent; text-align:center; font-size:1.3rem; font-weight:700; width:100%; outline:none; color:var(--tinta); padding:.35rem 0;">
-            <button type="button" id="mas-cantidad">+</button>
+            <button type="button" id="menos-cantidad">
+              −
+            </button>
+            <input
+              type="number"
+              id="num-cantidad"
+              value="1"
+              min="0"
+              step="any"
+              style="border:none; background:transparent; text-align:center; font-size:1.3rem; font-weight:700; width:100%; outline:none; color:var(--tinta); padding:.35rem 0;"
+            />
+            <button type="button" id="mas-cantidad">
+              +
+            </button>
           </div>
         </div>
       </div>
       <div class="calc-result">
         <div class="calc-result-label">Resultado</div>
-        <div class="calc-result-number" id="resultado">---</div>
+        <div class="calc-result-number" id="resultado">
+          ---
+        </div>
         <div class="calc-note" id="nota"></div>
       </div>
     </div>
@@ -65,62 +91,79 @@ import Layout from '../layouts/Layout.astro';
     <!-- BLOQUE SEO Y TABLAS -->
     <div class="calc-seo-content">
       <h2 style="margin-top:3rem;">Tabla de Equivalencias Rápidas</h2>
-      <p>Muchas veces no tenemos una balanza a mano y necesitamos saber a cuánto equivale una taza. Aquí tienes las medidas más usadas en la cocina chilena.</p>
+      <p>
+        Muchas veces no tenemos una balanza a mano y necesitamos saber a cuánto equivale una taza.
+        Aquí tienes las medidas más usadas en la cocina chilena.
+      </p>
 
       <div class="guia-recetas-cruce" style="margin: 1.5rem 0;">
-        <strong>Equivalencias de Peso (Tazas a Gramos):</strong><br>
-        • 1 Taza de Harina = 120 g<br>
-        • 1 Taza de Azúcar = 200 g<br>
-        • 1 Taza de Arroz = 200 g<br>
-        • 1 Libra = 453 g (aprox 0.45 kg)<br>
-        • 1 Kilo = 2.2 Libras
+        <strong>Equivalencias de Peso (Tazas a Gramos):</strong>
+        <br />
+        • 1 Taza de Harina = 120 g<br />
+        • 1 Taza de Azúcar = 200 g<br />
+        • 1 Taza de Arroz = 200 g<br />
+        • 1 Libra = 453 g (aprox 0.45 kg)
+        <br />• 1 Kilo = 2.2 Libras
       </div>
 
       <div class="guia-recetas-cruce" style="margin: 1.5rem 0;">
-        <strong>Equivalencias de Volumen (Líquidos):</strong><br>
-        • 1 Taza = 240 ml<br>
-        • 1 Cucharada (sopera) = 15 ml<br>
-        • 1 Cucharadita = 5 ml
+        <strong>Equivalencias de Volumen (Líquidos):</strong>
+        <br />
+        • 1 Taza = 240 ml
+        <br />
+        • 1 Cucharada (sopera) = 15 ml
+        <br />• 1 Cucharadita = 5 ml
       </div>
 
       <div class="calc-faq">
         <h2>Preguntas frecuentes sobre medidas</h2>
         <details>
           <summary>¿Cuántos gramos tiene una taza de harina?</summary>
-          <div class="faq-content">Una taza estándar de harina sin polvos de hornear pesa aproximadamente 120 gramos. Si la harina está muy compactada o tamizada, el peso puede variar entre 110g y 140g.</div>
+          <div class="faq-content">
+            Una taza estándar de harina sin polvos de hornear pesa aproximadamente 120 gramos. Si la
+            harina está muy compactada o tamizada, el peso puede variar entre 110g y 140g.
+          </div>
         </details>
         <details>
           <summary>¿Cuánto es una libra en kilos?</summary>
-          <div class="faq-content">Una libra equivale a 453,592 gramos, o aproximadamente 0,45 kilos. Cuando en las recetas antiguas dice "media libra", se refiere a unos 225 gramos.</div>
+          <div class="faq-content">
+            Una libra equivale a 453,592 gramos, o aproximadamente 0,45 kilos. Cuando en las recetas
+            antiguas dice "media libra", se refiere a unos 225 gramos.
+          </div>
         </details>
         <details>
           <summary>¿Cuántos ml tiene una cucharada?</summary>
-          <div class="faq-content">Una cucharada sopera estándar contiene aproximadamente 15 mililitros de líquido. Una cucharadita de té contiene 5 mililitros.</div>
+          <div class="faq-content">
+            Una cucharada sopera estándar contiene aproximadamente 15 mililitros de líquido. Una
+            cucharadita de té contiene 5 mililitros.
+          </div>
         </details>
       </div>
     </div>
   </main>
 
-  <script is:inline src="/conversor.js"></script>
- 
-  <script is:inline>
-  document.addEventListener('DOMContentLoaded', function() {
-    const chips = document.querySelectorAll('.hero-chip-btn');
-    const select = document.getElementById('tipo-conversion');
-    const calcContainer = document.querySelector('.calc-container');
+  <script>
+    import '../scripts/conversor.js';
+  </script>
 
-    chips.forEach(chip => {
-      chip.addEventListener('click', function() {
-        const valor = this.getAttribute('data-conversion');
-        if (select && valor) {
-          select.value = valor;
-          select.dispatchEvent(new Event('change', { bubbles: true }));
-          if (calcContainer) {
-            calcContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', function () {
+      const chips = document.querySelectorAll('.hero-chip-btn');
+      const select = document.getElementById('tipo-conversion');
+      const calcContainer = document.querySelector('.calc-container');
+
+      chips.forEach((chip) => {
+        chip.addEventListener('click', function () {
+          const valor = this.getAttribute('data-conversion');
+          if (select && valor) {
+            select.value = valor;
+            select.dispatchEvent(new Event('change', { bubbles: true }));
+            if (calcContainer) {
+              calcContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
           }
-        }
+        });
       });
     });
-  });
   </script>
 </Layout>

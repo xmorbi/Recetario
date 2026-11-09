@@ -1,40 +1,12 @@
 {
   "titulo": "Chanfaina",
   "categoria": "principales",
-  "tags": [
-    "chanfaina",
-    "olla",
-    "popular",
-    "tradicional",
-    "invierno",
-    "cordero"
-  ],
+  "tags": ["chanfaina", "olla", "popular", "tradicional", "invierno", "cordero"],
   "imagen": null,
   "tiempo": "1 h 30 min",
   "porciones": "4 personas",
   "dificultad": "media",
   "tecnica": "Olla",
-  "ingredientes": [
-    "500 g de menudencias de cordero (hígado, corazón, pulmón, riñón)",
-    "1 cebolla grande picada fina",
-    "3 dientes de ajo picados",
-    "1 pimentón rojo en cubos",
-    "2 tomates maduros picados",
-    "2 papas medianas en cubos",
-    "1 cucharadita de ají de color",
-    "1 cucharadita de orégano",
-    "1 hoja de laurel",
-    "1 taza (250 ml) de caldo de cordero o agua",
-    "Sal, pimienta y aceite"
-  ],
-  "pasos": [
-    "Lava bien las menudencias. Córtalas en trozos pequeños y uniformes.",
-    "Sofríe la cebolla y el ajo en aceite hasta que estén transparentes.",
-    "Agrega el pimentón y el tomate. Cocina 5 minutos hasta que se deshaga el tomate.",
-    "Incorpora las menudencias y dóralas ligeramente. Condimenta con ají de color, orégano, sal y pimienta.",
-    "Vierte el caldo, agrega el laurel y las papas. Cocina a fuego lento 30-40 minutos hasta que las papas estén tiernas.",
-    "Rectifica la sal y sirve caliente con arroz o pan."
-  ],
   "dato": "La chanfaina es un plato de origen español que en Chile se volvió tradición campesina, especialmente en la zona central y sur. Se prepara con las menudencias del cordero que se faenaba en el campo. Antiguamente era un plato de \"aprovechamiento\": no se botaba nada del animal. Hoy es un plato de invierno muy apreciado por quienes crecieron comiéndolo.",
   "advertencia": "Lava muy bien las menudencias con agua y limón antes de cocinar. El hígado y el riñón son los que tienen sabor más intenso, así que lávalos varias veces hasta que el agua salga clara.",
   "errores": [
@@ -135,23 +107,15 @@
   "pasos_v2": [
     {
       "texto": "Lava bien las menudencias. Córtalas en trozos pequeños y uniformes.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Sofríe la cebolla y el ajo en aceite hasta que estén transparentes.",
-      "ingredientes": [
-        2,
-        3
-      ]
+      "ingredientes": [2, 3]
     },
     {
       "texto": "Agrega el pimentón y el tomate. Cocina 5 minutos hasta que se deshaga el tomate.",
-      "ingredientes": [
-        4,
-        5
-      ],
+      "ingredientes": [4, 5],
       "timers": [
         {
           "minutos": 5,
@@ -161,20 +125,11 @@
     },
     {
       "texto": "Incorpora las menudencias y dóralas ligeramente. Condimenta con ají de color, orégano, sal y pimienta.",
-      "ingredientes": [
-        1,
-        7,
-        8,
-        11
-      ]
+      "ingredientes": [1, 7, 8, 11]
     },
     {
       "texto": "Vierte el caldo, agrega el laurel y las papas. Cocina a fuego lento 30-40 minutos hasta que las papas estén tiernas.",
-      "ingredientes": [
-        6,
-        9,
-        10
-      ],
+      "ingredientes": [6, 9, 10],
       "timers": [
         {
           "minutos": 40,
@@ -184,9 +139,7 @@
     },
     {
       "texto": "Rectifica la sal y sirve caliente con arroz o pan.",
-      "ingredientes": [
-        11
-      ]
+      "ingredientes": [11]
     }
   ],
   "tiempo_v2": {

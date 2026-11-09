@@ -1,35 +1,12 @@
 {
   "titulo": "Pan Nube (Cloud Bread)",
   "categoria": "panes",
-  "tags": [
-    "pan nube",
-    "cloud bread",
-    "keto",
-    "sin gluten",
-    "sin harina",
-    "huevo",
-    "queso crema"
-  ],
+  "tags": ["pan nube", "cloud bread", "keto", "sin gluten", "sin harina", "huevo", "queso crema"],
   "imagen": null,
   "tiempo": "30 min",
   "porciones": "6 unidades",
   "dificultad": "media",
   "tecnica": "Horno",
-  "ingredientes": [
-    "3 huevos a temperatura ambiente",
-    "50 g (3 cucharadas) de queso crema",
-    "1/4 cucharadita de cremor tártaro (o polvo de hornear)",
-    "Una pizca de sal (opcional)"
-  ],
-  "pasos": [
-    "Precalentar el horno a 150 °C y preparar una bandeja con papel para hornear.",
-    "Separar las claras de las yemas.",
-    "Batir las claras con el cremor tártaro a punto de nieve firme.",
-    "En otro bol, mezclar las yemas con el queso crema hasta que queden bien integradas.",
-    "Incorporar las claras batidas a la mezcla de yemas con movimientos envolventes, con cuidado de no perder el aire.",
-    "Formar montoncitos con una cuchara sobre la bandeja, dando forma de discos de aproximadamente 1 cm de grosor.",
-    "Hornear por 20 a 25 minutos, hasta que estén dorados y firmes al tacto."
-  ],
   "dato": "El pan nube no es un pan tradicional, sino una alternativa esponjosa y baja en carbohidratos. Se puede usar para sándwiches o tostadas. Si no tienes cremor tártaro, puedes usar polvo de hornear o unas gotas de limón.",
   "errores": [
     {
@@ -77,29 +54,19 @@
     },
     {
       "texto": "Separar las claras de las yemas.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Batir las claras con el cremor tártaro a punto de nieve firme.",
-      "ingredientes": [
-        1,
-        3
-      ]
+      "ingredientes": [1, 3]
     },
     {
       "texto": "En otro bol, mezclar las yemas con el queso crema hasta que queden bien integradas.",
-      "ingredientes": [
-        1,
-        2
-      ]
+      "ingredientes": [1, 2]
     },
     {
       "texto": "Incorporar las claras batidas a la mezcla de yemas con movimientos envolventes, con cuidado de no perder el aire.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Formar montoncitos con una cuchara sobre la bandeja, dando forma de discos de aproximadamente 1 cm de grosor."

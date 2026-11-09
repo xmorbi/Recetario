@@ -1,29 +1,12 @@
 {
   "titulo": "Huevos a la Copa",
   "categoria": "once",
-  "tags": [
-    "huevos a la copa",
-    "huevos pasados por agua",
-    "huevo",
-    "desayuno",
-    "huevos"
-  ],
+  "tags": ["huevos a la copa", "huevos pasados por agua", "huevo", "desayuno", "huevos"],
   "imagen": null,
   "tiempo": "5 min",
   "porciones": "1 persona",
   "dificultad": "fácil",
   "tecnica": "Olla",
-  "ingredientes": [
-    "Huevos (la cantidad deseada)",
-    "Agua"
-  ],
-  "pasos": [
-    "Poner los huevos enteros en una olla con agua fría de modo que el agua los cubra.",
-    "Cuando comience a hervir el agua, dejarlos 3 minutos.",
-    "Retirar del fuego y sacar los huevos del agua.",
-    "Retirar el contenido de la cáscara y poner en un pocillo, sirviendo de inmediato.",
-    "La yema debe estar líquida."
-  ],
   "dato": "Como opción, se pueden servir con su cáscara en una copa especial para que la persona lo abra y retire su contenido, comiendo de inmediato.",
   "errores": [
     {
@@ -53,16 +36,11 @@
   "pasos_v2": [
     {
       "texto": "Poner los huevos enteros en una olla con agua fría de modo que el agua los cubra.",
-      "ingredientes": [
-        1,
-        2
-      ]
+      "ingredientes": [1, 2]
     },
     {
       "texto": "Cuando comience a hervir el agua, dejarlos 3 minutos.",
-      "ingredientes": [
-        2
-      ],
+      "ingredientes": [2],
       "timers": [
         {
           "minutos": 3,
@@ -72,19 +50,14 @@
     },
     {
       "texto": "Retirar del fuego y sacar los huevos del agua.",
-      "ingredientes": [
-        1,
-        2
-      ]
+      "ingredientes": [1, 2]
     },
     {
       "texto": "Retirar el contenido de la cáscara y poner en un pocillo, sirviendo de inmediato."
     },
     {
       "texto": "La yema debe estar líquida.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     }
   ],
   "tiempo_v2": {

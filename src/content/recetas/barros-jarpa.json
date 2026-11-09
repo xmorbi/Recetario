@@ -1,34 +1,12 @@
 {
   "titulo": "Barros Jarpa",
   "categoria": "sandwiches",
-  "tags": [
-    "sándwich",
-    "callejero",
-    "barros jarpa",
-    "jamón",
-    "queso",
-    "historia",
-    "almuerzo"
-  ],
+  "tags": ["sándwich", "callejero", "barros jarpa", "jamón", "queso", "historia", "almuerzo"],
   "imagen": null,
   "tiempo": "10 min",
   "porciones": "2 sándwiches",
   "dificultad": "fácil",
   "tecnica": "Plancha",
-  "ingredientes": [
-    "2 panes amasados individuales (o 2 marraquetas pequeñas)",
-    "200 g de jamón de pierna en láminas gruesas",
-    "200 g de queso mantecoso o chanco en láminas gruesas",
-    "Mantequilla para la plancha"
-  ],
-  "pasos": [
-    "Calienta la plancha o sartén a fuego medio con un poco de mantequilla.",
-    "Abre los panes por la mitad y tuéstalos 1 minuto por lado.",
-    "En la misma plancha, pon el jamón 30 segundos por lado hasta que tome temperatura. No lo cocines de más: el jamón se seca.",
-    "Pon el jamón sobre la mitad inferior del pan, encima el queso, y tapa con la otra mitad.",
-    "Pasa el sándwich armado a la plancha, tapado con una tapa o peso, 1-2 minutos hasta que el queso se derrita.",
-    "Sirve inmediatamente, cortado en diagonal si quieres."
-  ],
   "dato": "El Barros Jarpa lleva el nombre de Ernesto Barros Jarpa, diplomático chileno y hermano de Ramón Barros Luco (del sándwich homónimo). Se dice que Ernesto pedía siempre jamón con queso caliente en la Confitería Torres, y el maître terminó llamando al sándwich por su nombre. Es el hermano \"liviano\" del Barros Luco: cambia la carne por jamón.",
   "errores": [
     {
@@ -82,15 +60,11 @@
   "pasos_v2": [
     {
       "texto": "Calienta la plancha o sartén a fuego medio con un poco de mantequilla.",
-      "ingredientes": [
-        4
-      ]
+      "ingredientes": [4]
     },
     {
       "texto": "Abre los panes por la mitad y tuéstalos 1 minuto por lado.",
-      "ingredientes": [
-        1
-      ],
+      "ingredientes": [1],
       "timers": [
         {
           "minutos": 1,
@@ -100,25 +74,15 @@
     },
     {
       "texto": "En la misma plancha, pon el jamón 30 segundos por lado hasta que tome temperatura. No lo cocines de más: el jamón se seca.",
-      "ingredientes": [
-        2,
-        4
-      ]
+      "ingredientes": [2, 4]
     },
     {
       "texto": "Pon el jamón sobre la mitad inferior del pan, encima el queso, y tapa con la otra mitad.",
-      "ingredientes": [
-        1,
-        2,
-        3
-      ]
+      "ingredientes": [1, 2, 3]
     },
     {
       "texto": "Pasa el sándwich armado a la plancha, tapado con una tapa o peso, 1-2 minutos hasta que el queso se derrita.",
-      "ingredientes": [
-        3,
-        4
-      ],
+      "ingredientes": [3, 4],
       "timers": [
         {
           "minutos": 2,

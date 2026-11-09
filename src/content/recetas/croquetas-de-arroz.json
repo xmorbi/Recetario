@@ -1,37 +1,12 @@
 {
   "titulo": "Croquetas de Arroz",
   "categoria": "principales",
-  "tags": [
-    "croquetas de arroz",
-    "arroz",
-    "champiñones",
-    "fritura",
-    "arroces"
-  ],
+  "tags": ["croquetas de arroz", "arroz", "champiñones", "fritura", "arroces"],
   "imagen": null,
   "tiempo": "40 min",
   "porciones": "4 a 6 personas",
   "dificultad": "media",
   "tecnica": "Fritura",
-  "ingredientes": [
-    "1 1/2 taza (300 g) de arroz graneado, ya cocido y frío",
-    "150 g de champiñones",
-    "2 huevos",
-    "1 taza (100 g) de pan rallado",
-    "Jugo de 1/2 limón",
-    "2 cucharadas de perejil picado",
-    "1 taza (250 ml) de aceite para freír",
-    "Sal",
-    "Pimienta"
-  ],
-  "pasos": [
-    "Mezclar el arroz graneado frío con los champiñones salteados y cortados en tiritas.",
-    "Aliñar con sal, jugo de limón, pimienta y perejil.",
-    "Formar croquetas, pasar por huevo batido y luego por pan rallado.",
-    "Refrigerar 20 minutos para que firmen y no se desarmen al freír.",
-    "Freír en aceite caliente (170-180 °C) hasta dorar por ambos lados.",
-    "Servir acompañadas de ensaladas y espolvoreadas con perejil picado."
-  ],
   "dato": "El arroz debe estar graneado, firme y frío para que las croquetas mantengan la forma. Es una receta típica de aprovechamiento: sobra arroz del almuerzo y al día siguiente se transforma en croquetas.",
   "errores": [
     {
@@ -114,34 +89,19 @@
   "pasos_v2": [
     {
       "texto": "Mezclar el arroz graneado frío con los champiñones salteados y cortados en tiritas.",
-      "ingredientes": [
-        1,
-        2,
-        7,
-        8
-      ]
+      "ingredientes": [1, 2, 7, 8]
     },
     {
       "texto": "Aliñar con sal, jugo de limón, pimienta y perejil.",
-      "ingredientes": [
-        5,
-        6,
-        8,
-        9
-      ]
+      "ingredientes": [5, 6, 8, 9]
     },
     {
       "texto": "Formar croquetas, pasar por huevo batido y luego por pan rallado.",
-      "ingredientes": [
-        3,
-        4
-      ]
+      "ingredientes": [3, 4]
     },
     {
       "texto": "Refrigerar 20 minutos para que firmen y no se desarmen al freír.",
-      "ingredientes": [
-        7
-      ],
+      "ingredientes": [7],
       "timers": [
         {
           "minutos": 20,
@@ -151,17 +111,11 @@
     },
     {
       "texto": "Freír en aceite caliente (170-180 °C) hasta dorar por ambos lados.",
-      "ingredientes": [
-        7
-      ]
+      "ingredientes": [7]
     },
     {
       "texto": "Servir acompañadas de ensaladas y espolvoreadas con perejil picado.",
-      "ingredientes": [
-        4,
-        6,
-        8
-      ]
+      "ingredientes": [4, 6, 8]
     }
   ],
   "tiempo_v2": {

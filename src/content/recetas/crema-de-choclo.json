@@ -7,49 +7,111 @@
   "porciones": "4 a 6 personas",
   "dificultad": "fácil",
   "tecnica": "Olla",
-  "ingredientes": [
-    "3 choclos grandes, sanos",
-    "1 cebolla chica",
-    "Hojas de albahaca",
-    "2 cucharadas grandes de mantequilla",
-    "4 cucharadas de crema",
-    "Sal",
-    "Ají picante",
-    "2 panes duros"
-  ],
-  "pasos": [
-    "Rallar los choclos.",
-    "Derretir la mantequilla en la olla.",
-    "Agregar la cebolla picada en cuadritos, la sal, albahaca, choclos rallados y finalmente 1 litro de agua.",
-    "Revolver bien, sazonar y hervir a fuego suave unos 20 minutos.",
-    "Cortar el pan en cubos pequeños y dorarlos en mantequilla o aceite.",
-    "Cuando la sopa esté lista, batir la crema y agregarla revolviendo bien.",
-    "Al momento de servir poner en cada plato una cucharada de pan frito."
-  ],
   "dato": "El choclo rallado suelta su almidón y espesa la crema naturalmente; no necesita harina.",
   "errores": [
-    { "error": "La crema me quedó sin sabor a choclo", "solucion": "Usa choclos bien maduros y no los cuezas antes de rallar; el sabor se concentra al cocinar el choclo crudo en la sopa." }
+    {
+      "error": "La crema me quedó sin sabor a choclo",
+      "solucion": "Usa choclos bien maduros y no los cuezas antes de rallar; el sabor se concentra al cocinar el choclo crudo en la sopa."
+    }
   ],
-  "conservacion": { "refrigerador": "2 días", "recalentar": "A fuego lento sin dejar hervir." },
+  "conservacion": {
+    "refrigerador": "2 días",
+    "recalentar": "A fuego lento sin dejar hervir."
+  },
   "ingredientes_v2": [
-    { "cantidad": 3, "unidad": null, "nombre": "choclos", "nota": "grandes, sanos", "escalable": true },
-    { "cantidad": 1, "unidad": null, "nombre": "cebolla", "nota": "chica", "escalable": true },
-    { "cantidad": 1, "unidad": null, "nombre": "hojas de albahaca", "nota": "a gusto", "escalable": false },
-    { "cantidad": 2, "unidad": "cucharada", "nombre": "mantequilla", "escalable": true },
-    { "cantidad": 4, "unidad": "cucharada", "nombre": "crema", "escalable": true },
-    { "cantidad": 1, "unidad": null, "nombre": "sal", "nota": "a gusto", "escalable": false },
-    { "cantidad": 1, "unidad": null, "nombre": "ají picante", "nota": "a gusto", "seccion": "Opcional", "escalable": false },
-    { "cantidad": 2, "unidad": null, "nombre": "pan", "nota": "duro", "escalable": true }
+    {
+      "cantidad": 3,
+      "unidad": null,
+      "nombre": "choclos",
+      "nota": "grandes, sanos",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "cebolla",
+      "nota": "chica",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "hojas de albahaca",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 2,
+      "unidad": "cucharada",
+      "nombre": "mantequilla",
+      "escalable": true
+    },
+    {
+      "cantidad": 4,
+      "unidad": "cucharada",
+      "nombre": "crema",
+      "escalable": true
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "sal",
+      "nota": "a gusto",
+      "escalable": false
+    },
+    {
+      "cantidad": 1,
+      "unidad": null,
+      "nombre": "ají picante",
+      "nota": "a gusto",
+      "seccion": "Opcional",
+      "escalable": false
+    },
+    {
+      "cantidad": 2,
+      "unidad": null,
+      "nombre": "pan",
+      "nota": "duro",
+      "escalable": true
+    }
   ],
   "pasos_v2": [
-    { "texto": "Rallar los choclos.", "ingredientes": [1] },
-    { "texto": "Derretir la mantequilla en la olla.", "ingredientes": [4] },
-    { "texto": "Agregar la cebolla picada en cuadritos, la sal, albahaca, choclos rallados y finalmente 1 litro de agua.", "ingredientes": [1, 2, 3, 6, 7] },
-    { "texto": "Revolver bien, sazonar y hervir a fuego suave unos 20 minutos.", "timers": [{ "minutos": 20, "etiqueta": "20 minutos" }] },
-    { "texto": "Cortar el pan en cubos pequeños y dorarlos en mantequilla o aceite.", "ingredientes": [4, 8] },
-    { "texto": "Cuando la sopa esté lista, batir la crema y agregarla revolviendo bien.", "ingredientes": [5] },
-    { "texto": "Al momento de servir poner en cada plato una cucharada de pan frito.", "ingredientes": [8] }
+    {
+      "texto": "Rallar los choclos.",
+      "ingredientes": [1]
+    },
+    {
+      "texto": "Derretir la mantequilla en la olla.",
+      "ingredientes": [4]
+    },
+    {
+      "texto": "Agregar la cebolla picada en cuadritos, la sal, albahaca, choclos rallados y finalmente 1 litro de agua.",
+      "ingredientes": [1, 2, 3, 6, 7]
+    },
+    {
+      "texto": "Revolver bien, sazonar y hervir a fuego suave unos 20 minutos.",
+      "timers": [
+        {
+          "minutos": 20,
+          "etiqueta": "20 minutos"
+        }
+      ]
+    },
+    {
+      "texto": "Cortar el pan en cubos pequeños y dorarlos en mantequilla o aceite.",
+      "ingredientes": [4, 8]
+    },
+    {
+      "texto": "Cuando la sopa esté lista, batir la crema y agregarla revolviendo bien.",
+      "ingredientes": [5]
+    },
+    {
+      "texto": "Al momento de servir poner en cada plato una cucharada de pan frito.",
+      "ingredientes": [8]
+    }
   ],
-  "tiempo_v2": { "coccion": 20 },
+  "tiempo_v2": {
+    "coccion": 20
+  },
   "revisado_v2": true
 }

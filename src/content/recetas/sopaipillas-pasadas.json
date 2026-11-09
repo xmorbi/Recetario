@@ -1,37 +1,12 @@
 {
   "titulo": "Sopaipillas pasadas",
   "categoria": "panes",
-  "tags": [
-    "sopaipilla",
-    "dulce",
-    "chancaca",
-    "invierno",
-    "merienda",
-    "once"
-  ],
+  "tags": ["sopaipilla", "dulce", "chancaca", "invierno", "merienda", "once"],
   "imagen": "img/Sopaipillas-pasadas.jpg",
   "tiempo": "45 min",
   "porciones": "20 unidades",
   "dificultad": "fácil",
   "tecnica": "Fritura",
-  "ingredientes": [
-    "Masa: 500 g de harina",
-    "Masa: 300 g de zapallo cocido y molido",
-    "Masa: 100 g de manteca derretida",
-    "Masa: 1 cdta de sal y 1 cdta de polvos de hornear",
-    "Masa: Aceite para freír",
-    "Chancaca: 250 g de chancaca",
-    "Chancaca: ½ taza de agua",
-    "Chancaca: 1 rama de canela",
-    "Chancaca: Cáscara de 1 naranja",
-    "Chancaca: 2 clavos de olor"
-  ],
-  "pasos": [
-    "Mezcla el zapallo, la harina, la sal y los polvos de hornear. Agrega la manteca y amasa hasta obtener una masa suave.",
-    "Reposa 20 min, estira a 5 mm y corta discos de 8 cm. Pincha con un tenedor y fríe en aceite caliente hasta dorar.",
-    "Aparte, hierve la chancaca con el agua, la canela, la cáscara de naranja y los clavos hasta formar un almíbar.",
-    "Baña las sopaipillas recién fritas con el almíbar caliente y sirve."
-  ],
   "dato": "Las sopaipillas pasadas son un dulce tradicional chileno de invierno. Se hacen bañadas en almíbar de chancaca con canela y naranja, y se comen tibias, cuando el almíbar está brillante y pegajoso.",
   "errores": [
     {
@@ -126,18 +101,11 @@
   "pasos_v2": [
     {
       "texto": "Mezcla el zapallo, la harina, la sal y los polvos de hornear. Agrega la manteca y amasa hasta obtener una masa suave.",
-      "ingredientes": [
-        1,
-        2,
-        3,
-        4
-      ]
+      "ingredientes": [1, 2, 3, 4]
     },
     {
       "texto": "Reposa 20 min, estira a 5 mm y corta discos de 8 cm. Pincha con un tenedor y fríe en aceite caliente hasta dorar.",
-      "ingredientes": [
-        5
-      ],
+      "ingredientes": [5],
       "timers": [
         {
           "minutos": 20,
@@ -147,13 +115,7 @@
     },
     {
       "texto": "Aparte, hierve la chancaca con el agua, la canela, la cáscara de naranja y los clavos hasta formar un almíbar.",
-      "ingredientes": [
-        6,
-        7,
-        8,
-        9,
-        10
-      ]
+      "ingredientes": [6, 7, 8, 9, 10]
     },
     {
       "texto": "Baña las sopaipillas recién fritas con el almíbar caliente y sirve."

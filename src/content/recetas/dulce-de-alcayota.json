@@ -1,35 +1,12 @@
 {
   "titulo": "Dulce de alcayota",
   "categoria": "dulces",
-  "tags": [
-    "dulce",
-    "alcayota",
-    "conserva",
-    "postre",
-    "tradicional",
-    "chile"
-  ],
+  "tags": ["dulce", "alcayota", "conserva", "postre", "tradicional", "chile"],
   "imagen": null,
   "tiempo": "1 h 30 min",
   "porciones": "4 frascos",
   "dificultad": "fácil",
   "tecnica": "Olla",
-  "ingredientes": [
-    "1 alcayota grande (2 a 3 kg)",
-    "1 kg de azúcar",
-    "1 rama de canela",
-    "3 clavos de olor",
-    "Cáscara de 1 naranja",
-    "Jugo de 1 limón"
-  ],
-  "pasos": [
-    "Pela la alcayota, córtala por la mitad y retira las semillas y la pulpa fibrosa.",
-    "Corta la pulpa en tiras o cubos. Cocínala en agua hirviendo 20 minutos, hasta que esté tierna. Escurre.",
-    "En una olla, mezcla la alcayota cocida con el azúcar, la canela, los clavos y la cáscara de naranja.",
-    "Cocina a fuego medio-bajo, revolviendo de vez en cuando, por 40-50 minutos, hasta que el dulce espese y tome color.",
-    "Agrega el jugo de limón al final y revuelve.",
-    "Envasa en frascos esterilizados calientes y tapa. Deja enfriar y refrigera."
-  ],
   "dato": "El dulce de alcayota es un clásico de la repostería chilena. La alcayota es una fruta originaria de Chile, de la familia de las cucurbitáceas. Su pulpa es fibrosa y dulce, y se usa para hacer dulces, mermeladas y empanadas. En Chile se cultiva sobre todo en la zona central.",
   "errores": [
     {
@@ -90,9 +67,7 @@
   "pasos_v2": [
     {
       "texto": "Pela la alcayota, córtala por la mitad y retira las semillas y la pulpa fibrosa.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Corta la pulpa en tiras o cubos. Cocínala en agua hirviendo 20 minutos, hasta que esté tierna. Escurre.",
@@ -105,19 +80,11 @@
     },
     {
       "texto": "En una olla, mezcla la alcayota cocida con el azúcar, la canela, los clavos y la cáscara de naranja.",
-      "ingredientes": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
+      "ingredientes": [1, 2, 3, 4, 5]
     },
     {
       "texto": "Cocina a fuego medio-bajo, revolviendo de vez en cuando, por 40-50 minutos, hasta que el dulce espese y tome color.",
-      "ingredientes": [
-        4
-      ],
+      "ingredientes": [4],
       "timers": [
         {
           "minutos": 50,
@@ -127,9 +94,7 @@
     },
     {
       "texto": "Agrega el jugo de limón al final y revuelve.",
-      "ingredientes": [
-        6
-      ]
+      "ingredientes": [6]
     },
     {
       "texto": "Envasa en frascos esterilizados calientes y tapa. Deja enfriar y refrigera."

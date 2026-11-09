@@ -1,46 +1,12 @@
 {
   "titulo": "Pollo Oriental",
   "categoria": "principales",
-  "tags": [
-    "pollo oriental",
-    "pollo",
-    "almendras",
-    "champiñones",
-    "verduras",
-    "aves"
-  ],
+  "tags": ["pollo oriental", "pollo", "almendras", "champiñones", "verduras", "aves"],
   "imagen": null,
   "tiempo": "1 h 15 min",
   "porciones": "4 a 6 personas",
   "dificultad": "media",
   "tecnica": "Olla y sartén",
-  "ingredientes": [
-    "1 pollo",
-    "1/4 kg de porotitos verdes",
-    "1 zanahoria",
-    "3 dientes de ajo",
-    "1 cebolla",
-    "1/4 taza de champiñones",
-    "1 taza de almendras",
-    "1 1/4 taza de caldo",
-    "1/4 taza de vino blanco",
-    "3 cucharadas rasas de maicena",
-    "1 ramito de verduras surtidas",
-    "Aceite",
-    "Sal",
-    "Pimienta"
-  ],
-  "pasos": [
-    "Limpiar, lavar y cocer el pollo en agua con sal y verduras surtidas.",
-    "Una vez que esté blando quitar la piel y los huesos con cuidado y cortar la carne en tiritas finas.",
-    "Limpiar los porotitos y rasgarlos.",
-    "Cortar la zanahoria en tiras finas y la cebolla en juliana.",
-    "Calentar el aceite, dorar las almendras peladas y partidas, retirarlas y freír en el mismo aceite las verduras picadas.",
-    "Freír aparte los champiñones y añadirlos a la preparación anterior junto a las almendras.",
-    "Agregar el vino, la maicena disuelta en agua fría y 1 1/2 taza de caldo.",
-    "Sazonar, aliñar con pimienta y dejar en cocción a fuego suave 5 a 10 minutos.",
-    "Servir con arroz."
-  ],
   "dato": "La maicena disuelta en agua fría evita que se formen grumos al espesar la salsa.",
   "errores": [
     {
@@ -144,68 +110,35 @@
   "pasos_v2": [
     {
       "texto": "Limpiar, lavar y cocer el pollo en agua con sal y verduras surtidas.",
-      "ingredientes": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        11,
-        13
-      ]
+      "ingredientes": [1, 2, 3, 4, 5, 11, 13]
     },
     {
       "texto": "Una vez que esté blando quitar la piel y los huesos con cuidado y cortar la carne en tiritas finas.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Limpiar los porotitos y rasgarlos.",
-      "ingredientes": [
-        2
-      ]
+      "ingredientes": [2]
     },
     {
       "texto": "Cortar la zanahoria en tiras finas y la cebolla en juliana.",
-      "ingredientes": [
-        3,
-        5
-      ]
+      "ingredientes": [3, 5]
     },
     {
       "texto": "Calentar el aceite, dorar las almendras peladas y partidas, retirarlas y freír en el mismo aceite las verduras picadas.",
-      "ingredientes": [
-        2,
-        3,
-        4,
-        5,
-        7,
-        11,
-        12
-      ]
+      "ingredientes": [2, 3, 4, 5, 7, 11, 12]
     },
     {
       "texto": "Freír aparte los champiñones y añadirlos a la preparación anterior junto a las almendras.",
-      "ingredientes": [
-        6,
-        7,
-        12
-      ]
+      "ingredientes": [6, 7, 12]
     },
     {
       "texto": "Agregar el vino, la maicena disuelta en agua fría y 1 1/2 taza de caldo.",
-      "ingredientes": [
-        8,
-        9,
-        10
-      ]
+      "ingredientes": [8, 9, 10]
     },
     {
       "texto": "Sazonar, aliñar con pimienta y dejar en cocción a fuego suave 5 a 10 minutos.",
-      "ingredientes": [
-        14
-      ],
+      "ingredientes": [14],
       "timers": [
         {
           "minutos": 10,

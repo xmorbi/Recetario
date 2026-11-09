@@ -1,35 +1,12 @@
 {
   "titulo": "Higos rellenos",
   "categoria": "dulces",
-  "tags": [
-    "dulce",
-    "higo",
-    "nuez",
-    "tradicional",
-    "navidad",
-    "postre"
-  ],
+  "tags": ["dulce", "higo", "nuez", "tradicional", "navidad", "postre"],
   "imagen": null,
   "tiempo": "30 min + reposo",
   "porciones": "20 higos",
   "dificultad": "fácil",
   "tecnica": "Sin cocción",
-  "ingredientes": [
-    "20 higos secos",
-    "100 g de nueces picadas",
-    "50 g de almendras picadas",
-    "2 cucharadas de miel",
-    "1 cucharada de azúcar flor",
-    "1 cucharadita de canela en polvo",
-    "Opcional: 1 cucharada de pisco o ron"
-  ],
-  "pasos": [
-    "Abre los higos por la mitad, sin separarlos del todo.",
-    "Mezcla las nueces, almendras, miel, azúcar flor, canela y el licor si usas.",
-    "Rellena cada higo con la mezcla.",
-    "Presiona ligeramente para cerrar.",
-    "Deja reposar al menos 2 horas antes de servir para que los sabores se integren."
-  ],
   "dato": "Los higos rellenos son un dulce tradicional chileno, típico de Navidad y de las celebraciones de fin de año. Se hacen con higos secos rellenos de nueces y bañados en miel. En el campo se preparan con higos frescos secados al sol.",
   "errores": [
     {
@@ -98,25 +75,15 @@
   "pasos_v2": [
     {
       "texto": "Abre los higos por la mitad, sin separarlos del todo.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Mezcla las nueces, almendras, miel, azúcar flor, canela y el licor si usas.",
-      "ingredientes": [
-        2,
-        3,
-        4,
-        5,
-        6
-      ]
+      "ingredientes": [2, 3, 4, 5, 6]
     },
     {
       "texto": "Rellena cada higo con la mezcla.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Presiona ligeramente para cerrar."

@@ -1,34 +1,12 @@
 {
   "titulo": "Tomaticán",
   "categoria": "principales",
-  "tags": [
-    "tomatican",
-    "olla",
-    "plato principal",
-    "tomate",
-    "verano"
-  ],
+  "tags": ["tomatican", "olla", "plato principal", "tomate", "verano"],
   "imagen": "img/Tomatican.jpg",
   "tiempo": "30 min",
   "porciones": "4 personas",
   "dificultad": "fácil",
   "tecnica": "Olla",
-  "ingredientes": [
-    "1 kg de tomates maduros",
-    "1 taza de choclo picado",
-    "1 cebolla en pluma",
-    "250 g de lomo, asiento o posta en tiras",
-    "2 dientes de ajo, perejil, ½ pimentón",
-    "Sal, pimienta, orégano, ají de color y aceite"
-  ],
-  "pasos": [
-    "Corta la carne en tiritas y los tomates en trozos.",
-    "Sofríe la cebolla, el ajo, el perejil y el pimentón con aliños.",
-    "Agrega la carne y fríe unos minutos.",
-    "Incorpora el choclo y los tomates. Mezcla bien.",
-    "Cuando hierva, tapa y cocina a fuego lento 15 min.",
-    "Sirve con arroz o papas cocidas."
-  ],
   "dato": "Mientras más maduros los tomates, más dulce queda el plato.",
   "errores": [
     {

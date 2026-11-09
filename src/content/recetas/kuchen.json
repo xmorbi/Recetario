@@ -1,40 +1,12 @@
 {
   "titulo": "Kuchen",
   "categoria": "dulces",
-  "tags": [
-    "kuchen",
-    "torta",
-    "horno",
-    "alemán",
-    "sur",
-    "once",
-    "reposteria"
-  ],
+  "tags": ["kuchen", "torta", "horno", "alemán", "sur", "once", "reposteria"],
   "imagen": null,
   "tiempo": "1 h 15 min",
   "porciones": "12 porciones",
   "dificultad": "media",
   "tecnica": "Horno",
-  "ingredientes": [
-    "Masa: 300 g de harina",
-    "Masa: 150 g de mantequilla fría",
-    "Masa: 100 g de azúcar",
-    "Masa: 1 huevo",
-    "Masa: 1 cucharadita de polvos de hornear",
-    "Relleno: 1 kg de frutas (manzanas, ciruelas, duraznos o frutillas)",
-    "Relleno: 3 cucharadas de azúcar",
-    "Relleno: 1 cucharadita de canela",
-    "Cubierta: 2 cucharadas de azúcar flor"
-  ],
-  "pasos": [
-    "Precalienta el horno a 180 °C. Engrasa un molde redondo.",
-    "Prepara la masa: mezcla la harina con los polvos de hornear y el azúcar. Agrega la mantequilla fría en cubos y trabaja con los dedos hasta que quede como arena. Añade el huevo y amasa hasta formar una masa lisa. Refrigera 30 minutos.",
-    "Estira la masa y forra el molde. Pincha con un tenedor.",
-    "Pela y corta las frutas. Mezcla con el azúcar y la canela.",
-    "Distribuye las frutas sobre la masa.",
-    "Hornea 45-50 minutos, hasta que la masa esté dorada y las frutas tiernas.",
-    "Deja enfriar y espolvorea azúcar flor antes de servir."
-  ],
   "dato": "El kuchen es la herencia alemana en la repostería chilena, especialmente en el sur (Valdivia, Osorno, Puerto Montt). Se hace con masa quebrada y frutas de la estación. El kuchen de manzana es el más clásico, pero también se hace de ciruela, durazno y frutilla.",
   "errores": [
     {
@@ -124,15 +96,7 @@
     },
     {
       "texto": "Prepara la masa: mezcla la harina con los polvos de hornear y el azúcar. Agrega la mantequilla fría en cubos y trabaja con los dedos hasta que quede como arena. Añade el huevo y amasa hasta formar una masa lisa. Refrigera 30 minutos.",
-      "ingredientes": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        7,
-        9
-      ],
+      "ingredientes": [1, 2, 3, 4, 5, 7, 9],
       "timers": [
         {
           "minutos": 30,
@@ -145,25 +109,15 @@
     },
     {
       "texto": "Pela y corta las frutas. Mezcla con el azúcar y la canela.",
-      "ingredientes": [
-        3,
-        6,
-        7,
-        8,
-        9
-      ]
+      "ingredientes": [3, 6, 7, 8, 9]
     },
     {
       "texto": "Distribuye las frutas sobre la masa.",
-      "ingredientes": [
-        6
-      ]
+      "ingredientes": [6]
     },
     {
       "texto": "Hornea 45-50 minutos, hasta que la masa esté dorada y las frutas tiernas.",
-      "ingredientes": [
-        6
-      ],
+      "ingredientes": [6],
       "timers": [
         {
           "minutos": 50,
@@ -173,12 +127,7 @@
     },
     {
       "texto": "Deja enfriar y espolvorea azúcar flor antes de servir.",
-      "ingredientes": [
-        3,
-        5,
-        7,
-        9
-      ]
+      "ingredientes": [3, 5, 7, 9]
     }
   ],
   "tiempo_v2": {

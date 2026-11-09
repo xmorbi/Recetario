@@ -1,35 +1,12 @@
 {
   "titulo": "Chicha",
   "categoria": "bebidas",
-  "tags": [
-    "bebida",
-    "alcohol",
-    "uva",
-    "fiestas patrias",
-    "tradicional",
-    "fermentada"
-  ],
+  "tags": ["bebida", "alcohol", "uva", "fiestas patrias", "tradicional", "fermentada"],
   "imagen": null,
   "tiempo": "15 min + 10 días de fermentación",
   "porciones": "4 litros",
   "dificultad": "media",
   "tecnica": "Fermentación",
-  "ingredientes": [
-    "4 kg de uva país o uva de mesa bien madura",
-    "2 litros de agua hervida (fría)",
-    "1 kg de azúcar (ajustar al dulzor de la uva)",
-    "1 rama de canela (opcional)",
-    "1 puñado de pasas (opcional, para acelerar la fermentación)"
-  ],
-  "pasos": [
-    "Lava bien las uvas y sepáralas de los tallos.",
-    "En un recipiente grande de vidrio o barro (bien limpio y seco), pon las uvas y machácalas ligeramente con las manos o un pisón.",
-    "Agrega el agua hervida fría y el azúcar. Revuelve hasta disolver.",
-    "Añade la canela y las pasas si usas.",
-    "Tapa con un paño limpio o gasa (no hermético) y deja fermentar en un lugar oscuro y fresco por 7 a 10 días, revolviendo una vez al día.",
-    "Cuando el líquido deje de burbujear y tenga olor a vino, cuela con un paño fino o filtro de café.",
-    "Envasa en botellas de vidrio bien limpias. Tapa sin apretar del todo los primeros 2 días para que salgan los gases, y luego cierra bien. Deja reposar 2 días más antes de servir. Sirve bien fría."
-  ],
   "dato": "La chicha es la bebida de Fiestas Patrias por excelencia. Llegó a Chile con los españoles y se volvió parte de la tradición criolla. Cada familia tiene su receta: con más azúcar, con canela, con pasas. La versión sin fermentar es la \"chicha dulce\", que es simplemente el jugo de uva antes de fermentar.",
   "advertencia": "Durante la fermentación se generan gases. No cierres el recipiente hermético: usa un paño o gasa. Al envasar, deja las tapas flojas los primeros 2 días. Si la botella se siente muy dura al apretarla, abre la tapa con cuidado para liberar presión. Mantén la fermentación en un lugar fresco y oscuro, lejos del calor.",
   "errores": [
@@ -91,29 +68,19 @@
   "pasos_v2": [
     {
       "texto": "Lava bien las uvas y sepáralas de los tallos.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "En un recipiente grande de vidrio o barro (bien limpio y seco), pon las uvas y machácalas ligeramente con las manos o un pisón.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Agrega el agua hervida fría y el azúcar. Revuelve hasta disolver.",
-      "ingredientes": [
-        2,
-        3
-      ]
+      "ingredientes": [2, 3]
     },
     {
       "texto": "Añade la canela y las pasas si usas.",
-      "ingredientes": [
-        4,
-        5
-      ]
+      "ingredientes": [4, 5]
     },
     {
       "texto": "Tapa con un paño limpio o gasa (no hermético) y deja fermentar en un lugar oscuro y fresco por 7 a 10 días, revolviendo una vez al día."

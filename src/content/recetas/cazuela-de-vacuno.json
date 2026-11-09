@@ -1,38 +1,12 @@
 {
   "titulo": "Cazuela de vacuno",
   "categoria": "principales",
-  "tags": [
-    "cazuela",
-    "sopa",
-    "olla",
-    "invierno",
-    "plato principal",
-    "vacuno"
-  ],
+  "tags": ["cazuela", "sopa", "olla", "invierno", "plato principal", "vacuno"],
   "imagen": "img/Cazuela-de-vacuno.jpg",
   "tiempo": "70 min",
   "porciones": "4 a 6 personas",
   "dificultad": "fácil",
   "tecnica": "Olla",
-  "ingredientes": [
-    "1 kg de carne de vacuno con hueso (osobuco o costilla)",
-    "2 papas medianas (400 g aprox.)",
-    "1/2 zapallo en trozos (500 g aprox.)",
-    "1 zanahoria en rodajas",
-    "1 choclo cortado en trozos",
-    "1 cebolla y 2 dientes de ajo",
-    "1/2 taza (100 g) de arroz",
-    "Orégano, sal y pimienta"
-  ],
-  "pasos": [
-    "Dora la carne en aceite caliente en una olla grande, hasta que esté bien dorada por todos lados. Ese dorado es el que le da sabor al caldo.",
-    "Agrega la cebolla y el ajo, y sofríe hasta que estén transparentes.",
-    "Cubre con agua fría, lleva a hervor y retira la espuma que sube a la superficie.",
-    "Cocina a fuego medio por 40 minutos.",
-    "Agrega la zanahoria y el zapallo. Cocina 10 minutos.",
-    "Incorpora las papas, el choclo y el arroz. Cocina 20 minutos más.",
-    "Condimenta con orégano, sal y pimienta. Sirve caliente con el caldo abundante."
-  ],
   "dato": "Cada casa tiene su orden. Algunos agregan el arroz al final para que el caldo quede más limpio.",
   "errores": [
     {
@@ -113,15 +87,11 @@
   "pasos_v2": [
     {
       "texto": "Dora la carne en aceite caliente en una olla grande, hasta que esté bien dorada por todos lados. Ese dorado es el que le da sabor al caldo.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Agrega la cebolla y el ajo, y sofríe hasta que estén transparentes.",
-      "ingredientes": [
-        6
-      ]
+      "ingredientes": [6]
     },
     {
       "texto": "Cubre con agua fría, lleva a hervor y retira la espuma que sube a la superficie."
@@ -137,10 +107,7 @@
     },
     {
       "texto": "Agrega la zanahoria y el zapallo. Cocina 10 minutos.",
-      "ingredientes": [
-        3,
-        4
-      ],
+      "ingredientes": [3, 4],
       "timers": [
         {
           "minutos": 10,
@@ -150,11 +117,7 @@
     },
     {
       "texto": "Incorpora las papas, el choclo y el arroz. Cocina 20 minutos más.",
-      "ingredientes": [
-        2,
-        5,
-        7
-      ],
+      "ingredientes": [2, 5, 7],
       "timers": [
         {
           "minutos": 20,
@@ -164,9 +127,7 @@
     },
     {
       "texto": "Condimenta con orégano, sal y pimienta. Sirve caliente con el caldo abundante.",
-      "ingredientes": [
-        8
-      ]
+      "ingredientes": [8]
     }
   ],
   "tiempo_v2": {

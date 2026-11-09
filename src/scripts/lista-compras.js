@@ -1,26 +1,23 @@
 /* =================================================================
    LISTA-COMPRAS.JS — Carrito flotante y lista de compras
-   Fase 5: compartir lista por WhatsApp + enlace portátil
-   FASE A: dominio del mensaje de compartir dinámico (sin netlify hardcodeado)
    ================================================================= */
-(function() {
+import { escaparHtml } from '../lib/html.js';
+
+(function () {
   'use strict';
 
   const STORAGE_KEY = 'recetario_lista_compras';
   let lista = [];
 
-  // Cargar datos al iniciar
   try {
     lista = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
   } catch (e) {
     lista = [];
   }
 
-  // --- CREACIÓN DE LA INTERFAZ (FAB + PANEL) ---
   function crearInterfaz() {
     if (document.getElementById('shopping-fab')) return;
 
-    // 1. Botón Flotante (FAB)
     const fab = document.createElement('button');
     fab.id = 'shopping-fab';
     fab.className = 'shopping-fab';
@@ -35,7 +32,6 @@
     `;
     document.body.appendChild(fab);
 
-    // 2. Panel Lateral y Fondo Oscuro
     const overlay = document.createElement('div');
     overlay.id = 'shopping-overlay';
     overlay.className = 'shopping-overlay';
@@ -75,35 +71,22 @@
     document.getElementById('btn-compartir-link').addEventListener('click', compartirLink);
   }
 
-  // --- LÓGICA DE DATOS ---
   function guardar() {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(lista));
-    } catch (e) {
-      // Sin almacenamiento la lista vive solo en memoria, pero la UI sigue funcionando
-    }
+    } catch (e) {}
     actualizarUI();
   }
 
-  function escaparHtml(s) {
-    return String(s).replace(/[&<>"']/g, function (c) {
-      return { '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c];
-    });
-  }
-
-  // Redondea a 2 decimales y quita ceros sobrantes: 0.25 -> "0.25", 1.50 -> "1.5"
   function numLimpio(n) {
     return String(Math.round(n * 100) / 100);
   }
 
-  /* FASE A: devuelve el host del sitio (sin protocolo ni trailing slash)
-     para usar en mensajes de compartir. Orden de preferencia:
-       1. window.__SITE_URL  → inyectado por Layout.astro (Astro.site)
-       2. location.origin    → lo que ve el usuario en la barra
-       3. cadena vacía       → si todo falla, se omite la línea del mensaje */
   function hostSitio() {
-    var base = (typeof window !== 'undefined' && window.__SITE_URL) ||
-               (typeof location !== 'undefined' && location.origin) || '';
+    var base =
+      (typeof window !== 'undefined' && window.__SITE_URL) ||
+      (typeof location !== 'undefined' && location.origin) ||
+      '';
     return String(base)
       .replace(/^https?:\/\//i, '')
       .replace(/\/+$/, '');
@@ -112,7 +95,7 @@
   function agregarItem(texto) {
     const textoLimpio = texto.trim();
     if (!textoLimpio) return;
-    const existe = lista.find(item => item.texto.toLowerCase() === textoLimpio.toLowerCase());
+    const existe = lista.find((item) => item.texto.toLowerCase() === textoLimpio.toLowerCase());
     if (existe) {
       if (existe.comprado) {
         existe.comprado = false;
@@ -125,13 +108,12 @@
     lista.push({
       id: Date.now().toString() + Math.random().toString(36).substr(2, 5),
       texto: textoLimpio,
-      comprado: false
+      comprado: false,
     });
     guardar();
     abrirPanel();
   }
 
-  // Añadir ítem estructurado (usado por la calculadora)
   function formatearItemTexto(nombre, cantidad, unidad) {
     if (!cantidad || cantidad === 0) return nombre;
     let cantFormateada;
@@ -149,16 +131,14 @@
     if (!item || !item.nombre) return false;
 
     const cantidad = parseFloat(item.cantidad) || 0;
-    const unidad   = item.unidad || '';
-    const nombre   = String(item.nombre).trim();
-    const ingId    = item.id || null;
+    const unidad = item.unidad || '';
+    const nombre = String(item.nombre).trim();
+    const ingId = item.id || null;
 
     let existente = null;
     if (ingId) {
-      existente = lista.find(i =>
-        i._ingredienteId === ingId &&
-        i._unidad === unidad &&
-        !i.comprado
+      existente = lista.find(
+        (i) => i._ingredienteId === ingId && i._unidad === unidad && !i.comprado
       );
     }
 
@@ -174,7 +154,7 @@
         _ingredienteId: ingId,
         _nombre: nombre,
         _cantidad: cantidad,
-        _unidad: unidad
+        _unidad: unidad,
       });
     }
 
@@ -184,7 +164,7 @@
   }
 
   function toggleComprado(id) {
-    const item = lista.find(i => i.id === id);
+    const item = lista.find((i) => i.id === id);
     if (item) {
       item.comprado = !item.comprado;
       guardar();
@@ -192,7 +172,7 @@
   }
 
   function eliminarItem(id) {
-    lista = lista.filter(i => i.id !== id);
+    lista = lista.filter((i) => i.id !== id);
     guardar();
   }
 
@@ -203,16 +183,15 @@
     }
   }
 
-  // --- COMPARTIR POR WHATSAPP ---
   function compartirWhatsApp() {
-    const pendientes = lista.filter(i => !i.comprado);
+    const pendientes = lista.filter((i) => !i.comprado);
     if (pendientes.length === 0) {
-      alert('Tu lista está vacía o ya marcaste todo como comprado. Agrega algo antes de compartir.');
+      alert(
+        'Tu lista está vacía o ya marcaste todo como comprado. Agrega algo antes de compartir.'
+      );
       return;
     }
 
-    // FASE A: el sufijo "Enviado desde …" ahora es dinámico.
-    // Antes era `_Enviado desde recetariochileno.netlify.app_` fijo.
     const host = hostSitio();
     const sufijo = host ? '\n\n_Enviado desde ' + host + '_' : '';
 
@@ -220,23 +199,20 @@
       '🛒 *Mi Lista de Compras*\n' +
       '_Recetario Chileno_\n' +
       '\n' +
-      pendientes.map(i => '• ' + i.texto).join('\n') +
+      pendientes.map((i) => '• ' + i.texto).join('\n') +
       sufijo;
 
-    // wa.me funciona en móvil (abre app) y en desktop (abre web.whatsapp)
     const url = 'https://wa.me/?text=' + encodeURIComponent(texto);
     window.open(url, '_blank', 'noopener');
   }
 
-  // --- COMPARTIR ENLACE (lista codificada en base64) ---
   function compartirLink() {
     if (lista.length === 0) {
       alert('Tu lista está vacía. Agrega algo antes de compartir.');
       return;
     }
 
-    // Guardamos solo lo mínimo: texto + estado comprado (0/1)
-    const compacta = lista.map(i => ({ t: i.texto, c: i.comprado ? 1 : 0 }));
+    const compacta = lista.map((i) => ({ t: i.texto, c: i.comprado ? 1 : 0 }));
 
     let encoded;
     try {
@@ -250,17 +226,21 @@
     const url = baseUrl + '#lista=' + encoded;
 
     if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(url).then(function () {
-        alert('¡Enlace copiado al portapapeles!\n\nPégalo en un chat, correo o donde quieras. Al abrirlo, la otra persona podrá importar la lista.');
-      }).catch(function () {
-        prompt('Copia este enlace y compártelo:', url);
-      });
+      navigator.clipboard
+        .writeText(url)
+        .then(function () {
+          alert(
+            '¡Enlace copiado al portapapeles!\n\nPégalo en un chat, correo o donde quieras. Al abrirlo, la otra persona podrá importar la lista.'
+          );
+        })
+        .catch(function () {
+          prompt('Copia este enlace y compártelo:', url);
+        });
     } else {
       prompt('Copia este enlace y compártelo:', url);
     }
   }
 
-  // --- IMPORTAR LISTA DESDE UN ENLACE COMPARTIDO ---
   function importarDesdeHash() {
     const m = location.hash.match(/#lista=([^&]+)/);
     if (!m) return;
@@ -270,9 +250,12 @@
       if (!Array.isArray(data) || data.length === 0) return;
 
       const n = data.length;
-      const msg = 'Alguien compartió contigo una lista de compras con ' + n +
-                  (n === 1 ? ' ítem' : ' ítems') + '.\n\n' +
-                  '¿Quieres reemplazar tu lista actual por esta?';
+      const msg =
+        'Alguien compartió contigo una lista de compras con ' +
+        n +
+        (n === 1 ? ' ítem' : ' ítems') +
+        '.\n\n' +
+        '¿Quieres reemplazar tu lista actual por esta?';
 
       if (!confirm(msg)) {
         history.replaceState(null, '', location.pathname);
@@ -284,52 +267,59 @@
           return {
             id: 'imp_' + Date.now() + '_' + i,
             texto: String(x.t || '').trim(),
-            comprado: !!x.c
+            comprado: !!x.c,
           };
         })
-        .filter(function (x) { return x.texto; });
+        .filter(function (x) {
+          return x.texto;
+        });
 
       guardar();
       history.replaceState(null, '', location.pathname);
 
-      // Feedback visual: abre el panel para que vea la lista importada
       setTimeout(function () {
         abrirPanel();
       }, 300);
     } catch (e) {
-      // Hash inválido o corrupto: lo ignoramos en silencio
       history.replaceState(null, '', location.pathname);
     }
   }
 
-  // --- RENDERIZADO ---
   function actualizarUI() {
     const badge = document.getElementById('shopping-badge');
     const content = document.getElementById('shopping-content');
     if (!badge || !content) return;
 
-    const pendientes = lista.filter(i => !i.comprado).length;
+    const pendientes = lista.filter((i) => !i.comprado).length;
     badge.textContent = pendientes;
     badge.style.display = lista.length === 0 ? 'none' : 'flex';
 
     if (lista.length === 0) {
-      content.innerHTML = '<p style="text-align:center;color:var(--suave);margin-top:2rem;font-style:italic;">Tu lista está vacía.<br>Agrega ingredientes desde las recetas.</p>';
+      content.innerHTML =
+        '<p style="text-align:center;color:var(--suave);margin-top:2rem;font-style:italic;">Tu lista está vacía.<br>Agrega ingredientes desde las recetas.</p>';
       return;
     }
 
-    const pendientesHTML = lista.filter(i => !i.comprado).map(crearItemHTML).join('');
-    const compradosHTML = lista.filter(i => i.comprado).map(crearItemHTML).join('');
+    const pendientesHTML = lista
+      .filter((i) => !i.comprado)
+      .map(crearItemHTML)
+      .join('');
+    const compradosHTML = lista
+      .filter((i) => i.comprado)
+      .map(crearItemHTML)
+      .join('');
 
     let html = '';
     if (pendientesHTML) html += `<div class="shop-group">${pendientesHTML}</div>`;
-    if (compradosHTML) html += `<div class="shop-group shop-group-done"><h3>Comprados</h3>${compradosHTML}</div>`;
+    if (compradosHTML)
+      html += `<div class="shop-group shop-group-done"><h3>Comprados</h3>${compradosHTML}</div>`;
 
     content.innerHTML = html;
 
-    content.querySelectorAll('.shop-check').forEach(btn => {
+    content.querySelectorAll('.shop-check').forEach((btn) => {
       btn.addEventListener('click', () => toggleComprado(btn.dataset.id));
     });
-    content.querySelectorAll('.shop-del').forEach(btn => {
+    content.querySelectorAll('.shop-del').forEach((btn) => {
       btn.addEventListener('click', (e) => {
         e.stopPropagation();
         eliminarItem(btn.dataset.id);
@@ -367,22 +357,21 @@
     document.body.style.overflow = '';
   }
 
-  // --- API PÚBLICA ---
   window.ListaCompras = {
     agregar: agregarItem,
     agregarItem: agregarItemLista,
     abrir: abrirPanel,
     cerrar: cerrarPanel,
-    contar: function() { return lista.length; },
+    contar: function () {
+      return lista.length;
+    },
     compartirWhatsApp: compartirWhatsApp,
-    compartirLink: compartirLink
+    compartirLink: compartirLink,
   };
 
   window.agregarItemLista = agregarItemLista;
 
-  // --- EVENTOS GLOBALES (delegación) ---
-  document.addEventListener('click', function(e) {
-    // Botón individual "+"
+  document.addEventListener('click', function (e) {
     const btnAdd = e.target.closest('.btn-add-ing');
     if (btnAdd) {
       e.preventDefault();
@@ -400,7 +389,6 @@
       return;
     }
 
-    // Botón "Añadir todos"
     const btnAddAll = e.target.closest('.btn-add-all');
     if (btnAddAll) {
       e.preventDefault();
@@ -425,7 +413,7 @@
       }
 
       if (ings && ings.length > 0) {
-        ings.forEach(ing => agregarItem(ing));
+        ings.forEach((ing) => agregarItem(ing));
         btnAddAll.textContent = '¡Añadidos!';
         setTimeout(() => {
           btnAddAll.textContent = 'Añadir todos los ingredientes';
@@ -434,11 +422,9 @@
     }
   });
 
-  // --- INICIALIZACIÓN ---
   document.addEventListener('DOMContentLoaded', () => {
     crearInterfaz();
     actualizarUI();
-    importarDesdeHash();  // NUEVO: importa si la URL trae #lista=...
+    importarDesdeHash();
   });
-
 })();

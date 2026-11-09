@@ -1,31 +1,12 @@
 {
   "titulo": "Sándwich aliado",
   "categoria": "sandwiches",
-  "tags": [
-    "sándwich",
-    "aliado",
-    "mayonesa",
-    "simple",
-    "once",
-    "completo"
-  ],
+  "tags": ["sándwich", "aliado", "mayonesa", "simple", "once", "completo"],
   "imagen": null,
   "tiempo": "5 min",
   "porciones": "1 sándwich",
   "dificultad": "muy fácil",
   "tecnica": "Sin cocción",
-  "ingredientes": [
-    "1 pan de completo (alargado) o 1 marraqueta",
-    "1 vienesa de buena calidad",
-    "1-2 cucharadas de mayonesa casera o de buena calidad"
-  ],
-  "pasos": [
-    "Cuece la vienesa en agua hirviendo 5 minutos.",
-    "Calienta el pan en el horno o plancha 2 minutos por lado.",
-    "Abre el pan por la mitad sin llegar al fondo.",
-    "Pon la vienesa dentro.",
-    "Cubre con mayonesa en línea. Sirve inmediatamente."
-  ],
   "dato": "El \"aliado\" es el completo más minimalista que existe: solo vienesa y mayonesa. En el carrito de completos, \"aliado\" es el que no lleva ni palta ni tomate. El nombre probablemente viene de que la mayonesa es \"aliada\" de la vienesa: no le agrega nada más. Para muchos chilenos es el completo \"de verdad\".",
   "errores": [
     {
@@ -71,9 +52,7 @@
   "pasos_v2": [
     {
       "texto": "Cuece la vienesa en agua hirviendo 5 minutos.",
-      "ingredientes": [
-        2
-      ],
+      "ingredientes": [2],
       "timers": [
         {
           "minutos": 5,
@@ -83,9 +62,7 @@
     },
     {
       "texto": "Calienta el pan en el horno o plancha 2 minutos por lado.",
-      "ingredientes": [
-        1
-      ],
+      "ingredientes": [1],
       "timers": [
         {
           "minutos": 2,
@@ -95,21 +72,15 @@
     },
     {
       "texto": "Abre el pan por la mitad sin llegar al fondo.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Pon la vienesa dentro.",
-      "ingredientes": [
-        2
-      ]
+      "ingredientes": [2]
     },
     {
       "texto": "Cubre con mayonesa en línea. Sirve inmediatamente.",
-      "ingredientes": [
-        3
-      ]
+      "ingredientes": [3]
     }
   ],
   "tiempo_v2": {

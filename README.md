@@ -1,11 +1,11 @@
-# Recetario Chileno
+# Recetario Chileno 🇨🇱
 
-Sitio estático de recetas chilenas construido con Astro y desplegado en Cloudflare Workers.
+Sitio estático de recetas chilenas construido con Astro, enfocado en rendimiento, accesibilidad y buenas prácticas.
 
-- **Producción:** https://recetario.morbidan.workers.dev
-- **Stack:** Astro (static) + content collections con Zod + TypeScript estricto
-- **Hosting:** Cloudflare Workers (assets + worker)
-- **Páginas:** ~311
+- **Producción:** https://recetario.morbidan.workers.dev (o tu dominio actual)
+- **Stack:** Astro (static) + Content Collections con Zod + TypeScript estricto + Vite
+- **Hosting:** Cloudflare Workers / Netlify (según configuración de despliegue)
+- **Páginas:** ~312 rutas generadas estáticamente
 
 ## Requisitos
 
@@ -19,4 +19,5 @@ git clone https://github.com/xmorbi/Recetario.git
 cd Recetario
 npm ci
 cp .env.example .env
-# edita .env y define PUBLIC_SITE_URL
+# Edita .env y define PUBLIC_SITE_URL con la URL de tu entorno local o producción
+```

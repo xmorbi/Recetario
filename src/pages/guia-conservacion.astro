@@ -2,31 +2,45 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Guía de Conservación" description="Aprende a guardar tus alimentos para que duren más y sepan como recién hechos." activePage="conservacion">
-  
+<Layout
+  title="Guía de Conservación"
+  description="Aprende a guardar tus alimentos para que duren más y sepan como recién hechos."
+  activePage="conservacion"
+>
   <Fragment slot="head">
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "¿Cuánto tiempo dura la carne en la nevera?",
-          "acceptedAnswer": { "@type": "Answer", "text": "La carne cruda dura entre 1 y 2 días. La carne cocida dura de 3 a 4 días en un recipiente hermético." }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Cómo conservar el pan para que no se ponga duro?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Nunca guardes el pan en la nevera, ya que acelera su endurecimiento. Guárdalo a temperatura ambiente envuelto en un paño de cocina o congélalo en rebanadas." }
-        }
-      ]
-    })}></script>
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: '¿Cuánto tiempo dura la carne en la nevera?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'La carne cruda dura entre 1 y 2 días. La carne cocida dura de 3 a 4 días en un recipiente hermético.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '¿Cómo conservar el pan para que no se ponga duro?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Nunca guardes el pan en la nevera, ya que acelera su endurecimiento. Guárdalo a temperatura ambiente envuelto en un paño de cocina o congélalo en rebanadas.',
+            },
+          },
+        ],
+      })}
+    ></script>
   </Fragment>
 
   <header class="hero-receta">
     <div class="hero-receta-inner">
       <h1>Guía de Conservación y Recalentado</h1>
-      <p class="sub" style="color:var(--suave); font-style:italic; margin-top:1rem;">Aprende a guardar tus alimentos para que duren más y sepan como recién hechos.</p>
+      <p class="sub" style="color:var(--suave); font-style:italic; margin-top:1rem;">
+        Aprende a guardar tus alimentos para que duren más y sepan como recién hechos.
+      </p>
     </div>
   </header>
 
@@ -35,9 +49,18 @@ import Layout from '../layouts/Layout.astro';
       <details>
         <summary>🥩 Carne (Vacuno, Pollo y Cerdo)</summary>
         <div class="guia-conservacion-content">
-          <p><strong>Nevera:</strong> La carne cruda dura entre 1 y 2 días (el pollo es el más delicado). La carne cocida dura de 3 a 4 días en un recipiente hermético.</p>
-          <p><strong>Congelador:</strong> La carne cruda dura hasta 4 meses; la cocida, hasta 3 meses. Envuelve muy bien en film para evitar que se queme.</p>
-          <p><strong>Recalentar:</strong> Para asados, fuego alto y rápido. Para guisos, a fuego lento añadiendo un poco de caldo.</p>
+          <p>
+            <strong>Nevera:</strong> La carne cruda dura entre 1 y 2 días (el pollo es el más
+            delicado). La carne cocida dura de 3 a 4 días en un recipiente hermético.
+          </p>
+          <p>
+            <strong>Congelador:</strong> La carne cruda dura hasta 4 meses; la cocida, hasta 3
+            meses. Envuelve muy bien en film para evitar que se queme.
+          </p>
+          <p>
+            <strong>Recalentar:</strong> Para asados, fuego alto y rápido. Para guisos, a fuego
+            lento añadiendo un poco de caldo.
+          </p>
         </div>
       </details>
     </div>
@@ -45,9 +68,17 @@ import Layout from '../layouts/Layout.astro';
       <details>
         <summary>🐟 Pescado y Mariscos</summary>
         <div class="guia-conservacion-content">
-          <p><strong>Nevera:</strong> El pescado fresco dura máximo 1 a 2 días. Los mariscos deben consumirse idealmente el mismo día.</p>
-          <p><strong>Congelador:</strong> El pescado dura hasta 3 meses y los mariscos hasta 6 meses.</p>
-          <p><strong>Recalentar:</strong> Al horno a baja temperatura (150°C) con mantequilla o limón para que no se sequen.</p>
+          <p>
+            <strong>Nevera:</strong> El pescado fresco dura máximo 1 a 2 días. Los mariscos deben
+            consumirse idealmente el mismo día.
+          </p>
+          <p>
+            <strong>Congelador:</strong> El pescado dura hasta 3 meses y los mariscos hasta 6 meses.
+          </p>
+          <p>
+            <strong>Recalentar:</strong> Al horno a baja temperatura (150°C) con mantequilla o limón
+            para que no se sequen.
+          </p>
         </div>
       </details>
     </div>
@@ -55,8 +86,15 @@ import Layout from '../layouts/Layout.astro';
       <details>
         <summary>🍅 Tomate</summary>
         <div class="guia-conservacion-content">
-          <p><strong>Nevera:</strong> El tomate entero <strong>NUNCA</strong> va a la nevera. Guárdalo a temperatura ambiente. Si está cortado, guárdalo en un recipiente hermético por máximo 2 días.</p>
-          <p><strong>Congelador:</strong> Puedes congelar tomates enteros con cáscara para salsas. La cáscara se desprende fácil al sacarlos del congelador.</p>
+          <p>
+            <strong>Nevera:</strong> El tomate entero <strong>NUNCA</strong> va a la nevera.
+            Guárdalo a temperatura ambiente. Si está cortado, guárdalo en un recipiente hermético
+            por máximo 2 días.
+          </p>
+          <p>
+            <strong>Congelador:</strong> Puedes congelar tomates enteros con cáscara para salsas. La
+            cáscara se desprende fácil al sacarlos del congelador.
+          </p>
         </div>
       </details>
     </div>
@@ -64,8 +102,14 @@ import Layout from '../layouts/Layout.astro';
       <details>
         <summary>🧅 Cebolla</summary>
         <div class="guia-conservacion-content">
-          <p><strong>Nevera:</strong> Una cebolla cortada no debe guardarse en frío porque se vuelve gomosa. Si te sobró, pícala y guárdala en recipiente hermético por máximo 2 días.</p>
-          <p><strong>Congelador:</strong> Sí, es la mejor opción. Pica la cebolla, séllala en bolsas herméticas y congela hasta por 6 meses. Úsala directo del congelador a la sartén.</p>
+          <p>
+            <strong>Nevera:</strong> Una cebolla cortada no debe guardarse en frío porque se vuelve
+            gomosa. Si te sobró, pícala y guárdala en recipiente hermético por máximo 2 días.
+          </p>
+          <p>
+            <strong>Congelador:</strong> Sí, es la mejor opción. Pica la cebolla, séllala en bolsas
+            herméticas y congela hasta por 6 meses. Úsala directo del congelador a la sartén.
+          </p>
         </div>
       </details>
     </div>
@@ -73,9 +117,18 @@ import Layout from '../layouts/Layout.astro';
       <details>
         <summary>🍞 Pan</summary>
         <div class="guia-conservacion-content">
-          <p><strong>Nevera:</strong> <strong>Nunca guardes el pan en la heladera</strong>. El frío acelera su endurecimiento hasta 6 veces más rápido.</p>
-          <p><strong>Temperatura ambiente:</strong> Envuelto en un paño de cocina limpio o bolsa de tela, dura 2-3 días.</p>
-          <p><strong>Congelador:</strong> Córtalo en rebanadas y congela hasta 3 meses. Tuesta directo del congelador.</p>
+          <p>
+            <strong>Nevera:</strong> <strong>Nunca guardes el pan en la heladera</strong>. El frío
+            acelera su endurecimiento hasta 6 veces más rápido.
+          </p>
+          <p>
+            <strong>Temperatura ambiente:</strong> Envuelto en un paño de cocina limpio o bolsa de
+            tela, dura 2-3 días.
+          </p>
+          <p>
+            <strong>Congelador:</strong> Córtalo en rebanadas y congela hasta 3 meses. Tuesta
+            directo del congelador.
+          </p>
         </div>
       </details>
     </div>
@@ -83,10 +136,21 @@ import Layout from '../layouts/Layout.astro';
       <details>
         <summary>🥔 Papa</summary>
         <div class="guia-conservacion-content">
-          <p><strong>Nevera (crudas):</strong> No deben ir a la heladera. Guárdalas en un lugar oscuro, fresco y ventilado.</p>
-          <p><strong>Nevera (cocidas):</strong> En recipiente hermético por 3-4 días.</p>
-          <p><strong>Congelador:</strong> No se recomienda congelar papas crudas ni cocidas, pierden su textura.</p>
-          <p><strong>Truco:</strong> Si pelaste papas de más, sumérgelas en agua fría con limón para que no se oxiden.</p>
+          <p>
+            <strong>Nevera (crudas):</strong> No deben ir a la heladera. Guárdalas en un lugar
+            oscuro, fresco y ventilado.
+          </p>
+          <p>
+            <strong>Nevera (cocidas):</strong> En recipiente hermético por 3-4 días.
+          </p>
+          <p>
+            <strong>Congelador:</strong> No se recomienda congelar papas crudas ni cocidas, pierden
+            su textura.
+          </p>
+          <p>
+            <strong>Truco:</strong> Si pelaste papas de más, sumérgelas en agua fría con limón para
+            que no se oxiden.
+          </p>
         </div>
       </details>
     </div>
@@ -94,9 +158,18 @@ import Layout from '../layouts/Layout.astro';
       <details>
         <summary>🍚 Arroz</summary>
         <div class="guia-conservacion-content">
-          <p><strong>Nevera (cocido):</strong> No dejar a temperatura ambiente más de 1 hora. En la nevera dura máximo <strong>2 días</strong>.</p>
-          <p><strong>Congelador:</strong> El arroz cocido se congela hasta 1 mes en porciones individuales.</p>
-          <p><strong>Recalentar:</strong> Rocía unas gotas de agua y calienta tapado en microondas, o saltéalo con un poquito de aceite.</p>
+          <p>
+            <strong>Nevera (cocido):</strong> No dejar a temperatura ambiente más de 1 hora. En la
+            nevera dura máximo <strong>2 días</strong>.
+          </p>
+          <p>
+            <strong>Congelador:</strong> El arroz cocido se congela hasta 1 mes en porciones
+            individuales.
+          </p>
+          <p>
+            <strong>Recalentar:</strong> Rocía unas gotas de agua y calienta tapado en microondas, o
+            saltéalo con un poquito de aceite.
+          </p>
         </div>
       </details>
     </div>
@@ -104,8 +177,14 @@ import Layout from '../layouts/Layout.astro';
       <details>
         <summary>🌽 Choclo</summary>
         <div class="guia-conservacion-content">
-          <p><strong>Nevera:</strong> Con sus hojas, dura hasta 4 días en el cajón de verduras. Desgranado o cocido, máximo 2 días.</p>
-          <p><strong>Congelador:</strong> Desgranado o en trozos dura hasta 6 meses. Si lo congelas crudo, escáldalo 2 minutos antes.</p>
+          <p>
+            <strong>Nevera:</strong> Con sus hojas, dura hasta 4 días en el cajón de verduras.
+            Desgranado o cocido, máximo 2 días.
+          </p>
+          <p>
+            <strong>Congelador:</strong> Desgranado o en trozos dura hasta 6 meses. Si lo congelas
+            crudo, escáldalo 2 minutos antes.
+          </p>
         </div>
       </details>
     </div>
@@ -113,9 +192,15 @@ import Layout from '../layouts/Layout.astro';
       <details>
         <summary>🍲 Legumbres (Porotos, Lentejas)</summary>
         <div class="guia-conservacion-content">
-          <p><strong>Nevera (cocidas):</strong> Hasta 4 días en su propio caldo.</p>
-          <p><strong>Congelador:</strong> Hasta 3 meses. Congela en porciones con un poco de caldo.</p>
-          <p><strong>Crudas:</strong> Duran hasta 1 año en un frasco cerrado en la despensa.</p>
+          <p>
+            <strong>Nevera (cocidas):</strong> Hasta 4 días en su propio caldo.
+          </p>
+          <p>
+            <strong>Congelador:</strong> Hasta 3 meses. Congela en porciones con un poco de caldo.
+          </p>
+          <p>
+            <strong>Crudas:</strong> Duran hasta 1 año en un frasco cerrado en la despensa.
+          </p>
         </div>
       </details>
     </div>
@@ -123,9 +208,18 @@ import Layout from '../layouts/Layout.astro';
       <details>
         <summary>🥣 Salsas Caseras (Pebre, Salsa Americana)</summary>
         <div class="guia-conservacion-content">
-          <p><strong>Nevera:</strong> En frasco de vidrio cerrado duran de 3 a 4 días. El pebre perderá textura crujiente y soltará agua.</p>
-          <p><strong>Congelador:</strong> No se recomienda congelar salsas con mayonesa o tomate fresco, se separan los ingredientes.</p>
-          <p><strong>Truco:</strong> Para que el pebre dure un poco más, escúrrele el líquido y adereza de nuevo antes de servir.</p>
+          <p>
+            <strong>Nevera:</strong> En frasco de vidrio cerrado duran de 3 a 4 días. El pebre
+            perderá textura crujiente y soltará agua.
+          </p>
+          <p>
+            <strong>Congelador:</strong> No se recomienda congelar salsas con mayonesa o tomate
+            fresco, se separan los ingredientes.
+          </p>
+          <p>
+            <strong>Truco:</strong> Para que el pebre dure un poco más, escúrrele el líquido y
+            adereza de nuevo antes de servir.
+          </p>
         </div>
       </details>
     </div>
@@ -133,8 +227,14 @@ import Layout from '../layouts/Layout.astro';
       <details>
         <summary>🥚 Huevos</summary>
         <div class="guia-conservacion-content">
-          <p><strong>Nevera:</strong> Se guardan al fondo de la nevera, nunca en la puerta. Mantenlos en su caja con la punta ancha hacia arriba. Duran de 3 a 5 semanas.</p>
-          <p><strong>Congelador:</strong> No se pueden congelar con cáscara. Bate las claras o yemas y congela en cubetas de hielo.</p>
+          <p>
+            <strong>Nevera:</strong> Se guardan al fondo de la nevera, nunca en la puerta. Mantenlos
+            en su caja con la punta ancha hacia arriba. Duran de 3 a 5 semanas.
+          </p>
+          <p>
+            <strong>Congelador:</strong> No se pueden congelar con cáscara. Bate las claras o yemas
+            y congela en cubetas de hielo.
+          </p>
         </div>
       </details>
     </div>
@@ -142,8 +242,14 @@ import Layout from '../layouts/Layout.astro';
       <details>
         <summary>🎃 Zapallo</summary>
         <div class="guia-conservacion-content">
-          <p><strong>Nevera:</strong> Entero o en trozos pelados dura hasta 1 semana en el cajón de verduras.</p>
-          <p><strong>Congelador:</strong> El zapallo cocido y hecho puré se congela perfecto hasta por 6 meses. El crudo pierde textura.</p>
+          <p>
+            <strong>Nevera:</strong> Entero o en trozos pelados dura hasta 1 semana en el cajón de
+            verduras.
+          </p>
+          <p>
+            <strong>Congelador:</strong> El zapallo cocido y hecho puré se congela perfecto hasta
+            por 6 meses. El crudo pierde textura.
+          </p>
         </div>
       </details>
     </div>
@@ -151,8 +257,14 @@ import Layout from '../layouts/Layout.astro';
       <details>
         <summary>🧀 Queso</summary>
         <div class="guia-conservacion-content">
-          <p><strong>Nevera:</strong> Envuélvelo en papel mantequilla, nunca en film ajustado. Guárdalo en la parte menos fría.</p>
-          <p><strong>Congelador:</strong> El queso rallado se congela perfecto hasta 3 meses. El queso en bloque pierde textura.</p>
+          <p>
+            <strong>Nevera:</strong> Envuélvelo en papel mantequilla, nunca en film ajustado.
+            Guárdalo en la parte menos fría.
+          </p>
+          <p>
+            <strong>Congelador:</strong> El queso rallado se congela perfecto hasta 3 meses. El
+            queso en bloque pierde textura.
+          </p>
         </div>
       </details>
     </div>
@@ -160,8 +272,13 @@ import Layout from '../layouts/Layout.astro';
       <details>
         <summary>🍐 Frutas (Peras y Manzanas)</summary>
         <div class="guia-conservacion-content">
-          <p><strong>Nevera:</strong> En el cajón de verduras por 1 a 2 semanas.</p>
-          <p><strong>Truco:</strong> Si cortas una manzana o pera, rocía unas gotas de limón para evitar que se oxiden (se pongan negras).</p>
+          <p>
+            <strong>Nevera:</strong> En el cajón de verduras por 1 a 2 semanas.
+          </p>
+          <p>
+            <strong>Truco:</strong> Si cortas una manzana o pera, rocía unas gotas de limón para
+            evitar que se oxiden (se pongan negras).
+          </p>
         </div>
       </details>
     </div>
@@ -169,8 +286,14 @@ import Layout from '../layouts/Layout.astro';
       <details>
         <summary>🌾 Harina</summary>
         <div class="guia-conservacion-content">
-          <p><strong>Despensa:</strong> Guarda en lugar fresco, seco y oscuro. El mayor enemigo es el gorgojo.</p>
-          <p><strong>Truco:</strong> Para que dure meses sin insectos, guarda la harina en frasco de vidrio hermético con 1 o 2 hojas de laurel.</p>
+          <p>
+            <strong>Despensa:</strong> Guarda en lugar fresco, seco y oscuro. El mayor enemigo es el
+            gorgojo.
+          </p>
+          <p>
+            <strong>Truco:</strong> Para que dure meses sin insectos, guarda la harina en frasco de
+            vidrio hermético con 1 o 2 hojas de laurel.
+          </p>
         </div>
       </details>
     </div>
@@ -178,11 +301,15 @@ import Layout from '../layouts/Layout.astro';
       <details>
         <summary>🥛 Lácteos (Leche y Mantequilla)</summary>
         <div class="guia-conservacion-content">
-          <p><strong>Leche:</strong> Revisa la fecha. Abierta dura 3-4 días en la nevera, al fondo. Se puede congelar (sacando un poco del volumen).</p>
-          <p><strong>Mantequilla:</strong> En la nevera bien envuelta o congelada hasta por 6 meses.</p>
+          <p>
+            <strong>Leche:</strong> Revisa la fecha. Abierta dura 3-4 días en la nevera, al fondo.
+            Se puede congelar (sacando un poco del volumen).
+          </p>
+          <p>
+            <strong>Mantequilla:</strong> En la nevera bien envuelta o congelada hasta por 6 meses.
+          </p>
         </div>
       </details>
     </div>
   </main>
-
 </Layout>

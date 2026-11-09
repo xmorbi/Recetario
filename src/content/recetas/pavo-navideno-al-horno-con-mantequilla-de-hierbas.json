@@ -1,40 +1,12 @@
 {
   "titulo": "Pavo navideño al horno con mantequilla de hierbas",
   "categoria": "principales",
-  "tags": [
-    "pavo",
-    "navidad",
-    "horno",
-    "fiesta",
-    "tradicional"
-  ],
+  "tags": ["pavo", "navidad", "horno", "fiesta", "tradicional"],
   "imagen": null,
   "tiempo": "4 h + marinado",
   "porciones": "10 a 12 personas",
   "dificultad": "alta",
   "tecnica": "Horno",
-  "ingredientes": [
-    "1 pavo entero de 5 a 6 kg",
-    "1 taza de mantequilla a temperatura ambiente",
-    "4 dientes de ajo machacados",
-    "2 cucharadas de orégano",
-    "1 cucharada de tomillo",
-    "1 cucharada de romero",
-    "Sal y pimienta",
-    "2 cebollas en cuartos",
-    "2 zanahorias en trozos",
-    "1 taza de vino blanco",
-    "1 taza de caldo de pollo"
-  ],
-  "pasos": [
-    "Mezcla la mantequilla con el ajo, orégano, tomillo y romero. Unta el pavo por dentro y por fuera, y sazona con sal y pimienta.",
-    "Marina en frío al menos 12 horas (mejor 24), cubierto con papel plástico.",
-    "Precalienta el horno a 180 °C. Rellena la cavidad del pavo con la cebolla y la zanahoria.",
-    "Pon el pavo en una fuente para horno y vierte el vino y el caldo. Cubre con papel aluminio.",
-    "Hornea 2 horas cubierto, bañándolo cada 30 minutos con su jugo.",
-    "Retira el aluminio y hornea 1 hora más a 180 °C, hasta que la piel esté dorada y crujiente. El pavo está listo cuando el jugo sale claro al pinchar la parte más gruesa.",
-    "Deja reposar 20 minutos antes de cortar. Sirve con su jugo y las verduras asadas."
-  ],
   "dato": "El pavo navideño es el plato central de la Navidad chilena. La mantequilla con hierbas y el marinado largo son la clave para que quede jugoso. En Chile se suele servir con papas duquesas, ensalada a la chilena y pan de Pascua de postre.",
   "errores": [
     {
@@ -51,9 +23,6 @@
     "congelador": "Hasta 3 meses en porciones.",
     "recalentar": "Horno a 160 °C por 20 minutos, cubierto con aluminio y bañado con su jugo."
   },
-  "timers": [
-    { "paso": 7, "minutos": 20, "etiqueta": "20 min" }
-  ],
   "ingredientes_v2": [
     {
       "cantidad": 1,
@@ -141,19 +110,28 @@
     {
       "texto": "Hornea 2 horas cubierto, bañándolo cada 30 minutos con su jugo.",
       "timers": [
-        { "minutos": 120, "etiqueta": "120 min" }
+        {
+          "minutos": 120,
+          "etiqueta": "120 min"
+        }
       ]
     },
     {
       "texto": "Retira el aluminio y hornea 1 hora más a 180 °C, hasta que la piel esté dorada y crujiente. El pavo está listo cuando el jugo sale claro al pinchar la parte más gruesa.",
       "timers": [
-        { "minutos": 60, "etiqueta": "60 min" }
+        {
+          "minutos": 60,
+          "etiqueta": "60 min"
+        }
       ]
     },
     {
       "texto": "Deja reposar 20 minutos antes de cortar. Sirve con su jugo y las verduras asadas.",
       "timers": [
-        { "minutos": 20, "etiqueta": "20 min" }
+        {
+          "minutos": 20,
+          "etiqueta": "20 min"
+        }
       ]
     }
   ],

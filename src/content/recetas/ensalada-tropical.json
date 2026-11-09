@@ -15,21 +15,6 @@
   "porciones": "4 a 6 personas",
   "dificultad": "fácil",
   "tecnica": "Sin cocción",
-  "ingredientes": [
-    "1 lechuga",
-    "2 naranjas medianas",
-    "1/2 piña",
-    "2 manzanas",
-    "1/2 taza (125 g) de mayonesa delgada (mezclada con un poco de jugo de limón)",
-    "2 cucharadas (30 g) de crema"
-  ],
-  "pasos": [
-    "Lavar bien la lechuga y cortarla en trozos pequeños.",
-    "Pelar las naranjas y separar los gajos.",
-    "Pelar las manzanas y picarlas en cubos pequeños.",
-    "Picar la piña en cubos y dejar reposando con jugo de limón por 1 hora.",
-    "Unir todos los ingredientes, revolver con la mayonesa sazonada y la crema."
-  ],
   "dato": "La mayonesa delgada se prepara mezclando mayonesa con un poco de jugo de limón o agua. El reposo de la piña con limón suaviza su acidez. Es una ensalada de frutas típica de las celebraciones chilenas, sobre todo en verano.",
   "errores": [
     {
@@ -88,27 +73,19 @@
   "pasos_v2": [
     {
       "texto": "Lavar bien la lechuga y cortarla en trozos pequeños.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Pelar las naranjas y separar los gajos.",
-      "ingredientes": [
-        2
-      ]
+      "ingredientes": [2]
     },
     {
       "texto": "Pelar las manzanas y picarlas en cubos pequeños.",
-      "ingredientes": [
-        4
-      ]
+      "ingredientes": [4]
     },
     {
       "texto": "Picar la piña en cubos y dejar reposando con jugo de limón por 1 hora.",
-      "ingredientes": [
-        3
-      ],
+      "ingredientes": [3],
       "timers": [
         {
           "minutos": 60,
@@ -118,10 +95,7 @@
     },
     {
       "texto": "Unir todos los ingredientes, revolver con la mayonesa sazonada y la crema.",
-      "ingredientes": [
-        5,
-        6
-      ]
+      "ingredientes": [5, 6]
     }
   ],
   "tiempo_v2": {

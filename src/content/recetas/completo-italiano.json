@@ -1,37 +1,12 @@
 {
   "titulo": "Completo italiano",
   "categoria": "sandwiches",
-  "tags": [
-    "completo",
-    "sándwich",
-    "callejero",
-    "italiano",
-    "palta",
-    "tomate",
-    "once"
-  ],
+  "tags": ["completo", "sándwich", "callejero", "italiano", "palta", "tomate", "once"],
   "imagen": null,
   "tiempo": "15 min",
   "porciones": "2 completos",
   "dificultad": "fácil",
   "tecnica": "Sin cocción",
-  "ingredientes": [
-    "2 panes de completo (alargados, tipo marraqueta alargada)",
-    "2 vienesas de buena calidad",
-    "1 palta Hass madura",
-    "2 tomates maduros",
-    "Mayonesa casera o de buena calidad",
-    "Sal, limón y aceite (opcional para la palta)"
-  ],
-  "pasos": [
-    "Cuece las vienesas en agua hirviendo 5 minutos, o ásalas en la plancha hasta que doren. La vienesa hervida es la del carrito; la asada es la de la casa.",
-    "Calienta el pan en el horno o plancha 2 minutos por lado: debe quedar crujiente por fuera y suave por dentro.",
-    "Prepara la palta: pisa con tenedor, agrega sal, unas gotas de limón y un chorrito de aceite. Cremosa, pero no líquida.",
-    "Corta el tomate en cubos pequeños y sala ligeramente justo antes de armar. Si lo salas antes, suelta agua y arruina el pan.",
-    "Abre el pan por la mitad, sin llegar al fondo. Pon la vienesa.",
-    "Agrega primero la palta, luego el tomate, y por último la mayonesa en línea (no revuelvas).",
-    "Sirve inmediatamente, con servilletas."
-  ],
   "dato": "El \"italiano\" nace en el Hoyo de la Luna, un local nocturno del centro de Santiago en los años 70. El nombre viene de los colores de los ingredientes: verde (palta), blanco (mayonesa), rojo (tomate) — la bandera italiana. Existen variantes: el \"dinámico\" es palta + tomate, el \"aliado\" es solo mayonesa, el \"completo\" lleva todo lo anterior más chucrut y americana, el \"as\" es solo vienesa.",
   "errores": [
     {
@@ -98,11 +73,7 @@
   "pasos_v2": [
     {
       "texto": "Cuece las vienesas en agua hirviendo 5 minutos, o ásalas en la plancha hasta que doren. La vienesa hervida es la del carrito; la asada es la de la casa.",
-      "ingredientes": [
-        2,
-        3,
-        6
-      ],
+      "ingredientes": [2, 3, 6],
       "timers": [
         {
           "minutos": 5,
@@ -112,9 +83,7 @@
     },
     {
       "texto": "Calienta el pan en el horno o plancha 2 minutos por lado: debe quedar crujiente por fuera y suave por dentro.",
-      "ingredientes": [
-        1
-      ],
+      "ingredientes": [1],
       "timers": [
         {
           "minutos": 2,
@@ -124,33 +93,19 @@
     },
     {
       "texto": "Prepara la palta: pisa con tenedor, agrega sal, unas gotas de limón y un chorrito de aceite. Cremosa, pero no líquida.",
-      "ingredientes": [
-        3,
-        6
-      ]
+      "ingredientes": [3, 6]
     },
     {
       "texto": "Corta el tomate en cubos pequeños y sala ligeramente justo antes de armar. Si lo salas antes, suelta agua y arruina el pan.",
-      "ingredientes": [
-        1,
-        4,
-        6
-      ]
+      "ingredientes": [1, 4, 6]
     },
     {
       "texto": "Abre el pan por la mitad, sin llegar al fondo. Pon la vienesa.",
-      "ingredientes": [
-        1,
-        2
-      ]
+      "ingredientes": [1, 2]
     },
     {
       "texto": "Agrega primero la palta, luego el tomate, y por último la mayonesa en línea (no revuelvas).",
-      "ingredientes": [
-        3,
-        4,
-        5
-      ]
+      "ingredientes": [3, 4, 5]
     },
     {
       "texto": "Sirve inmediatamente, con servilletas."

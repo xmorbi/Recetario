@@ -1,32 +1,12 @@
 {
   "titulo": "Huevos revueltos",
   "categoria": "once",
-  "tags": [
-    "once",
-    "huevo",
-    "desayuno",
-    "simple",
-    "cotidiano"
-  ],
+  "tags": ["once", "huevo", "desayuno", "simple", "cotidiano"],
   "imagen": null,
   "tiempo": "10 min",
   "porciones": "2 personas",
   "dificultad": "muy fácil",
   "tecnica": "Sartén",
-  "ingredientes": [
-    "4 huevos",
-    "2 cucharadas de mantequilla",
-    "2 cucharadas de leche",
-    "Sal y pimienta",
-    "Opcional: cebollín picado, queso rallado"
-  ],
-  "pasos": [
-    "Bate los huevos con la leche, sal y pimienta.",
-    "Calienta la mantequilla en una sartén a fuego medio-bajo.",
-    "Vierte los huevos y revuelve suavemente con una espátula.",
-    "Cocina 2-3 minutos, hasta que estén cuajados pero aún cremosos. No los cocines de más.",
-    "Sirve con pan tostado."
-  ],
   "dato": "Los huevos revueltos son el desayuno más rápido y rico de Chile. Se hacen con mantequilla, leche y sal. El secreto es cocinarlos a fuego bajo y no dejar que se sequen. Se pueden hacer con cebollín, queso o jamón.",
   "errores": [
     {
@@ -81,23 +61,15 @@
   "pasos_v2": [
     {
       "texto": "Bate los huevos con la leche, sal y pimienta.",
-      "ingredientes": [
-        1,
-        3,
-        4
-      ]
+      "ingredientes": [1, 3, 4]
     },
     {
       "texto": "Calienta la mantequilla en una sartén a fuego medio-bajo.",
-      "ingredientes": [
-        2
-      ]
+      "ingredientes": [2]
     },
     {
       "texto": "Vierte los huevos y revuelve suavemente con una espátula.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Cocina 2-3 minutos, hasta que estén cuajados pero aún cremosos. No los cocines de más.",

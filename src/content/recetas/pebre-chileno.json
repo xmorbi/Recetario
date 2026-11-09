@@ -1,36 +1,12 @@
 {
   "titulo": "Pebre chileno",
   "categoria": "ensaladas",
-  "tags": [
-    "salsa",
-    "picoteo",
-    "acompañamiento",
-    "fresco",
-    "tradicional",
-    "ensalada"
-  ],
+  "tags": ["salsa", "picoteo", "acompañamiento", "fresco", "tradicional", "ensalada"],
   "imagen": "img/Pebre-chileno.jpg",
   "tiempo": "15 min",
   "porciones": "4 personas",
   "dificultad": "muy fácil",
   "tecnica": "Sin cocción",
-  "ingredientes": [
-    "1 tomate grande maduro, picado en cubos pequeños",
-    "1 cebolla mediana, picada en cubos pequeños",
-    "1 diente de ajo picado muy fino",
-    "3 cucharadas de perejil fresco picado",
-    "3 cucharadas de cilantro fresco picado",
-    "1 trozo de ají verde picado (opcional)",
-    "2 cucharadas de aceite de oliva",
-    "Sal y pimienta al gusto"
-  ],
-  "pasos": [
-    "Pica todos los ingredientes en cubos muy pequeños y uniformes.",
-    "En un bol, mezcla el tomate, la cebolla, el ajo, el perejil, el cilantro y el ají.",
-    "Condimenta con el aceite de oliva, la sal y la pimienta. Mezcla bien.",
-    "Deja reposar por al menos 15 minutos para que los sabores se integren.",
-    "Sirve con pan amasado, marraqueta o como acompañamiento de carnes."
-  ],
   "dato": "El pebre es el acompañamiento más popular de la mesa chilena. Se sirve en todas las casas, especialmente en las once y en los asados.",
   "errores": [
     {
@@ -114,21 +90,11 @@
     },
     {
       "texto": "En un bol, mezcla el tomate, la cebolla, el ajo, el perejil, el cilantro y el ají.",
-      "ingredientes": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ]
+      "ingredientes": [1, 2, 3, 4, 5, 6]
     },
     {
       "texto": "Condimenta con el aceite de oliva, la sal y la pimienta. Mezcla bien.",
-      "ingredientes": [
-        7,
-        8
-      ]
+      "ingredientes": [7, 8]
     },
     {
       "texto": "Deja reposar por al menos 15 minutos para que los sabores se integren.",

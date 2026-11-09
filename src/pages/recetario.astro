@@ -2,8 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Todas las recetas" description="Explora todas las recetas tradicionales chilenas: platos de fondo, sopas, masas, ensaladas, dulces y bebidas." activePage="recetas">
-
+<Layout
+  title="Todas las recetas"
+  description="Explora todas las recetas tradicionales chilenas: platos de fondo, sopas, masas, ensaladas, dulces y bebidas."
+  activePage="recetas"
+>
   <header class="hero-receta">
     <div class="hero-receta-inner">
       <h1>Todas las recetas</h1>
@@ -13,81 +16,219 @@ import Layout from '../layouts/Layout.astro';
   <div class="controles">
     <div class="inner">
       <div class="buscador-wrap">
-        <svg class="lupa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-        <input type="text" id="buscador" autocomplete="off" placeholder="Buscar receta o ingrediente…" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="buscador-sugerencias">
-        <button class="limpiar" id="limpiarBuscador" hidden title="Limpiar búsqueda" aria-label="Limpiar búsqueda">×</button>
+        <svg
+          class="lupa"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input
+          type="text"
+          id="buscador"
+          autocomplete="off"
+          placeholder="Buscar receta o ingrediente…"
+          role="combobox"
+          aria-autocomplete="list"
+          aria-expanded="false"
+          aria-controls="buscador-sugerencias"
+        />
+        <button
+          class="limpiar"
+          id="limpiarBuscador"
+          hidden
+          title="Limpiar búsqueda"
+          aria-label="Limpiar búsqueda"
+        >
+          ×
+        </button>
         <ul id="buscador-sugerencias" class="ac-dropdown" hidden></ul>
       </div>
-      <button type="button" class="btn-despensa" id="btnDespensa">🥕 ¿Qué tenemos?</button>
+      <button type="button" class="btn-despensa" id="btnDespensa">
+        🥕 ¿Qué tenemos?
+      </button>
       <div class="filtros-scroll">
-        <button class="filtro activo" data-cat="todas">Todas</button>
-        <button class="filtro" data-cat="principales">Platos de fondo</button>
-        <button class="filtro" data-cat="sopas">Sopas y guisos</button>
-        <button class="filtro" data-cat="panes">Masas y horneados</button>
-        <button class="filtro" data-cat="ensaladas">Ensaladas y picoteo</button>
-        <button class="filtro" data-cat="dulces">Dulces</button>
-        <button class="filtro" data-cat="bebidas">Bebidas</button>
-        <button class="filtro" data-cat="once">Once</button>
-        <button class="filtro" data-cat="sandwiches">Sándwiches</button>
-        <button class="filtro" data-cat="mar">Del mar</button>
-        <button class="filtro filtro-once" data-cat="modo-once" title="Panes + once + sándwiches juntos">🧉 Modo Once</button>
+        <button class="filtro activo" data-cat="todas">
+          Todas
+        </button>
+        <button class="filtro" data-cat="principales">
+          Platos de fondo
+        </button>
+        <button class="filtro" data-cat="sopas">
+          Sopas y guisos
+        </button>
+        <button class="filtro" data-cat="panes">
+          Masas y horneados
+        </button>
+        <button class="filtro" data-cat="ensaladas">
+          Ensaladas y picoteo
+        </button>
+        <button class="filtro" data-cat="dulces">
+          Dulces
+        </button>
+        <button class="filtro" data-cat="bebidas">
+          Bebidas
+        </button>
+        <button class="filtro" data-cat="once">
+          Once
+        </button>
+        <button class="filtro" data-cat="sandwiches">
+          Sándwiches
+        </button>
+        <button class="filtro" data-cat="mar">
+          Del mar
+        </button>
+        <button
+          class="filtro filtro-once"
+          data-cat="modo-once"
+          title="Panes + once + sándwiches juntos"
+        >
+          🧉 Modo Once
+        </button>
       </div>
-      <button type="button" class="filtro-avanzado-toggle" id="btnFiltrosAvanzados" aria-expanded="false">⚙️ Más filtros</button>
+      <button
+        type="button"
+        class="filtro-avanzado-toggle"
+        id="btnFiltrosAvanzados"
+        aria-expanded="false"
+      >
+        ⚙️ Más filtros
+      </button>
 
       <div class="filtros-avanzados" id="filtrosAvanzados" hidden>
         <div class="filtro-grupo">
           <span class="filtro-grupo-titulo">⏱ Tiempo</span>
-          <button type="button" class="filtro-chip" data-tiempo="30">≤ 30 min</button>
-          <button type="button" class="filtro-chip" data-tiempo="60">≤ 1 hora</button>
-          <button type="button" class="filtro-chip" data-tiempo="9999">Sin límite</button>
+          <button type="button" class="filtro-chip" data-tiempo="30">
+            ≤ 30 min
+          </button>
+          <button type="button" class="filtro-chip" data-tiempo="60">
+            ≤ 1 hora
+          </button>
+          <button type="button" class="filtro-chip" data-tiempo="9999">
+            Sin límite
+          </button>
         </div>
         <div class="filtro-grupo">
           <span class="filtro-grupo-titulo">🎯 Dificultad</span>
-          <button type="button" class="filtro-chip" data-dificultad="muy fácil">Muy fácil</button>
-          <button type="button" class="filtro-chip" data-dificultad="fácil">Fácil</button>
-          <button type="button" class="filtro-chip" data-dificultad="media">Media</button>
-          <button type="button" class="filtro-chip" data-dificultad="alta">Alta</button>
+          <button type="button" class="filtro-chip" data-dificultad="muy fácil">
+            Muy fácil
+          </button>
+          <button type="button" class="filtro-chip" data-dificultad="fácil">
+            Fácil
+          </button>
+          <button type="button" class="filtro-chip" data-dificultad="media">
+            Media
+          </button>
+          <button type="button" class="filtro-chip" data-dificultad="alta">
+            Alta
+          </button>
         </div>
 
         <div class="filtro-grupo">
-          <span class="filtro-grupo-titulo">🌱 Tipo <span style="font-size:0.7rem; font-weight:normal; text-transform:none; color:var(--suave);">(Puedes elegir más de una)</span></span>
-          <button type="button" class="filtro-chip" data-tipo="vegetariano">Vegetariano</button>
-          <button type="button" class="filtro-chip" data-tipo="vegano">Vegano</button>
-          <button type="button" class="filtro-chip" data-tipo="sin-horno">Sin horno</button>
+          <span class="filtro-grupo-titulo">
+            🌱 Tipo{' '}
+            <span style="font-size:0.7rem; font-weight:normal; text-transform:none; color:var(--suave);">
+              (Puedes elegir más de una)
+            </span>
+          </span>
+          <button type="button" class="filtro-chip" data-tipo="vegetariano">
+            Vegetariano
+          </button>
+          <button type="button" class="filtro-chip" data-tipo="vegano">
+            Vegano
+          </button>
+          <button type="button" class="filtro-chip" data-tipo="sin-horno">
+            Sin horno
+          </button>
         </div>
-        <p class="filtro-aviso" style="font-size:0.78rem; color:var(--suave); margin:-0.25rem 0 1rem; padding:0 0.25rem; line-height:1.4;">Sugerencias según los ingredientes publicados. Si tienes alergias, revisa siempre la lista completa.</p>
+        <p
+          class="filtro-aviso"
+          style="font-size:0.78rem; color:var(--suave); margin:-0.25rem 0 1rem; padding:0 0.25rem; line-height:1.4;"
+        >
+          Sugerencias según los ingredientes publicados. Si tienes alergias, revisa siempre la lista
+          completa.
+        </p>
 
         <div class="filtro-grupo">
-          <span class="filtro-grupo-titulo">🎉 Ocasión <span style="font-size:0.7rem; font-weight:normal; text-transform:none; color:var(--suave);">(Puedes elegir más de una)</span></span>
-          <button type="button" class="filtro-chip" data-ocasion="once">Once</button>
-          <button type="button" class="filtro-chip" data-ocasion="fiestas patrias">Fiestas Patrias</button>
-          <button type="button" class="filtro-chip" data-ocasion="navidad">Navidad</button>
-          <button type="button" class="filtro-chip" data-ocasion="verano">Verano</button>
-          <button type="button" class="filtro-chip" data-ocasion="invierno">Invierno</button>
+          <span class="filtro-grupo-titulo">
+            🎉 Ocasión{' '}
+            <span style="font-size:0.7rem; font-weight:normal; text-transform:none; color:var(--suave);">
+              (Puedes elegir más de una)
+            </span>
+          </span>
+          <button type="button" class="filtro-chip" data-ocasion="once">
+            Once
+          </button>
+          <button type="button" class="filtro-chip" data-ocasion="fiestas patrias">
+            Fiestas Patrias
+          </button>
+          <button type="button" class="filtro-chip" data-ocasion="navidad">
+            Navidad
+          </button>
+          <button type="button" class="filtro-chip" data-ocasion="verano">
+            Verano
+          </button>
+          <button type="button" class="filtro-chip" data-ocasion="invierno">
+            Invierno
+          </button>
         </div>
-        <button type="button" class="filtro-limpiar" id="btnLimpiarFiltros">Limpiar filtros</button>
+        <button type="button" class="filtro-limpiar" id="btnLimpiarFiltros">
+          Limpiar filtros
+        </button>
       </div>
     </div>
   </div>
 
   <main>
     <div class="modo-once-banner" id="modoOnceBanner" hidden>
-      <span class="modo-once-icon" aria-hidden="true">🧉</span>
+      <span class="modo-once-icon" aria-hidden="true">
+        🧉
+      </span>
       <div class="modo-once-texto">
         <strong>Modo Once activado</strong>
-        <p>Todo lo que se sirve cuando cae el sol: panes, once y sándwiches. La hora del té como corresponde.</p>
+        <p>
+          Todo lo que se sirve cuando cae el sol: panes, once y sándwiches. La hora del té como
+          corresponde.
+        </p>
       </div>
-      <a href="/recetario/" class="modo-once-cerrar">Salir del modo once</a>
+      <a href="/recetario/" class="modo-once-cerrar">
+        Salir del modo once
+      </a>
     </div>
 
-    <div id="filtros-activos-container" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;"></div>
+    <div
+      id="filtros-activos-container"
+      style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;"
+    ></div>
     <p class="contador" id="contador" aria-live="polite"></p>
     <div id="contenedorRecetas"></div>
 
     <div class="vacio" id="sinResultados" hidden>
-      <svg class="vacio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg>
-      <p id="mensaje-vacio-texto" style="margin-bottom: 1rem; font-weight: 500;">No encontramos recetas con ese criterio.</p>
-      <button class="btn-limpiar" id="limpiarVacio">Limpiar todos los filtros</button>
+      <svg
+        class="vacio-icon"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <circle cx="12" cy="12" r="10" />
+        <circle cx="12" cy="12" r="4" />
+      </svg>
+      <p id="mensaje-vacio-texto" style="margin-bottom: 1rem; font-weight: 500;">
+        No encontramos recetas con ese criterio.
+      </p>
+      <button class="btn-limpiar" id="limpiarVacio">
+        Limpiar todos los filtros
+      </button>
     </div>
   </main>
 
@@ -95,16 +236,31 @@ import Layout from '../layouts/Layout.astro';
     <div class="modal-despensa">
       <div class="modal-header">
         <h2>¿Qué hay en tu cocina?</h2>
-        <button type="button" class="modal-close" id="cerrarDespensa" aria-label="Cerrar">✕</button>
+        <button type="button" class="modal-close" id="cerrarDespensa" aria-label="Cerrar">
+          ✕
+        </button>
       </div>
-      <p class="modal-desc">Escribe para buscar, o desplázate para elegir los ingredientes que tengas a mano. Te mostraremos qué recetas puedes cocinar hoy.</p>
+      <p class="modal-desc">
+        Escribe para buscar, o desplázate para elegir los ingredientes que tengas a mano. Te
+        mostraremos qué recetas puedes cocinar hoy.
+      </p>
       <div class="despensa-buscar-wrap">
-        <input type="search" id="buscarDespensa" placeholder="Filtrar ingredientes…" aria-label="Filtrar ingredientes de la despensa" autocomplete="off">
+        <input
+          type="search"
+          id="buscarDespensa"
+          placeholder="Filtrar ingredientes…"
+          aria-label="Filtrar ingredientes de la despensa"
+          autocomplete="off"
+        />
       </div>
       <div class="despensa-grid" id="listaDespensa"></div>
       <div class="modal-footer">
-        <button type="button" class="btn-limpiar-despensa" id="limpiarDespensa">Limpiar</button>
-        <button type="button" class="btn-aplicar-despensa" id="aplicarDespensa">Ver recetas</button>
+        <button type="button" class="btn-limpiar-despensa" id="limpiarDespensa">
+          Limpiar
+        </button>
+        <button type="button" class="btn-aplicar-despensa" id="aplicarDespensa">
+          Ver recetas
+        </button>
       </div>
     </div>
   </div>
@@ -113,23 +269,20 @@ import Layout from '../layouts/Layout.astro';
     FASE 4A (deuda D3): ELIMINADO <script is:inline src="/modo-cocina.js"></script>.
     Esta página no tiene ni #receta-data ni .btn-modo-cocina, así que modo-cocina.js
     (≈30 KB) solo se descargaba, parseaba y abortaba por guards. Peso muerto.
-
-    Nota: favoritos.js y app.js se mantienen en orden porque app.js necesita
-    exponer window.crearTarjetaGlobal antes de que favoritos.js lo consuma.
   -->
-  <script is:inline src="/app.js"></script>
   <script>
+    import '../scripts/app.js';
     import '../scripts/favoritos.js';
   </script>
 
   <script is:inline>
     window.RECETAS = [];
     fetch('/api/recetas.json')
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         window.RECETAS = data;
         document.dispatchEvent(new Event('recetas-listas'));
       })
-      .catch(err => console.error('Error cargando recetas:', err));
+      .catch((err) => console.error('Error cargando recetas:', err));
   </script>
 </Layout>

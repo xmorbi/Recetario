@@ -1,37 +1,12 @@
 {
   "titulo": "Carne mechada",
   "categoria": "principales",
-  "tags": [
-    "carne",
-    "olla",
-    "plato principal",
-    "sandwich",
-    "guiso",
-    "vacuno"
-  ],
+  "tags": ["carne", "olla", "plato principal", "sandwich", "guiso", "vacuno"],
   "imagen": "img/carne-mechada.jpg",
   "tiempo": "2 h 30 min",
   "porciones": "4 a 6 personas",
   "dificultad": "media",
   "tecnica": "Olla",
-  "ingredientes": [
-    "1 kg de posta negra o pollo ganso (corte para mechar)",
-    "1 zanahoria grande en bastones",
-    "2 cebollas cortadas en pluma",
-    "2 dientes de ajo",
-    "1 pimentón rojo en tiras",
-    "1 taza (250 ml) de vino tinto (opcional)",
-    "1 taza (250 ml) de caldo de carne",
-    "Aceite, sal, pimienta, orégano y comino"
-  ],
-  "pasos": [
-    "Sazona la carne con sal, pimienta y comino. En una olla grande, sella la carne en aceite caliente hasta que dore por todos lados.",
-    "Agrega la cebolla, el ajo y el pimentón. Sofríe por unos minutos.",
-    "Incorpora el vino tinto (si usas) y deja evaporar un poco. Luego agrega el caldo de carne y los bastones de zanahoria.",
-    "Tapa la olla y cocina a fuego lento por 2 horas, hasta que la carne se deshaga fácilmente con un tenedor.",
-    "Retira la carne, desmenúzala con dos tenedores y devuélvela a la olla para que se mezcle con la salsa.",
-    "Sirve con puré, arroz o en un sándwich."
-  ],
   "dato": "La carne mechada es un clásico de la cocina chilena de olla. Se usa en sándwiches, empanadas y guisos. Ojo: el Barros Luco se hace con churrasco de vacuno y queso, y el Barros Jarpa con jamón y queso. La carne mechada va en preparaciones como el sándwich \"mechada\" o el \"as\" callejero, y también en empanadas de pino.",
   "errores": [
     {
@@ -112,36 +87,19 @@
   "pasos_v2": [
     {
       "texto": "Sazona la carne con sal, pimienta y comino. En una olla grande, sella la carne en aceite caliente hasta que dore por todos lados.",
-      "ingredientes": [
-        1,
-        7,
-        8
-      ]
+      "ingredientes": [1, 7, 8]
     },
     {
       "texto": "Agrega la cebolla, el ajo y el pimentón. Sofríe por unos minutos.",
-      "ingredientes": [
-        3,
-        4,
-        5,
-        8
-      ]
+      "ingredientes": [3, 4, 5, 8]
     },
     {
       "texto": "Incorpora el vino tinto (si usas) y deja evaporar un poco. Luego agrega el caldo de carne y los bastones de zanahoria.",
-      "ingredientes": [
-        1,
-        2,
-        6,
-        7
-      ]
+      "ingredientes": [1, 2, 6, 7]
     },
     {
       "texto": "Tapa la olla y cocina a fuego lento por 2 horas, hasta que la carne se deshaga fácilmente con un tenedor.",
-      "ingredientes": [
-        1,
-        7
-      ],
+      "ingredientes": [1, 7],
       "timers": [
         {
           "minutos": 120,
@@ -151,11 +109,7 @@
     },
     {
       "texto": "Retira la carne, desmenúzala con dos tenedores y devuélvela a la olla para que se mezcle con la salsa.",
-      "ingredientes": [
-        1,
-        7,
-        8
-      ]
+      "ingredientes": [1, 7, 8]
     },
     {
       "texto": "Sirve con puré, arroz o en un sándwich."

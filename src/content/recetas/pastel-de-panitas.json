@@ -1,38 +1,12 @@
 {
   "titulo": "Pastel de Panitas",
   "categoria": "principales",
-  "tags": [
-    "pastel de panitas",
-    "panitas",
-    "pollo",
-    "horno",
-    "aves"
-  ],
+  "tags": ["pastel de panitas", "panitas", "pollo", "horno", "aves"],
   "imagen": null,
   "tiempo": "50 min",
   "porciones": "4 a 6 personas",
   "dificultad": "media",
   "tecnica": "Horno",
-  "ingredientes": [
-    "1/4 kg de panitas de pollo",
-    "3 huevos",
-    "1/2 cebolla",
-    "1/2 taza de miga de pan",
-    "2 1/2 cucharadas de mantequilla",
-    "1/2 vaso de leche",
-    "1 cucharada de perejil picado",
-    "Sal",
-    "Pimienta"
-  ],
-  "pasos": [
-    "Limpiar y lavar muy bien las panitas de pollo.",
-    "Remojar la miga de pan con la leche.",
-    "Freír la cebolla picada fina en la mantequilla hasta que esté transparente.",
-    "Agregar las panitas y cocinar hasta que estén doradas.",
-    "Mezclar con la miga de pan remojada (estrujada), los huevos batidos, el perejil, sal y pimienta.",
-    "Poner la mezcla en un molde enmantequillado.",
-    "Hornear a horno medio hasta que cuaje y se dore."
-  ],
   "dato": "El PDF corta la preparación en \"En la...\". Se completó con el procedimiento típico de un pastel de panitas usando los ingredientes listados.",
   "errores": [
     {
@@ -106,47 +80,27 @@
   "pasos_v2": [
     {
       "texto": "Limpiar y lavar muy bien las panitas de pollo.",
-      "ingredientes": [
-        1,
-        4
-      ]
+      "ingredientes": [1, 4]
     },
     {
       "texto": "Remojar la miga de pan con la leche.",
-      "ingredientes": [
-        4,
-        6
-      ]
+      "ingredientes": [4, 6]
     },
     {
       "texto": "Freír la cebolla picada fina en la mantequilla hasta que esté transparente.",
-      "ingredientes": [
-        3,
-        5
-      ]
+      "ingredientes": [3, 5]
     },
     {
       "texto": "Agregar las panitas y cocinar hasta que estén doradas.",
-      "ingredientes": [
-        1,
-        4
-      ]
+      "ingredientes": [1, 4]
     },
     {
       "texto": "Mezclar con la miga de pan remojada (estrujada), los huevos batidos, el perejil, sal y pimienta.",
-      "ingredientes": [
-        2,
-        4,
-        7,
-        8,
-        9
-      ]
+      "ingredientes": [2, 4, 7, 8, 9]
     },
     {
       "texto": "Poner la mezcla en un molde enmantequillado.",
-      "ingredientes": [
-        5
-      ]
+      "ingredientes": [5]
     },
     {
       "texto": "Hornear a horno medio hasta que cuaje y se dore."

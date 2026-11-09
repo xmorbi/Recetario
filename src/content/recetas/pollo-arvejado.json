@@ -1,34 +1,12 @@
 {
   "titulo": "Pollo arvejado",
   "categoria": "principales",
-  "tags": [
-    "pollo",
-    "guiso",
-    "olla",
-    "arvejas",
-    "plato principal"
-  ],
+  "tags": ["pollo", "guiso", "olla", "arvejas", "plato principal"],
   "imagen": "img/pollo-arvejado.jpg",
   "tiempo": "60 min",
   "porciones": "4 personas",
   "dificultad": "fácil",
   "tecnica": "Olla",
-  "ingredientes": [
-    "1,3 kg de trutros de pollo",
-    "300 g de arvejas congeladas",
-    "2 zanahorias, 1 cebolla, 1 pimentón rojo",
-    "3 dientes de ajo",
-    "150 ml de vino blanco",
-    "200 ml de caldo de pollo",
-    "Orégano, comino, laurel, sal, pimienta y perejil"
-  ],
-  "pasos": [
-    "Sella el pollo condimentado. Retira y reserva.",
-    "Sofríe cebolla, zanahoria, pimentón y ajo en la misma olla.",
-    "Devuelve el pollo, agrega el vino, el caldo, orégano y laurel. Tapa y cocina 25 min.",
-    "Añade las arvejas congeladas y cocina 5 min más.",
-    "Sirve con perejil fresco y acompaña con arroz o papas."
-  ],
   "dato": "Las arvejas se agregan al final para que conserven su color verde vivo.",
   "errores": [
     {
@@ -106,28 +84,15 @@
   "pasos_v2": [
     {
       "texto": "Sella el pollo condimentado. Retira y reserva.",
-      "ingredientes": [
-        1,
-        8
-      ]
+      "ingredientes": [1, 8]
     },
     {
       "texto": "Sofríe cebolla, zanahoria, pimentón y ajo en la misma olla.",
-      "ingredientes": [
-        3,
-        4,
-        5,
-        6
-      ]
+      "ingredientes": [3, 4, 5, 6]
     },
     {
       "texto": "Devuelve el pollo, agrega el vino, el caldo, orégano y laurel. Tapa y cocina 25 min.",
-      "ingredientes": [
-        1,
-        7,
-        8,
-        9
-      ],
+      "ingredientes": [1, 7, 8, 9],
       "timers": [
         {
           "minutos": 25,
@@ -137,9 +102,7 @@
     },
     {
       "texto": "Añade las arvejas congeladas y cocina 5 min más.",
-      "ingredientes": [
-        2
-      ],
+      "ingredientes": [2],
       "timers": [
         {
           "minutos": 5,

@@ -1,31 +1,12 @@
 {
   "titulo": "Dulce de membrillo",
   "categoria": "dulces",
-  "tags": [
-    "dulce",
-    "membrillo",
-    "conserva",
-    "once",
-    "tradicional"
-  ],
+  "tags": ["dulce", "membrillo", "conserva", "once", "tradicional"],
   "imagen": null,
   "tiempo": "1 h 30 min",
   "porciones": "4 frascos",
   "dificultad": "fácil",
   "tecnica": "Olla",
-  "ingredientes": [
-    "1 kg de membrillos",
-    "800 g de azúcar",
-    "Jugo de 1 limón",
-    "1 rama de canela (opcional)"
-  ],
-  "pasos": [
-    "Lava los membrillos, córtalos en cuartos y retira las semillas y el corazón.",
-    "Cocínalos en agua hirviendo 30-40 minutos, hasta que estén tiernos. Escurre y pásalos por un colador o procesador hasta obtener un puré.",
-    "En una olla, mezcla el puré con el azúcar y el jugo de limón.",
-    "Cocina a fuego medio-bajo, revolviendo constantemente, por 40-50 minutos, hasta que el dulce espese y tome color.",
-    "Envasa en frascos esterilizados calientes y tapa. Deja enfriar y refrigera."
-  ],
   "dato": "El dulce de membrillo es un clásico de la once chilena. Se come con pan, con queso o solo. El membrillo es una fruta dura y ácida que se vuelve dulce y rosada al cocinarse con azúcar. En Chile se hace en las casas y se guarda en frascos para todo el año.",
   "errores": [
     {
@@ -73,9 +54,7 @@
   "pasos_v2": [
     {
       "texto": "Lava los membrillos, córtalos en cuartos y retira las semillas y el corazón.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Cocínalos en agua hirviendo 30-40 minutos, hasta que estén tiernos. Escurre y pásalos por un colador o procesador hasta obtener un puré.",
@@ -88,10 +67,7 @@
     },
     {
       "texto": "En una olla, mezcla el puré con el azúcar y el jugo de limón.",
-      "ingredientes": [
-        2,
-        3
-      ]
+      "ingredientes": [2, 3]
     },
     {
       "texto": "Cocina a fuego medio-bajo, revolviendo constantemente, por 40-50 minutos, hasta que el dulce espese y tome color.",

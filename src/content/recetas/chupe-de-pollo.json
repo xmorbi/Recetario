@@ -1,40 +1,12 @@
 {
   "titulo": "Chupe de pollo",
   "categoria": "sopas",
-  "tags": [
-    "pollo",
-    "chupe",
-    "sopa",
-    "olla",
-    "comfort",
-    "casero"
-  ],
+  "tags": ["pollo", "chupe", "sopa", "olla", "comfort", "casero"],
   "imagen": null,
   "tiempo": "50 min",
   "porciones": "4 personas",
   "dificultad": "fácil",
   "tecnica": "Olla",
-  "ingredientes": [
-    "1 pollo trozado (o 4 trutros, 1 kg aprox.)",
-    "4 papas medianas en cubos",
-    "1 cebolla grande picada",
-    "2 dientes de ajo picados",
-    "1 pimentón rojo en cubos",
-    "2 tomates maduros picados",
-    "1 taza (250 ml) de crema o leche evaporada",
-    "1 taza (100 g) de pan rallado",
-    "100 g de queso parmesano o mantecoso rallado",
-    "2 cucharadas (30 g) de mantequilla",
-    "Sal, pimienta, orégano y merkén"
-  ],
-  "pasos": [
-    "Cocina el pollo en agua con sal por 20 minutos. Retira, desmenuza la carne y reserva el caldo.",
-    "Sofríe la cebolla, el ajo y el pimentón en mantequilla hasta que estén transparentes. Agrega el tomate y condimenta.",
-    "Añade las papas y el caldo de pollo (unos 2 litros). Cocina 15 minutos hasta que las papas estén tiernas.",
-    "Incorpora el pollo desmenuzado y la crema. Cocina 5 minutos más.",
-    "Reparte en pailas de greda individuales o en una fuente para horno.",
-    "Espolvorea pan rallado y queso por encima. Gratina 5 minutos en el horno a 200 °C, hasta dorar."
-  ],
   "dato": "El chupe de pollo es la comida de casa chilena por excelencia. Se hace cuando alguien está resfriado, cuando hace frío, o cuando hay que alimentar a mucha gente. Es una adaptación del chupe andino (que originalmente se hacía con papa y queso).",
   "errores": [
     {
@@ -137,10 +109,7 @@
   "pasos_v2": [
     {
       "texto": "Cocina el pollo en agua con sal por 20 minutos. Retira, desmenuza la carne y reserva el caldo.",
-      "ingredientes": [
-        1,
-        11
-      ],
+      "ingredientes": [1, 11],
       "timers": [
         {
           "minutos": 20,
@@ -150,20 +119,11 @@
     },
     {
       "texto": "Sofríe la cebolla, el ajo y el pimentón en mantequilla hasta que estén transparentes. Agrega el tomate y condimenta.",
-      "ingredientes": [
-        3,
-        4,
-        5,
-        6,
-        10
-      ]
+      "ingredientes": [3, 4, 5, 6, 10]
     },
     {
       "texto": "Añade las papas y el caldo de pollo (unos 2 litros). Cocina 15 minutos hasta que las papas estén tiernas.",
-      "ingredientes": [
-        1,
-        2
-      ],
+      "ingredientes": [1, 2],
       "timers": [
         {
           "minutos": 15,
@@ -173,10 +133,7 @@
     },
     {
       "texto": "Incorpora el pollo desmenuzado y la crema. Cocina 5 minutos más.",
-      "ingredientes": [
-        1,
-        7
-      ],
+      "ingredientes": [1, 7],
       "timers": [
         {
           "minutos": 5,
@@ -189,10 +146,7 @@
     },
     {
       "texto": "Espolvorea pan rallado y queso por encima. Gratina 5 minutos en el horno a 200 °C, hasta dorar.",
-      "ingredientes": [
-        8,
-        9
-      ],
+      "ingredientes": [8, 9],
       "timers": [
         {
           "minutos": 5,

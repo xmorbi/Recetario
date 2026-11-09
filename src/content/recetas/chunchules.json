@@ -1,36 +1,12 @@
 {
   "titulo": "Chunchules",
   "categoria": "principales",
-  "tags": [
-    "chunchules",
-    "tripas",
-    "popular",
-    "fritura",
-    "tradicional",
-    "invierno"
-  ],
+  "tags": ["chunchules", "tripas", "popular", "fritura", "tradicional", "invierno"],
   "imagen": "img/chunchules.jpg",
   "tiempo": "2 h",
   "porciones": "4 personas",
   "dificultad": "media",
   "tecnica": "Olla y fritura",
-  "ingredientes": [
-    "1 kg de chunchules (tripas delgadas de vacuno)",
-    "1 cebolla en cuartos",
-    "2 dientes de ajo",
-    "1 hoja de laurel",
-    "1 cucharada (15 ml) de vinagre",
-    "Sal",
-    "Aceite para freír",
-    "Pebre para acompañar"
-  ],
-  "pasos": [
-    "Lava muy bien los chunchules con agua fría y limón varias veces. Este paso es clave para quitarles el olor fuerte.",
-    "En una olla, pon los chunchules con la cebolla, el ajo, el laurel, el vinagre y sal. Cubre con agua y cocina 1 hora y 30 minutos a fuego medio, hasta que estén tiernos.",
-    "Escurre y corta en trozos de 5 cm. Sécalos bien con papel absorbente.",
-    "Fríe en abundante aceite caliente (170-180 °C) hasta que estén dorados y crujientes. Escurre sobre papel absorbente.",
-    "Sala al gusto y sirve calientes con pebre y pan amasado."
-  ],
   "dato": "Los chunchules son un plato popular chileno, típico de invierno y de fondas. Son las tripas delgadas del vacuno, que se cuecen hasta ablandarse y luego se fríen. Se comen con pebre y pan. En el campo se preparan en las fiestas y después de las faenas.",
   "errores": [
     {
@@ -106,20 +82,11 @@
   "pasos_v2": [
     {
       "texto": "Lava muy bien los chunchules con agua fría y limón varias veces. Este paso es clave para quitarles el olor fuerte.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "En una olla, pon los chunchules con la cebolla, el ajo, el laurel, el vinagre y sal. Cubre con agua y cocina 1 hora y 30 minutos a fuego medio, hasta que estén tiernos.",
-      "ingredientes": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
+      "ingredientes": [1, 2, 3, 4, 5, 6],
       "timers": [
         {
           "minutos": 90,
@@ -140,16 +107,11 @@
     },
     {
       "texto": "Fríe en abundante aceite caliente (170-180 °C) hasta que estén dorados y crujientes. Escurre sobre papel absorbente.",
-      "ingredientes": [
-        7
-      ]
+      "ingredientes": [7]
     },
     {
       "texto": "Sala al gusto y sirve calientes con pebre y pan amasado.",
-      "ingredientes": [
-        6,
-        8
-      ]
+      "ingredientes": [6, 8]
     }
   ],
   "tiempo_v2": {

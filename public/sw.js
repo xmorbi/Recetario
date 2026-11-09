@@ -31,28 +31,28 @@ const CACHE_RECETAS_LEGACY = ['recetas-guardadas-v3'];
 const CORE_ASSETS = ['/', '/offline/', '/manifest.webmanifest', '/favicon.svg'];
 
 self.addEventListener('install', (event) => {
-  event.waitUntil((async () => {
-    const cache = await caches.open(CACHE_CORE);
-    await cache.addAll(CORE_ASSETS);
-    await precachearAssetsHome();
-  })());
+  event.waitUntil(
+    (async () => {
+      const cache = await caches.open(CACHE_CORE);
+      await cache.addAll(CORE_ASSETS);
+      await precachearAssetsHome();
+    })()
+  );
   // Sin skipWaiting automático.
 });
 
 self.addEventListener('activate', (event) => {
-  event.waitUntil((async () => {
-    await migrarRecetasLegacy();
+  event.waitUntil(
+    (async () => {
+      await migrarRecetasLegacy();
 
-    const keys = await caches.keys();
-    const validas = [CACHE_CORE, CACHE_STATIC, CACHE_RECETAS];
-    await Promise.all(
-      keys
-        .filter((k) => !validas.includes(k))
-        .map((k) => caches.delete(k))
-    );
+      const keys = await caches.keys();
+      const validas = [CACHE_CORE, CACHE_STATIC, CACHE_RECETAS];
+      await Promise.all(keys.filter((k) => !validas.includes(k)).map((k) => caches.delete(k)));
 
-    await self.clients.claim();
-  })());
+      await self.clients.claim();
+    })()
+  );
 });
 
 /* Migra las recetas guardadas en versiones anteriores a CACHE_RECETAS
@@ -71,9 +71,10 @@ async function migrarRecetasLegacy() {
     // (ej. 'recetas-guardadas-v3' → 'static-v3').
     const versionMatch = legacyName.match(/-([^-]+)$/);
     const legacyVersion = versionMatch ? versionMatch[1] : null;
-    const statLegacy = legacyVersion && (await caches.has(`static-${legacyVersion}`))
-      ? await caches.open(`static-${legacyVersion}`)
-      : null;
+    const statLegacy =
+      legacyVersion && (await caches.has(`static-${legacyVersion}`))
+        ? await caches.open(`static-${legacyVersion}`)
+        : null;
     const statTarget = await caches.open(CACHE_STATIC);
 
     const keys = await legacy.keys();
@@ -99,7 +100,9 @@ async function migrarRecetasLegacy() {
           const assetRes = await statLegacy.match(a);
           if (assetRes) await statTarget.put(a, assetRes);
         }
-      } catch (e) { /* HTML no parseable: seguimos con la siguiente */ }
+      } catch (e) {
+        /* HTML no parseable: seguimos con la siguiente */
+      }
     }
 
     await caches.delete(legacyName);
@@ -127,20 +130,26 @@ async function precachearAssetsHome() {
         stat.match(u).then((c) =>
           c
             ? null
-            : fetch(u).then((r) => (r.ok ? stat.put(u, r) : null)).catch(() => null)
+            : fetch(u)
+                .then((r) => (r.ok ? stat.put(u, r) : null))
+                .catch(() => null)
         )
       )
     );
-  } catch (e) { /* si algo falla, seguimos: se cacheará por navegación */ }
+  } catch (e) {
+    /* si algo falla, seguimos: se cacheará por navegación */
+  }
 }
 
 function esNavegacion(request) {
   return request.mode === 'navigate' || request.headers.get('accept')?.includes('text/html');
 }
 function esAssetEstatico(url) {
-  return url.pathname.startsWith('/_astro/') ||
-         url.pathname.startsWith('/img/') ||
-         url.pathname.startsWith('/fonts/');
+  return (
+    url.pathname.startsWith('/_astro/') ||
+    url.pathname.startsWith('/img/') ||
+    url.pathname.startsWith('/fonts/')
+  );
 }
 function esApiJson(url) {
   return url.pathname.startsWith('/api/') && url.pathname.endsWith('.json');
@@ -151,9 +160,18 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(request.url);
   if (url.origin !== self.location.origin) return;
 
-  if (esNavegacion(request)) { event.respondWith(navegacionRedPrimero(request)); return; }
-  if (esAssetEstatico(url)) { event.respondWith(cachePrimero(request, CACHE_STATIC)); return; }
-  if (esApiJson(url)) { event.respondWith(staleWhileRevalidate(request, CACHE_STATIC)); return; }
+  if (esNavegacion(request)) {
+    event.respondWith(navegacionRedPrimero(request));
+    return;
+  }
+  if (esAssetEstatico(url)) {
+    event.respondWith(cachePrimero(request, CACHE_STATIC));
+    return;
+  }
+  if (esApiJson(url)) {
+    event.respondWith(staleWhileRevalidate(request, CACHE_STATIC));
+    return;
+  }
 });
 
 async function navegacionRedPrimero(request) {
@@ -178,7 +196,11 @@ async function navegacionRedPrimero(request) {
       response = await Promise.race([red, timeout]);
     } catch (e) {
       // Timeout: devolver caché ya; refrescar copia cuando llegue la red.
-      red.then((r) => { if (r && r.ok) cache.put(request, r.clone()); }).catch(() => {});
+      red
+        .then((r) => {
+          if (r && r.ok) cache.put(request, r.clone());
+        })
+        .catch(() => {});
       return cached;
     }
   } else {
@@ -215,14 +237,19 @@ async function cachePrimero(request, cacheName) {
     const response = await fetch(request);
     if (response.ok) cache.put(request, response.clone());
     return response;
-  } catch (e) { return new Response('', { status: 504 }); }
+  } catch (e) {
+    return new Response('', { status: 504 });
+  }
 }
 
 async function staleWhileRevalidate(request, cacheName) {
   const cache = await caches.open(cacheName);
   const cached = await cache.match(request);
   const red = fetch(request)
-    .then((response) => { if (response.ok) cache.put(request, response.clone()); return response; })
+    .then((response) => {
+      if (response.ok) cache.put(request, response.clone());
+      return response;
+    })
     .catch(() => null);
   return cached || red || new Response('{}', { headers: { 'Content-Type': 'application/json' } });
 }
@@ -236,40 +263,42 @@ self.addEventListener('message', (event) => {
     if (!url) return;
     const source = event.source;
 
-    event.waitUntil((async () => {
-      const cache = await caches.open(CACHE_RECETAS);
+    event.waitUntil(
+      (async () => {
+        const cache = await caches.open(CACHE_RECETAS);
 
-      // Construir el conjunto de URLs a cachear.
-      const urls = new Set();
-      urls.add(url);
-      if (imageUrl) urls.add(imageUrl);
-      if (Array.isArray(resources)) {
-        for (const r of resources) {
-          if (typeof r === 'string' && r) urls.add(r);
+        // Construir el conjunto de URLs a cachear.
+        const urls = new Set();
+        urls.add(url);
+        if (imageUrl) urls.add(imageUrl);
+        if (Array.isArray(resources)) {
+          for (const r of resources) {
+            if (typeof r === 'string' && r) urls.add(r);
+          }
         }
-      }
 
-      let ok = 0;
-      let fail = 0;
-      for (const u of urls) {
-        try {
-          const res = await fetch(u, { credentials: 'same-origin' });
-          if (res.ok) {
-            await cache.put(u, res);
-            ok++;
-          } else {
+        let ok = 0;
+        let fail = 0;
+        for (const u of urls) {
+          try {
+            const res = await fetch(u, { credentials: 'same-origin' });
+            if (res.ok) {
+              await cache.put(u, res);
+              ok++;
+            } else {
+              fail++;
+            }
+          } catch (e) {
             fail++;
           }
-        } catch (e) {
-          fail++;
         }
-      }
 
-      // Confirmar al cliente que pidió el guardado.
-      if (source && typeof source.postMessage === 'function') {
-        source.postMessage({ type: 'CACHE_RECIPE_DONE', url, ok, fail });
-      }
-    })());
+        // Confirmar al cliente que pidió el guardado.
+        if (source && typeof source.postMessage === 'function') {
+          source.postMessage({ type: 'CACHE_RECIPE_DONE', url, ok, fail });
+        }
+      })()
+    );
   }
 
   // FASE 9: notificación disparada desde la página (opcional).
@@ -280,7 +309,7 @@ self.addEventListener('message', (event) => {
         icon: '/icons/icon-192.png',
         badge: '/icons/icon-192.png',
         tag: data.tag || 'mc-timer',
-        requireInteraction: true
+        requireInteraction: true,
       })
     );
   }

@@ -1,37 +1,12 @@
 {
   "titulo": "Frittata de Jamón, Hongos y Espinaca",
   "categoria": "once",
-  "tags": [
-    "frittata",
-    "jamón",
-    "champiñones",
-    "espinaca",
-    "keto",
-    "huevos",
-    "low carb"
-  ],
+  "tags": ["frittata", "jamón", "champiñones", "espinaca", "keto", "huevos", "low carb"],
   "imagen": null,
   "tiempo": "15 min",
   "porciones": "2 personas",
   "dificultad": "fácil",
   "tecnica": "Sartén",
-  "ingredientes": [
-    "4 huevos",
-    "80 g de champiñones",
-    "50 g de jamón cocido",
-    "80 g de espinacas frescas",
-    "1 cucharadita de aceite de oliva",
-    "1 cucharadita de queso rallado",
-    "Sal marina y pimienta a gusto"
-  ],
-  "pasos": [
-    "Limpiar, secar y cortar los champiñones en láminas.",
-    "Calentar el aceite en una sartén y saltear los champiñones por 3 minutos.",
-    "Agregar el jamón cortado en cubos pequeños y cocinar hasta que dore ligeramente.",
-    "Añadir las hojas de espinaca crudas y cocinar por 1 minuto más. Salpimentar.",
-    "Batir los huevos con el queso rallado y verter sobre la sartén, bajando el fuego.",
-    "Remover apenas al principio y dejar cocinar unos 5 minutos hasta que la frittata esté cuajada y dorada por los bordes."
-  ],
   "dato": "La frittata es una excelente base para usar las verduras y carnes que tengas en el refrigerador. Puedes añadir queso feta, cebolla o pimentón.",
   "errores": [
     {
@@ -94,17 +69,11 @@
   "pasos_v2": [
     {
       "texto": "Limpiar, secar y cortar los champiñones en láminas.",
-      "ingredientes": [
-        2
-      ]
+      "ingredientes": [2]
     },
     {
       "texto": "Calentar el aceite en una sartén y saltear los champiñones por 3 minutos.",
-      "ingredientes": [
-        2,
-        5,
-        7
-      ],
+      "ingredientes": [2, 5, 7],
       "timers": [
         {
           "minutos": 3,
@@ -114,17 +83,11 @@
     },
     {
       "texto": "Agregar el jamón cortado en cubos pequeños y cocinar hasta que dore ligeramente.",
-      "ingredientes": [
-        3,
-        5
-      ]
+      "ingredientes": [3, 5]
     },
     {
       "texto": "Añadir las hojas de espinaca crudas y cocinar por 1 minuto más. Salpimentar.",
-      "ingredientes": [
-        4,
-        7
-      ],
+      "ingredientes": [4, 7],
       "timers": [
         {
           "minutos": 1,
@@ -134,10 +97,7 @@
     },
     {
       "texto": "Batir los huevos con el queso rallado y verter sobre la sartén, bajando el fuego.",
-      "ingredientes": [
-        1,
-        6
-      ]
+      "ingredientes": [1, 6]
     },
     {
       "texto": "Remover apenas al principio y dejar cocinar unos 5 minutos hasta que la frittata esté cuajada y dorada por los bordes.",

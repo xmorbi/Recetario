@@ -8,8 +8,12 @@ import Layout from '../layouts/Layout.astro';
     <p>No pudimos cargar esta página porque no hay internet en este momento.</p>
     <p>Las recetas que guardaste para cocinar sin conexión siguen disponibles.</p>
     <div class="offline-acciones">
-      <a href="/mis-recetas/" class="btn-cocina">Ir a Mis recetas</a>
-      <a href="/" class="btn-volver">Volver al inicio</a>
+      <a href="/mis-recetas/" class="btn-cocina">
+        Ir a Mis recetas
+      </a>
+      <a href="/" class="btn-volver">
+        Volver al inicio
+      </a>
     </div>
   </section>
 </Layout>
@@ -46,7 +50,9 @@ import Layout from '../layouts/Layout.astro';
     border-radius: 99px;
     font-weight: 600;
     text-decoration: none;
-    transition: background 0.2s, transform 0.2s;
+    transition:
+      background 0.2s,
+      transform 0.2s;
   }
   .btn-cocina {
     background: var(--rojo);

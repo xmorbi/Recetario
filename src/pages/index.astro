@@ -6,7 +6,17 @@ import Layout from '../layouts/Layout.astro';
 // Así la home muestra los números correctos aunque JavaScript esté desactivado.
 const recetas = await getCollection('recetas');
 const total = recetas.length;
-const CATS = ['principales', 'sopas', 'panes', 'ensaladas', 'dulces', 'bebidas', 'once', 'sandwiches', 'mar'];
+const CATS = [
+  'principales',
+  'sopas',
+  'panes',
+  'ensaladas',
+  'dulces',
+  'bebidas',
+  'once',
+  'sandwiches',
+  'mar',
+];
 const conteos = Object.fromEntries(CATS.map((c) => [c, 0]));
 recetas.forEach((r) => {
   const cat = r.data.categoria;
@@ -14,8 +24,11 @@ recetas.forEach((r) => {
 });
 ---
 
-<Layout title="Recetario Chileno" description="Las mejores recetas tradicionales chilenas explicadas paso a paso." activePage="inicio">
-
+<Layout
+  title="Recetario Chileno"
+  description="Las mejores recetas tradicionales chilenas explicadas paso a paso."
+  activePage="inicio"
+>
   <header class="hero">
     <div class="hero-inner">
       <div class="hero-copy">
@@ -23,9 +36,29 @@ recetas.forEach((r) => {
         <p class="sub">Sabores de casa, de la cocina de la abuela a tu mesa</p>
         <div class="lema">{total} recetas tradicionales</div>
         <form class="hero-search" action="/recetario/" method="get" role="search">
-          <svg class="hero-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input type="search" id="hero-buscador" name="buscar" placeholder="Buscar receta o ingrediente…" aria-label="Buscar recetas" autocomplete="off"
-                 role="combobox" aria-expanded="false" aria-controls="hero-sugerencias" aria-autocomplete="list">
+          <svg
+            class="hero-search-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            aria-hidden="true"
+          >
+            <circle cx="11" cy="11" r="7" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+          <input
+            type="search"
+            id="hero-buscador"
+            name="buscar"
+            placeholder="Buscar receta o ingrediente…"
+            aria-label="Buscar recetas"
+            autocomplete="off"
+            role="combobox"
+            aria-expanded="false"
+            aria-controls="hero-sugerencias"
+            aria-autocomplete="list"
+          />
           <button type="submit">Buscar</button>
           <ul class="ac-dropdown hero-ac" id="hero-sugerencias" role="listbox" hidden></ul>
         </form>
@@ -37,79 +70,275 @@ recetas.forEach((r) => {
 
   <section class="landing-intro">
     <h2>¿Qué se te antoja cocinar hoy?</h2>
-    <p>Elige una categoría y encuentra la receta que buscas. Todo explicado paso a paso, como se cocina en casa.</p>
+    <p>
+      Elige una categoría y encuentra la receta que buscas. Todo explicado paso a paso, como se
+      cocina en casa.
+    </p>
   </section>
 
   <div class="categorias-grid">
     <a class="categoria-card" data-cat="principales" href="/recetario/?cat=principales">
-      <span class="categoria-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9h20"/><path d="M4 9v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9"/><path d="M8 9V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v3"/><path d="M9 5v4M15 5v4"/></svg></span>
+      <span class="categoria-icon" aria-hidden="true">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M2 9h20" />
+          <path d="M4 9v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9" />
+          <path d="M8 9V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v3" />
+          <path d="M9 5v4M15 5v4" />
+        </svg>
+      </span>
       <span class="categoria-nombre">Platos de fondo</span>
-      <span class="categoria-count">{conteos.principales} {conteos.principales === 1 ? 'receta' : 'recetas'}</span>
-      <span class="categoria-desc">Empanadas, cazuelas, pastel de choclo, charquicán y todos los platos que llenan la mesa.</span>
-      <span class="categoria-arrow" aria-hidden="true">→</span>
+      <span class="categoria-count">
+        {conteos.principales} {conteos.principales === 1 ? 'receta' : 'recetas'}
+      </span>
+      <span class="categoria-desc">
+        Empanadas, cazuelas, pastel de choclo, charquicán y todos los platos que llenan la mesa.
+      </span>
+      <span class="categoria-arrow" aria-hidden="true">
+        →
+      </span>
     </a>
     <a class="categoria-card" data-cat="sopas" href="/recetario/?cat=sopas">
-      <span class="categoria-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18c0 5-4 8-9 8s-9-3-9-8z"/><path d="M9 3v4M12 2v5M15 3v4"/></svg></span>
+      <span class="categoria-icon" aria-hidden="true">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M3 12h18c0 5-4 8-9 8s-9-3-9-8z" />
+          <path d="M9 3v4M12 2v5M15 3v4" />
+        </svg>
+      </span>
       <span class="categoria-nombre">Sopas y guisos</span>
-      <span class="categoria-count">{conteos.sopas} {conteos.sopas === 1 ? 'receta' : 'recetas'}</span>
-      <span class="categoria-desc">Caldillos, pantrucas, valdiviano y esos platos de olla que reconfortan en invierno.</span>
-      <span class="categoria-arrow" aria-hidden="true">→</span>
+      <span class="categoria-count">
+        {conteos.sopas} {conteos.sopas === 1 ? 'receta' : 'recetas'}
+      </span>
+      <span class="categoria-desc">
+        Caldillos, pantrucas, valdiviano y esos platos de olla que reconfortan en invierno.
+      </span>
+      <span class="categoria-arrow" aria-hidden="true">
+        →
+      </span>
     </a>
     <a class="categoria-card" data-cat="panes" href="/recetario/?cat=panes">
-      <span class="categoria-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15c0-4 4-7 8-7s8 3 8 7v1a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-1z"/><path d="M8 12l1 3M12 11v4M16 12l-1 3"/></svg></span>
+      <span class="categoria-icon" aria-hidden="true">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M4 15c0-4 4-7 8-7s8 3 8 7v1a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-1z" />
+          <path d="M8 12l1 3M12 11v4M16 12l-1 3" />
+        </svg>
+      </span>
       <span class="categoria-nombre">Masas y horneados</span>
-      <span class="categoria-count">{conteos.panes} {conteos.panes === 1 ? 'receta' : 'recetas'}</span>
-      <span class="categoria-desc">Sopaipillas, pan amasado, humitas, empanadas de queso y todo lo que sale del horno.</span>
-      <span class="categoria-arrow" aria-hidden="true">→</span>
+      <span class="categoria-count">
+        {conteos.panes} {conteos.panes === 1 ? 'receta' : 'recetas'}
+      </span>
+      <span class="categoria-desc">
+        Sopaipillas, pan amasado, humitas, empanadas de queso y todo lo que sale del horno.
+      </span>
+      <span class="categoria-arrow" aria-hidden="true">
+        →
+      </span>
     </a>
     <a class="categoria-card" data-cat="ensaladas" href="/recetario/?cat=ensaladas">
-      <span class="categoria-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13c0-3 1-6 3-7 2 1 4 1 6 0s4-1 6 0c2 1 3 4 3 7a7 7 0 0 1-7 7"/><path d="M2 13c3-2 8-3 15-2"/></svg></span>
+      <span class="categoria-icon" aria-hidden="true">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M11 20A7 7 0 0 1 4 13c0-3 1-6 3-7 2 1 4 1 6 0s4-1 6 0c2 1 3 4 3 7a7 7 0 0 1-7 7" />
+          <path d="M2 13c3-2 8-3 15-2" />
+        </svg>
+      </span>
       <span class="categoria-nombre">Ensaladas y picoteo</span>
-      <span class="categoria-count">{conteos.ensaladas} {conteos.ensaladas === 1 ? 'receta' : 'recetas'}</span>
-      <span class="categoria-desc">Ensalada chilena, rusa, chancho en piedra y todo lo que se sirve para picar o acompañar.</span>
-      <span class="categoria-arrow" aria-hidden="true">→</span>
+      <span class="categoria-count">
+        {conteos.ensaladas} {conteos.ensaladas === 1 ? 'receta' : 'recetas'}
+      </span>
+      <span class="categoria-desc">
+        Ensalada chilena, rusa, chancho en piedra y todo lo que se sirve para picar o acompañar.
+      </span>
+      <span class="categoria-arrow" aria-hidden="true">
+        →
+      </span>
     </a>
     <a class="categoria-card" data-cat="dulces" href="/recetario/?cat=dulces">
-      <span class="categoria-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"/><path d="M4 16c1 0 1.5-.5 2-1s1-1 2-1 1.5.5 2 1 1 1 2 1 1.5-.5 2-1 1-1 2-1 1.5.5 2 1 1 1 2 1"/><path d="M12 8V3"/><path d="M10 3h4"/></svg></span>
+      <span class="categoria-icon" aria-hidden="true">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8" />
+          <path d="M4 16c1 0 1.5-.5 2-1s1-1 2-1 1.5.5 2 1 1 1 2 1 1.5-.5 2-1 1-1 2-1 1.5.5 2 1 1 1 2 1" />
+          <path d="M12 8V3" />
+          <path d="M10 3h4" />
+        </svg>
+      </span>
       <span class="categoria-nombre">Dulces</span>
-      <span class="categoria-count">{conteos.dulces} {conteos.dulces === 1 ? 'receta' : 'recetas'}</span>
-      <span class="categoria-desc">Leche asada, mote con huesillo, chilenitos, empolvados y otros postres de la tradición.</span>
-      <span class="categoria-arrow" aria-hidden="true">→</span>
+      <span class="categoria-count">
+        {conteos.dulces} {conteos.dulces === 1 ? 'receta' : 'recetas'}
+      </span>
+      <span class="categoria-desc">
+        Leche asada, mote con huesillo, chilenitos, empolvados y otros postres de la tradición.
+      </span>
+      <span class="categoria-arrow" aria-hidden="true">
+        →
+      </span>
     </a>
     <a class="categoria-card" data-cat="bebidas" href="/recetario/?cat=bebidas">
-      <span class="categoria-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8"/><path d="M12 11v11"/><path d="M19 3l-7 8-7-8z"/><path d="M5 3h14"/></svg></span>
+      <span class="categoria-icon" aria-hidden="true">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M8 22h8" />
+          <path d="M12 11v11" />
+          <path d="M19 3l-7 8-7-8z" />
+          <path d="M5 3h14" />
+        </svg>
+      </span>
       <span class="categoria-nombre">Bebidas</span>
-      <span class="categoria-count">{conteos.bebidas} {conteos.bebidas === 1 ? 'receta' : 'recetas'}</span>
-      <span class="categoria-desc">Terremoto, Cola de Mono, Melvin, Navegado, Chicha y otras bebidas para brindar.</span>
-      <span class="categoria-arrow" aria-hidden="true">→</span>
+      <span class="categoria-count">
+        {conteos.bebidas} {conteos.bebidas === 1 ? 'receta' : 'recetas'}
+      </span>
+      <span class="categoria-desc">
+        Terremoto, Cola de Mono, Melvin, Navegado, Chicha y otras bebidas para brindar.
+      </span>
+      <span class="categoria-arrow" aria-hidden="true">
+        →
+      </span>
     </a>
     <a class="categoria-card" data-cat="once" href="/recetario/?cat=once">
-      <span class="categoria-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg></span>
+      <span class="categoria-icon" aria-hidden="true">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M17 8h1a4 4 0 1 1 0 8h-1" />
+          <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z" />
+          <line x1="6" y1="2" x2="6" y2="4" />
+          <line x1="10" y1="2" x2="10" y2="4" />
+          <line x1="14" y1="2" x2="14" y2="4" />
+        </svg>
+      </span>
       <span class="categoria-nombre">Once</span>
-      <span class="categoria-count">{conteos.once} {conteos.once === 1 ? 'receta' : 'recetas'}</span>
-      <span class="categoria-desc">El ritual de la tarde: pan, palta, huevo, té y todo lo que se sirve cuando cae el sol.</span>
-      <span class="categoria-arrow" aria-hidden="true">→</span>
+      <span class="categoria-count">
+        {conteos.once} {conteos.once === 1 ? 'receta' : 'recetas'}
+      </span>
+      <span class="categoria-desc">
+        El ritual de la tarde: pan, palta, huevo, té y todo lo que se sirve cuando cae el sol.
+      </span>
+      <span class="categoria-arrow" aria-hidden="true">
+        →
+      </span>
     </a>
     <a class="categoria-card" data-cat="sandwiches" href="/recetario/?cat=sandwiches">
-      <span class="categoria-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10c0-2 1-3 3-3h12c2 0 3 1 3 3v4c0 2-1 3-3 3H6c-2 0-3-1-3-3z"/><path d="M3 12h18"/><path d="M7 10h10"/></svg></span>
+      <span class="categoria-icon" aria-hidden="true">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M3 10c0-2 1-3 3-3h12c2 0 3 1 3 3v4c0 2-1 3-3 3H6c-2 0-3-1-3-3z" />
+          <path d="M3 12h18" />
+          <path d="M7 10h10" />
+        </svg>
+      </span>
       <span class="categoria-nombre">Sándwiches</span>
-      <span class="categoria-count">{conteos.sandwiches} {conteos.sandwiches === 1 ? 'receta' : 'recetas'}</span>
-      <span class="categoria-desc">El completo italiano, el chacarero, el barros luco, el barros jarpa. La comida callejera que come Chile entero.</span>
-      <span class="categoria-arrow" aria-hidden="true">→</span>
+      <span class="categoria-count">
+        {conteos.sandwiches} {conteos.sandwiches === 1 ? 'receta' : 'recetas'}
+      </span>
+      <span class="categoria-desc">
+        El completo italiano, el chacarero, el barros luco, el barros jarpa. La comida callejera que
+        come Chile entero.
+      </span>
+      <span class="categoria-arrow" aria-hidden="true">
+        →
+      </span>
     </a>
     <a class="categoria-card" data-cat="mar" href="/recetario/?cat=mar">
-      <span class="categoria-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12c1.5-2 3.5-2 5 0s3.5 2 5 0 3.5-2 5 0 3.5 2 5 0"/><path d="M2 18c1.5-2 3.5-2 5 0s3.5 2 5 0 3.5-2 5 0 3.5 2 5 0"/><path d="M2 6c1.5-2 3.5-2 5 0s3.5 2 5 0 3.5-2 5 0 3.5 2 5 0"/></svg></span>
+      <span class="categoria-icon" aria-hidden="true">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M2 12c1.5-2 3.5-2 5 0s3.5 2 5 0 3.5-2 5 0 3.5 2 5 0" />
+          <path d="M2 18c1.5-2 3.5-2 5 0s3.5 2 5 0 3.5-2 5 0 3.5 2 5 0" />
+          <path d="M2 6c1.5-2 3.5-2 5 0s3.5 2 5 0 3.5-2 5 0 3.5 2 5 0" />
+        </svg>
+      </span>
       <span class="categoria-nombre">Del mar</span>
-      <span class="categoria-count">{conteos.mar} {conteos.mar === 1 ? 'receta' : 'recetas'}</span>
-      <span class="categoria-desc">Ceviche, pastel de jaiba, chupe, paila marina. Los 4.300 km de costa chilena en la mesa.</span>
-      <span class="categoria-arrow" aria-hidden="true">→</span>
+      <span class="categoria-count">
+        {conteos.mar} {conteos.mar === 1 ? 'receta' : 'recetas'}
+      </span>
+      <span class="categoria-desc">
+        Ceviche, pastel de jaiba, chupe, paila marina. Los 4.300 km de costa chilena en la mesa.
+      </span>
+      <span class="categoria-arrow" aria-hidden="true">
+        →
+      </span>
     </a>
     <a class="categoria-card" href="/guias/">
-      <span class="categoria-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>
+      <span class="categoria-icon" aria-hidden="true">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+          <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+        </svg>
+      </span>
       <span class="categoria-nombre">Guías de Cocina</span>
-      <span class="categoria-count" style="color:#7a1b15;">12 artículos</span>
-      <span class="categoria-desc">Trucos, técnicas y consejos para que tus platos queden perfectos. Desde cómo picar cebolla hasta cómo encender el carbón.</span>
-      <span class="categoria-arrow" aria-hidden="true">→</span>
+      <span class="categoria-count" style="color:#7a1b15;">
+        12 artículos
+      </span>
+      <span class="categoria-desc">
+        Trucos, técnicas y consejos para que tus platos queden perfectos. Desde cómo picar cebolla
+        hasta cómo encender el carbón.
+      </span>
+      <span class="categoria-arrow" aria-hidden="true">
+        →
+      </span>
     </a>
   </div>
 
@@ -122,7 +351,9 @@ recetas.forEach((r) => {
 
   <section class="landing-once-cta">
     <div class="landing-once-cta-inner">
-      <span class="landing-once-cta-icon" aria-hidden="true">🧉</span>
+      <span class="landing-once-cta-icon" aria-hidden="true">
+        🧉
+      </span>
       <div class="landing-once-cta-texto">
         <strong>Modo Once</strong>
         <span>Panes, once y sándwiches en una sola vista.</span>
@@ -135,125 +366,210 @@ recetas.forEach((r) => {
   </section>
 
   <section class="landing-destacado">
-    <p>Este recetario es un proyecto personal dedicado a rescatar las <strong>recetas de casa</strong>: las que se cocinan en ollas de barro, se anotan en cuadernos gastados y se comparten de generación en generación. <a href="/sobre-mi/" style="color:var(--rojo);font-style:normal;font-weight:600">Conoce más sobre el proyecto →</a></p>
+    <p>
+      Este recetario es un proyecto personal dedicado a rescatar las{' '}
+      <strong>recetas de casa</strong>: las que se cocinan en ollas de barro, se anotan en cuadernos
+      gastados y se comparten de generación en generación.{' '}
+      <a href="/sobre-mi/" style="color:var(--rojo);font-style:normal;font-weight:600">
+        Conoce más sobre el proyecto →
+      </a>
+    </p>
   </section>
 
   <!-- FASE 8: los conteos por categoría ya vienen del build (getCollection).
        Se eliminó el listener 'recetas-listas' que los rellenaba por fetch.
        El fetch a /api/recetas.json se mantiene por compatibilidad con otros scripts. -->
 
-  <script is:inline src="/app.js"></script>
+  <script>
+    import '../scripts/app.js';
+  </script>
 
   <!-- Autocompletado del buscador del hero (carga perezosa de /api/recetas-nav.json) -->
   <script is:inline>
-  (function () {
-    var input = document.getElementById('hero-buscador');
-    var lista = document.getElementById('hero-sugerencias');
-    if (!input || !lista) return;
+    (function () {
+      var input = document.getElementById('hero-buscador');
+      var lista = document.getElementById('hero-sugerencias');
+      if (!input || !lista) return;
 
-    var datos = null, cargando = null, sugerencias = [], activo = -1;
-    var CATS = { principales:'Platos de fondo', sopas:'Sopas y guisos', panes:'Masas y horneados',
-                 ensaladas:'Ensaladas y picoteo', dulces:'Dulces', bebidas:'Bebidas', once:'Once',
-                 sandwiches:'Sándwiches', mar:'Del mar' };
+      var datos = null,
+        cargando = null,
+        sugerencias = [],
+        activo = -1;
+      var CATS = {
+        principales: 'Platos de fondo',
+        sopas: 'Sopas y guisos',
+        panes: 'Masas y horneados',
+        ensaladas: 'Ensaladas y picoteo',
+        dulces: 'Dulces',
+        bebidas: 'Bebidas',
+        once: 'Once',
+        sandwiches: 'Sándwiches',
+        mar: 'Del mar',
+      };
 
-    function norm(s) {
-      return String(s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-    }
-    function esc(s) {
-      return String(s).replace(/[&<>"']/g, function (c) {
-        return { '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c];
+      function norm(s) {
+        return String(s || '')
+          .toLowerCase()
+          .normalize('NFD')
+          .replace(/[\u0300-\u036f]/g, '');
+      }
+      function esc(s) {
+        return String(s).replace(/[&<>"']/g, function (c) {
+          return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+        });
+      }
+
+      // Carga perezosa; si falla NO se cachea el error, para poder reintentar
+      function cargar() {
+        if (datos) return Promise.resolve(datos);
+        if (window.RECETAS_NAV && window.RECETAS_NAV.length) {
+          datos = window.RECETAS_NAV;
+          return Promise.resolve(datos);
+        }
+        if (cargando) return cargando;
+        cargando = fetch('/api/recetas-nav.json')
+          .then(function (r) {
+            if (!r.ok) throw new Error(r.status);
+            return r.json();
+          })
+          .then(function (d) {
+            datos = d;
+            window.RECETAS_NAV = d;
+            return d;
+          })
+          .catch(function (e) {
+            console.error('Autocompletado:', e);
+            return [];
+          })
+          .then(function (d) {
+            cargando = null;
+            return d;
+          });
+        return cargando;
+      }
+
+      function buscar(q) {
+        var qn = norm(q.trim());
+        if (qn.length < 2 || !datos) return [];
+        var out = [];
+        datos.forEach(function (r) {
+          var t = norm(r.titulo),
+            score = 0;
+          if (t === qn) score = 100;
+          else if (t.indexOf(qn) === 0) score = 80;
+          else if (
+            t.split(/\s+/).some(function (w) {
+              return w.indexOf(qn) === 0;
+            })
+          )
+            score = 60;
+          else if (t.indexOf(qn) !== -1) score = 40;
+          if (score) out.push({ r: r, s: score });
+        });
+        out.sort(function (a, b) {
+          return b.s - a.s || a.r.titulo.localeCompare(b.r.titulo, 'es');
+        });
+        return out.slice(0, 6).map(function (x) {
+          return x.r;
+        });
+      }
+
+      function render() {
+        if (!sugerencias.length) {
+          cerrar();
+          return;
+        }
+        lista.innerHTML = sugerencias
+          .map(function (r, i) {
+            return (
+              '<li role="option" data-idx="' +
+              i +
+              '"' +
+              (i === activo ? ' class="activo" aria-selected="true"' : '') +
+              '>' +
+              '<span class="ac-titulo">' +
+              esc(r.titulo) +
+              '</span>' +
+              '<span class="ac-cat">' +
+              esc(CATS[r.categoria] || r.categoria || '') +
+              '</span></li>'
+            );
+          })
+          .join('');
+        lista.hidden = false;
+        input.setAttribute('aria-expanded', 'true');
+      }
+      function cerrar() {
+        lista.hidden = true;
+        activo = -1;
+        input.setAttribute('aria-expanded', 'false');
+      }
+      function ir(i) {
+        var r = sugerencias[i];
+        if (r) window.location.href = '/recetas/' + r.slug + '/';
+      }
+      function actualizar() {
+        sugerencias = buscar(input.value);
+        activo = -1;
+        render();
+      }
+
+      input.addEventListener('focus', cargar);
+      input.addEventListener('input', function () {
+        if (datos) {
+          actualizar();
+          return;
+        }
+        var valor = input.value;
+        cargar().then(function () {
+          if (input.value === valor) actualizar();
+        });
       });
-    }
 
-    // Carga perezosa; si falla NO se cachea el error, para poder reintentar
-    function cargar() {
-      if (datos) return Promise.resolve(datos);
-      if (window.RECETAS_NAV && window.RECETAS_NAV.length) { datos = window.RECETAS_NAV; return Promise.resolve(datos); }
-      if (cargando) return cargando;
-      cargando = fetch('/api/recetas-nav.json')
-        .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-        .then(function (d) { datos = d; window.RECETAS_NAV = d; return d; })
-        .catch(function (e) { console.error('Autocompletado:', e); return []; })
-        .then(function (d) { cargando = null; return d; });
-      return cargando;
-    }
-
-    function buscar(q) {
-      var qn = norm(q.trim());
-      if (qn.length < 2 || !datos) return [];
-      var out = [];
-      datos.forEach(function (r) {
-        var t = norm(r.titulo), score = 0;
-        if (t === qn) score = 100;
-        else if (t.indexOf(qn) === 0) score = 80;
-        else if (t.split(/\s+/).some(function (w) { return w.indexOf(qn) === 0; })) score = 60;
-        else if (t.indexOf(qn) !== -1) score = 40;
-        if (score) out.push({ r: r, s: score });
+      input.addEventListener('keydown', function (e) {
+        if (lista.hidden) return;
+        if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          activo = Math.min(sugerencias.length - 1, activo + 1);
+          render();
+        } else if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          activo = Math.max(0, activo - 1);
+          render();
+        } else if (e.key === 'Enter' && activo >= 0) {
+          e.preventDefault();
+          ir(activo);
+        } else if (e.key === 'Escape') {
+          cerrar();
+        }
       });
-      out.sort(function (a, b) { return b.s - a.s || a.r.titulo.localeCompare(b.r.titulo, 'es'); });
-      return out.slice(0, 6).map(function (x) { return x.r; });
-    }
 
-    function render() {
-      if (!sugerencias.length) { cerrar(); return; }
-      lista.innerHTML = sugerencias.map(function (r, i) {
-        return '<li role="option" data-idx="' + i + '"' + (i === activo ? ' class="activo" aria-selected="true"' : '') + '>' +
-          '<span class="ac-titulo">' + esc(r.titulo) + '</span>' +
-          '<span class="ac-cat">' + esc(CATS[r.categoria] || r.categoria || '') + '</span></li>';
-      }).join('');
-      lista.hidden = false;
-      input.setAttribute('aria-expanded', 'true');
-    }
-    function cerrar() {
-      lista.hidden = true; activo = -1;
-      input.setAttribute('aria-expanded', 'false');
-    }
-    function ir(i) {
-      var r = sugerencias[i];
-      if (r) window.location.href = '/recetas/' + r.slug + '/';
-    }
-    function actualizar() {
-      sugerencias = buscar(input.value);
-      activo = -1;
-      render();
-    }
+      // pointerdown (táctil + mouse) ocurre antes del blur
+      lista.addEventListener('pointerdown', function (e) {
+        var li = e.target.closest('li[data-idx]');
+        if (li) {
+          e.preventDefault();
+          ir(parseInt(li.getAttribute('data-idx'), 10));
+        }
+      });
 
-    input.addEventListener('focus', cargar);
-    input.addEventListener('input', function () {
-      if (datos) { actualizar(); return; }
-      var valor = input.value;
-      cargar().then(function () { if (input.value === valor) actualizar(); });
-    });
-
-    input.addEventListener('keydown', function (e) {
-      if (lista.hidden) return;
-      if (e.key === 'ArrowDown') { e.preventDefault(); activo = Math.min(sugerencias.length - 1, activo + 1); render(); }
-      else if (e.key === 'ArrowUp') { e.preventDefault(); activo = Math.max(0, activo - 1); render(); }
-      else if (e.key === 'Enter' && activo >= 0) { e.preventDefault(); ir(activo); }
-      else if (e.key === 'Escape') { cerrar(); }
-    });
-
-    // pointerdown (táctil + mouse) ocurre antes del blur
-    lista.addEventListener('pointerdown', function (e) {
-      var li = e.target.closest('li[data-idx]');
-      if (li) { e.preventDefault(); ir(parseInt(li.getAttribute('data-idx'), 10)); }
-    });
-
-    input.addEventListener('blur', function () { setTimeout(cerrar, 150); });
-    document.addEventListener('pointerdown', function (e) {
-      if (!e.target.closest('.hero-search')) cerrar();
-    });
-  })();
+      input.addEventListener('blur', function () {
+        setTimeout(cerrar, 150);
+      });
+      document.addEventListener('pointerdown', function (e) {
+        if (!e.target.closest('.hero-search')) cerrar();
+      });
+    })();
   </script>
 
   <script is:inline>
     window.RECETAS = [];
     fetch('/api/recetas.json')
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         window.RECETAS = data;
         document.dispatchEvent(new Event('recetas-listas'));
       })
-      .catch(err => console.error('Error cargando recetas:', err));
+      .catch((err) => console.error('Error cargando recetas:', err));
   </script>
 </Layout>

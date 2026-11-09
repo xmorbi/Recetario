@@ -1,34 +1,12 @@
 {
   "titulo": "Sándwich dinámico",
   "categoria": "sandwiches",
-  "tags": [
-    "sándwich",
-    "dinámico",
-    "palta",
-    "tomate",
-    "once",
-    "completo"
-  ],
+  "tags": ["sándwich", "dinámico", "palta", "tomate", "once", "completo"],
   "imagen": null,
   "tiempo": "8 min",
   "porciones": "1 sándwich",
   "dificultad": "muy fácil",
   "tecnica": "Sin cocción",
-  "ingredientes": [
-    "1 pan de completo (alargado) o 1 marraqueta",
-    "1 vienesa de buena calidad",
-    "1/2 palta Hass madura",
-    "1 tomate maduro",
-    "Sal y unas gotas de limón (para la palta)"
-  ],
-  "pasos": [
-    "Cuece la vienesa en agua hirviendo 5 minutos.",
-    "Calienta el pan en el horno o plancha 2 minutos por lado.",
-    "Pisa la palta con tenedor, agrégale sal y unas gotas de limón.",
-    "Corta el tomate en cubos pequeños y sala ligeramente.",
-    "Abre el pan, pon la vienesa, luego la palta, y encima el tomate.",
-    "Sirve inmediatamente."
-  ],
   "dato": "El \"dinámico\" es el completo italiano sin mayonesa. Verde (palta) y rojo (tomate), pero sin el blanco (mayonesa). Algunos dicen que se llama así porque \"se mueve\" más que el italiano. Es la versión más saludable del completo, si es que eso es posible.",
   "errores": [
     {
@@ -88,9 +66,7 @@
   "pasos_v2": [
     {
       "texto": "Cuece la vienesa en agua hirviendo 5 minutos.",
-      "ingredientes": [
-        2
-      ],
+      "ingredientes": [2],
       "timers": [
         {
           "minutos": 5,
@@ -100,9 +76,7 @@
     },
     {
       "texto": "Calienta el pan en el horno o plancha 2 minutos por lado.",
-      "ingredientes": [
-        1
-      ],
+      "ingredientes": [1],
       "timers": [
         {
           "minutos": 2,
@@ -112,27 +86,15 @@
     },
     {
       "texto": "Pisa la palta con tenedor, agrégale sal y unas gotas de limón.",
-      "ingredientes": [
-        3,
-        5
-      ]
+      "ingredientes": [3, 5]
     },
     {
       "texto": "Corta el tomate en cubos pequeños y sala ligeramente.",
-      "ingredientes": [
-        4,
-        5
-      ]
+      "ingredientes": [4, 5]
     },
     {
       "texto": "Abre el pan, pon la vienesa, luego la palta, y encima el tomate.",
-      "ingredientes": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
+      "ingredientes": [1, 2, 3, 4, 5]
     },
     {
       "texto": "Sirve inmediatamente."

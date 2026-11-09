@@ -1,34 +1,12 @@
 {
   "titulo": "Marraqueta",
   "categoria": "panes",
-  "tags": [
-    "pan",
-    "horno",
-    "masa",
-    "desayuno",
-    "once",
-    "tradicional"
-  ],
+  "tags": ["pan", "horno", "masa", "desayuno", "once", "tradicional"],
   "imagen": "img/marraqueta.jpg",
   "tiempo": "2 h 30 min",
   "porciones": "4 panes",
   "dificultad": "media",
   "tecnica": "Horno",
-  "ingredientes": [
-    "1 kg de harina sin polvos de hornear",
-    "600 ml de agua a temperatura ambiente",
-    "20 g de sal",
-    "15 g de levadura granulada",
-    "1 cucharadita de azúcar (opcional)"
-  ],
-  "pasos": [
-    "Disuelve la levadura y el azúcar en un poco de agua tibia. Deja reposar por 15 minutos hasta que espume.",
-    "En un bol grande, mezcla la harina con la sal. Agrega la levadura disuelta y el resto del agua. Amasa hasta obtener una masa suave y elástica.",
-    "Cubre la masa y deja levar en un lugar cálido por 1 hora, o hasta que doble su volumen.",
-    "Divide la masa en 4 porciones. Forma bolas y luego aplánalas ligeramente. Haz un corte profundo en el centro de cada pan.",
-    "Coloca los panes en una bandeja enharinada y deja levar por 30 minutos más. Precalienta el horno a 220 °C.",
-    "Hornea por 20-25 minutos, hasta que estén dorados y suenen huecos al golpear la base."
-  ],
   "dato": "La marraqueta es el pan más consumido en Chile. Su corte característico permite separarla en cuatro \"marraquetas\" para compartir.",
   "errores": [
     {
@@ -86,11 +64,7 @@
   "pasos_v2": [
     {
       "texto": "Disuelve la levadura y el azúcar en un poco de agua tibia. Deja reposar por 15 minutos hasta que espume.",
-      "ingredientes": [
-        2,
-        4,
-        5
-      ],
+      "ingredientes": [2, 4, 5],
       "timers": [
         {
           "minutos": 15,
@@ -100,12 +74,7 @@
     },
     {
       "texto": "En un bol grande, mezcla la harina con la sal. Agrega la levadura disuelta y el resto del agua. Amasa hasta obtener una masa suave y elástica.",
-      "ingredientes": [
-        1,
-        2,
-        3,
-        4
-      ]
+      "ingredientes": [1, 2, 3, 4]
     },
     {
       "texto": "Cubre la masa y deja levar en un lugar cálido por 1 hora, o hasta que doble su volumen.",
@@ -121,9 +90,7 @@
     },
     {
       "texto": "Coloca los panes en una bandeja enharinada y deja levar por 30 minutos más. Precalienta el horno a 220 °C.",
-      "ingredientes": [
-        1
-      ],
+      "ingredientes": [1],
       "timers": [
         {
           "minutos": 30,

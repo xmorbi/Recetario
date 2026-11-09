@@ -1,35 +1,12 @@
 {
   "titulo": "Duraznos en conserva",
   "categoria": "dulces",
-  "tags": [
-    "postre",
-    "durazno",
-    "conserva",
-    "verano",
-    "tradicional",
-    "fruta"
-  ],
+  "tags": ["postre", "durazno", "conserva", "verano", "tradicional", "fruta"],
   "imagen": null,
   "tiempo": "40 min + frío",
   "porciones": "6 personas",
   "dificultad": "fácil",
   "tecnica": "Olla",
-  "ingredientes": [
-    "1 kg de duraznos maduros pero firmes",
-    "2 tazas (500 ml) de agua",
-    "1 taza (200 g) de azúcar",
-    "1 rama de canela",
-    "3 clavos de olor",
-    "Cáscara de 1/2 naranja (opcional)"
-  ],
-  "pasos": [
-    "Lava los duraznos y hazles una cruz en la base. Sumérgelos en agua hirviendo 30 segundos, luego en agua fría. Pélalos fácilmente.",
-    "Córtalos por la mitad y retira el carozo.",
-    "En una olla, hierve el agua con el azúcar, la canela, los clavos y la cáscara de naranja hasta disolver el azúcar.",
-    "Agrega los duraznos y cocina a fuego bajo 10-15 minutos, hasta que estén tiernos pero firmes.",
-    "Retira del fuego y deja enfriar en el almíbar.",
-    "Refrigera al menos 4 horas antes de servir. Se pueden servir solos o con manjar."
-  ],
   "dato": "Los duraznos en conserva son un postre de verano chileno. Se hacen con duraznos de la zona central, famosos por su dulzura. También se conocen como \"duraznos al jugo\". Con manjar encima son un postre de fiestas. En Chile se conservan en frascos esterilizados para comer en invierno.",
   "errores": [
     {
@@ -91,29 +68,18 @@
   "pasos_v2": [
     {
       "texto": "Lava los duraznos y hazles una cruz en la base. Sumérgelos en agua hirviendo 30 segundos, luego en agua fría. Pélalos fácilmente.",
-      "ingredientes": [
-        1,
-        2
-      ]
+      "ingredientes": [1, 2]
     },
     {
       "texto": "Córtalos por la mitad y retira el carozo."
     },
     {
       "texto": "En una olla, hierve el agua con el azúcar, la canela, los clavos y la cáscara de naranja hasta disolver el azúcar.",
-      "ingredientes": [
-        2,
-        3,
-        4,
-        5,
-        6
-      ]
+      "ingredientes": [2, 3, 4, 5, 6]
     },
     {
       "texto": "Agrega los duraznos y cocina a fuego bajo 10-15 minutos, hasta que estén tiernos pero firmes.",
-      "ingredientes": [
-        1
-      ],
+      "ingredientes": [1],
       "timers": [
         {
           "minutos": 15,

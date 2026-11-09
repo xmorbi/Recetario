@@ -1,41 +1,12 @@
 {
   "titulo": "Crema de Tomates con Albahaca",
   "categoria": "sopas",
-  "tags": [
-    "crema de tomates con albahaca",
-    "tomates",
-    "albahaca",
-    "vino blanco",
-    "sopa"
-  ],
+  "tags": ["crema de tomates con albahaca", "tomates", "albahaca", "vino blanco", "sopa"],
   "imagen": null,
   "tiempo": "40 min",
   "porciones": "4 a 6 personas",
   "dificultad": "fácil",
   "tecnica": "Olla y licuadora",
-  "ingredientes": [
-    "1 kg de tomates maduros",
-    "2 1/2 cucharadas (25 g) de harina",
-    "1 cucharada (15 ml) de salsa inglesa",
-    "1 cebolla",
-    "1 taza (250 ml) de vino blanco",
-    "1 diente de ajo",
-    "Salsa de ají (a gusto)",
-    "3 cucharadas (45 ml) de aceite",
-    "3 cucharadas de albahaca picada fina",
-    "2 cucharadas de ciboulette picado",
-    "Sal",
-    "Pimienta"
-  ],
-  "pasos": [
-    "Pelar los tomates, quitar las pepas y trocearlos.",
-    "Picar finamente la cebolla y el ajo, y freírlos en el aceite caliente revolviendo para que no se doren.",
-    "Agregar los tomates, sal, pimienta y cocinar unos 10 minutos.",
-    "Disolver la harina en 1/4 taza de agua fría y agregarla a la olla, revolviendo constantemente para que no se formen grumos.",
-    "Sazonar con salsa inglesa, ají al gusto y el vino. Cocinar durante unos 20 minutos.",
-    "Retirar, dejar enfriar y batir en la licuadora hasta formar una crema.",
-    "Servir en tazones, espolvorear albahaca y ciboulette picados finos."
-  ],
   "dato": "El vino blanco aporta acidez y aroma; si prefieres una versión sin alcohol, puedes reemplazarlo por caldo de verduras. La crema de tomates con albahaca es una sopa de verano chilena, cuando los tomates de la zona central están en su mejor momento.",
   "errores": [
     {
@@ -138,25 +109,15 @@
   "pasos_v2": [
     {
       "texto": "Pelar los tomates, quitar las pepas y trocearlos.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Picar finamente la cebolla y el ajo, y freírlos en el aceite caliente revolviendo para que no se doren.",
-      "ingredientes": [
-        4,
-        6,
-        8
-      ]
+      "ingredientes": [4, 6, 8]
     },
     {
       "texto": "Agregar los tomates, sal, pimienta y cocinar unos 10 minutos.",
-      "ingredientes": [
-        1,
-        11,
-        12
-      ],
+      "ingredientes": [1, 11, 12],
       "timers": [
         {
           "minutos": 10,
@@ -166,18 +127,11 @@
     },
     {
       "texto": "Disolver la harina en 1/4 taza de agua fría y agregarla a la olla, revolviendo constantemente para que no se formen grumos.",
-      "ingredientes": [
-        2
-      ]
+      "ingredientes": [2]
     },
     {
       "texto": "Sazonar con salsa inglesa, ají al gusto y el vino. Cocinar durante unos 20 minutos.",
-      "ingredientes": [
-        3,
-        5,
-        7,
-        11
-      ],
+      "ingredientes": [3, 5, 7, 11],
       "timers": [
         {
           "minutos": 20,
@@ -190,10 +144,7 @@
     },
     {
       "texto": "Servir en tazones, espolvorear albahaca y ciboulette picados finos.",
-      "ingredientes": [
-        9,
-        10
-      ]
+      "ingredientes": [9, 10]
     }
   ],
   "tiempo_v2": {

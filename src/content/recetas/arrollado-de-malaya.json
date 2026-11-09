@@ -1,42 +1,12 @@
 {
   "titulo": "Arrollado de malaya",
   "categoria": "principales",
-  "tags": [
-    "arrollado",
-    "malaya",
-    "vacuno",
-    "frio",
-    "picoteo",
-    "tradicional"
-  ],
+  "tags": ["arrollado", "malaya", "vacuno", "frio", "picoteo", "tradicional"],
   "imagen": null,
   "tiempo": "2 h + reposo de 12 h",
   "porciones": "8 a 10 personas",
   "dificultad": "media",
   "tecnica": "Olla",
-  "ingredientes": [
-    "1 malaya de vacuno (1,5 a 2 kg)",
-    "200 g de tocino en tiras",
-    "2 zanahorias cocidas en bastones",
-    "3 huevos duros",
-    "3 dientes de ajo machacados",
-    "1 cucharada de ají de color",
-    "1 cucharadita de orégano",
-    "1 cucharadita de comino",
-    "1 cucharada de sal",
-    "1 cucharadita de pimienta negra",
-    "1 taza (250 ml) de vinagre",
-    "1 hoja de laurel",
-    "Cordel de cocina"
-  ],
-  "pasos": [
-    "Extiende la malaya sobre una superficie plana. Sazona con sal, ajo, ají de color, orégano, comino y pimienta.",
-    "Coloca las tiras de tocino, los bastones de zanahoria y los huevos duros a lo largo.",
-    "Enrolla la malaya apretando bien y ata con cordel cada 3 cm. La malaya debe quedar compacta.",
-    "Coloca el arrollado en una olla con el vinagre, el laurel y agua hasta cubrir la mitad. Cocina tapado a fuego medio-bajo 1,5 a 2 horas, dando vuelta cada 30 minutos.",
-    "Retira del fuego y deja enfriar en el líquido. Refrigera al menos 12 horas.",
-    "Retira el cordel y corta en láminas finas. Sirve frío con pebre, pan amasado y ensalada chilena."
-  ],
   "dato": "El arrollado de malaya es un plato tradicional del campo chileno, típico de Fiestas Patrias, matrimonios y celebraciones. La malaya es un corte de vacuno del cuarto trasero, con fibras largas y algo de grasa, ideal para enrollar. A diferencia del arrollado huaso (que es de cerdo), la malaya es de vacuno y lleva huevo y zanahoria dentro.",
   "errores": [
     {
@@ -146,39 +116,19 @@
   "pasos_v2": [
     {
       "texto": "Extiende la malaya sobre una superficie plana. Sazona con sal, ajo, ají de color, orégano, comino y pimienta.",
-      "ingredientes": [
-        1,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ]
+      "ingredientes": [1, 5, 6, 7, 8, 9, 10]
     },
     {
       "texto": "Coloca las tiras de tocino, los bastones de zanahoria y los huevos duros a lo largo.",
-      "ingredientes": [
-        2,
-        3,
-        4
-      ]
+      "ingredientes": [2, 3, 4]
     },
     {
       "texto": "Enrolla la malaya apretando bien y ata con cordel cada 3 cm. La malaya debe quedar compacta.",
-      "ingredientes": [
-        1,
-        13
-      ]
+      "ingredientes": [1, 13]
     },
     {
       "texto": "Coloca el arrollado en una olla con el vinagre, el laurel y agua hasta cubrir la mitad. Cocina tapado a fuego medio-bajo 1,5 a 2 horas, dando vuelta cada 30 minutos.",
-      "ingredientes": [
-        5,
-        11,
-        12,
-        13
-      ],
+      "ingredientes": [5, 11, 12, 13],
       "timers": [
         {
           "minutos": 120,
@@ -192,11 +142,7 @@
     },
     {
       "texto": "Retira el cordel y corta en láminas finas. Sirve frío con pebre, pan amasado y ensalada chilena.",
-      "ingredientes": [
-        6,
-        9,
-        13
-      ]
+      "ingredientes": [6, 9, 13]
     }
   ],
   "tiempo_v2": {

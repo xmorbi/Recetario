@@ -27,18 +27,20 @@ export function extraerPorciones(str) {
       min: parseInt(paren[1], 10),
       max: null,
       unidad: paren[2].toLowerCase(),
-      texto: str
+      texto: str,
     };
   }
 
   // "X a Y unidad"
-  var rango = /(\d+)\s+(?:a|al|-)\s+(\d+)\s+(personas?|porciones?|unidades?|vasos?|tazas?)/i.exec(str);
+  var rango = /(\d+)\s+(?:a|al|-)\s+(\d+)\s+(personas?|porciones?|unidades?|vasos?|tazas?)/i.exec(
+    str
+  );
   if (rango) {
     return {
       min: parseInt(rango[1], 10),
       max: parseInt(rango[2], 10),
       unidad: rango[3].toLowerCase(),
-      texto: str
+      texto: str,
     };
   }
 
@@ -49,7 +51,7 @@ export function extraerPorciones(str) {
       min: parseInt(simple[1], 10),
       max: null,
       unidad: simple[2].toLowerCase(),
-      texto: str
+      texto: str,
     };
   }
 
@@ -60,7 +62,7 @@ export function extraerPorciones(str) {
       min: parseInt(fallback[1], 10),
       max: null,
       unidad: '',
-      texto: str
+      texto: str,
     };
   }
 
@@ -99,16 +101,28 @@ export function formatearNumero(n) {
   if (!isFinite(n) || n < 0) return '0';
   if (n === 0) return '0';
 
+  // 1. Números grandes (gramos, ml): redondear al entero.
+  // Evita cosas como "541⅔ g de harina".
+  if (n > 20) {
+    return String(Math.round(n));
+  }
+
   var ent = Math.floor(n);
   var resto = n - ent;
 
-  // Devolver como fracción unicode cuando sea "bonito"
+  // 2. Si el decimal está muy cerca de un entero (ej: 1.08 o 1.95), redondear.
+  // Evita el "1,1 huevo" o "2,2 cebollas".
+  if (resto < 0.2 || resto > 0.8) {
+    return String(Math.round(n));
+  }
+
+  // 3. Devolver como fracción unicode cuando sea "bonito"
   var fracciones = [
     [1 / 4, '¼'],
     [1 / 3, '⅓'],
     [1 / 2, '½'],
     [2 / 3, '⅔'],
-    [3 / 4, '¾']
+    [3 / 4, '¾'],
   ];
   for (var i = 0; i < fracciones.length; i++) {
     if (Math.abs(resto - fracciones[i][0]) < 0.04) {
@@ -116,12 +130,7 @@ export function formatearNumero(n) {
     }
   }
 
-  // Entero
-  if (Math.abs(n - Math.round(n)) < 0.05) {
-    return String(Math.round(n));
-  }
-
-  // Un decimal (con coma para español de Chile)
+  // 4. Un decimal (con coma para español de Chile) para casos raros (ej: 1,4 tazas)
   return String(Math.round(n * 10) / 10).replace('.', ',');
 }
 
@@ -154,93 +163,93 @@ var UNIDAD_EXCLUIDA = /^\s*(?:cm|mm|°|º|min\b|minutos?\b|h\b|hrs?\b|horas?\b|d
    ============================================================ */
 var SINGULAR_A_PLURAL = {
   // Medidas y unidades de volumen/peso
-  'taza': 'tazas',
-  'cucharada': 'cucharadas',
-  'cucharadita': 'cucharaditas',
-  'cucharón': 'cucharones',
-  'diente': 'dientes',
-  'unidad': 'unidades',
-  'sobre': 'sobres',
-  'lata': 'latas',
-  'tarro': 'tarros',
-  'paquete': 'paquetes',
-  'ramita': 'ramitas',
-  'rama': 'ramas',
-  'hoja': 'hojas',
-  'tallo': 'tallos',
-  'cabeza': 'cabezas',
-  'rodaja': 'rodajas',
-  'trozo': 'trozos',
-  'presa': 'presas',
-  'docena': 'docenas',
-  'mano': 'manos',
-  'puñado': 'puñados',
-  'pizca': 'pizcas',
-  'gota': 'gotas',
-  'gramo': 'gramos',
-  'kilo': 'kilos',
-  'litro': 'litros',
-  'mililitro': 'mililitros',
-  'onza': 'onzas',
-  'libra': 'libras',
+  taza: 'tazas',
+  cucharada: 'cucharadas',
+  cucharadita: 'cucharaditas',
+  cucharón: 'cucharones',
+  diente: 'dientes',
+  unidad: 'unidades',
+  sobre: 'sobres',
+  lata: 'latas',
+  tarro: 'tarros',
+  paquete: 'paquetes',
+  ramita: 'ramitas',
+  rama: 'ramas',
+  hoja: 'hojas',
+  tallo: 'tallos',
+  cabeza: 'cabezas',
+  rodaja: 'rodajas',
+  trozo: 'trozos',
+  presa: 'presas',
+  docena: 'docenas',
+  mano: 'manos',
+  puñado: 'puñados',
+  pizca: 'pizcas',
+  gota: 'gotas',
+  gramo: 'gramos',
+  kilo: 'kilos',
+  litro: 'litros',
+  mililitro: 'mililitros',
+  onza: 'onzas',
+  libra: 'libras',
   // Carnes y pescados
-  'pechuga': 'pechugas',
-  'muslo': 'muslos',
-  'alita': 'alitas',
-  'chuleta': 'chuletas',
-  'filete': 'filetes',
-  'lomo': 'lomos',
-  'costilla': 'costillas',
-  'pollo': 'pollos',
-  'pavo': 'pavos',
-  'conejo': 'conejos',
-  'cordero': 'corderos',
-  'pescado': 'pescados',
-  'reineta': 'reinetas',
-  'merluza': 'merluzas',
-  'corvina': 'corvinas',
-  'salmón': 'salmones',
-  'atún': 'atunes',
+  pechuga: 'pechugas',
+  muslo: 'muslos',
+  alita: 'alitas',
+  chuleta: 'chuletas',
+  filete: 'filetes',
+  lomo: 'lomos',
+  costilla: 'costillas',
+  pollo: 'pollos',
+  pavo: 'pavos',
+  conejo: 'conejos',
+  cordero: 'corderos',
+  pescado: 'pescados',
+  reineta: 'reinetas',
+  merluza: 'merluzas',
+  corvina: 'corvinas',
+  salmón: 'salmones',
+  atún: 'atunes',
   // Embutidos y huevos
-  'huevo': 'huevos',
-  'chorizo': 'chorizos',
-  'salchicha': 'salchichas',
-  'vienesa': 'vienesas',
-  'longaniza': 'longanizas',
+  huevo: 'huevos',
+  chorizo: 'chorizos',
+  salchicha: 'salchichas',
+  vienesa: 'vienesas',
+  longaniza: 'longanizas',
   // Verduras y frutas
-  'papa': 'papas',
-  'cebolla': 'cebollas',
-  'zanahoria': 'zanahorias',
-  'tomate': 'tomates',
-  'pimiento': 'pimientos',
-  'morrón': 'morrones',
-  'choclo': 'choclos',
-  'ajo': 'ajos',
-  'limón': 'limones',
-  'naranja': 'naranjas',
-  'manzana': 'manzanas',
-  'palta': 'paltas',
-  'pepino': 'pepinos',
-  'poroto': 'porotos',
-  'lenteja': 'lentejas',
-  'garbanzo': 'garbanzos',
-  'arveja': 'arvejas',
-  'fideo': 'fideos',
+  papa: 'papas',
+  cebolla: 'cebollas',
+  zanahoria: 'zanahorias',
+  tomate: 'tomates',
+  pimiento: 'pimientos',
+  morrón: 'morrones',
+  choclo: 'choclos',
+  ajo: 'ajos',
+  limón: 'limones',
+  naranja: 'naranjas',
+  manzana: 'manzanas',
+  palta: 'paltas',
+  pepino: 'pepinos',
+  poroto: 'porotos',
+  lenteja: 'lentejas',
+  garbanzo: 'garbanzos',
+  arveja: 'arvejas',
+  fideo: 'fideos',
   // Panadería y masas
-  'pan': 'panes',
-  'marraqueta': 'marraquetas',
-  'hallulla': 'hallullas',
-  'sopaipilla': 'sopaipillas',
-  'empanada': 'empanadas',
-  'humita': 'humitas',
+  pan: 'panes',
+  marraqueta: 'marraquetas',
+  hallulla: 'hallullas',
+  sopaipilla: 'sopaipillas',
+  empanada: 'empanadas',
+  humita: 'humitas',
   // Porciones y recipientes
-  'porción': 'porciones',
-  'persona': 'personas',
-  'vaso': 'vasos',
-  'molde': 'moldes',
-  'plato': 'platos',
-  'bowl': 'bowls',
-  'tazón': 'tazones'
+  porción: 'porciones',
+  persona: 'personas',
+  vaso: 'vasos',
+  molde: 'moldes',
+  plato: 'platos',
+  bowl: 'bowls',
+  tazón: 'tazones',
 };
 
 // Inverso automático: plural → singular
@@ -363,23 +372,90 @@ export function escalarIngrediente(texto, factor) {
 
 // Unidades reconocidas al parsear una línea de ingrediente.
 var UNIDADES_CONOCIDAS = {
-  'g': 1, 'kg': 1, 'mg': 1, 'ml': 1, 'l': 1, 'cl': 1, 'dl': 1, 'cc': 1,
-  'taza': 1, 'tazas': 1, 'cucharada': 1, 'cucharadas': 1,
-  'cucharadita': 1, 'cucharaditas': 1, 'cdta': 1, 'cdtas': 1, 'cda': 1, 'cdas': 1,
-  'cucharón': 1, 'cucharones': 1,
-  'diente': 1, 'dientes': 1, 'unidad': 1, 'unidades': 1,
-  'sobre': 1, 'sobres': 1, 'lata': 1, 'latas': 1, 'tarro': 1, 'tarros': 1,
-  'paquete': 1, 'paquetes': 1, 'ramita': 1, 'ramitas': 1, 'rama': 1, 'ramas': 1,
-  'hoja': 1, 'hojas': 1, 'tallo': 1, 'tallos': 1, 'cabeza': 1, 'cabezas': 1,
-  'rodaja': 1, 'rodajas': 1, 'trozo': 1, 'trozos': 1, 'presa': 1, 'presas': 1,
-  'docena': 1, 'docenas': 1, 'mano': 1, 'manos': 1, 'puñado': 1, 'puñados': 1,
-  'pizca': 1, 'pizcas': 1, 'gota': 1, 'gotas': 1,
-  'gramo': 1, 'gramos': 1, 'kilo': 1, 'kilos': 1,
-  'litro': 1, 'litros': 1, 'mililitro': 1, 'mililitros': 1,
-  'onza': 1, 'onzas': 1, 'libra': 1, 'libras': 1,
-  'molde': 1, 'moldes': 1, 'vaso': 1, 'vasos': 1,
-  'plato': 1, 'platos': 1, 'bowl': 1, 'bowls': 1, 'tazón': 1, 'tazones': 1,
-  'porción': 1, 'porciones': 1, 'persona': 1, 'personas': 1
+  g: 1,
+  kg: 1,
+  mg: 1,
+  ml: 1,
+  l: 1,
+  cl: 1,
+  dl: 1,
+  cc: 1,
+  taza: 1,
+  tazas: 1,
+  cucharada: 1,
+  cucharadas: 1,
+  cucharadita: 1,
+  cucharaditas: 1,
+  cdta: 1,
+  cdtas: 1,
+  cda: 1,
+  cdas: 1,
+  cucharón: 1,
+  cucharones: 1,
+  diente: 1,
+  dientes: 1,
+  unidad: 1,
+  unidades: 1,
+  sobre: 1,
+  sobres: 1,
+  lata: 1,
+  latas: 1,
+  tarro: 1,
+  tarros: 1,
+  paquete: 1,
+  paquetes: 1,
+  ramita: 1,
+  ramitas: 1,
+  rama: 1,
+  ramas: 1,
+  hoja: 1,
+  hojas: 1,
+  tallo: 1,
+  tallos: 1,
+  cabeza: 1,
+  cabezas: 1,
+  rodaja: 1,
+  rodajas: 1,
+  trozo: 1,
+  trozos: 1,
+  presa: 1,
+  presas: 1,
+  docena: 1,
+  docenas: 1,
+  mano: 1,
+  manos: 1,
+  puñado: 1,
+  puñados: 1,
+  pizca: 1,
+  pizcas: 1,
+  gota: 1,
+  gotas: 1,
+  gramo: 1,
+  gramos: 1,
+  kilo: 1,
+  kilos: 1,
+  litro: 1,
+  litros: 1,
+  mililitro: 1,
+  mililitros: 1,
+  onza: 1,
+  onzas: 1,
+  libra: 1,
+  libras: 1,
+  molde: 1,
+  moldes: 1,
+  vaso: 1,
+  vasos: 1,
+  plato: 1,
+  platos: 1,
+  bowl: 1,
+  bowls: 1,
+  tazón: 1,
+  tazones: 1,
+  porción: 1,
+  porciones: 1,
+  persona: 1,
+  personas: 1,
 };
 
 /**
@@ -394,22 +470,34 @@ export function parsearIngredienteTexto(linea) {
   // Sección (mayúsculas antes de ":")
   var seccion = '';
   var sm = /^([A-ZÁÉÍÓÚÑ][A-Za-zÁÉÍÓÚáéíóúñÑ ]{1,24}):\s+/.exec(txt);
-  if (sm) { seccion = sm[1].trim(); txt = txt.slice(sm[0].length); }
+  if (sm) {
+    seccion = sm[1].trim();
+    txt = txt.slice(sm[0].length);
+  }
 
   // Opcional
   var opcional = /\(\s*opcional\b[^)]*\)/i.test(original) || /^opcional\b/i.test(txt);
   if (opcional) {
-    txt = txt.replace(/\(\s*opcional\b[^)]*\)/gi, '').replace(/\bopcional\b/gi, '').trim();
+    txt = txt
+      .replace(/\(\s*opcional\b[^)]*\)/gi, '')
+      .replace(/\bopcional\b/gi, '')
+      .trim();
   }
 
   // Nota entre paréntesis
   var nota = '';
   var nm = /\(([^)]+)\)/.exec(txt);
-  if (nm) { nota = nm[1].trim(); txt = txt.replace(nm[0], '').trim(); }
+  if (nm) {
+    nota = nm[1].trim();
+    txt = txt.replace(nm[0], '').trim();
+  }
 
   // Cantidad / cantidadMax
-  var cantidad = null, cantidadMax = null, resto = txt;
-  var reCant = /^(\d+\s+\d+\/\d+|\d+\/\d+|\d+[.,]\d+|\d+|½|¼|¾|⅓|⅔|\d[½¼¾⅓⅔])\s*(?:(?:a|al|-|–)\s*(\d+\s+\d+\/\d+|\d+\/\d+|\d+[.,]\d+|\d+|½|¼|¾|⅓|⅔|\d[½¼¾⅓⅔]))?\s*/i;
+  var cantidad = null,
+    cantidadMax = null,
+    resto = txt;
+  var reCant =
+    /^(\d+\s+\d+\/\d+|\d+\/\d+|\d+[.,]\d+|\d+|½|¼|¾|⅓|⅔|\d[½¼¾⅓⅔])\s*(?:(?:a|al|-|–)\s*(\d+\s+\d+\/\d+|\d+\/\d+|\d+[.,]\d+|\d+|½|¼|¾|⅓|⅔|\d[½¼¾⅓⅔]))?\s*/i;
   var mc = reCant.exec(resto);
   if (mc) {
     cantidad = parsearNumeroTexto(mc[1]);
@@ -449,7 +537,10 @@ export function parsearIngredienteTexto(linea) {
  */
 export function escalarEstructurado(ingredientes, factor) {
   if (!Array.isArray(ingredientes)) return [];
-  if (factor === 1) return ingredientes.map(function (x) { return Object.assign({}, x); });
+  if (factor === 1)
+    return ingredientes.map(function (x) {
+      return Object.assign({}, x);
+    });
 
   return ingredientes.map(function (ing) {
     if (ing.escalable === false) return Object.assign({}, ing);

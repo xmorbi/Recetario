@@ -1,35 +1,12 @@
 {
   "titulo": "Colegial",
   "categoria": "dulces",
-  "tags": [
-    "dulce",
-    "postre",
-    "horno",
-    "pan",
-    "reposteria"
-  ],
+  "tags": ["dulce", "postre", "horno", "pan", "reposteria"],
   "imagen": "img/colegial-budin-de-pan.jpg",
   "tiempo": "1 h 30 min",
   "porciones": "6 personas",
   "dificultad": "fácil",
   "tecnica": "Horno",
-  "ingredientes": [
-    "4 marraquetas o 500 g de pan duro",
-    "2 tazas (500 ml) de leche",
-    "1 taza (200 g) de azúcar",
-    "3 huevos",
-    "1 cucharadita (5 ml) de esencia de vainilla",
-    "1 manzana en láminas finas",
-    "1/2 taza (75 g) de pasas (opcional)",
-    "Mantequilla para engrasar"
-  ],
-  "pasos": [
-    "Desmenuza el pan y remójalo en la leche caliente 15-20 min.",
-    "Bate los huevos con el azúcar y la vainilla.",
-    "Mezcla con el pan remojado, la manzana y las pasas.",
-    "Vierte en un molde engrasado y hornea a 180 °C por 45-50 min.",
-    "Deja enfriar y espolvorea azúcar flor o leche condensada."
-  ],
   "dato": "Es la receta perfecta para aprovechar el pan de días anteriores. El colegial es un budín de pan tradicional chileno, típico de la once y de las casas donde no se bota el pan.",
   "errores": [
     {
@@ -106,10 +83,7 @@
   "pasos_v2": [
     {
       "texto": "Desmenuza el pan y remójalo en la leche caliente 15-20 min.",
-      "ingredientes": [
-        1,
-        2
-      ],
+      "ingredientes": [1, 2],
       "timers": [
         {
           "minutos": 20,
@@ -119,25 +93,15 @@
     },
     {
       "texto": "Bate los huevos con el azúcar y la vainilla.",
-      "ingredientes": [
-        3,
-        4,
-        5
-      ]
+      "ingredientes": [3, 4, 5]
     },
     {
       "texto": "Mezcla con el pan remojado, la manzana y las pasas.",
-      "ingredientes": [
-        1,
-        6,
-        7
-      ]
+      "ingredientes": [1, 6, 7]
     },
     {
       "texto": "Vierte en un molde engrasado y hornea a 180 °C por 45-50 min.",
-      "ingredientes": [
-        8
-      ],
+      "ingredientes": [8],
       "timers": [
         {
           "minutos": 50,
@@ -147,10 +111,7 @@
     },
     {
       "texto": "Deja enfriar y espolvorea azúcar flor o leche condensada.",
-      "ingredientes": [
-        2,
-        3
-      ]
+      "ingredientes": [2, 3]
     }
   ],
   "tiempo_v2": {

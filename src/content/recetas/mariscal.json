@@ -1,41 +1,12 @@
 {
   "titulo": "Mariscal",
   "categoria": "principales",
-  "tags": [
-    "marisco",
-    "pescado",
-    "guiso",
-    "olla",
-    "plato principal",
-    "costa"
-  ],
+  "tags": ["marisco", "pescado", "guiso", "olla", "plato principal", "costa"],
   "imagen": "img/mariscal.jpg",
   "tiempo": "40 min",
   "porciones": "4 personas",
   "dificultad": "media",
   "tecnica": "Olla",
-  "ingredientes": [
-    "300 g de mariscos variados (choritos, almejas, camarones)",
-    "300 g de pescado blanco en trozos",
-    "200 g de pulpo o calamar en trozos (opcional)",
-    "4 papas medianas en cubos",
-    "1 cebolla grande picada",
-    "2 dientes de ajo picados",
-    "1 pimentón rojo en cubos",
-    "2 tomates maduros picados",
-    "1 taza de vino blanco",
-    "1 L de caldo de pescado",
-    "Sal, pimienta, orégano y merkén",
-    "Aceite de oliva"
-  ],
-  "pasos": [
-    "Sofríe la cebolla, el ajo y el pimentón en aceite de oliva hasta que estén tiernos.",
-    "Agrega el tomate y condimenta con sal, pimienta, orégano y merkén. Cocina 5 minutos.",
-    "Vierte el vino blanco y deja evaporar.",
-    "Añade el caldo y las papas. Cocina 15 minutos.",
-    "Incorpora los mariscos, el pescado y el pulpo si usas. Cocina 7-10 minutos, hasta que los mariscos se abran.",
-    "Rectifica la sal y sirve con perejil fresco."
-  ],
   "dato": "El mariscal es una mezcla de mariscos y pescado, típica de la costa chilena. Es como una cazuela de mariscos pero más espesa. Se sirve con papas y caldo. En el sur se hace con cholgas y picorocos; en la zona central con choritos y almejas.",
   "errores": [
     {
@@ -139,19 +110,11 @@
   "pasos_v2": [
     {
       "texto": "Sofríe la cebolla, el ajo y el pimentón en aceite de oliva hasta que estén tiernos.",
-      "ingredientes": [
-        5,
-        6,
-        7,
-        12
-      ]
+      "ingredientes": [5, 6, 7, 12]
     },
     {
       "texto": "Agrega el tomate y condimenta con sal, pimienta, orégano y merkén. Cocina 5 minutos.",
-      "ingredientes": [
-        8,
-        11
-      ],
+      "ingredientes": [8, 11],
       "timers": [
         {
           "minutos": 5,
@@ -161,17 +124,11 @@
     },
     {
       "texto": "Vierte el vino blanco y deja evaporar.",
-      "ingredientes": [
-        2,
-        9
-      ]
+      "ingredientes": [2, 9]
     },
     {
       "texto": "Añade el caldo y las papas. Cocina 15 minutos.",
-      "ingredientes": [
-        4,
-        10
-      ],
+      "ingredientes": [4, 10],
       "timers": [
         {
           "minutos": 15,
@@ -181,12 +138,7 @@
     },
     {
       "texto": "Incorpora los mariscos, el pescado y el pulpo si usas. Cocina 7-10 minutos, hasta que los mariscos se abran.",
-      "ingredientes": [
-        1,
-        2,
-        3,
-        10
-      ],
+      "ingredientes": [1, 2, 3, 10],
       "timers": [
         {
           "minutos": 10,
@@ -196,9 +148,7 @@
     },
     {
       "texto": "Rectifica la sal y sirve con perejil fresco.",
-      "ingredientes": [
-        11
-      ]
+      "ingredientes": [11]
     }
   ],
   "tiempo_v2": {

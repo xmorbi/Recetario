@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const tipoSelect = document.getElementById('tipo-conversion');
   const groupIngrediente = document.getElementById('group-ingrediente');
   const ingredienteSelect = document.getElementById('ingrediente');
@@ -11,34 +11,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
   if (!tipoSelect) return;
 
-  // Densidades en gramos por taza (240ml)
   const densidades = {
     harina: 120,
     azucar: 200,
     arroz: 200,
     mantequilla: 225,
-    agua: 240
+    agua: 240,
   };
 
-  // Singular / plural de las unidades de resultado
   const UNIDADES = {
-    g:      { uno: 'g',     otros: 'g' },
-    ml:     { uno: 'ml',    otros: 'ml' },
-    kg:     { uno: 'kg',    otros: 'kg' },
-    tazas:  { uno: 'taza',  otros: 'tazas' },
-    libras: { uno: 'libra', otros: 'libras' }
+    g: { uno: 'g', otros: 'g' },
+    ml: { uno: 'ml', otros: 'ml' },
+    kg: { uno: 'kg', otros: 'kg' },
+    tazas: { uno: 'taza', otros: 'tazas' },
+    libras: { uno: 'libra', otros: 'libras' },
   };
 
-  // Paso de los botones + / −, se ajusta según el tipo de conversión
   let pasoActual = 1;
 
-  // Redondea para evitar casos como "1.0 tazas" cuando el valor real es 0.96,
-  // y quita los ceros sobrantes ("2.50" -> "2.5").
   function formatearNumero(valor) {
     if (!isFinite(valor) || valor === 0) return '0';
-    const r = Math.abs(valor) < 1
-      ? Math.round(valor * 100) / 100
-      : Math.round(valor * 10) / 10;
+    const r = Math.abs(valor) < 1 ? Math.round(valor * 100) / 100 : Math.round(valor * 10) / 10;
     return String(r);
   }
 
@@ -46,21 +39,23 @@ document.addEventListener('DOMContentLoaded', function() {
     const tipo = tipoSelect.value;
     const cant = parseFloat(inputCantidad.value) || 0;
 
-    // Mostrar u ocultar el selector de ingrediente.
-    // El HTML ya llega con el estado inicial correcto (visible), así que al
-    // cargar la página no hay ningún salto de layout.
-    const necesitaIngrediente = (tipo === 'taza_a_gramos' || tipo === 'gramos_a_taza');
+    const necesitaIngrediente = tipo === 'taza_a_gramos' || tipo === 'gramos_a_taza';
     groupIngrediente.hidden = !necesitaIngrediente;
 
     if (necesitaIngrediente) {
-      labelCantidad.textContent = tipo === 'taza_a_gramos' ? 'Número de tazas' : 'Gramos a convertir';
+      labelCantidad.textContent =
+        tipo === 'taza_a_gramos' ? 'Número de tazas' : 'Gramos a convertir';
     } else {
-      labelCantidad.textContent = tipo === 'libra_a_kg' ? 'Número de libras' :
-                                  tipo === 'kg_a_libra' ? 'Número de kilos' :
-                                  tipo === 'cucharada_a_ml' ? 'Número de cucharadas' : 'Número de tazas';
+      labelCantidad.textContent =
+        tipo === 'libra_a_kg'
+          ? 'Número de libras'
+          : tipo === 'kg_a_libra'
+            ? 'Número de kilos'
+            : tipo === 'cucharada_a_ml'
+              ? 'Número de cucharadas'
+              : 'Número de tazas';
     }
 
-    // Ajustar el paso de los botones según el tipo
     pasoActual = 1;
     if (tipo === 'taza_a_gramos' || tipo === 'taza_a_ml') {
       pasoActual = 0.25;
@@ -110,19 +105,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const texto = formatearNumero(resultado);
     const etiqueta = UNIDADES[unidad];
-    const nombreUnidad = (texto === '1') ? etiqueta.uno : etiqueta.otros;
+    const nombreUnidad = texto === '1' ? etiqueta.uno : etiqueta.otros;
 
     resultadoDiv.textContent = texto + ' ' + nombreUnidad;
     notaDiv.textContent = nota;
   }
 
-  // Eventos
   tipoSelect.addEventListener('change', calcular);
   ingredienteSelect.addEventListener('change', calcular);
   inputCantidad.addEventListener('input', calcular);
 
-  // Al enfocar el campo, seleccionar todo el texto para poder escribir encima
-  inputCantidad.addEventListener('focus', function() {
+  inputCantidad.addEventListener('focus', function () {
     inputCantidad.select();
   });
 
@@ -140,6 +133,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Arranque inicial
   calcular();
 });

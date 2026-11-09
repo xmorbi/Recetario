@@ -1,33 +1,12 @@
 {
   "titulo": "Avena",
   "categoria": "bebidas",
-  "tags": [
-    "avena",
-    "desayuno",
-    "invierno",
-    "caliente",
-    "simple",
-    "saludable"
-  ],
+  "tags": ["avena", "desayuno", "invierno", "caliente", "simple", "saludable"],
   "imagen": null,
   "tiempo": "10 min",
   "porciones": "2 personas",
   "dificultad": "fácil",
   "tecnica": "Olla",
-  "ingredientes": [
-    "1 taza (90 g) de avena",
-    "2 tazas (500 ml) de leche",
-    "2 cucharadas (25 g) de azúcar (o miel)",
-    "1 pizca de sal",
-    "1 rama de canela (opcional)",
-    "Opcional: pasas, nueces, plátano en rodajas"
-  ],
-  "pasos": [
-    "En una olla, calienta la leche con la canela y la sal.",
-    "Agrega la avena y cocina a fuego medio-bajo, revolviendo constantemente, por 5-7 minutos, hasta que espese.",
-    "Endulza con azúcar o miel al gusto.",
-    "Sirve caliente en tazones y agrega pasas, nueces o plátano si quieres."
-  ],
   "dato": "La avena caliente es el desayuno de invierno chileno. Se hace con leche y avena, y se endulza con azúcar o miel. Es reconfortante, económica y muy nutritiva. En Chile se le agrega canela y a veces pasas o frutas.",
   "errores": [
     {
@@ -91,17 +70,11 @@
   "pasos_v2": [
     {
       "texto": "En una olla, calienta la leche con la canela y la sal.",
-      "ingredientes": [
-        2,
-        4,
-        5
-      ]
+      "ingredientes": [2, 4, 5]
     },
     {
       "texto": "Agrega la avena y cocina a fuego medio-bajo, revolviendo constantemente, por 5-7 minutos, hasta que espese.",
-      "ingredientes": [
-        1
-      ],
+      "ingredientes": [1],
       "timers": [
         {
           "minutos": 7,
@@ -111,15 +84,11 @@
     },
     {
       "texto": "Endulza con azúcar o miel al gusto.",
-      "ingredientes": [
-        3
-      ]
+      "ingredientes": [3]
     },
     {
       "texto": "Sirve caliente en tazones y agrega pasas, nueces o plátano si quieres.",
-      "ingredientes": [
-        6
-      ]
+      "ingredientes": [6]
     }
   ],
   "tiempo_v2": {

@@ -1,31 +1,12 @@
 {
   "titulo": "Café con leche",
   "categoria": "bebidas",
-  "tags": [
-    "bebida",
-    "café",
-    "desayuno",
-    "once",
-    "simple",
-    "caliente"
-  ],
+  "tags": ["bebida", "café", "desayuno", "once", "simple", "caliente"],
   "imagen": null,
   "tiempo": "5 min",
   "porciones": "1 taza",
   "dificultad": "fácil",
   "tecnica": "Hervidor",
-  "ingredientes": [
-    "1 cucharadita de café soluble (o 1 taza de café pasado)",
-    "150 ml de agua hirviendo",
-    "100 ml de leche entera",
-    "Azúcar al gusto"
-  ],
-  "pasos": [
-    "Calienta la leche en una ollita o en el microondas. No debe hervir, solo calentarse hasta que salga vapor.",
-    "Disuelve el café soluble en el agua hirviendo. Si usas café pasado, ya estará listo.",
-    "Vierte el café en la taza y agrega la leche caliente.",
-    "Endulza al gusto y revuelve. Sirve inmediatamente."
-  ],
   "dato": "El café con leche es la bebida de la once chilena, junto con el té. La proporción varía: hay quienes lo toman \"cortado\" (más leche que café) y quienes lo toman \"cargado\" (más café). En Chile se usa mucho el café soluble, pero el café pasado es otra historia.",
   "errores": [
     {
@@ -73,23 +54,15 @@
   "pasos_v2": [
     {
       "texto": "Calienta la leche en una ollita o en el microondas. No debe hervir, solo calentarse hasta que salga vapor.",
-      "ingredientes": [
-        3
-      ]
+      "ingredientes": [3]
     },
     {
       "texto": "Disuelve el café soluble en el agua hirviendo. Si usas café pasado, ya estará listo.",
-      "ingredientes": [
-        1,
-        2
-      ]
+      "ingredientes": [1, 2]
     },
     {
       "texto": "Vierte el café en la taza y agrega la leche caliente.",
-      "ingredientes": [
-        1,
-        3
-      ]
+      "ingredientes": [1, 3]
     },
     {
       "texto": "Endulza al gusto y revuelve. Sirve inmediatamente."

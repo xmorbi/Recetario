@@ -1,34 +1,12 @@
 {
   "titulo": "Locos con mayonesa",
   "categoria": "principales",
-  "tags": [
-    "marisco",
-    "frio",
-    "entrada",
-    "mayonesa",
-    "picoteo"
-  ],
+  "tags": ["marisco", "frio", "entrada", "mayonesa", "picoteo"],
   "imagen": "img/Locos-con-mayonesa.jpg",
   "tiempo": "1 h 15 min",
   "porciones": "4 personas",
   "dificultad": "media",
   "tecnica": "Olla",
-  "ingredientes": [
-    "4 locos frescos (o 1 lata de locos)",
-    "1 taza de mayonesa casera o de buen calidad",
-    "1/2 cebolla morada picada en cubos muy pequeños",
-    "1 cucharada de cilantro fresco picado",
-    "Jugo de 1 limón",
-    "Sal y pimienta al gusto",
-    "Lechuga para acompañar"
-  ],
-  "pasos": [
-    "Si usas locos frescos, lávalos y cocínalos en agua hirviendo con sal por 40-50 minutos, hasta que estén tiernos. Deja enfriar en el agua de cocción.",
-    "Retira los locos, córtalos en rodajas o trozos y reserva.",
-    "En un bol, mezcla la mayonesa con la cebolla morada, el cilantro y el jugo de limón. Salpimenta al gusto.",
-    "Sirve los locos sobre una cama de lechuga y cúbrelos con la mayonesa preparada.",
-    "También puedes mezclar los locos directamente con la salsa y servir como cóctel."
-  ],
   "dato": "El loco es un caracol marino muy preciado en Chile. Se suele servir en ocasiones especiales como fiestas patrias o celebraciones familiares.",
   "errores": [
     {
@@ -98,10 +76,7 @@
   "pasos_v2": [
     {
       "texto": "Si usas locos frescos, lávalos y cocínalos en agua hirviendo con sal por 40-50 minutos, hasta que estén tiernos. Deja enfriar en el agua de cocción.",
-      "ingredientes": [
-        1,
-        6
-      ],
+      "ingredientes": [1, 6],
       "timers": [
         {
           "minutos": 50,
@@ -111,34 +86,19 @@
     },
     {
       "texto": "Retira los locos, córtalos en rodajas o trozos y reserva.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "En un bol, mezcla la mayonesa con la cebolla morada, el cilantro y el jugo de limón. Salpimenta al gusto.",
-      "ingredientes": [
-        2,
-        3,
-        4,
-        5,
-        6
-      ]
+      "ingredientes": [2, 3, 4, 5, 6]
     },
     {
       "texto": "Sirve los locos sobre una cama de lechuga y cúbrelos con la mayonesa preparada.",
-      "ingredientes": [
-        1,
-        2,
-        7
-      ]
+      "ingredientes": [1, 2, 7]
     },
     {
       "texto": "También puedes mezclar los locos directamente con la salsa y servir como cóctel.",
-      "ingredientes": [
-        1,
-        6
-      ]
+      "ingredientes": [1, 6]
     }
   ],
   "tiempo_v2": {

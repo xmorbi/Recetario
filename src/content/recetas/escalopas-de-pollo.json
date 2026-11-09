@@ -1,39 +1,12 @@
 {
   "titulo": "Escalopas de Pollo",
   "categoria": "principales",
-  "tags": [
-    "escalopas de pollo",
-    "pollo",
-    "queso",
-    "tomate",
-    "horno",
-    "aves"
-  ],
+  "tags": ["escalopas de pollo", "pollo", "queso", "tomate", "horno", "aves"],
   "imagen": null,
   "tiempo": "40 min",
   "porciones": "4 a 6 personas",
   "dificultad": "fácil",
   "tecnica": "Horno y fritura",
-  "ingredientes": [
-    "3 pechugas grandes",
-    "500 g de queso mantecoso",
-    "2 tomates",
-    "3 huevos",
-    "1 taza (100 g) de pan rallado",
-    "Aceite para freír",
-    "Sal",
-    "Orégano",
-    "Pimienta"
-  ],
-  "pasos": [
-    "Asar las pechugas de pollo, enfriar y cortar en rebanadas.",
-    "Batir los huevos y agregar sal, pimienta y orégano.",
-    "Pasar las rebanadas de pollo por el batido, luego por abundante pan rallado y freír en aceite caliente (170-180 °C).",
-    "Dejar las escalopas en una fuente con papel absorbente.",
-    "Disponer en una asadera las escalopas y poner sobre cada una tiritas de queso, rodajas de tomate y aliños.",
-    "Sujetar cada escalopa con un mondadientes y llevar a horno a 200 °C hasta que el queso se derrita.",
-    "Servir acompañado con ensaladas y arroz."
-  ],
   "dato": "El mondadientes mantiene el queso y el tomate sobre la escalopa mientras se gratinan. Las escalopas de pollo son un clásico de la once y de las celebraciones chilenas.",
   "advertencia": "Fríe a 170-180 °C: si el aceite está muy caliente, las escalopas se doran por fuera y quedan crudas por dentro. Si está muy frío, absorben grasa.",
   "errores": [
@@ -115,49 +88,30 @@
   "pasos_v2": [
     {
       "texto": "Asar las pechugas de pollo, enfriar y cortar en rebanadas.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Batir los huevos y agregar sal, pimienta y orégano.",
-      "ingredientes": [
-        4,
-        7,
-        8,
-        9
-      ]
+      "ingredientes": [4, 7, 8, 9]
     },
     {
       "texto": "Pasar las rebanadas de pollo por el batido, luego por abundante pan rallado y freír en aceite caliente (170-180 °C).",
-      "ingredientes": [
-        1,
-        5,
-        6
-      ]
+      "ingredientes": [1, 5, 6]
     },
     {
       "texto": "Dejar las escalopas en una fuente con papel absorbente."
     },
     {
       "texto": "Disponer en una asadera las escalopas y poner sobre cada una tiritas de queso, rodajas de tomate y aliños.",
-      "ingredientes": [
-        2,
-        3
-      ]
+      "ingredientes": [2, 3]
     },
     {
       "texto": "Sujetar cada escalopa con un mondadientes y llevar a horno a 200 °C hasta que el queso se derrita.",
-      "ingredientes": [
-        2
-      ]
+      "ingredientes": [2]
     },
     {
       "texto": "Servir acompañado con ensaladas y arroz.",
-      "ingredientes": [
-        5,
-        7
-      ]
+      "ingredientes": [5, 7]
     }
   ],
   "tiempo_v2": {

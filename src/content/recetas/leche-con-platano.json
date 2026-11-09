@@ -1,32 +1,12 @@
 {
   "titulo": "Leche con plátano",
   "categoria": "bebidas",
-  "tags": [
-    "bebida",
-    "leche",
-    "plátano",
-    "desayuno",
-    "once",
-    "fruta"
-  ],
+  "tags": ["bebida", "leche", "plátano", "desayuno", "once", "fruta"],
   "imagen": null,
   "tiempo": "5 min",
   "porciones": "2 vasos",
   "dificultad": "muy fácil",
   "tecnica": "Juguera",
-  "ingredientes": [
-    "2 tazas de leche fría",
-    "1 plátano maduro",
-    "1 cucharada de azúcar (opcional)",
-    "1 pizca de canela (opcional)",
-    "Hielo (opcional)"
-  ],
-  "pasos": [
-    "Pela el plátano y córtalo en trozos.",
-    "Licúa la leche con el plátano, el azúcar y la canela hasta obtener una mezcla homogénea.",
-    "Si quieres, agrega hielo y licúa de nuevo.",
-    "Sirve inmediatamente en vasos altos."
-  ],
   "dato": "La leche con plátano es el desayuno y la once chilena por excelencia, sobre todo en la infancia. Se hace con leche fría y plátano maduro. Es dulce, cremosa y muy fácil de hacer. En algunas casas se le agrega avena para hacerla más contundente.",
   "errores": [
     {
@@ -83,24 +63,15 @@
   "pasos_v2": [
     {
       "texto": "Pela el plátano y córtalo en trozos.",
-      "ingredientes": [
-        2
-      ]
+      "ingredientes": [2]
     },
     {
       "texto": "Licúa la leche con el plátano, el azúcar y la canela hasta obtener una mezcla homogénea.",
-      "ingredientes": [
-        1,
-        2,
-        3,
-        4
-      ]
+      "ingredientes": [1, 2, 3, 4]
     },
     {
       "texto": "Si quieres, agrega hielo y licúa de nuevo.",
-      "ingredientes": [
-        5
-      ]
+      "ingredientes": [5]
     },
     {
       "texto": "Sirve inmediatamente en vasos altos."

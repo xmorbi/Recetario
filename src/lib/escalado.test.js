@@ -3,7 +3,7 @@ import {
   formatearNumero,
   escalarIngrediente,
   extraerPorciones,
-  formatearPorciones
+  formatearPorciones,
 } from './escalado.js';
 
 /* ============================================================
@@ -18,18 +18,18 @@ describe('escalarIngrediente — tabla del plan', () => {
     [
       '1 malaya de vacuno (1,5 a 2 kg)',
       '2 malaya de vacuno (3 a 4 kg)',
-      '3 malaya de vacuno (4½ a 6 kg)'
+      '3 malaya de vacuno (4½ a 6 kg)',
     ],
     [
       '250 g de garbanzos secos (remojados 12 horas, sin cocer)',
       '500 g de garbanzos secos (remojados 12 horas, sin cocer)',
-      '750 g de garbanzos secos (remojados 12 horas, sin cocer)'
+      '750 g de garbanzos secos (remojados 12 horas, sin cocer)',
     ],
     [
       '4 chuletas de cerdo (lomo o centro) de 1,5 cm de grosor',
       '8 chuletas de cerdo (lomo o centro) de 1,5 cm de grosor',
-      '12 chuletas de cerdo (lomo o centro) de 1,5 cm de grosor'
-    ]
+      '12 chuletas de cerdo (lomo o centro) de 1,5 cm de grosor',
+    ],
   ];
 
   casos.forEach(([original, x2, x3]) => {
@@ -55,18 +55,18 @@ describe('escalarIngrediente — ×0.5 y ×1.5 sobre ingredientes reales', () =>
     {
       original: '4 huevos',
       x05: '2 huevos',
-      x15: '6 huevos'
+      x15: '6 huevos',
     },
     {
       original: '1 cucharadita de azúcar',
       x05: '½ cucharadita de azúcar',
-      x15: '1½ cucharadita de azúcar'
+      x15: '1½ cucharadita de azúcar',
     },
     {
       original: '150 g de pasas remojadas en ron o pisco',
       x05: '75 g de pasas remojadas en ron o pisco',
-      x15: '225 g de pasas remojadas en ron o pisco'
-    }
+      x15: '225 g de pasas remojadas en ron o pisco',
+    },
   ];
 
   lineas.forEach(({ original, x05, x15 }) => {
@@ -140,15 +140,15 @@ describe('escalarIngrediente — pluralización de unidades (Fase 2)', () => {
   });
 
   it('pluraliza cada par número+palabra del texto', () => {
-    expect(
-      escalarIngrediente('1 taza de harina y 1 cucharada de azúcar', 2)
-    ).toBe('2 tazas de harina y 2 cucharadas de azúcar');
+    expect(escalarIngrediente('1 taza de harina y 1 cucharada de azúcar', 2)).toBe(
+      '2 tazas de harina y 2 cucharadas de azúcar'
+    );
   });
 
   it('pluraliza aunque el segundo par ya esté plural', () => {
-    expect(
-      escalarIngrediente('1 taza de harina y 2 cucharadas de azúcar', 2)
-    ).toBe('2 tazas de harina y 4 cucharadas de azúcar');
+    expect(escalarIngrediente('1 taza de harina y 2 cucharadas de azúcar', 2)).toBe(
+      '2 tazas de harina y 4 cucharadas de azúcar'
+    );
   });
 });
 
@@ -179,19 +179,28 @@ describe('formatearNumero', () => {
 describe('extraerPorciones', () => {
   it('"6 personas"', () => {
     expect(extraerPorciones('6 personas')).toEqual({
-      min: 6, max: null, unidad: 'personas', texto: '6 personas'
+      min: 6,
+      max: null,
+      unidad: 'personas',
+      texto: '6 personas',
     });
   });
 
   it('"1 molde grande (12 porciones)"', () => {
     expect(extraerPorciones('1 molde grande (12 porciones)')).toEqual({
-      min: 12, max: null, unidad: 'porciones', texto: '1 molde grande (12 porciones)'
+      min: 12,
+      max: null,
+      unidad: 'porciones',
+      texto: '1 molde grande (12 porciones)',
     });
   });
 
   it('"10 panes" → fallback al primer número', () => {
     expect(extraerPorciones('10 panes')).toEqual({
-      min: 10, max: null, unidad: '', texto: '10 panes'
+      min: 10,
+      max: null,
+      unidad: '',
+      texto: '10 panes',
     });
   });
 });

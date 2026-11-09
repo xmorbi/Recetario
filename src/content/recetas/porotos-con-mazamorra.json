@@ -1,34 +1,12 @@
 {
   "titulo": "Porotos con mazamorra",
   "categoria": "principales",
-  "tags": [
-    "porotos",
-    "choclo",
-    "plato principal",
-    "tradicional",
-    "verano"
-  ],
+  "tags": ["porotos", "choclo", "plato principal", "tradicional", "verano"],
   "imagen": "img/porotos-con-mazamorra.png",
   "tiempo": "50 min",
   "porciones": "4 personas",
   "dificultad": "fácil",
   "tecnica": "Olla",
-  "ingredientes": [
-    "½ kg de porotos granados",
-    "150 g de zapallo camote",
-    "2 choclos pasteleros",
-    "½ cebolla grande, 1 diente de ajo, pimentón (opcional)",
-    "6 hojas de albahaca",
-    "Sal, orégano, ají de color, pimienta y aceite"
-  ],
-  "pasos": [
-    "Cuece los porotos desde agua fría con sal, pimienta y ají de color por 30 min.",
-    "Agrega el zapallo y cocina hasta que esté blando.",
-    "Licúa el choclo desgranado con las hojas de albahaca.",
-    "Haz un sofrito de cebolla, ajo y pimentón.",
-    "Aplasta el zapallo. Agrega el sofrito y la pasta de choclo.",
-    "Hierve 10 min más, rectifica sabores y deja reposar 10 min."
-  ],
   "dato": "La mazamorra es el choclo licuado con albahaca, le da cuerpo al caldo.",
   "errores": [
     {
@@ -95,10 +73,7 @@
   "pasos_v2": [
     {
       "texto": "Cuece los porotos desde agua fría con sal, pimienta y ají de color por 30 min.",
-      "ingredientes": [
-        1,
-        7
-      ],
+      "ingredientes": [1, 7],
       "timers": [
         {
           "minutos": 30,
@@ -108,33 +83,19 @@
     },
     {
       "texto": "Agrega el zapallo y cocina hasta que esté blando.",
-      "ingredientes": [
-        2
-      ]
+      "ingredientes": [2]
     },
     {
       "texto": "Licúa el choclo desgranado con las hojas de albahaca.",
-      "ingredientes": [
-        1,
-        3,
-        6
-      ]
+      "ingredientes": [1, 3, 6]
     },
     {
       "texto": "Haz un sofrito de cebolla, ajo y pimentón.",
-      "ingredientes": [
-        4,
-        5,
-        7
-      ]
+      "ingredientes": [4, 5, 7]
     },
     {
       "texto": "Aplasta el zapallo. Agrega el sofrito y la pasta de choclo.",
-      "ingredientes": [
-        2,
-        3,
-        7
-      ]
+      "ingredientes": [2, 3, 7]
     },
     {
       "texto": "Hierve 10 min más, rectifica sabores y deja reposar 10 min.",

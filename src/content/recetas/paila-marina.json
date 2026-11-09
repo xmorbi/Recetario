@@ -1,39 +1,12 @@
 {
   "titulo": "Paila marina",
   "categoria": "sopas",
-  "tags": [
-    "marisco",
-    "pescado",
-    "sopa",
-    "olla",
-    "caldo"
-  ],
+  "tags": ["marisco", "pescado", "sopa", "olla", "caldo"],
   "imagen": "img/Paila-Marina.jpg",
   "tiempo": "45 min",
   "porciones": "4 personas",
   "dificultad": "media",
   "tecnica": "Olla",
-  "ingredientes": [
-    "500 g de pescado blanco (congrio, merluza) en trozos",
-    "250 g de choritos (mejillones) con concha",
-    "250 g de almejas con concha",
-    "1 taza de camarones pelados",
-    "1 cebolla picada fina",
-    "2 dientes de ajo picados",
-    "1 pimentón rojo en cubos",
-    "2 tomates pelados y picados",
-    "1/2 taza de vino blanco",
-    "1 litro de caldo de pescado",
-    "Aceite, sal, pimienta, ají de color y orégano"
-  ],
-  "pasos": [
-    "En una olla grande, sofríe la cebolla, el ajo y el pimentón en aceite hasta que estén transparentes.",
-    "Agrega el tomate, el ají de color, orégano, sal y pimienta. Cocina por 5 minutos.",
-    "Vierte el vino blanco y el caldo de pescado. Lleva a ebullición.",
-    "Incorpora los choritos y las almejas. Tapa y cocina hasta que se abran (unos 5 minutos).",
-    "Agrega los trozos de pescado y los camarones. Cocina por 5-7 minutos más, hasta que el pescado esté cocido.",
-    "Rectifica la sal y sirve caliente en platos hondos o en una paila de greda."
-  ],
   "dato": "La paila marina se sirve tradicionalmente en una paila de greda, que mantiene el calor por más tiempo. Es ideal para compartir en invierno.",
   "errores": [
     {
@@ -133,18 +106,11 @@
   "pasos_v2": [
     {
       "texto": "En una olla grande, sofríe la cebolla, el ajo y el pimentón en aceite hasta que estén transparentes.",
-      "ingredientes": [
-        5,
-        6,
-        7,
-        11
-      ]
+      "ingredientes": [5, 6, 7, 11]
     },
     {
       "texto": "Agrega el tomate, el ají de color, orégano, sal y pimienta. Cocina por 5 minutos.",
-      "ingredientes": [
-        8
-      ],
+      "ingredientes": [8],
       "timers": [
         {
           "minutos": 5,
@@ -154,18 +120,11 @@
     },
     {
       "texto": "Vierte el vino blanco y el caldo de pescado. Lleva a ebullición.",
-      "ingredientes": [
-        1,
-        9,
-        10
-      ]
+      "ingredientes": [1, 9, 10]
     },
     {
       "texto": "Incorpora los choritos y las almejas. Tapa y cocina hasta que se abran (unos 5 minutos).",
-      "ingredientes": [
-        2,
-        3
-      ],
+      "ingredientes": [2, 3],
       "timers": [
         {
           "minutos": 5,
@@ -175,11 +134,7 @@
     },
     {
       "texto": "Agrega los trozos de pescado y los camarones. Cocina por 5-7 minutos más, hasta que el pescado esté cocido.",
-      "ingredientes": [
-        1,
-        4,
-        10
-      ],
+      "ingredientes": [1, 4, 10],
       "timers": [
         {
           "minutos": 7,

@@ -1,40 +1,12 @@
 {
   "titulo": "Empanadas de manzana",
   "categoria": "dulces",
-  "tags": [
-    "empanada",
-    "dulce",
-    "manzana",
-    "horno",
-    "postre",
-    "tradicional"
-  ],
+  "tags": ["empanada", "dulce", "manzana", "horno", "postre", "tradicional"],
   "imagen": null,
   "tiempo": "1 h",
   "porciones": "12 unidades",
   "dificultad": "media",
   "tecnica": "Horno",
-  "ingredientes": [
-    "Masa: 500 g de harina sin polvos de hornear",
-    "Masa: 200 g de mantequilla fría en cubos",
-    "Masa: 100 g de azúcar",
-    "Masa: 2 yemas de huevo",
-    "Masa: 100 ml de agua fría",
-    "Relleno: 4 manzanas verdes peladas y en cubos",
-    "Relleno: 1/2 taza (100 g) de azúcar",
-    "Relleno: 1 cucharadita (3 g) de canela",
-    "Relleno: 2 cucharadas (20 g) de pasas (opcional)",
-    "Pintar: 1 huevo batido",
-    "Azúcar flor para espolvorear"
-  ],
-  "pasos": [
-    "Prepara la masa: mezcla la harina con el azúcar. Agrega la mantequilla fría en cubos y trabaja con los dedos. Añade las yemas y el agua fría. Amasa hasta que esté lisa. Refrigera 30 minutos.",
-    "Para el relleno, cocina las manzanas con el azúcar y la canela a fuego medio 10 minutos, hasta que estén tiernas. Agrega las pasas y deja enfriar.",
-    "Estira la masa y corta círculos de 15 cm.",
-    "Rellena con 2 cucharadas del relleno frío. Cierra con repulgue y pincha con tenedor.",
-    "Pinta con huevo batido y hornea a 180 °C por 20-25 minutos, hasta dorar.",
-    "Espolvorea azúcar flor antes de servir."
-  ],
   "dato": "Las empanadas de manzana son el postre de las Fiestas Patrias chilenas. Se hacen con manzanas verdes (tipo Granny Smith) y se condimentan con canela. En el sur se hacen con manzanas de la zona. Se sirven tibias o frías.",
   "errores": [
     {
@@ -140,16 +112,7 @@
   "pasos_v2": [
     {
       "texto": "Prepara la masa: mezcla la harina con el azúcar. Agrega la mantequilla fría en cubos y trabaja con los dedos. Añade las yemas y el agua fría. Amasa hasta que esté lisa. Refrigera 30 minutos.",
-      "ingredientes": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        7,
-        10,
-        11
-      ],
+      "ingredientes": [1, 2, 3, 4, 5, 7, 10, 11],
       "timers": [
         {
           "minutos": 30,
@@ -159,14 +122,7 @@
     },
     {
       "texto": "Para el relleno, cocina las manzanas con el azúcar y la canela a fuego medio 10 minutos, hasta que estén tiernas. Agrega las pasas y deja enfriar.",
-      "ingredientes": [
-        3,
-        6,
-        7,
-        8,
-        9,
-        11
-      ],
+      "ingredientes": [3, 6, 7, 8, 9, 11],
       "timers": [
         {
           "minutos": 10,
@@ -182,10 +138,7 @@
     },
     {
       "texto": "Pinta con huevo batido y hornea a 180 °C por 20-25 minutos, hasta dorar.",
-      "ingredientes": [
-        4,
-        10
-      ],
+      "ingredientes": [4, 10],
       "timers": [
         {
           "minutos": 25,
@@ -195,11 +148,7 @@
     },
     {
       "texto": "Espolvorea azúcar flor antes de servir.",
-      "ingredientes": [
-        3,
-        7,
-        11
-      ]
+      "ingredientes": [3, 7, 11]
     }
   ],
   "tiempo_v2": {

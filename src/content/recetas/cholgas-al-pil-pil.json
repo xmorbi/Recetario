@@ -1,37 +1,12 @@
 {
   "titulo": "Cholgas al pil pil",
   "categoria": "mar",
-  "tags": [
-    "cholga",
-    "marisco",
-    "chiloé",
-    "sartén",
-    "ajo",
-    "tradicional"
-  ],
+  "tags": ["cholga", "marisco", "chiloé", "sartén", "ajo", "tradicional"],
   "imagen": null,
   "tiempo": "25 min",
   "porciones": "4 personas (como entrada)",
   "dificultad": "fácil",
   "tecnica": "Sartén",
-  "ingredientes": [
-    "1 kg de cholgas frescas con concha",
-    "6 dientes de ajo laminados",
-    "1/2 taza (125 ml) de aceite de oliva",
-    "1 ají verde o merkén al gusto",
-    "1/2 taza (125 ml) de vino blanco",
-    "1 cucharada de perejil fresco picado",
-    "Sal y pimienta",
-    "Pan amasado o marraqueta para acompañar"
-  ],
-  "pasos": [
-    "Lava bien las cholgas y descarta las que estén abiertas.",
-    "Calienta el aceite en una sartén grande a fuego medio. Dora los ajos laminados y retíralos antes de que se quemen.",
-    "Sube el fuego, agrega las cholgas y saltéalas hasta que se abran (3-5 minutos).",
-    "Vierte el vino blanco y deja evaporar el alcohol.",
-    "Agrega el ají o merkén, sal y pimienta. Devuelve los ajos a la sartén.",
-    "Espolvorea perejil y sirve inmediatamente con pan."
-  ],
   "dato": "La cholga es un mejillón grande típico de Chiloé. Al pil pil se prepara igual que los camarones: con ajo, aceite de oliva y ají. Es una entrada clásica de las marisquerías del sur de Chile.",
   "advertencia": "Descarta las cholgas que estén abiertas antes de cocinar y las que no se abran durante la cocción. Deben oler a mar, no a pescado fuerte.",
   "errores": [
@@ -109,23 +84,15 @@
   "pasos_v2": [
     {
       "texto": "Lava bien las cholgas y descarta las que estén abiertas.",
-      "ingredientes": [
-        1
-      ]
+      "ingredientes": [1]
     },
     {
       "texto": "Calienta el aceite en una sartén grande a fuego medio. Dora los ajos laminados y retíralos antes de que se quemen.",
-      "ingredientes": [
-        2,
-        3
-      ]
+      "ingredientes": [2, 3]
     },
     {
       "texto": "Sube el fuego, agrega las cholgas y saltéalas hasta que se abran (3-5 minutos).",
-      "ingredientes": [
-        1,
-        7
-      ],
+      "ingredientes": [1, 7],
       "timers": [
         {
           "minutos": 5,
@@ -135,24 +102,15 @@
     },
     {
       "texto": "Vierte el vino blanco y deja evaporar el alcohol.",
-      "ingredientes": [
-        5
-      ]
+      "ingredientes": [5]
     },
     {
       "texto": "Agrega el ají o merkén, sal y pimienta. Devuelve los ajos a la sartén.",
-      "ingredientes": [
-        2,
-        4,
-        7
-      ]
+      "ingredientes": [2, 4, 7]
     },
     {
       "texto": "Espolvorea perejil y sirve inmediatamente con pan.",
-      "ingredientes": [
-        6,
-        8
-      ]
+      "ingredientes": [6, 8]
     }
   ],
   "tiempo_v2": {

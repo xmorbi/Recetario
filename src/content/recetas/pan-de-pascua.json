@@ -1,45 +1,12 @@
 {
   "titulo": "Pan de Pascua",
   "categoria": "dulces",
-  "tags": [
-    "navidad",
-    "dulce",
-    "horno",
-    "frutas",
-    "tradicional",
-    "pan"
-  ],
+  "tags": ["navidad", "dulce", "horno", "frutas", "tradicional", "pan"],
   "imagen": "img/pan-de-pascua.jpg",
   "tiempo": "1 h 30 min + reposo",
   "porciones": "1 molde grande (12 porciones)",
   "dificultad": "media",
   "tecnica": "Horno",
-  "ingredientes": [
-    "500 g de harina sin polvos de hornear",
-    "200 g de mantequilla a temperatura ambiente",
-    "200 g de azúcar",
-    "4 huevos",
-    "1 cucharadita de polvos de hornear",
-    "250 g de frutas confitadas picadas (naranja, limón, cereza)",
-    "150 g de pasas remojadas en ron o pisco",
-    "100 g de nueces picadas",
-    "1 cucharadita de canela molida",
-    "½ cucharadita de clavo de olor molido",
-    "½ cucharadita de jengibre molido",
-    "Ralladura de 1 naranja y 1 limón",
-    "1 cucharadita de esencia de vainilla",
-    "½ taza de leche si es necesario",
-    "Azúcar flor para decorar"
-  ],
-  "pasos": [
-    "Remoja las pasas en ron o pisco al menos 2 horas antes. Escurre y reserva.",
-    "Bate la mantequilla con el azúcar hasta obtener una crema. Agrega los huevos uno a uno.",
-    "Añade la vainilla, las ralladuras de naranja y limón, y las especias.",
-    "Incorpora la harina cernida con los polvos de hornear, mezclando suavemente.",
-    "Agrega las frutas confitadas, las pasas y las nueces. Si la masa está muy seca, añade leche cucharada a cucharada.",
-    "Vierte la mezcla en un molde engrasado y enharinado. Hornea a 170 °C por 50-60 minutos.",
-    "Deja enfriar, desmolda y espolvorea con azúcar flor antes de servir."
-  ],
   "dato": "El Pan de Pascua llega a Chile con la tradición alemana. Antiguamente se horneaba en grandes cantidades y se guardaba hasta por semanas, porque el alcohol y las frutas confitadas lo conservaban. Es el rey de la mesa navideña.",
   "errores": [
     {

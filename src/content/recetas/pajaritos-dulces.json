@@ -1,39 +1,12 @@
 {
   "titulo": "Pajaritos dulces",
   "categoria": "dulces",
-  "tags": [
-    "pan",
-    "dulce",
-    "horno",
-    "merienda",
-    "once",
-    "masa"
-  ],
+  "tags": ["pan", "dulce", "horno", "merienda", "once", "masa"],
   "imagen": "img/Pajaritos-dulces.jpg",
   "tiempo": "1 h",
   "porciones": "12 unidades",
   "dificultad": "media",
   "tecnica": "Horno",
-  "ingredientes": [
-    "Masa: 500 g de harina",
-    "Masa: 3 huevos",
-    "Masa: 50 g de mantequilla",
-    "Masa: 120 g de azúcar",
-    "Masa: 15 g de levadura",
-    "Masa: Ralladura de limón o naranja",
-    "Masa: 100 ml de agua o leche tibia",
-    "Merengue: 2 claras de huevo",
-    "Merengue: 1 taza de azúcar flor",
-    "Merengue: Vainilla y chispas de colores (opcional)"
-  ],
-  "pasos": [
-    "Activa la levadura en el agua tibia con una cucharada de azúcar.",
-    "Mezcla la harina con los huevos, mantequilla, azúcar y ralladura. Agrega la levadura y forma una masa suave.",
-    "Deja reposar tapada hasta que doble su volumen.",
-    "Forma bolitas de unos 70 g, colócalas en una bandeja engrasada y deja levar 30 min más.",
-    "Hornea a 180 °C por 25-30 min. Deja enfriar.",
-    "Bate las claras a nieve, añade el azúcar flor y la vainilla. Cubre los pancitos con el merengue y decora."
-  ],
   "dato": "El nombre viene de la forma de pajarito que toma el merengue al decorarlos.",
   "errores": [
     {
@@ -128,25 +101,11 @@
   "pasos_v2": [
     {
       "texto": "Activa la levadura en el agua tibia con una cucharada de azúcar.",
-      "ingredientes": [
-        4,
-        5,
-        7,
-        9
-      ]
+      "ingredientes": [4, 5, 7, 9]
     },
     {
       "texto": "Mezcla la harina con los huevos, mantequilla, azúcar y ralladura. Agrega la levadura y forma una masa suave.",
-      "ingredientes": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        8,
-        9
-      ]
+      "ingredientes": [1, 2, 3, 4, 5, 6, 8, 9]
     },
     {
       "texto": "Deja reposar tapada hasta que doble su volumen."
@@ -171,13 +130,7 @@
     },
     {
       "texto": "Bate las claras a nieve, añade el azúcar flor y la vainilla. Cubre los pancitos con el merengue y decora.",
-      "ingredientes": [
-        2,
-        4,
-        8,
-        9,
-        10
-      ]
+      "ingredientes": [2, 4, 8, 9, 10]
     }
   ],
   "tiempo_v2": {

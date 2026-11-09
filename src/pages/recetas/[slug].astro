@@ -1,24 +1,28 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
+import {
+  formatearIngredienteEstructurado,
+  reemplazarMarcasIngredientes,
+} from '../../lib/escalado.js';
 
 export async function getStaticPaths() {
   const recetas = await getCollection('recetas');
   const total = recetas.length;
 
   return recetas.map((receta, index) => {
-    const prev = index > 0
-      ? { slug: recetas[index - 1].id, titulo: recetas[index - 1].data.titulo }
-      : null;
+    const prev =
+      index > 0 ? { slug: recetas[index - 1].id, titulo: recetas[index - 1].data.titulo } : null;
 
-    const next = index < total - 1
-      ? { slug: recetas[index + 1].id, titulo: recetas[index + 1].data.titulo }
-      : null;
+    const next =
+      index < total - 1
+        ? { slug: recetas[index + 1].id, titulo: recetas[index + 1].data.titulo }
+        : null;
 
     const rels = recetas
-      .filter(r => r.data.categoria === receta.data.categoria && r.id !== receta.id)
+      .filter((r) => r.data.categoria === receta.data.categoria && r.id !== receta.id)
       .slice(0, 3)
-      .map(r => ({ slug: r.id, titulo: r.data.titulo }));
+      .map((r) => ({ slug: r.id, titulo: r.data.titulo }));
 
     return {
       params: { slug: receta.id },
@@ -35,30 +39,66 @@ export async function getStaticPaths() {
 
 const { receta, slug, prev, next, rels } = Astro.props;
 
+// 1. Formateamos los ingredientes v2 a texto legible
+const ingredientesTexto = receta.ingredientes_v2.map(formatearIngredienteEstructurado);
+
+// 2. Formateamos los pasos v2, reemplazando las marcas {ing:N}
+const pasosTexto = receta.pasos_v2.map((p) =>
+  reemplazarMarcasIngredientes(p.texto, receta.ingredientes_v2)
+);
+
 const recetaJSON = JSON.stringify(receta).replace(/<\/script/g, '<\\/script');
 
 const SITE = Astro.site ?? new URL('https://recetariochileno.netlify.app');
 const url = new URL(`/recetas/${slug}/`, SITE).toString();
-const img = receta.imagen && receta.imagen.trim() !== ''
-  ? new URL(`/${receta.imagen}`, SITE).toString()
-  : new URL('/img/og-default.jpg', SITE).toString();
+const img =
+  receta.imagen && receta.imagen.trim() !== ''
+    ? new URL(`/${receta.imagen}`, SITE).toString()
+    : new URL('/img/og-default.jpg', SITE).toString();
 
 const tieneImagenPropia = !!(receta.imagen && receta.imagen.trim() !== '');
 
 const GUIAS = {
-  'pastel-de-choclo': { titulo: 'Cómo elegir un buen choclo', url: '/guias/como-elegir-un-choclo/' },
-  'humitas': { titulo: 'Cómo elegir un buen choclo', url: '/guias/como-elegir-un-choclo/' },
-  'porotos-granados': { titulo: 'Cómo elegir un buen choclo', url: '/guias/como-elegir-un-choclo/' },
-  'pan-amasado': { titulo: 'Cómo hacer que el pan suba', url: '/guias/como-hacer-que-el-pan-suba/' },
-  'hallulla': { titulo: 'Cómo hacer que el pan suba', url: '/guias/como-hacer-que-el-pan-suba/' },
-  'marraqueta': { titulo: 'Cómo hacer que el pan suba', url: '/guias/como-hacer-que-el-pan-suba/' },
-  'paila-marina': { titulo: 'Cómo saber si los mariscos están frescos', url: '/guias/como-saber-si-los-mariscos-estan-frescos/' },
-  'machas-a-la-parmesana': { titulo: 'Cómo saber si los mariscos están frescos', url: '/guias/como-saber-si-los-mariscos-estan-frescos/' },
-  'locos-con-mayonesa': { titulo: 'Cómo saber si los mariscos están frescos', url: '/guias/como-saber-si-los-mariscos-estan-frescos/' },
-  'carne-mechada': { titulo: 'Cómo evitar que la carne quede seca', url: '/guias/como-evitar-que-la-carne-quede-seca/' },
-  'bistec-a-lo-pobre': { titulo: 'Cómo evitar que la carne quede seca', url: '/guias/como-evitar-que-la-carne-quede-seca/' },
-  'pollo-asado': { titulo: 'Cómo encender el carbón', url: '/guias/como-encender-carbon-parrilla/' },
-  'chorrillana': { titulo: 'Cortes de carne para Parrilla', url: '/guias/cortes-de-carne-parrilla/' }
+  'pastel-de-choclo': {
+    titulo: 'Cómo elegir un buen choclo',
+    url: '/guias/como-elegir-un-choclo/',
+  },
+  humitas: { titulo: 'Cómo elegir un buen choclo', url: '/guias/como-elegir-un-choclo/' },
+  'porotos-granados': {
+    titulo: 'Cómo elegir un buen choclo',
+    url: '/guias/como-elegir-un-choclo/',
+  },
+  'pan-amasado': {
+    titulo: 'Cómo hacer que el pan suba',
+    url: '/guias/como-hacer-que-el-pan-suba/',
+  },
+  hallulla: { titulo: 'Cómo hacer que el pan suba', url: '/guias/como-hacer-que-el-pan-suba/' },
+  marraqueta: { titulo: 'Cómo hacer que el pan suba', url: '/guias/como-hacer-que-el-pan-suba/' },
+  'paila-marina': {
+    titulo: 'Cómo saber si los mariscos están frescos',
+    url: '/guias/como-saber-si-los-mariscos-estan-frescos/',
+  },
+  'machas-a-la-parmesana': {
+    titulo: 'Cómo saber si los mariscos están frescos',
+    url: '/guias/como-saber-si-los-mariscos-estan-frescos/',
+  },
+  'locos-con-mayonesa': {
+    titulo: 'Cómo saber si los mariscos están frescos',
+    url: '/guias/como-saber-si-los-mariscos-estan-frescos/',
+  },
+  'carne-mechada': {
+    titulo: 'Cómo evitar que la carne quede seca',
+    url: '/guias/como-evitar-que-la-carne-quede-seca/',
+  },
+  'bistec-a-lo-pobre': {
+    titulo: 'Cómo evitar que la carne quede seca',
+    url: '/guias/como-evitar-que-la-carne-quede-seca/',
+  },
+  'pollo-asado': {
+    titulo: 'Cómo encender el carbón',
+    url: '/guias/como-encender-carbon-parrilla/',
+  },
+  chorrillana: { titulo: 'Cortes de carne para Parrilla', url: '/guias/cortes-de-carne-parrilla/' },
 };
 const guiaAsociada = GUIAS[slug];
 
@@ -83,9 +123,9 @@ function truncarDescripcion(texto, max = DESCRIPCION_MAX) {
 }
 const descripcionSEO = truncarDescripcion(
   `${receta.titulo}: receta chilena` +
-  `${receta.tiempo ? ' lista en ' + receta.tiempo : ''}` +
-  `${receta.dificultad ? ', dificultad ' + String(receta.dificultad).toLowerCase() : ''}` +
-  `. Ingredientes, preparación paso a paso y consejos.`
+    `${receta.tiempo ? ' lista en ' + receta.tiempo : ''}` +
+    `${receta.dificultad ? ', dificultad ' + String(receta.dificultad).toLowerCase() : ''}` +
+    `. Ingredientes, preparación paso a paso y consejos.`
 );
 
 function aISODuracion(t) {
@@ -105,18 +145,22 @@ function aISODuracion(t) {
 const totalTimeISO = aISODuracion(receta.tiempo);
 
 const schemaObj = {
-  "@context": "https://schema.org/",
-  "@type": "Recipe",
-  "name": receta.titulo,
-  "image": [img],
-  "author": { "@type": "Organization", "name": "Recetario Chileno" },
-  "description": `Receta tradicional chilena de ${receta.titulo}.`,
-  "recipeCuisine": "Chilena",
-  "recipeCategory": receta.categoria,
-  "keywords": (receta.tags || []).join(', '),
-  "recipeYield": receta.porciones,
-  "recipeIngredient": receta.ingredientes,
-  "recipeInstructions": receta.pasos.map((p, i) => ({ "@type": "HowToStep", "position": i + 1, "text": p }))
+  '@context': 'https://schema.org/',
+  '@type': 'Recipe',
+  name: receta.titulo,
+  image: [img],
+  author: { '@type': 'Organization', name: 'Recetario Chileno' },
+  description: `Receta tradicional chilena de ${receta.titulo}.`,
+  recipeCuisine: 'Chilena',
+  recipeCategory: receta.categoria,
+  keywords: (receta.tags || []).join(', '),
+  recipeYield: receta.porciones,
+  recipeIngredient: ingredientesTexto,
+  recipeInstructions: pasosTexto.map((p, i) => ({
+    '@type': 'HowToStep',
+    position: i + 1,
+    text: p,
+  })),
 };
 
 if (receta.tiempo_v2) {
@@ -133,11 +177,18 @@ if (receta.tiempo_v2) {
 const schema = JSON.stringify(schemaObj);
 
 const bread = JSON.stringify({
-  "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
-    {"@type": "ListItem", "position": 1, "name": "Inicio", "item": new URL('/', SITE).toString()},
-    {"@type": "ListItem", "position": 2, "name": "Recetas", "item": new URL('/recetario/', SITE).toString()},
-    {"@type": "ListItem", "position": 3, "name": receta.titulo, "item": url}
-  ]
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Inicio', item: new URL('/', SITE).toString() },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Recetas',
+      item: new URL('/recetario/', SITE).toString(),
+    },
+    { '@type': 'ListItem', position: 3, name: receta.titulo, item: url },
+  ],
 });
 
 const msjWA = `Mira esta receta de ${receta.titulo} en Recetario Chileno: ${url}`;
@@ -145,18 +196,30 @@ const linkWA = `https://api.whatsapp.com/send?text=${encodeURIComponent(msjWA)}`
 const msjPin = `Receta chilena: ${receta.titulo} | Recetario Chileno`;
 const linkPin = `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(url)}&media=${encodeURIComponent(img)}&description=${encodeURIComponent(msjPin)}`;
 
-const ICON_CLOCK = '<svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>';
-const ICON_PORCIONES = '<svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2v6a3 3 0 0 0 6 0V2"/><path d="M8 11v11"/><path d="M20 2c-2 3-3 6-3 9h3v11"/></svg>';
-const ICON_DIFICULTAD = '<svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>';
-const ICON_TECNICA = '<svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>';
-const ICON_STAR = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>';
-const ICON_LIBRO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>';
-const ICON_HOME = '<svg class="bc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>';
-const ICON_PLAY = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="8 5 19 12 8 19 8 5"/></svg>';
-const ICON_BULB = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.7.5 1 1.3 1 2.3h6c0-1 .3-1.8 1-2.3A7 7 0 0 0 12 2z"/></svg>';
-const ICON_BASKET = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.5 12.5a2 2 0 0 1-2 1.5h-7a2 2 0 0 1-2-1.5L5 8z"/><path d="M9 8V5a3 3 0 0 1 6 0v3"/></svg>';
-const ICON_CART = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>';
-const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>';
+const ICON_CLOCK =
+  '<svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>';
+const ICON_PORCIONES =
+  '<svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 2v6a3 3 0 0 0 6 0V2"/><path d="M8 11v11"/><path d="M20 2c-2 3-3 6-3 9h3v11"/></svg>';
+const ICON_DIFICULTAD =
+  '<svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>';
+const ICON_TECNICA =
+  '<svg class="meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>';
+const ICON_STAR =
+  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>';
+const ICON_LIBRO =
+  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>';
+const ICON_HOME =
+  '<svg class="bc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>';
+const ICON_PLAY =
+  '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="8 5 19 12 8 19 8 5"/></svg>';
+const ICON_BULB =
+  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.7.5 1 1.3 1 2.3h6c0-1 .3-1.8 1-2.3A7 7 0 0 0 12 2z"/></svg>';
+const ICON_BASKET =
+  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.5 12.5a2 2 0 0 1-2 1.5h-7a2 2 0 0 1-2-1.5L5 8z"/><path d="M9 8V5a3 3 0 0 1 6 0v3"/></svg>';
+const ICON_CART =
+  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>';
+const ICON_LIST =
+  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>';
 ---
 
 <Layout
@@ -169,7 +232,6 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
   imageAlt={receta.titulo}
   ogType="article"
 >
-
   <Fragment slot="jsonld">
     <script type="application/ld+json" set:html={schema}></script>
     <script type="application/ld+json" set:html={bread}></script>
@@ -190,22 +252,42 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
           height="675"
         />
       ) : (
-        <div class="hero-placeholder-nuevo" role="img" aria-label={`Portada de la receta: ${receta.titulo}`}>
+        <div
+          class="hero-placeholder-nuevo"
+          role="img"
+          aria-label={`Portada de la receta: ${receta.titulo}`}
+        >
           <span class="hero-placeholder-titulo">{receta.titulo}</span>
         </div>
       )}
-      <button type="button" class="btn-favorito fav-hero-flotante" data-slug={slug} aria-label="Guardar en favoritos">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+      <button
+        type="button"
+        class="btn-favorito fav-hero-flotante"
+        data-slug={slug}
+        aria-label="Guardar en favoritos"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+        </svg>
       </button>
     </div>
 
     <div class="hero-contenido">
       <nav class="breadcrumb-nuevo" aria-label="Migas de pan">
         <a href="/" class="bc-link">
-          <span class="bc-home" set:html={ICON_HOME}></span> Inicio
+          <span class="bc-home" set:html={ICON_HOME} /> Inicio
         </a>
         <span class="bc-sep">›</span>
-        <a href="/recetario/" class="bc-link">Recetas</a>
+        <a href="/recetario/" class="bc-link">
+          Recetas
+        </a>
         <span class="bc-sep">›</span>
         <span class="bc-current">{receta.titulo}</span>
       </nav>
@@ -216,21 +298,21 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
       <div class="meta-card-nuevo">
         {receta.tiempo && (
           <div class="meta-col">
-            <span class="meta-col-icon" set:html={ICON_CLOCK} aria-hidden="true"></span>
+            <span class="meta-col-icon" set:html={ICON_CLOCK} aria-hidden="true" />
             <span class="meta-col-valor">{receta.tiempo}</span>
             <span class="meta-col-label">Tiempo</span>
           </div>
         )}
         {receta.porciones && (
           <div class="meta-col">
-            <span class="meta-col-icon" set:html={ICON_PORCIONES} aria-hidden="true"></span>
+            <span class="meta-col-icon" set:html={ICON_PORCIONES} aria-hidden="true" />
             <span class="meta-col-valor">{receta.porciones}</span>
             <span class="meta-col-label">Porciones</span>
           </div>
         )}
         {receta.dificultad && (
           <div class="meta-col">
-            <span class="meta-col-icon" set:html={ICON_DIFICULTAD} aria-hidden="true"></span>
+            <span class="meta-col-icon" set:html={ICON_DIFICULTAD} aria-hidden="true" />
             <span class="meta-col-valor">{receta.dificultad}</span>
             <span class="meta-col-label">Dificultad</span>
           </div>
@@ -239,7 +321,7 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
 
       {receta.tecnica && (
         <div class="tecnica-capsule-nuevo">
-          <span class="tecnica-icon" set:html={ICON_TECNICA} aria-hidden="true"></span>
+          <span class="tecnica-icon" set:html={ICON_TECNICA} aria-hidden="true" />
           <span>{receta.tecnica}</span>
         </div>
       )}
@@ -247,17 +329,18 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
   </header>
 
   <main class="receta-page receta-page-nuevo">
-
     <!-- CTA REDISEÑADO -->
     <div class="cta-wrapper-nuevo">
       <button type="button" class="btn-cta-cocina btn-modo-cocina cta-nuevo">
-        <span class="cta-chef" aria-hidden="true">👨‍🍳</span>
+        <span class="cta-chef" aria-hidden="true">
+          👨‍🍳
+        </span>
         <span class="cta-textos">
           <strong>Comenzar modo cocina</strong>
           <small>Preparación guiada paso a paso con voz</small>
         </span>
         <span class="cta-play-circle" aria-hidden="true">
-          <span class="cta-play-icon" set:html={ICON_PLAY}></span>
+          <span class="cta-play-icon" set:html={ICON_PLAY} />
         </span>
       </button>
     </div>
@@ -265,15 +348,15 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
     <!-- ACCESOS RÁPIDOS -->
     <div class="accesos-rapidos">
       <a href="#seccion-ingredientes" class="acceso-card" data-tab-target="ingredientes">
-        <span class="acceso-icon" set:html={ICON_BASKET} aria-hidden="true"></span>
+        <span class="acceso-icon" set:html={ICON_BASKET} aria-hidden="true" />
         <span class="acceso-texto">Ingredientes</span>
       </a>
       <button type="button" class="acceso-card acceso-card-btn" data-action="open-cart">
-        <span class="acceso-icon" set:html={ICON_CART} aria-hidden="true"></span>
+        <span class="acceso-icon" set:html={ICON_CART} aria-hidden="true" />
         <span class="acceso-texto">Lista de compras</span>
       </button>
       <a href="#seccion-preparacion" class="acceso-card" data-tab-target="preparacion">
-        <span class="acceso-icon" set:html={ICON_LIST} aria-hidden="true"></span>
+        <span class="acceso-icon" set:html={ICON_LIST} aria-hidden="true" />
         <span class="acceso-texto">Preparación</span>
       </a>
     </div>
@@ -281,7 +364,7 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
     <!-- AEO -->
     <div class="resumen-aeo-nuevo">
       <div class="aeo-icon-wrap" aria-hidden="true">
-        <span set:html={ICON_BULB}></span>
+        <span set:html={ICON_BULB} />
       </div>
       <div class="aeo-body">
         <strong class="aeo-titulo">Respuesta rápida.</strong>
@@ -291,7 +374,6 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
 
     <!-- RECETA -->
     <article class="receta">
-
       {receta.advertencia && (
         <div class="advertencia-box" role="alert">
           <div class="advertencia-icon">⚠️</div>
@@ -302,54 +384,116 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
       )}
 
       <div class="receta-tabs" role="tablist" aria-label="Secciones de la receta">
-        <button type="button" role="tab" id="tab-ingredientes" aria-controls="seccion-ingredientes" aria-selected="true" data-tab="ingredientes">Ingredientes</button>
-        <button type="button" role="tab" id="tab-preparacion" aria-controls="seccion-preparacion" aria-selected="false" data-tab="preparacion">Preparación</button>
-        <button type="button" role="tab" id="tab-todo" aria-selected="false" data-tab="todo">Ver todo</button>
+        <button
+          type="button"
+          role="tab"
+          id="tab-ingredientes"
+          aria-controls="seccion-ingredientes"
+          aria-selected="true"
+          data-tab="ingredientes"
+        >
+          Ingredientes
+        </button>
+        <button
+          type="button"
+          role="tab"
+          id="tab-preparacion"
+          aria-controls="seccion-preparacion"
+          aria-selected="false"
+          data-tab="preparacion"
+        >
+          Preparación
+        </button>
+        <button type="button" role="tab" id="tab-todo" aria-selected="false" data-tab="todo">
+          Ver todo
+        </button>
       </div>
 
       <div class="cuerpo" id="recetaCuerpo" data-vista="todo">
-
         <!-- INGREDIENTES -->
-        <div class="cuerpo-col" data-seccion="ingredientes" id="seccion-ingredientes" role="tabpanel" aria-labelledby="tab-ingredientes">
-                  <div class="ingredientes-header">
+        <div
+          class="cuerpo-col"
+          data-seccion="ingredientes"
+          id="seccion-ingredientes"
+          role="tabpanel"
+          aria-labelledby="tab-ingredientes"
+        >
+          <div class="ingredientes-header">
             <h3>
-              <span class="ing-header-icon" set:html={ICON_BASKET} aria-hidden="true"></span>
+              <span class="ing-header-icon" set:html={ICON_BASKET} aria-hidden="true" />
               Ingredientes
             </h3>
-            <div class="stepper-porciones" data-base={porcionesBase} aria-label={`Ajustar cantidad para ${porcionesBase} personas`}>
+            <div
+              class="stepper-porciones"
+              data-base={porcionesBase}
+              aria-label={`Ajustar cantidad para ${porcionesBase} personas`}
+            >
               <span class="stepper-label-prefix">Para</span>
-              <button type="button" class="stepper-menos" aria-label="Quitar una persona">−</button>
-              <input type="number" class="stepper-valor" value={porcionesBase} min="1" max="50" inputmode="numeric" aria-label="Cantidad de personas" />
-              <button type="button" class="stepper-mas" aria-label="Agregar una persona">+</button>
+              <button type="button" class="stepper-menos" aria-label="Quitar una persona">
+                −
+              </button>
+              <input
+                type="number"
+                class="stepper-valor"
+                value={porcionesBase}
+                min="1"
+                max="50"
+                inputmode="numeric"
+                aria-label="Cantidad de personas"
+              />
+              <button type="button" class="stepper-mas" aria-label="Agregar una persona">
+                +
+              </button>
               <span class="stepper-label-suffix">personas</span>
             </div>
-          </div>  
-         
+          </div>
 
           <ul class="ingredientes">
-            {receta.ingredientes.map(ing => (
+            {ingredientesTexto.map((ing) => (
               <li>
                 <label class="ing-label">
-                  <input type="checkbox" class="ing-check">
-                  <span class="ing-texto" data-original={ing}>{ing}</span>
+                  <input type="checkbox" class="ing-check" />
+                  <span class="ing-texto" data-original={ing}>
+                    {ing}
+                  </span>
                 </label>
-                <button type="button" class="btn-add-ing" data-ing={ing} aria-label="Añadir a lista de compras">+</button>
+                <button
+                  type="button"
+                  class="btn-add-ing"
+                  data-ing={ing}
+                  aria-label="Añadir a lista de compras"
+                >
+                  +
+                </button>
               </li>
             ))}
           </ul>
 
-          <button type="button" class="btn-add-all">Añadir todos los ingredientes</button>
+          <button type="button" class="btn-add-all">
+            Añadir todos los ingredientes
+          </button>
         </div>
 
         <!-- PREPARACIÓN -->
-        <div class="cuerpo-col" data-seccion="preparacion" id="seccion-preparacion" role="tabpanel" aria-labelledby="tab-preparacion">
+        <div
+          class="cuerpo-col"
+          data-seccion="preparacion"
+          id="seccion-preparacion"
+          role="tabpanel"
+          aria-labelledby="tab-preparacion"
+        >
           <h3>Preparación</h3>
           <ol class="preparacion">
-            {receta.pasos.map(paso => <li>{paso}</li>)}
+            {pasosTexto.map((paso) => (
+              <li set:html={paso} />
+            ))}
           </ol>
-          {receta.dato && <p class="dato"><strong>Dato:</strong> {receta.dato}</p>}
+          {receta.dato && (
+            <p class="dato">
+              <strong>Dato:</strong> {receta.dato}
+            </p>
+          )}
         </div>
-
       </div>
     </article>
 
@@ -362,7 +506,7 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
         </summary>
         <div class="accordion-receta-contenido">
           <ul class="errores-lista">
-            {receta.errores.map(err => (
+            {receta.errores.map((err) => (
               <li>
                 <strong class="error">{err.error}</strong>
                 <span class="solucion">{err.solucion}</span>
@@ -382,9 +526,24 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
         </summary>
         <div class="accordion-receta-contenido">
           <div class="conservacion-grid">
-            {receta.conservacion.refrigerador && <div class="conservacion-item"><strong>Refrigerador</strong>{receta.conservacion.refrigerador}</div>}
-            {receta.conservacion.congelador && <div class="conservacion-item"><strong>Congelador</strong>{receta.conservacion.congelador}</div>}
-            {receta.conservacion.recalentar && <div class="conservacion-item full-width"><strong>Recalentar</strong>{receta.conservacion.recalentar}</div>}
+            {receta.conservacion.refrigerador && (
+              <div class="conservacion-item">
+                <strong>Refrigerador</strong>
+                {receta.conservacion.refrigerador}
+              </div>
+            )}
+            {receta.conservacion.congelador && (
+              <div class="conservacion-item">
+                <strong>Congelador</strong>
+                {receta.conservacion.congelador}
+              </div>
+            )}
+            {receta.conservacion.recalentar && (
+              <div class="conservacion-item full-width">
+                <strong>Recalentar</strong>
+                {receta.conservacion.recalentar}
+              </div>
+            )}
           </div>
           <div class="conservacion-link">
             <a href="/guia-conservacion/">Ver guía completa de conservación →</a>
@@ -396,14 +555,16 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
     <!-- TAGS -->
     {receta.tags && receta.tags.length > 0 && (
       <div class="receta-tags">
-        {receta.tags.map(t => <span class="tag">#{t}</span>)}
+        {receta.tags.map((t) => (
+          <span class="tag">#{t}</span>
+        ))}
       </div>
     )}
 
     <!-- GUÍA -->
     {guiaAsociada && (
       <div class="receta-guia-box">
-        <div class="guia-icon" set:html={ICON_LIBRO}></div>
+        <div class="guia-icon" set:html={ICON_LIBRO} />
         <div class="guia-texto">
           <span class="guia-eyebrow">Guía recomendada</span>
           <a href={guiaAsociada.url}>{guiaAsociada.titulo} →</a>
@@ -416,7 +577,14 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
       <div class="rating-container" data-slug={slug}>
         <div class="rating-stars" role="group" aria-label="Calificación de la receta">
           {Array.from({ length: 5 }).map((_, i) => (
-            <button type="button" class="rating-star" data-value={i + 1} aria-label={`Calificar con ${i + 1} ${i === 0 ? 'estrella' : 'estrellas'}`} aria-pressed="false" set:html={ICON_STAR}></button>
+            <button
+              type="button"
+              class="rating-star"
+              data-value={i + 1}
+              aria-label={`Calificar con ${i + 1} ${i === 0 ? 'estrella' : 'estrellas'}`}
+              aria-pressed="false"
+              set:html={ICON_STAR}
+            />
           ))}
         </div>
         <span class="rating-text">Califica esta receta</span>
@@ -425,17 +593,35 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
       <details class="btn-imprimir-menu">
         <summary class="btn-secundario">
           🖨️ Imprimir
-          <svg class="chevron-imprimir" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <polyline points="6 9 12 15 18 9"/>
+          <svg
+            class="chevron-imprimir"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <polyline points="6 9 12 15 18 9" />
           </svg>
         </summary>
         <div class="imprimir-opciones">
-          <button type="button" class="imprimir-opcion" data-imprimir="todo"><span>Toda la receta</span></button>
-          <button type="button" class="imprimir-opcion" data-imprimir="marcados"><span>Solo ingredientes marcados</span></button>
+          <button type="button" class="imprimir-opcion" data-imprimir="todo">
+            <span>Toda la receta</span>
+          </button>
+          <button type="button" class="imprimir-opcion" data-imprimir="marcados">
+            <span>Solo ingredientes marcados</span>
+          </button>
         </div>
       </details>
 
-      <button type="button" class="btn-offline btn-secundario" data-url={`/recetas/${slug}/`} data-image={tieneImagenPropia ? '/' + receta.imagen : ''}>
+      <button
+        type="button"
+        class="btn-offline btn-secundario"
+        data-url={`/recetas/${slug}/`}
+        data-image={tieneImagenPropia ? '/' + receta.imagen : ''}
+      >
         📥 Guardar offline
       </button>
     </div>
@@ -445,11 +631,15 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
       <span class="compartir-titulo">¿Te gustó esta receta?</span>
       <div class="compartir-botones">
         <a href={linkWA} target="_blank" rel="noopener" class="btn-whatsapp">
-          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <svg viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>
           WhatsApp
         </a>
         <a href={linkPin} target="_blank" rel="noopener" class="btn-pinterest">
-          <svg viewBox="0 0 24 24"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.951-7.252 4.195 0 7.454 2.988 7.454 6.978 0 4.169-2.626 7.525-6.282 7.525-1.226 0-2.379-.637-2.774-1.39l-.756 2.882c-.272 1.049-1.009 2.361-1.505 3.166 1.131.346 2.333.535 3.577.535 6.621 0 11.987-5.367 11.987-11.987C24.007 5.367 18.641 0 12.017 0z"/></svg>
+          <svg viewBox="0 0 24 24">
+            <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.951-7.252 4.195 0 7.454 2.988 7.454 6.978 0 4.169-2.626 7.525-6.282 7.525-1.226 0-2.379-.637-2.774-1.39l-.756 2.882c-.272 1.049-1.009 2.361-1.505 3.166 1.131.346 2.333.535 3.577.535 6.621 0 11.987-5.367 11.987-11.987C24.007 5.367 18.641 0 12.017 0z" />
+          </svg>
           Pinterest
         </a>
       </div>
@@ -460,18 +650,35 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
       <aside class="recetas-relacionadas">
         <h3>Recetas relacionadas</h3>
         <ul>
-          {rels.map(r => <li><a href={`/recetas/${r.slug}/`}>{r.titulo}</a></li>)}
+          {rels.map((r) => (
+            <li>
+              <a href={`/recetas/${r.slug}/`}>{r.titulo}</a>
+            </li>
+          ))}
         </ul>
       </aside>
     )}
 
     <!-- PREV / NEXT -->
     <nav class="receta-nav">
-      {prev ? <a href={`/recetas/${prev.slug}/`} class="receta-nav-prev">&larr; {prev.titulo}</a> : <span></span>}
-      <a href="/recetario/" class="receta-nav-index">Todas las recetas</a>
-      {next ? <a href={`/recetas/${next.slug}/`} class="receta-nav-next">{next.titulo} &rarr;</a> : <span></span>}
+      {prev ? (
+        <a href={`/recetas/${prev.slug}/`} class="receta-nav-prev">
+          &larr; {prev.titulo}
+        </a>
+      ) : (
+        <span></span>
+      )}
+      <a href="/recetario/" class="receta-nav-index">
+        Todas las recetas
+      </a>
+      {next ? (
+        <a href={`/recetas/${next.slug}/`} class="receta-nav-next">
+          {next.titulo} &rarr;
+        </a>
+      ) : (
+        <span></span>
+      )}
     </nav>
-
   </main>
 
   <script type="application/json" id="receta-data" set:html={recetaJSON}></script>
@@ -482,6 +689,7 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
     import '../../scripts/estrellas.js';
     import '../../scripts/print-marcados.js';
     import '../../scripts/receta-tabs.js';
+    import '../../scripts/stepper-porciones.js';
   </script>
 
   <!-- JS BOTÓN OFFLINE -->
@@ -509,7 +717,8 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
         if (data.fail === 0 && data.ok > 0) {
           btn.textContent = '✅ Guardada para sin conexión';
         } else if (data.ok > 0) {
-          btn.textContent = '⚠️ Guardada parcialmente (' + data.ok + '/' + (data.ok + data.fail) + ')';
+          btn.textContent =
+            '⚠️ Guardada parcialmente (' + data.ok + '/' + (data.ok + data.fail) + ')';
           btn.disabled = false;
         } else {
           btn.textContent = 'No se pudo guardar; reintenta';
@@ -519,52 +728,56 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
 
       document.querySelectorAll('.btn-offline').forEach(function (btn) {
         btn.addEventListener('click', function () {
-          var textoOriginal = btn.textContent;
-          btn.textContent = 'Guardando…';
+                    btn.textContent = 'Guardando…';
           btn.disabled = true;
 
-          navigator.serviceWorker.ready.then(function (reg) {
-            if (!reg.active) {
-              btn.textContent = 'No se pudo guardar; reintenta';
-              btn.disabled = false;
-              return;
-            }
+          navigator.serviceWorker.ready
+            .then(function (reg) {
+              if (!reg.active) {
+                btn.textContent = 'No se pudo guardar; reintenta';
+                btn.disabled = false;
+                return;
+              }
 
-            var url = btn.dataset.url;
-            var imgRel = btn.dataset.image || '';
-            var imageUrl = imgRel ? new URL(imgRel, window.location.origin).href : null;
+              var url = btn.dataset.url;
+              var imgRel = btn.dataset.image || '';
+              var imageUrl = imgRel ? new URL(imgRel, window.location.origin).href : null;
 
-            var resources = performance.getEntriesByType('resource')
-              .map(function (e) { return e.name; })
-              .filter(function (n) {
-                try {
-                  var u = new URL(n);
-                  return u.origin === window.location.origin && n !== url;
-                } catch (e) {
-                  return false;
-                }
+              var resources = performance
+                .getEntriesByType('resource')
+                .map(function (e) {
+                  return e.name;
+                })
+                .filter(function (n) {
+                  try {
+                    var u = new URL(n);
+                    return u.origin === window.location.origin && n !== url;
+                  } catch (e) {
+                    return false;
+                  }
+                });
+
+              pending = { url: url, btn: btn };
+
+              reg.active.postMessage({
+                type: 'CACHE_RECIPE',
+                url: url,
+                imageUrl: imageUrl,
+                resources: resources,
               });
 
-            pending = { url: url, btn: btn };
-
-            reg.active.postMessage({
-              type: 'CACHE_RECIPE',
-              url: url,
-              imageUrl: imageUrl,
-              resources: resources
+              setTimeout(function () {
+                if (pending && pending.url === url) {
+                  pending = null;
+                  btn.textContent = 'No se pudo confirmar; reintenta';
+                  btn.disabled = false;
+                }
+              }, 20000);
+            })
+            .catch(function () {
+              btn.textContent = 'No se pudo guardar; reintenta';
+              btn.disabled = false;
             });
-
-            setTimeout(function () {
-              if (pending && pending.url === url) {
-                pending = null;
-                btn.textContent = 'No se pudo confirmar; reintenta';
-                btn.disabled = false;
-              }
-            }, 20000);
-          }).catch(function () {
-            btn.textContent = 'No se pudo guardar; reintenta';
-            btn.disabled = false;
-          });
         });
       });
     })();
@@ -608,20 +821,26 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
         if (btnAll) targets.push(btnAll);
         if (targets.length === 0) return;
 
-        var observer = new IntersectionObserver(function (entries) {
-          var algunoVisible = false;
-          for (var i = 0; i < entries.length; i++) {
-            if (entries[i].isIntersecting) { algunoVisible = true; break; }
+        var observer = new IntersectionObserver(
+          function (entries) {
+            var algunoVisible = false;
+            for (var i = 0; i < entries.length; i++) {
+              if (entries[i].isIntersecting) {
+                algunoVisible = true;
+                break;
+              }
+            }
+            if (algunoVisible) {
+              fab.classList.add('shopping-fab--oculto');
+            } else {
+              fab.classList.remove('shopping-fab--oculto');
+            }
+          },
+          {
+            rootMargin: '-80% 0px 0px 0px',
+            threshold: 0,
           }
-          if (algunoVisible) {
-            fab.classList.add('shopping-fab--oculto');
-          } else {
-            fab.classList.remove('shopping-fab--oculto');
-          }
-        }, {
-          rootMargin: '-80% 0px 0px 0px',
-          threshold: 0
-        });
+        );
 
         for (var j = 0; j < targets.length; j++) {
           observer.observe(targets[j]);
@@ -636,14 +855,12 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
     })();
   </script>
 
-  <!-- JS ACCESOS RÁPIDOS Y STEPPER -->
+  <!-- JS ACCESOS RÁPIDOS -->
   <script is:inline>
     (function () {
       'use strict';
 
       function init() {
-
-        /* Accesos rápidos */
         document.querySelectorAll('.acceso-card').forEach(function (card) {
           card.addEventListener('click', function (e) {
             var tabTarget = card.dataset.tabTarget;
@@ -664,80 +881,6 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
             }
           });
         });
-
-        /* Stepper de porciones */
-        var stepper = document.querySelector('.stepper-porciones');
-        if (!stepper) return;
-
-        var base = parseInt(stepper.dataset.base, 10) || 4;
-        var input = stepper.querySelector('.stepper-valor');
-        var btnMenos = stepper.querySelector('.stepper-menos');
-        var btnMas = stepper.querySelector('.stepper-mas');
-        if (!input) return;
-
-        var current = parseInt(input.value, 10) || base;
-
-        function parseCantidad(text) {
-          var m = text.match(/^(\d+\/\d+|\d+(?:[.,]\d+)?)/);
-          if (!m) return null;
-          var raw = m[1].replace(',', '.');
-          if (raw.indexOf('/') !== -1) {
-            var parts = raw.split('/');
-            var den = parseFloat(parts[1]);
-            if (!den) return null;
-            return parseFloat(parts[0]) / den;
-          }
-          return parseFloat(raw);
-        }
-
-        function formatCantidad(n) {
-          if (!isFinite(n) || n === 0) return '0';
-          if (Number.isInteger(n)) return String(n);
-          var rounded = Math.round(n * 4) / 4;
-          var entero = Math.floor(rounded);
-          var frac = rounded - entero;
-          var fracStr = frac === 0 ? ''
-            : frac === 0.25 ? '1/4'
-            : frac === 0.5 ? '1/2'
-            : frac === 0.75 ? '3/4'
-            : '';
-          if (!fracStr) return String(Math.round(n * 100) / 100);
-          return (entero > 0 ? entero + ' ' : '') + fracStr;
-        }
-
-        function aplicarEscala() {
-          var ratio = current / base;
-          document.querySelectorAll('.ing-texto[data-original]').forEach(function (span) {
-            var original = span.dataset.original;
-            var cantidad = parseCantidad(original);
-            if (cantidad === null) {
-              span.textContent = original;
-              return;
-            }
-            var match = original.match(/^(\d+\/\d+|\d+(?:[.,]\d+)?)/);
-            if (!match) return;
-            var prefijo = formatCantidad(cantidad * ratio);
-            span.textContent = prefijo + original.slice(match[0].length);
-          });
-        }
-
-        function setValor(v) {
-          v = Math.max(1, Math.min(50, Math.round(v)));
-          current = v;
-          input.value = v;
-          aplicarEscala();
-        }
-
-        if (btnMenos) btnMenos.addEventListener('click', function () { setValor(current - 1); });
-        if (btnMas) btnMas.addEventListener('click', function () { setValor(current + 1); });
-        input.addEventListener('change', function () {
-          var v = parseInt(input.value, 10);
-          if (isNaN(v)) v = base;
-          setValor(v);
-        });
-
-        // Aplicar estado inicial
-        setValor(current);
       }
 
       if (document.readyState === 'loading') {
@@ -747,5 +890,4 @@ const ICON_LIST = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
       }
     })();
   </script>
-
 </Layout>

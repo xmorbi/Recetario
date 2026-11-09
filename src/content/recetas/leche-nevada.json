@@ -1,37 +1,12 @@
 {
   "titulo": "Leche nevada",
   "categoria": "dulces",
-  "tags": [
-    "postre",
-    "dulce",
-    "leche",
-    "frio",
-    "tradicional",
-    "huevo"
-  ],
+  "tags": ["postre", "dulce", "leche", "frio", "tradicional", "huevo"],
   "imagen": null,
   "tiempo": "40 min + frío",
   "porciones": "6 personas",
   "dificultad": "media",
   "tecnica": "Olla",
-  "ingredientes": [
-    "1 litro de leche entera",
-    "4 huevos (separar claras y yemas)",
-    "150 g de azúcar",
-    "1 rama de canela",
-    "1 cucharadita de esencia de vainilla",
-    "2 cucharadas de maicena",
-    "Canela molida para servir"
-  ],
-  "pasos": [
-    "Calienta la leche con la canela en rama sin que hierva.",
-    "Bate las yemas con el azúcar hasta que estén pálidas. Añade la maicena y mezcla.",
-    "Vierte un poco de leche caliente sobre las yemas (templar) y luego devuelve todo a la olla.",
-    "Cocina a fuego bajo, revolviendo constantemente, hasta que espese (unos 5-7 minutos). No dejes que hierva.",
-    "Retira la canela, añade la vainilla y vierte en un molde o en copas individuales.",
-    "Bate las claras a punto de nieve con un poco de azúcar. Cocínalas en la leche caliente (o al baño María) por cucharadas, hasta que cuajen. Colócalas encima del postre.",
-    "Refrigera al menos 3 horas. Sirve con canela molida encima."
-  ],
   "dato": "La \"nieve\" son las claras batidas que flotan sobre la crema de leche. Es un postre de origen español que en Chile se volvió clásico de las once y de las celebraciones familiares.",
   "errores": [
     {
@@ -101,26 +76,15 @@
   "pasos_v2": [
     {
       "texto": "Calienta la leche con la canela en rama sin que hierva.",
-      "ingredientes": [
-        1,
-        4,
-        7
-      ]
+      "ingredientes": [1, 4, 7]
     },
     {
       "texto": "Bate las yemas con el azúcar hasta que estén pálidas. Añade la maicena y mezcla.",
-      "ingredientes": [
-        2,
-        3,
-        6
-      ]
+      "ingredientes": [2, 3, 6]
     },
     {
       "texto": "Vierte un poco de leche caliente sobre las yemas (templar) y luego devuelve todo a la olla.",
-      "ingredientes": [
-        1,
-        2
-      ]
+      "ingredientes": [1, 2]
     },
     {
       "texto": "Cocina a fuego bajo, revolviendo constantemente, hasta que espese (unos 5-7 minutos). No dejes que hierva.",
@@ -133,26 +97,15 @@
     },
     {
       "texto": "Retira la canela, añade la vainilla y vierte en un molde o en copas individuales.",
-      "ingredientes": [
-        4,
-        5,
-        7
-      ]
+      "ingredientes": [4, 5, 7]
     },
     {
       "texto": "Bate las claras a punto de nieve con un poco de azúcar. Cocínalas en la leche caliente (o al baño María) por cucharadas, hasta que cuajen. Colócalas encima del postre.",
-      "ingredientes": [
-        1,
-        2,
-        3
-      ]
+      "ingredientes": [1, 2, 3]
     },
     {
       "texto": "Refrigera al menos 3 horas. Sirve con canela molida encima.",
-      "ingredientes": [
-        4,
-        7
-      ],
+      "ingredientes": [4, 7],
       "timers": [
         {
           "minutos": 180,
