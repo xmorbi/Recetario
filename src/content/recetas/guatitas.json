@@ -2,7 +2,7 @@
   "titulo": "Guatitas",
   "categoria": "principales",
   "tags": ["guatitas", "olla", "popular", "tradicional", "invierno", "casero"],
-  "imagen": null,
+  "imagen": "img/guatitas.jpg",
   "tiempo": "2 h",
   "porciones": "4 personas",
   "dificultad": "media",

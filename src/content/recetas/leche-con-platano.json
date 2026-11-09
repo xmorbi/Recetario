@@ -2,7 +2,7 @@
   "titulo": "Leche con plátano",
   "categoria": "bebidas",
   "tags": ["bebida", "leche", "plátano", "desayuno", "once", "fruta"],
-  "imagen": null,
+  "imagen": "img/leche-con-platano.jpg",
   "tiempo": "5 min",
   "porciones": "2 vasos",
   "dificultad": "muy fácil",
