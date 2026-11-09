@@ -154,8 +154,8 @@ import Layout from '../layouts/Layout.astro';
   <div id="toast-container" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; display: flex; flex-direction: column; gap: 10px;"></div>
 
   <script>
-    import { obtenerRecetasSeguras } from '../../lib/restricciones.js';
-    import { escaparHtml } from '../../lib/html.js';
+    import { obtenerRecetasSeguras } from '../lib/restricciones.js';
+    import { escaparHtml } from '../lib/html.js';
 
     /* ---------- Utilidades de localStorage ---------- */
     function safeGet(key) {
