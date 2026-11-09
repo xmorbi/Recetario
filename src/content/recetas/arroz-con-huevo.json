@@ -2,7 +2,7 @@
   "titulo": "Arroz con huevo",
   "categoria": "principales",
   "tags": ["arroz", "huevo", "simple", "cotidiano", "once", "economico"],
-  "imagen": null,
+  "imagen": "img/arroz-con-huevo.jpg",
   "tiempo": "20 min",
   "porciones": "2 personas",
   "dificultad": "fácil",

@@ -2,7 +2,7 @@
   "titulo": "Dobladitas",
   "categoria": "panes",
   "tags": ["pan", "dobladita", "horno", "masa", "once", "tradicional"],
-  "imagen": null,
+  "imagen": "img/dobladitas.jpg",
   "tiempo": "1 h 30 min",
   "porciones": "12 unidades",
   "dificultad": "media",

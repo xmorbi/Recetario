@@ -7,12 +7,9 @@ import { escaparHtml } from '../lib/html.js';
   'use strict';
 
   // Centralización de dominio: window.__SITE_URL lo inyecta Layout.astro en <head>.
-  // Fallback hardcodeado por si el script se carga en un contexto aislado
-  // (tests, storybook, etc.). replace(/\/$/, '') normaliza trailing slash.
   const SITE_CONFIG = {
     nombre: 'Recetario Chileno',
     urlBase: (window.__SITE_URL || 'https://recetariochileno.netlify.app').replace(/\/$/, ''),
-    // FASE 4C (deuda D6): ruta absoluta. Antes era relativa y desde /recetas/{slug}/ habría resuelto mal.
     imagenDefault: '/img/og-default.jpg',
   };
 
@@ -52,9 +49,6 @@ import { escaparHtml } from '../lib/html.js';
     }
     return pattern ? new RegExp(pattern, 'gi') : null;
   }
-  function escaparAtributo(s) {
-    return String(s).replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-  }
   function slugify(text) {
     return String(text)
       .toLowerCase()
@@ -79,8 +73,6 @@ import { escaparHtml } from '../lib/html.js';
   let modoOnceBanner;
   let heroH1;
 
-  // FASE 8: índice por título para lookup O(1) dentro de aplicarFiltros.
-  // Antes se hacía RECETAS.find() por cada tarjeta en cada tecla → O(n²).
   let recetasPorTitulo = null;
 
   /* ---------- Receta destacada (portada) ---------- */
@@ -97,7 +89,12 @@ import { escaparHtml } from '../lib/html.js';
     var indice = dia % pool.length;
     var r = pool[indice];
     var slug = r.slug || slugify(r.titulo);
-    var img = r.imagen && r.imagen.trim() !== '' ? r.imagen : '';
+    var img = r.imagen && r.imagen.trim() !== '' ? r.imagen.trim() : '';
+
+    // Fix: Asegurar que la ruta de la imagen tenga la barra inicial
+    if (img && !img.startsWith('/') && !img.startsWith('http')) {
+      img = '/' + img;
+    }
 
     var chips = [];
     if (r.tiempo) chips.push('<span>' + ICONS.clock + escaparHtml(r.tiempo) + '</span>');
@@ -111,9 +108,9 @@ import { escaparHtml } from '../lib/html.js';
     if (img) {
       mediaHTML =
         '<div class="receta-destacada-media"><img src="' +
-        escaparAtributo(img) +
+        escaparHtml(img) +
         '" alt="' +
-        escaparAtributo(r.titulo) +
+        escaparHtml(r.titulo) +
         '" loading="lazy"></div>';
     } else {
       mediaHTML =
@@ -129,7 +126,7 @@ import { escaparHtml } from '../lib/html.js';
     cont.innerHTML =
       '<p class="receta-destacada-eyebrow">Receta destacada del día</p>' +
       '<a class="receta-destacada" href="/recetas/' +
-      slug +
+      escaparHtml(slug) +
       '/">' +
       mediaHTML +
       '<div class="receta-destacada-body">' +
@@ -154,7 +151,7 @@ import { escaparHtml } from '../lib/html.js';
   function crearTarjeta(receta, indice) {
     const slug = receta.slug || slugify(receta.titulo);
     const id = 'receta-' + slug;
-    const tituloSeguro = escaparAtributo(receta.titulo);
+    const tituloSeguro = escaparHtml(receta.titulo);
 
     var searchParts = [receta.titulo];
     if (receta.ingredientes) searchParts = searchParts.concat(receta.ingredientes);
@@ -163,14 +160,20 @@ import { escaparHtml } from '../lib/html.js';
     if (receta.tecnica) searchParts.push(receta.tecnica);
 
     const tagsStr = (receta.tags || []).join('|');
-    const searchText = escaparAtributo(searchParts.join(' | '));
+    const searchText = escaparHtml(searchParts.join(' | '));
 
     var fotoHTML = '';
     if (receta.imagen && receta.imagen.trim() !== '') {
+      let srcImagen = receta.imagen.trim();
+      // Fix: Asegurar que la ruta de la imagen tenga la barra inicial
+      if (!srcImagen.startsWith('/') && !srcImagen.startsWith('http')) {
+        srcImagen = '/' + srcImagen;
+      }
+
       fotoHTML =
         '<div class="receta-card-foto">' +
         '<img src="' +
-        escaparAtributo(receta.imagen) +
+        escaparHtml(srcImagen) +
         '" ' +
         'alt="' +
         tituloSeguro +
@@ -196,10 +199,10 @@ import { escaparHtml } from '../lib/html.js';
     return (
       '' +
       '<article class="receta-card" data-cat="' +
-      escaparAtributo(receta.categoria || 'principales') +
+      escaparHtml(receta.categoria || 'principales') +
       '" ' +
       'data-tags="' +
-      escaparAtributo(tagsStr) +
+      escaparHtml(tagsStr) +
       '" ' +
       'data-titulo="' +
       tituloSeguro +
@@ -208,10 +211,10 @@ import { escaparHtml } from '../lib/html.js';
       searchText +
       '" ' +
       'id="' +
-      id +
+      escaparHtml(id) +
       '">' +
       '<a href="/recetas/' +
-      slug +
+      escaparHtml(slug) +
       '/" class="receta-card-link">' +
       fotoHTML +
       '<div class="receta-card-body">' +
@@ -228,7 +231,7 @@ import { escaparHtml } from '../lib/html.js';
       '</div>' +
       '</a>' +
       '<button type="button" class="btn-favorito" data-slug="' +
-      slug +
+      escaparHtml(slug) +
       '" aria-label="Guardar en favoritos">' +
       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>' +
       '</button>' +
@@ -476,7 +479,6 @@ import { escaparHtml } from '../lib/html.js';
       }
 
       const titulo = tarjeta.dataset.titulo;
-      // FASE 8: lookup O(1) en lugar de RECETAS.find() (que era O(n) por tarjeta).
       const receta = recetasPorTitulo ? recetasPorTitulo.get(titulo) : null;
 
       let matchInfo = { matches: 0, faltantes: 0, pct: 0 };
@@ -596,10 +598,11 @@ import { escaparHtml } from '../lib/html.js';
 
     const contenedorFiltrosActivos = document.getElementById('filtros-activos-container');
     if (contenedorFiltrosActivos) {
+      // Hotfix XSS: Uso de escaparHtml para evitar inyección en atributos y contenido
       contenedorFiltrosActivos.innerHTML = filtrosActivos
         .map(
           (f) =>
-            `<button class="chip-activo" data-tipo="${f.tipo}" data-valor="${f.valor}">${f.texto} ✕</button>`
+            `<button type="button" class="chip-activo" data-tipo="${escaparHtml(f.tipo)}" data-valor="${escaparHtml(f.valor)}">${escaparHtml(f.texto)} ✕</button>`
         )
         .join('');
     }
@@ -610,7 +613,8 @@ import { escaparHtml } from '../lib/html.js';
         const msgEl = document.getElementById('mensaje-vacio-texto');
         if (msgEl) {
           if (filtrosActivos.length > 0) {
-            const lista = filtrosActivos.map((f) => `<strong>${f.texto}</strong>`).join(' + ');
+            // Hotfix XSS
+            const lista = filtrosActivos.map((f) => `<strong>${escaparHtml(f.texto)}</strong>`).join(' + ');
             msgEl.innerHTML = `No hay recetas que coincidan con: ${lista}.`;
           } else {
             msgEl.innerHTML = 'No encontramos recetas con ese criterio.';
@@ -808,7 +812,7 @@ import { escaparHtml } from '../lib/html.js';
   /* =====================================================
      INICIALIZACIÓN
      ===================================================== */
-  let appIniciada = false; // Guarda para evitar doble inicialización y listeners duplicados
+  let appIniciada = false;
 
   function initApp() {
     if (appIniciada) return;
@@ -819,8 +823,6 @@ import { escaparHtml } from '../lib/html.js';
       return;
     }
 
-    // FASE 8: construir el índice por título una sola vez.
-    // Si dos recetas comparten título, gana la primera (mismo criterio que el find anterior).
     recetasPorTitulo = new Map();
     RECETAS.forEach(function (r) {
       if (!recetasPorTitulo.has(r.titulo)) {
@@ -830,8 +832,6 @@ import { escaparHtml } from '../lib/html.js';
 
     renderizarDestacada();
 
-    // MEJORA 12/6 (Fase 3/4): Inicializar el autocompletado ANTES de chequear
-    // si existe el contenedor, para que funcione también en la portada (index).
     buscador = document.getElementById('buscador');
     if (buscador) {
       initAutocompletado(buscador, RECETAS);
@@ -1021,9 +1021,9 @@ import { escaparHtml } from '../lib/html.js';
         .map(function (ing) {
           return (
             '<button type="button" class="chip-despensa" data-ing="' +
-            ing +
+            escaparHtml(ing) +
             '">' +
-            ing +
+            escaparHtml(ing) +
             '</button>'
           );
         })
@@ -1097,9 +1097,6 @@ import { escaparHtml } from '../lib/html.js';
 
     if (btnFiltrosAvanzados && panelFiltrosAvanzados) {
       btnFiltrosAvanzados.addEventListener('click', function (e) {
-        // stopImmediatePropagation evita que otros listeners de clic en el mismo
-        // botón (por ejemplo, si el script se cargó dos veces por error) anulen
-        // la apertura del panel de filtros.
         e.stopImmediatePropagation();
 
         const estabaAbierto = !panelFiltrosAvanzados.hidden;

@@ -2,7 +2,7 @@
   "titulo": "Ajiaco chileno",
   "categoria": "sopas",
   "tags": ["ajiaco", "sopa", "olla", "carne", "papas"],
-  "imagen": null,
+  "imagen": "img/ajiaco.png",
   "tiempo": "40 min",
   "porciones": "4 personas",
   "dificultad": "fácil",

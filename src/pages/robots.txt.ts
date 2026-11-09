@@ -12,30 +12,53 @@ export const GET: APIRoute = ({ site }) => {
 # ROBOTS.TXT - Recetario Chileno
 # ==========================================
 
-# 1. Reglas generales para todos los motores de búsqueda
+# 1. Reglas generales para los motores de búsqueda clásicos (Google, Bing, etc.)
 User-agent: *
 Allow: /
 
 # 2. Ubicación del mapa del sitio
 Sitemap: ${sitemapURL}
 
-# 3. Permisos explícitos para rastreadores de Inteligencia Artificial
-# Esto permite que ChatGPT, Claude y Perplexity citen tu sitio
-
-User-agent: GPTBot
+# ==========================================
+# 3. PERMITIR a los Buscadores de IA (Citación y Tráfico)
+# ==========================================
+# Estos bots leen tu sitio para responder en tiempo real y Citan la fuente.
+User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
-User-agent: ClaudeBot
-Allow: /
-
 User-agent: PerplexityBot
 Allow: /
 
-User-agent: Google-Extended
+User-agent: Claude-SearchBot
 Allow: /
+
+# ==========================================
+# 4. BLOQUEAR a los Entrenadores de IA (Protección de contenido)
+# ==========================================
+# Estos bots absorben tu contenido para entrenar sus modelos sin dar tráfico.
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
 `;
 
   return new Response(body, {
