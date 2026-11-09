@@ -150,380 +150,403 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </dialog>
 
-  <script is:inline>
-    document.addEventListener('recetas-listas', function () {
-      function safeGet(key) {
-        try {
-          return localStorage.getItem(key);
-        } catch (e) {
-          return null;
-        }
+  <!-- Contenedor para notificaciones Toast -->
+  <div id="toast-container" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; display: flex; flex-direction: column; gap: 10px;"></div>
+
+  <script>
+    import { obtenerRecetasSeguras } from '../../lib/restricciones.js';
+    import { escaparHtml } from '../../lib/html.js';
+
+    /* ---------- Utilidades de localStorage ---------- */
+    function safeGet(key) {
+      try {
+        return localStorage.getItem(key);
+      } catch (e) {
+        return null;
       }
-      function safeSet(key, value) {
-        try {
-          localStorage.setItem(key, value);
-        } catch (e) {}
-      }
-      function safeRemove(key) {
-        try {
-          localStorage.removeItem(key);
-        } catch (e) {}
-      }
+    }
+    function safeSet(key, value) {
+      try {
+        localStorage.setItem(key, value);
+      } catch (e) {}
+    }
+    function safeRemove(key) {
+      try {
+        localStorage.removeItem(key);
+      } catch (e) {}
+    }
 
-      // FASE 3 (auditoría): diccionario con \b (límites de palabra) para
-      // evitar falsos positivos ("panqueque" ya no se bloquea por "pan").
-      const ANIMALES_VEGANO =
-        'carne(?! de (soya|soja|trigo|vegetal|girasol))|carnes(?! de (soya|soja|trigo|vegetal|girasol))|pollo|pollos|cerdo|cerdos|vacuno|vacunos|pavo|pavos|cordero|corderos|bistec|bistecs|churrasco|churrascos|salchicha|salchichas|vienesa|vienesas|chorizo|chorizos|jam[oó]n|jamones|tocino|tocinos|prieta|prietas|longaniza|longanizas|costillar|costillares|pulpa|pulpas|posta|postas|charqui|charquis|hueso|huesos|menudencia|menudencias|guatita|guatitas|chunchule|chunchules|pernil|perniles|malaya|malayas|pescado|pescados|camar[oó]n|camarones|chorito|choritos|almeja|almejas|macha|machas|loco|locos|jaiba|jaibas|centolla|centollas|congrio|congrios|corvina|corvinas|merluza|merluzas|reineta|reinetas|salm[oó]n|at[uú]n|jurel|jureles|pulpo|pulpos|calamar|calamares|picoroco|picorocos|cholga|cholgas|osti[oó]n|ostiones|marisco|mariscos|leche(?! de (coco|almendra|soya|avena|arroz))|queso|quesos|mantequilla|crema(?! de (coco|almendra|verduras))|yogur|yogurt|parmesano|manjar|manteca|suero|case[ií]na|huevo|huevos|clara|claras|yema|yemas|miel|caldo de carne|caldo de pollo|caldo de hueso';
+    /* ---------- TOAST UI (reemplazo de alert) ---------- */
+    function mostrarToast(mensaje, tipo = 'info') {
+      const container = document.getElementById('toast-container');
+      if (!container) return;
 
-      const DICCIONARIO = {
-        lacteos:
-          /\b(leche(?! de (coco|almendra|soya|avena|arroz))|queso|mantequilla|crema(?! de (coco|almendra|verduras))|yogur|yogurt|parmesano|manjar|manteca|suero|case[ií]na)\b/i,
-        gluten:
-          /\b(harina(?! de (almendra|coco|arroz))|pan|marraqueta|hallulla|fideo|fideos|tallar[ií]n|tallarines|pasta|galleta|galletas|masa|s[eé]mola|polvos de hornear|levadura|cerveza)\b/i,
-        frutos_secos:
-          /\b(nuez|nueces|almendra|almendras|man[ií]|avellana|avellanas|pistacho|pistachos|casta[nñ]a|casta[nñ]as|pi[nñ][oó]n|pi[nñ]ones)\b/i,
-        mariscos:
-          /\b(pescado|pescados|camar[oó]n|camarones|chorito|choritos|almeja|almejas|macha|machas|loco|locos|jaiba|jaibas|centolla|centollas|congrio|congrios|corvina|corvinas|merluza|merluzas|reineta|reinetas|salm[oó]n|at[uú]n|jurel|jureles|pulpo|pulpos|calamar|calamares|picoroco|picorocos|cholga|cholgas|osti[oó]n|ostiones|marisco|mariscos)\b/i,
-        huevo: /\b(huevo|huevos|clara|claras|yema|yemas)\b/i,
-        carne:
-          /\b(carne(?! de (soya|soja|trigo|vegetal|girasol))|carnes(?! de (soya|soja|trigo|vegetal|girasol))|pollo|pollos|cerdo|cerdos|vacuno|vacunos|pavo|pavos|cordero|corderos|bistec|bistecs|churrasco|churrascos|salchicha|salchichas|vienesa|vienesas|chorizo|chorizos|jam[oó]n|jamones|tocino|tocinos|prieta|prietas|longaniza|longanizas|costillar|costillares|pulpa|pulpas|posta|postas|charqui|charquis|hueso|huesos|menudencia|menudencias|guatita|guatitas|chunchule|chunchules|pernil|perniles|malaya|malayas)\b/i,
-        vegano: new RegExp('\\b(' + ANIMALES_VEGANO + ')\\b', 'i'),
-        keto: /\b(harina|harinas|pan|panes|marraqueta|marraquetas|hallulla|hallullas|fideo|fideos|tallar[ií]n|tallarines|pasta|pastas|galleta|galletas|masa|masas|s[eé]mola|arroz|arroces|papa|papas|patata|patatas|camote|camotes|choclo|choclos|arveja|arvejas|poroto|porotos|lenteja|lentejas|garbanzo|garbanzos|az[uú]car|chancaca|miel|manjar|fruta|frutas|pl[aá]tano|pl[aá]tanos|manzana|manzanas|pera|peras|durazno|duraznos|naranja|naranjas|jugo|jugos|cerveza|cervezas|vino|vinos)\b/i,
-        sin_azucar:
-          /\b(az[uú]car|chancaca|miel|manjar|caramelo|camelos|jarabe|jarabes|syrup|mermelada|mermeladas|dulce|dulces)\b/i,
-      };
+      const toast = document.createElement('div');
+      toast.style.cssText = `
+        background: ${tipo === 'error' ? '#b03a2e' : tipo === 'success' ? '#2e7d32' : '#333'};
+        color: white;
+        padding: 12px 24px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        font-weight: 500;
+        font-size: 0.95rem;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.3s ease;
+      `;
+      toast.textContent = mensaje;
+      container.appendChild(toast);
 
-      // FASE 3 (auditoría): tags positivos que anulan la restricción.
-      // Si la receta ya está adaptada (ej. "pan nube" con tag "sin-gluten"),
-      // no se bloquea aunque el título contenga "pan".
-      const TAGS_POSITIVAS = {
-        lacteos: /\bsin[- ]?l[aá]cteos?\b|\bsin[- ]?leche\b|\bvegan[oa]?\b/i,
-        gluten: /\bsin[- ]?gluten\b|\bsin[- ]?tacc\b|\bcel[ií]ac[oa]?\b|\bapto[- ]?cel[ií]ac/i,
-        frutos_secos: /\bsin[- ]?frutos?[- ]?secos?\b|\bsin[- ]?nueces?\b|\bsin[- ]?mani\b/i,
-        mariscos: /\bsin[- ]?mariscos?\b|\bsin[- ]?pescado\b|\bvegetarian[oa]?\b|\bvegan[oa]?\b/i,
-        huevo: /\bsin[- ]?huevos?\b|\bvegan[oa]?\b/i,
-        carne: /\bvegetarian[oa]?\b|\bvegan[oa]?\b|\bsin[- ]?carne\b/i,
-        vegano: /\bvegan[oa]?\b|\b100%[- ]?vegetal\b/i,
-        keto: /\bketo\b|\blow[- ]?carb\b|\bcetog[eé]nic[oa]\b/i,
-        sin_azucar: /\bsin[- ]?az[uú]car\b|\bsugar[- ]?free\b|\bdiab[eé]tic[oa]\b/i,
-        alto_proteina: /\balto[- ]?en[- ]?prote[ií]na\b|\bhigh[- ]?protein\b/i,
-      };
-
-      const PROTEINAS =
-        /\b(carne|carnes|pollo|pollos|cerdo|cerdos|vacuno|vacunos|pavo|pavos|cordero|corderos|bistec|bistecs|churrasco|churrascos|pescado|pescados|camar[oó]n|camarones|chorito|choritos|almeja|almejas|huevo|huevos|queso|quesos|manjar|lenteja|lentejas|poroto|porotos|garbanzo|garbanzos|at[uú]n|salm[oó]n|jurel|jureles|leche(?! de (coco|almendra|soya|avena|arroz)))\b/i;
-
-      const CATEGORIAS_VALIDAS = ['principales', 'sopas', 'ensaladas', 'mar', 'de-olla'];
-      const TAGS_EXCLUIDOS = ['salsa', 'picoteo', 'acompañamiento', 'postre', 'merienda'];
-      const ICONOS_CAT = {
-        principales: '🥩',
-        sopas: '🥣',
-        ensaladas: '🥗',
-        mar: '🐟',
-        'de-olla': '🍲',
-      };
-
-      const diasSemana = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
-
-      const hoy = new Date().getDay();
-      const mapaDias = { 0: 6, 1: 0, 2: 1, 3: 2, 4: 3, 5: 4, 6: 5 };
-      const indexHoy = mapaDias[hoy];
-
-      let minutasActuales = JSON.parse(safeGet('planificador_semana')) || {};
-      let restriccionesGuardadas = JSON.parse(safeGet('planificador_restricciones')) || [];
-      let recetasFijadas = JSON.parse(safeGet('planificador_fijadas')) || {};
-      let recetasPermitidasGlobal = [];
-
-      const btnGenerar = document.getElementById('btn-generar-semana');
-      const panelSemana = document.getElementById('panel-semana');
-      const contenedorMinutas = document.getElementById('contenedor-minutas');
-      const btnLimpiar = document.getElementById('btn-limpiar-semana');
-      const btnAgregarLista = document.getElementById('btn-agregar-lista');
-      const mensajeFaltan = document.getElementById('mensaje-faltan-recetas');
-      const modal = document.getElementById('modal-cambiar-receta');
-      const btnCerrarModal = document.getElementById('btn-cerrar-modal');
-      const buscadorModal = document.getElementById('buscador-modal');
-      const listaModalRecetas = document.getElementById('lista-modal-recetas');
-      let diaActualModal = '';
-
-      document.querySelectorAll('.check-restriccion').forEach((cb) => {
-        if (restriccionesGuardadas.includes(cb.value)) cb.checked = true;
-        cb.addEventListener('change', function () {
-          restriccionesGuardadas = Array.from(
-            document.querySelectorAll('.check-restriccion:checked')
-          ).map((c) => c.value);
-          safeSet('planificador_restricciones', JSON.stringify(restriccionesGuardadas));
-        });
+      // Animación de entrada
+      requestAnimationFrame(() => {
+        toast.style.opacity = '1';
+        toast.style.transform = 'translateY(0)';
       });
 
-      function tieneTagPositiva(receta, restriccion) {
-        const tagsTexto = (receta.tags || []).join(' ');
-        const regex = TAGS_POSITIVAS[restriccion];
-        return regex ? regex.test(tagsTexto) : false;
-      }
+      // Animación de salida
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateY(20px)';
+        setTimeout(() => toast.remove(), 300);
+      }, 3500);
+    }
 
-      function obtenerRecetasSeguras(restricciones) {
-        return RECETAS.filter((receta) => {
-          if (!CATEGORIAS_VALIDAS.includes(receta.categoria)) return false;
-          if (receta.tags && receta.tags.some((t) => TAGS_EXCLUIDOS.includes(t.toLowerCase())))
-            return false;
+    /* ---------- Utilidades de Fecha y Semana ---------- */
+    function obtenerLunesDeEstaSemana() {
+      const hoy = new Date();
+      const dia = hoy.getDay(); // 0=Dom, 1=Lun...
+      const diff = hoy.getDate() - dia + (dia === 0 ? -6 : 1);
+      const lunes = new Date(hoy.setDate(diff));
+      return lunes.toISOString().split('T')[0]; // Retorna 'YYYY-MM-DD'
+    }
 
-          const ingredientesValidos = (receta.ingredientes || []).filter(
-            (ing) => !/\(opcional\)/i.test(ing) && !/opcional:/i.test(ing)
-          );
-          const textoReceta = (
-            (receta.titulo || '') +
-            ' ' +
-            ingredientesValidos.join(' ') +
-            ' ' +
-            (receta.tags || []).join(' ')
-          ).toLowerCase();
+    /* ---------- Constantes de UI ---------- */
+    const ICONOS_CAT = {
+      principales: '🥩',
+      sopas: '🥣',
+      ensaladas: '🥗',
+      mar: '🐟',
+    };
 
-          for (let i = 0; i < restricciones.length; i++) {
-            const filtro = restricciones[i];
-            if (filtro === 'alto_proteina') continue;
-            // Si la receta ya está marcada como apta, saltar esta restricción
-            if (tieneTagPositiva(receta, filtro)) continue;
-            const regex = DICCIONARIO[filtro];
-            if (regex && regex.test(textoReceta)) return false;
-          }
-          if (restricciones.includes('alto_proteina') && !PROTEINAS.test(textoReceta)) return false;
-          return true;
-        });
-      }
+    const diasSemana = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
 
-      if (Object.keys(minutasActuales).length > 0) {
-        recetasPermitidasGlobal = obtenerRecetasSeguras(restriccionesGuardadas);
-        renderizarSemana();
-      }
+    const hoyObj = new Date().getDay();
+    const mapaDias = { 0: 6, 1: 0, 2: 1, 3: 2, 4: 3, 5: 4, 6: 5 };
+    const indexHoy = mapaDias[hoyObj];
 
-      btnGenerar.addEventListener('click', function () {
-        if (typeof RECETAS === 'undefined')
-          return alert('Error: No se pudieron cargar las recetas.');
+    /* ---------- Estado ---------- */
+    let RECETAS = [];
+    
+    // Auto-limpieza si cambió la semana
+    const lunesActual = obtenerLunesDeEstaSemana();
+    const lunesGuardado = safeGet('planificador_semana_inicio');
+    
+    if (lunesGuardado && lunesGuardado !== lunesActual) {
+      // Es una semana nueva, borramos la anterior
+      safeRemove('planificador_semana');
+      safeRemove('planificador_fijadas');
+      safeSet('planificador_semana_inicio', lunesActual);
+    } else if (!lunesGuardado) {
+      safeSet('planificador_semana_inicio', lunesActual);
+    }
 
-        recetasPermitidasGlobal = obtenerRecetasSeguras(restriccionesGuardadas);
-        if (recetasPermitidasGlobal.length === 0)
-          return alert(
-            'Tus restricciones son tan estrictas que no encontramos NINGUNA receta principal segura.'
-          );
+    // minutasActuales ahora guarda: { "Lunes": "slug-receta", ... }
+    let minutasActuales = JSON.parse(safeGet('planificador_semana')) || {};
+    let restriccionesGuardadas = JSON.parse(safeGet('planificador_restricciones')) || [];
+    let recetasFijadas = JSON.parse(safeGet('planificador_fijadas')) || {};
+    let recetasPermitidasGlobal = [];
 
-        recetasPermitidasGlobal.sort(() => 0.5 - Math.random());
+    /* ---------- DOM ---------- */
+    const btnGenerar = document.getElementById('btn-generar-semana');
+    const panelSemana = document.getElementById('panel-semana');
+    const contenedorMinutas = document.getElementById('contenedor-minutas');
+    const btnLimpiar = document.getElementById('btn-limpiar-semana');
+    const btnAgregarLista = document.getElementById('btn-agregar-lista');
+    const mensajeFaltan = document.getElementById('mensaje-faltan-recetas');
+    const modal = document.getElementById('modal-cambiar-receta');
+    const btnCerrarModal = document.getElementById('btn-cerrar-modal');
+    const buscadorModal = document.getElementById('buscador-modal');
+    const listaModalRecetas = document.getElementById('lista-modal-recetas');
+    let diaActualModal = '';
 
-        let indexReceta = 0;
-        diasSemana.forEach((dia) => {
-          if (recetasFijadas[dia] && minutasActuales[dia]) return;
-          minutasActuales[dia] =
-            recetasPermitidasGlobal[indexReceta % recetasPermitidasGlobal.length].titulo;
-          indexReceta++;
-        });
-
-        guardarSemana();
-
-        if (recetasPermitidasGlobal.length < 7) {
-          mensajeFaltan.style.display = 'block';
-          mensajeFaltan.innerHTML = `⚠️ <strong>Tus restricciones son muy estrictas.</strong> Solo hay ${recetasPermitidasGlobal.length} recetas seguras. Algunos días se repetirán.`;
-        } else {
-          mensajeFaltan.style.display = 'none';
-        }
-        renderizarSemana();
-      });
-
-      function guardarSemana() {
-        safeSet('planificador_semana', JSON.stringify(minutasActuales));
-        safeSet('planificador_fijadas', JSON.stringify(recetasFijadas));
-      }
-
-      function renderizarSemana() {
-        contenedorMinutas.innerHTML = '';
-
-        diasSemana.forEach((dia, index) => {
-          const recetaTitulo = minutasActuales[dia];
-          const recetaObj = RECETAS ? RECETAS.find((r) => r.titulo === recetaTitulo) : null;
-
-          const slug = recetaObj ? recetaObj.slug || slugify(recetaObj.titulo) : '';
-
-          const cat = recetaObj ? recetaObj.categoria : 'principales';
-          const icono = ICONOS_CAT[cat] || '🍽️';
-
-          const esPasado = index < indexHoy;
-          const estaFijada = !!recetasFijadas[dia];
-
-          const card = document.createElement('div');
-          card.className = `minuta-card ${esPasado ? 'dia-pasado' : ''} ${estaFijada ? 'fijada' : ''}`;
-
-          if (!recetaTitulo) {
-            card.innerHTML = `
-              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 0.8rem;"><h3 class="minuta-dia" style="margin:0;">${dia} ${esPasado ? '(Pasado)' : ''}</h3></div>
-              <div class="minuta-receta-nombre" style="color: var(--suave); font-style: italic; font-size: 1rem;">Día libre (Sin receta)</div>
-              <div class="minuta-acciones">
-                <button type="button" class="btn-minuta btn-cambiar" data-dia="${dia}">🔄 Elegir</button>
-                <button type="button" class="btn-minuta btn-azar" data-dia="${dia}">🎲 Azar</button>
-              </div>
-            `;
-          } else {
-            // FASE 3 (auditoría): URL limpia /recetas/{slug}/
-            card.innerHTML = `
-              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 0.8rem;">
-                <h3 class="minuta-dia" style="margin:0;">${dia} ${esPasado ? '(Pasado)' : ''}</h3>
-                <div style="display:flex; align-items:center; gap: 0.4rem;">
-                  <button type="button" class="btn-fijar ${estaFijada ? 'fijado' : ''}" data-dia="${dia}" title="${estaFijada ? 'Desfijar receta' : 'Fijar para no cambiarla'}">${estaFijada ? '🔒' : '🔓'}</button>
-                  <span title="Categoría: ${cat}">${icono}</span>
-                  <button type="button" class="btn-eliminar-dia" data-dia="${dia}" title="Dejar día libre" aria-label="Eliminar receta">✕</button>
-                </div>
-              </div>
-              <div class="minuta-receta-nombre">${recetaTitulo}</div>
-              <div class="minuta-acciones">
-                <button type="button" class="btn-minuta btn-cambiar" data-dia="${dia}">🔄 Elegir a dedo</button>
-                <button type="button" class="btn-minuta btn-azar" data-dia="${dia}">🎲 Al azar</button>
-              </div>
-              ${slug ? `<div style="margin-top: 1rem; text-align: center;"><a href="/recetas/${slug}/" style="color: var(--rojo); font-size: 0.85rem; text-decoration: underline;">Ver receta completa →</a></div>` : ''}
-            `;
-          }
-          contenedorMinutas.appendChild(card);
-        });
-
-        document.querySelectorAll('.btn-cambiar').forEach((btn) =>
-          btn.addEventListener('click', function () {
-            abrirModal(this.getAttribute('data-dia'));
-          })
-        );
-        document.querySelectorAll('.btn-azar').forEach((btn) =>
-          btn.addEventListener('click', function () {
-            const dia = this.getAttribute('data-dia');
-            if (recetasPermitidasGlobal.length === 0) return;
-            minutasActuales[dia] =
-              recetasPermitidasGlobal[
-                Math.floor(Math.random() * recetasPermitidasGlobal.length)
-              ].titulo;
-            guardarSemana();
-            renderizarSemana();
-          })
-        );
-        document.querySelectorAll('.btn-eliminar-dia').forEach((btn) =>
-          btn.addEventListener('click', function () {
-            const dia = this.getAttribute('data-dia');
-            minutasActuales[dia] = '';
-            recetasFijadas[dia] = false;
-            guardarSemana();
-            renderizarSemana();
-          })
-        );
-
-        document.querySelectorAll('.btn-fijar').forEach((btn) =>
-          btn.addEventListener('click', function () {
-            const dia = this.getAttribute('data-dia');
-            recetasFijadas[dia] = !recetasFijadas[dia];
-            guardarSemana();
-            renderizarSemana();
-          })
-        );
-
-        panelSemana.hidden = false;
-      }
-
-      function abrirModal(dia) {
-        diaActualModal = dia;
-        document.getElementById('modal-titulo-dia').textContent = `Elegir receta para el ${dia}`;
-        buscadorModal.value = '';
-        const restriccionesActuales = Array.from(
+    /* ---------- Restricciones guardadas ---------- */
+    document.querySelectorAll('.check-restriccion').forEach((cb) => {
+      if (restriccionesGuardadas.includes(cb.value)) cb.checked = true;
+      cb.addEventListener('change', function () {
+        restriccionesGuardadas = Array.from(
           document.querySelectorAll('.check-restriccion:checked')
         ).map((c) => c.value);
-        recetasPermitidasGlobal = obtenerRecetasSeguras(restriccionesActuales);
-        renderizarListaModal('');
-        modal.showModal();
+        safeSet('planificador_restricciones', JSON.stringify(restriccionesGuardadas));
+      });
+    });
+
+    /* ---------- Semana ---------- */
+    function guardarSemana() {
+      safeSet('planificador_semana', JSON.stringify(minutasActuales));
+      safeSet('planificador_fijadas', JSON.stringify(recetasFijadas));
+    }
+
+    function renderizarSemana() {
+      contenedorMinutas.innerHTML = '';
+
+      diasSemana.forEach((dia, index) => {
+        const recetaSlug = minutasActuales[dia];
+        const recetaObj = recetaSlug ? RECETAS.find((r) => r.slug === recetaSlug) : null;
+
+        const cat = recetaObj ? recetaObj.categoria : 'principales';
+        const icono = ICONOS_CAT[cat] || '🍽️';
+        const tituloSeguro = recetaObj ? escaparHtml(recetaObj.titulo) : '';
+        const slugSeguro = recetaObj ? escaparHtml(recetaObj.slug) : '';
+
+        const esPasado = index < indexHoy;
+        const estaFijada = !!recetasFijadas[dia];
+
+        const card = document.createElement('div');
+        card.className = `minuta-card ${esPasado ? 'dia-pasado' : ''} ${estaFijada ? 'fijada' : ''}`;
+
+        if (!recetaObj) {
+          card.innerHTML = `
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 0.8rem;"><h3 class="minuta-dia" style="margin:0;">${dia} ${esPasado ? '(Pasado)' : ''}</h3></div>
+            <div class="minuta-receta-nombre" style="color: var(--suave); font-style: italic; font-size: 1rem;">Día libre (Sin receta)</div>
+            <div class="minuta-acciones">
+              <button type="button" class="btn-minuta btn-cambiar" data-dia="${dia}">🔄 Elegir</button>
+              <button type="button" class="btn-minuta btn-azar" data-dia="${dia}">🎲 Azar</button>
+            </div>
+          `;
+        } else {
+          card.innerHTML = `
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 0.8rem;">
+              <h3 class="minuta-dia" style="margin:0;">${dia} ${esPasado ? '(Pasado)' : ''}</h3>
+              <div style="display:flex; align-items:center; gap: 0.4rem;">
+                <button type="button" class="btn-fijar ${estaFijada ? 'fijado' : ''}" data-dia="${dia}" title="${estaFijada ? 'Desfijar receta' : 'Fijar para no cambiarla'}">${estaFijada ? '🔒' : '🔓'}</button>
+                <span title="Categoría: ${cat}">${icono}</span>
+                <button type="button" class="btn-eliminar-dia" data-dia="${dia}" title="Dejar día libre" aria-label="Eliminar receta">✕</button>
+              </div>
+            </div>
+            <div class="minuta-receta-nombre">${tituloSeguro}</div>
+            <div class="minuta-acciones">
+              <button type="button" class="btn-minuta btn-cambiar" data-dia="${dia}">🔄 Elegir a dedo</button>
+              <button type="button" class="btn-minuta btn-azar" data-dia="${dia}">🎲 Al azar</button>
+            </div>
+            <div style="margin-top: 1rem; text-align: center;"><a href="/recetas/${slugSeguro}/" style="color: var(--rojo); font-size: 0.85rem; text-decoration: underline;">Ver receta completa →</a></div>
+          `;
+        }
+        contenedorMinutas.appendChild(card);
+      });
+
+      document.querySelectorAll('.btn-cambiar').forEach((btn) =>
+        btn.addEventListener('click', function () {
+          abrirModal(this.getAttribute('data-dia'));
+        })
+      );
+      document.querySelectorAll('.btn-azar').forEach((btn) =>
+        btn.addEventListener('click', function () {
+          const dia = this.getAttribute('data-dia');
+          if (recetasPermitidasGlobal.length === 0) return;
+          
+          // Fisher-Yates para elegir al azar sin sesgo
+          const arr = [...recetasPermitidasGlobal];
+          for (let i = arr.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [arr[i], arr[j]] = [arr[j], arr[i]];
+          }
+          minutasActuales[dia] = arr[0].slug;
+          guardarSemana();
+          renderizarSemana();
+        })
+      );
+      document.querySelectorAll('.btn-eliminar-dia').forEach((btn) =>
+        btn.addEventListener('click', function () {
+          const dia = this.getAttribute('data-dia');
+          delete minutasActuales[dia];
+          recetasFijadas[dia] = false;
+          guardarSemana();
+          renderizarSemana();
+        })
+      );
+
+      document.querySelectorAll('.btn-fijar').forEach((btn) =>
+        btn.addEventListener('click', function () {
+          const dia = this.getAttribute('data-dia');
+          recetasFijadas[dia] = !recetasFijadas[dia];
+          guardarSemana();
+          renderizarSemana();
+        })
+      );
+
+      panelSemana.hidden = false;
+    }
+
+    function abrirModal(dia) {
+      diaActualModal = dia;
+      document.getElementById('modal-titulo-dia').textContent = `Elegir receta para el ${dia}`;
+      buscadorModal.value = '';
+      const restriccionesActuales = Array.from(
+        document.querySelectorAll('.check-restriccion:checked')
+      ).map((c) => c.value);
+      recetasPermitidasGlobal = obtenerRecetasSeguras(RECETAS, restriccionesActuales);
+      renderizarListaModal('');
+      modal.showModal();
+    }
+
+    function renderizarListaModal(filtro) {
+      const filtroNorm = filtro.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+      const filtradas = recetasPermitidasGlobal.filter((r) =>
+        r.titulo.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').includes(filtroNorm)
+      );
+      if (filtradas.length === 0) {
+        listaModalRecetas.innerHTML = '<li style="padding: 1rem; text-align: center; color: var(--suave);">No se encontraron recetas seguras.</li>';
+        return;
       }
 
-      function renderizarListaModal(filtro) {
-        const filtroNorm = filtro
-          .toLowerCase()
-          .normalize('NFD')
-          .replace(/[\u0300-\u036f]/g, '');
-        const filtradas = recetasPermitidasGlobal.filter((r) =>
-          r.titulo
-            .toLowerCase()
-            .normalize('NFD')
-            .replace(/[\u0300-\u036f]/g, '')
-            .includes(filtroNorm)
-        );
-        if (filtradas.length === 0) {
-          listaModalRecetas.innerHTML =
-            '<li style="padding: 1rem; text-align: center; color: var(--suave);">No se encontraron recetas seguras.</li>';
-          return;
-        }
+      listaModalRecetas.innerHTML = filtradas
+        .map(
+          (r) => `
+        <li data-slug="${escaparHtml(r.slug)}"><span>${ICONOS_CAT[r.categoria] || '🍽️'} ${escaparHtml(r.titulo)}</span><span style="color: var(--rojo); font-size: 0.8rem; font-weight: bold;">Elegir</span></li>
+      `
+        )
+        .join('');
 
-        listaModalRecetas.innerHTML = filtradas
-          .map(
-            (r) => `
-          <li data-titulo="${r.titulo}"><span>${ICONOS_CAT[r.categoria] || '🍽️'} ${r.titulo}</span><span style="color: var(--rojo); font-size: 0.8rem; font-weight: bold;">Elegir</span></li>
-        `
-          )
-          .join('');
+      listaModalRecetas.querySelectorAll('li').forEach((li) =>
+        li.addEventListener('click', function () {
+          minutasActuales[diaActualModal] = this.getAttribute('data-slug');
+          guardarSemana();
+          modal.close();
+          renderizarSemana();
+        })
+      );
+    }
 
-        listaModalRecetas.querySelectorAll('li').forEach((li) =>
-          li.addEventListener('click', function () {
-            minutasActuales[diaActualModal] = this.getAttribute('data-titulo');
-            guardarSemana();
-            modal.close();
-            renderizarSemana();
-          })
-        );
+    buscadorModal.addEventListener('input', function () {
+      renderizarListaModal(this.value);
+    });
+    btnCerrarModal.addEventListener('click', function () {
+      modal.close();
+    });
+
+    /* ---------- Botones principales ---------- */
+    btnGenerar.addEventListener('click', function () {
+      if (!RECETAS || RECETAS.length === 0)
+        return mostrarToast('Error: No se pudieron cargar las recetas.', 'error');
+
+      recetasPermitidasGlobal = obtenerRecetasSeguras(RECETAS, restriccionesGuardadas);
+      if (recetasPermitidasGlobal.length === 0)
+        return mostrarToast('Tus restricciones son tan estrictas que no encontramos NINGUNA receta principal segura.', 'error');
+
+      // Fisher-Yates shuffle
+      const pool = [...recetasPermitidasGlobal];
+      for (let i = pool.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [pool[i], pool[j]] = [pool[j], pool[i]];
       }
 
-      buscadorModal.addEventListener('input', function () {
-        renderizarListaModal(this.value);
-      });
-      btnCerrarModal.addEventListener('click', function () {
-        modal.close();
-      });
+      let indexReceta = 0;
+      let catAnterior = null;
 
-      btnLimpiar.addEventListener('click', function () {
-        if (confirm('¿Seguro que quieres borrar tu semana y quitar todos los candados?')) {
-          panelSemana.hidden = true;
-          minutasActuales = {};
-          recetasFijadas = {};
-          safeRemove('planificador_semana');
-          safeRemove('planificador_fijadas');
+      diasSemana.forEach((dia, index) => {
+        // No regenerar días pasados de la semana actual
+        if (index < indexHoy) return;
+        // Respetar candados
+        if (recetasFijadas[dia] && minutasActuales[dia]) {
+          // Actualizamos la categoría anterior por si el candado tiene otra categoría
+          const objFijo = RECETAS.find(r => r.slug === minutasActuales[dia]);
+          if (objFijo) catAnterior = objFijo.categoria;
+          return; 
         }
-      });
 
-      btnAgregarLista.addEventListener('click', function () {
-        if (typeof window.agregarItemLista !== 'function')
-          return alert('El sistema de lista de compras no está disponible.');
-        let itemsAgregados = 0;
-        for (const dia in minutasActuales) {
-          if (!minutasActuales[dia]) continue;
-          const recetaOriginal = RECETAS.find((r) => r.titulo === minutasActuales[dia]);
-          if (recetaOriginal && recetaOriginal.ingredientes) {
-            recetaOriginal.ingredientes.forEach((ing) => {
-              window.agregarItemLista({ id: ing, nombre: ing, cantidad: 0, unidad: '' });
-              itemsAgregados++;
-            });
+        let elegida = null;
+        
+        // Intentar buscar una receta que no repita la categoría del día anterior
+        for (let intento = 0; intento < pool.length; intento++) {
+          const candidata = pool[(indexReceta + intento) % pool.length];
+          if (candidata.categoria !== catAnterior || pool.every(p => p.categoria === catAnterior)) {
+            elegida = candidata;
+            indexReceta = indexReceta + intento + 1; // Avanzar el índice
+            break;
           }
         }
-        if (itemsAgregados > 0) {
-          alert('¡Ingredientes añadidos a tu lista de compras! Abriendo lista...');
-          if (window.ListaCompras && window.ListaCompras.abrir) window.ListaCompras.abrir();
+
+        // Fallback si no se encontró (no debería pasar por la validación del every)
+        if (!elegida) {
+          elegida = pool[indexReceta % pool.length];
+          indexReceta++;
         }
+
+        minutasActuales[dia] = elegida.slug;
+        catAnterior = elegida.categoria;
       });
 
-      function slugify(text) {
-        return String(text)
-          .toLowerCase()
-          .normalize('NFD')
-          .replace(/[\u0300-\u036f]/g, '')
-          .replace(/[^a-z0-9]+/g, '-')
-          .replace(/^-+|-+$/g, '');
+      guardarSemana();
+
+      if (recetasPermitidasGlobal.length < 7) {
+        mensajeFaltan.style.display = 'block';
+        mensajeFaltan.innerHTML = `⚠️ <strong>Tus restricciones son muy estrictas.</strong> Solo hay ${recetasPermitidasGlobal.length} recetas seguras. Algunos días se repetirán.`;
+      } else {
+        mensajeFaltan.style.display = 'none';
+      }
+      renderizarSemana();
+      mostrarToast('¡Semana generada con éxito!', 'success');
+    });
+
+    btnLimpiar.addEventListener('click', function () {
+      if (this.dataset.confirm === 'true') {
+        panelSemana.hidden = true;
+        minutasActuales = {};
+        recetasFijadas = {};
+        safeRemove('planificador_semana');
+        safeRemove('planificador_fijadas');
+        safeSet('planificador_semana_inicio', obtenerLunesDeEstaSemana());
+        this.textContent = 'Borrar semana';
+        this.dataset.confirm = 'false';
+        mostrarToast('Semana borrada', 'info');
+      } else {
+        this.dataset.confirm = 'true';
+        this.textContent = '⚠️ ¿Seguro? Toca otra vez';
+        setTimeout(() => {
+          if (this.dataset.confirm === 'true') {
+            this.dataset.confirm = 'false';
+            this.textContent = 'Borrar semana';
+          }
+        }, 4000);
       }
     });
-  </script>
 
-  <script is:inline>
-    window.RECETAS = [];
+    btnAgregarLista.addEventListener('click', function () {
+      if (typeof window.agregarItemLista !== 'function')
+        return mostrarToast('El sistema de lista de compras no está disponible.', 'error');
+      
+      let itemsAgregados = 0;
+      for (const dia in minutasActuales) {
+        if (!minutasActuales[dia]) continue;
+        const recetaOriginal = RECETAS.find((r) => r.slug === minutasActuales[dia]);
+        if (recetaOriginal && recetaOriginal.ingredientes) {
+          recetaOriginal.ingredientes.forEach((ing) => {
+            window.agregarItemLista({ id: ing, nombre: ing, cantidad: 0, unidad: '' });
+            itemsAgregados++;
+          });
+        }
+      }
+      if (itemsAgregados > 0) {
+        mostrarToast('¡Ingredientes añadidos a tu lista de compras!', 'success');
+        if (window.ListaCompras && window.ListaCompras.abrir) window.ListaCompras.abrir();
+      }
+    });
+
+    /* ---------- Carga inicial ---------- */
     fetch('/api/recetas.json')
       .then((res) => res.json())
       .then((data) => {
+        RECETAS = data;
         window.RECETAS = data;
-        document.dispatchEvent(new Event('recetas-listas'));
+        
+        if (Object.keys(minutasActuales).length > 0) {
+          recetasPermitidasGlobal = obtenerRecetasSeguras(RECETAS, restriccionesGuardadas);
+          renderizarSemana();
+        }
       })
-      .catch((err) => console.error('Error cargando recetas:', err));
+      .catch((err) => {
+        console.error('Error cargando recetas:', err);
+        mostrarToast('Error al cargar las recetas', 'error');
+      });
   </script>
 </Layout>

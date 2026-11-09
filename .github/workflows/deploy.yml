@@ -36,6 +36,12 @@ jobs:
             exit 1
           fi
 
+      - name: Tests (bloqueante)
+        run: npm test
+
+      - name: Lint (bloqueante)
+        run: npm run lint
+
       - name: Build (astro build — única build del pipeline)
         run: npm run build
 

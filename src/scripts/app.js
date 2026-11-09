@@ -7,7 +7,7 @@ import { escaparHtml } from '../lib/html.js';
   'use strict';
 
   // Centralización de dominio: window.__SITE_URL lo inyecta Layout.astro en <head>.
-  const SITE_CONFIG = {
+  const _SITE_CONFIG = {
     nombre: 'Recetario Chileno',
     urlBase: (window.__SITE_URL || 'https://recetariochileno.netlify.app').replace(/\/$/, ''),
     imagenDefault: '/img/og-default.jpg',
@@ -148,7 +148,7 @@ import { escaparHtml } from '../lib/html.js';
   }
 
   /* ---------- Constructor de tarjetas ---------- */
-  function crearTarjeta(receta, indice) {
+  function crearTarjeta(receta, _indice) {
     const slug = receta.slug || slugify(receta.titulo);
     const id = 'receta-' + slug;
     const tituloSeguro = escaparHtml(receta.titulo);
@@ -460,7 +460,7 @@ import { escaparHtml } from '../lib/html.js';
       let scoreBusqueda = 0;
 
       if (normBusqueda) {
-        let coincideEnTexto = false;
+        let coincideEnTexto;
         if (normBusqueda.length >= 3) {
           const re = new RegExp('\\b' + normBusqueda.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i');
           coincideEnTexto = re.test(searchText);

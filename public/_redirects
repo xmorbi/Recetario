@@ -1,0 +1,16 @@
+# Redirects del Recetario Chileno
+# Formato Cloudflare: <source> <destination> <status>
+# Fuente: netlify.toml migrado a Cloudflare Workers.
+
+# .html → ruta limpia (sin trailing slash en el source para capturar la URL real)
+/privacidad.html      /privacidad/      301
+/sobre-mi.html        /sobre-mi/        301
+/contacto.html        /contacto/        301
+/gracias.html         /gracias/         301
+
+# Slugs con ñ o espacios (forma URL-encoded; Cloudflare decodifica antes de matchear)
+/recetas/arroz-a-la-espa%C3%B1ola/                                               /recetas/arroz-a-la-espanola/                                301
+/recetas/tortilla-de-champi%C3%B1ones/                                           /recetas/tortilla-de-champinones/                            301
+/recetas/Pavo%20navide%C3%B1o%20al%20horno%20con%20mantequilla%20de%20hierbas/   /recetas/pavo-navideno-al-horno-con-mantequilla-de-hierbas/  301
+/recetas/Pavo%20navide%C3%B1o%20relleno%20con%20ciruelas%20y%20casta%C3%B1as/    /recetas/pavo-navideno-relleno-con-ciruelas-y-castanas/      301
+/recetas/pavo-navide%C3%B1o/                                                     /recetas/pavo-navideno-relleno-con-ciruelas-y-castanas/      301

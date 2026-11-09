@@ -47,7 +47,15 @@ const pasosTexto = receta.pasos_v2.map((p) =>
   reemplazarMarcasIngredientes(p.texto, receta.ingredientes_v2)
 );
 
-const recetaJSON = JSON.stringify(receta).replace(/<\/script/g, '<\\/script');
+// 3. Serializamos para el cliente inyectando:
+//    - `pasos: string[]` (compatibilidad con modo-cocina.js)
+//    - `ingredientes: string[]` (compatibilidad con lista de compras, filtros y planificador)
+const recetaParaCliente = {
+  ...receta,
+  pasos: pasosTexto,
+  ingredientes: ingredientesTexto,
+};
+const recetaJSON = JSON.stringify(recetaParaCliente).replace(/<\/script/g, '<\\/script');
 
 const SITE = Astro.site ?? new URL('https://recetariochileno.netlify.app');
 const url = new URL(`/recetas/${slug}/`, SITE).toString();

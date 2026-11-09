@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const resultadoDiv = document.getElementById('resultado');
   const desgloseDiv = document.getElementById('desglose');
   const notaDiv = document.getElementById('nota');
-  const resultadoLbl = document.getElementById('resultado-label');
+  const _resultadoLbl = document.getElementById('resultado-label');
   const btnLista = document.getElementById('btn-lista');
   const btnCompartir = document.getElementById('btn-compartir');
   const btnReset = document.getElementById('btn-reset');

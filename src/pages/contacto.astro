@@ -38,20 +38,15 @@ import Layout from '../layouts/Layout.astro';
       responder en 2-4 días hábiles.
     </p>
 
+    <!-- ⚠️ IMPORTANTE: Se agregó id="form" y se mantiene action/method como fallback si JS falla -->
     <form
+      id="form"
       class="contacto-form"
-      name="contacto"
+      action="https://api.web3forms.com/submit"
       method="POST"
-      data-netlify="true"
-      netlify-honeypot="bot-field"
-      action="/gracias/"
     >
-      <input type="hidden" name="form-name" value="contacto" />
-      <p style="display:none">
-        <label>
-          No completar si eres humano: <input name="bot-field" />
-        </label>
-      </p>
+      <!-- Honeypot anti-bots de Web3Forms -->
+      <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
 
       <label for="nombre">Tu nombre</label>
       <input type="text" id="nombre" name="nombre" required placeholder="¿Cómo te llamas?" />
@@ -136,7 +131,48 @@ import Layout from '../layouts/Layout.astro';
     </p>
   </main>
 
-  <!-- Ofuscación del correo: se arma letra por letra para que bots no lo lean -->
+  <!-- Script de envío AJAX de Web3Forms -->
+  <script is:inline>
+    const form = document.getElementById('form');
+    if (form) {
+      const submitBtn = form.querySelector('button[type="submit"]');
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        formData.append("access_key", "961edb71-a4f3-42a4-8ad8-f88a1c279281");
+
+        const originalText = submitBtn.textContent;
+
+        submitBtn.textContent = "Enviando...";
+        submitBtn.disabled = true;
+
+        try {
+          const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+          });
+
+          const data = await response.json();
+
+          if (response.ok) {
+            alert("¡Éxito! Tu mensaje ha sido enviado.");
+            form.reset();
+          } else {
+            alert("Error: " + data.message);
+          }
+        } catch (error) {
+          alert("Algo salió mal. Por favor, intenta de nuevo.");
+        } finally {
+          submitBtn.textContent = originalText;
+          submitBtn.disabled = false;
+        }
+      });
+    }
+  </script>
+
+  <!-- Ofuscación del correo directo -->
   <script is:inline>
     (function () {
       var correoInvertido = 'lc.oiratecer@aloh';

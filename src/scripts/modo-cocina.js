@@ -1310,7 +1310,7 @@ import { escaparHtml } from '../lib/html.js';
     }
     base = limpiarBase(base);
 
-    if (/^[\d½¼¾\/.,\- ]+$/.test(base) && nounPrevio) base = (base + ' ' + nounPrevio).trim();
+    if (/^[\d½¼¾/.,\- ]+$/.test(base) && nounPrevio) base = (base + ' ' + nounPrevio).trim();
     verbos.sort(function (a, b) {
       return ORDEN_VERBOS.indexOf(a) - ORDEN_VERBOS.indexOf(b);
     });
@@ -1373,7 +1373,7 @@ import { escaparHtml } from '../lib/html.js';
             bucket: b,
           });
           nounPrevio = r.base.replace(
-            /^[\d½¼¾\/.,\- ]+(?:(?:g|kg|ml|l|cc|cdas?|cdtas?|tazas?|cucharadas?|cucharaditas?)\s+(?:de\s+)?)?/i,
+            /^[\d½¼¾/.,\- ]+(?:(?:g|kg|ml|l|cc|cdas?|cdtas?|tazas?|cucharadas?|cucharaditas?)\s+(?:de\s+)?)?/i,
             ''
           );
         } else {
@@ -1383,7 +1383,7 @@ import { escaparHtml } from '../lib/html.js';
             opcional: opcionalLinea || RE_OPCIONAL.test(pieza),
           });
           nounPrevio = pieza.replace(
-            /^[\d½¼¾\/.,\- ]+(?:(?:g|kg|ml|l|cc|cdas?|cdtas?|tazas?|cucharadas?|cucharaditas?)\s+(?:de\s+)?)?/i,
+            /^[\d½¼¾/.,\- ]+(?:(?:g|kg|ml|l|cc|cdas?|cdtas?|tazas?|cucharadas?|cucharaditas?)\s+(?:de\s+)?)?/i,
             ''
           );
         }

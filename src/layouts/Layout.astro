@@ -95,9 +95,9 @@ const herramientasActivo = ['conservacion', 'calculadora', 'conversor', 'planifi
     <!-- FASE 3 (auditoría): GTM/GA4 se cargan SOLO después de consentimiento. -->
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
+      window.gtag = function () {
+        window.dataLayer.push(arguments);
+      };
       window.__gtm_loaded = false;
       window.cargarGTM = function () {
         if (window.__gtm_loaded) return;

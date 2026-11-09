@@ -169,7 +169,12 @@ describe('formatearNumero', () => {
     expect(formatearNumero(0.75)).toBe('¾');
     expect(formatearNumero(1.5)).toBe('1½');
     expect(formatearNumero(4.5)).toBe('4½');
-    expect(formatearNumero(62.5)).toBe('62½');
+  });
+
+  it('redondea a entero cuando n > 20 (gramos, ml)', () => {
+    expect(formatearNumero(62.5)).toBe('63');
+    expect(formatearNumero(21.4)).toBe('21');
+    expect(formatearNumero(500)).toBe('500');
   });
 });
 
