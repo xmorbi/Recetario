@@ -18,12 +18,24 @@
    FASE 6H (rediseño móvil): header minimalista (Cerrar · Título+Paso · Mic · ⋯)
             y bottom sheet (action sheet) con tipografía, TTS, mise en place,
             reiniciar y atajos. En desktop el sheet es un popover.
+   FASE 11 (voz mejorada): selección de voz por ranking, normalización de
+            texto (g → gramos, °C → grados, 0.5 → medio, etc.), troceo por
+            frases, selector de velocidad y persistencia de preferencias.
    ================================================================= */
 
 import { detectarTiempos } from '../lib/tiempos.js';
 import { interpretarComando } from '../lib/voz.js';
 import { formatearIngredienteEstructurado, reemplazarMarcasIngredientes } from '../lib/escalado.js';
 import { escaparHtml } from '../lib/html.js';
+import {
+  listarVocesEspanol,
+  elegirMejorVoz,
+  cargarPreferencias,
+  guardarPreferencias,
+  hablarConNavegador,
+  detenerNavegador,
+  RATE,
+} from '../lib/voz-navegador.js';
 
 (function () {
   'use strict';
@@ -75,6 +87,11 @@ import { escaparHtml } from '../lib/html.js';
   // FASE 6: tamaño de letra del paso
   var NIVELES_FS = [1, 1.25, 1.5];
   var fsNivel = 0;
+
+  // FASE 11: voz mejorada (ranking + normalización + frases)
+  var vocesDisponibles = [];
+  var vozSeleccionada = null;
+  var vozRate = RATE.defecto;
 
   // ---- Constantes ----
   var STORAGE_PROGRESO = 'mc_progreso_';
@@ -244,12 +261,50 @@ import { escaparHtml } from '../lib/html.js';
     anunciar('Tamaño de letra: ' + Math.round(NIVELES_FS[fsNivel] * 100) + '%');
   }
 
+  // FASE 11: pinta el select de voces y el slider de velocidad
+  function actualizarSelectoresVoz() {
+    if (!overlayEl) return;
+    var sel = overlayEl.querySelector('.mc-voz-select');
+    var rateInp = overlayEl.querySelector('.mc-rate-input');
+    var rateVal = overlayEl.querySelector('.mc-rate-valor');
+    if (sel) {
+      if (!vocesDisponibles.length) {
+        sel.innerHTML = '<option value="">Cargando voces…</option>';
+      } else {
+        sel.innerHTML = vocesDisponibles
+          .map(function (v) {
+            var selected =
+              vozSeleccionada && v.voiceURI === vozSeleccionada.voiceURI ? ' selected' : '';
+            var red = v.localService === false ? ' · red' : '';
+            return (
+              '<option value="' +
+              escaparHtml(v.voiceURI) +
+              '"' +
+              selected +
+              '>' +
+              escaparHtml(v.name + ' — ' + v.lang + red) +
+              '</option>'
+            );
+          })
+          .join('');
+      }
+    }
+    if (rateInp) rateInp.value = String(vozRate);
+    if (rateVal) rateVal.textContent = vozRate.toFixed(2) + 'x';
+  }
+
   function initTTS() {
     if (!('speechSynthesis' in window)) {
       var ttsBtn = overlayEl.querySelector('.mc-tts-toggle');
       if (ttsBtn) ttsBtn.style.display = 'none';
     } else {
-      window.speechSynthesis.getVoices();
+      var pref = cargarPreferencias();
+      vozRate = pref.rate || RATE.defecto;
+      listarVocesEspanol().then(function (voces) {
+        vocesDisponibles = voces;
+        vozSeleccionada = elegirMejorVoz(voces, pref.vozURI);
+        actualizarSelectoresVoz();
+      });
     }
 
     var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -406,6 +461,7 @@ import { escaparHtml } from '../lib/html.js';
     leerTexto(msgOk, true);
   }
 
+  // FASE 11: usa el motor de voz-navegador.js (normalización + frases + ranking)
   function leerTexto(texto, forzar) {
     if (!('speechSynthesis' in window)) return;
 
@@ -415,33 +471,20 @@ import { escaparHtml } from '../lib/html.js';
       } catch (e) {}
     }
 
-    window.speechSynthesis.cancel();
+    detenerNavegador();
     if (!ttsActivo && !forzar) return;
 
-    var msg = new SpeechSynthesisUtterance(texto);
-    msg.lang = 'es-CL';
-    msg.rate = 0.95;
-    msg.pitch = 1;
-
-    var voces = window.speechSynthesis.getVoices();
-    var vozEs =
-      voces.find(function (v) {
-        return v.lang === 'es-CL';
-      }) ||
-      voces.find(function (v) {
-        return v.lang.startsWith('es');
-      });
-    if (vozEs) msg.voice = vozEs;
-
-    msg.onend = function () {
-      if (recognition && microActivo) {
-        try {
-          recognition.start();
-        } catch (e) {}
-      }
-    };
-
-    window.speechSynthesis.speak(msg);
+    hablarConNavegador(texto, {
+      voz: vozSeleccionada,
+      rate: vozRate,
+      onEnd: function () {
+        if (recognition && microActivo) {
+          try {
+            recognition.start();
+          } catch (e) {}
+        }
+      },
+    });
   }
 
   function cargarAjustes() {
@@ -1757,7 +1800,7 @@ import { escaparHtml } from '../lib/html.js';
 
   function entrarMise() {
     if (!overlayEl || !prep || prep.tareas.length === 0) return;
-    if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+    detenerNavegador();
     limpiarAutoTimer();
     if (miseActual < 0 || miseHechas[miseActual]) miseActual = buscarTareaPendiente(0);
     enMise = true;
@@ -1891,6 +1934,19 @@ import { escaparHtml } from '../lib/html.js';
       '</div>' +
       '</section>' +
       '<section class="mc-sheet-seccion">' +
+      '<h3 class="mc-sheet-label">Voz</h3>' +
+      '<label class="mc-sheet-field"><span>Voz</span><select class="mc-voz-select" aria-label="Elegir voz"></select></label>' +
+      '<label class="mc-sheet-field"><span>Velocidad</span><input type="range" class="mc-rate-input" min="' +
+      RATE.min +
+      '" max="' +
+      RATE.max +
+      '" step="0.05" value="' +
+      RATE.defecto +
+      '" aria-label="Velocidad de la voz"><span class="mc-rate-valor">' +
+      RATE.defecto.toFixed(2) +
+      'x</span></label>' +
+      '</section>' +
+      '<section class="mc-sheet-seccion">' +
       '<h3 class="mc-sheet-label">Acciones</h3>' +
       '<button type="button" class="mc-sheet-item mc-tts-toggle" aria-pressed="false" style="display:none;">' +
       '<span class="mc-sheet-item-icon" aria-hidden="true">🔊</span>' +
@@ -1992,6 +2048,38 @@ import { escaparHtml } from '../lib/html.js';
       cambiarFs(1);
     });
 
+    // FASE 11 — selector de voz y slider de velocidad
+    var vozSel = overlayEl.querySelector('.mc-voz-select');
+    if (vozSel) {
+      vozSel.addEventListener('change', function () {
+        var uri = vozSel.value;
+        var encontrada = null;
+        for (var i = 0; i < vocesDisponibles.length; i++) {
+          if (vocesDisponibles[i].voiceURI === uri) {
+            encontrada = vocesDisponibles[i];
+            break;
+          }
+        }
+        vozSeleccionada = encontrada;
+        guardarPreferencias(uri, vozRate);
+        anunciar('Voz: ' + (encontrada ? encontrada.name : 'predeterminada'));
+        if (ttsActivo && !enMise) {
+          var activo = overlayEl.querySelector('.mc-paso.activo .mc-paso-texto');
+          if (activo) leerTexto(activo.textContent, true);
+        }
+      });
+    }
+
+    var rateInp = overlayEl.querySelector('.mc-rate-input');
+    if (rateInp) {
+      rateInp.addEventListener('input', function () {
+        vozRate = parseFloat(rateInp.value) || RATE.defecto;
+        var rateVal = overlayEl.querySelector('.mc-rate-valor');
+        if (rateVal) rateVal.textContent = vozRate.toFixed(2) + 'x';
+        guardarPreferencias(vozSeleccionada ? vozSeleccionada.voiceURI : null, vozRate);
+      });
+    }
+
     overlayEl.querySelector('.mc-mise-toggle').addEventListener('click', function () {
       if (enMise) salirMise();
       else entrarMise();
@@ -2043,7 +2131,7 @@ import { escaparHtml } from '../lib/html.js';
       toggleTTS.checked = ttsActivo;
       anunciar(ttsActivo ? 'Lectura en voz alta activada' : 'Lectura en voz alta desactivada');
       if (!ttsActivo) {
-        if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+        detenerNavegador();
       } else if (!enMise) {
         var currentStepText = overlayEl.querySelector('.mc-paso.activo .mc-paso-texto');
         if (currentStepText) leerTexto(currentStepText.textContent);
@@ -2305,6 +2393,7 @@ import { escaparHtml } from '../lib/html.js';
 
     initAudio();
     initTTS();
+    actualizarSelectoresVoz();
 
     var ov = crearOverlay();
     cargarFs();
@@ -2560,7 +2649,7 @@ import { escaparHtml } from '../lib/html.js';
 
   function cerrar() {
     if (!overlayEl) return;
-    if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+    detenerNavegador();
     if (recognition && microActivo) {
       try {
         recognition.stop();
@@ -2770,7 +2859,7 @@ import { escaparHtml } from '../lib/html.js';
 
   function entrarCompletado() {
     if (!overlayEl) return;
-    if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+    detenerNavegador();
     limpiarAutoTimer();
     overlayEl.classList.add('completado');
     anunciar('¡Completaste todos los pasos de la receta!');
