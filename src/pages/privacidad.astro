@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-// Centralización de dominio: el texto "Vigente para X" se genera desde Astro.site.
 const SITE_HOST = Astro.site?.hostname || 'recetariochileno.netlify.app';
 ---
 
@@ -22,7 +21,7 @@ const SITE_HOST = Astro.site?.hostname || 'recetariochileno.netlify.app';
 
   <main class="legal-page legal-page--lectura">
     <div class="legal-meta">
-      <span>Última actualización: octubre de 2026</span>
+      <span>Última actualización: noviembre de 2026</span>
       <span>Vigente para {SITE_HOST}</span>
     </div>
 
@@ -54,7 +53,7 @@ const SITE_HOST = Astro.site?.hostname || 'recetariochileno.netlify.app';
     <ul>
       <li>
         <strong>Formulario de contacto:</strong> si nos escribes, recopilamos tu nombre y correo
-        electrónico para poder responderte. No usamos esos datos para nada más.
+        electrónico para poder responderte. Este formulario es procesado por el servicio Web3Forms. No usamos esos datos para nada más.
       </li>
       <li>
         <strong>Comentarios:</strong> actualmente el sitio no permite comentarios públicos. Si en el
@@ -67,7 +66,7 @@ const SITE_HOST = Astro.site?.hostname || 'recetariochileno.netlify.app';
     <ul>
       <li>
         <strong>Datos de navegación:</strong> cuando visitas el sitio, los servidores de nuestro
-        proveedor de hosting (Netlify) registran datos técnicos como dirección IP, tipo de
+        proveedor de hosting (Cloudflare) registran datos técnicos como dirección IP, tipo de
         navegador, sistema operativo, páginas visitadas y fecha/hora de la visita. Estos registros
         son estándar en cualquier sitio web y se usan para seguridad y diagnóstico.
       </li>
@@ -170,9 +169,15 @@ const SITE_HOST = Astro.site?.hostname || 'recetariochileno.netlify.app';
 
     <ul>
       <li>
-        <strong>Netlify</strong> (hosting):{' '}
-        <a href="https://www.netlify.com/privacy/" target="_blank" rel="noopener">
-          netlify.com/privacy
+        <strong>Cloudflare</strong> (hosting y CDN):{' '}
+        <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">
+          cloudflare.com/privacypolicy
+        </a>
+      </li>
+      <li>
+        <strong>Web3Forms</strong> (procesamiento de formulario de contacto):{' '}
+        <a href="https://web3forms.com/privacy" target="_blank" rel="noopener">
+          web3forms.com/privacy
         </a>
       </li>
       <li>

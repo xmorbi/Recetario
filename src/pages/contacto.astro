@@ -156,11 +156,12 @@ import Layout from '../layouts/Layout.astro';
 
           const data = await response.json();
 
-          if (response.ok) {
+          // ✅ FIX: Web3Forms devuelve success: true en el JSON
+          if (data.success) {
             alert("¡Éxito! Tu mensaje ha sido enviado.");
             form.reset();
           } else {
-            alert("Error: " + data.message);
+            alert("Error: " + (data.message || "No se pudo enviar el mensaje."));
           }
         } catch (error) {
           alert("Algo salió mal. Por favor, intenta de nuevo.");

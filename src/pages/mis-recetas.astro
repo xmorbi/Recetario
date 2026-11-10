@@ -17,20 +17,18 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </header>
 
-  <main>
+  <div>
     <div id="contenedorFavoritos" class="recetas-grid-favoritos" style="min-height: 50vh;"></div>
-  </main>
+  </div>
 
-  <!-- FASE 1 (auditoría): lista-compras.js se carga SOLO desde Layout.astro (aquí estaba duplicado). -->
   <script>
     import '../scripts/app.js';
     import '../scripts/favoritos.js';
   </script>
 
-  <!-- FETCH AL FINAL -->
   <script is:inline>
     window.RECETAS = [];
-    fetch('/api/recetas.json')
+    fetch('/api/recetas.json?v=2')
       .then((res) => res.json())
       .then((data) => {
         window.RECETAS = data;

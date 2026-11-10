@@ -2,9 +2,9 @@
 
 Sitio estático de recetas chilenas construido con Astro, enfocado en rendimiento, accesibilidad y buenas prácticas.
 
-- **Producción:** https://recetario.morbidan.workers.dev (o tu dominio actual)
+- **Producción:** https://recetario.morbidan.workers.dev
 - **Stack:** Astro (static) + Content Collections con Zod + TypeScript estricto + Vite
-- **Hosting:** Cloudflare Workers / Netlify (según configuración de despliegue)
+- **Hosting:** Cloudflare Workers
 - **Páginas:** ~312 rutas generadas estáticamente
 
 ## Requisitos
@@ -20,4 +20,3 @@ cd Recetario
 npm ci
 cp .env.example .env
 # Edita .env y define PUBLIC_SITE_URL con la URL de tu entorno local o producción
-```

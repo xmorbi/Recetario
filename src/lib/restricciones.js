@@ -1,25 +1,9 @@
 /* =================================================================
    RESTRICCIONES.JS — Filtro puro de recetas por restricciones
-   =================================================================
-   Reemplaza la lógica que vivía inline en src/pages/planificador/index.astro.
-
-   Estrategia anti-tildes:
-   - Se normaliza el texto (NFD + strip diacritics + lowercase).
-   - Los diccionarios se escriben en ASCII (ej. `mani` en vez de `man[ií]`).
-   - Así `\b` funciona correctamente y "maní" nunca se escapa.
-
-   Ampliaciones respecto al diccionario original del planificador:
-   - Gluten: trigo, mote, avena, cebada, centeno, malta, espelta, cuscús.
-   - Lácteos: nata, ricota, requesón, mozzarella.
-   - Mariscos: mejillón, langostino, cangrejo, trucha, sardina, ostras, erizo.
-   - Frutos secos: maní (ya cubierto con `\b` normalizado), nuez moscada,
-     castaña, piñón, marañón, pecana.
    ================================================================= */
-
 export const CATEGORIAS_VALIDAS = ['principales', 'sopas', 'ensaladas', 'mar'];
 export const TAGS_EXCLUIDOS = ['salsa', 'picoteo', 'acompañamiento', 'postre', 'merienda'];
 
-// Set normalizado para la comparación de tags excluidos
 const TAGS_EXCLUIDOS_SET = new Set(TAGS_EXCLUIDOS.map(normalizar));
 
 export function normalizar(texto) {
@@ -38,7 +22,7 @@ const LACTEOS =
   /\b(leche(?! de (coco|almendra|soya|soja|avena|arroz))|queso|quesos|mantequilla|crema(?! de (coco|almendra|verduras))|yogur|yogurt|parmesano|manjar|manteca|suero|caseina|nata|natas|ricota|requeson|mozzarella|provolone|gouda|cheddar|gruyere|brie|camembert|mascarpone)\b/;
 
 const GLUTEN =
-  /\b(harina(?! de (almendra|coco|arroz))|pan|panes|marraqueta|marraquetas|hallulla|hallullas|fideo|fideos|tallarin|tallarines|pasta|pastas|galleta|galletas|masa|masas|semola|polvos de hornear|levadura|cerveza|trigo|mote|avena|cebada|centeno|malta|espelta|cuscus|couscous|bulgur)\b/;
+  /\b(harina(?! de (almendra|coco|arroz))|pan|panes|panqueque|panqueques|marraqueta|marraquetas|hallulla|hallullas|fideo|fideos|tallarin|tallarines|pasta|pastas|galleta|galletas|masa|masas|semola|polvos de hornear|levadura|cerveza|trigo|mote|avena|cebada|centeno|malta|espelta|cuscus|couscous|bulgur)\b/;
 
 const FRUTOS_SECOS =
   /\b(nuez|nueces|nuez moscada|almendra|almendras|mani|manies|avellana|avellanas|pistacho|pistachos|castana|castanas|pinon|pinones|maranon|maranones|pecana|pecanas)\b/;
@@ -46,13 +30,13 @@ const FRUTOS_SECOS =
 const MARISCOS =
   /\b(pescado|pescados|camaron|camarones|chorito|choritos|almeja|almejas|macha|machas|loco|locos|jaiba|jaibas|centolla|centollas|congrio|congrios|corvina|corvinas|merluza|merluzas|reineta|reinetas|salmon|atun|jurel|jureles|pulpo|pulpos|calamar|calamares|picoroco|picorocos|cholga|cholgas|ostion|ostiones|marisco|mariscos|mejillon|mejillones|langostino|langostinos|cangrejo|cangrejos|trucha|truchas|sardina|sardinas|ostra|ostras|erizo|erizos)\b/;
 
-const HUEVO = /\b(huevo|huevos|clara|claras|yema|yemas)\b/;
+const HUEVO = /\b(huevo|huevos|mayonesa|clara|claras|yema|yemas)\b/;
 
 const CARNE =
   /\b(carne(?! de (soya|soja|trigo|vegetal|girasol))|carnes(?! de (soya|soja|trigo|vegetal|girasol))|pollo|pollos|cerdo|cerdos|vacuno|vacunos|pavo|pavos|cordero|corderos|bistec|bistecs|churrasco|churrascos|salchicha|salchichas|vienesa|vienesas|chorizo|chorizos|jamon|jamones|tocino|tocinos|prieta|prietas|longaniza|longanizas|costillar|costillares|pulpa|pulpas|posta|postas|charqui|charquis|hueso|huesos|menudencia|menudencias|guatita|guatitas|chunchule|chunchules|pernil|perniles|malaya|malayas)\b/;
 
 const ANIMALES_VEGANO =
-  /\b(carne(?! de (soya|soja|trigo|vegetal|girasol))|carnes(?! de (soya|soja|trigo|vegetal|girasol))|pollo|pollos|cerdo|cerdos|vacuno|vacunos|pavo|pavos|cordero|corderos|bistec|bistecs|churrasco|churrascos|salchicha|salchichas|vienesa|vienesas|chorizo|chorizos|jamon|jamones|tocino|tocinos|prieta|prietas|longaniza|longanizas|costillar|costillares|pulpa|pulpas|posta|postas|charqui|charquis|hueso|huesos|menudencia|menudencias|guatita|guatitas|chunchule|chunchules|pernil|perniles|malaya|malayas|pescado|pescados|camaron|camarones|chorito|choritos|almeja|almejas|macha|machas|loco|locos|jaiba|jaibas|centolla|centollas|congrio|congrios|corvina|corvinas|merluza|merluzas|reineta|reinetas|salmon|atun|jurel|jureles|pulpo|pulpos|calamar|calamares|picoroco|picorocos|cholga|cholgas|ostion|ostiones|marisco|mariscos|mejillon|mejillones|langostino|langostinos|cangrejo|cangrejos|trucha|truchas|sardina|sardinas|ostra|ostras|erizo|erizos|leche(?! de (coco|almendra|soya|soja|avena|arroz))|queso|quesos|mantequilla|crema(?! de (coco|almendra|verduras))|yogur|yogurt|parmesano|manjar|manteca|suero|caseina|nata|natas|ricota|requeson|huevo|huevos|clara|claras|yema|yemas|miel|caldo de carne|caldo de pollo|caldo de hueso)\b/;
+  /\b(carne(?! de (soya|soja|trigo|vegetal|girasol))|carnes(?! de (soya|soja|trigo|vegetal|girasol))|pollo|pollos|cerdo|cerdos|vacuno|vacunos|pavo|pavos|cordero|corderos|bistec|bistecs|churrasco|churrascos|salchicha|salchichas|vienesa|vienesas|chorizo|chorizos|jamon|jamones|tocino|tocinos|prieta|prietas|longaniza|longanizas|costillar|costillares|pulpa|pulpas|posta|postas|charqui|charquis|hueso|huesos|menudencia|menudencias|guatita|guatitas|chunchule|chunchules|pernil|perniles|malaya|malayas|pescado|pescados|camaron|camarones|chorito|choritos|almeja|almejas|macha|machas|loco|locos|jaiba|jaibas|centolla|centollas|congrio|congrios|corvina|corvinas|merluza|merluzas|reineta|reinetas|salmon|atun|jurel|jureles|pulpo|pulpos|calamar|calamares|picoroco|picorocos|cholga|cholgas|ostion|ostiones|marisco|mariscos|mejillon|mejillones|langostino|langostinos|cangrejo|cangrejos|trucha|truchas|sardina|sardinas|ostra|ostras|erizo|erizos|leche(?! de (coco|almendra|soya|soja|avena|arroz))|queso|quesos|mantequilla|crema(?! de (coco|almendra|verduras))|yogur|yogurt|parmesano|manjar|manteca|suero|caseina|nata|natas|ricota|requeson|huevo|huevos|mayonesa|clara|claras|yema|yemas|miel|caldo de carne|caldo de pollo|caldo de hueso)\b/;
 
 const KETO =
   /\b(harina|harinas|pan|panes|marraqueta|marraquetas|hallulla|hallullas|fideo|fideos|tallarin|tallarines|pasta|pastas|galleta|galletas|masa|masas|semola|arroz|arroces|papa|papas|patata|patatas|camote|camotes|choclo|choclos|arveja|arvejas|poroto|porotos|lenteja|lentejas|garbanzo|garbanzos|azucar|chancaca|miel|manjar|fruta|frutas|platano|platanos|manzana|manzanas|pera|peras|durazno|duraznos|naranja|naranjas|jugo|jugos|cerveza|cervezas|vino|vinos)\b/;
@@ -88,27 +72,21 @@ export const TAGS_POSITIVAS = {
   alto_proteina: /\balto[- ]?en[- ]?proteina\b|\bhigh[- ]?protein\b/i,
 };
 
-/**
- * ¿La receta tiene un tag que la marque como apta para la restricción?
- * Ej: tag "sin-gluten" anula la restricción "gluten".
- */
 export function tieneTagPositiva(receta, restriccion) {
   const tagsTexto = normalizar((receta.tags || []).join(' '));
   const regex = TAGS_POSITIVAS[restriccion];
   return regex ? regex.test(tagsTexto) : false;
 }
 
-/**
- * Devuelve solo las recetas compatibles con TODAS las restricciones.
- * @param {Array} recetas      — catálogo completo
- * @param {string[]} restricciones — claves de DICCIONARIO_RESTRICCIONES
- */
 export function obtenerRecetasSeguras(recetas, restricciones) {
   const lista = Array.isArray(restricciones) ? restricciones : [];
   if (!Array.isArray(recetas)) return [];
 
   return recetas.filter((receta) => {
     if (!CATEGORIAS_VALIDAS.includes(receta.categoria)) return false;
+    
+    // Seguridad: Si la receta no trae ingredientes (error de caché viejo), la descartamos.
+    if (!Array.isArray(receta.ingredientes) || receta.ingredientes.length === 0) return false;
 
     if (
       receta.tags &&
@@ -117,7 +95,7 @@ export function obtenerRecetasSeguras(recetas, restricciones) {
       return false;
     }
 
-    const ingredientesValidos = (receta.ingredientes || []).filter(
+    const ingredientesValidos = receta.ingredientes.filter(
       (ing) => !/\(opcional\)/i.test(ing) && !/opcional:/i.test(ing)
     );
 

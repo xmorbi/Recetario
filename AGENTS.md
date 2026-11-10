@@ -24,4 +24,4 @@ Este proyecto está construido con Astro y sigue una arquitectura estricta para 
 
 ## Despliegue
 
-El sitio se compila a HTML estático. Las redirecciones y el manejo de errores 404 se configuran en `netlify.toml`.
+El sitio se compila a HTML estático. Las redirecciones y el manejo de errores 404 se configuran en `astro.config.mjs` (para el enrutador) y `wrangler.jsonc` (para Cloudflare Workers).

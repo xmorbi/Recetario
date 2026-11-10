@@ -4,7 +4,7 @@ import type { APIRoute } from 'astro';
 export const prerender = true;
 
 export const GET: APIRoute = ({ site }) => {
-  const base = site ?? new URL('https://recetariochileno.netlify.app');
+  const base = site ?? new URL('https://recetario.morbidan.workers.dev/sitemap-index.xml');
   // Astro Sitemap v3+ genera un índice principal llamado sitemap-index.xml
   const sitemapURL = new URL('/sitemap-index.xml', base).toString();
 

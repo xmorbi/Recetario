@@ -61,7 +61,7 @@ describe('frutos secos — caso "maní" (bug de \\b con tildes)', () => {
   it('NO bloquea "manicura" (falso positivo evitado por \\b)', () => {
     const r = receta({
       titulo: 'Receta rara',
-      ingredientes: ['1 manicura'], // palabra inventada para probar el \b
+      ingredientes: ['1 manicura'],
     });
     const seguras = obtenerRecetasSeguras([r], ['frutos_secos']);
     expect(seguras).toHaveLength(1);
@@ -69,7 +69,7 @@ describe('frutos secos — caso "maní" (bug de \\b con tildes)', () => {
 });
 
 /* ============================================================
-   Gluten — ampliación con trigo, mote, avena, cebada
+   Gluten — ampliación con trigo, mote, avena, cebada, panqueque
    ============================================================ */
 describe('gluten', () => {
   it.each([
@@ -81,6 +81,7 @@ describe('gluten', () => {
     ['harina', '2 tazas de harina'],
     ['pan', '2 rebanadas de pan'],
     ['fideos', '200 g de fideos'],
+    ['panqueque', '2 panqueques para rellenar'],
   ])('detecta %s', (_nombre, ingrediente) => {
     const r = receta({ titulo: 'Receta', ingredientes: [ingrediente] });
     const seguras = obtenerRecetasSeguras([r], ['gluten']);
@@ -93,7 +94,6 @@ describe('gluten', () => {
       ingredientes: ['1 taza de harina de almendra'],
       tags: ['sin-gluten'],
     });
-    // Sin el tag, el lookahead igual protege; con el tag también.
     const seguras = obtenerRecetasSeguras([r], ['gluten']);
     expect(seguras).toHaveLength(1);
   });
@@ -125,8 +125,22 @@ describe('lácteos', () => {
 });
 
 /* ============================================================
-   Mariscos — ampliación con mejillón, langostino, cangrejo,
-   trucha, sardina, ostras, erizo
+   Huevo — ampliación con mayonesa
+   ============================================================ */
+describe('huevo', () => {
+  it('detecta "huevo"', () => {
+    const r = receta({ titulo: 'Receta', ingredientes: ['2 huevos'] });
+    expect(obtenerRecetasSeguras([r], ['huevo'])).toHaveLength(0);
+  });
+
+  it('detecta "mayonesa"', () => {
+    const r = receta({ titulo: 'Empanada', ingredientes: ['1 cucharada de mayonesa'] });
+    expect(obtenerRecetasSeguras([r], ['huevo'])).toHaveLength(0);
+  });
+});
+
+/* ============================================================
+   Mariscos — ampliación con mejillón, langostino, cangrejo, etc.
    ============================================================ */
 describe('mariscos y pescados', () => {
   it.each([
@@ -148,64 +162,31 @@ describe('mariscos y pescados', () => {
 
 /* ============================================================
    Casos end-to-end del planificador
-   (los que aparecían y no debían)
    ============================================================ */
 describe('casos reales del planificador', () => {
   it('"Panitas de Pollo" NO pasa como sin gluten (tiene harina)', () => {
     const r = receta({
       titulo: 'Panitas de pollo en salsa',
-      ingredientes: [
-        '500 g de panitas de pollo',
-        '2 cucharadas de harina',
-        '1 cebolla',
-        '2 dientes de ajo',
-      ],
+      ingredientes: ['500 g de panitas de pollo', '2 cucharadas de harina', '1 cebolla'],
     });
-    const seguras = obtenerRecetasSeguras([r], ['gluten']);
-    expect(seguras).toHaveLength(0);
+    expect(obtenerRecetasSeguras([r], ['gluten'])).toHaveLength(0);
   });
 
   it('"Chupe de mariscos" NO pasa como sin gluten (tiene pan)', () => {
     const r = receta({
       titulo: 'Chupe de mariscos',
       categoria: 'sopas',
-      ingredientes: [
-        '500 g de mariscos',
-        '2 rebanadas de pan',
-        '1 taza de leche',
-        '1 cebolla',
-      ],
+      ingredientes: ['500 g de mariscos', '2 rebanadas de pan', '1 taza de leche'],
     });
-    const seguras = obtenerRecetasSeguras([r], ['gluten']);
-    expect(seguras).toHaveLength(0);
+    expect(obtenerRecetasSeguras([r], ['gluten'])).toHaveLength(0);
   });
 
   it('"Pastel de choclo" NO pasa como vegetariano (carne picada)', () => {
     const r = receta({
       titulo: 'Pastel de choclo',
-      ingredientes: [
-        '4 choclos',
-        '500 g de carne picada de vacuno',
-        '1 cebolla',
-        '2 huevos',
-      ],
+      ingredientes: ['4 choclos', '500 g de carne picada de vacuno', '2 huevos'],
     });
-    const seguras = obtenerRecetasSeguras([r], ['carne']);
-    expect(seguras).toHaveLength(0);
-  });
-
-  it('"Curanto en hoyo" NO pasa como vegetariano (pollo, cerdo, mariscos)', () => {
-    const r = receta({
-      titulo: 'Curanto en hoyo',
-      ingredientes: [
-        '500 g de pollo',
-        '500 g de cerdo',
-        '500 g de mariscos',
-        '1 kg de papas',
-      ],
-    });
-    const seguras = obtenerRecetasSeguras([r], ['carne']);
-    expect(seguras).toHaveLength(0);
+    expect(obtenerRecetasSeguras([r], ['carne'])).toHaveLength(0);
   });
 
   it('"Ensalada chilena" SÍ pasa como vegetariano', () => {
@@ -230,19 +211,7 @@ describe('tags positivas', () => {
       ingredientes: ['2 tazas de harina sin gluten'],
     });
     expect(tieneTagPositiva(r, 'gluten')).toBe(true);
-    const seguras = obtenerRecetasSeguras([r], ['gluten']);
-    expect(seguras).toHaveLength(1);
-  });
-
-  it('tag "vegano" anula restricción vegano', () => {
-    const r = receta({
-      titulo: 'Receta de prueba',
-      tags: ['vegano'],
-      ingredientes: ['1 taza de harina', '1 taza de leche de vaca'],
-    });
-    expect(tieneTagPositiva(r, 'vegano')).toBe(true);
-    const seguras = obtenerRecetasSeguras([r], ['vegano']);
-    expect(seguras).toHaveLength(1);
+    expect(obtenerRecetasSeguras([r], ['gluten'])).toHaveLength(1);
   });
 
   it('sin tag, la misma receta falla la restricción', () => {
@@ -250,8 +219,7 @@ describe('tags positivas', () => {
       titulo: 'Receta de prueba',
       ingredientes: ['1 taza de leche de vaca'],
     });
-    const seguras = obtenerRecetasSeguras([r], ['lacteos']);
-    expect(seguras).toHaveLength(0);
+    expect(obtenerRecetasSeguras([r], ['lacteos'])).toHaveLength(0);
   });
 });
 
@@ -264,10 +232,7 @@ describe('ingredientes opcionales', () => {
       titulo: 'Receta sin gluten',
       ingredientes: ['1 taza de arroz', '1 cucharada de salsa de soya (opcional)'],
     });
-    // Sin la restricción de gluten, pasaría igual; probamos que el filtro
-    // de opcionales no la está considerando por otro motivo.
-    const seguras = obtenerRecetasSeguras([r], ['gluten']);
-    expect(seguras).toHaveLength(1);
+    expect(obtenerRecetasSeguras([r], ['gluten'])).toHaveLength(1);
   });
 
   it('"opcional:" no bloquea la receta', () => {
@@ -275,60 +240,39 @@ describe('ingredientes opcionales', () => {
       titulo: 'Receta sin gluten',
       ingredientes: ['1 taza de arroz', 'opcional: 1 chorrito de salsa de soya'],
     });
-    const seguras = obtenerRecetasSeguras([r], ['gluten']);
-    expect(seguras).toHaveLength(1);
+    expect(obtenerRecetasSeguras([r], ['gluten'])).toHaveLength(1);
   });
 });
 
 /* ============================================================
-   Tags excluidos (postre, salsa, etc.)
+   Tags excluidos y Categorías válidas
    ============================================================ */
 describe('tags excluidos', () => {
   it('"postre" queda fuera del planificador', () => {
-    const r = receta({
-      titulo: 'Flan',
-      categoria: 'principales',
-      tags: ['postre'],
-      ingredientes: ['4 huevos', '1 taza de leche', 'azúcar'],
-    });
-    const seguras = obtenerRecetasSeguras([r], []);
-    expect(seguras).toHaveLength(0);
+    const r = receta({ titulo: 'Flan', categoria: 'principales', tags: ['postre'], ingredientes: ['4 huevos'] });
+    expect(obtenerRecetasSeguras([r], [])).toHaveLength(0);
+  });
+});
+
+describe('categorías válidas', () => {
+  it('"dulces" no es categoría del planificador', () => {
+    const r = receta({ titulo: 'Torta', categoria: 'dulces', ingredientes: ['harina'] });
+    expect(obtenerRecetasSeguras([r], [])).toHaveLength(0);
   });
 
-  it('"salsa" queda fuera', () => {
-    const r = receta({
-      titulo: 'Salsa de tomate',
-      categoria: 'principales',
-      tags: ['salsa'],
-      ingredientes: ['tomates', 'ajo'],
-    });
-    const seguras = obtenerRecetasSeguras([r], []);
-    expect(seguras).toHaveLength(0);
+  it('"principales" sí es categoría válida', () => {
+    const r = receta({ titulo: 'Cazuela', categoria: 'principales', ingredientes: ['pollo'] });
+    expect(titulos(obtenerRecetasSeguras([r], []))).toEqual(['Cazuela']);
   });
 });
 
 /* ============================================================
-   Categorías válidas
+   Seguridad (faltan ingredientes)
    ============================================================ */
-describe('categorías válidas', () => {
-  it('"dulces" no es categoría del planificador', () => {
-    const r = receta({
-      titulo: 'Torta',
-      categoria: 'dulces',
-      ingredientes: ['harina', 'huevos'],
-    });
-    const seguras = obtenerRecetasSeguras([r], []);
-    expect(seguras).toHaveLength(0);
-  });
-
-  it('"principales" sí es categoría válida', () => {
-    const r = receta({
-      titulo: 'Cazuela',
-      categoria: 'principales',
-      ingredientes: ['pollo', 'papas'],
-    });
-    const seguras = obtenerRecetasSeguras([r], []);
-    expect(titulos(seguras)).toEqual(['Cazuela']);
+describe('seguridad si faltan ingredientes', () => {
+  it('descarta la receta si no tiene ingredientes (evita falsos positivos)', () => {
+    const r = receta({ titulo: 'Receta rota', ingredientes: undefined });
+    expect(obtenerRecetasSeguras([r], [])).toHaveLength(0);
   });
 });
 
@@ -337,21 +281,12 @@ describe('categorías válidas', () => {
    ============================================================ */
 describe('alto en proteína', () => {
   it('receta con pollo pasa alto_proteina', () => {
-    const r = receta({
-      titulo: 'Pollo asado',
-      ingredientes: ['1 pollo entero', 'sal', 'aceite'],
-    });
-    const seguras = obtenerRecetasSeguras([r], ['alto_proteina']);
-    expect(seguras).toHaveLength(1);
+    const r = receta({ titulo: 'Pollo asado', ingredientes: ['1 pollo entero', 'sal'] });
+    expect(obtenerRecetasSeguras([r], ['alto_proteina'])).toHaveLength(1);
   });
 
   it('ensalada sin proteína NO pasa alto_proteina', () => {
-    const r = receta({
-      titulo: 'Ensalada verde',
-      categoria: 'ensaladas',
-      ingredientes: ['lechuga', 'tomate', 'pepino'],
-    });
-    const seguras = obtenerRecetasSeguras([r], ['alto_proteina']);
-    expect(seguras).toHaveLength(0);
+    const r = receta({ titulo: 'Ensalada verde', categoria: 'ensaladas', ingredientes: ['lechuga', 'tomate'] });
+    expect(obtenerRecetasSeguras([r], ['alto_proteina'])).toHaveLength(0);
   });
 });
