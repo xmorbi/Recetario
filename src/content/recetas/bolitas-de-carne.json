@@ -1,7 +1,13 @@
 {
   "titulo": "Bolitas de Carne",
   "categoria": "principales",
-  "tags": ["bolitas de carne", "carne molida", "fritura", "aperitivo", "cóctel"],
+  "tags": [
+    "bolitas de carne",
+    "carne molida",
+    "fritura",
+    "aperitivo",
+    "cóctel"
+  ],
   "imagen": null,
   "tiempo": "25 min",
   "porciones": "4 a 6 personas",
@@ -54,14 +60,14 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "perejil o cilantro",
       "nota": "a gusto",
@@ -78,18 +84,28 @@
   "pasos_v2": [
     {
       "texto": "Mezclar la carne con el huevo, la cebolla picada en cuadritos finos y la verdura.",
-      "ingredientes": [1, 2, 5, 7]
+      "ingredientes": [
+        1,
+        2,
+        5,
+        7
+      ]
     },
     {
       "texto": "Aliñar."
     },
     {
       "texto": "Agregar el pan previamente remojado en la leche y bien escurrido.",
-      "ingredientes": [3, 4]
+      "ingredientes": [
+        3,
+        4
+      ]
     },
     {
       "texto": "Formar bolitas y freír en aceite caliente (170-180 °C).",
-      "ingredientes": [8]
+      "ingredientes": [
+        8
+      ]
     },
     {
       "texto": "Servir calientes o frías."

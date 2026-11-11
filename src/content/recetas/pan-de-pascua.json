@@ -1,7 +1,14 @@
 {
   "titulo": "Pan de Pascua",
   "categoria": "dulces",
-  "tags": ["navidad", "dulce", "horno", "frutas", "tradicional", "pan"],
+  "tags": [
+    "navidad",
+    "dulce",
+    "horno",
+    "frutas",
+    "tradicional",
+    "pan"
+  ],
   "imagen": "img/pan-de-pascua.jpg",
   "tiempo": "1 h 30 min + reposo",
   "porciones": "1 molde grande (12 porciones)",
@@ -120,7 +127,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "azúcar flor",
       "nota": "a gusto, para decorar",
@@ -130,24 +137,44 @@
   "pasos_v2": [
     {
       "texto": "Remoja las pasas en ron o pisco al menos 2 horas antes. Escurre y reserva.",
-      "ingredientes": [7],
+      "ingredientes": [
+        7
+      ],
       "previo": true
     },
     {
       "texto": "Bate la mantequilla con el azúcar hasta obtener una crema. Agrega los huevos uno a uno.",
-      "ingredientes": [2, 3, 4]
+      "ingredientes": [
+        2,
+        3,
+        4
+      ]
     },
     {
       "texto": "Añade la vainilla, las ralladuras de naranja y limón, y las especias.",
-      "ingredientes": [9, 10, 11, 12, 13]
+      "ingredientes": [
+        9,
+        10,
+        11,
+        12,
+        13
+      ]
     },
     {
       "texto": "Incorpora la harina cernida con los polvos de hornear, mezclando suavemente.",
-      "ingredientes": [1, 5]
+      "ingredientes": [
+        1,
+        5
+      ]
     },
     {
       "texto": "Agrega las frutas confitadas, las pasas y las nueces. Si la masa está muy seca, añade leche cucharada a cucharada.",
-      "ingredientes": [6, 7, 8, 14]
+      "ingredientes": [
+        6,
+        7,
+        8,
+        14
+      ]
     },
     {
       "texto": "Vierte la mezcla en un molde engrasado y enharinado. Hornea a 170 °C por 50-60 minutos.",
@@ -160,7 +187,9 @@
     },
     {
       "texto": "Deja enfriar, desmolda y espolvorea con azúcar flor antes de servir.",
-      "ingredientes": [15]
+      "ingredientes": [
+        15
+      ]
     }
   ],
   "tiempo_v2": {

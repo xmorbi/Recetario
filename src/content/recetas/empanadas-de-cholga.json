@@ -1,7 +1,14 @@
 {
   "titulo": "Empanadas de cholga",
   "categoria": "mar",
-  "tags": ["empanada", "cholga", "marisco", "chiloé", "horno", "fritura"],
+  "tags": [
+    "empanada",
+    "cholga",
+    "marisco",
+    "chiloé",
+    "horno",
+    "fritura"
+  ],
   "imagen": null,
   "tiempo": "90 min",
   "porciones": "12 unidades",
@@ -109,7 +116,7 @@
       "seccion": "Relleno"
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal, pimienta y orégano",
       "nota": "a gusto",
@@ -127,11 +134,21 @@
   "pasos_v2": [
     {
       "texto": "Prepara el relleno: sofríe la cebolla y el ajo. Agrega el tomate y condimenta con merkén, sal, pimienta y orégano.",
-      "ingredientes": [4, 7, 8, 9, 10, 12]
+      "ingredientes": [
+        4,
+        7,
+        8,
+        9,
+        10,
+        12
+      ]
     },
     {
       "texto": "Agrega la cholga picada y cocina 3 minutos. Añade el pan rallado para absorber el líquido. Deja enfriar por completo.",
-      "ingredientes": [6, 11],
+      "ingredientes": [
+        6,
+        11
+      ],
       "timers": [
         {
           "minutos": 3,
@@ -141,7 +158,15 @@
     },
     {
       "texto": "Prepara la masa: mezcla la harina con la sal, agrega la manteca, el huevo y el agua tibia. Amasa hasta que esté lisa.",
-      "ingredientes": [1, 2, 3, 4, 5, 12, 13]
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        12,
+        13
+      ]
     },
     {
       "texto": "Reposa 30 minutos. Divide en 12 bollos y estira discos de 15 cm.",
@@ -157,7 +182,10 @@
     },
     {
       "texto": "Pinta con huevo batido. Hornea a 200 °C por 20-25 minutos, o fríe en aceite caliente (170-180 °C) hasta dorar.",
-      "ingredientes": [3, 13],
+      "ingredientes": [
+        3,
+        13
+      ],
       "timers": [
         {
           "minutos": 25,

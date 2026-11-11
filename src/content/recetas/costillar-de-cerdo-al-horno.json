@@ -1,7 +1,13 @@
 {
   "titulo": "Costillar de cerdo al horno",
   "categoria": "principales",
-  "tags": ["cerdo", "costillar", "horno", "domingo", "plato principal"],
+  "tags": [
+    "cerdo",
+    "costillar",
+    "horno",
+    "domingo",
+    "plato principal"
+  ],
   "imagen": null,
   "tiempo": "2 h",
   "porciones": "4 personas",
@@ -25,9 +31,9 @@
   },
   "ingredientes_v2": [
     {
-      "cantidad": 1,
-      "unidad": null,
-      "nombre": "1,5 kg de costillar de cerdo",
+      "cantidad": 1.5,
+      "unidad": "kg",
+      "nombre": "costillar de cerdo",
       "nota": "a gusto",
       "escalable": true
     },
@@ -87,11 +93,23 @@
   "pasos_v2": [
     {
       "texto": "Mezcla el ajo, ají de color, orégano, sal y pimienta para hacer una pasta. Unta el costillar por todos lados.",
-      "ingredientes": [1, 2, 3, 4, 5, 6]
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
     },
     {
       "texto": "Pon el costillar en una fuente con las cebollas, el vinagre y el agua. Marina en frío al menos 4 horas (mejor toda la noche).",
-      "ingredientes": [1, 7, 8, 9],
+      "ingredientes": [
+        1,
+        7,
+        8,
+        9
+      ],
       "previo": true
     },
     {
@@ -122,7 +140,9 @@
     },
     {
       "texto": "Deja reposar 10 minutos y corta en porciones. Sirve con papas o ensalada.",
-      "ingredientes": [5],
+      "ingredientes": [
+        5
+      ],
       "timers": [
         {
           "minutos": 10,

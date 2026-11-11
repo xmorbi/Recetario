@@ -1,7 +1,14 @@
 {
   "titulo": "Carbonada",
   "categoria": "principales",
-  "tags": ["guiso", "olla", "carne", "verduras", "plato principal", "invierno"],
+  "tags": [
+    "guiso",
+    "olla",
+    "carne",
+    "verduras",
+    "plato principal",
+    "invierno"
+  ],
   "imagen": "img/Carbonada.JPG",
   "tiempo": "50 min",
   "porciones": "6 personas",
@@ -96,7 +103,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal, pimienta, orégano, comino y ají de color",
       "nota": "a gusto",
@@ -106,11 +113,18 @@
   "pasos_v2": [
     {
       "texto": "Calienta el aceite en una olla grande. Agrega la carne y séllala hasta que dore por todos lados.",
-      "ingredientes": [1, 2]
+      "ingredientes": [
+        1,
+        2
+      ]
     },
     {
       "texto": "Incorpora la cebolla, el pimentón y los condimentos (ají de color, orégano, comino, sal y pimienta). Sofríe por 5 minutos.",
-      "ingredientes": [3, 4, 11],
+      "ingredientes": [
+        3,
+        4,
+        11
+      ],
       "timers": [
         {
           "minutos": 5,
@@ -120,7 +134,9 @@
     },
     {
       "texto": "Vierte el agua o caldo caliente, tapa y cocina a fuego medio por 20 minutos.",
-      "ingredientes": [10],
+      "ingredientes": [
+        10
+      ],
       "timers": [
         {
           "minutos": 20,
@@ -130,7 +146,12 @@
     },
     {
       "texto": "Agrega las papas, la zanahoria, el zapallo y el choclo. Cocina por 15 minutos más.",
-      "ingredientes": [5, 6, 7, 8],
+      "ingredientes": [
+        5,
+        6,
+        7,
+        8
+      ],
       "timers": [
         {
           "minutos": 15,
@@ -140,7 +161,9 @@
     },
     {
       "texto": "Añade el arroz y cocina hasta que los granos estén tiernos y las verduras blandas (unos 15 minutos).",
-      "ingredientes": [9],
+      "ingredientes": [
+        9
+      ],
       "timers": [
         {
           "minutos": 15,
@@ -150,7 +173,9 @@
     },
     {
       "texto": "Rectifica la sal y sirve caliente en platos hondos.",
-      "ingredientes": [11]
+      "ingredientes": [
+        11
+      ]
     }
   ],
   "tiempo_v2": {

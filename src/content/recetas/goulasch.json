@@ -1,7 +1,14 @@
 {
   "titulo": "Goulasch",
   "categoria": "principales",
-  "tags": ["goulasch", "posta de paleta", "ají de color", "tomate", "guiso", "carnes"],
+  "tags": [
+    "goulasch",
+    "posta de paleta",
+    "ají de color",
+    "tomate",
+    "guiso",
+    "carnes"
+  ],
   "imagen": null,
   "tiempo": "1 h 30 min",
   "porciones": "6 a 8 personas",
@@ -25,9 +32,9 @@
   },
   "ingredientes_v2": [
     {
-      "cantidad": 1,
-      "unidad": null,
-      "nombre": "0.5 kg de posta de paleta",
+      "cantidad": 1.5,
+      "unidad": "kg",
+      "nombre": "posta de paleta",
       "escalable": true
     },
     {
@@ -58,7 +65,7 @@
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "tomillo",
       "nota": "a gusto",
@@ -77,21 +84,21 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "aceite",
       "nota": "a gusto",
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "pimienta",
       "nota": "a gusto",
@@ -101,37 +108,61 @@
   "pasos_v2": [
     {
       "texto": "Limpiar la carne, quitar las telas, grasas y cortar en cubos de 3 cm.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Lavar y dejar estilar."
     },
     {
       "texto": "Cortar las cebollas en pluma.",
-      "ingredientes": [2]
+      "ingredientes": [
+        2
+      ]
     },
     {
       "texto": "Calentar un poco de aceite en una cacerola y freír la cebolla con la zanahoria y los ajos.",
-      "ingredientes": [2, 4, 8, 9]
+      "ingredientes": [
+        2,
+        4,
+        8,
+        9
+      ]
     },
     {
       "texto": "Añadir la carne, sazonar con sal, pimienta, ají de color y tomillo.",
-      "ingredientes": [1, 5, 6, 10, 11]
+      "ingredientes": [
+        1,
+        5,
+        6,
+        10,
+        11
+      ]
     },
     {
       "texto": "Revolver con cuchara de madera para impregnar los ingredientes, cuidando de dorar en forma pareja la carne.",
-      "ingredientes": [1, 9]
+      "ingredientes": [
+        1,
+        9
+      ]
     },
     {
       "texto": "Dejar en cocción a fuego suave."
     },
     {
       "texto": "Pelar los tomates, pasarlos por el cedazo y agregar a la cacerola junto con el laurel.",
-      "ingredientes": [3, 7]
+      "ingredientes": [
+        3,
+        7
+      ]
     },
     {
       "texto": "Rectificar la sal y cocinar hasta que la carne esté blanda y la salsa espesa.",
-      "ingredientes": [1, 10]
+      "ingredientes": [
+        1,
+        10
+      ]
     },
     {
       "texto": "Acompañar con papas cocidas."

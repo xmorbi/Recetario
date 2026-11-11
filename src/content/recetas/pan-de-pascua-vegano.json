@@ -177,7 +177,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "perlas de azúcar",
       "nota": "a gusto, para decorar",
@@ -188,7 +188,20 @@
   "pasos_v2": [
     {
       "texto": "Picar los dátiles y mezclarlos con las pasas y el resto de la fruta seca. Agregar una cucharadita de melaza, las especias (canela, anís, clavo, nuez moscada), las esencias, el café instantáneo, el licor (si se usa) y 80 ml de agua. Dejar reposar al menos 15 minutos (idealmente 1 hora).",
-      "ingredientes": [2, 6, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17],
+      "ingredientes": [
+        2,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17
+      ],
       "timers": [
         {
           "minutos": 15,
@@ -198,27 +211,52 @@
     },
     {
       "texto": "Preparar el reemplazo de huevo: mezclar el aquafaba, el almidón de papa o maíz, la goma xantana y la proteína de soya (si se usa) hasta integrar sin grumos. Batir hasta que esté espumoso.",
-      "ingredientes": [19, 20, 21, 22]
+      "ingredientes": [
+        19,
+        20,
+        21,
+        22
+      ]
     },
     {
       "texto": "Agregar la melaza y el aceite a la mezcla de aquafaba y batir bien.",
-      "ingredientes": [2, 3]
+      "ingredientes": [
+        2,
+        3
+      ]
     },
     {
       "texto": "En un bol aparte, mezclar la harina, el polvo de hornear, el bicarbonato y la sal. Espolvorear los frutos secos con un poco de harina para que no se hundan.",
-      "ingredientes": [1, 4, 5, 18, 23]
+      "ingredientes": [
+        1,
+        4,
+        5,
+        18,
+        23
+      ]
     },
     {
       "texto": "Escurrir la fruta especiada (reservar el líquido) y agregar el líquido al batido de aquafaba.",
-      "ingredientes": [6, 7, 17]
+      "ingredientes": [
+        6,
+        7,
+        17
+      ]
     },
     {
       "texto": "Incorporar la mezcla de harina de a poco al batido, usando batidora hasta que la masa lo permita, luego espátula.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Agregar la fruta escurrida, las nueces y almendras enharinadas. Incorporar con espátula sin sobremezclar.",
-      "ingredientes": [4, 5, 6, 17]
+      "ingredientes": [
+        4,
+        5,
+        6,
+        17
+      ]
     },
     {
       "texto": "Precalentar el horno a 175 °C. Verter la masa en un molde para pan de Pascua (18 cm) enmantequillado o con papel."

@@ -6,6 +6,9 @@
    - Espera el evento voiceschanged (Chrome carga async).
    - Normalización + troceo por frases antes de hablar.
    - Preferencia de voz y velocidad persistidas en localStorage.
+   - Cancelación segura: un contador de generación invalida cualquier
+     cadena de frases en vuelo, de modo que cancelar no deja frases
+     viejas sonando (bug reportado en la revisión).
    Sin dependencias externas.
    ================================================================= */
 
@@ -16,6 +19,11 @@ var STORAGE_RATE = 'mc_voz_rate';
 var RATE_DEFAULT = 1.0;
 var RATE_MIN = 0.6;
 var RATE_MAX = 1.6;
+
+// Generación actual de la cadena de voz. Cada llamada a hablarConNavegador
+// o detenerNavegador la incrementa; los callbacks de la cadena vieja
+// comparan contra este valor y se retiran en silencio.
+var generacionVoz = 0;
 
 var PREFERENCIAS_CALIDAD = [
   'natural',
@@ -181,6 +189,15 @@ export function hablarConNavegador(texto, opciones) {
     return;
   }
 
+  // Invalidamos cualquier cadena en vuelo ANTES de cancelar, para que
+  // los onend/onerror que dispare el cancel() vean un mismatch de
+  // generación y no avancen la lectura vieja.
+  generacionVoz++;
+  var miGeneracion = generacionVoz;
+  try {
+    window.speechSynthesis.cancel();
+  } catch (e) {}
+
   var voz = opciones.voz || null;
   var rate =
     typeof opciones.rate === 'number'
@@ -196,6 +213,8 @@ export function hablarConNavegador(texto, opciones) {
 
   var idx = 0;
   function siguiente() {
+    // Cadena obsoleta: alguien pidió detener o lanzó otra lectura.
+    if (miGeneracion !== generacionVoz) return;
     if (idx >= frases.length) {
       if (typeof opciones.onEnd === 'function') opciones.onEnd();
       return;
@@ -206,8 +225,16 @@ export function hablarConNavegador(texto, opciones) {
     if (voz) u.voice = voz;
     u.rate = rate;
     u.pitch = 1;
-    u.onend = siguiente;
-    u.onerror = function () {
+    u.onend = function () {
+      if (miGeneracion !== generacionVoz) return;
+      siguiente();
+    };
+    u.onerror = function (ev) {
+      if (miGeneracion !== generacionVoz) return;
+      // La spec dispara 'canceled'/'interrupted' al llamar cancel():
+      // no son fallos reales, así que no avanzamos.
+      var err = ev && ev.error ? String(ev.error) : '';
+      if (err === 'canceled' || err === 'interrupted') return;
       siguiente();
     };
     window.speechSynthesis.speak(u);
@@ -216,6 +243,8 @@ export function hablarConNavegador(texto, opciones) {
 }
 
 export function detenerNavegador() {
+  // Invalidar la cadena ANTES de cancelar, mismo motivo que arriba.
+  generacionVoz++;
   if ('speechSynthesis' in window) {
     try {
       window.speechSynthesis.cancel();

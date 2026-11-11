@@ -1,7 +1,14 @@
 {
   "titulo": "Ensalada de Cochayuyo",
   "categoria": "ensaladas",
-  "tags": ["ensalada de cochayuyo", "cochayuyo", "alga", "cebolla", "limón", "ensalada chilena"],
+  "tags": [
+    "ensalada de cochayuyo",
+    "cochayuyo",
+    "alga",
+    "cebolla",
+    "limón",
+    "ensalada chilena"
+  ],
   "imagen": null,
   "tiempo": "30 min (más remojo de un día)",
   "porciones": "4 a 6 personas",
@@ -42,21 +49,21 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "perejil",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "aceite",
       "nota": "a gusto",
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal",
       "nota": "a gusto",
@@ -66,7 +73,9 @@
   "pasos_v2": [
     {
       "texto": "Cocer el cochayuyo previamente remojado (la noche anterior).",
-      "ingredientes": [1],
+      "ingredientes": [
+        1
+      ],
       "previo": true
     },
     {
@@ -77,15 +86,26 @@
     },
     {
       "texto": "Cortar la cebolla en pluma, amortiguarla con sal o azúcar y lavarla con agua fría.",
-      "ingredientes": [2, 6]
+      "ingredientes": [
+        2,
+        6
+      ]
     },
     {
       "texto": "Mezclar el cochayuyo con la cebolla.",
-      "ingredientes": [1, 2]
+      "ingredientes": [
+        1,
+        2
+      ]
     },
     {
       "texto": "Añadir el perejil picado muy fino y aliñar con el jugo de los limones, sal y aceite.",
-      "ingredientes": [3, 4, 5, 6]
+      "ingredientes": [
+        3,
+        4,
+        5,
+        6
+      ]
     }
   ],
   "tiempo_v2": {

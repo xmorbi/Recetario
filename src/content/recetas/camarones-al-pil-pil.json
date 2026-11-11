@@ -1,7 +1,13 @@
 {
   "titulo": "Camarones al Pil Pil",
   "categoria": "principales",
-  "tags": ["marisco", "camarones", "sarten", "ajo", "plato principal"],
+  "tags": [
+    "marisco",
+    "camarones",
+    "sarten",
+    "ajo",
+    "plato principal"
+  ],
   "imagen": null,
   "tiempo": "25 min",
   "porciones": "4 personas (como entrada o plato principal)",
@@ -71,7 +77,7 @@
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal y pimienta",
       "nota": "a gusto",
@@ -88,15 +94,23 @@
   "pasos_v2": [
     {
       "texto": "Calienta el aceite de oliva en una sartén grande a fuego medio.",
-      "ingredientes": [3]
+      "ingredientes": [
+        3
+      ]
     },
     {
       "texto": "Agrega los ajos laminados y sofríe hasta que estén dorados (no quemados). Retira y reserva.",
-      "ingredientes": [2, 3]
+      "ingredientes": [
+        2,
+        3
+      ]
     },
     {
       "texto": "Sube el fuego, agrega los camarones y saltéalos por 2-3 minutos hasta que cambien de color.",
-      "ingredientes": [1, 7],
+      "ingredientes": [
+        1,
+        7
+      ],
       "timers": [
         {
           "minutos": 3,
@@ -106,7 +120,9 @@
     },
     {
       "texto": "Vierte el vino blanco y deja evaporar el alcohol por 1-2 minutos.",
-      "ingredientes": [5],
+      "ingredientes": [
+        5
+      ],
       "timers": [
         {
           "minutos": 2,
@@ -116,11 +132,18 @@
     },
     {
       "texto": "Agrega el ají o merkén, sal y pimienta. Revuelve.",
-      "ingredientes": [4, 7]
+      "ingredientes": [
+        4,
+        7
+      ]
     },
     {
       "texto": "Devuelve los ajos a la sartén, añade el perejil y sirve inmediatamente con pan.",
-      "ingredientes": [2, 6, 8]
+      "ingredientes": [
+        2,
+        6,
+        8
+      ]
     }
   ],
   "tiempo_v2": {

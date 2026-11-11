@@ -1,7 +1,14 @@
 {
   "titulo": "Sexo en la Playa",
   "categoria": "bebidas",
-  "tags": ["sexo en la playa", "ron", "piña", "curazao azul", "crema de coco", "tragos"],
+  "tags": [
+    "sexo en la playa",
+    "ron",
+    "piña",
+    "curazao azul",
+    "crema de coco",
+    "tragos"
+  ],
   "imagen": null,
   "tiempo": "5 min",
   "porciones": "1 persona",
@@ -50,7 +57,7 @@
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "hielo",
       "nota": "a gusto",
@@ -60,14 +67,23 @@
   "pasos_v2": [
     {
       "texto": "Colocar todos los ingredientes en una coctelera y batir enérgicamente.",
-      "ingredientes": [1, 2, 3, 4, 5, 6]
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
     },
     {
       "texto": "Servir en un vaso largo."
     },
     {
       "texto": "Decorar con 1 cereza de marrasquino.",
-      "ingredientes": [5]
+      "ingredientes": [
+        5
+      ]
     }
   ],
   "tiempo_v2": {

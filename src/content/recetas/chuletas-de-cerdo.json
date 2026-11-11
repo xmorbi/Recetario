@@ -1,7 +1,14 @@
 {
   "titulo": "Chuletas de cerdo",
   "categoria": "principales",
-  "tags": ["cerdo", "chuleta", "sartén", "plancha", "plato principal", "cotidiano"],
+  "tags": [
+    "cerdo",
+    "chuleta",
+    "sartén",
+    "plancha",
+    "plato principal",
+    "cotidiano"
+  ],
   "imagen": "img/chuletas-de-cerdo.jpg",
   "tiempo": "25 min",
   "porciones": "4 personas",
@@ -50,7 +57,7 @@
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal y pimienta",
       "nota": "a gusto",
@@ -64,7 +71,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "jugo de 0.5 limón",
       "nota": "a gusto",
@@ -75,7 +82,13 @@
   "pasos_v2": [
     {
       "texto": "Sazona las chuletas con ajo, orégano, ají de color, sal y pimienta. Déjalas reposar 15 minutos.",
-      "ingredientes": [1, 2, 3, 4, 5],
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
       "timers": [
         {
           "minutos": 15,
@@ -85,11 +98,15 @@
     },
     {
       "texto": "Calienta el aceite en una sartén o plancha a fuego medio-alto.",
-      "ingredientes": [6]
+      "ingredientes": [
+        6
+      ]
     },
     {
       "texto": "Cocina las chuletas 3-4 minutos por lado, hasta que estén doradas y cocidas por dentro.",
-      "ingredientes": [1],
+      "ingredientes": [
+        1
+      ],
       "timers": [
         {
           "minutos": 4,
@@ -99,11 +116,15 @@
     },
     {
       "texto": "Si quieres, rocía con jugo de limón al final.",
-      "ingredientes": [7]
+      "ingredientes": [
+        7
+      ]
     },
     {
       "texto": "Deja reposar 3 minutos antes de servir. Acompaña con papas o ensalada.",
-      "ingredientes": [5],
+      "ingredientes": [
+        5
+      ],
       "timers": [
         {
           "minutos": 3,

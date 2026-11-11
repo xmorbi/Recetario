@@ -1,7 +1,13 @@
 {
   "titulo": "Mote con huesillo",
   "categoria": "dulces",
-  "tags": ["postre", "dulce", "verano", "bebida", "tradicional"],
+  "tags": [
+    "postre",
+    "dulce",
+    "verano",
+    "bebida",
+    "tradicional"
+  ],
   "imagen": "img/Mote-con-Huesillo.JPG",
   "tiempo": "40 min + frío",
   "porciones": "6 vasos",
@@ -51,7 +57,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "cáscara de naranja",
       "nota": "a gusto",
@@ -61,16 +67,25 @@
   "pasos_v2": [
     {
       "texto": "Remoja los huesillos la noche anterior. Reserva el agua del remojo.",
-      "ingredientes": [2],
+      "ingredientes": [
+        2
+      ],
       "previo": true
     },
     {
       "texto": "Cocina los huesillos con el agua de remojo, el azúcar, la canela y la cáscara de naranja.",
-      "ingredientes": [2, 3, 4, 5]
+      "ingredientes": [
+        2,
+        3,
+        4,
+        5
+      ]
     },
     {
       "texto": "Cocina a fuego medio 30 minutos hasta que los huesillos estén blandos y el jugo tenga consistencia de almíbar.",
-      "ingredientes": [2],
+      "ingredientes": [
+        2
+      ],
       "timers": [
         {
           "minutos": 30,
@@ -83,7 +98,10 @@
     },
     {
       "texto": "Sirve en vaso alto: mote escurrido, huesillos y jugo bien frío.",
-      "ingredientes": [1, 2]
+      "ingredientes": [
+        1,
+        2
+      ]
     }
   ],
   "tiempo_v2": {

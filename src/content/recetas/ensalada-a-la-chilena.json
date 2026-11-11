@@ -1,7 +1,14 @@
 {
   "titulo": "Ensalada a la chilena",
   "categoria": "ensaladas",
-  "tags": ["ensalada", "tomate", "cebolla", "fresca", "acompañamiento", "tradicional"],
+  "tags": [
+    "ensalada",
+    "tomate",
+    "cebolla",
+    "fresca",
+    "acompañamiento",
+    "tradicional"
+  ],
   "imagen": "img/Ensalada-a-la-Chilena.jpg",
   "tiempo": "15 min",
   "porciones": "5 personas",
@@ -38,14 +45,14 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "cilantro fresco",
       "nota": "picado, a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal y aceite",
       "nota": "a gusto",
@@ -55,19 +62,29 @@
   "pasos_v2": [
     {
       "texto": "Pela y corta los tomates en cubos.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Corta la cebolla en pluma fina y pásala por agua fría para suavizarla.",
-      "ingredientes": [2]
+      "ingredientes": [
+        2
+      ]
     },
     {
       "texto": "Mezcla tomates y cebolla. Condimenta con sal y aceite.",
-      "ingredientes": [1, 2, 4]
+      "ingredientes": [
+        1,
+        2,
+        4
+      ]
     },
     {
       "texto": "Decora con cilantro picado.",
-      "ingredientes": [3]
+      "ingredientes": [
+        3
+      ]
     }
   ],
   "tiempo_v2": {

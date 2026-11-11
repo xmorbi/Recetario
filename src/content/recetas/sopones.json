@@ -1,7 +1,14 @@
 {
   "titulo": "Sopones",
   "categoria": "sopas",
-  "tags": ["sopa", "caldo", "masa", "olla", "invierno", "machos ahogados"],
+  "tags": [
+    "sopa",
+    "caldo",
+    "masa",
+    "olla",
+    "invierno",
+    "machos ahogados"
+  ],
   "imagen": null,
   "tiempo": "30 min",
   "porciones": "4 personas",
@@ -57,7 +64,7 @@
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "aliño completo, sal y pimienta",
       "nota": "a gusto",
@@ -67,15 +74,24 @@
   "pasos_v2": [
     {
       "texto": "Bate la clara a punto de nieve. Agrega la yema y mezcla.",
-      "ingredientes": [3]
+      "ingredientes": [
+        3
+      ]
     },
     {
       "texto": "Incorpora la harina, la cebolla, el perejil y los aliños. Forma una masa espesa.",
-      "ingredientes": [2, 4, 5, 6]
+      "ingredientes": [
+        2,
+        4,
+        5,
+        6
+      ]
     },
     {
       "texto": "Con una cuchara, deja caer porciones de masa en el caldo hirviendo.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Cocina 10-15 min hasta que los sopones suban y estén cocidos.",
@@ -88,7 +104,9 @@
     },
     {
       "texto": "Sirve en platos hondos con el caldo bien caliente.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     }
   ],
   "tiempo_v2": {

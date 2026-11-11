@@ -1,7 +1,14 @@
 {
   "titulo": "Empanadas de mariscos",
   "categoria": "mar",
-  "tags": ["empanada", "marisco", "horno", "fritura", "picoteo", "fiestas patrias"],
+  "tags": [
+    "empanada",
+    "marisco",
+    "horno",
+    "fritura",
+    "picoteo",
+    "fiestas patrias"
+  ],
   "imagen": null,
   "tiempo": "90 min",
   "porciones": "12 unidades",
@@ -121,7 +128,7 @@
       "seccion": "Relleno"
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal, pimienta, orégano",
       "nota": "a gusto",
@@ -139,11 +146,22 @@
   "pasos_v2": [
     {
       "texto": "Prepara el relleno: sofríe la cebolla y el ajo en aceite. Agrega el tomate y condimenta con merkén, sal, pimienta y orégano.",
-      "ingredientes": [4, 8, 9, 10, 11, 13]
+      "ingredientes": [
+        4,
+        8,
+        9,
+        10,
+        11,
+        13
+      ]
     },
     {
       "texto": "Cuando la cebolla esté transparente, agrega los mariscos y el pescado. Cocina 5 minutos, solo hasta que los mariscos se abran.",
-      "ingredientes": [6, 7, 8],
+      "ingredientes": [
+        6,
+        7,
+        8
+      ],
       "timers": [
         {
           "minutos": 5,
@@ -153,11 +171,26 @@
     },
     {
       "texto": "Agrega el pan rallado para absorber el líquido. Mezcla bien y deja enfriar por completo. Es clave que el relleno esté frío al armar.",
-      "ingredientes": [1, 2, 3, 5, 12, 14]
+      "ingredientes": [
+        1,
+        2,
+        3,
+        5,
+        12,
+        14
+      ]
     },
     {
       "texto": "Prepara la masa: mezcla la harina con la sal, agrega la manteca, el huevo y el agua tibia. Amasa hasta que la masa esté lisa.",
-      "ingredientes": [1, 2, 3, 4, 5, 13, 14]
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        13,
+        14
+      ]
     },
     {
       "texto": "Reposa la masa 30 minutos. Divídela en 12 bollos y estira cada uno en un disco de 15 cm.",
@@ -173,7 +206,10 @@
     },
     {
       "texto": "Pinta con huevo batido. Hornea a 200 °C por 20-25 minutos, o fríe en abundante aceite caliente (170-180 °C) hasta dorar.",
-      "ingredientes": [3, 14],
+      "ingredientes": [
+        3,
+        14
+      ],
       "timers": [
         {
           "minutos": 25,

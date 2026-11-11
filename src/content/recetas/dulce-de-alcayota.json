@@ -1,7 +1,14 @@
 {
   "titulo": "Dulce de alcayota",
   "categoria": "dulces",
-  "tags": ["dulce", "alcayota", "conserva", "postre", "tradicional", "chile"],
+  "tags": [
+    "dulce",
+    "alcayota",
+    "conserva",
+    "postre",
+    "tradicional",
+    "chile"
+  ],
   "imagen": null,
   "tiempo": "1 h 30 min",
   "porciones": "4 frascos",
@@ -50,7 +57,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "cáscara de 1 naranja",
       "nota": "a gusto",
@@ -67,7 +74,9 @@
   "pasos_v2": [
     {
       "texto": "Pela la alcayota, córtala por la mitad y retira las semillas y la pulpa fibrosa.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Corta la pulpa en tiras o cubos. Cocínala en agua hirviendo 20 minutos, hasta que esté tierna. Escurre.",
@@ -80,11 +89,19 @@
     },
     {
       "texto": "En una olla, mezcla la alcayota cocida con el azúcar, la canela, los clavos y la cáscara de naranja.",
-      "ingredientes": [1, 2, 3, 4, 5]
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
     },
     {
       "texto": "Cocina a fuego medio-bajo, revolviendo de vez en cuando, por 40-50 minutos, hasta que el dulce espese y tome color.",
-      "ingredientes": [4],
+      "ingredientes": [
+        4
+      ],
       "timers": [
         {
           "minutos": 50,
@@ -94,7 +111,9 @@
     },
     {
       "texto": "Agrega el jugo de limón al final y revuelve.",
-      "ingredientes": [6]
+      "ingredientes": [
+        6
+      ]
     },
     {
       "texto": "Envasa en frascos esterilizados calientes y tapa. Deja enfriar y refrigera."

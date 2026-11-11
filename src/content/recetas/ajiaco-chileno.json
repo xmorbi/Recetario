@@ -1,7 +1,13 @@
 {
   "titulo": "Ajiaco chileno",
   "categoria": "sopas",
-  "tags": ["ajiaco", "sopa", "olla", "carne", "papas"],
+  "tags": [
+    "ajiaco",
+    "sopa",
+    "olla",
+    "carne",
+    "papas"
+  ],
   "imagen": "img/ajiaco.png",
   "tiempo": "40 min",
   "porciones": "4 personas",
@@ -64,7 +70,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "orégano, ají de color y comino",
       "nota": "a gusto",
@@ -77,14 +83,14 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal y pimienta",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "ají seco",
       "nota": "a gusto",
@@ -95,23 +101,38 @@
   "pasos_v2": [
     {
       "texto": "Sofríe la cebolla, zanahoria, pimentón y ajo en aceite.",
-      "ingredientes": [3, 5, 6, 4]
+      "ingredientes": [
+        3,
+        5,
+        6,
+        4
+      ]
     },
     {
       "texto": "Agrega la carne asada en trozos y las papas.",
-      "ingredientes": [1, 2]
+      "ingredientes": [
+        1,
+        2
+      ]
     },
     {
       "texto": "Condimenta con orégano, ají de color, comino, sal y pimienta.",
-      "ingredientes": [7, 9]
+      "ingredientes": [
+        7,
+        9
+      ]
     },
     {
       "texto": "Cubre con el caldo y cocina hasta que las papas estén tiernas.",
-      "ingredientes": [8]
+      "ingredientes": [
+        8
+      ]
     },
     {
       "texto": "Rectifica la sal y sirve caliente.",
-      "ingredientes": [9]
+      "ingredientes": [
+        9
+      ]
     }
   ],
   "tiempo_v2": {

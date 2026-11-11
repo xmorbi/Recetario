@@ -1,7 +1,15 @@
 {
   "titulo": "Charquicán Vegano",
   "categoria": "principales",
-  "tags": ["charquicán", "vegano", "soya", "papas", "zapallo", "plato principal", "invierno"],
+  "tags": [
+    "charquicán",
+    "vegano",
+    "soya",
+    "papas",
+    "zapallo",
+    "plato principal",
+    "invierno"
+  ],
   "imagen": null,
   "tiempo": "40 min",
   "porciones": "4 personas",
@@ -113,7 +121,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "aceite de oliva, sal y pimienta",
       "nota": "a gusto",
@@ -123,7 +131,10 @@
   "pasos_v2": [
     {
       "texto": "Remoja la carne de soya en agua caliente por 10 minutos (puedes añadir condimentos al agua para más sabor) y luego cuélala.",
-      "ingredientes": [1, 13],
+      "ingredientes": [
+        1,
+        13
+      ],
       "timers": [
         {
           "minutos": 10,
@@ -133,15 +144,28 @@
     },
     {
       "texto": "Calienta el aceite a fuego medio y sofríe la cebolla con el ajo y los condimentos hasta que la cebolla esté transparente.",
-      "ingredientes": [4, 7, 14]
+      "ingredientes": [
+        4,
+        7,
+        14
+      ]
     },
     {
       "texto": "Sube un poco el fuego, agrega la zanahoria, el tomate y la carne de soya. Sofríe por unos minutos más.",
-      "ingredientes": [1, 5, 6, 14]
+      "ingredientes": [
+        1,
+        5,
+        6,
+        14
+      ]
     },
     {
       "texto": "Incorpora las papas y el zapallo. Cubre con agua fría y cocina tapado por 10 minutos desde que hierva.",
-      "ingredientes": [2, 3, 13],
+      "ingredientes": [
+        2,
+        3,
+        13
+      ],
       "timers": [
         {
           "minutos": 10,
@@ -151,7 +175,10 @@
     },
     {
       "texto": "Agrega las arvejas y el choclo. Tapa y cocina por 5 minutos más.",
-      "ingredientes": [8, 9],
+      "ingredientes": [
+        8,
+        9
+      ],
       "timers": [
         {
           "minutos": 5,
@@ -161,7 +188,16 @@
     },
     {
       "texto": "Machaca a gusto las verduras con un tenedor o cuchara de madera para darle la textura rústica del charquicán. Salpimenta.",
-      "ingredientes": [2, 3, 4, 5, 6, 7, 8, 9]
+      "ingredientes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
     },
     {
       "texto": "Rectifica los sabores y sirve caliente. Puedes espolvorear cilantro picado por encima."

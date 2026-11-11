@@ -1,7 +1,13 @@
 {
   "titulo": "Hallulla",
   "categoria": "panes",
-  "tags": ["pan", "horno", "masa", "desayuno", "once"],
+  "tags": [
+    "pan",
+    "horno",
+    "masa",
+    "desayuno",
+    "once"
+  ],
   "imagen": "img/hallulla.jpg",
   "tiempo": "2 h",
   "porciones": "6 panes",
@@ -49,9 +55,9 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
-      "unidad": null,
-      "nombre": "0.5 cucharaditas de sal",
+      "cantidad": 1.5,
+      "unidad": "cucharaditas",
+      "nombre": "sal",
       "escalable": true
     },
     {
@@ -71,7 +77,11 @@
   "pasos_v2": [
     {
       "texto": "Activa la levadura en la leche tibia con el azúcar. Deja reposar por 10 minutos.",
-      "ingredientes": [2, 3, 6],
+      "ingredientes": [
+        2,
+        3,
+        6
+      ],
       "timers": [
         {
           "minutos": 10,
@@ -81,7 +91,13 @@
     },
     {
       "texto": "Mezcla la harina con la sal. Agrega la levadura con la leche y la manteca. Amasa hasta que la masa esté suave y no se pegue.",
-      "ingredientes": [1, 2, 3, 4, 5]
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
     },
     {
       "texto": "Deja levar tapada por 1 hora, hasta que doble su volumen.",

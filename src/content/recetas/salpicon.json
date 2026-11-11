@@ -1,7 +1,14 @@
 {
   "titulo": "Salpicón",
   "categoria": "ensaladas",
-  "tags": ["salpicón", "choritos", "atún", "papas", "verduras", "entrada"],
+  "tags": [
+    "salpicón",
+    "choritos",
+    "atún",
+    "papas",
+    "verduras",
+    "entrada"
+  ],
   "imagen": null,
   "tiempo": "40 min",
   "porciones": "6 a 8 personas",
@@ -80,28 +87,28 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "pimienta",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "jugo de limón",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "aceite",
       "nota": "a gusto",
@@ -111,31 +118,52 @@
   "pasos_v2": [
     {
       "texto": "Cocer las papas con hollejo, pelarlas y cortarlas en cubos, igualmente la zanahoria.",
-      "ingredientes": [1, 2]
+      "ingredientes": [
+        1,
+        2
+      ]
     },
     {
       "texto": "Lavar la lechuga y picarla en tiras de regular tamaño.",
-      "ingredientes": [3]
+      "ingredientes": [
+        3
+      ]
     },
     {
       "texto": "Limpiar los choritos, cocerlos, desconchar y quitarles las piedrecillas.",
-      "ingredientes": [5]
+      "ingredientes": [
+        5
+      ]
     },
     {
       "texto": "Pelar los tomates y cortarlos en cubos.",
-      "ingredientes": [8]
+      "ingredientes": [
+        8
+      ]
     },
     {
       "texto": "Picar en cuadritos finos la cebolla y pepinillos.",
-      "ingredientes": [6, 9]
+      "ingredientes": [
+        6,
+        9
+      ]
     },
     {
       "texto": "Desmenuzar el atún.",
-      "ingredientes": [4]
+      "ingredientes": [
+        4
+      ]
     },
     {
       "texto": "Mezclar todos los ingredientes y aliñar con sal, pimienta, salsa inglesa, limón y aceite.",
-      "ingredientes": [7, 10, 11, 12, 13, 14]
+      "ingredientes": [
+        7,
+        10,
+        11,
+        12,
+        13,
+        14
+      ]
     },
     {
       "texto": "Decorar con huevo duro y perejil picado si se desea."

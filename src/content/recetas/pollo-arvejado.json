@@ -1,7 +1,13 @@
 {
   "titulo": "Pollo arvejado",
   "categoria": "principales",
-  "tags": ["pollo", "guiso", "olla", "arvejas", "plato principal"],
+  "tags": [
+    "pollo",
+    "guiso",
+    "olla",
+    "arvejas",
+    "plato principal"
+  ],
   "imagen": "img/pollo-arvejado.jpg",
   "tiempo": "60 min",
   "porciones": "4 personas",
@@ -25,9 +31,9 @@
   },
   "ingredientes_v2": [
     {
-      "cantidad": 1,
-      "unidad": null,
-      "nombre": "1,3 kg de trutros de pollo",
+      "cantidad": 1.3,
+      "unidad": "kg",
+      "nombre": "trutros de pollo",
       "nota": "a gusto",
       "escalable": true
     },
@@ -74,7 +80,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "orégano, comino, laurel, sal, pimienta y perejil",
       "nota": "a gusto",
@@ -84,15 +90,28 @@
   "pasos_v2": [
     {
       "texto": "Sella el pollo condimentado. Retira y reserva.",
-      "ingredientes": [1, 8]
+      "ingredientes": [
+        1,
+        8
+      ]
     },
     {
       "texto": "Sofríe cebolla, zanahoria, pimentón y ajo en la misma olla.",
-      "ingredientes": [3, 4, 5, 6]
+      "ingredientes": [
+        3,
+        4,
+        5,
+        6
+      ]
     },
     {
       "texto": "Devuelve el pollo, agrega el vino, el caldo, orégano y laurel. Tapa y cocina 25 min.",
-      "ingredientes": [1, 7, 8, 9],
+      "ingredientes": [
+        1,
+        7,
+        8,
+        9
+      ],
       "timers": [
         {
           "minutos": 25,
@@ -102,7 +121,9 @@
     },
     {
       "texto": "Añade las arvejas congeladas y cocina 5 min más.",
-      "ingredientes": [2],
+      "ingredientes": [
+        2
+      ],
       "timers": [
         {
           "minutos": 5,

@@ -1,7 +1,15 @@
 {
   "titulo": "Barros Luco",
   "categoria": "sandwiches",
-  "tags": ["sándwich", "callejero", "barros luco", "vacuno", "queso", "historia", "almuerzo"],
+  "tags": [
+    "sándwich",
+    "callejero",
+    "barros luco",
+    "vacuno",
+    "queso",
+    "historia",
+    "almuerzo"
+  ],
   "imagen": "img/barros-luco.jpg",
   "tiempo": "15 min",
   "porciones": "2 sándwiches",
@@ -50,7 +58,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal, pimienta y aceite",
       "nota": "a gusto",
@@ -60,11 +68,16 @@
   "pasos_v2": [
     {
       "texto": "Sazona los bistecs con sal y pimienta. Calienta la plancha a fuego alto.",
-      "ingredientes": [4]
+      "ingredientes": [
+        4
+      ]
     },
     {
       "texto": "Sella la carne 2 minutos por lado. Retira y deja reposar mientras preparas el pan.",
-      "ingredientes": [1, 2],
+      "ingredientes": [
+        1,
+        2
+      ],
       "timers": [
         {
           "minutos": 2,
@@ -74,7 +87,9 @@
     },
     {
       "texto": "Calienta los panes cortados por la mitad en la misma plancha, 1 minuto por lado.",
-      "ingredientes": [1],
+      "ingredientes": [
+        1
+      ],
       "timers": [
         {
           "minutos": 1,
@@ -84,11 +99,18 @@
     },
     {
       "texto": "Pon el queso encima de la carne aún caliente para que se derrita con el calor residual.",
-      "ingredientes": [2, 3]
+      "ingredientes": [
+        2,
+        3
+      ]
     },
     {
       "texto": "Arma el sándwich: pan, carne con queso derretido, pan.",
-      "ingredientes": [1, 2, 3]
+      "ingredientes": [
+        1,
+        2,
+        3
+      ]
     },
     {
       "texto": "Sirve inmediatamente. Si quieres, corta en diagonal."

@@ -1,7 +1,14 @@
 {
   "titulo": "Atún con arroz o pasta",
   "categoria": "principales",
-  "tags": ["atún", "arroz", "pasta", "cotidiano", "rápido", "economico"],
+  "tags": [
+    "atún",
+    "arroz",
+    "pasta",
+    "cotidiano",
+    "rápido",
+    "economico"
+  ],
   "imagen": null,
   "tiempo": "20 min",
   "porciones": "2 personas",
@@ -67,7 +74,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal, pimienta y orégano",
       "nota": "a gusto",
@@ -77,15 +84,25 @@
   "pasos_v2": [
     {
       "texto": "Cocina el arroz o la pasta según las instrucciones del paquete.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Mientras tanto, sofríe la cebolla y el ajo en aceite hasta que estén transparentes.",
-      "ingredientes": [2, 3, 4, 6]
+      "ingredientes": [
+        2,
+        3,
+        4,
+        6
+      ]
     },
     {
       "texto": "Agrega el tomate y cocina 3 minutos. Añade el atún escurrido y desmenuzado.",
-      "ingredientes": [2, 5],
+      "ingredientes": [
+        2,
+        5
+      ],
       "timers": [
         {
           "minutos": 3,
@@ -95,7 +112,9 @@
     },
     {
       "texto": "Condimenta con sal, pimienta y orégano. Cocina 2 minutos.",
-      "ingredientes": [7],
+      "ingredientes": [
+        7
+      ],
       "timers": [
         {
           "minutos": 2,
@@ -105,7 +124,9 @@
     },
     {
       "texto": "Mezcla con el arroz o la pasta cocida. Sirve caliente.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     }
   ],
   "tiempo_v2": {

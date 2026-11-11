@@ -1,7 +1,13 @@
 {
   "titulo": "Cazuela de cerdo",
   "categoria": "principales",
-  "tags": ["cazuela", "sopa", "olla", "invierno", "cerdo"],
+  "tags": [
+    "cazuela",
+    "sopa",
+    "olla",
+    "invierno",
+    "cerdo"
+  ],
   "imagen": null,
   "tiempo": "1 h 30 min",
   "porciones": "4 a 6 personas",
@@ -93,7 +99,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal y pimienta",
       "nota": "a gusto",
@@ -103,15 +109,28 @@
   "pasos_v2": [
     {
       "texto": "Calienta el aceite y sofríe el ajo 30 segundos. Agrega el ají de color.",
-      "ingredientes": [7, 8, 9, 10]
+      "ingredientes": [
+        7,
+        8,
+        9,
+        10
+      ]
     },
     {
       "texto": "Incorpora los puerros, zanahorias y carnes. Añade 1 cucharada de agua y tapa.",
-      "ingredientes": [1, 2, 3, 4]
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4
+      ]
     },
     {
       "texto": "Vierte 2 litros de agua fría, sal y el ramo de olores. Cocina tapado 1 hora.",
-      "ingredientes": [10, 11],
+      "ingredientes": [
+        10,
+        11
+      ],
       "timers": [
         {
           "minutos": 60,
@@ -121,7 +140,10 @@
     },
     {
       "texto": "Agrega el repollo y las papas. Cocina 30 min más.",
-      "ingredientes": [5, 6],
+      "ingredientes": [
+        5,
+        6
+      ],
       "timers": [
         {
           "minutos": 30,
@@ -131,7 +153,10 @@
     },
     {
       "texto": "Retira el ramo de olores, corrige la sal y sirve con perejil fresco.",
-      "ingredientes": [10, 11]
+      "ingredientes": [
+        10,
+        11
+      ]
     }
   ],
   "tiempo_v2": {

@@ -1,7 +1,13 @@
 {
   "titulo": "Ensalada rusa chilena",
   "categoria": "ensaladas",
-  "tags": ["ensalada", "papas", "mayonesa", "fresca", "acompañamiento"],
+  "tags": [
+    "ensalada",
+    "papas",
+    "mayonesa",
+    "fresca",
+    "acompañamiento"
+  ],
   "imagen": "img/Ensalada-rusa-chilena.JPG",
   "tiempo": "30 min + frío",
   "porciones": "6 personas",
@@ -60,7 +66,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "cilantro, sal y pimienta",
       "nota": "a gusto",
@@ -77,18 +83,28 @@
   "pasos_v2": [
     {
       "texto": "Cuece las papas y zanahorias en agua con sal hasta que estén tiernas. Escurre y enfría.",
-      "ingredientes": [1, 2]
+      "ingredientes": [
+        1,
+        2
+      ]
     },
     {
       "texto": "Pélalas y córtalas en cubos pequeños."
     },
     {
       "texto": "Mezcla con las arvejas y la cebolla si la usas.",
-      "ingredientes": [3, 7]
+      "ingredientes": [
+        3,
+        7
+      ]
     },
     {
       "texto": "Incorpora la mayonesa y el yogur. Salpimenta y añade cilantro.",
-      "ingredientes": [4, 5, 6]
+      "ingredientes": [
+        4,
+        5,
+        6
+      ]
     },
     {
       "texto": "Refrigera al menos 30 min antes de servir.",

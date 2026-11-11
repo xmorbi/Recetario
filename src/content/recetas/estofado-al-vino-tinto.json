@@ -1,7 +1,13 @@
 {
   "titulo": "Estofado al Vino Tinto",
   "categoria": "principales",
-  "tags": ["estofado al vino tinto", "posta negra", "vino tinto", "guiso", "carnes"],
+  "tags": [
+    "estofado al vino tinto",
+    "posta negra",
+    "vino tinto",
+    "guiso",
+    "carnes"
+  ],
   "imagen": null,
   "tiempo": "1 h 30 min",
   "porciones": "4 a 6 personas",
@@ -75,35 +81,35 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "vinagre",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "pimienta",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "orégano",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "tomillo",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal",
       "nota": "a gusto",
@@ -113,31 +119,58 @@
   "pasos_v2": [
     {
       "texto": "Cortar la carne en trozos de regular grosor.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Cortar la cebolla y los nabos en cascos medianos, el tocino en cuadritos finos, las zanahorias en rodajas y la pata en trozos regulares.",
-      "ingredientes": [2, 3, 4, 6, 7]
+      "ingredientes": [
+        2,
+        3,
+        4,
+        6,
+        7
+      ]
     },
     {
       "texto": "Calentar la manteca y freír la carne hasta que tome un color dorado.",
-      "ingredientes": [1, 5]
+      "ingredientes": [
+        1,
+        5
+      ]
     },
     {
       "texto": "Agregar las cebollas, tocino, zanahorias, nabos, la pata de ternera y el tocino.",
-      "ingredientes": [2, 3, 4, 6, 7]
+      "ingredientes": [
+        2,
+        3,
+        4,
+        6,
+        7
+      ]
     },
     {
       "texto": "Freír a fuego suave unos minutos agregando los aliños.",
-      "ingredientes": [9, 10, 11, 12, 13]
+      "ingredientes": [
+        9,
+        10,
+        11,
+        12,
+        13
+      ]
     },
     {
       "texto": "Cuando se aprecie todo bien impregnado, se vacía el vino sobre la preparación.",
-      "ingredientes": [8]
+      "ingredientes": [
+        8
+      ]
     },
     {
       "texto": "Se deja en cocción a fuego lento hasta que la carne esté tierna y la salsa espese.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     }
   ],
   "tiempo_v2": {

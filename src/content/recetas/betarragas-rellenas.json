@@ -1,7 +1,14 @@
 {
   "titulo": "Betarragas Rellenas",
   "categoria": "ensaladas",
-  "tags": ["betarragas rellenas", "betarraga", "quesillo", "nueces", "mayonesa", "entrada"],
+  "tags": [
+    "betarragas rellenas",
+    "betarraga",
+    "quesillo",
+    "nueces",
+    "mayonesa",
+    "entrada"
+  ],
   "imagen": null,
   "tiempo": "40 min",
   "porciones": "6 personas",
@@ -61,14 +68,14 @@
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "pimienta",
       "nota": "a gusto",
@@ -78,11 +85,15 @@
   "pasos_v2": [
     {
       "texto": "Lavar muy bien las betarragas y quitarles los tallos.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Ponerlas a cocer en agua fría con 1 cucharada rasa de sal por 30-40 minutos, hasta que estén blandas pero firmes.",
-      "ingredientes": [7],
+      "ingredientes": [
+        7
+      ],
       "timers": [
         {
           "minutos": 40,
@@ -95,7 +106,9 @@
     },
     {
       "texto": "Tostar las nueces en el horno a 180 °C por 5-8 minutos. Cuando estén tibias, refregarlas con un paño hasta que se suelte el hollejo y luego molerlas.",
-      "ingredientes": [4],
+      "ingredientes": [
+        4
+      ],
       "timers": [
         {
           "minutos": 8,
@@ -105,23 +118,38 @@
     },
     {
       "texto": "Moler el quesillo y mezclarlo con la mitad de la mayonesa y las nueces.",
-      "ingredientes": [2, 3, 4]
+      "ingredientes": [
+        2,
+        3,
+        4
+      ]
     },
     {
       "texto": "Aliñar las betarragas con sal, pimienta y jugo de limón, por dentro y por fuera.",
-      "ingredientes": [1, 6, 7, 8]
+      "ingredientes": [
+        1,
+        6,
+        7,
+        8
+      ]
     },
     {
       "texto": "Rellenar las betarragas con la mezcla.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Cubrir la parte superior con el resto de la mayonesa.",
-      "ingredientes": [3]
+      "ingredientes": [
+        3
+      ]
     },
     {
       "texto": "Acompañar con hojas de lechuga.",
-      "ingredientes": [5]
+      "ingredientes": [
+        5
+      ]
     }
   ],
   "tiempo_v2": {

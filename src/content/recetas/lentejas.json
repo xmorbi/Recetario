@@ -1,7 +1,14 @@
 {
   "titulo": "Lentejas",
   "categoria": "principales",
-  "tags": ["lentejas", "legumbre", "guiso", "olla", "invierno", "cotidiano"],
+  "tags": [
+    "lentejas",
+    "legumbre",
+    "guiso",
+    "olla",
+    "invierno",
+    "cotidiano"
+  ],
   "imagen": null,
   "tiempo": "50 min",
   "porciones": "4 personas",
@@ -92,14 +99,14 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "agua o caldo para cubrir",
       "nota": "a gusto",
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal, pimienta y aceite",
       "nota": "a gusto",
@@ -109,11 +116,20 @@
   "pasos_v2": [
     {
       "texto": "Sofríe la cebolla, el ajo, la zanahoria y el pimentón en aceite hasta que estén tiernos.",
-      "ingredientes": [2, 3, 4, 5]
+      "ingredientes": [
+        2,
+        3,
+        4,
+        5
+      ]
     },
     {
       "texto": "Agrega la longaniza si usas y cocina 3 minutos. Añade el ají de color y el orégano.",
-      "ingredientes": [6, 8, 9],
+      "ingredientes": [
+        6,
+        8,
+        9
+      ],
       "timers": [
         {
           "minutos": 3,
@@ -123,11 +139,17 @@
     },
     {
       "texto": "Incorpora las lentejas escurridas y cubre con agua o caldo. Agrega el laurel.",
-      "ingredientes": [1, 7, 11]
+      "ingredientes": [
+        1,
+        7,
+        11
+      ]
     },
     {
       "texto": "Cocina a fuego medio 30-40 minutos, hasta que las lentejas estén blandas.",
-      "ingredientes": [1],
+      "ingredientes": [
+        1
+      ],
       "timers": [
         {
           "minutos": 40,
@@ -137,7 +159,10 @@
     },
     {
       "texto": "Si usas arroz, agrégalo en los últimos 15 minutos. Condimenta con sal y pimienta.",
-      "ingredientes": [10, 12],
+      "ingredientes": [
+        10,
+        12
+      ],
       "timers": [
         {
           "minutos": 15,

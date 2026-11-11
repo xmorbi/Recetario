@@ -1,7 +1,14 @@
 {
   "titulo": "Ensalada de Pencas",
   "categoria": "ensaladas",
-  "tags": ["ensalada de pencas", "pencas", "acelga", "huevo duro", "aceitunas", "ensalada"],
+  "tags": [
+    "ensalada de pencas",
+    "pencas",
+    "acelga",
+    "huevo duro",
+    "aceitunas",
+    "ensalada"
+  ],
   "imagen": null,
   "tiempo": "3 h (incluye remojo)",
   "porciones": "4 a 6 personas",
@@ -42,28 +49,28 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "vinagre",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "aceite",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "pimienta",
       "nota": "a gusto",
@@ -73,25 +80,38 @@
   "pasos_v2": [
     {
       "texto": "Lavar bien los tallos de pencas, pelar y eliminar los hilos.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Picar en cuadritos finos en la tabla cocinera."
     },
     {
       "texto": "Dejar la penca picada en abundante agua fría por varias horas para que elimine su sabor amargo.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Escurrirla bien y ponerla en una ensaladera honda."
     },
     {
       "texto": "Cocer los huevos hasta que estén duros, picarlos en trozos de regular tamaño y añadirlos a la penca.",
-      "ingredientes": [1, 2]
+      "ingredientes": [
+        1,
+        2
+      ]
     },
     {
       "texto": "Incorporar, finalmente, las aceitunas y aliñar.",
-      "ingredientes": [3, 4, 5, 6, 7]
+      "ingredientes": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
     }
   ],
   "tiempo_v2": {

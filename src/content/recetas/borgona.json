@@ -1,7 +1,14 @@
 {
   "titulo": "Borgoña",
   "categoria": "bebidas",
-  "tags": ["bebida", "alcohol", "vino", "frutillas", "verano", "tradicional"],
+  "tags": [
+    "bebida",
+    "alcohol",
+    "vino",
+    "frutillas",
+    "verano",
+    "tradicional"
+  ],
   "imagen": "img/borgona.jpg",
   "tiempo": "15 min + maceración",
   "porciones": "6 vasos",
@@ -50,7 +57,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "hielo",
       "nota": "a gusto",
@@ -68,11 +75,16 @@
   "pasos_v2": [
     {
       "texto": "Lava bien las frutillas y córtalas por la mitad.",
-      "ingredientes": [2]
+      "ingredientes": [
+        2
+      ]
     },
     {
       "texto": "En una jarra grande, pon las frutillas y espolvorea el azúcar. Deja reposar 15 minutos para que suelten su jugo.",
-      "ingredientes": [2, 3],
+      "ingredientes": [
+        2,
+        3
+      ],
       "timers": [
         {
           "minutos": 15,
@@ -82,15 +94,23 @@
     },
     {
       "texto": "Vierte el vino tinto bien helado sobre las frutillas.",
-      "ingredientes": [1, 2]
+      "ingredientes": [
+        1,
+        2
+      ]
     },
     {
       "texto": "Añade hielo y, si quieres, menta fresca.",
-      "ingredientes": [4, 5]
+      "ingredientes": [
+        4,
+        5
+      ]
     },
     {
       "texto": "Sirve inmediatamente en vasos altos, con algunas frutillas en cada vaso.",
-      "ingredientes": [2]
+      "ingredientes": [
+        2
+      ]
     }
   ],
   "tiempo_v2": {

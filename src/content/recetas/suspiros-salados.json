@@ -1,7 +1,13 @@
 {
   "titulo": "Suspiros Salados",
   "categoria": "ensaladas",
-  "tags": ["suspiros salados", "jamón", "queso", "fritura", "aperitivo"],
+  "tags": [
+    "suspiros salados",
+    "jamón",
+    "queso",
+    "fritura",
+    "aperitivo"
+  ],
   "imagen": null,
   "tiempo": "30 min",
   "porciones": "6 a 8 personas",
@@ -52,7 +58,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal",
       "nota": "a gusto",
@@ -69,26 +75,41 @@
   "pasos_v2": [
     {
       "texto": "Hervir 3 tazas de agua con margarina y sal.",
-      "ingredientes": [2, 6]
+      "ingredientes": [
+        2,
+        6
+      ]
     },
     {
       "texto": "Retirar del fuego y agregar la harina de una sola vez.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Poner al fuego nuevamente. Revolver hasta que la pasta se despegue del fondo de la olla."
     },
     {
       "texto": "Una vez tibio agregar los huevos uno a uno mezclando bien.",
-      "ingredientes": [3, 4, 5, 7]
+      "ingredientes": [
+        3,
+        4,
+        5,
+        7
+      ]
     },
     {
       "texto": "Agregar el jamón y el queso.",
-      "ingredientes": [4, 5]
+      "ingredientes": [
+        4,
+        5
+      ]
     },
     {
       "texto": "Dejar reposar un momento y luego freír por cucharaditas en aceite hirviendo.",
-      "ingredientes": [7]
+      "ingredientes": [
+        7
+      ]
     }
   ],
   "tiempo_v2": {

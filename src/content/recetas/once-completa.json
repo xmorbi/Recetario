@@ -1,7 +1,13 @@
 {
   "titulo": "Once completa",
   "categoria": "once",
-  "tags": ["once", "ritual", "tradicional", "compartir", "chile"],
+  "tags": [
+    "once",
+    "ritual",
+    "tradicional",
+    "compartir",
+    "chile"
+  ],
   "imagen": null,
   "tiempo": "20 min",
   "porciones": "2 personas",
@@ -88,7 +94,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "azúcar, sal y aceite",
       "nota": "a gusto",
@@ -98,7 +104,10 @@
   "pasos_v2": [
     {
       "texto": "Pon el agua a hervir para el té. Mientras hierve, calienta los panes en el horno o tostador 2 minutos por lado.",
-      "ingredientes": [1, 7],
+      "ingredientes": [
+        1,
+        7
+      ],
       "timers": [
         {
           "minutos": 2,
@@ -108,23 +117,46 @@
     },
     {
       "texto": "Cocina los huevos fritos con un poco de aceite, dejando la yema líquida.",
-      "ingredientes": [3, 10]
+      "ingredientes": [
+        3,
+        10
+      ]
     },
     {
       "texto": "Pisa la palta con un tenedor, agrégale sal. No hace falta limón.",
-      "ingredientes": [2, 10]
+      "ingredientes": [
+        2,
+        10
+      ]
     },
     {
       "texto": "Pon en la mesa: el pan caliente, la palta, los huevos fritos, el queso en láminas, la mantequilla y el manjar.",
-      "ingredientes": [1, 2, 3, 4, 5, 6]
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
     },
     {
       "texto": "Sirve el té con leche (o el café) bien caliente.",
-      "ingredientes": [7, 8, 9]
+      "ingredientes": [
+        7,
+        8,
+        9
+      ]
     },
     {
       "texto": "Cada persona arma el pan como prefiere: pan con palta, pan con queso, pan con huevo, pan con manjar. Los panes se repiten.",
-      "ingredientes": [1, 2, 3, 4, 6]
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ]
     }
   ],
   "tiempo_v2": {

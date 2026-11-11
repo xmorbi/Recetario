@@ -1,7 +1,13 @@
 {
   "titulo": "Crema de Choclo",
   "categoria": "sopas",
-  "tags": ["crema de choclo", "choclo", "albahaca", "crema", "sopa"],
+  "tags": [
+    "crema de choclo",
+    "choclo",
+    "albahaca",
+    "crema",
+    "sopa"
+  ],
   "imagen": null,
   "tiempo": "30 min",
   "porciones": "4 a 6 personas",
@@ -34,7 +40,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "hojas de albahaca",
       "nota": "a gusto",
@@ -53,14 +59,14 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "ají picante",
       "nota": "a gusto",
@@ -78,15 +84,25 @@
   "pasos_v2": [
     {
       "texto": "Rallar los choclos.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Derretir la mantequilla en la olla.",
-      "ingredientes": [4]
+      "ingredientes": [
+        4
+      ]
     },
     {
       "texto": "Agregar la cebolla picada en cuadritos, la sal, albahaca, choclos rallados y finalmente 1 litro de agua.",
-      "ingredientes": [1, 2, 3, 6, 7]
+      "ingredientes": [
+        1,
+        2,
+        3,
+        6,
+        7
+      ]
     },
     {
       "texto": "Revolver bien, sazonar y hervir a fuego suave unos 20 minutos.",
@@ -99,15 +115,22 @@
     },
     {
       "texto": "Cortar el pan en cubos pequeños y dorarlos en mantequilla o aceite.",
-      "ingredientes": [4, 8]
+      "ingredientes": [
+        4,
+        8
+      ]
     },
     {
       "texto": "Cuando la sopa esté lista, batir la crema y agregarla revolviendo bien.",
-      "ingredientes": [5]
+      "ingredientes": [
+        5
+      ]
     },
     {
       "texto": "Al momento de servir poner en cada plato una cucharada de pan frito.",
-      "ingredientes": [8]
+      "ingredientes": [
+        8
+      ]
     }
   ],
   "tiempo_v2": {

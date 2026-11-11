@@ -1,7 +1,14 @@
 {
   "titulo": "Churros",
   "categoria": "dulces",
-  "tags": ["churros", "fritura", "dulce", "once", "merienda", "reposteria"],
+  "tags": [
+    "churros",
+    "fritura",
+    "dulce",
+    "once",
+    "merienda",
+    "reposteria"
+  ],
   "imagen": "img/churros.jpg",
   "tiempo": "30 min",
   "porciones": "15 churros",
@@ -70,7 +77,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "manjar o chocolate para rellenar",
       "nota": "a gusto",
@@ -81,26 +88,41 @@
   "pasos_v2": [
     {
       "texto": "Hierve el agua con el azúcar y la sal. Retira del fuego y agrega la harina de golpe. Revuelve hasta formar una masa espesa.",
-      "ingredientes": [1, 2, 3, 4, 7]
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        7
+      ]
     },
     {
       "texto": "Agrega los polvos de hornear y mezcla.",
-      "ingredientes": [5]
+      "ingredientes": [
+        5
+      ]
     },
     {
       "texto": "Pon la masa en una manga pastelera con boquilla de estrella."
     },
     {
       "texto": "Calienta abundante aceite a 180 °C.",
-      "ingredientes": [6]
+      "ingredientes": [
+        6
+      ]
     },
     {
       "texto": "Forma churros de 10 cm directamente en el aceite caliente. Fríe hasta que estén dorados por ambos lados.",
-      "ingredientes": [6]
+      "ingredientes": [
+        6
+      ]
     },
     {
       "texto": "Escurre sobre papel absorbente. Pasa por azúcar con canela y sirve calientes.",
-      "ingredientes": [3, 7]
+      "ingredientes": [
+        3,
+        7
+      ]
     }
   ],
   "tiempo_v2": {

@@ -1,7 +1,14 @@
 {
   "titulo": "Chupe de pollo",
   "categoria": "sopas",
-  "tags": ["pollo", "chupe", "sopa", "olla", "comfort", "casero"],
+  "tags": [
+    "pollo",
+    "chupe",
+    "sopa",
+    "olla",
+    "comfort",
+    "casero"
+  ],
   "imagen": null,
   "tiempo": "50 min",
   "porciones": "4 personas",
@@ -99,7 +106,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal, pimienta, orégano y merkén",
       "nota": "a gusto",
@@ -109,7 +116,10 @@
   "pasos_v2": [
     {
       "texto": "Cocina el pollo en agua con sal por 20 minutos. Retira, desmenuza la carne y reserva el caldo.",
-      "ingredientes": [1, 11],
+      "ingredientes": [
+        1,
+        11
+      ],
       "timers": [
         {
           "minutos": 20,
@@ -119,11 +129,20 @@
     },
     {
       "texto": "Sofríe la cebolla, el ajo y el pimentón en mantequilla hasta que estén transparentes. Agrega el tomate y condimenta.",
-      "ingredientes": [3, 4, 5, 6, 10]
+      "ingredientes": [
+        3,
+        4,
+        5,
+        6,
+        10
+      ]
     },
     {
       "texto": "Añade las papas y el caldo de pollo (unos 2 litros). Cocina 15 minutos hasta que las papas estén tiernas.",
-      "ingredientes": [1, 2],
+      "ingredientes": [
+        1,
+        2
+      ],
       "timers": [
         {
           "minutos": 15,
@@ -133,7 +152,10 @@
     },
     {
       "texto": "Incorpora el pollo desmenuzado y la crema. Cocina 5 minutos más.",
-      "ingredientes": [1, 7],
+      "ingredientes": [
+        1,
+        7
+      ],
       "timers": [
         {
           "minutos": 5,
@@ -146,7 +168,10 @@
     },
     {
       "texto": "Espolvorea pan rallado y queso por encima. Gratina 5 minutos en el horno a 200 °C, hasta dorar.",
-      "ingredientes": [8, 9],
+      "ingredientes": [
+        8,
+        9
+      ],
       "timers": [
         {
           "minutos": 5,

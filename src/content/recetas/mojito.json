@@ -1,7 +1,14 @@
 {
   "titulo": "Mojito",
   "categoria": "bebidas",
-  "tags": ["mojito", "ron", "menta", "limón de Pica", "cóctel", "tragos"],
+  "tags": [
+    "mojito",
+    "ron",
+    "menta",
+    "limón de Pica",
+    "cóctel",
+    "tragos"
+  ],
   "imagen": null,
   "tiempo": "5 min",
   "porciones": "1 persona",
@@ -37,14 +44,14 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "soda",
       "nota": "a gusto",
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "azúcar",
       "nota": "a gusto",
@@ -61,18 +68,28 @@
   "pasos_v2": [
     {
       "texto": "Colocar en un vaso largo la menta, el azúcar y el jugo del limón; machacar cuidando de no moler las hojas.",
-      "ingredientes": [2, 3, 5]
+      "ingredientes": [
+        2,
+        3,
+        5
+      ]
     },
     {
       "texto": "Colocar el hielo, el ron y completar con soda.",
-      "ingredientes": [1, 4, 6]
+      "ingredientes": [
+        1,
+        4,
+        6
+      ]
     },
     {
       "texto": "Revolver bien."
     },
     {
       "texto": "Decorar con una rodaja de limón.",
-      "ingredientes": [3]
+      "ingredientes": [
+        3
+      ]
     }
   ],
   "tiempo_v2": {

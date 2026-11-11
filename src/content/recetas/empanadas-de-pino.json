@@ -1,7 +1,13 @@
 {
   "titulo": "Empanadas de pino",
   "categoria": "principales",
-  "tags": ["empanada", "horno", "pino", "plato principal", "fiestas patrias"],
+  "tags": [
+    "empanada",
+    "horno",
+    "pino",
+    "plato principal",
+    "fiestas patrias"
+  ],
   "imagen": "img/Empanadas-de-pino.jpg",
   "tiempo": "90 min + reposo",
   "porciones": "12 unidades",
@@ -106,7 +112,7 @@
       "seccion": "Pino"
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal y pimienta",
       "nota": "a gusto",
@@ -139,7 +145,9 @@
   "pasos_v2": [
     {
       "texto": "Sofríe la cebolla en aceite a fuego medio hasta que esté transparente, unos 10 minutos.",
-      "ingredientes": [7],
+      "ingredientes": [
+        7
+      ],
       "timers": [
         {
           "minutos": 10,
@@ -149,7 +157,12 @@
     },
     {
       "texto": "Agrega la carne, el comino, el orégano y el ají de color. Cocina 10 minutos más y condimenta.",
-      "ingredientes": [6, 8, 9, 10],
+      "ingredientes": [
+        6,
+        8,
+        9,
+        10
+      ],
       "timers": [
         {
           "minutos": 10,
@@ -162,7 +175,15 @@
     },
     {
       "texto": "Mezcla la harina con la sal, añade la manteca, el huevo y el agua tibia. Amasa hasta lograr una masa lisa.",
-      "ingredientes": [1, 2, 3, 4, 5, 11, 13]
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        11,
+        13
+      ]
     },
     {
       "texto": "Reposa la masa 30 minutos. Divídela en 12 bollos y estira cada uno en un disco de unos 15 cm.",
@@ -175,14 +196,22 @@
     },
     {
       "texto": "Rellena con dos cucharadas de pino, una aceituna, unas pasas y un trozo de huevo duro.",
-      "ingredientes": [3, 12, 13, 14]
+      "ingredientes": [
+        3,
+        12,
+        13,
+        14
+      ]
     },
     {
       "texto": "Humedece el borde, cierra con un repulgue y pincha la masa con un tenedor."
     },
     {
       "texto": "Pinta con huevo batido y hornea a 200 °C por 25 a 30 minutos.",
-      "ingredientes": [3, 13],
+      "ingredientes": [
+        3,
+        13
+      ],
       "timers": [
         {
           "minutos": 30,

@@ -1,7 +1,14 @@
 {
   "titulo": "Pan de huevo",
   "categoria": "panes",
-  "tags": ["pan", "huevo", "horno", "masa", "once", "tradicional"],
+  "tags": [
+    "pan",
+    "huevo",
+    "horno",
+    "masa",
+    "once",
+    "tradicional"
+  ],
   "imagen": null,
   "tiempo": "2 h 30 min",
   "porciones": "12 panes",
@@ -69,7 +76,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "ralladura de 1 limón",
       "nota": "a gusto",
@@ -92,7 +99,11 @@
   "pasos_v2": [
     {
       "texto": "Activa la levadura en la leche tibia con una cucharadita de azúcar. Reposa 10 minutos hasta que espume.",
-      "ingredientes": [2, 5, 6],
+      "ingredientes": [
+        2,
+        5,
+        6
+      ],
       "timers": [
         {
           "minutos": 10,
@@ -102,11 +113,22 @@
     },
     {
       "texto": "Bate la mantequilla con el azúcar. Agrega los huevos uno a uno, la vainilla y la ralladura.",
-      "ingredientes": [2, 3, 4, 7, 8, 10]
+      "ingredientes": [
+        2,
+        3,
+        4,
+        7,
+        8,
+        10
+      ]
     },
     {
       "texto": "Incorpora la levadura y la harina cernida con la sal. Amasa hasta obtener una masa suave.",
-      "ingredientes": [1, 5, 9]
+      "ingredientes": [
+        1,
+        5,
+        9
+      ]
     },
     {
       "texto": "Deja levar tapada 1 hora, hasta que doble su volumen.",
@@ -128,7 +150,10 @@
     },
     {
       "texto": "Pinta con huevo batido y hornea a 180 °C por 20-25 minutos, hasta dorar.",
-      "ingredientes": [4, 10],
+      "ingredientes": [
+        4,
+        10
+      ],
       "timers": [
         {
           "minutos": 25,

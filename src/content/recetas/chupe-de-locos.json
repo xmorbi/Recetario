@@ -1,7 +1,14 @@
 {
   "titulo": "Chupe de locos",
   "categoria": "mar",
-  "tags": ["marisco", "loco", "horno", "paila", "lujo", "tradicional"],
+  "tags": [
+    "marisco",
+    "loco",
+    "horno",
+    "paila",
+    "lujo",
+    "tradicional"
+  ],
   "imagen": null,
   "tiempo": "50 min",
   "porciones": "4 personas",
@@ -106,7 +113,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal, pimienta y orégano",
       "nota": "a gusto",
@@ -116,7 +123,10 @@
   "pasos_v2": [
     {
       "texto": "Si usas locos frescos, cocínalos en agua hirviendo con sal por 40-45 minutos, hasta que estén tiernos. Deja enfriar en el agua y córtalos en láminas de 1 cm de grosor.",
-      "ingredientes": [1, 12],
+      "ingredientes": [
+        1,
+        12
+      ],
       "timers": [
         {
           "minutos": 45,
@@ -126,7 +136,13 @@
     },
     {
       "texto": "Sofríe la cebolla, el ajo y el pimentón en mantequilla hasta que estén transparentes. Agrega el tomate y cocina 5 minutos.",
-      "ingredientes": [2, 3, 4, 5, 6],
+      "ingredientes": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "timers": [
         {
           "minutos": 5,
@@ -136,11 +152,18 @@
     },
     {
       "texto": "Vierte el vino blanco y deja evaporar el alcohol. Condimenta con merkén, sal, pimienta y orégano.",
-      "ingredientes": [8, 11, 12]
+      "ingredientes": [
+        8,
+        11,
+        12
+      ]
     },
     {
       "texto": "Incorpora la crema y cocina 2 minutos, hasta que la salsa espese ligeramente.",
-      "ingredientes": [7, 12],
+      "ingredientes": [
+        7,
+        12
+      ],
       "timers": [
         {
           "minutos": 2,
@@ -150,15 +173,24 @@
     },
     {
       "texto": "Reparte la mitad de la salsa en pailas de greda individuales. Coloca encima las láminas de loco.",
-      "ingredientes": [1, 12]
+      "ingredientes": [
+        1,
+        12
+      ]
     },
     {
       "texto": "Cubre con el resto de la salsa, espolvorea pan rallado y luego el queso parmesano.",
-      "ingredientes": [9, 10, 12]
+      "ingredientes": [
+        9,
+        10,
+        12
+      ]
     },
     {
       "texto": "Gratina a 200 °C por 8-10 minutos, hasta que el queso esté dorado y burbujeante.",
-      "ingredientes": [10],
+      "ingredientes": [
+        10
+      ],
       "timers": [
         {
           "minutos": 10,

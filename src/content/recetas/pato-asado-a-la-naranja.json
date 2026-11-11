@@ -1,7 +1,14 @@
 {
   "titulo": "Pato Asado a la Naranja",
   "categoria": "principales",
-  "tags": ["pato asado a la naranja", "pato", "naranja", "miel", "horno", "aves"],
+  "tags": [
+    "pato asado a la naranja",
+    "pato",
+    "naranja",
+    "miel",
+    "horno",
+    "aves"
+  ],
   "imagen": null,
   "tiempo": "1 h",
   "porciones": "2 a 4 personas",
@@ -45,14 +52,14 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "pimienta",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal",
       "nota": "a gusto",
@@ -62,18 +69,30 @@
   "pasos_v2": [
     {
       "texto": "Salpimentar las mitades de pato y untarlas con aceite.",
-      "ingredientes": [1, 2, 6]
+      "ingredientes": [
+        1,
+        2,
+        6
+      ]
     },
     {
       "texto": "Asarlas en horno caliente hasta que estén doradas."
     },
     {
       "texto": "Mientras tanto, calentar la miel y mezclarla con el jugo de naranja y el aceite. Salpimentar.",
-      "ingredientes": [2, 3, 4, 6]
+      "ingredientes": [
+        2,
+        3,
+        4,
+        6
+      ]
     },
     {
       "texto": "Volcar poco a poco la salsa sobre el pato y cocerlo 35 minutos a horno medio.",
-      "ingredientes": [1, 6],
+      "ingredientes": [
+        1,
+        6
+      ],
       "timers": [
         {
           "minutos": 35,
@@ -83,7 +102,10 @@
     },
     {
       "texto": "Retirar el pato del horno y servirlo con la salsa resultante.",
-      "ingredientes": [1, 6]
+      "ingredientes": [
+        1,
+        6
+      ]
     }
   ],
   "tiempo_v2": {

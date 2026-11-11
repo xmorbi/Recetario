@@ -1,7 +1,14 @@
 {
   "titulo": "Guatitas",
   "categoria": "principales",
-  "tags": ["guatitas", "olla", "popular", "tradicional", "invierno", "casero"],
+  "tags": [
+    "guatitas",
+    "olla",
+    "popular",
+    "tradicional",
+    "invierno",
+    "casero"
+  ],
   "imagen": "img/guatitas.jpg",
   "tiempo": "2 h",
   "porciones": "4 personas",
@@ -90,14 +97,14 @@
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "agua o caldo para cubrir",
       "nota": "a gusto",
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal, pimienta y aceite",
       "nota": "a gusto",
@@ -107,11 +114,19 @@
   "pasos_v2": [
     {
       "texto": "Lava muy bien las guatitas con agua fría y limón varias veces. Este paso es clave: las guatitas tienen olor fuerte y hay que lavarlas hasta que el agua salga clara.",
-      "ingredientes": [1, 10, 11]
+      "ingredientes": [
+        1,
+        10,
+        11
+      ]
     },
     {
       "texto": "Cocina las guatitas en agua hirviendo con laurel y un chorrito de vinagre por 1 hora a 1 hora y media, hasta que estén tiernas. Escurre y corta en tiras o trozos.",
-      "ingredientes": [1, 9, 10],
+      "ingredientes": [
+        1,
+        9,
+        10
+      ],
       "timers": [
         {
           "minutos": 90,
@@ -125,11 +140,21 @@
     },
     {
       "texto": "En otra olla, sofríe la cebolla, el ajo, la zanahoria y el pimentón hasta que estén transparentes.",
-      "ingredientes": [2, 3, 4, 5, 11]
+      "ingredientes": [
+        2,
+        3,
+        4,
+        5,
+        11
+      ]
     },
     {
       "texto": "Agrega el tomate, el ají de color y el orégano. Cocina 5 minutos.",
-      "ingredientes": [6, 7, 8],
+      "ingredientes": [
+        6,
+        7,
+        8
+      ],
       "timers": [
         {
           "minutos": 5,
@@ -139,7 +164,10 @@
     },
     {
       "texto": "Incorpora las guatitas cocidas y cubre con agua o caldo. Cocina a fuego lento 30 minutos más.",
-      "ingredientes": [1, 10],
+      "ingredientes": [
+        1,
+        10
+      ],
       "timers": [
         {
           "minutos": 30,
@@ -149,7 +177,9 @@
     },
     {
       "texto": "Condimenta con sal y pimienta. Sirve caliente con papas cocidas o arroz.",
-      "ingredientes": [11]
+      "ingredientes": [
+        11
+      ]
     }
   ],
   "tiempo_v2": {

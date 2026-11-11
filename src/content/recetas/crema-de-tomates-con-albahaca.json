@@ -1,7 +1,13 @@
 {
   "titulo": "Crema de Tomates con Albahaca",
   "categoria": "sopas",
-  "tags": ["crema de tomates con albahaca", "tomates", "albahaca", "vino blanco", "sopa"],
+  "tags": [
+    "crema de tomates con albahaca",
+    "tomates",
+    "albahaca",
+    "vino blanco",
+    "sopa"
+  ],
   "imagen": null,
   "tiempo": "40 min",
   "porciones": "4 a 6 personas",
@@ -31,9 +37,9 @@
       "escalable": true
     },
     {
-      "cantidad": 2,
-      "unidad": null,
-      "nombre": "0.5 cucharadas de harina",
+      "cantidad": 2.5,
+      "unidad": "cucharadas",
+      "nombre": "harina",
       "nota": "25 g",
       "escalable": true
     },
@@ -64,7 +70,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "salsa de ají",
       "nota": "a gusto",
@@ -92,14 +98,14 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "pimienta",
       "nota": "a gusto",
@@ -109,15 +115,25 @@
   "pasos_v2": [
     {
       "texto": "Pelar los tomates, quitar las pepas y trocearlos.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Picar finamente la cebolla y el ajo, y freírlos en el aceite caliente revolviendo para que no se doren.",
-      "ingredientes": [4, 6, 8]
+      "ingredientes": [
+        4,
+        6,
+        8
+      ]
     },
     {
       "texto": "Agregar los tomates, sal, pimienta y cocinar unos 10 minutos.",
-      "ingredientes": [1, 11, 12],
+      "ingredientes": [
+        1,
+        11,
+        12
+      ],
       "timers": [
         {
           "minutos": 10,
@@ -127,11 +143,18 @@
     },
     {
       "texto": "Disolver la harina en 1/4 taza de agua fría y agregarla a la olla, revolviendo constantemente para que no se formen grumos.",
-      "ingredientes": [2]
+      "ingredientes": [
+        2
+      ]
     },
     {
       "texto": "Sazonar con salsa inglesa, ají al gusto y el vino. Cocinar durante unos 20 minutos.",
-      "ingredientes": [3, 5, 7, 11],
+      "ingredientes": [
+        3,
+        5,
+        7,
+        11
+      ],
       "timers": [
         {
           "minutos": 20,
@@ -144,7 +167,10 @@
     },
     {
       "texto": "Servir en tazones, espolvorear albahaca y ciboulette picados finos.",
-      "ingredientes": [9, 10]
+      "ingredientes": [
+        9,
+        10
+      ]
     }
   ],
   "tiempo_v2": {

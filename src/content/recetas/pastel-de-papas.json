@@ -1,7 +1,14 @@
 {
   "titulo": "Pastel de papas",
   "categoria": "principales",
-  "tags": ["pastel", "papa", "carne", "horno", "plato principal", "cotidiano"],
+  "tags": [
+    "pastel",
+    "papa",
+    "carne",
+    "horno",
+    "plato principal",
+    "cotidiano"
+  ],
   "imagen": null,
   "tiempo": "1 h",
   "porciones": "6 personas",
@@ -110,7 +117,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal, pimienta y aceite",
       "nota": "a gusto",
@@ -120,15 +127,30 @@
   "pasos_v2": [
     {
       "texto": "Cuece las papas y haz un puré con la leche y la mantequilla. Reserva.",
-      "ingredientes": [1, 2, 3]
+      "ingredientes": [
+        1,
+        2,
+        3
+      ]
     },
     {
       "texto": "Sofríe la cebolla, el ajo y el pimentón. Agrega la carne y condimenta con ají de color, orégano, sal y pimienta.",
-      "ingredientes": [4, 5, 6, 7, 9, 10, 14]
+      "ingredientes": [
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        14
+      ]
     },
     {
       "texto": "Cocina la carne 10 minutos, agrega el tomate y deja reducir.",
-      "ingredientes": [4, 8],
+      "ingredientes": [
+        4,
+        8
+      ],
       "timers": [
         {
           "minutos": 10,
@@ -138,7 +160,11 @@
     },
     {
       "texto": "En una fuente para horno, extiende la mitad del puré. Encima pon el pino, los huevos duros, las aceitunas y las pasas.",
-      "ingredientes": [11, 12, 13]
+      "ingredientes": [
+        11,
+        12,
+        13
+      ]
     },
     {
       "texto": "Cubre con el resto del puré y alisa la superficie con un tenedor."

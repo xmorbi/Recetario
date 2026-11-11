@@ -1,7 +1,14 @@
 {
   "titulo": "Sopaipillas pasadas",
   "categoria": "panes",
-  "tags": ["sopaipilla", "dulce", "chancaca", "invierno", "merienda", "once"],
+  "tags": [
+    "sopaipilla",
+    "dulce",
+    "chancaca",
+    "invierno",
+    "merienda",
+    "once"
+  ],
   "imagen": "img/Sopaipillas-pasadas.jpg",
   "tiempo": "45 min",
   "porciones": "20 unidades",
@@ -83,7 +90,7 @@
       "seccion": "Chancaca"
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "cáscara de 1 naranja",
       "nota": "a gusto",
@@ -101,11 +108,18 @@
   "pasos_v2": [
     {
       "texto": "Mezcla el zapallo, la harina, la sal y los polvos de hornear. Agrega la manteca y amasa hasta obtener una masa suave.",
-      "ingredientes": [1, 2, 3, 4]
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4
+      ]
     },
     {
       "texto": "Reposa 20 min, estira a 5 mm y corta discos de 8 cm. Pincha con un tenedor y fríe en aceite caliente hasta dorar.",
-      "ingredientes": [5],
+      "ingredientes": [
+        5
+      ],
       "timers": [
         {
           "minutos": 20,
@@ -115,7 +129,13 @@
     },
     {
       "texto": "Aparte, hierve la chancaca con el agua, la canela, la cáscara de naranja y los clavos hasta formar un almíbar.",
-      "ingredientes": [6, 7, 8, 9, 10]
+      "ingredientes": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
     },
     {
       "texto": "Baña las sopaipillas recién fritas con el almíbar caliente y sirve."

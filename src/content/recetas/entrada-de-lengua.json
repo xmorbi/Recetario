@@ -1,7 +1,14 @@
 {
   "titulo": "Entrada de Lengua",
   "categoria": "ensaladas",
-  "tags": ["entrada de lengua", "lengua de vacuno", "mayonesa", "pickles", "mostaza", "entrada"],
+  "tags": [
+    "entrada de lengua",
+    "lengua de vacuno",
+    "mayonesa",
+    "pickles",
+    "mostaza",
+    "entrada"
+  ],
   "imagen": null,
   "tiempo": "2 a 3 horas (cocción de lengua)",
   "porciones": "6 a 8 personas",
@@ -58,28 +65,28 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "ajo",
       "nota": "a gusto",
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "pimienta entera",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "apio",
       "nota": "a gusto",
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "lechuga",
       "nota": "a gusto",
@@ -89,22 +96,42 @@
   "pasos_v2": [
     {
       "texto": "Cocer la lengua en abundante agua con sal y verduras para el sabor (perejil, apio, ajo y pimienta entera).",
-      "ingredientes": [1, 5, 6, 7, 8, 9, 10]
+      "ingredientes": [
+        1,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
     },
     {
       "texto": "Pelarla y volver a hervir hasta que se ablande."
     },
     {
       "texto": "Mezclar los pickles picados con la mostaza, el cilantro y la mayonesa.",
-      "ingredientes": [2, 3, 4, 5]
+      "ingredientes": [
+        2,
+        3,
+        4,
+        5
+      ]
     },
     {
       "texto": "Cortar la lengua en rebanadas y cubrir con la salsa de mayonesa.",
-      "ingredientes": [1, 2]
+      "ingredientes": [
+        1,
+        2
+      ]
     },
     {
       "texto": "Acompañar con una ensalada de apio que puede llevar palta o corazones de lechuga.",
-      "ingredientes": [6, 9, 10]
+      "ingredientes": [
+        6,
+        9,
+        10
+      ]
     }
   ],
   "tiempo_v2": {

@@ -1,7 +1,13 @@
 {
   "titulo": "Tequila Sunrise",
   "categoria": "bebidas",
-  "tags": ["tequila sunrise", "tequila", "naranja", "granadina", "tragos"],
+  "tags": [
+    "tequila sunrise",
+    "tequila",
+    "naranja",
+    "granadina",
+    "tragos"
+  ],
   "imagen": null,
   "tiempo": "5 min",
   "porciones": "1 persona",
@@ -31,21 +37,21 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "gotas de granadina",
       "nota": "a gusto",
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "rodaja de naranja",
       "nota": "a gusto",
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "hielo",
       "nota": "a gusto",
@@ -55,11 +61,19 @@
   "pasos_v2": [
     {
       "texto": "Colocar en un vaso alto el hielo, el tequila, el jugo y la granadina (en ese orden).",
-      "ingredientes": [1, 2, 3, 5]
+      "ingredientes": [
+        1,
+        2,
+        3,
+        5
+      ]
     },
     {
       "texto": "Decorar con 1 rodaja de naranja.",
-      "ingredientes": [2, 4]
+      "ingredientes": [
+        2,
+        4
+      ]
     }
   ],
   "tiempo_v2": {

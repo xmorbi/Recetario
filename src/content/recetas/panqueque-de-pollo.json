@@ -1,7 +1,14 @@
 {
   "titulo": "Panqueque de Pollo",
   "categoria": "principales",
-  "tags": ["panqueque de pollo", "pollo", "ricota", "tomate", "nueces", "aves"],
+  "tags": [
+    "panqueque de pollo",
+    "pollo",
+    "ricota",
+    "tomate",
+    "nueces",
+    "aves"
+  ],
   "imagen": null,
   "tiempo": "30 min",
   "porciones": "4 personas",
@@ -58,7 +65,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "albahaca",
       "nota": "a gusto",
@@ -68,19 +75,30 @@
   "pasos_v2": [
     {
       "texto": "Cortar la pechuga en cubos y cocinar a la plancha en una sartén.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Una vez que esté frío, agregar los tomates picados en cubos y las nueces y albahaca picadas (puede ser también albahaca seca).",
-      "ingredientes": [3, 5, 7]
+      "ingredientes": [
+        3,
+        5,
+        7
+      ]
     },
     {
       "texto": "Poner una capa de ricota al panqueque, rellenar y doblar.",
-      "ingredientes": [2, 4]
+      "ingredientes": [
+        2,
+        4
+      ]
     },
     {
       "texto": "Calentar en microondas, agregando la salsa blanca encima.",
-      "ingredientes": [6]
+      "ingredientes": [
+        6
+      ]
     }
   ],
   "tiempo_v2": {

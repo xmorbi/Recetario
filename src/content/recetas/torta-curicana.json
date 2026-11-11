@@ -1,7 +1,14 @@
 {
   "titulo": "Torta curicana",
   "categoria": "dulces",
-  "tags": ["torta", "curicó", "dulce", "horno", "tradicional", "reposteria"],
+  "tags": [
+    "torta",
+    "curicó",
+    "dulce",
+    "horno",
+    "tradicional",
+    "reposteria"
+  ],
   "imagen": null,
   "tiempo": "1 h 30 min",
   "porciones": "12 porciones",
@@ -83,7 +90,7 @@
       "seccion": "Relleno"
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "azúcar flor",
       "nota": "a gusto",
@@ -94,11 +101,19 @@
   "pasos_v2": [
     {
       "texto": "Mezcla la harina con el azúcar. Agrega la mantequilla fría en cubos y trabaja con los dedos hasta que quede como arena.",
-      "ingredientes": [1, 2, 3, 9]
+      "ingredientes": [
+        1,
+        2,
+        3,
+        9
+      ]
     },
     {
       "texto": "Agrega las yemas y el agua fría. Amasa hasta obtener una masa lisa.",
-      "ingredientes": [4, 5]
+      "ingredientes": [
+        4,
+        5
+      ]
     },
     {
       "texto": "Envuelve en papel plástico y refrigera 1 hora.",
@@ -123,11 +138,18 @@
     },
     {
       "texto": "Mezcla el manjar con las nueces y pasas.",
-      "ingredientes": [6, 7, 8]
+      "ingredientes": [
+        6,
+        7,
+        8
+      ]
     },
     {
       "texto": "Arma la torta: disco, relleno, disco, relleno, hasta terminar. Cubre con azúcar flor.",
-      "ingredientes": [3, 9]
+      "ingredientes": [
+        3,
+        9
+      ]
     }
   ],
   "tiempo_v2": {

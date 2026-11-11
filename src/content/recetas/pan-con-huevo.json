@@ -1,7 +1,14 @@
 {
   "titulo": "Pan con huevo",
   "categoria": "once",
-  "tags": ["once", "pan", "huevo", "desayuno", "simple", "tradicional"],
+  "tags": [
+    "once",
+    "pan",
+    "huevo",
+    "desayuno",
+    "simple",
+    "tradicional"
+  ],
   "imagen": null,
   "tiempo": "8 min",
   "porciones": "1 persona",
@@ -48,7 +55,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal y pimienta",
       "nota": "a gusto",
@@ -58,15 +65,22 @@
   "pasos_v2": [
     {
       "texto": "Calienta la sartén a fuego medio con el aceite o la mantequilla.",
-      "ingredientes": [3]
+      "ingredientes": [
+        3
+      ]
     },
     {
       "texto": "Casca el huevo directamente sobre la sartén. Salpimenta la yema.",
-      "ingredientes": [2, 4]
+      "ingredientes": [
+        2,
+        4
+      ]
     },
     {
       "texto": "Cocina 2-3 minutos para huevo frito con yema líquida (tapa la sartén los últimos 30 segundos para que la clara cuaje).",
-      "ingredientes": [2],
+      "ingredientes": [
+        2
+      ],
       "timers": [
         {
           "minutos": 3,
@@ -76,11 +90,17 @@
     },
     {
       "texto": "Mientras se cocina el huevo, abre el pan por la mitad y tuéstalo ligeramente en el tostador o en la misma sartén.",
-      "ingredientes": [1, 2]
+      "ingredientes": [
+        1,
+        2
+      ]
     },
     {
       "texto": "Pon el huevo frito sobre el pan tostado. Come inmediatamente.",
-      "ingredientes": [1, 2]
+      "ingredientes": [
+        1,
+        2
+      ]
     }
   ],
   "tiempo_v2": {

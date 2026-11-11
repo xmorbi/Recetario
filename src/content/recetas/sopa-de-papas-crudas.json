@@ -1,7 +1,13 @@
 {
   "titulo": "Sopa de Papas Crudas",
   "categoria": "sopas",
-  "tags": ["sopa de papas crudas", "papas", "posta negra", "sopa", "invierno"],
+  "tags": [
+    "sopa de papas crudas",
+    "papas",
+    "posta negra",
+    "sopa",
+    "invierno"
+  ],
   "imagen": null,
   "tiempo": "1 h",
   "porciones": "4 a 6 personas",
@@ -68,21 +74,21 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "pimienta",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "comino",
       "nota": "a gusto",
@@ -92,15 +98,29 @@
   "pasos_v2": [
     {
       "texto": "Limpiar la carne y hacer unos cortes superficiales.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Poner a cocinar junto con las verduras, menos las papas, en agua fría con sal, pimiento y comino.",
-      "ingredientes": [2, 3, 4, 5, 6, 7, 8, 9, 11]
+      "ingredientes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11
+      ]
     },
     {
       "texto": "Después de 45 minutos de cocción, colar el caldo y poner nuevamente al fuego; al momento de hervir, agregar las papas peladas y ralladas.",
-      "ingredientes": [6],
+      "ingredientes": [
+        6
+      ],
       "timers": [
         {
           "minutos": 45,
@@ -113,7 +133,9 @@
     },
     {
       "texto": "Servir caliente. Si se desea más espesa la sopa, agregar más papa rallada.",
-      "ingredientes": [6]
+      "ingredientes": [
+        6
+      ]
     }
   ],
   "tiempo_v2": {

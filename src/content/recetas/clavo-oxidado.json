@@ -1,7 +1,14 @@
 {
   "titulo": "Clavo Oxidado",
   "categoria": "bebidas",
-  "tags": ["clavo oxidado", "whisky", "drambuie", "angostura", "cóctel", "tragos"],
+  "tags": [
+    "clavo oxidado",
+    "whisky",
+    "drambuie",
+    "angostura",
+    "cóctel",
+    "tragos"
+  ],
   "imagen": null,
   "tiempo": "5 min",
   "porciones": "1 persona",
@@ -59,7 +66,7 @@
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "hielo",
       "nota": "a gusto",
@@ -69,18 +76,28 @@
   "pasos_v2": [
     {
       "texto": "Colocar 2 hielos en un vaso corto ancho (un vaso de whisky).",
-      "ingredientes": [7]
+      "ingredientes": [
+        7
+      ]
     },
     {
       "texto": "Agregar el whisky, el drambuie y las gotas de angostura.",
-      "ingredientes": [1, 2, 3]
+      "ingredientes": [
+        1,
+        2,
+        3
+      ]
     },
     {
       "texto": "Hay quienes prefieren beberlo sin el amargo de angostura, por lo que queda a gusto de quien se sirve."
     },
     {
       "texto": "Puede agregar 1 clavo y un trozo de cáscara de limón.",
-      "ingredientes": [4, 5, 6]
+      "ingredientes": [
+        4,
+        5,
+        6
+      ]
     }
   ],
   "tiempo_v2": {

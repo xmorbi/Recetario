@@ -1,7 +1,12 @@
 {
   "titulo": "Hamburguesas de Pollo",
   "categoria": "principales",
-  "tags": ["hamburguesas de pollo", "pollo", "fritura", "aves"],
+  "tags": [
+    "hamburguesas de pollo",
+    "pollo",
+    "fritura",
+    "aves"
+  ],
   "imagen": null,
   "tiempo": "35 min",
   "porciones": "4 personas",
@@ -50,7 +55,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "harina",
       "nota": "a gusto",
@@ -71,21 +76,21 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "jugo de limón",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "pimienta",
       "nota": "a gusto",
@@ -102,30 +107,52 @@
   "pasos_v2": [
     {
       "texto": "Remojar el pan añejo con la leche.",
-      "ingredientes": [2, 3, 8]
+      "ingredientes": [
+        2,
+        3,
+        8
+      ]
     },
     {
       "texto": "Moler las pechugas de pollo en la máquina de moler.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Agregar el pan remojado (estrujado), la mantequilla, sal, nuez moscada y pimienta.",
-      "ingredientes": [2, 5, 7, 8, 10, 11]
+      "ingredientes": [
+        2,
+        5,
+        7,
+        8,
+        10,
+        11
+      ]
     },
     {
       "texto": "Trabajar bien la mezcla para formar una pasta homogénea."
     },
     {
       "texto": "Dividir en porciones iguales, pasar por harina y con la palma de la mano aplastar para dar la forma de hamburguesas.",
-      "ingredientes": [6]
+      "ingredientes": [
+        6
+      ]
     },
     {
       "texto": "Pasarlas por el huevo batido, luego por el pan rallado y freír en aceite caliente por ambos lados; estilar y disponerlas en una fuente para llevar a la mesa.",
-      "ingredientes": [2, 4, 8, 12]
+      "ingredientes": [
+        2,
+        4,
+        8,
+        12
+      ]
     },
     {
       "texto": "Verter el jugo de limón sobre las hamburguesas y decorar con trozos de limón, ganchos de perejil crespo o con lo que sea de su agrado.",
-      "ingredientes": [9]
+      "ingredientes": [
+        9
+      ]
     }
   ],
   "tiempo_v2": {

@@ -1,7 +1,14 @@
 {
   "titulo": "Carpaccio de Vacuno",
   "categoria": "principales",
-  "tags": ["carpaccio de vacuno", "carne", "limón", "alcaparras", "parmesano", "entrada"],
+  "tags": [
+    "carpaccio de vacuno",
+    "carne",
+    "limón",
+    "alcaparras",
+    "parmesano",
+    "entrada"
+  ],
   "imagen": null,
   "tiempo": "15 min + 10-15 min de maceración",
   "porciones": "2 a 4 personas",
@@ -58,14 +65,14 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "pimienta negra de molinillo",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal",
       "nota": "a gusto",
@@ -75,11 +82,18 @@
   "pasos_v2": [
     {
       "texto": "Poner el carpaccio en un plato, agregarle sal, pimienta y el aceite de oliva.",
-      "ingredientes": [1, 5, 6, 7]
+      "ingredientes": [
+        1,
+        5,
+        6,
+        7
+      ]
     },
     {
       "texto": "Añadir el jugo de limón y dejar macerar 10-15 minutos en el refrigerador.",
-      "ingredientes": [2],
+      "ingredientes": [
+        2
+      ],
       "timers": [
         {
           "minutos": 15,
@@ -89,7 +103,11 @@
     },
     {
       "texto": "Al momento de servir, escurrir el exceso de limón, y poner encima el queso rallado y las alcaparras.",
-      "ingredientes": [2, 3, 4]
+      "ingredientes": [
+        2,
+        3,
+        4
+      ]
     }
   ],
   "tiempo_v2": {

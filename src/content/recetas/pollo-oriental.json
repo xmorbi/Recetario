@@ -1,7 +1,14 @@
 {
   "titulo": "Pollo Oriental",
   "categoria": "principales",
-  "tags": ["pollo oriental", "pollo", "almendras", "champiñones", "verduras", "aves"],
+  "tags": [
+    "pollo oriental",
+    "pollo",
+    "almendras",
+    "champiñones",
+    "verduras",
+    "aves"
+  ],
   "imagen": null,
   "tiempo": "1 h 15 min",
   "porciones": "4 a 6 personas",
@@ -62,9 +69,9 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
-      "unidad": null,
-      "nombre": "0.25 taza de caldo",
+      "cantidad": 1.25,
+      "unidad": "taza",
+      "nombre": "caldo",
       "escalable": true
     },
     {
@@ -86,21 +93,21 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "aceite",
       "nota": "a gusto",
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "pimienta",
       "nota": "a gusto",
@@ -110,35 +117,68 @@
   "pasos_v2": [
     {
       "texto": "Limpiar, lavar y cocer el pollo en agua con sal y verduras surtidas.",
-      "ingredientes": [1, 2, 3, 4, 5, 11, 13]
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        11,
+        13
+      ]
     },
     {
       "texto": "Una vez que esté blando quitar la piel y los huesos con cuidado y cortar la carne en tiritas finas.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Limpiar los porotitos y rasgarlos.",
-      "ingredientes": [2]
+      "ingredientes": [
+        2
+      ]
     },
     {
       "texto": "Cortar la zanahoria en tiras finas y la cebolla en juliana.",
-      "ingredientes": [3, 5]
+      "ingredientes": [
+        3,
+        5
+      ]
     },
     {
       "texto": "Calentar el aceite, dorar las almendras peladas y partidas, retirarlas y freír en el mismo aceite las verduras picadas.",
-      "ingredientes": [2, 3, 4, 5, 7, 11, 12]
+      "ingredientes": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        11,
+        12
+      ]
     },
     {
       "texto": "Freír aparte los champiñones y añadirlos a la preparación anterior junto a las almendras.",
-      "ingredientes": [6, 7, 12]
+      "ingredientes": [
+        6,
+        7,
+        12
+      ]
     },
     {
       "texto": "Agregar el vino, la maicena disuelta en agua fría y 1 1/2 taza de caldo.",
-      "ingredientes": [8, 9, 10]
+      "ingredientes": [
+        8,
+        9,
+        10
+      ]
     },
     {
       "texto": "Sazonar, aliñar con pimienta y dejar en cocción a fuego suave 5 a 10 minutos.",
-      "ingredientes": [14],
+      "ingredientes": [
+        14
+      ],
       "timers": [
         {
           "minutos": 10,

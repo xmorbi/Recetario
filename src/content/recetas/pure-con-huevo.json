@@ -1,7 +1,14 @@
 {
   "titulo": "Puré con huevo",
   "categoria": "principales",
-  "tags": ["puré", "papa", "huevo", "cotidiano", "simple", "comfort"],
+  "tags": [
+    "puré",
+    "papa",
+    "huevo",
+    "cotidiano",
+    "simple",
+    "comfort"
+  ],
   "imagen": null,
   "tiempo": "25 min",
   "porciones": "4 personas",
@@ -44,7 +51,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal y pimienta",
       "nota": "a gusto",
@@ -67,19 +74,32 @@
   "pasos_v2": [
     {
       "texto": "Cuece las papas en agua con sal hasta que estén tiernas. Escurre.",
-      "ingredientes": [1, 4]
+      "ingredientes": [
+        1,
+        4
+      ]
     },
     {
       "texto": "Haz un puré con la mantequilla, la leche, sal y pimienta. Bate hasta que quede cremoso.",
-      "ingredientes": [2, 3, 4]
+      "ingredientes": [
+        2,
+        3,
+        4
+      ]
     },
     {
       "texto": "Fríe los huevos en aceite con sal y pimienta.",
-      "ingredientes": [4, 5, 6]
+      "ingredientes": [
+        4,
+        5,
+        6
+      ]
     },
     {
       "texto": "Sirve el puré en platos y pon un huevo frito encima de cada porción.",
-      "ingredientes": [5]
+      "ingredientes": [
+        5
+      ]
     }
   ],
   "tiempo_v2": {

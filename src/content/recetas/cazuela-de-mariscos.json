@@ -1,7 +1,14 @@
 {
   "titulo": "Cazuela de mariscos",
   "categoria": "principales",
-  "tags": ["cazuela", "marisco", "sopa", "olla", "costa", "invierno"],
+  "tags": [
+    "cazuela",
+    "marisco",
+    "sopa",
+    "olla",
+    "costa",
+    "invierno"
+  ],
   "imagen": null,
   "tiempo": "40 min",
   "porciones": "4 personas",
@@ -99,7 +106,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal, pimienta, orégano y merkén",
       "nota": "a gusto",
@@ -109,11 +116,19 @@
   "pasos_v2": [
     {
       "texto": "Sofríe la cebolla, el ajo y el pimentón en aceite hasta que estén transparentes.",
-      "ingredientes": [4, 5, 6]
+      "ingredientes": [
+        4,
+        5,
+        6
+      ]
     },
     {
       "texto": "Agrega el tomate y la zanahoria. Condimenta con sal, pimienta, orégano y merkén. Cocina 5 minutos.",
-      "ingredientes": [7, 8, 11],
+      "ingredientes": [
+        7,
+        8,
+        11
+      ],
       "timers": [
         {
           "minutos": 5,
@@ -123,11 +138,17 @@
     },
     {
       "texto": "Vierte el vino blanco y deja evaporar el alcohol.",
-      "ingredientes": [2, 10]
+      "ingredientes": [
+        2,
+        10
+      ]
     },
     {
       "texto": "Añade el caldo o agua y las papas. Cocina 15 minutos hasta que las papas estén casi tiernas.",
-      "ingredientes": [3, 9],
+      "ingredientes": [
+        3,
+        9
+      ],
       "timers": [
         {
           "minutos": 15,
@@ -137,7 +158,11 @@
     },
     {
       "texto": "Incorpora los mariscos y el pescado. Cocina 5-7 minutos más, solo hasta que los mariscos se abran y el pescado esté cocido.",
-      "ingredientes": [1, 2, 9],
+      "ingredientes": [
+        1,
+        2,
+        9
+      ],
       "timers": [
         {
           "minutos": 7,
@@ -147,7 +172,9 @@
     },
     {
       "texto": "Rectifica la sal y sirve caliente con perejil fresco.",
-      "ingredientes": [11]
+      "ingredientes": [
+        11
+      ]
     }
   ],
   "tiempo_v2": {

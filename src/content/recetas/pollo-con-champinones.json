@@ -1,7 +1,13 @@
 {
   "titulo": "Pollo con Champiñones",
   "categoria": "principales",
-  "tags": ["pollo con champiñones", "pollo", "champiñones", "vino blanco", "aves"],
+  "tags": [
+    "pollo con champiñones",
+    "pollo",
+    "champiñones",
+    "vino blanco",
+    "aves"
+  ],
   "imagen": null,
   "tiempo": "50 min",
   "porciones": "4 a 6 personas",
@@ -62,21 +68,21 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "pimienta",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "aceite",
       "nota": "a gusto",
@@ -86,31 +92,58 @@
   "pasos_v2": [
     {
       "texto": "Lavar bien las presas de pollo y ponerlas a freír con su piel en una olla.",
-      "ingredientes": [1, 9]
+      "ingredientes": [
+        1,
+        9
+      ]
     },
     {
       "texto": "Una vez que se han dorado y han soltado su jugo, sacar las presas, retirar la piel y reservar.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Picar la cebolla en cuadritos finos y freír en una sartén con un poco de aceite.",
-      "ingredientes": [4, 9]
+      "ingredientes": [
+        4,
+        9
+      ]
     },
     {
       "texto": "Cuando la cebolla esté dorada agregar dos cucharadas de harina y dorar hasta que se forme una pasta.",
-      "ingredientes": [3, 4, 9]
+      "ingredientes": [
+        3,
+        4,
+        9
+      ]
     },
     {
       "texto": "Agregar vino blanco, dejar evaporar el alcohol y reservar.",
-      "ingredientes": [5]
+      "ingredientes": [
+        5
+      ]
     },
     {
       "texto": "Lavar bien los champiñones, sin pelarlos y saltear en una sartén con la mantequilla.",
-      "ingredientes": [2, 6, 8, 9]
+      "ingredientes": [
+        2,
+        6,
+        8,
+        9
+      ]
     },
     {
       "texto": "Poner la cacerola con el pollo ya dorado a fuego lento, agregando la cebolla con la harina, los champiñones salteados, dos tazas de agua, sal y pimienta.",
-      "ingredientes": [1, 2, 3, 4, 7, 8, 9]
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        7,
+        8,
+        9
+      ]
     },
     {
       "texto": "Revolver para que el jugo se emulsione y dejar al fuego por 15 minutos, cuidando que no se reseque.",
@@ -123,7 +156,9 @@
     },
     {
       "texto": "Agregar más agua hervida si fuera necesario y cuidar que el pollo no se desmence.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     }
   ],
   "tiempo_v2": {

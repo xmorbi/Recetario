@@ -1,7 +1,14 @@
 {
   "titulo": "Arroz con Atún",
   "categoria": "principales",
-  "tags": ["arroz con atún", "arroz", "atún", "tomate", "curry", "arroces"],
+  "tags": [
+    "arroz con atún",
+    "arroz",
+    "atún",
+    "tomate",
+    "curry",
+    "arroces"
+  ],
   "imagen": null,
   "tiempo": "40 min",
   "porciones": "4 personas",
@@ -84,14 +91,14 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "pimienta",
       "nota": "a gusto",
@@ -101,7 +108,9 @@
   "pasos_v2": [
     {
       "texto": "Lavar bien el arroz y dejarlo en remojo 10 minutos. Escurrir.",
-      "ingredientes": [1],
+      "ingredientes": [
+        1
+      ],
       "timers": [
         {
           "minutos": 10,
@@ -111,18 +120,29 @@
     },
     {
       "texto": "Calentar el aceite y freír el ajo, la cebolla picada, el pimiento, los tomates cortados y las verduras surtidas.",
-      "ingredientes": [3, 4, 5, 6, 7, 9]
+      "ingredientes": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ]
     },
     {
       "texto": "Agregar 4 tazas (1 L) de agua caliente y el curry.",
-      "ingredientes": [8]
+      "ingredientes": [
+        8
+      ]
     },
     {
       "texto": "Dejar en cocción a fuego lento."
     },
     {
       "texto": "Incorporar el arroz y continuar con la cocción por 15-18 minutos, hasta que el arroz esté tierno.",
-      "ingredientes": [1],
+      "ingredientes": [
+        1
+      ],
       "timers": [
         {
           "minutos": 18,
@@ -132,7 +152,9 @@
     },
     {
       "texto": "Agregar el atún desmenuzado al momento de servir.",
-      "ingredientes": [2]
+      "ingredientes": [
+        2
+      ]
     }
   ],
   "tiempo_v2": {

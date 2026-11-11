@@ -1,7 +1,13 @@
 {
   "titulo": "Crema de Zapallo",
   "categoria": "sopas",
-  "tags": ["crema de zapallo", "zapallo", "zanahoria", "crema", "sopa"],
+  "tags": [
+    "crema de zapallo",
+    "zapallo",
+    "zanahoria",
+    "crema",
+    "sopa"
+  ],
   "imagen": null,
   "tiempo": "35 min",
   "porciones": "4 a 6 personas",
@@ -30,9 +36,9 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
-      "unidad": null,
-      "nombre": "0.5 litro de leche",
+      "cantidad": 1.5,
+      "unidad": "litro",
+      "nombre": "leche",
       "escalable": true
     },
     {
@@ -78,23 +84,38 @@
   "pasos_v2": [
     {
       "texto": "Cocer el zapallo y la zanahoria y pasarlos por el cedazo para obtener una crema suave.",
-      "ingredientes": [1, 4]
+      "ingredientes": [
+        1,
+        4
+      ]
     },
     {
       "texto": "Calentar la leche.",
-      "ingredientes": [2]
+      "ingredientes": [
+        2
+      ]
     },
     {
       "texto": "Calentar la mantequilla y freír la cebolla picada fina con el ajo machacado.",
-      "ingredientes": [3, 5, 7]
+      "ingredientes": [
+        3,
+        5,
+        7
+      ]
     },
     {
       "texto": "Disolver la harina en un poco de leche y agregarla de a poco a la fritura revolviendo constantemente.",
-      "ingredientes": [2, 8]
+      "ingredientes": [
+        2,
+        8
+      ]
     },
     {
       "texto": "Cocinar por algunos minutos y luego incorporar el puré de zapallo y la leche.",
-      "ingredientes": [1, 2]
+      "ingredientes": [
+        1,
+        2
+      ]
     },
     {
       "texto": "Hervir a fuego lento unos 10 minutos.",
@@ -107,7 +128,9 @@
     },
     {
       "texto": "Servir bien caliente con queso rallado o pan frito.",
-      "ingredientes": [6]
+      "ingredientes": [
+        6
+      ]
     }
   ],
   "tiempo_v2": {

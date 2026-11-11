@@ -1,7 +1,14 @@
 {
   "titulo": "Mariscal",
   "categoria": "principales",
-  "tags": ["marisco", "pescado", "guiso", "olla", "plato principal", "costa"],
+  "tags": [
+    "marisco",
+    "pescado",
+    "guiso",
+    "olla",
+    "plato principal",
+    "costa"
+  ],
   "imagen": "img/mariscal.jpg",
   "tiempo": "40 min",
   "porciones": "4 personas",
@@ -93,14 +100,14 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal, pimienta, orégano y merkén",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "aceite de oliva",
       "nota": "a gusto",
@@ -110,11 +117,19 @@
   "pasos_v2": [
     {
       "texto": "Sofríe la cebolla, el ajo y el pimentón en aceite de oliva hasta que estén tiernos.",
-      "ingredientes": [5, 6, 7, 12]
+      "ingredientes": [
+        5,
+        6,
+        7,
+        12
+      ]
     },
     {
       "texto": "Agrega el tomate y condimenta con sal, pimienta, orégano y merkén. Cocina 5 minutos.",
-      "ingredientes": [8, 11],
+      "ingredientes": [
+        8,
+        11
+      ],
       "timers": [
         {
           "minutos": 5,
@@ -124,11 +139,17 @@
     },
     {
       "texto": "Vierte el vino blanco y deja evaporar.",
-      "ingredientes": [2, 9]
+      "ingredientes": [
+        2,
+        9
+      ]
     },
     {
       "texto": "Añade el caldo y las papas. Cocina 15 minutos.",
-      "ingredientes": [4, 10],
+      "ingredientes": [
+        4,
+        10
+      ],
       "timers": [
         {
           "minutos": 15,
@@ -138,7 +159,12 @@
     },
     {
       "texto": "Incorpora los mariscos, el pescado y el pulpo si usas. Cocina 7-10 minutos, hasta que los mariscos se abran.",
-      "ingredientes": [1, 2, 3, 10],
+      "ingredientes": [
+        1,
+        2,
+        3,
+        10
+      ],
       "timers": [
         {
           "minutos": 10,
@@ -148,7 +174,9 @@
     },
     {
       "texto": "Rectifica la sal y sirve con perejil fresco.",
-      "ingredientes": [11]
+      "ingredientes": [
+        11
+      ]
     }
   ],
   "tiempo_v2": {

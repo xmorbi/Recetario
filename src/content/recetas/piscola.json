@@ -1,7 +1,14 @@
 {
   "titulo": "Piscola",
   "categoria": "bebidas",
-  "tags": ["bebida", "alcohol", "pisco", "cóctel", "tradicional", "verano"],
+  "tags": [
+    "bebida",
+    "alcohol",
+    "pisco",
+    "cóctel",
+    "tradicional",
+    "verano"
+  ],
   "imagen": null,
   "tiempo": "5 min",
   "porciones": "1 vaso",
@@ -50,7 +57,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "rodaja de limón",
       "nota": "a gusto",
@@ -61,22 +68,31 @@
   "pasos_v2": [
     {
       "texto": "Llena un vaso alto con hielo.",
-      "ingredientes": [3]
+      "ingredientes": [
+        3
+      ]
     },
     {
       "texto": "Vierte el pisco sobre el hielo.",
-      "ingredientes": [1, 3]
+      "ingredientes": [
+        1,
+        3
+      ]
     },
     {
       "texto": "Completa con la bebida cola bien helada.",
-      "ingredientes": [2]
+      "ingredientes": [
+        2
+      ]
     },
     {
       "texto": "Revuelve suavemente con una cuchara larga."
     },
     {
       "texto": "Decora con una rodaja de limón si quieres. Sirve inmediatamente.",
-      "ingredientes": [4]
+      "ingredientes": [
+        4
+      ]
     }
   ],
   "tiempo_v2": {

@@ -1,7 +1,14 @@
 {
   "titulo": "Arroz con Salsa de Verduras al Curry",
   "categoria": "principales",
-  "tags": ["arroz con salsa de verduras al curry", "arroz", "manzana", "apio", "curry", "arroces"],
+  "tags": [
+    "arroz con salsa de verduras al curry",
+    "arroz",
+    "manzana",
+    "apio",
+    "curry",
+    "arroces"
+  ],
   "imagen": null,
   "tiempo": "30 min",
   "porciones": "2 a 4 personas",
@@ -65,14 +72,14 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "pimienta",
       "nota": "a gusto",
@@ -82,7 +89,10 @@
   "pasos_v2": [
     {
       "texto": "Cocer el arroz en 2 tazas (500 ml) de agua con sal por 15-18 minutos. Escurrir y vaciar en una olla.",
-      "ingredientes": [1, 7],
+      "ingredientes": [
+        1,
+        7
+      ],
       "timers": [
         {
           "minutos": 18,
@@ -92,11 +102,22 @@
     },
     {
       "texto": "Agregar una cucharada de mantequilla, pimienta y revolver.",
-      "ingredientes": [5, 8]
+      "ingredientes": [
+        5,
+        8
+      ]
     },
     {
       "texto": "Mezclar manzana, cebolla y apio con mantequilla, sal, pimienta y curry.",
-      "ingredientes": [2, 3, 4, 5, 6, 7, 8]
+      "ingredientes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
     },
     {
       "texto": "Cocinar en una cacerola a fuego lento revolviendo hasta obtener una crema suave."
@@ -106,7 +127,10 @@
     },
     {
       "texto": "Servir el arroz amoldado y bañado con la salsa.",
-      "ingredientes": [1, 7]
+      "ingredientes": [
+        1,
+        7
+      ]
     }
   ],
   "tiempo_v2": {

@@ -1,7 +1,13 @@
 {
   "titulo": "Panitas de Pollo en Salsa",
   "categoria": "principales",
-  "tags": ["panitas de pollo en salsa", "panitas", "pollo", "vino tinto", "aves"],
+  "tags": [
+    "panitas de pollo en salsa",
+    "panitas",
+    "pollo",
+    "vino tinto",
+    "aves"
+  ],
   "imagen": null,
   "tiempo": "40 min",
   "porciones": "4 personas",
@@ -63,7 +69,7 @@
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "tomillo",
       "nota": "a gusto",
@@ -76,14 +82,14 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "pimienta",
       "nota": "a gusto",
@@ -93,11 +99,18 @@
   "pasos_v2": [
     {
       "texto": "Limpiar, lavar las panitas y partir en mitades, espolvorear sal y pimienta.",
-      "ingredientes": [1, 10, 11]
+      "ingredientes": [
+        1,
+        10,
+        11
+      ]
     },
     {
       "texto": "Cortar el tocino en trozos pequeños y poner en una sartén hasta que se derrita, añadir las panitas y cocinar a fuego suave por 5 minutos.",
-      "ingredientes": [1, 2],
+      "ingredientes": [
+        1,
+        2
+      ],
       "timers": [
         {
           "minutos": 5,
@@ -107,23 +120,41 @@
     },
     {
       "texto": "Limpiar los cebollines, dejando sólo lo más tierno.",
-      "ingredientes": [3]
+      "ingredientes": [
+        3
+      ]
     },
     {
       "texto": "Calentar el aceite en una cacerola y freír los cebollines; cuando empiecen a dorarse agregar el azúcar y la harina, revolviendo para evitar que se formen grumos.",
-      "ingredientes": [3, 5, 6, 9]
+      "ingredientes": [
+        3,
+        5,
+        6,
+        9
+      ]
     },
     {
       "texto": "Agregar el vino, 1/2 taza de agua caliente, laurel, tomillo, sal y pimienta.",
-      "ingredientes": [4, 7, 8, 10, 11]
+      "ingredientes": [
+        4,
+        7,
+        8,
+        10,
+        11
+      ]
     },
     {
       "texto": "Cocinar a fuego suave por 1/4 de hora, procurando que se reduzca la salsa.",
-      "ingredientes": [10]
+      "ingredientes": [
+        10
+      ]
     },
     {
       "texto": "A último momento incorporar las panitas a la salsa para calentar.",
-      "ingredientes": [1, 10]
+      "ingredientes": [
+        1,
+        10
+      ]
     },
     {
       "texto": "Servir acompañado de arroz blanco."

@@ -1,7 +1,12 @@
 {
   "titulo": "Corvina al horno",
   "categoria": "principales",
-  "tags": ["pescado", "horno", "plato principal", "sano"],
+  "tags": [
+    "pescado",
+    "horno",
+    "plato principal",
+    "sano"
+  ],
   "imagen": "img/Corvina-al-horno.jpg",
   "tiempo": "40 min",
   "porciones": "2 personas",
@@ -73,7 +78,7 @@
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "rodajas de limón",
       "nota": "a gusto",
@@ -86,15 +91,27 @@
     },
     {
       "texto": "En una fuente para horno, coloca una base de cebolla y tomate en rodajas. Coloca los filetes de corvina encima.",
-      "ingredientes": [1, 2, 3, 8]
+      "ingredientes": [
+        1,
+        2,
+        3,
+        8
+      ]
     },
     {
       "texto": "Sazona con sal, pimienta y tomillo. Distribuye el ajo laminado sobre el pescado.",
-      "ingredientes": [4, 7]
+      "ingredientes": [
+        4,
+        7
+      ]
     },
     {
       "texto": "Rocía con el vino blanco y el aceite de oliva. Coloca unas rodajas de limón encima.",
-      "ingredientes": [5, 6, 8]
+      "ingredientes": [
+        5,
+        6,
+        8
+      ]
     },
     {
       "texto": "Hornea por 20 minutos, hasta que el pescado esté cocido y se desmenuce fácilmente con un tenedor.",

@@ -1,7 +1,14 @@
 {
   "titulo": "Ensalada de Apio con Nueces (Waldorf)",
   "categoria": "ensaladas",
-  "tags": ["ensalada waldorf", "apio", "manzana", "nueces", "naranja", "ensalada"],
+  "tags": [
+    "ensalada waldorf",
+    "apio",
+    "manzana",
+    "nueces",
+    "naranja",
+    "ensalada"
+  ],
   "imagen": null,
   "tiempo": "20 min",
   "porciones": "4 a 6 personas",
@@ -68,14 +75,14 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "pimienta",
       "nota": "a gusto",
@@ -85,27 +92,46 @@
   "pasos_v2": [
     {
       "texto": "Lavar y picar el apio en trozos pequeños.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Pelar las manzanas y cortarlas en cubos; rociarlas con jugo de limón para que no se oxiden.",
-      "ingredientes": [2, 4]
+      "ingredientes": [
+        2,
+        4
+      ]
     },
     {
       "texto": "Pelar la naranja y separar los gajos, cortándolos en trozos.",
-      "ingredientes": [3]
+      "ingredientes": [
+        3
+      ]
     },
     {
       "texto": "Picar las nueces y las aceitunas negras.",
-      "ingredientes": [5, 6]
+      "ingredientes": [
+        5,
+        6
+      ]
     },
     {
       "texto": "Mezclar todos los ingredientes en una ensaladera.",
-      "ingredientes": [7, 8, 9]
+      "ingredientes": [
+        7,
+        8,
+        9
+      ]
     },
     {
       "texto": "Aliñar con aceite, sal, pimienta y el resto del jugo de limón.",
-      "ingredientes": [4, 7, 8, 9]
+      "ingredientes": [
+        4,
+        7,
+        8,
+        9
+      ]
     }
   ],
   "tiempo_v2": {

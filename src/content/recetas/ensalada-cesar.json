@@ -1,7 +1,14 @@
 {
   "titulo": "Ensalada César",
   "categoria": "ensaladas",
-  "tags": ["ensalada césar", "pollo", "lechuga", "parmesano", "crutones", "ensalada"],
+  "tags": [
+    "ensalada césar",
+    "pollo",
+    "lechuga",
+    "parmesano",
+    "crutones",
+    "ensalada"
+  ],
   "imagen": null,
   "tiempo": "30 min",
   "porciones": "2 a 4 personas",
@@ -77,21 +84,21 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "jugo de limón",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "pimienta",
       "nota": "a gusto",
@@ -101,27 +108,49 @@
   "pasos_v2": [
     {
       "texto": "Cocer la pechuga en agua con sal hasta que esté cocida. Dejar enfriar y cortarla en trozos pequeños.",
-      "ingredientes": [1, 10]
+      "ingredientes": [
+        1,
+        10
+      ]
     },
     {
       "texto": "Lavar muy bien la lechuga y picarla en trozos.",
-      "ingredientes": [2]
+      "ingredientes": [
+        2
+      ]
     },
     {
       "texto": "Freír el pan cortado en cubos y reservar.",
-      "ingredientes": [4, 8]
+      "ingredientes": [
+        4,
+        8
+      ]
     },
     {
       "texto": "Preparar el aderezo: mezclar la mayonesa, la mostaza, el aceite, el vinagre, el jugo de limón, sal y pimienta. Revolver hasta integrar.",
-      "ingredientes": [5, 6, 7, 8, 9, 10, 11]
+      "ingredientes": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
     },
     {
       "texto": "Colocar la lechuga en una fuente y encima el pollo.",
-      "ingredientes": [1, 2]
+      "ingredientes": [
+        1,
+        2
+      ]
     },
     {
       "texto": "Rociar con el aderezo y al momento de servir agregar los crutones (pan frito) y el queso rallado.",
-      "ingredientes": [3, 4]
+      "ingredientes": [
+        3,
+        4
+      ]
     },
     {
       "texto": "Servir frío."

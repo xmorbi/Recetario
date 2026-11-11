@@ -1,7 +1,14 @@
 {
   "titulo": "Carne asada a la plancha",
   "categoria": "principales",
-  "tags": ["carne", "asado", "plancha", "vacuno", "simple", "cotidiano"],
+  "tags": [
+    "carne",
+    "asado",
+    "plancha",
+    "vacuno",
+    "simple",
+    "cotidiano"
+  ],
   "imagen": null,
   "tiempo": "20 min",
   "porciones": "2 personas",
@@ -43,14 +50,14 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal gruesa",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "pimienta negra molida",
       "nota": "a gusto",
@@ -67,7 +74,9 @@
   "pasos_v2": [
     {
       "texto": "Saca la carne del refrigerador 20 minutos antes de cocinar. Debe estar a temperatura ambiente.",
-      "ingredientes": [1],
+      "ingredientes": [
+        1
+      ],
       "timers": [
         {
           "minutos": 20,
@@ -77,15 +86,22 @@
     },
     {
       "texto": "Calienta la plancha a fuego alto hasta que humee ligeramente. Agrega el aceite.",
-      "ingredientes": [2]
+      "ingredientes": [
+        2
+      ]
     },
     {
       "texto": "Sala la carne justo antes de ponerla en la plancha.",
-      "ingredientes": [1, 3]
+      "ingredientes": [
+        1,
+        3
+      ]
     },
     {
       "texto": "Cocina 2-3 minutos por lado para término medio. No la muevas mientras se cocina.",
-      "ingredientes": [1],
+      "ingredientes": [
+        1
+      ],
       "timers": [
         {
           "minutos": 3,
@@ -95,7 +111,9 @@
     },
     {
       "texto": "Retira y deja reposar 5 minutos sobre una tabla antes de cortar.",
-      "ingredientes": [1],
+      "ingredientes": [
+        1
+      ],
       "timers": [
         {
           "minutos": 5,
@@ -105,7 +123,10 @@
     },
     {
       "texto": "Sirve con sal gruesa y pimienta, y acompañamientos a gusto.",
-      "ingredientes": [3, 4]
+      "ingredientes": [
+        3,
+        4
+      ]
     }
   ],
   "tiempo_v2": {

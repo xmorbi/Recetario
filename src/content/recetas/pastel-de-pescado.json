@@ -1,7 +1,13 @@
 {
   "titulo": "Pastel de pescado",
   "categoria": "principales",
-  "tags": ["pescado", "pastel", "horno", "casero", "tradicional"],
+  "tags": [
+    "pescado",
+    "pastel",
+    "horno",
+    "casero",
+    "tradicional"
+  ],
   "imagen": null,
   "tiempo": "1 h",
   "porciones": "4 personas",
@@ -97,7 +103,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal, pimienta, orégano y ají de color",
       "nota": "a gusto",
@@ -107,11 +113,22 @@
   "pasos_v2": [
     {
       "texto": "Cuece las papas en agua con sal hasta que estén tiernas. Haz un puré con la leche y la mantequilla. Reserva.",
-      "ingredientes": [2, 3, 4, 11]
+      "ingredientes": [
+        2,
+        3,
+        4,
+        11
+      ]
     },
     {
       "texto": "Sofríe la cebolla, el ajo y el pimentón hasta que estén transparentes. Agrega el tomate y condimenta con sal, pimienta, orégano y ají de color. Cocina 5 minutos.",
-      "ingredientes": [5, 6, 7, 8, 11],
+      "ingredientes": [
+        5,
+        6,
+        7,
+        8,
+        11
+      ],
       "timers": [
         {
           "minutos": 5,
@@ -121,7 +138,10 @@
     },
     {
       "texto": "Agrega el pescado en trozos y cocina 3-4 minutos, hasta que se desmenuce fácilmente. Rectifica la sal.",
-      "ingredientes": [1, 11],
+      "ingredientes": [
+        1,
+        11
+      ],
       "timers": [
         {
           "minutos": 4,
@@ -137,7 +157,10 @@
     },
     {
       "texto": "Espolvorea pan rallado y queso parmesano por encima.",
-      "ingredientes": [9, 10]
+      "ingredientes": [
+        9,
+        10
+      ]
     },
     {
       "texto": "Hornea a 200 °C por 20-25 minutos, hasta que la superficie esté dorada.",

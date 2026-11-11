@@ -1,7 +1,14 @@
 {
   "titulo": "Humitas",
   "categoria": "panes",
-  "tags": ["humita", "choclo", "horno", "olla", "plato principal", "vegetariano"],
+  "tags": [
+    "humita",
+    "choclo",
+    "horno",
+    "olla",
+    "plato principal",
+    "vegetariano"
+  ],
   "imagen": "img/Humitas.jpg",
   "tiempo": "80 min",
   "porciones": "8 unidades",
@@ -58,7 +65,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "hojas de choclo para envolver",
       "nota": "a gusto",
@@ -68,11 +75,18 @@
   "pasos_v2": [
     {
       "texto": "Sofríe la cebolla en la manteca. Agrega el ají de color y revuelve.",
-      "ingredientes": [2, 3, 4]
+      "ingredientes": [
+        2,
+        3,
+        4
+      ]
     },
     {
       "texto": "Mezcla el choclo rallado con el sofrito, la albahaca y sal.",
-      "ingredientes": [1, 5]
+      "ingredientes": [
+        1,
+        5
+      ]
     },
     {
       "texto": "Cocina a fuego bajo 10 minutos, revolviendo. Deja enfriar.",
@@ -85,15 +99,22 @@
     },
     {
       "texto": "Blanquea las hojas de choclo en agua caliente.",
-      "ingredientes": [1, 6]
+      "ingredientes": [
+        1,
+        6
+      ]
     },
     {
       "texto": "Pon dos cucharadas de mezcla en cada hoja, envuelve y amarra.",
-      "ingredientes": [6]
+      "ingredientes": [
+        6
+      ]
     },
     {
       "texto": "Cocina en agua con sal hirviendo 30 a 40 minutos, o al horno a 180 °C por 40 minutos.",
-      "ingredientes": [5],
+      "ingredientes": [
+        5
+      ],
       "timers": [
         {
           "minutos": 40,

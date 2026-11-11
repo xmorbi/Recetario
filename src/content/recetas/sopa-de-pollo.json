@@ -1,7 +1,14 @@
 {
   "titulo": "Sopa de pollo",
   "categoria": "sopas",
-  "tags": ["sopa", "pollo", "caldo", "olla", "casero", "invierno"],
+  "tags": [
+    "sopa",
+    "pollo",
+    "caldo",
+    "olla",
+    "casero",
+    "invierno"
+  ],
   "imagen": null,
   "tiempo": "50 min",
   "porciones": "4 personas",
@@ -71,7 +78,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal, pimienta y orégano",
       "nota": "a gusto",
@@ -88,7 +95,11 @@
   "pasos_v2": [
     {
       "texto": "Cocina el pollo en agua con sal por 30 minutos. Retira, desmenuza y reserva el caldo.",
-      "ingredientes": [1, 7, 8],
+      "ingredientes": [
+        1,
+        7,
+        8
+      ],
       "timers": [
         {
           "minutos": 30,
@@ -98,15 +109,23 @@
     },
     {
       "texto": "En otra olla, sofríe la cebolla, la zanahoria y el apio.",
-      "ingredientes": [2, 3, 4]
+      "ingredientes": [
+        2,
+        3,
+        4
+      ]
     },
     {
       "texto": "Agrega el caldo de pollo colado y lleva a hervor.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Añade las papas y cocina 15 minutos.",
-      "ingredientes": [5],
+      "ingredientes": [
+        5
+      ],
       "timers": [
         {
           "minutos": 15,
@@ -116,11 +135,17 @@
     },
     {
       "texto": "Incorpora el pollo desmenuzado y los fideos o arroz. Cocina según el tiempo indicado.",
-      "ingredientes": [1, 6]
+      "ingredientes": [
+        1,
+        6
+      ]
     },
     {
       "texto": "Condimenta con sal, pimienta y orégano. Sirve con perejil fresco.",
-      "ingredientes": [8, 9]
+      "ingredientes": [
+        8,
+        9
+      ]
     }
   ],
   "tiempo_v2": {

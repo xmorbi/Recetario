@@ -102,7 +102,7 @@ export function formatearNumero(n) {
   if (n === 0) return '0';
 
   // 1. Números grandes (gramos, ml): redondear al entero.
-  // Evita cosas como "541⅔ g de harina".
+  // Evita cosas como "541⅓ g de harina".
   if (n > 20) {
     return String(Math.round(n));
   }
@@ -372,90 +372,44 @@ export function escalarIngrediente(texto, factor) {
 
 // Unidades reconocidas al parsear una línea de ingrediente.
 var UNIDADES_CONOCIDAS = {
-  g: 1,
-  kg: 1,
-  mg: 1,
-  ml: 1,
-  l: 1,
-  cl: 1,
-  dl: 1,
-  cc: 1,
-  taza: 1,
-  tazas: 1,
-  cucharada: 1,
-  cucharadas: 1,
-  cucharadita: 1,
-  cucharaditas: 1,
-  cdta: 1,
-  cdtas: 1,
-  cda: 1,
-  cdas: 1,
-  cucharón: 1,
-  cucharones: 1,
-  diente: 1,
-  dientes: 1,
-  unidad: 1,
-  unidades: 1,
-  sobre: 1,
-  sobres: 1,
-  lata: 1,
-  latas: 1,
-  tarro: 1,
-  tarros: 1,
-  paquete: 1,
-  paquetes: 1,
-  ramita: 1,
-  ramitas: 1,
-  rama: 1,
-  ramas: 1,
-  hoja: 1,
-  hojas: 1,
-  tallo: 1,
-  tallos: 1,
-  cabeza: 1,
-  cabezas: 1,
-  rodaja: 1,
-  rodajas: 1,
-  trozo: 1,
-  trozos: 1,
-  presa: 1,
-  presas: 1,
-  docena: 1,
-  docenas: 1,
-  mano: 1,
-  manos: 1,
-  puñado: 1,
-  puñados: 1,
-  pizca: 1,
-  pizcas: 1,
-  gota: 1,
-  gotas: 1,
-  gramo: 1,
-  gramos: 1,
-  kilo: 1,
-  kilos: 1,
-  litro: 1,
-  litros: 1,
-  mililitro: 1,
-  mililitros: 1,
-  onza: 1,
-  onzas: 1,
-  libra: 1,
-  libras: 1,
-  molde: 1,
-  moldes: 1,
-  vaso: 1,
-  vasos: 1,
-  plato: 1,
-  platos: 1,
-  bowl: 1,
-  bowls: 1,
-  tazón: 1,
-  tazones: 1,
-  porción: 1,
-  porciones: 1,
-  persona: 1,
-  personas: 1,
+  g: 1, kg: 1, mg: 1, ml: 1, l: 1, cl: 1, dl: 1, cc: 1,
+  taza: 1, tazas: 1,
+  cucharada: 1, cucharadas: 1,
+  cucharadita: 1, cucharaditas: 1,
+  cdta: 1, cdtas: 1, cda: 1, cdas: 1,
+  cucharón: 1, cucharones: 1,
+  diente: 1, dientes: 1,
+  unidad: 1, unidades: 1,
+  sobre: 1, sobres: 1,
+  lata: 1, latas: 1,
+  tarro: 1, tarros: 1,
+  paquete: 1, paquetes: 1,
+  ramita: 1, ramitas: 1,
+  rama: 1, ramas: 1,
+  hoja: 1, hojas: 1,
+  tallo: 1, tallos: 1,
+  cabeza: 1, cabezas: 1,
+  rodaja: 1, rodajas: 1,
+  trozo: 1, trozos: 1,
+  presa: 1, presas: 1,
+  docena: 1, docenas: 1,
+  mano: 1, manos: 1,
+  puñado: 1, puñados: 1,
+  pizca: 1, pizcas: 1,
+  gota: 1, gotas: 1,
+  gramo: 1, gramos: 1,
+  kilo: 1, kilos: 1,
+  litro: 1, litros: 1,
+  mililitro: 1, mililitros: 1,
+  onza: 1, onzas: 1,
+  libra: 1, libras: 1,
+  molde: 1, moldes: 1,
+  vaso: 1, vasos: 1,
+  plato: 1, platos: 1,
+  bowl: 1, bowls: 1,
+  tazón: 1, tazones: 1,
+  porción: 1, porciones: 1,
+  persona: 1, personas: 1,
 };
 
 /**
@@ -557,6 +511,12 @@ export function escalarEstructurado(ingredientes, factor) {
 /**
  * Devuelve el texto legible de un ingrediente estructurado.
  * Ej: { cantidad: 500, unidad: 'g', nombre: 'harina' } → "500 g de harina"
+ *
+ * Regla "a gusto" (Fase 12): cuando no hay cantidad y la nota contiene
+ * "a gusto", la nota se une con coma para que se lea natural:
+ *   { cantidad: null, nombre: 'sal y pimienta', nota: 'a gusto' }
+ *     → "sal y pimienta, a gusto"
+ * En el resto de los casos, la nota va entre paréntesis.
  */
 export function formatearIngredienteEstructurado(ing) {
   if (!ing) return '';
@@ -590,7 +550,14 @@ export function formatearIngredienteEstructurado(ing) {
   }
 
   var txt = partes.join(' ');
-  if (ing.nota) txt += ' (' + ing.nota + ')';
+  if (ing.nota) {
+    var esAGusto = /a\s+gusto/i.test(ing.nota);
+    if (esAGusto && ing.cantidad == null) {
+      txt += ', ' + ing.nota;
+    } else {
+      txt += ' (' + ing.nota + ')';
+    }
+  }
   if (ing.opcional && !/opcional/i.test(txt)) txt += ' (opcional)';
   return txt;
 }

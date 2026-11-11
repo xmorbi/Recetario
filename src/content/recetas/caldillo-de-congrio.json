@@ -1,7 +1,13 @@
 {
   "titulo": "Caldillo de congrio",
   "categoria": "sopas",
-  "tags": ["caldillo", "sopa", "pescado", "marisco", "olla"],
+  "tags": [
+    "caldillo",
+    "sopa",
+    "pescado",
+    "marisco",
+    "olla"
+  ],
   "imagen": "img/Caldillo-de-congrio.JPG",
   "tiempo": "50 min",
   "porciones": "4 personas",
@@ -35,16 +41,17 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "cabeza y espinas del congrio",
       "nota": "a gusto",
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": 4,
+      "cantidadMax": 5,
       "unidad": null,
-      "nombre": "4-5 papas",
+      "nombre": "papas",
       "nota": "en gajos",
       "escalable": true
     },
@@ -93,7 +100,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "ají de color, orégano, comino, sal, pimienta y cilantro",
       "nota": "a gusto",
@@ -103,7 +110,14 @@
   "pasos_v2": [
     {
       "texto": "Hierve la cabeza y espinas con verduras y 2 L de agua por 20-30 min. Cuela.",
-      "ingredientes": [2, 4, 5, 6, 7, 8],
+      "ingredientes": [
+        2,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
       "timers": [
         {
           "minutos": 30,
@@ -113,15 +127,26 @@
     },
     {
       "texto": "Haz un sofrito con cebolla, pimentón, zanahoria y ajo. Agrega tomate y condimentos.",
-      "ingredientes": [4, 5, 6, 7, 8]
+      "ingredientes": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
     },
     {
       "texto": "Vierte el vino y deja evaporar. Añade las papas y cúbrelas con el caldo.",
-      "ingredientes": [3, 9]
+      "ingredientes": [
+        3,
+        9
+      ]
     },
     {
       "texto": "Cocina 15 min hasta que las papas ablanden.",
-      "ingredientes": [3],
+      "ingredientes": [
+        3
+      ],
       "timers": [
         {
           "minutos": 15,
@@ -131,7 +156,9 @@
     },
     {
       "texto": "Pon los medallones encima y cocina tapado 8-10 min a fuego mínimo.",
-      "ingredientes": [1],
+      "ingredientes": [
+        1
+      ],
       "timers": [
         {
           "minutos": 10,
@@ -141,7 +168,9 @@
     },
     {
       "texto": "Opcional: añade crema antes de apagar. Sirve con cilantro.",
-      "ingredientes": [10]
+      "ingredientes": [
+        10
+      ]
     }
   ],
   "tiempo_v2": {

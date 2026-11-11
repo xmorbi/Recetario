@@ -1,7 +1,14 @@
 {
   "titulo": "Ponche",
   "categoria": "bebidas",
-  "tags": ["ponche", "aguardiente", "canela", "culén", "caramelo", "tragos"],
+  "tags": [
+    "ponche",
+    "aguardiente",
+    "canela",
+    "culén",
+    "caramelo",
+    "tragos"
+  ],
   "imagen": null,
   "tiempo": "20 min",
   "porciones": "6 a 8 personas",
@@ -19,28 +26,28 @@
   },
   "ingredientes_v2": [
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "azúcar quemada",
       "nota": "a gusto",
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "agua",
       "nota": "a gusto",
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "aguardiente",
       "nota": "a gusto",
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "palos de canela o culén",
       "nota": "a gusto",
@@ -50,18 +57,26 @@
   "pasos_v2": [
     {
       "texto": "Dorar el azúcar hasta lograr la consistencia de un caramelo.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Hervir el agua con los palos de canela o culén.",
-      "ingredientes": [2, 4]
+      "ingredientes": [
+        2,
+        4
+      ]
     },
     {
       "texto": "Vaciar sobre el caramelo."
     },
     {
       "texto": "Una vez que se ha disuelto y enfriado bien, agregar el aguardiente.",
-      "ingredientes": [2, 3]
+      "ingredientes": [
+        2,
+        3
+      ]
     }
   ],
   "tiempo_v2": {

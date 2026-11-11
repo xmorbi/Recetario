@@ -1,7 +1,13 @@
 {
   "titulo": "Croquetas de Arroz",
   "categoria": "principales",
-  "tags": ["croquetas de arroz", "arroz", "champiñones", "fritura", "arroces"],
+  "tags": [
+    "croquetas de arroz",
+    "arroz",
+    "champiñones",
+    "fritura",
+    "arroces"
+  ],
   "imagen": null,
   "tiempo": "40 min",
   "porciones": "4 a 6 personas",
@@ -25,9 +31,9 @@
   },
   "ingredientes_v2": [
     {
-      "cantidad": 1,
-      "unidad": null,
-      "nombre": "0.5 taza de arroz ya",
+      "cantidad": 1.5,
+      "unidad": "taza",
+      "nombre": "arroz ya",
       "nota": "300 g, graneado, cocido, frío",
       "escalable": true
     },
@@ -51,7 +57,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "jugo de 0.5 limón",
       "nota": "a gusto",
@@ -72,14 +78,14 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "pimienta",
       "nota": "a gusto",
@@ -89,19 +95,34 @@
   "pasos_v2": [
     {
       "texto": "Mezclar el arroz graneado frío con los champiñones salteados y cortados en tiritas.",
-      "ingredientes": [1, 2, 7, 8]
+      "ingredientes": [
+        1,
+        2,
+        7,
+        8
+      ]
     },
     {
       "texto": "Aliñar con sal, jugo de limón, pimienta y perejil.",
-      "ingredientes": [5, 6, 8, 9]
+      "ingredientes": [
+        5,
+        6,
+        8,
+        9
+      ]
     },
     {
       "texto": "Formar croquetas, pasar por huevo batido y luego por pan rallado.",
-      "ingredientes": [3, 4]
+      "ingredientes": [
+        3,
+        4
+      ]
     },
     {
       "texto": "Refrigerar 20 minutos para que firmen y no se desarmen al freír.",
-      "ingredientes": [7],
+      "ingredientes": [
+        7
+      ],
       "timers": [
         {
           "minutos": 20,
@@ -111,11 +132,17 @@
     },
     {
       "texto": "Freír en aceite caliente (170-180 °C) hasta dorar por ambos lados.",
-      "ingredientes": [7]
+      "ingredientes": [
+        7
+      ]
     },
     {
       "texto": "Servir acompañadas de ensaladas y espolvoreadas con perejil picado.",
-      "ingredientes": [4, 6, 8]
+      "ingredientes": [
+        4,
+        6,
+        8
+      ]
     }
   ],
   "tiempo_v2": {

@@ -1,7 +1,14 @@
 {
   "titulo": "Carne Mongoliana",
   "categoria": "principales",
-  "tags": ["carne mongoliana", "lomo", "ají verde", "cebollines", "salsa de soja", "carnes"],
+  "tags": [
+    "carne mongoliana",
+    "lomo",
+    "ají verde",
+    "cebollines",
+    "salsa de soja",
+    "carnes"
+  ],
   "imagen": null,
   "tiempo": "20 min",
   "porciones": "4 personas",
@@ -57,14 +64,14 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "pimienta",
       "nota": "a gusto",
@@ -74,23 +81,38 @@
   "pasos_v2": [
     {
       "texto": "Cortar la carne en trozos pequeños.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Limpiar los cebollines y picarlos en trozos; limpiar el ají y cortarlo en tiras.",
-      "ingredientes": [2, 3]
+      "ingredientes": [
+        2,
+        3
+      ]
     },
     {
       "texto": "Dorar la carne en el aceite previamente calentado en un wok o sartén amplia, evitando que se seque.",
-      "ingredientes": [1, 4]
+      "ingredientes": [
+        1,
+        4
+      ]
     },
     {
       "texto": "Agregar los cebollines, el ají, sal y pimienta y revolver muy bien.",
-      "ingredientes": [2, 3, 6, 7]
+      "ingredientes": [
+        2,
+        3,
+        6,
+        7
+      ]
     },
     {
       "texto": "Un minuto antes de servir agregar la salsa de soja.",
-      "ingredientes": [5],
+      "ingredientes": [
+        5
+      ],
       "timers": [
         {
           "minutos": 1,

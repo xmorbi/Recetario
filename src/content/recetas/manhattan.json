@@ -1,7 +1,14 @@
 {
   "titulo": "Manhattan",
   "categoria": "bebidas",
-  "tags": ["manhattan", "whisky", "vermut", "amargo", "cereza marrasquino", "tragos"],
+  "tags": [
+    "manhattan",
+    "whisky",
+    "vermut",
+    "amargo",
+    "cereza marrasquino",
+    "tragos"
+  ],
   "imagen": null,
   "tiempo": "5 min",
   "porciones": "1 persona",
@@ -37,14 +44,14 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "cerezas marrasquino",
       "nota": "a gusto, para decorar",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "hielo",
       "nota": "a gusto",
@@ -54,18 +61,26 @@
   "pasos_v2": [
     {
       "texto": "Picar el hielo en la licuadora.",
-      "ingredientes": [5]
+      "ingredientes": [
+        5
+      ]
     },
     {
       "texto": "Incorporar los licores y batir.",
-      "ingredientes": [1, 2, 3]
+      "ingredientes": [
+        1,
+        2,
+        3
+      ]
     },
     {
       "texto": "Servir en vasos de cóctel."
     },
     {
       "texto": "Agregar 1 cereza marrasquino.",
-      "ingredientes": [4]
+      "ingredientes": [
+        4
+      ]
     }
   ],
   "tiempo_v2": {

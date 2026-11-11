@@ -1,7 +1,14 @@
 {
   "titulo": "Ensalada de repollo",
   "categoria": "ensaladas",
-  "tags": ["ensalada", "repollo", "fresca", "acompañamiento", "vegetariano", "economico"],
+  "tags": [
+    "ensalada",
+    "repollo",
+    "fresca",
+    "acompañamiento",
+    "vegetariano",
+    "economico"
+  ],
   "imagen": null,
   "tiempo": "10 min",
   "porciones": "4 personas",
@@ -53,7 +60,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal y pimienta",
       "nota": "a gusto",
@@ -70,19 +77,31 @@
   "pasos_v2": [
     {
       "texto": "Corta el repollo en tiras finas. Lávalo y escúrrelo bien.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Ralla la zanahoria.",
-      "ingredientes": [2]
+      "ingredientes": [
+        2
+      ]
     },
     {
       "texto": "Mezcla el repollo con la zanahoria.",
-      "ingredientes": [1, 2]
+      "ingredientes": [
+        1,
+        2
+      ]
     },
     {
       "texto": "Condimenta con aceite, vinagre, sal y pimienta. Si quieres, agrega jugo de limón.",
-      "ingredientes": [3, 4, 5, 6]
+      "ingredientes": [
+        3,
+        4,
+        5,
+        6
+      ]
     },
     {
       "texto": "Sirve fría."

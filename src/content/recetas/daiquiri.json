@@ -1,7 +1,13 @@
 {
   "titulo": "Daiquiri",
   "categoria": "bebidas",
-  "tags": ["daiquiri", "ron", "limón", "cóctel", "tragos"],
+  "tags": [
+    "daiquiri",
+    "ron",
+    "limón",
+    "cóctel",
+    "tragos"
+  ],
   "imagen": null,
   "tiempo": "5 min",
   "porciones": "1 persona",
@@ -26,7 +32,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "jugo de 0.25 de limón",
       "nota": "a gusto",
@@ -40,7 +46,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "hielo",
       "nota": "a gusto",
@@ -50,11 +56,18 @@
   "pasos_v2": [
     {
       "texto": "Se mezclan los ingredientes en un vaso grande o en la coctelera.",
-      "ingredientes": [1, 2, 3, 4]
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4
+      ]
     },
     {
       "texto": "Batir, colar y servir en copas adornadas con cascaritas de limón.",
-      "ingredientes": [2]
+      "ingredientes": [
+        2
+      ]
     }
   ],
   "tiempo_v2": {

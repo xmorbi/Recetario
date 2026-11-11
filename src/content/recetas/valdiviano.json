@@ -1,7 +1,13 @@
 {
   "titulo": "Valdiviano",
   "categoria": "sopas",
-  "tags": ["sopa", "vacuno", "olla", "invierno", "plato principal"],
+  "tags": [
+    "sopa",
+    "vacuno",
+    "olla",
+    "invierno",
+    "plato principal"
+  ],
   "imagen": null,
   "tiempo": "40 min",
   "porciones": "4 personas",
@@ -66,7 +72,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "laurel, tomillo, merkén",
       "nota": "a gusto",
@@ -94,19 +100,33 @@
   "pasos_v2": [
     {
       "texto": "Sofríe cebolla, ajo y pimentón hasta dorar.",
-      "ingredientes": [4, 5, 10]
+      "ingredientes": [
+        4,
+        5,
+        10
+      ]
     },
     {
       "texto": "Agrega el tomate y la carne de vacuno en cubos. Cocina unos minutos hasta que la carne cambie de color.",
-      "ingredientes": [1, 6]
+      "ingredientes": [
+        1,
+        6
+      ]
     },
     {
       "texto": "Vierte el agua con el caldo, laurel y tomillo. Lleva a ebullición.",
-      "ingredientes": [7, 8, 9]
+      "ingredientes": [
+        7,
+        8,
+        9
+      ]
     },
     {
       "texto": "Incorpora las papas y zanahorias. Cocina 20-30 min hasta que estén tiernas.",
-      "ingredientes": [2, 3],
+      "ingredientes": [
+        2,
+        3
+      ],
       "timers": [
         {
           "minutos": 30,

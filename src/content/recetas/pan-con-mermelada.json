@@ -1,7 +1,14 @@
 {
   "titulo": "Pan con mermelada",
   "categoria": "once",
-  "tags": ["once", "pan", "mermelada", "dulce", "desayuno", "simple"],
+  "tags": [
+    "once",
+    "pan",
+    "mermelada",
+    "dulce",
+    "desayuno",
+    "simple"
+  ],
   "imagen": null,
   "tiempo": "3 min",
   "porciones": "1 persona",
@@ -39,7 +46,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "mantequilla",
       "nota": "a gusto",
@@ -50,15 +57,21 @@
   "pasos_v2": [
     {
       "texto": "Abre el pan por la mitad.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Si quieres, úntalo con un poco de mantequilla.",
-      "ingredientes": [3]
+      "ingredientes": [
+        3
+      ]
     },
     {
       "texto": "Unta la mermelada generosamente.",
-      "ingredientes": [2]
+      "ingredientes": [
+        2
+      ]
     },
     {
       "texto": "Come inmediatamente."

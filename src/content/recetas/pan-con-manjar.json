@@ -1,7 +1,14 @@
 {
   "titulo": "Pan con manjar",
   "categoria": "once",
-  "tags": ["once", "pan", "manjar", "dulce", "desayuno", "tradicional"],
+  "tags": [
+    "once",
+    "pan",
+    "manjar",
+    "dulce",
+    "desayuno",
+    "tradicional"
+  ],
   "imagen": null,
   "tiempo": "3 min",
   "porciones": "1 persona",
@@ -43,7 +50,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "mantequilla",
       "nota": "a gusto",
@@ -54,19 +61,30 @@
   "pasos_v2": [
     {
       "texto": "Abre el pan por la mitad. Si quieres, úntalo ligeramente con mantequilla antes del manjar: el contraste salado/dulce es clave.",
-      "ingredientes": [1, 2, 3]
+      "ingredientes": [
+        1,
+        2,
+        3
+      ]
     },
     {
       "texto": "Unta una capa generosa de manjar.",
-      "ingredientes": [2]
+      "ingredientes": [
+        2
+      ]
     },
     {
       "texto": "Si está muy frío, calienta el pan armado 10 segundos en el microondas para que el manjar se derrita ligeramente.",
-      "ingredientes": [1, 2]
+      "ingredientes": [
+        1,
+        2
+      ]
     },
     {
       "texto": "Come inmediatamente. Acompaña con té o café con leche.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     }
   ],
   "tiempo_v2": {

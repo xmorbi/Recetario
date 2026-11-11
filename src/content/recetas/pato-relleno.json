@@ -1,7 +1,14 @@
 {
   "titulo": "Pato Relleno",
   "categoria": "principales",
-  "tags": ["pato relleno", "pato", "castañas", "ciruelas", "horno", "aves"],
+  "tags": [
+    "pato relleno",
+    "pato",
+    "castañas",
+    "ciruelas",
+    "horno",
+    "aves"
+  ],
   "imagen": null,
   "tiempo": "2 h 30 min (más reposo de un día)",
   "porciones": "4 a 6 personas",
@@ -59,21 +66,21 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "nuez moscada",
       "nota": "a gusto",
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "pimienta",
       "nota": "a gusto",
@@ -89,7 +96,11 @@
   "pasos_v2": [
     {
       "texto": "Limpiar bien el pato y rociarlo con jugo de limón y sal por dentro y por fuera.",
-      "ingredientes": [1, 4, 8]
+      "ingredientes": [
+        1,
+        4,
+        8
+      ]
     },
     {
       "texto": "Dejarlo en el refrigerador de un día para otro.",
@@ -97,30 +108,54 @@
     },
     {
       "texto": "Preparar un relleno con las castañas pasadas por cedazo, las ciruelas, huevos, la mitad de la crema, pimienta, sal y nuez moscada.",
-      "ingredientes": [2, 3, 6, 7, 8, 9, 10]
+      "ingredientes": [
+        2,
+        3,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
     },
     {
       "texto": "Estilar el pato, rellenar con esta mezcla y coserlo con hilo blanco firme.",
-      "ingredientes": [1, 5]
+      "ingredientes": [
+        1,
+        5
+      ]
     },
     {
       "texto": "Amarrar alas y piernas, rociar de nuevo con jugo de limón y un poco de sal.",
-      "ingredientes": [4, 8]
+      "ingredientes": [
+        4,
+        8
+      ]
     },
     {
       "texto": "Dejar en cocción en horno caliente."
     },
     {
       "texto": "Mezclar la crema restante con el vino, sazonar, batir y bañar con esto el pato cuando esté dorándose.",
-      "ingredientes": [1, 5, 10]
+      "ingredientes": [
+        1,
+        5,
+        10
+      ]
     },
     {
       "texto": "Antes de retirarlo del horno, agregar una taza de agua a la fuente para que se desprenda bien el jugo que se haya resecado.",
-      "ingredientes": [4]
+      "ingredientes": [
+        4
+      ]
     },
     {
       "texto": "Servir los trozos de pato bañados con su jugo acompañado con una porción del relleno y ensaladas.",
-      "ingredientes": [1, 4, 8]
+      "ingredientes": [
+        1,
+        4,
+        8
+      ]
     }
   ],
   "tiempo_v2": {

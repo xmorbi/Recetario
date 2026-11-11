@@ -1,7 +1,14 @@
 {
   "titulo": "Huevos Revueltos con Tomate",
   "categoria": "once",
-  "tags": ["huevos revueltos con tomate", "huevos", "tomate", "desayuno", "once", "huevos"],
+  "tags": [
+    "huevos revueltos con tomate",
+    "huevos",
+    "tomate",
+    "desayuno",
+    "once",
+    "huevos"
+  ],
   "imagen": null,
   "tiempo": "10 min",
   "porciones": "2 personas",
@@ -39,14 +46,14 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "pimienta",
       "nota": "a gusto",
@@ -56,11 +63,18 @@
   "pasos_v2": [
     {
       "texto": "Mezclar los huevos con la salsa de tomates o los tomates maduros picados finos y aliñar.",
-      "ingredientes": [1, 3, 4]
+      "ingredientes": [
+        1,
+        3,
+        4
+      ]
     },
     {
       "texto": "Vaciar sobre la mantequilla caliente y revolver hasta que el huevo esté cocido.",
-      "ingredientes": [1, 2]
+      "ingredientes": [
+        1,
+        2
+      ]
     }
   ],
   "tiempo_v2": {

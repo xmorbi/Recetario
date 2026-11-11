@@ -1,7 +1,14 @@
 {
   "titulo": "Porotos granados",
   "categoria": "principales",
-  "tags": ["porotos", "verano", "choclo", "plato principal", "tradicional", "vegetariano"],
+  "tags": [
+    "porotos",
+    "verano",
+    "choclo",
+    "plato principal",
+    "tradicional",
+    "vegetariano"
+  ],
   "imagen": "img/porotos-granados.jpg",
   "tiempo": "50 min",
   "porciones": "6 personas",
@@ -66,7 +73,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "aceite, sal y pimienta",
       "nota": "a gusto",
@@ -76,15 +83,26 @@
   "pasos_v2": [
     {
       "texto": "Sofríe la cebolla en aceite. Agrega el ají de color y el comino.",
-      "ingredientes": [4, 5, 6, 7]
+      "ingredientes": [
+        4,
+        5,
+        6,
+        7
+      ]
     },
     {
       "texto": "Incorpora los porotos, el zapallo y agua suficiente para cubrirlos.",
-      "ingredientes": [1, 2]
+      "ingredientes": [
+        1,
+        2
+      ]
     },
     {
       "texto": "Cocina 30 a 40 minutos hasta que los porotos estén tiernos y el zapallo se deshaga.",
-      "ingredientes": [1, 2],
+      "ingredientes": [
+        1,
+        2
+      ],
       "timers": [
         {
           "minutos": 40,
@@ -94,7 +112,10 @@
     },
     {
       "texto": "Agrega el choclo y la albahaca. Cocina 10 minutos más.",
-      "ingredientes": [3, 6],
+      "ingredientes": [
+        3,
+        6
+      ],
       "timers": [
         {
           "minutos": 10,
@@ -104,7 +125,9 @@
     },
     {
       "texto": "Condimenta y sirve con un chorrito de aceite crudo.",
-      "ingredientes": [7]
+      "ingredientes": [
+        7
+      ]
     }
   ],
   "tiempo_v2": {

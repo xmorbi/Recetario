@@ -62,9 +62,9 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
-      "unidad": null,
-      "nombre": "0.5 taza de leche",
+      "cantidad": 1.5,
+      "unidad": "taza",
+      "nombre": "leche",
       "nota": "375 ml",
       "escalable": true
     }
@@ -72,26 +72,38 @@
   "pasos_v2": [
     {
       "texto": "Cocer los espárragos.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Preparar una salsa con la mantequilla derretida, harina y leche.",
-      "ingredientes": [4, 5, 6]
+      "ingredientes": [
+        4,
+        5,
+        6
+      ]
     },
     {
       "texto": "Cocer la mezcla a fuego suave revolviendo constantemente hasta que espese."
     },
     {
       "texto": "Agregar el queso y revolver hasta que se derrita.",
-      "ingredientes": [2]
+      "ingredientes": [
+        2
+      ]
     },
     {
       "texto": "Añadir los camarones.",
-      "ingredientes": [3]
+      "ingredientes": [
+        3
+      ]
     },
     {
       "texto": "Volver a calentar y cubrir con la salsa los espárragos dispuestos en los platos.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     }
   ],
   "tiempo_v2": {

@@ -1,7 +1,14 @@
 {
   "titulo": "Arroz a la Valenciana",
   "categoria": "principales",
-  "tags": ["arroz a la valenciana", "arroz", "pollo", "mariscos", "chorizo", "arroces"],
+  "tags": [
+    "arroz a la valenciana",
+    "arroz",
+    "pollo",
+    "mariscos",
+    "chorizo",
+    "arroces"
+  ],
   "imagen": null,
   "tiempo": "1 h 15 min",
   "porciones": "6 a 8 personas",
@@ -123,7 +130,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal y pimienta",
       "nota": "a gusto",
@@ -133,11 +140,18 @@
   "pasos_v2": [
     {
       "texto": "Sazona las presas de pollo con sal y pimienta, y dóralas en el aceite de oliva a fuego medio-alto. Retira y reserva.",
-      "ingredientes": [2, 14, 15]
+      "ingredientes": [
+        2,
+        14,
+        15
+      ]
     },
     {
       "texto": "En la misma olla, dora el chorizo por 2-3 minutos. Retira y reserva junto al pollo.",
-      "ingredientes": [2, 3],
+      "ingredientes": [
+        2,
+        3
+      ],
       "timers": [
         {
           "minutos": 3,
@@ -147,7 +161,12 @@
     },
     {
       "texto": "Sofríe la cebolla, el ajo y los pimientos hasta que la cebolla esté transparente, unos 5 minutos.",
-      "ingredientes": [7, 8, 9, 14],
+      "ingredientes": [
+        7,
+        8,
+        9,
+        14
+      ],
       "timers": [
         {
           "minutos": 5,
@@ -157,7 +176,9 @@
     },
     {
       "texto": "Agrega el tomate rallado y cocina 3-4 minutos hasta que pierda el crudo.",
-      "ingredientes": [10],
+      "ingredientes": [
+        10
+      ],
       "timers": [
         {
           "minutos": 4,
@@ -167,7 +188,11 @@
     },
     {
       "texto": "Incorpora el arroz y el curry o cúrcuma. Revuelve para que los granos se impregnen del sofrito y se tuesten ligeramente, 2 minutos.",
-      "ingredientes": [1, 12, 14],
+      "ingredientes": [
+        1,
+        12,
+        14
+      ],
       "timers": [
         {
           "minutos": 2,
@@ -177,7 +202,13 @@
     },
     {
       "texto": "Añade 8 tazas (2 L) de agua o caldo caliente, el azafrán, las arvejas, el pollo y el chorizo reservados. Rectifica sal y pimienta.",
-      "ingredientes": [2, 3, 11, 13, 15]
+      "ingredientes": [
+        2,
+        3,
+        11,
+        13,
+        15
+      ]
     },
     {
       "texto": "Cocina tapado a fuego lento por 15 minutos.",
@@ -190,7 +221,11 @@
     },
     {
       "texto": "Agrega las almejas, los choritos y los camarones. Tapa y cocina 5-7 minutos más, solo hasta que los mariscos se abran.",
-      "ingredientes": [4, 5, 6],
+      "ingredientes": [
+        4,
+        5,
+        6
+      ],
       "timers": [
         {
           "minutos": 7,

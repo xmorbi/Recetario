@@ -1,7 +1,13 @@
 {
   "titulo": "Melvin (melón con vino)",
   "categoria": "bebidas",
-  "tags": ["bebida", "alcohol", "melón", "verano", "tradicional"],
+  "tags": [
+    "bebida",
+    "alcohol",
+    "melón",
+    "verano",
+    "tradicional"
+  ],
   "imagen": null,
   "tiempo": "20 min + maceración",
   "porciones": "4 a 6 personas",
@@ -50,7 +56,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "hielo",
       "nota": "a gusto",
@@ -68,15 +74,22 @@
   "pasos_v2": [
     {
       "texto": "Corta el melón por la mitad a lo largo. Retira las semillas con una cuchara.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Con una cuchara, ahueca ligeramente la pulpa para hacer espacio para el vino.",
-      "ingredientes": [2]
+      "ingredientes": [
+        2
+      ]
     },
     {
       "texto": "Espolvorea el azúcar dentro de las mitades y deja reposar 15 minutos para que el melón suelte su jugo.",
-      "ingredientes": [1, 3],
+      "ingredientes": [
+        1,
+        3
+      ],
       "timers": [
         {
           "minutos": 15,
@@ -86,11 +99,17 @@
     },
     {
       "texto": "Rellena con el vino blanco bien helado. Añade hielo y, si quieres, menta o jengibre.",
-      "ingredientes": [2, 4]
+      "ingredientes": [
+        2,
+        4
+      ]
     },
     {
       "texto": "Sirve con cuchara y bombilla. Se come el melón y se bebe el vino.",
-      "ingredientes": [1, 2]
+      "ingredientes": [
+        1,
+        2
+      ]
     }
   ],
   "tiempo_v2": {

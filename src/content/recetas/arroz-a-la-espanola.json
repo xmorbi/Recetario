@@ -1,7 +1,14 @@
 {
   "titulo": "Arroz a la Española",
   "categoria": "principales",
-  "tags": ["arroz a la española", "arroz", "pollo", "chorizo", "arroces", "tradicional"],
+  "tags": [
+    "arroz a la española",
+    "arroz",
+    "pollo",
+    "chorizo",
+    "arroces",
+    "tradicional"
+  ],
   "imagen": null,
   "tiempo": "1 h",
   "porciones": "6 personas",
@@ -117,7 +124,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal y pimienta",
       "nota": "a gusto",
@@ -127,11 +134,21 @@
   "pasos_v2": [
     {
       "texto": "Salpimentar las presas de pollo y dorarlas en una olla con aceite de oliva a fuego medio-alto. Retirar y reservar.",
-      "ingredientes": [2, 10, 13, 14]
+      "ingredientes": [
+        2,
+        10,
+        13,
+        14
+      ]
     },
     {
       "texto": "En la misma olla, dorar el chorizo en rodajas por 2-3 minutos. Retirar y reservar junto al pollo.",
-      "ingredientes": [2, 3, 10, 13],
+      "ingredientes": [
+        2,
+        3,
+        10,
+        13
+      ],
       "timers": [
         {
           "minutos": 3,
@@ -141,7 +158,12 @@
     },
     {
       "texto": "Sofreír la cebolla, el ajo y el pimentón rojo hasta que la cebolla esté transparente, unos 5 minutos.",
-      "ingredientes": [4, 5, 6, 13],
+      "ingredientes": [
+        4,
+        5,
+        6,
+        13
+      ],
       "timers": [
         {
           "minutos": 5,
@@ -151,7 +173,10 @@
     },
     {
       "texto": "Agregar el tomate rallado y la zanahoria; cocinar 3-4 minutos hasta que el tomate pierda el crudo.",
-      "ingredientes": [7, 8],
+      "ingredientes": [
+        7,
+        8
+      ],
       "timers": [
         {
           "minutos": 4,
@@ -161,7 +186,11 @@
     },
     {
       "texto": "Incorporar el arroz y el ají de color. Revolver para que los granos se impregnen del sofrito y se tuesten ligeramente, 2 minutos.",
-      "ingredientes": [1, 12, 13],
+      "ingredientes": [
+        1,
+        12,
+        13
+      ],
       "timers": [
         {
           "minutos": 2,
@@ -171,11 +200,20 @@
     },
     {
       "texto": "Añadir el caldo caliente, el azafrán, las arvejas, el pollo y el chorizo reservados. Rectificar sal y pimienta.",
-      "ingredientes": [2, 3, 9, 10, 11, 14]
+      "ingredientes": [
+        2,
+        3,
+        9,
+        10,
+        11,
+        14
+      ]
     },
     {
       "texto": "Cocinar tapado a fuego lento por 18-20 minutos, sin revolver, hasta que el arroz esté en su punto y el líquido se haya absorbido.",
-      "ingredientes": [1],
+      "ingredientes": [
+        1
+      ],
       "timers": [
         {
           "minutos": 20,

@@ -1,7 +1,12 @@
 {
   "titulo": "Pollo al jugo",
   "categoria": "principales",
-  "tags": ["pollo", "olla", "plato principal", "guiso"],
+  "tags": [
+    "pollo",
+    "olla",
+    "plato principal",
+    "guiso"
+  ],
   "imagen": null,
   "tiempo": "45 min",
   "porciones": "4 personas",
@@ -53,7 +58,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "aceite, sal, pimienta, laurel y orégano",
       "nota": "a gusto",
@@ -69,11 +74,17 @@
   "pasos_v2": [
     {
       "texto": "Dora el pollo en aceite hasta sellar. Retira y reserva.",
-      "ingredientes": [1, 5]
+      "ingredientes": [
+        1,
+        5
+      ]
     },
     {
       "texto": "Sofríe la cebolla 5 min hasta que esté transparente.",
-      "ingredientes": [2, 5],
+      "ingredientes": [
+        2,
+        5
+      ],
       "timers": [
         {
           "minutos": 5,
@@ -83,11 +94,17 @@
     },
     {
       "texto": "Agrega el ajo, la zanahoria, el laurel, el orégano y el pollo.",
-      "ingredientes": [1, 3, 4]
+      "ingredientes": [
+        1,
+        3,
+        4
+      ]
     },
     {
       "texto": "Cubre con el agua hirviendo y cocina 30 min.",
-      "ingredientes": [6],
+      "ingredientes": [
+        6
+      ],
       "timers": [
         {
           "minutos": 30,

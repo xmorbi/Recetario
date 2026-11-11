@@ -1,7 +1,14 @@
 {
   "titulo": "Torta tres leches",
   "categoria": "dulces",
-  "tags": ["torta", "tres leches", "dulce", "horno", "cumpleaños", "reposteria"],
+  "tags": [
+    "torta",
+    "tres leches",
+    "dulce",
+    "horno",
+    "cumpleaños",
+    "reposteria"
+  ],
   "imagen": null,
   "tiempo": "1 h + frío",
   "porciones": "12 porciones",
@@ -76,7 +83,7 @@
       "seccion": "Bizcocho"
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "mezcla de tres leches: 1 taza de crema",
       "nota": "a gusto",
@@ -112,11 +119,19 @@
     },
     {
       "texto": "Bate los huevos con el azúcar hasta que estén pálidos y espumosos. Agrega la vainilla.",
-      "ingredientes": [1, 2, 5, 10]
+      "ingredientes": [
+        1,
+        2,
+        5,
+        10
+      ]
     },
     {
       "texto": "Incorpora la harina cernida con los polvos de hornear con movimientos envolventes.",
-      "ingredientes": [3, 4]
+      "ingredientes": [
+        3,
+        4
+      ]
     },
     {
       "texto": "Vierte en el molde y hornea 25-30 minutos. Deja enfriar.",
@@ -129,11 +144,20 @@
     },
     {
       "texto": "Mezcla la leche condensada, evaporada y crema.",
-      "ingredientes": [6, 7, 8, 9]
+      "ingredientes": [
+        6,
+        7,
+        8,
+        9
+      ]
     },
     {
       "texto": "Pincha el bizcocho con un tenedor y vierte la mezcla de tres leches lentamente, dejando que absorba.",
-      "ingredientes": [6, 7, 8]
+      "ingredientes": [
+        6,
+        7,
+        8
+      ]
     },
     {
       "texto": "Refrigera al menos 4 horas (mejor toda la noche).",
@@ -141,7 +165,13 @@
     },
     {
       "texto": "Bate la crema con el azúcar y cubre la torta. Espolvorea canela si quieres.",
-      "ingredientes": [2, 4, 9, 10, 11]
+      "ingredientes": [
+        2,
+        4,
+        9,
+        10,
+        11
+      ]
     }
   ],
   "tiempo_v2": {

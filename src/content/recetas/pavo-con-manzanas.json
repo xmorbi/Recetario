@@ -1,7 +1,15 @@
 {
   "titulo": "Pavo con Manzanas",
   "categoria": "principales",
-  "tags": ["pavo con manzanas", "pavo", "manzanas", "ricota", "coñac", "horno", "aves"],
+  "tags": [
+    "pavo con manzanas",
+    "pavo",
+    "manzanas",
+    "ricota",
+    "coñac",
+    "horno",
+    "aves"
+  ],
   "imagen": null,
   "tiempo": "2 h (más maceración de un día)",
   "porciones": "8 a 10 personas",
@@ -68,14 +76,14 @@
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "pimienta",
       "nota": "a gusto",
@@ -85,28 +93,49 @@
   "pasos_v2": [
     {
       "texto": "Limpiar muy bien y lavar el pavo.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Con la jeringa inyectar el coñac por todos lados.",
-      "ingredientes": [6, 7]
+      "ingredientes": [
+        6,
+        7
+      ]
     },
     {
       "texto": "Dejar macerar de un día para otro.",
-      "ingredientes": [1, 6],
+      "ingredientes": [
+        1,
+        6
+      ],
       "previo": true
     },
     {
       "texto": "Al día siguiente, pelar 1 kg de manzanas, cortarlas en láminas, mezclar con la crema, ricota, sal y pimienta.",
-      "ingredientes": [2, 3, 4, 8, 9]
+      "ingredientes": [
+        2,
+        3,
+        4,
+        8,
+        9
+      ]
     },
     {
       "texto": "Distribuir esta preparación en una fuente para horno, poner encima el pavo bien untado con mantequilla, sal y pimienta.",
-      "ingredientes": [1, 5, 8, 9]
+      "ingredientes": [
+        1,
+        5,
+        8,
+        9
+      ]
     },
     {
       "texto": "Cocinar a horno caliente durante 1 1/2 hora, rociándolo periódicamente con su jugo.",
-      "ingredientes": [1],
+      "ingredientes": [
+        1
+      ],
       "timers": [
         {
           "minutos": 90,
@@ -116,11 +145,17 @@
     },
     {
       "texto": "Pelar el resto de las manzanas y quitarles los corazones. Untar con mantequilla y distribuirlas alrededor del pavo, dejar hasta que esté tierno.",
-      "ingredientes": [2, 5]
+      "ingredientes": [
+        2,
+        5
+      ]
     },
     {
       "texto": "Cortar el pavo en tajadas delgadas, distribuirlas en el centro de una fuente para la mesa y decorar con las mitades de manzana y el jugo en una salsera aparte.",
-      "ingredientes": [1, 2]
+      "ingredientes": [
+        1,
+        2
+      ]
     },
     {
       "texto": "Servir muy caliente."

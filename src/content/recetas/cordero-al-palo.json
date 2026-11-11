@@ -1,7 +1,15 @@
 {
   "titulo": "Cordero al palo",
   "categoria": "principales",
-  "tags": ["cordero", "asado", "patagonia", "fuego", "tradicional", "magallanes", "parrilla"],
+  "tags": [
+    "cordero",
+    "asado",
+    "patagonia",
+    "fuego",
+    "tradicional",
+    "magallanes",
+    "parrilla"
+  ],
   "imagen": null,
   "tiempo": "5 h",
   "porciones": "8 a 10 personas",
@@ -83,7 +91,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "alambre o cordel para atar",
       "nota": "a gusto",
@@ -93,23 +101,41 @@
   "pasos_v2": [
     {
       "texto": "Prepara el fuego: enciende la leña en un hoyo poco profundo o en un asador. Necesitas brasas abundantes y parejas. La leña de roble o espino da el mejor sabor.",
-      "ingredientes": [7]
+      "ingredientes": [
+        7
+      ]
     },
     {
       "texto": "Sazona el cordero generosamente por dentro y por fuera con sal, merkén, orégano, pimienta y ajo. La sal debe cubrir toda la superficie.",
-      "ingredientes": [1, 2, 3, 4, 5, 6]
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
     },
     {
       "texto": "Ensarta el cordero en el palo largo, de la cabeza a la cola si es entero. Ata las patas y las costillas con alambre o cordel para que no se muevan.",
-      "ingredientes": [1, 8, 9]
+      "ingredientes": [
+        1,
+        8,
+        9
+      ]
     },
     {
       "texto": "Coloca el palo sobre el fuego, a unos 30-40 cm de las brasas. El cordero debe girar lentamente para cocinarse parejo.",
-      "ingredientes": [1, 8]
+      "ingredientes": [
+        1,
+        8
+      ]
     },
     {
       "texto": "Cocina por 4-5 horas, girando constantemente. La clave es la paciencia: el cordero se cocina por irradiación del calor, no directamente sobre las llamas.",
-      "ingredientes": [1],
+      "ingredientes": [
+        1
+      ],
       "timers": [
         {
           "minutos": 300,
@@ -119,15 +145,22 @@
     },
     {
       "texto": "A medida que se cocine, la piel se va dorando y crujiendo. Si algún punto se dora demasiado rápido, mueve las brasas o sube el palo.",
-      "ingredientes": [8]
+      "ingredientes": [
+        8
+      ]
     },
     {
       "texto": "Está listo cuando la carne se separa del hueso fácilmente y la piel está crujiente y dorada.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Retira del fuego, deja reposar 15 minutos y corta en presas. Sirve con papas cocidas o ensalada a la chilena.",
-      "ingredientes": [2, 7],
+      "ingredientes": [
+        2,
+        7
+      ],
       "timers": [
         {
           "minutos": 15,

@@ -1,7 +1,14 @@
 {
   "titulo": "Pavita Rellena",
   "categoria": "principales",
-  "tags": ["pavita rellena", "pavita", "tocino", "limón", "horno", "aves"],
+  "tags": [
+    "pavita rellena",
+    "pavita",
+    "tocino",
+    "limón",
+    "horno",
+    "aves"
+  ],
   "imagen": null,
   "tiempo": "2 h 30 min",
   "porciones": "6 a 8 personas",
@@ -57,28 +64,28 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "clavos de olor",
       "nota": "a gusto",
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "aceite",
       "nota": "a gusto",
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "pimienta",
       "nota": "a gusto",
@@ -88,35 +95,61 @@
   "pasos_v2": [
     {
       "texto": "Limpiar bien la pavita eliminando con la llama los restos de plumilla, lavar y secar con un paño.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Limpiar la cebolla y enterrarle los clavos de olor.",
-      "ingredientes": [2, 7]
+      "ingredientes": [
+        2,
+        7
+      ]
     },
     {
       "texto": "Lavar un limón y agujerearlo en varias partes.",
-      "ingredientes": [4]
+      "ingredientes": [
+        4
+      ]
     },
     {
       "texto": "Aliñar la pavita con sal y pimienta, colocar en su interior la cebolla y el limón.",
-      "ingredientes": [1, 2, 4, 9, 10]
+      "ingredientes": [
+        1,
+        2,
+        4,
+        9,
+        10
+      ]
     },
     {
       "texto": "Cubrirla con tiras de tocino ahumado y amarrarle las patas y las alas.",
-      "ingredientes": [5]
+      "ingredientes": [
+        5
+      ]
     },
     {
       "texto": "Ponerla en una asadera, rociarla con sal, pimienta, aceite y trocitos de mantequilla; dejarla en cocción en horno caliente.",
-      "ingredientes": [3, 8, 9, 10]
+      "ingredientes": [
+        3,
+        8,
+        9,
+        10
+      ]
     },
     {
       "texto": "Bañar la pavita con el vino blanco y el jugo que se va formando.",
-      "ingredientes": [1, 6]
+      "ingredientes": [
+        1,
+        6
+      ]
     },
     {
       "texto": "Cuando esté blanda quitar las tiras de tocino y rociar con jugo de limón.",
-      "ingredientes": [4, 5]
+      "ingredientes": [
+        4,
+        5
+      ]
     },
     {
       "texto": "Servir con su jugo, acompañada de puré de papas."

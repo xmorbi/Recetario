@@ -1,7 +1,15 @@
 {
   "titulo": "Frambuesa Colada",
   "categoria": "bebidas",
-  "tags": ["frambuesa colada", "ron", "ron coco", "piña", "frambuesa", "crema de leche", "tragos"],
+  "tags": [
+    "frambuesa colada",
+    "ron",
+    "ron coco",
+    "piña",
+    "frambuesa",
+    "crema de leche",
+    "tragos"
+  ],
   "imagen": null,
   "tiempo": "5 min",
   "porciones": "1 persona",
@@ -54,14 +62,14 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "azúcar",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "hielo",
       "nota": "a gusto",
@@ -78,14 +86,24 @@
   "pasos_v2": [
     {
       "texto": "Colocar todos los ingredientes en la juguera y licuarlos hasta conseguir una consistencia homogénea.",
-      "ingredientes": [1, 2, 3, 4, 5, 6, 7]
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
     },
     {
       "texto": "Servir en copa grande."
     },
     {
       "texto": "Decorar con frutillas y hojas de menta.",
-      "ingredientes": [8]
+      "ingredientes": [
+        8
+      ]
     }
   ],
   "tiempo_v2": {

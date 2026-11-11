@@ -1,7 +1,14 @@
 {
   "titulo": "Curanto en olla",
   "categoria": "principales",
-  "tags": ["curanto", "chiloé", "olla", "marisco", "tradicional", "fiesta"],
+  "tags": [
+    "curanto",
+    "chiloé",
+    "olla",
+    "marisco",
+    "tradicional",
+    "fiesta"
+  ],
   "imagen": null,
   "tiempo": "1 h 30 min",
   "porciones": "6 personas",
@@ -108,14 +115,14 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "hojas de repollo o de nalca",
       "nota": "a gusto",
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal y merkén",
       "nota": "a gusto",
@@ -125,15 +132,25 @@
   "pasos_v2": [
     {
       "texto": "En el fondo de una olla grande (o paila de greda), pon una cama de hojas de repollo o nalca.",
-      "ingredientes": [4, 13]
+      "ingredientes": [
+        4,
+        13
+      ]
     },
     {
       "texto": "Encima distribuye la cebolla en pluma y las carnes: pollo, cerdo y longaniza.",
-      "ingredientes": [4, 5, 6, 11]
+      "ingredientes": [
+        4,
+        5,
+        6,
+        11
+      ]
     },
     {
       "texto": "Añade el vino blanco y 1/2 taza (125 ml) de agua. Tapa y cocina 20 minutos a fuego medio.",
-      "ingredientes": [12],
+      "ingredientes": [
+        12
+      ],
       "timers": [
         {
           "minutos": 20,
@@ -143,11 +160,21 @@
     },
     {
       "texto": "Agrega los mariscos con concha hacia abajo, encima las papas y los camotes pelados.",
-      "ingredientes": [1, 2, 3, 7, 8]
+      "ingredientes": [
+        1,
+        2,
+        3,
+        7,
+        8
+      ]
     },
     {
       "texto": "Coloca encima los milcaos y chapaleles, envueltos en hojas si quieres que no se deshagan.",
-      "ingredientes": [9, 10, 13]
+      "ingredientes": [
+        9,
+        10,
+        13
+      ]
     },
     {
       "texto": "Tapa la olla con fuerza y cocina 30-40 minutos más a fuego medio-bajo, sin destapar.",

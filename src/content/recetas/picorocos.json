@@ -1,7 +1,14 @@
 {
   "titulo": "Picorocos",
   "categoria": "mar",
-  "tags": ["picoroco", "marisco", "chiloé", "patrimonio", "sur", "tradicional"],
+  "tags": [
+    "picoroco",
+    "marisco",
+    "chiloé",
+    "patrimonio",
+    "sur",
+    "tradicional"
+  ],
   "imagen": null,
   "tiempo": "30 min",
   "porciones": "4 personas",
@@ -51,7 +58,7 @@
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal",
       "nota": "a gusto",
@@ -68,15 +75,25 @@
   "pasos_v2": [
     {
       "texto": "Lava bien los picorocos bajo el chorro de agua fría.",
-      "ingredientes": [1, 3]
+      "ingredientes": [
+        1,
+        3
+      ]
     },
     {
       "texto": "En una olla grande, pon agua con sal, la cebolla, el ajo y el laurel. Lleva a hervor.",
-      "ingredientes": [2, 3, 4, 5]
+      "ingredientes": [
+        2,
+        3,
+        4,
+        5
+      ]
     },
     {
       "texto": "Cocina los picorocos 15-20 minutos, hasta que la concha se abra ligeramente.",
-      "ingredientes": [1],
+      "ingredientes": [
+        1
+      ],
       "timers": [
         {
           "minutos": 20,
@@ -86,7 +103,9 @@
     },
     {
       "texto": "Retira y sirve calientes, con mayonesa o pebre. Se come la carne que está dentro de la concha, con un tenedor o una pinza.",
-      "ingredientes": [6]
+      "ingredientes": [
+        6
+      ]
     }
   ],
   "tiempo_v2": {

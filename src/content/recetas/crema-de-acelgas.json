@@ -1,7 +1,13 @@
 {
   "titulo": "Crema de Acelgas",
   "categoria": "sopas",
-  "tags": ["crema de acelgas", "acelgas", "crema", "sopa", "verduras"],
+  "tags": [
+    "crema de acelgas",
+    "acelgas",
+    "crema",
+    "sopa",
+    "verduras"
+  ],
   "imagen": null,
   "tiempo": "35 min",
   "porciones": "4 a 6 personas",
@@ -45,21 +51,21 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "ajo",
       "nota": "a gusto",
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "aceite",
       "nota": "a gusto",
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "pimienta blanca",
       "nota": "a gusto",
@@ -87,7 +93,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal",
       "nota": "a gusto",
@@ -97,11 +103,15 @@
   "pasos_v2": [
     {
       "texto": "Limpiar la acelga y eliminar los tallos.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Cocer las hojas en 2 tazas de agua con un poco de sal, aproximadamente 10 minutos.",
-      "ingredientes": [11],
+      "ingredientes": [
+        11
+      ],
       "timers": [
         {
           "minutos": 10,
@@ -114,23 +124,39 @@
     },
     {
       "texto": "En una cacerola calentar aceite y freír el ajo machacado, 1 cucharada de cebolla rallada, sal y pimienta.",
-      "ingredientes": [5, 6, 7, 8, 11]
+      "ingredientes": [
+        5,
+        6,
+        7,
+        8,
+        11
+      ]
     },
     {
       "texto": "Deshacer en un plato con agua fría la cucharada de harina y la cucharada de maicena e incorporarlas a la fritura.",
-      "ingredientes": [2, 3]
+      "ingredientes": [
+        2,
+        3
+      ]
     },
     {
       "texto": "Agregar el caldo y revolver hasta que espese.",
-      "ingredientes": [4]
+      "ingredientes": [
+        4
+      ]
     },
     {
       "texto": "Finalmente agregar la crema de acelga.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Servir bien caliente y agregar en los platos una cucharada de cubitos de pan frito o bien, huevo duro picado.",
-      "ingredientes": [9, 10]
+      "ingredientes": [
+        9,
+        10
+      ]
     }
   ],
   "tiempo_v2": {

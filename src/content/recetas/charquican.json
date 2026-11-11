@@ -1,7 +1,14 @@
 {
   "titulo": "Charquicán",
   "categoria": "principales",
-  "tags": ["charquican", "olla", "plato principal", "invierno", "papas", "verduras"],
+  "tags": [
+    "charquican",
+    "olla",
+    "plato principal",
+    "invierno",
+    "papas",
+    "verduras"
+  ],
   "imagen": "img/Charquican.jpg",
   "tiempo": "40 min",
   "porciones": "4 personas",
@@ -64,7 +71,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "comino, ají de color, orégano y sal",
       "nota": "a gusto",
@@ -81,15 +88,23 @@
   "pasos_v2": [
     {
       "texto": "Hierve papas y zapallo en agua con sal hasta que estén blandos. Reserva un poco del agua.",
-      "ingredientes": [2, 3]
+      "ingredientes": [
+        2,
+        3
+      ]
     },
     {
       "texto": "Sofríe la cebolla en otra olla. Agrega la carne y condimenta.",
-      "ingredientes": [1, 4]
+      "ingredientes": [
+        1,
+        4
+      ]
     },
     {
       "texto": "Incorpora el choclo o las arvejas y cocina 5 minutos.",
-      "ingredientes": [5],
+      "ingredientes": [
+        5
+      ],
       "timers": [
         {
           "minutos": 5,
@@ -99,11 +114,16 @@
     },
     {
       "texto": "Agrega las papas y el zapallo escurridos. Maja la mezcla con un tenedor.",
-      "ingredientes": [2, 3]
+      "ingredientes": [
+        2,
+        3
+      ]
     },
     {
       "texto": "Sirve con un huevo frito encima.",
-      "ingredientes": [7]
+      "ingredientes": [
+        7
+      ]
     }
   ],
   "tiempo_v2": {

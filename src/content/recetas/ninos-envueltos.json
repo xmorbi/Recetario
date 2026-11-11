@@ -90,14 +90,14 @@
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal y pimienta",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "aceite de oliva",
       "nota": "a gusto",
@@ -107,7 +107,9 @@
   "pasos_v2": [
     {
       "texto": "Deshojar el repollo con cuidado para no romper las hojas. Lavarlas bien y blanquearlas en agua hirviendo por 2 minutos; luego pasarlas a agua fría, escurrirlas y reservarlas.",
-      "ingredientes": [1],
+      "ingredientes": [
+        1
+      ],
       "timers": [
         {
           "minutos": 2,
@@ -117,7 +119,11 @@
     },
     {
       "texto": "En una olla con un poco de aceite, sofreír el arroz por 5 minutos hasta que se vea brillante. Agregar 2 tazas de agua caliente, tapar y cocinar a fuego bajo por 20 minutos. Apagar y dejar reposar.",
-      "ingredientes": [3, 5, 10],
+      "ingredientes": [
+        3,
+        5,
+        10
+      ],
       "timers": [
         {
           "minutos": 5,
@@ -131,27 +137,48 @@
     },
     {
       "texto": "En otra olla, sofreír la cebolla y el ajo con aceite hasta que estén transparentes. Agregar el orégano, el ají de color, sal y pimienta, y revolver.",
-      "ingredientes": [4, 5, 7, 8, 9, 10]
+      "ingredientes": [
+        4,
+        5,
+        7,
+        8,
+        9,
+        10
+      ]
     },
     {
       "texto": "Incorporar la carne molida y cocinar hasta que esté dorada, deshaciéndola con una cuchara de madera.",
-      "ingredientes": [2]
+      "ingredientes": [
+        2
+      ]
     },
     {
       "texto": "Agregar el arroz cocido a la mezcla de carne y revolver suavemente hasta integrar todo.",
-      "ingredientes": [2, 3]
+      "ingredientes": [
+        2,
+        3
+      ]
     },
     {
       "texto": "Extender una hoja de repollo, poner una cucharada generosa del relleno en el centro, doblar los bordes hacia adentro y enrollar firmemente pero sin apretar demasiado. Repetir con el resto de las hojas.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Disponer los rollos en una olla amplia, uno al lado del otro. Cubrirlos con la salsa de tomate y un poco de agua si es necesario.",
-      "ingredientes": [6, 9]
+      "ingredientes": [
+        6,
+        9
+      ]
     },
     {
       "texto": "Cocinar a fuego lento, tapado, por 25 a 30 minutos, hasta que el repollo esté tierno y la salsa haya tomado sabor.",
-      "ingredientes": [1, 6, 9],
+      "ingredientes": [
+        1,
+        6,
+        9
+      ],
       "timers": [
         {
           "minutos": 30,

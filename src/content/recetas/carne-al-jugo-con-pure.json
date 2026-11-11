@@ -1,7 +1,14 @@
 {
   "titulo": "Carne al jugo con puré",
   "categoria": "principales",
-  "tags": ["carne", "olla", "plato principal", "pure", "guiso", "vacuno"],
+  "tags": [
+    "carne",
+    "olla",
+    "plato principal",
+    "pure",
+    "guiso",
+    "vacuno"
+  ],
   "imagen": "img/carne-al-jugo-con-pure.jpg",
   "tiempo": "1 h 30 min",
   "porciones": "4 personas",
@@ -57,14 +64,14 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal, pimienta, orégano, comino y laurel",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "agua o caldo para cubrir",
       "nota": "a gusto",
@@ -102,15 +109,25 @@
   "pasos_v2": [
     {
       "texto": "Sofríe la cebolla, el ajo, la zanahoria y el pimentón.",
-      "ingredientes": [2, 3, 4, 5]
+      "ingredientes": [
+        2,
+        3,
+        4,
+        5
+      ]
     },
     {
       "texto": "Agrega la carne y dórala. Condimenta.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Cubre con agua o caldo y cocina a fuego lento hasta que la carne esté blanda (1 hora aprox.).",
-      "ingredientes": [1, 7],
+      "ingredientes": [
+        1,
+        7
+      ],
       "timers": [
         {
           "minutos": 60,
@@ -120,11 +137,21 @@
     },
     {
       "texto": "Cuece las papas, mójalas con mantequilla, leche tibia y sal hasta obtener un puré cremoso.",
-      "ingredientes": [6, 8, 9, 10, 11]
+      "ingredientes": [
+        6,
+        8,
+        9,
+        10,
+        11
+      ]
     },
     {
       "texto": "Sirve la carne con su jugo sobre el puré.",
-      "ingredientes": [1, 8, 11]
+      "ingredientes": [
+        1,
+        8,
+        11
+      ]
     }
   ],
   "tiempo_v2": {

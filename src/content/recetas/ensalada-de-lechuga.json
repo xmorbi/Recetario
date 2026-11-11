@@ -1,7 +1,14 @@
 {
   "titulo": "Ensalada de lechuga",
   "categoria": "ensaladas",
-  "tags": ["ensalada", "lechuga", "fresca", "acompañamiento", "simple", "vegetariano"],
+  "tags": [
+    "ensalada",
+    "lechuga",
+    "fresca",
+    "acompañamiento",
+    "simple",
+    "vegetariano"
+  ],
   "imagen": null,
   "tiempo": "5 min",
   "porciones": "4 personas",
@@ -46,7 +53,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal y pimienta",
       "nota": "a gusto",
@@ -56,15 +63,24 @@
   "pasos_v2": [
     {
       "texto": "Lava bien la lechuga y escúrrela. Córtala en trozos.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Pon la lechuga en una ensaladera.",
-      "ingredientes": [1, 4]
+      "ingredientes": [
+        1,
+        4
+      ]
     },
     {
       "texto": "Condimenta con aceite, vinagre o limón, sal y pimienta justo antes de servir.",
-      "ingredientes": [2, 3, 4]
+      "ingredientes": [
+        2,
+        3,
+        4
+      ]
     },
     {
       "texto": "Mezcla suavemente y sirve."

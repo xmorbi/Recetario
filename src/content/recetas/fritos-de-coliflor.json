@@ -1,7 +1,13 @@
 {
   "titulo": "Fritos de coliflor",
   "categoria": "principales",
-  "tags": ["coliflor", "fritura", "vegetariano", "cotidiano", "entrada"],
+  "tags": [
+    "coliflor",
+    "fritura",
+    "vegetariano",
+    "cotidiano",
+    "entrada"
+  ],
   "imagen": "img/fritos-de-coliflor.jpg",
   "tiempo": "30 min",
   "porciones": "4 personas",
@@ -59,7 +65,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal, pimienta y nuez moscada",
       "nota": "a gusto",
@@ -76,7 +82,10 @@
   "pasos_v2": [
     {
       "texto": "Corta la coliflor en ramilletes y cuécela en agua con sal 5-7 minutos, hasta que esté tierna pero firme. Escurre bien.",
-      "ingredientes": [1, 6],
+      "ingredientes": [
+        1,
+        6
+      ],
       "timers": [
         {
           "minutos": 7,
@@ -86,19 +95,31 @@
     },
     {
       "texto": "Prepara la mezcla: bate los huevos con la harina, la leche, los polvos de hornear, sal, pimienta y nuez moscada. Debe quedar como una pasta espesa.",
-      "ingredientes": [2, 3, 4, 5, 6]
+      "ingredientes": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
     },
     {
       "texto": "Pasa los ramilletes de coliflor por la mezcla.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Fríe en abundante aceite caliente (170-180 °C) hasta que estén dorados. Escurre sobre papel absorbente.",
-      "ingredientes": [7]
+      "ingredientes": [
+        7
+      ]
     },
     {
       "texto": "Sirve calientes con sal y limón, o con salsa de tomate.",
-      "ingredientes": [6]
+      "ingredientes": [
+        6
+      ]
     }
   ],
   "tiempo_v2": {

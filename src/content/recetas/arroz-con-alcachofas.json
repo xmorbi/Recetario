@@ -1,7 +1,14 @@
 {
   "titulo": "Arroz con Alcachofas",
   "categoria": "principales",
-  "tags": ["arroz con alcachofas", "arroz", "alcachofas", "cerdo", "vacuno", "arroces"],
+  "tags": [
+    "arroz con alcachofas",
+    "arroz",
+    "alcachofas",
+    "cerdo",
+    "vacuno",
+    "arroces"
+  ],
   "imagen": null,
   "tiempo": "1 h",
   "porciones": "4 a 6 personas",
@@ -24,9 +31,9 @@
   },
   "ingredientes_v2": [
     {
-      "cantidad": 2,
-      "unidad": null,
-      "nombre": "0.5 tazas de arroz",
+      "cantidad": 2.5,
+      "unidad": "tazas",
+      "nombre": "arroz",
       "nota": "500 g",
       "escalable": true
     },
@@ -81,14 +88,14 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "pimienta",
       "nota": "a gusto",
@@ -98,27 +105,44 @@
   "pasos_v2": [
     {
       "texto": "Limpiar y lavar bien las alcachofas, retirar las hojas duras externas y la parte fibrosa del tallo, y trocear cada una en 4 partes.",
-      "ingredientes": [2]
+      "ingredientes": [
+        2
+      ]
     },
     {
       "texto": "Calentar el aceite y freír la cebolla, ajos y aliños.",
-      "ingredientes": [5, 7, 9]
+      "ingredientes": [
+        5,
+        7,
+        9
+      ]
     },
     {
       "texto": "Incorporar la carne de cerdo cortada en trocitos chicos y la carne de vacuno.",
-      "ingredientes": [3, 4]
+      "ingredientes": [
+        3,
+        4
+      ]
     },
     {
       "texto": "Revolver bien para que se doren.",
-      "ingredientes": [9]
+      "ingredientes": [
+        9
+      ]
     },
     {
       "texto": "Agregar el arroz, las arvejitas y las alcachofas.",
-      "ingredientes": [1, 2, 6]
+      "ingredientes": [
+        1,
+        2,
+        6
+      ]
     },
     {
       "texto": "Cubrir con 5 tazas (1,25 L) de agua hirviendo y dejar a fuego lento por 20-25 minutos, hasta completa cocción.",
-      "ingredientes": [1],
+      "ingredientes": [
+        1
+      ],
       "timers": [
         {
           "minutos": 25,

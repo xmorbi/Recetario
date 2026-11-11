@@ -1,7 +1,14 @@
 {
   "titulo": "Carne mechada",
   "categoria": "principales",
-  "tags": ["carne", "olla", "plato principal", "sandwich", "guiso", "vacuno"],
+  "tags": [
+    "carne",
+    "olla",
+    "plato principal",
+    "sandwich",
+    "guiso",
+    "vacuno"
+  ],
   "imagen": "img/carne-mechada.jpg",
   "tiempo": "2 h 30 min",
   "porciones": "4 a 6 personas",
@@ -77,7 +84,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "aceite, sal, pimienta, orégano y comino",
       "nota": "a gusto",
@@ -87,19 +94,36 @@
   "pasos_v2": [
     {
       "texto": "Sazona la carne con sal, pimienta y comino. En una olla grande, sella la carne en aceite caliente hasta que dore por todos lados.",
-      "ingredientes": [1, 7, 8]
+      "ingredientes": [
+        1,
+        7,
+        8
+      ]
     },
     {
       "texto": "Agrega la cebolla, el ajo y el pimentón. Sofríe por unos minutos.",
-      "ingredientes": [3, 4, 5, 8]
+      "ingredientes": [
+        3,
+        4,
+        5,
+        8
+      ]
     },
     {
       "texto": "Incorpora el vino tinto (si usas) y deja evaporar un poco. Luego agrega el caldo de carne y los bastones de zanahoria.",
-      "ingredientes": [1, 2, 6, 7]
+      "ingredientes": [
+        1,
+        2,
+        6,
+        7
+      ]
     },
     {
       "texto": "Tapa la olla y cocina a fuego lento por 2 horas, hasta que la carne se deshaga fácilmente con un tenedor.",
-      "ingredientes": [1, 7],
+      "ingredientes": [
+        1,
+        7
+      ],
       "timers": [
         {
           "minutos": 120,
@@ -109,7 +133,11 @@
     },
     {
       "texto": "Retira la carne, desmenúzala con dos tenedores y devuélvela a la olla para que se mezcle con la salsa.",
-      "ingredientes": [1, 7, 8]
+      "ingredientes": [
+        1,
+        7,
+        8
+      ]
     },
     {
       "texto": "Sirve con puré, arroz o en un sándwich."

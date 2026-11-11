@@ -1,7 +1,13 @@
 {
   "titulo": "Estofado con Alcachofas",
   "categoria": "principales",
-  "tags": ["estofado con alcachofas", "posta paleta", "alcachofas", "guiso", "carnes"],
+  "tags": [
+    "estofado con alcachofas",
+    "posta paleta",
+    "alcachofas",
+    "guiso",
+    "carnes"
+  ],
   "imagen": null,
   "tiempo": "1 h 15 min",
   "porciones": "4 a 6 personas",
@@ -79,35 +85,35 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "orégano",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "comino",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "ají de color",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "pimienta",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal",
       "nota": "a gusto",
@@ -117,23 +123,39 @@
   "pasos_v2": [
     {
       "texto": "Cortar la carne en cubos de regular tamaño.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Picar la cebolla fina y freír en el aceite junto con la carne, ajo y aliños.",
-      "ingredientes": [1, 2, 8]
+      "ingredientes": [
+        1,
+        2,
+        8
+      ]
     },
     {
       "texto": "Agregar 2 tazas (500 ml) de agua caliente y dejar en cocción hasta que la carne se ablande.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Incorporar las papas cortadas en rodajas, el pimiento en tiras delgadas, las zanahorias en rodajas, arvejas y las alcachofas despuntadas y cortadas en mitades o cuartos.",
-      "ingredientes": [3, 4, 5, 6, 7]
+      "ingredientes": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
     },
     {
       "texto": "Disolver la harina en agua fría y agregarla al jugo del estofado.",
-      "ingredientes": [9]
+      "ingredientes": [
+        9
+      ]
     },
     {
       "texto": "Cocer a fuego lento unos 20 minutos aproximadamente.",

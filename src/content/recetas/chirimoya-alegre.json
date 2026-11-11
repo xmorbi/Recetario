@@ -1,7 +1,15 @@
 {
   "titulo": "Chirimoya alegre",
   "categoria": "bebidas",
-  "tags": ["bebida", "chirimoya", "jugo", "verano", "fruta", "postre", "simple"],
+  "tags": [
+    "bebida",
+    "chirimoya",
+    "jugo",
+    "verano",
+    "fruta",
+    "postre",
+    "simple"
+  ],
   "imagen": null,
   "tiempo": "10 min",
   "porciones": "4 vasos",
@@ -50,14 +58,14 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "hielo",
       "nota": "a gusto",
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "hojas de menta",
       "nota": "a gusto",
@@ -68,22 +76,32 @@
   "pasos_v2": [
     {
       "texto": "Pela la chirimoya y retira las semillas. Corta la pulpa en trozos.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "En una juguera, mezcla la pulpa con el jugo de naranja y el azúcar.",
-      "ingredientes": [2, 3]
+      "ingredientes": [
+        2,
+        3
+      ]
     },
     {
       "texto": "Licúa hasta obtener una mezcla homogénea pero con un poco de textura."
     },
     {
       "texto": "Prueba y ajusta el azúcar.",
-      "ingredientes": [3]
+      "ingredientes": [
+        3
+      ]
     },
     {
       "texto": "Sirve bien frío en vasos altos con hielo. Decora con menta si quieres.",
-      "ingredientes": [4, 5]
+      "ingredientes": [
+        4,
+        5
+      ]
     }
   ],
   "tiempo_v2": {

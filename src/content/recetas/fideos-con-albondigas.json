@@ -1,7 +1,14 @@
 {
   "titulo": "Fideos con albóndigas",
   "categoria": "principales",
-  "tags": ["pasta", "fideos", "albóndigas", "carne", "cotidiano", "salsa de tomate"],
+  "tags": [
+    "pasta",
+    "fideos",
+    "albóndigas",
+    "carne",
+    "cotidiano",
+    "salsa de tomate"
+  ],
   "imagen": null,
   "tiempo": "45 min",
   "porciones": "4 personas",
@@ -86,14 +93,14 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal, pimienta, orégano y albahaca",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "aceite",
       "nota": "a gusto",
@@ -103,19 +110,37 @@
   "pasos_v2": [
     {
       "texto": "Mezcla la carne picada con el huevo, el pan rallado, la mitad del ajo, sal y pimienta. Forma bolitas del tamaño de una nuez.",
-      "ingredientes": [2, 3, 4, 5, 10]
+      "ingredientes": [
+        2,
+        3,
+        4,
+        5,
+        10
+      ]
     },
     {
       "texto": "Dora las albóndigas en aceite caliente. Retira y reserva.",
-      "ingredientes": [11]
+      "ingredientes": [
+        11
+      ]
     },
     {
       "texto": "En la misma olla, sofríe la cebolla, el ajo restante y la zanahoria. Agrega los tomates y condimenta con azúcar, orégano y albahaca.",
-      "ingredientes": [5, 6, 7, 8, 9, 11]
+      "ingredientes": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        11
+      ]
     },
     {
       "texto": "Devuelve las albóndigas a la salsa y cocina a fuego bajo 20 minutos.",
-      "ingredientes": [5, 10],
+      "ingredientes": [
+        5,
+        10
+      ],
       "timers": [
         {
           "minutos": 20,
@@ -125,11 +150,17 @@
     },
     {
       "texto": "Cocina los fideos en abundante agua con sal. Escurre.",
-      "ingredientes": [1, 10]
+      "ingredientes": [
+        1,
+        10
+      ]
     },
     {
       "texto": "Sirve los fideos con la salsa y las albóndigas encima. Espolvorea queso rallado si quieres.",
-      "ingredientes": [1, 10]
+      "ingredientes": [
+        1,
+        10
+      ]
     }
   ],
   "tiempo_v2": {

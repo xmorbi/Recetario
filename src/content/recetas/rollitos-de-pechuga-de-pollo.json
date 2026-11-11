@@ -1,7 +1,13 @@
 {
   "titulo": "Rollitos de Pechuga de Pollo",
   "categoria": "ensaladas",
-  "tags": ["rollitos de pechuga de pollo", "pollo", "espárragos", "fritura", "aperitivo"],
+  "tags": [
+    "rollitos de pechuga de pollo",
+    "pollo",
+    "espárragos",
+    "fritura",
+    "aperitivo"
+  ],
   "imagen": null,
   "tiempo": "25 min",
   "porciones": "4 a 6 personas",
@@ -45,14 +51,14 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "pimienta",
       "nota": "a gusto",
@@ -62,19 +68,30 @@
   "pasos_v2": [
     {
       "texto": "Poner los filetes de pechuga sobre una tabla, aplanar y sazonar con sal y pimienta.",
-      "ingredientes": [1, 5, 6]
+      "ingredientes": [
+        1,
+        5,
+        6
+      ]
     },
     {
       "texto": "Luego colocar 2 trozos de espárragos por filete, enrollar y pasar por el chuño.",
-      "ingredientes": [2, 3]
+      "ingredientes": [
+        2,
+        3
+      ]
     },
     {
       "texto": "Freír en abundante aceite bien caliente y sacar los rollitos cuando estén dorados.",
-      "ingredientes": [4]
+      "ingredientes": [
+        4
+      ]
     },
     {
       "texto": "Si se desea, pueden untarse en alguna salsa.",
-      "ingredientes": [5]
+      "ingredientes": [
+        5
+      ]
     }
   ],
   "tiempo_v2": {

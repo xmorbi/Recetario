@@ -1,7 +1,14 @@
 {
   "titulo": "Arroz Árabe Simple",
   "categoria": "principales",
-  "tags": ["arroz árabe simple", "arroz", "fideos", "pasas", "curry", "arroces"],
+  "tags": [
+    "arroz árabe simple",
+    "arroz",
+    "fideos",
+    "pasas",
+    "curry",
+    "arroces"
+  ],
   "imagen": null,
   "tiempo": "30 min",
   "porciones": "4 personas",
@@ -59,21 +66,21 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "pimienta",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "aceite",
       "nota": "a gusto",
@@ -90,19 +97,33 @@
   "pasos_v2": [
     {
       "texto": "En una olla con un poco de aceite, freír el ajo y los cabellos de ángel hasta que estén dorados.",
-      "ingredientes": [2, 3, 8]
+      "ingredientes": [
+        2,
+        3,
+        8
+      ]
     },
     {
       "texto": "Agregar el arroz y sofreír hasta que esté cristalino, sin dorarse.",
-      "ingredientes": [1, 8]
+      "ingredientes": [
+        1,
+        8
+      ]
     },
     {
       "texto": "Agregar las pasas, sal, curry y el agua hirviendo.",
-      "ingredientes": [4, 5, 6, 9]
+      "ingredientes": [
+        4,
+        5,
+        6,
+        9
+      ]
     },
     {
       "texto": "Tapar la olla, poner un tostador de pan (difusor metálico) sobre la hornilla y dejar a fuego lento por 15 minutos. El tostador ayuda a distribuir el calor parejo y evita que el arroz se pegue.",
-      "ingredientes": [1],
+      "ingredientes": [
+        1
+      ],
       "timers": [
         {
           "minutos": 15,

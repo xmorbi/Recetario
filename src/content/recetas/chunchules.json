@@ -1,7 +1,14 @@
 {
   "titulo": "Chunchules",
   "categoria": "principales",
-  "tags": ["chunchules", "tripas", "popular", "fritura", "tradicional", "invierno"],
+  "tags": [
+    "chunchules",
+    "tripas",
+    "popular",
+    "fritura",
+    "tradicional",
+    "invierno"
+  ],
   "imagen": "img/chunchules.jpg",
   "tiempo": "2 h",
   "porciones": "4 personas",
@@ -58,7 +65,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal",
       "nota": "a gusto",
@@ -82,11 +89,20 @@
   "pasos_v2": [
     {
       "texto": "Lava muy bien los chunchules con agua fría y limón varias veces. Este paso es clave para quitarles el olor fuerte.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "En una olla, pon los chunchules con la cebolla, el ajo, el laurel, el vinagre y sal. Cubre con agua y cocina 1 hora y 30 minutos a fuego medio, hasta que estén tiernos.",
-      "ingredientes": [1, 2, 3, 4, 5, 6],
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "timers": [
         {
           "minutos": 90,
@@ -107,11 +123,16 @@
     },
     {
       "texto": "Fríe en abundante aceite caliente (170-180 °C) hasta que estén dorados y crujientes. Escurre sobre papel absorbente.",
-      "ingredientes": [7]
+      "ingredientes": [
+        7
+      ]
     },
     {
       "texto": "Sala al gusto y sirve calientes con pebre y pan amasado.",
-      "ingredientes": [6, 8]
+      "ingredientes": [
+        6,
+        8
+      ]
     }
   ],
   "tiempo_v2": {

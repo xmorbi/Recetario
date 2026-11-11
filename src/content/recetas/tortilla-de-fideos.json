@@ -1,7 +1,15 @@
 {
   "titulo": "Tortilla de fideos",
   "categoria": "principales",
-  "tags": ["tortilla", "fideos", "pasta", "huevo", "sartén", "cotidiano", "economico"],
+  "tags": [
+    "tortilla",
+    "fideos",
+    "pasta",
+    "huevo",
+    "sartén",
+    "cotidiano",
+    "economico"
+  ],
   "imagen": null,
   "tiempo": "25 min",
   "porciones": "4 personas",
@@ -51,7 +59,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal, pimienta y orégano",
       "nota": "a gusto",
@@ -61,11 +69,19 @@
   "pasos_v2": [
     {
       "texto": "Sofríe la cebolla en aceite hasta que esté transparente.",
-      "ingredientes": [2, 4]
+      "ingredientes": [
+        2,
+        4
+      ]
     },
     {
       "texto": "Bate los huevos con sal, pimienta y orégano. Agrega los fideos cocidos y la cebolla.",
-      "ingredientes": [1, 2, 3, 5]
+      "ingredientes": [
+        1,
+        2,
+        3,
+        5
+      ]
     },
     {
       "texto": "Vierte la mezcla en la sartén y cocina a fuego medio 5-7 minutos, hasta que los bordes se despeguen.",

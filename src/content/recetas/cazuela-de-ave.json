@@ -1,7 +1,13 @@
 {
   "titulo": "Cazuela de ave",
   "categoria": "principales",
-  "tags": ["cazuela", "sopa", "olla", "invierno", "pollo"],
+  "tags": [
+    "cazuela",
+    "sopa",
+    "olla",
+    "invierno",
+    "pollo"
+  ],
   "imagen": "img/Cazuela-de-Ave-01.JPG",
   "tiempo": "2 h",
   "porciones": "6 personas",
@@ -83,7 +89,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal, pimienta y orégano",
       "nota": "a gusto",
@@ -99,7 +105,9 @@
   "pasos_v2": [
     {
       "texto": "Dora el pollo en aceite 5 min por lado en una olla grande.",
-      "ingredientes": [1],
+      "ingredientes": [
+        1
+      ],
       "timers": [
         {
           "minutos": 5,
@@ -109,7 +117,11 @@
     },
     {
       "texto": "Agrega la zanahoria, el pimentón, sal, pimienta y orégano. Saltea 5 min.",
-      "ingredientes": [2, 3, 9],
+      "ingredientes": [
+        2,
+        3,
+        9
+      ],
       "timers": [
         {
           "minutos": 5,
@@ -119,11 +131,17 @@
     },
     {
       "texto": "Vierte el agua caliente y cocina a fuego lento.",
-      "ingredientes": [10]
+      "ingredientes": [
+        10
+      ]
     },
     {
       "texto": "A los 30 min, añade las papas, el zapallo y el choclo.",
-      "ingredientes": [4, 5, 6],
+      "ingredientes": [
+        4,
+        5,
+        6
+      ],
       "timers": [
         {
           "minutos": 30,
@@ -133,7 +151,10 @@
     },
     {
       "texto": "Encima pon los porotos verdes y el arroz sin revolver. Cocina hasta que todo esté tierno.",
-      "ingredientes": [7, 8]
+      "ingredientes": [
+        7,
+        8
+      ]
     }
   ],
   "tiempo_v2": {

@@ -16,6 +16,35 @@ const CATEGORIAS = [
 
 const DIFICULTADES = ['muy fácil', 'fácil', 'media', 'alta'] as const;
 
+// ===== Ingrediente v2 con regla anti-duplicado =====
+// Si el nombre empieza con un número, casi siempre es un error de
+// migración: la cantidad quedó duplicada entre "cantidad" y "nombre".
+// Ej: { cantidad: 2, nombre: "0.5 tazas de arroz" } → error.
+// Con esto, `astro build` (y por ende el CI) falla antes del deploy.
+const ingredienteV2 = z
+  .object({
+    cantidad: z.number().nullable(),
+    cantidadMax: z.number().nullable().optional(),
+    unidad: z.string().nullable(),
+    nombre: z.string(),
+    nota: z.string().optional(),
+    seccion: z.string().optional(),
+    opcional: z.boolean().optional(),
+    escalable: z.boolean().default(true),
+    preparacion: z.string().optional(),
+  })
+  .superRefine((ing, ctx) => {
+    if (/^\s*\d/.test(ing.nombre)) {
+      ctx.addIssue({
+        code: 'custom',
+        message:
+          `El nombre del ingrediente empieza con un número ("${ing.nombre}"). ` +
+          `La cantidad debe ir en el campo "cantidad", no en "nombre".`,
+        path: ['nombre'],
+      });
+    }
+  });
+
 const recetas = defineCollection({
   // En Astro 5, le decimos que busque todos los .json en la carpeta recetas
   loader: glob({ pattern: '**/*.json', base: './src/content/recetas' }),
@@ -54,19 +83,7 @@ const recetas = defineCollection({
       .default({}),
 
     // ===== FASE 10: campos estructurados (AHORA OBLIGATORIOS) =====
-    ingredientes_v2: z.array(
-      z.object({
-        cantidad: z.number().nullable(),
-        cantidadMax: z.number().nullable().optional(),
-        unidad: z.string().nullable(),
-        nombre: z.string(),
-        nota: z.string().optional(),
-        seccion: z.string().optional(),
-        opcional: z.boolean().optional(),
-        escalable: z.boolean().default(true),
-        preparacion: z.string().optional(),
-      })
-    ),
+    ingredientes_v2: z.array(ingredienteV2),
     pasos_v2: z.array(
       z.object({
         texto: z.string(),

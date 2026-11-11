@@ -1,7 +1,14 @@
 {
   "titulo": "Sopa de verduras",
   "categoria": "sopas",
-  "tags": ["sopa", "verduras", "olla", "saludable", "cotidiano", "vegetariano"],
+  "tags": [
+    "sopa",
+    "verduras",
+    "olla",
+    "saludable",
+    "cotidiano",
+    "vegetariano"
+  ],
   "imagen": null,
   "tiempo": "35 min",
   "porciones": "4 personas",
@@ -74,9 +81,9 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
-      "unidad": null,
-      "nombre": "1,5 l de caldo de verduras",
+      "cantidad": 1.5,
+      "unidad": "l",
+      "nombre": "caldo de verduras",
       "nota": "a gusto",
       "escalable": true
     },
@@ -87,7 +94,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal, pimienta y orégano",
       "nota": "a gusto",
@@ -97,11 +104,18 @@
   "pasos_v2": [
     {
       "texto": "Sofríe la cebolla y el apio en aceite hasta que estén tiernos.",
-      "ingredientes": [1, 4, 9]
+      "ingredientes": [
+        1,
+        4,
+        9
+      ]
     },
     {
       "texto": "Agrega la zanahoria y el pimiento. Cocina 5 minutos.",
-      "ingredientes": [2, 5],
+      "ingredientes": [
+        2,
+        5
+      ],
       "timers": [
         {
           "minutos": 5,
@@ -111,11 +125,16 @@
     },
     {
       "texto": "Vierte el caldo y lleva a hervor.",
-      "ingredientes": [8]
+      "ingredientes": [
+        8
+      ]
     },
     {
       "texto": "Añade las papas y los porotos verdes. Cocina 15 minutos.",
-      "ingredientes": [3, 6],
+      "ingredientes": [
+        3,
+        6
+      ],
       "timers": [
         {
           "minutos": 15,
@@ -125,11 +144,15 @@
     },
     {
       "texto": "Si usas arroz o fideos, agrégalos y cocina según el tiempo indicado.",
-      "ingredientes": [7]
+      "ingredientes": [
+        7
+      ]
     },
     {
       "texto": "Condimenta con sal, pimienta y orégano. Sirve caliente.",
-      "ingredientes": [10]
+      "ingredientes": [
+        10
+      ]
     }
   ],
   "tiempo_v2": {

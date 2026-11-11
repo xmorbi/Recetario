@@ -1,7 +1,13 @@
 {
   "titulo": "Sopa de Avena",
   "categoria": "sopas",
-  "tags": ["sopa de avena", "avena", "posta negra", "sopa", "invierno"],
+  "tags": [
+    "sopa de avena",
+    "avena",
+    "posta negra",
+    "sopa",
+    "invierno"
+  ],
   "imagen": null,
   "tiempo": "1 h",
   "porciones": "4 a 6 personas",
@@ -57,21 +63,21 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "tomillo",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "ají de color",
       "nota": "a gusto",
@@ -87,7 +93,12 @@
   "pasos_v2": [
     {
       "texto": "Limpiar la carne, hacer unos cortes superficiales y ponerla a cocer a fuego suave en agua fría, perejil, laurel y tomillo.",
-      "ingredientes": [2, 4, 5, 7]
+      "ingredientes": [
+        2,
+        4,
+        5,
+        7
+      ]
     },
     {
       "texto": "Revolver para deshacer la espuma."
@@ -103,14 +114,22 @@
     },
     {
       "texto": "Sofreír la zanahoria y la cebolla con la mantequilla, aliñar con sal y ají de color.",
-      "ingredientes": [3, 6, 8, 9, 10]
+      "ingredientes": [
+        3,
+        6,
+        8,
+        9,
+        10
+      ]
     },
     {
       "texto": "Agregar el caldo colado."
     },
     {
       "texto": "Al momento de hervir, espolvorear la avena revolviendo con cuchara de madera hasta que espese.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     }
   ],
   "tiempo_v2": {

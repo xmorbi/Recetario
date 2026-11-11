@@ -1,7 +1,13 @@
 {
   "titulo": "Pantrucas",
   "categoria": "sopas",
-  "tags": ["sopa", "olla", "invierno", "masa", "vacuno"],
+  "tags": [
+    "sopa",
+    "olla",
+    "invierno",
+    "masa",
+    "vacuno"
+  ],
   "imagen": "img/pantrucas.JPG",
   "tiempo": "50 min",
   "porciones": "4 personas",
@@ -73,9 +79,9 @@
       "seccion": "Caldo"
     },
     {
-      "cantidad": 1,
-      "unidad": null,
-      "nombre": "1,5 l de agua hirviendo",
+      "cantidad": 1.5,
+      "unidad": "l",
+      "nombre": "agua hirviendo",
       "nota": "a gusto",
       "escalable": true,
       "seccion": "Caldo"
@@ -121,7 +127,12 @@
   "pasos_v2": [
     {
       "texto": "Sofríe cebolla, ajo, pimentón y zanahoria 5 min. Condimenta.",
-      "ingredientes": [2, 3, 4, 12],
+      "ingredientes": [
+        2,
+        3,
+        4,
+        12
+      ],
       "timers": [
         {
           "minutos": 5,
@@ -131,7 +142,12 @@
     },
     {
       "texto": "Agrega la carne, cocina hasta que cambie de color. Añade las papas y el agua hirviendo. Tapa 15 min.",
-      "ingredientes": [1, 5, 7, 11],
+      "ingredientes": [
+        1,
+        5,
+        7,
+        11
+      ],
       "timers": [
         {
           "minutos": 15,
@@ -141,14 +157,23 @@
     },
     {
       "texto": "Mezcla la harina, huevo, aceite y sal. Agrega el agua tibia hasta formar masa suave.",
-      "ingredientes": [7, 8, 9, 10, 11, 12]
+      "ingredientes": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
     },
     {
       "texto": "Estira la masa fina (2 mm) y córtala en cuadrados."
     },
     {
       "texto": "Echa las pantrucas en el caldo hirviendo. Cocina 5-7 min.",
-      "ingredientes": [7],
+      "ingredientes": [
+        7
+      ],
       "timers": [
         {
           "minutos": 7,
@@ -158,7 +183,10 @@
     },
     {
       "texto": "Vierte los huevos batidos en hilo y sirve con cilantro picado.",
-      "ingredientes": [8, 10]
+      "ingredientes": [
+        8,
+        10
+      ]
     }
   ],
   "tiempo_v2": {

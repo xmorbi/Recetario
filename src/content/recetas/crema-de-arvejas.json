@@ -1,7 +1,13 @@
 {
   "titulo": "Crema de Arvejas",
   "categoria": "sopas",
-  "tags": ["crema de arvejas", "arvejas", "tocino", "crema", "sopa"],
+  "tags": [
+    "crema de arvejas",
+    "arvejas",
+    "tocino",
+    "crema",
+    "sopa"
+  ],
   "imagen": null,
   "tiempo": "1 h 30 min (incluye remojo)",
   "porciones": "4 a 6 personas",
@@ -69,7 +75,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal",
       "nota": "a gusto",
@@ -85,11 +91,18 @@
   "pasos_v2": [
     {
       "texto": "Lavar bien las arvejas y dejarlas remojando en unas 3 tazas de agua durante la noche.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Calentar aceite en una cacerola y freír el ajo, la cebolla picada muy fina y el ají de color.",
-      "ingredientes": [3, 4, 5, 6]
+      "ingredientes": [
+        3,
+        4,
+        5,
+        6
+      ]
     },
     {
       "texto": "Agregar las arvejitas y el agua en que se remojaron, hervir hasta que estén bien blandas."
@@ -99,11 +112,16 @@
     },
     {
       "texto": "Volver la crema a la olla, agregarle el caldo y el tocino cortado en trocitos pequeños.",
-      "ingredientes": [2, 7]
+      "ingredientes": [
+        2,
+        7
+      ]
     },
     {
       "texto": "Sazonar bien y agregar 1/4 cucharadita de pimienta.",
-      "ingredientes": [9]
+      "ingredientes": [
+        9
+      ]
     },
     {
       "texto": "Puede servirse espolvoreando los platos con huevo duro, queso rallado o pan frito."

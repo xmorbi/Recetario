@@ -1,7 +1,14 @@
 {
   "titulo": "Arvejas partidas",
   "categoria": "principales",
-  "tags": ["arvejas", "legumbre", "guiso", "olla", "invierno", "cotidiano"],
+  "tags": [
+    "arvejas",
+    "legumbre",
+    "guiso",
+    "olla",
+    "invierno",
+    "cotidiano"
+  ],
   "imagen": null,
   "tiempo": "1 h + remojo",
   "porciones": "4 personas",
@@ -79,14 +86,14 @@
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "agua o caldo para cubrir",
       "nota": "a gusto",
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal, pimienta y aceite",
       "nota": "a gusto",
@@ -96,20 +103,35 @@
   "pasos_v2": [
     {
       "texto": "Remoja las arvejas partidas la noche anterior. Escurre y enjuaga.",
-      "ingredientes": [1],
+      "ingredientes": [
+        1
+      ],
       "previo": true
     },
     {
       "texto": "Sofríe la cebolla, el ajo, la zanahoria y el pimentón hasta que estén tiernos.",
-      "ingredientes": [2, 3, 4, 5, 10]
+      "ingredientes": [
+        2,
+        3,
+        4,
+        5,
+        10
+      ]
     },
     {
       "texto": "Agrega la longaniza si usas, el ají de color y el orégano.",
-      "ingredientes": [6, 7, 8]
+      "ingredientes": [
+        6,
+        7,
+        8
+      ]
     },
     {
       "texto": "Incorpora las arvejas y cubre con agua o caldo. Cocina a fuego medio 45-60 minutos, hasta que estén blandas y el caldo espese.",
-      "ingredientes": [1, 9],
+      "ingredientes": [
+        1,
+        9
+      ],
       "timers": [
         {
           "minutos": 60,
@@ -119,7 +141,9 @@
     },
     {
       "texto": "Condimenta con sal y pimienta al final. Sirve caliente con pan.",
-      "ingredientes": [10]
+      "ingredientes": [
+        10
+      ]
     }
   ],
   "tiempo_v2": {

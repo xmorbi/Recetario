@@ -1,7 +1,14 @@
 {
   "titulo": "Pajaritos dulces",
   "categoria": "dulces",
-  "tags": ["pan", "dulce", "horno", "merienda", "once", "masa"],
+  "tags": [
+    "pan",
+    "dulce",
+    "horno",
+    "merienda",
+    "once",
+    "masa"
+  ],
   "imagen": "img/Pajaritos-dulces.jpg",
   "tiempo": "1 h",
   "porciones": "12 unidades",
@@ -60,7 +67,7 @@
       "seccion": "Masa"
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "ralladura de limón o naranja",
       "nota": "a gusto",
@@ -101,11 +108,25 @@
   "pasos_v2": [
     {
       "texto": "Activa la levadura en el agua tibia con una cucharada de azúcar.",
-      "ingredientes": [4, 5, 7, 9]
+      "ingredientes": [
+        4,
+        5,
+        7,
+        9
+      ]
     },
     {
       "texto": "Mezcla la harina con los huevos, mantequilla, azúcar y ralladura. Agrega la levadura y forma una masa suave.",
-      "ingredientes": [1, 2, 3, 4, 5, 6, 8, 9]
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ]
     },
     {
       "texto": "Deja reposar tapada hasta que doble su volumen."
@@ -130,7 +151,13 @@
     },
     {
       "texto": "Bate las claras a nieve, añade el azúcar flor y la vainilla. Cubre los pancitos con el merengue y decora.",
-      "ingredientes": [2, 4, 8, 9, 10]
+      "ingredientes": [
+        2,
+        4,
+        8,
+        9,
+        10
+      ]
     }
   ],
   "tiempo_v2": {

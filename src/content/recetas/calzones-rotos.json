@@ -1,7 +1,14 @@
 {
   "titulo": "Calzones rotos",
   "categoria": "dulces",
-  "tags": ["dulce", "fritura", "invierno", "once", "merienda", "reposteria"],
+  "tags": [
+    "dulce",
+    "fritura",
+    "invierno",
+    "once",
+    "merienda",
+    "reposteria"
+  ],
   "imagen": "img/calzones-rotos.JPG",
   "tiempo": "40 min",
   "porciones": "20 unidades",
@@ -57,7 +64,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "ralladura de 1 limón o naranja",
       "nota": "a gusto",
@@ -87,11 +94,22 @@
   "pasos_v2": [
     {
       "texto": "En un bol grande, bate la mantequilla con el azúcar hasta obtener una crema. Agrega los huevos uno a uno y la vainilla.",
-      "ingredientes": [2, 3, 4, 7, 9]
+      "ingredientes": [
+        2,
+        3,
+        4,
+        7,
+        9
+      ]
     },
     {
       "texto": "Incorpora la harina cernida junto con los polvos de hornear y la ralladura de limón. Mezcla hasta formar una masa suave que no se pegue en las manos.",
-      "ingredientes": [1, 5, 6, 8]
+      "ingredientes": [
+        1,
+        5,
+        6,
+        8
+      ]
     },
     {
       "texto": "Envuelve la masa en papel plástico o un paño y déjala reposar en el refrigerador por 30 minutos.",
@@ -104,18 +122,26 @@
     },
     {
       "texto": "Estira la masa sobre una superficie enharinada hasta que tenga unos 5 mm de grosor. Corta rectángulos de aproximadamente 5x10 cm.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Haz un corte longitudinal en el centro de cada rectángulo y pasa uno de los extremos por el agujero para formar la clásica trenza retorcida."
     },
     {
       "texto": "Calienta abundante aceite a fuego medio (unos 170 °C). Fríe los calzones hasta que estén dorados por ambos lados.",
-      "ingredientes": [8]
+      "ingredientes": [
+        8
+      ]
     },
     {
       "texto": "Escurre sobre papel absorbente y espolvorea generosamente con azúcar flor mientras aún están tibios.",
-      "ingredientes": [2, 5, 9]
+      "ingredientes": [
+        2,
+        5,
+        9
+      ]
     }
   ],
   "tiempo_v2": {

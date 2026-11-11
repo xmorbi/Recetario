@@ -1,7 +1,14 @@
 {
   "titulo": "Cazuela de cordero",
   "categoria": "principales",
-  "tags": ["cazuela", "cordero", "olla", "invierno", "patagonia", "tradicional"],
+  "tags": [
+    "cazuela",
+    "cordero",
+    "olla",
+    "invierno",
+    "patagonia",
+    "tradicional"
+  ],
   "imagen": null,
   "tiempo": "1 h 30 min",
   "porciones": "4 a 6 personas",
@@ -104,14 +111,14 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "agua o caldo para cubrir",
       "nota": "a gusto",
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal y pimienta",
       "nota": "a gusto",
@@ -121,15 +128,25 @@
   "pasos_v2": [
     {
       "texto": "En una olla grande, dora la carne de cordero en aceite caliente hasta que esté dorada por todos lados. Retira y reserva.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "En la misma olla, sofríe la cebolla y el ajo hasta que estén transparentes.",
-      "ingredientes": [5, 6]
+      "ingredientes": [
+        5,
+        6
+      ]
     },
     {
       "texto": "Devuelve la carne a la olla. Agrega agua o caldo frío hasta cubrir, el laurel y el orégano.",
-      "ingredientes": [1, 9, 10, 12]
+      "ingredientes": [
+        1,
+        9,
+        10,
+        12
+      ]
     },
     {
       "texto": "Lleva a hervor, baja el fuego y cocina tapado 45 minutos.",
@@ -142,7 +159,12 @@
     },
     {
       "texto": "Agrega las zanahorias, las papas, el zapallo y el choclo. Cocina 20 minutos más.",
-      "ingredientes": [2, 3, 4, 7],
+      "ingredientes": [
+        2,
+        3,
+        4,
+        7
+      ],
       "timers": [
         {
           "minutos": 20,
@@ -152,7 +174,9 @@
     },
     {
       "texto": "Si usas arroz, agrégalo en los últimos 15 minutos de cocción.",
-      "ingredientes": [8],
+      "ingredientes": [
+        8
+      ],
       "timers": [
         {
           "minutos": 15,
@@ -162,7 +186,11 @@
     },
     {
       "texto": "Condimenta con sal, pimienta y merkén. Sirve caliente en platos hondos con el caldo.",
-      "ingredientes": [11, 12, 13]
+      "ingredientes": [
+        11,
+        12,
+        13
+      ]
     }
   ],
   "tiempo_v2": {

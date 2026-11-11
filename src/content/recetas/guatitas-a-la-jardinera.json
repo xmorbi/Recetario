@@ -1,7 +1,14 @@
 {
   "titulo": "Guatitas a la jardinera",
   "categoria": "principales",
-  "tags": ["guatitas", "jardinera", "verduras", "olla", "tradicional", "invierno"],
+  "tags": [
+    "guatitas",
+    "jardinera",
+    "verduras",
+    "olla",
+    "tradicional",
+    "invierno"
+  ],
   "imagen": "img/guatitas-a-la-jardinera.jpg",
   "tiempo": "2 h",
   "porciones": "4 personas",
@@ -105,7 +112,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal, pimienta y aceite",
       "nota": "a gusto",
@@ -115,11 +122,16 @@
   "pasos_v2": [
     {
       "texto": "Lava muy bien las guatitas con agua fría y limón varias veces, hasta que el agua salga clara.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Cocínalas en agua hirviendo con laurel y un chorrito de vinagre por 1 hora y media, hasta que estén tiernas. Escurre y corta en tiras.",
-      "ingredientes": [1, 11],
+      "ingredientes": [
+        1,
+        11
+      ],
       "timers": [
         {
           "minutos": 90,
@@ -129,11 +141,20 @@
     },
     {
       "texto": "En otra olla, sofríe la cebolla, el ajo, la zanahoria y el pimentón hasta que estén tiernos.",
-      "ingredientes": [2, 3, 4, 7]
+      "ingredientes": [
+        2,
+        3,
+        4,
+        7
+      ]
     },
     {
       "texto": "Agrega el tomate, el ají de color y el orégano. Cocina 5 minutos.",
-      "ingredientes": [8, 9, 10],
+      "ingredientes": [
+        8,
+        9,
+        10
+      ],
       "timers": [
         {
           "minutos": 5,
@@ -143,7 +164,12 @@
     },
     {
       "texto": "Incorpora las guatitas, las arvejas y el choclo. Cubre con agua o caldo y cocina a fuego lento 30 minutos.",
-      "ingredientes": [1, 5, 6, 12],
+      "ingredientes": [
+        1,
+        5,
+        6,
+        12
+      ],
       "timers": [
         {
           "minutos": 30,
@@ -153,7 +179,9 @@
     },
     {
       "texto": "Condimenta con sal y pimienta. Sirve caliente con arroz o papas.",
-      "ingredientes": [13]
+      "ingredientes": [
+        13
+      ]
     }
   ],
   "tiempo_v2": {

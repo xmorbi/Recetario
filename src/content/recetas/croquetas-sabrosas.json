@@ -1,7 +1,13 @@
 {
   "titulo": "Croquetas Sabrosas",
   "categoria": "principales",
-  "tags": ["croquetas sabrosas", "carne molida", "tomate", "horno", "carnes"],
+  "tags": [
+    "croquetas sabrosas",
+    "carne molida",
+    "tomate",
+    "horno",
+    "carnes"
+  ],
   "imagen": null,
   "tiempo": "40 min",
   "porciones": "4 a 6 personas",
@@ -56,28 +62,28 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "pimienta",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "perejil",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "orégano molido",
       "nota": "a gusto",
@@ -100,19 +106,36 @@
   "pasos_v2": [
     {
       "texto": "Picar la cebolla y el perejil muy finos, mezclar con la carne, huevos, aliños, aceitunas picadas y pan remojado.",
-      "ingredientes": [1, 3, 4, 5, 8, 10, 11]
+      "ingredientes": [
+        1,
+        3,
+        4,
+        5,
+        8,
+        10,
+        11
+      ]
     },
     {
       "texto": "Formar las croquetas y pasarlas por pan rallado.",
-      "ingredientes": [3, 4]
+      "ingredientes": [
+        3,
+        4
+      ]
     },
     {
       "texto": "Aceitar una asadera, distribuir las croquetas y cubrir con rebanadas de tomate.",
-      "ingredientes": [2]
+      "ingredientes": [
+        2
+      ]
     },
     {
       "texto": "Cocinar a fuego lento una 1/2 hora aproximadamente y servir acompañadas de puré o ensaladas.",
-      "ingredientes": [3, 4, 6],
+      "ingredientes": [
+        3,
+        4,
+        6
+      ],
       "timers": [
         {
           "minutos": 120,

@@ -1,7 +1,14 @@
 {
   "titulo": "Ensalada de Digüeñes",
   "categoria": "ensaladas",
-  "tags": ["ensalada de digüeñes", "digüeñes", "hongo", "cilantro", "cebolla", "ensalada chilena"],
+  "tags": [
+    "ensalada de digüeñes",
+    "digüeñes",
+    "hongo",
+    "cilantro",
+    "cebolla",
+    "ensalada chilena"
+  ],
   "imagen": null,
   "tiempo": "20 min",
   "porciones": "4 personas",
@@ -39,28 +46,28 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "vinagre",
       "nota": "a gusto",
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "aceite",
       "nota": "a gusto",
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "pimienta",
       "nota": "a gusto",
@@ -70,18 +77,30 @@
   "pasos_v2": [
     {
       "texto": "Limpiar muy bien los digüeñes y lavarlos en agua corriente procurando eliminar la sustancia gelatinosa.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Dejarlos que eliminen el agua en un colador."
     },
     {
       "texto": "Picar la cebolla y el cilantro muy finos e incorporarlos a los digüeñes en la ensaladera.",
-      "ingredientes": [1, 2, 3, 6]
+      "ingredientes": [
+        1,
+        2,
+        3,
+        6
+      ]
     },
     {
       "texto": "Aliñar con sal, aceite, vinagre y pimienta.",
-      "ingredientes": [4, 5, 6, 7]
+      "ingredientes": [
+        4,
+        5,
+        6,
+        7
+      ]
     }
   ],
   "tiempo_v2": {

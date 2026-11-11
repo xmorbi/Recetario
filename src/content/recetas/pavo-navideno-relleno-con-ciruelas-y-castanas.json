@@ -1,7 +1,15 @@
 {
   "titulo": "Pavo navideño relleno con ciruelas y castañas",
   "categoria": "principales",
-  "tags": ["pavo navideño", "pavo", "relleno", "ciruelas", "castañas", "navidad", "aves"],
+  "tags": [
+    "pavo navideño",
+    "pavo",
+    "relleno",
+    "ciruelas",
+    "castañas",
+    "navidad",
+    "aves"
+  ],
   "imagen": "img/pavo-navideno-relleno-con-ciruelas-y-castanas.jpg",
   "tiempo": "3 h (más remojo de un día)",
   "porciones": "8 a 10 personas",
@@ -85,7 +93,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "canela en polvo",
       "nota": "a gusto",
@@ -110,14 +118,14 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal",
       "nota": "a gusto",
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "pimienta",
       "nota": "a gusto",
@@ -127,33 +135,58 @@
   "pasos_v2": [
     {
       "texto": "Lavar las ciruelas y las pasas, dejar en remojo de un día para otro.",
-      "ingredientes": [5, 7],
+      "ingredientes": [
+        5,
+        7
+      ],
       "previo": true
     },
     {
       "texto": "Con el cogote y las patas preparar un caldo. Cuando esté preparado llevar al refrigerador, porque al enfriarse la grasa se va encima y es más fácil retirarla.",
-      "ingredientes": [1],
+      "ingredientes": [
+        1
+      ],
       "previo": true
     },
     {
       "texto": "Picar el lomo de chancho y el jamón en dados.",
-      "ingredientes": [2, 3]
+      "ingredientes": [
+        2,
+        3
+      ]
     },
     {
       "texto": "Pelar las manzanas y cortar en láminas delgadas.",
-      "ingredientes": [8]
+      "ingredientes": [
+        8
+      ]
     },
     {
       "texto": "Pelar las castañas cocidas.",
-      "ingredientes": [6]
+      "ingredientes": [
+        6
+      ]
     },
     {
       "texto": "En una cacerola derretir la manteca de chancho, añadir el lomo, jamón, ciruelas, pasas estiladas, manzanas, castañas, sal, pimienta y canela; revolver con cuchara de madera para que los ingredientes se impregnen.",
-      "ingredientes": [2, 3, 4, 5, 6, 7, 8, 11, 15, 16]
+      "ingredientes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        11,
+        15,
+        16
+      ]
     },
     {
       "texto": "Agregar un vaso de vino y dejar cocinar unos minutos para que éste se evapore. Retirar del fuego y enfriar.",
-      "ingredientes": [9],
+      "ingredientes": [
+        9
+      ],
       "timers": [
         {
           "minutos": 5,
@@ -163,31 +196,57 @@
     },
     {
       "texto": "Limpiar y acomodar el pavo para rellenarlo.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Primero untar el interior del pavo con un poco de manteca derretida que se preparó para el relleno, espolvorear sal y pimienta.",
-      "ingredientes": [1, 4, 15, 16]
+      "ingredientes": [
+        1,
+        4,
+        15,
+        16
+      ]
     },
     {
       "texto": "Finalmente, incorporar al pavo el preparado, apretando bien de modo que no queden huecos.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Coser con cordel blanco lo más firme posible, dándole forma al pavo.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Untar con manteca una fuente de buen tamaño, colocar el pavo y el sobrante del relleno.",
-      "ingredientes": [1, 4]
+      "ingredientes": [
+        1,
+        4
+      ]
     },
     {
       "texto": "Asimismo, untar el pavo con manteca, sazonar con sal y pimienta, agregar el resto del vino y las hierbas aromáticas.",
-      "ingredientes": [1, 4, 9, 10, 12, 13, 14, 15, 16]
+      "ingredientes": [
+        1,
+        4,
+        9,
+        10,
+        12,
+        13,
+        14,
+        15,
+        16
+      ]
     },
     {
       "texto": "Llevar al horno con temperatura regular, a los 10 minutos tapar con papel de aluminio la fuente y cocinar a horno suave durante 2 horas.",
-      "ingredientes": [1],
+      "ingredientes": [
+        1
+      ],
       "timers": [
         {
           "minutos": 10,
@@ -201,15 +260,21 @@
     },
     {
       "texto": "Mientras está en cocción, rociar varias veces con el jugo que ha desprendido. En caso de que sea necesario, mojar con caldo caliente que se preparó anteriormente.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Dar vuelta el pavo de modo que se cocine y dore en forma pareja.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Al momento de servir, acompañar con el sobrante del relleno en una fuente y el jugo en una salsera.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     }
   ],
   "tiempo_v2": {
