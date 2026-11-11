@@ -10,20 +10,18 @@ import Layout from '../layouts/Layout.astro';
   <header class="hero-receta">
     <div class="hero-receta-inner">
       <h1>Planificador Semanal Inteligente</h1>
-      <p class="hero-sub">Genera un menú semanal seguro, adaptado a tus restricciones de salud.</p>
+      <p class="hero-sub">Genera un menú semanal adaptado a tus restricciones de salud.</p>
     </div>
   </header>
 
   <div class="legal-page" style="max-width: 1100px;">
+    <!-- AVISO DE SALUD ACTUALIZADO (Fila 10) -->
     <div style="background: #fff3cd; border-left: 6px solid #ffc107; padding: 1.5rem; border-radius: 0 var(--radio) var(--radio) 0; margin-bottom: 2.5rem; color: #664d03; box-shadow: var(--sombra-sm);">
       <strong style="display: flex; align-items: center; gap: 0.5rem; font-size: 1.2rem; margin-bottom: 0.5rem;">
         ⚠️ Aviso importante para tu salud
       </strong>
       <p style="margin: 0; font-size: 0.95rem; line-height: 1.6;">
-        Esta herramienta filtra recetas según las restricciones que selecciones, pero{' '}
-        <strong>no reemplaza el consejo de tu médico o nutricionista</strong>. Siempre revisa las
-        etiquetas de los productos que compres. Ante cualquier duda sobre un ingrediente, descarta
-        la receta y consulta a un profesional.
+        Esta herramienta filtra recetas según los ingredientes declarados, pero <strong>no garantiza la ausencia de contaminación cruzada</strong> (por ejemplo, trazas de frutos secos en fábricas que procesan otros alimentos). Tampoco reemplaza el consejo de tu médico o nutricionista. Los filtros <strong>Keto</strong> y <strong>Alto en proteína</strong> son aproximados, ya que no calculamos los macronutrientes exactos. Siempre revisa las etiquetas de los productos que compres.
       </p>
     </div>
 
@@ -43,9 +41,17 @@ import Layout from '../layouts/Layout.astro';
         <label class="restriccion-item"><input type="checkbox" value="huevo" class="check-restriccion" /><span>🥚 Sin Huevo</span></label>
         <label class="restriccion-item"><input type="checkbox" value="carne" class="check-restriccion" /><span>🥩 Vegetariano (Sin carnes)</span></label>
         <label class="restriccion-item"><input type="checkbox" value="vegano" class="check-restriccion" /><span>🌱 Vegano (100% vegetal)</span></label>
-        <label class="restriccion-item"><input type="checkbox" value="keto" class="check-restriccion" /><span>🥑 Keto (Muy bajo en carbos)</span></label>
+        
+        <!-- ETIQUETAS APROXIMADAS (Fila 10) -->
+        <label class="restriccion-item">
+          <input type="checkbox" value="keto" class="check-restriccion" />
+          <span>🥑 Keto <small style="font-weight: 400; font-size: 0.75rem; color: var(--suave);">(aprox)</small></span>
+        </label>
         <label class="restriccion-item"><input type="checkbox" value="sin_azucar" class="check-restriccion" /><span>🍬 Sin Azúcar Añadida</span></label>
-        <label class="restriccion-item"><input type="checkbox" value="alto_proteina" class="check-restriccion" /><span>💪 Alto en Proteína</span></label>
+        <label class="restriccion-item">
+          <input type="checkbox" value="alto_proteina" class="check-restriccion" />
+          <span>💪 Alto en Proteína <small style="font-weight: 400; font-size: 0.75rem; color: var(--suave);">(aprox)</small></span>
+        </label>
       </div>
     </section>
 
@@ -88,6 +94,7 @@ import Layout from '../layouts/Layout.astro';
     import { obtenerRecetasSeguras } from '../lib/restricciones.js';
     import { escaparHtml } from '../lib/html.js';
 
+    // Fila 10: Funciones a prueba de fallos para localStorage
     function safeGet(key) { try { return localStorage.getItem(key); } catch (e) { return null; } }
     function safeSet(key, value) { try { localStorage.setItem(key, value); } catch (e) {} }
     function safeRemove(key) { try { localStorage.removeItem(key); } catch (e) {} }
