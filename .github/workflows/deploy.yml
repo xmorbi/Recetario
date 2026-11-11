@@ -36,14 +36,20 @@ jobs:
             exit 1
           fi
 
-      - name: Tests (bloqueante)
+      - name: Instalar navegadores de Playwright
+        run: npx playwright install --with-deps chromium
+
+      - name: Tests unitarios (Vitest)
         run: npm test
 
-      - name: Lint (bloqueante)
+      - name: Lint (ESLint)
         run: npm run lint
 
       - name: Build (astro build — única build del pipeline)
         run: npm run build
+
+      - name: Tests E2E (Playwright)
+        run: npx playwright test
 
       - name: Deploy a Cloudflare Workers (sin rebuild)
         uses: cloudflare/wrangler-action@v3
