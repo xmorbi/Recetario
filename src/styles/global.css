@@ -5442,7 +5442,7 @@ details[open] > .tabbar-tools-menu {
   font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: var(--marca-texto-label);
+  color: var(--marca-texto-medio);
   font-weight: 600;
   margin-top: 0.1rem;
 }
@@ -6210,3 +6210,104 @@ details[open] > .tabbar-tools-menu {
 [data-theme="dark"] .advertencia-box .advertencia-icon {
   color: #ffd166;
 }
+
+
+/* =====================================================================
+   ACCESIBILIDAD — CONTRASTE DE METADATOS Y JERARQUÍA DE ENCABEZADOS
+   - Los labels de metadatos usan un color con contraste suficiente.
+   - Los encabezados migrados de h3 a h2 conservan la apariencia original.
+   - Reglas acotadas a los componentes de la ficha; no alteran h2 globales.
+   ===================================================================== */
+
+/* Bloque 1: contraste de etiquetas de metadatos */
+.meta-col-label {
+  color: var(--marca-texto-medio);
+}
+
+[data-theme="dark"] .meta-col-label {
+  color: #d1d1d1;
+}
+
+/* Bloque 2: conservar la jerarquía visual de los antiguos h3 como h2 */
+.ingredientes-header h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--marca-rojo-osc);
+  text-transform: none;
+  letter-spacing: normal;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.cuerpo-col > h2 {
+  font-family: var(--fuente-texto);
+  font-size: 1.1rem;
+  color: var(--marca-rojo-osc);
+  margin-bottom: 1.2rem;
+  text-transform: none;
+  letter-spacing: normal;
+  border-bottom: none;
+  padding-bottom: 0;
+  font-weight: 700;
+}
+
+.accordion-receta-summary h2 {
+  margin: 0;
+  font-family: var(--fuente-texto);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: normal;
+  text-transform: none;
+  color: var(--marca-rojo-osc);
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.recetas-relacionadas h2 {
+  font-family: var(--fuente-texto);
+  font-size: 1.1rem;
+  color: var(--marca-rojo-osc);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  text-transform: none;
+  letter-spacing: normal;
+  border-bottom: none;
+  padding-bottom: 0;
+  font-weight: 700;
+}
+
+/* === INICIO FIX FINAL — ADAPTACIÓN A H2 === */
+
+/* 1. Recuperar los emojis en las cajas */
+.errores-box h2::before { 
+  content: "⚠️"; 
+  font-size: 1.5rem; 
+}
+
+.conservacion-box h2::before { 
+  content: "🧊"; 
+  font-size: 1.5rem; 
+}
+
+/* 2. Asegurar el layout del acordeón (título a la izquierda, chevron a la derecha) */
+.accordion-receta > summary h2 {
+  margin-bottom: 0;
+  flex: 1;
+  min-width: 0;
+}
+
+/* 3. Eliminar el margen extra que traía el h2 por defecto en las cajas */
+.errores-box h2,
+.conservacion-box h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-bottom: 0;
+  border-bottom: none;
+  margin: 0;
+}
+
+/* === FIN FIX FINAL === */

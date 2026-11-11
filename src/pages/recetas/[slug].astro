@@ -252,7 +252,7 @@ const ICON_LIST =
         <img
           class="hero-img-nuevo"
           src={'/' + receta.imagen}
-          alt={receta.titulo}
+          alt={`Plato terminado de ${receta.titulo}`}
           loading="eager"
           fetchpriority="high"
           decoding="async"
@@ -336,7 +336,8 @@ const ICON_LIST =
     </div>
   </header>
 
-  <main class="receta-page receta-page-nuevo">
+  <!-- Se cambió <main> por <div> para evitar el <main> duplicado (Layout ya tiene uno) -->
+  <div class="receta-page receta-page-nuevo">
     <!-- CTA REDISEÑADO -->
     <div class="cta-wrapper-nuevo">
       <button type="button" class="btn-cta-cocina btn-modo-cocina cta-nuevo">
@@ -427,10 +428,10 @@ const ICON_LIST =
           aria-labelledby="tab-ingredientes"
         >
           <div class="ingredientes-header">
-            <h3>
+            <h2>
               <span class="ing-header-icon" set:html={ICON_BASKET} aria-hidden="true" />
               Ingredientes
-            </h3>
+            </h2>
             <div
               class="stepper-porciones"
               data-base={porcionesBase}
@@ -490,7 +491,7 @@ const ICON_LIST =
           role="tabpanel"
           aria-labelledby="tab-preparacion"
         >
-          <h3>Preparación</h3>
+          <h2>Preparación</h2>
           <ol class="preparacion">
             {pasosTexto.map((paso) => (
               <li set:html={paso} />
@@ -509,7 +510,7 @@ const ICON_LIST =
     {receta.errores && receta.errores.length > 0 && (
       <details class="errores-box accordion-receta" open>
         <summary class="accordion-receta-summary">
-          <h3>Errores comunes y cómo evitarlos</h3>
+          <h2>Errores comunes y cómo evitarlos</h2>
           <span class="accordion-receta-chevron" aria-hidden="true"></span>
         </summary>
         <div class="accordion-receta-contenido">
@@ -529,7 +530,7 @@ const ICON_LIST =
     {receta.conservacion && (
       <details class="conservacion-box accordion-receta" open>
         <summary class="accordion-receta-summary">
-          <h3>Conservación y Recalentado</h3>
+          <h2>Conservación y Recalentado</h2>
           <span class="accordion-receta-chevron" aria-hidden="true"></span>
         </summary>
         <div class="accordion-receta-contenido">
@@ -656,7 +657,7 @@ const ICON_LIST =
     <!-- RELACIONADAS -->
     {rels.length > 0 && (
       <aside class="recetas-relacionadas">
-        <h3>Recetas relacionadas</h3>
+        <h2>Recetas relacionadas</h2>
         <ul>
           {rels.map((r) => (
             <li>
@@ -687,7 +688,7 @@ const ICON_LIST =
         <span></span>
       )}
     </nav>
-  </main>
+  </div>
 
   <script type="application/json" id="receta-data" set:html={recetaJSON}></script>
 

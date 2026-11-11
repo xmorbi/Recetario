@@ -1,10 +1,119 @@
 ---
 // src/pages/404.astro
+import Layout from '../layouts/Layout.astro';
 ---
 
-<html>
-  <body>
-    <h1>Página no encontrada</h1>
-    <p>Lo sentimos, la página que buscas no existe.</p>
-  </body>
-</html>
+<Layout
+  title="Página no encontrada (404)"
+  description="La página que buscas no existe en el Recetario Chileno. Vuelve al inicio para seguir cocinando."
+>
+  <main class="error-404">
+    <div class="error-404-contenido">
+      <div class="error-404-emoji" aria-hidden="true">🍳</div>
+      
+      <h1 class="error-404-titulo">Ups, 404</h1>
+      
+      <p class="error-404-texto">
+        Parece que esta receta no existe, se nos quemó en el horno o cambió de nombre. 
+        No te quedes con hambre, vuelve al inicio para seguir buscando.
+      </p>
+
+      <div class="error-404-acciones">
+        <a href="/" class="btn-404 btn-404-primario">
+          <span aria-hidden="true">←</span> Volver al inicio
+        </a>
+        <a href="/recetario/" class="btn-404 btn-404-secundario">
+          Ver todas las recetas
+        </a>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  /* Estilos locales para la página 404, no afectan al global.css */
+  .error-404 {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+
+  .error-404-contenido {
+    max-width: 540px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .error-404-emoji {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    animation: flotar 3s ease-in-out infinite;
+  }
+
+  .error-404-titulo {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: var(--color-texto, #2c3e50);
+  }
+
+  .error-404-texto {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--color-texto-secundario, #555);
+    margin-bottom: 2rem;
+  }
+
+  .error-404-acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .btn-404 {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .btn-404:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+  }
+
+  .btn-404-primario {
+    background-color: var(--color-primario, #d35400);
+    color: #ffffff;
+  }
+
+  .btn-404-secundario {
+    background-color: var(--color-fondo-secundario, #f5f5f5);
+    color: var(--color-texto, #333);
+    border: 1px solid var(--color-borde, #ddd);
+  }
+
+  @keyframes flotar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  /* Respetar la preferencia de movimiento reducido */
+  @media (prefers-reduced-motion: reduce) {
+    .error-404-emoji {
+      animation: none;
+    }
+    .btn-404:hover {
+      transform: none;
+    }
+  }
+</style>
