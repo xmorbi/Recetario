@@ -9,7 +9,7 @@ import Layout from '../layouts/Layout.astro';
 >
   <header class="hero-receta">
     <div class="hero-receta-inner">
-      <h1>Planificador Inteligente</h1>
+      <h1>Planificador Semanal Inteligente</h1>
       <p class="hero-sub">Genera un menú semanal seguro, adaptado a tus restricciones de salud.</p>
     </div>
   </header>
@@ -91,6 +91,14 @@ import Layout from '../layouts/Layout.astro';
     function safeGet(key) { try { return localStorage.getItem(key); } catch (e) { return null; } }
     function safeSet(key, value) { try { localStorage.setItem(key, value); } catch (e) {} }
     function safeRemove(key) { try { localStorage.removeItem(key); } catch (e) {} }
+    function safeParse(key, fallback) { 
+      try { 
+        const val = safeGet(key); 
+        return val ? JSON.parse(val) : fallback; 
+      } catch (e) { 
+        return fallback; 
+      } 
+    }
 
     function mostrarToast(mensaje, tipo = 'info') {
       const container = document.getElementById('toast-container');
@@ -131,9 +139,10 @@ import Layout from '../layouts/Layout.astro';
       safeSet('planificador_semana_inicio', lunesActual);
     }
 
-    let minutasActuales = JSON.parse(safeGet('planificador_semana')) || {};
-    let restriccionesGuardadas = JSON.parse(safeGet('planificador_restricciones')) || [];
-    let recetasFijadas = JSON.parse(safeGet('planificador_fijadas')) || {};
+    // Uso de safeParse para evitar que un localStorage corrupto rompa la página
+    let minutasActuales = safeParse('planificador_semana', {});
+    let restriccionesGuardadas = safeParse('planificador_restricciones', []);
+    let recetasFijadas = safeParse('planificador_fijadas', {});
     let recetasPermitidasGlobal = [];
 
     const btnGenerar = document.getElementById('btn-generar-semana');

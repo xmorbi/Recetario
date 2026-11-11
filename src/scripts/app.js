@@ -9,7 +9,7 @@ import { escaparHtml } from '../lib/html.js';
   // Centralización de dominio: window.__SITE_URL lo inyecta Layout.astro en <head>.
   const _SITE_CONFIG = {
     nombre: 'Recetario Chileno',
-    urlBase: (window.__SITE_URL || 'https://recetariochileno.netlify.app').replace(/\/$/, ''),
+    urlBase: (window.__SITE_URL || 'https://recetario.morbidan.workers.dev').replace(/\/$/, ''),
     imagenDefault: '/img/og-default.jpg',
   };
 

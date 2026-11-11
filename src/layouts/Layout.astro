@@ -14,6 +14,13 @@ import '@fontsource/inter/500.css';
 import '@fontsource/inter/600.css';
 import '@fontsource/inter/700.css';
 
+// OPTIMIZACIÓN (Preload): Importamos los archivos woff2 exactos de las fuentes
+// más críticas (títulos y texto base) para que Vite nos devuelva la URL con hash.
+import inter400 from '@fontsource/inter/files/inter-latin-400-normal.woff2';
+import inter600 from '@fontsource/inter/files/inter-latin-600-normal.woff2';
+import fraunces700 from '@fontsource/fraunces/files/fraunces-latin-700-normal.woff2';
+import fraunces900 from '@fontsource/fraunces/files/fraunces-latin-900-normal.woff2';
+
 const {
   title = 'Recetario Chileno',
   description = 'Las mejores recetas tradicionales chilenas explicadas paso a paso.',
@@ -49,6 +56,12 @@ const herramientasActivo = ['conservacion', 'calculadora', 'conversor', 'planifi
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+    <!-- OPTIMIZACIÓN: Precarga de fuentes críticas -->
+    <link rel="preload" href={inter400} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={inter600} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={fraunces700} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={fraunces900} as="font" type="font/woff2" crossorigin />
 
     <!-- FASE 2 (auditoría): aplicar el tema ANTES del paint (anti-FOUC) -->
     <script is:inline>

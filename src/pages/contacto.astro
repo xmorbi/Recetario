@@ -66,6 +66,9 @@ import Layout from '../layouts/Layout.astro';
       ></textarea>
 
       <button type="submit">Enviar mensaje</button>
+      
+      <!-- Contenedor para mensajes de éxito o error -->
+      <div id="form-status" style="display: none; margin-top: 1rem; font-weight: 600; text-align: center; padding: 1rem; border-radius: 8px;"></div>
     </form>
 
     <h3>Correo electrónico directo</h3>
@@ -104,8 +107,9 @@ import Layout from '../layouts/Layout.astro';
 
     <div class="legal-box">
       <strong>Sobre la privacidad:</strong> tu nombre y correo solo se usan para responderte. No te
-      agregamos a ninguna lista, no te enviamos publicidad, no compartimos tus datos con nadie. Para
-      más detalle, consulta la <a href="/privacidad/">Política de Privacidad</a>.
+      agregamos a ninguna lista ni enviamos publicidad. Utilizamos el servicio <strong>Web3Forms</strong> 
+      exclusivamente para hacer llegar tu mensaje a nuestro correo. Para más detalle, consulta la 
+      <a href="/privacidad/">Política de Privacidad</a>.
     </div>
 
     <h2>Antes de escribir, quizás esto te sirva</h2>
@@ -136,6 +140,7 @@ import Layout from '../layouts/Layout.astro';
     const form = document.getElementById('form');
     if (form) {
       const submitBtn = form.querySelector('button[type="submit"]');
+      const statusDiv = document.getElementById('form-status');
 
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -147,6 +152,7 @@ import Layout from '../layouts/Layout.astro';
 
         submitBtn.textContent = "Enviando...";
         submitBtn.disabled = true;
+        statusDiv.style.display = 'none';
 
         try {
           const response = await fetch("https://api.web3forms.com/submit", {
@@ -156,15 +162,23 @@ import Layout from '../layouts/Layout.astro';
 
           const data = await response.json();
 
-          // ✅ FIX: Web3Forms devuelve success: true en el JSON
           if (data.success) {
-            alert("¡Éxito! Tu mensaje ha sido enviado.");
+            statusDiv.textContent = "¡Éxito! Tu mensaje ha sido enviado.";
+            statusDiv.style.backgroundColor = "#d4edda";
+            statusDiv.style.color = "#155724";
+            statusDiv.style.display = "block";
             form.reset();
           } else {
-            alert("Error: " + (data.message || "No se pudo enviar el mensaje."));
+            statusDiv.textContent = "Error: " + (data.message || "No se pudo enviar el mensaje.");
+            statusDiv.style.backgroundColor = "#f8d7da";
+            statusDiv.style.color = "#721c24";
+            statusDiv.style.display = "block";
           }
         } catch (error) {
-          alert("Algo salió mal. Por favor, intenta de nuevo.");
+          statusDiv.textContent = "Algo salió mal. Por favor, intenta de nuevo.";
+          statusDiv.style.backgroundColor = "#f8d7da";
+          statusDiv.style.color = "#721c24";
+          statusDiv.style.display = "block";
         } finally {
           submitBtn.textContent = originalText;
           submitBtn.disabled = false;

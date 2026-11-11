@@ -1,103 +1,143 @@
 import { describe, it, expect } from 'vitest';
 import { normalizarTexto, dividirEnFrases } from './voz-texto.js';
 
-describe('normalizarTexto — unidades', () => {
-  it('300 g → 300 gramos', () => {
+describe('normalizarTexto — Unidades y números', () => {
+  it('convierte gramos, kilos y mililitros', () => {
     expect(normalizarTexto('300 g de carne')).toBe('300 gramos de carne');
-  });
-  it('1 g → 1 gramo (singular)', () => {
-    expect(normalizarTexto('1 g de sal')).toBe('1 gramo de sal');
-  });
-  it('1 kg → 1 kilo', () => {
-    expect(normalizarTexto('1 kg de papas')).toBe('1 kilo de papas');
-  });
-  it('2 kg → 2 kilos', () => {
-    expect(normalizarTexto('2 kg de papas')).toBe('2 kilos de papas');
-  });
-  it('200 ml → 200 mililitros', () => {
+    expect(normalizarTexto('1 kg de harina')).toBe('1 kilo de harina');
     expect(normalizarTexto('200 ml de leche')).toBe('200 mililitros de leche');
-  });
-  it('1 L → 1 litro', () => {
     expect(normalizarTexto('1 L de agua')).toBe('1 litro de agua');
   });
-  it('160 °C → 160 grados', () => {
-    expect(normalizarTexto('Horno a 160 °C')).toBe('Horno a 160 grados');
-  });
-  it('20°C sin espacio', () => {
-    expect(normalizarTexto('a 20°C')).toBe('a 20 grados');
-  });
-  it('no toca palabras que contienen la unidad', () => {
-    expect(normalizarTexto('agua')).toBe('agua');
-    expect(normalizarTexto('mermelada')).toBe('mermelada');
-    expect(normalizarTexto('3 grandes')).toBe('3 grandes');
-  });
-});
 
-describe('normalizarTexto — rangos', () => {
-  it('20-25 min → 20 a 25 minutos', () => {
+  it('convierte cucharadas y cucharaditas', () => {
+    expect(normalizarTexto('2 cdas de azúcar')).toBe('2 cucharadas de azúcar');
+    expect(normalizarTexto('1 cdta de sal')).toBe('1 cucharadita de sal');
+  });
+
+  it('convierte tiempos, rangos y temperaturas', () => {
+    expect(normalizarTexto('20 min')).toBe('20 minutos');
+    expect(normalizarTexto('1 h')).toBe('1 hora');
     expect(normalizarTexto('20-25 min')).toBe('20 a 25 minutos');
+    expect(normalizarTexto('1-2 hrs')).toBe('1 a 2 horas');
+    expect(normalizarTexto('160 °C')).toBe('160 grados');
+    expect(normalizarTexto('350 °F')).toBe('350 grados fahrenheit');
   });
-  it('10 a 12 sin cambio', () => {
-    expect(normalizarTexto('10 a 12 minutos')).toBe('10 a 12 minutos');
-  });
-});
 
-describe('normalizarTexto — fracciones y decimales', () => {
-  it('0.5 → medio', () => {
-    expect(normalizarTexto('0.5 pimentón')).toBe('medio pimentón');
+  it('convierte fracciones unicode solas', () => {
+    expect(normalizarTexto('½ cucharadita')).toBe('media cucharadita');
+    expect(normalizarTexto('¼ taza')).toBe('un cuarto de taza');
+    expect(normalizarTexto('¾ cucharadita')).toBe('tres cuartos de cucharadita');
+    expect(normalizarTexto('⅓ taza')).toBe('un tercio de taza');
+    expect(normalizarTexto('⅔ taza')).toBe('dos tercios de taza');
   });
-  it('0,5 con coma', () => {
-    expect(normalizarTexto('0,5 taza')).toBe('medio taza');
-  });
-  it('1/2 → medio', () => {
-    expect(normalizarTexto('1/2 cucharadita')).toBe('medio cucharadita');
-  });
-  it('3/4 → tres cuartos', () => {
-    expect(normalizarTexto('3/4 taza')).toBe('tres cuartos taza');
-  });
-  it('½ unicode', () => {
-    expect(normalizarTexto('½ limón')).toBe('medio limón');
-  });
-  it('1.5 kg → uno y medio kilos', () => {
-    expect(normalizarTexto('1.5 kg')).toBe('uno y medio kilos');
-  });
-});
 
-describe('normalizarTexto — casos mixtos', () => {
-  it('paso completo', () => {
-    expect(normalizarTexto('Cocina 300 g de carne a 160 °C por 20-25 min')).toBe(
-      'Cocina 300 gramos de carne a 160 grados por 20 a 25 minutos'
-    );
+  it('convierte fracciones textuales a texto', () => {
+    expect(normalizarTexto('1/2 taza')).toBe('media taza');
+    expect(normalizarTexto('1/4 taza')).toBe('un cuarto de taza');
+    expect(normalizarTexto('3/4 taza')).toBe('tres cuartos de taza');
+    expect(normalizarTexto('1/8 cucharadita')).toBe('un octavo de cucharadita');
   });
-  it('texto sin cambios', () => {
-    expect(normalizarTexto('Revolver bien y servir.')).toBe('Revolver bien y servir.');
+
+  it('convierte decimales comunes', () => {
+    expect(normalizarTexto('0.5 taza')).toBe('media taza');
+    expect(normalizarTexto('0,5 cucharadita')).toBe('media cucharadita');
+    expect(normalizarTexto('0.25 kg')).toBe('un cuarto de kilo');
+    expect(normalizarTexto('1.5 kg')).toBe('un kilo y medio');
+    expect(normalizarTexto('2,5 litros')).toBe('dos litros y medio');
   });
-  it('vacío / no string', () => {
-    expect(normalizarTexto('')).toBe('');
+
+  it('convierte unidades menos comunes', () => {
+    expect(normalizarTexto('5 mg')).toBe('5 miligramos');
+    expect(normalizarTexto('10 cc')).toBe('10 centímetros cúbicos');
+    expect(normalizarTexto('30 cm')).toBe('30 centímetros');
+    expect(normalizarTexto('15 mm')).toBe('15 milímetros');
+    expect(normalizarTexto('30 seg')).toBe('30 segundos');
+  });
+
+  it('colapsa espacios múltiples', () => {
+    expect(normalizarTexto('  300   g   de   carne  ')).toBe('300 gramos de carne');
+  });
+
+  it('devuelve string vacío si el input no es string', () => {
     expect(normalizarTexto(null)).toBe('');
+    expect(normalizarTexto(undefined)).toBe('');
     expect(normalizarTexto(123)).toBe('');
+  });
+
+  it('no altera números que no son unidades', () => {
+    expect(normalizarTexto('Cocina por 3 minutos y agrega 2 huevos')).toBe('Cocina por 3 minutos y agrega 2 huevos');
+  });
+});
+
+describe('normalizarTexto — Fila 7: Género y fracciones mixtas', () => {
+  it('aplica género femenino a unidades femeninas', () => {
+    expect(normalizarTexto('0.5 taza')).toBe('media taza');
+    expect(normalizarTexto('1/2 cucharadita')).toBe('media cucharadita');
+    expect(normalizarTexto('0.5 unidad')).toBe('media unidad');
+    expect(normalizarTexto('0.5 lata')).toBe('media lata');
+  });
+
+  it('aplica género masculino a unidades masculinas', () => {
+    expect(normalizarTexto('0.5 pimentón')).toBe('medio pimentón');
+    expect(normalizarTexto('1/2 limón')).toBe('medio limón');
+    expect(normalizarTexto('0.5 kilo')).toBe('medio kilo');
+    expect(normalizarTexto('0.5 litro')).toBe('medio litro');
+  });
+
+  it('convierte fracciones mixtas textuales y unicode', () => {
+    expect(normalizarTexto('1½ taza')).toBe('una taza y media');
+    expect(normalizarTexto('1 1/2 tazas')).toBe('una taza y media');
+    expect(normalizarTexto('1 1/2 kg')).toBe('un kilo y medio');
+    expect(normalizarTexto('2½ tazas')).toBe('dos tazas y media');
+  });
+
+  it('convierte fracciones mixtas complejas', () => {
+    expect(normalizarTexto('1 1/4 tazas')).toBe('una taza y un cuarto');
+    expect(normalizarTexto('1 3/4 tazas')).toBe('una taza y tres cuartos');
+    expect(normalizarTexto('1,5 horas')).toBe('una hora y media');
+    expect(normalizarTexto('2.5 minutos')).toBe('dos minutos y medio');
+  });
+
+  it('convierte 0.75 a tres cuartos con género', () => {
+    expect(normalizarTexto('0.75 kg')).toBe('tres cuartos de kilo');
+    expect(normalizarTexto('0,75 taza')).toBe('tres cuartos de taza');
+  });
+
+  it('conserva expresiones ya escritas correctamente', () => {
+    expect(normalizarTexto('un cuarto de taza')).toBe('un cuarto de taza');
+    expect(normalizarTexto('media taza')).toBe('media taza');
+    expect(normalizarTexto('una taza y media')).toBe('una taza y media');
+  });
+
+  it('no confunde "medio" con "media" en otros contextos', () => {
+    expect(normalizarTexto('medio día')).toBe('medio día');
+    expect(normalizarTexto('media hora')).toBe('media hora');
+  });
+
+  it('maneja mayúsculas y minúsculas', () => {
+    expect(normalizarTexto('1 Taza')).toBe('1 taza');
+    expect(normalizarTexto('2 KILOS')).toBe('2 kilos');
+  });
+
+  it('convierte texto con números y letras mezcladas', () => {
+    expect(normalizarTexto('2 tazas y 1/2 cucharadita')).toBe('2 tazas y media cucharadita');
   });
 });
 
 describe('dividirEnFrases', () => {
-  it('una sola frase sin puntuación', () => {
-    expect(dividirEnFrases('Revolver bien')).toEqual(['Revolver bien']);
+  it('separa por puntos y signos', () => {
+    expect(dividirEnFrases('Primer paso. Segundo paso!')).toEqual(['Primer paso.', 'Segundo paso!']);
+    expect(dividirEnFrases('¿Listo? Sí.')).toEqual(['¿Listo?', 'Sí.']);
   });
-  it('dos frases', () => {
-    expect(dividirEnFrases('Lavar. Cortar.')).toEqual(['Lavar.', 'Cortar.']);
+
+  it('subdivide frases muy largas por comas', () => {
+    const larga = 'a'.repeat(150) + ', ' + 'b'.repeat(150);
+    const frases = dividirEnFrases(larga);
+    expect(frases.length).toBe(2);
+    expect(frases[0].endsWith(',')).toBe(true);
   });
-  it('mezcla de signos', () => {
-    expect(dividirEnFrases('¿Listo? ¡Sí! Sirve.')).toEqual(['¿Listo?', '¡Sí!', 'Sirve.']);
-  });
-  it('texto largo sin puntuación se subdivide por comas', () => {
-    var largo = 'palabra, '.repeat(30) + 'fin';
-    var frases = dividirEnFrases(largo);
-    expect(frases.length).toBeGreaterThan(1);
-    frases.forEach(function (f) {
-      expect(f.length).toBeLessThanOrEqual(200);
-    });
-  });
-  it('vacío devuelve []', () => {
+
+  it('devuelve array vacío si no hay texto', () => {
     expect(dividirEnFrases('')).toEqual([]);
     expect(dividirEnFrases(null)).toEqual([]);
   });
