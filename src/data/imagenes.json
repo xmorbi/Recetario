@@ -61,6 +61,32 @@
    }
   ]
  },
+ "img/arrollado-huaso.jpg": {
+  "ancho": 1024,
+  "alto": 1024,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/arrollado-huaso-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/arrollado-huaso-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/arrollado-huaso-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/arrollado-huaso-800.webp"
+   }
+  ]
+ },
  "img/arroz-con-huevo.jpg": {
   "ancho": 896,
   "alto": 1195,
@@ -445,6 +471,22 @@
    }
   ]
  },
+ "img/chaparritas.webp": {
+  "ancho": 772,
+  "alto": 1024,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/chaparritas-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/chaparritas-480.webp"
+   }
+  ]
+ },
  "img/Charquican.jpg": {
   "ancho": 960,
   "alto": 640,
@@ -592,6 +634,32 @@
     "w": 800,
     "fmt": "webp",
     "url": "/img/opt/chunchules-800.webp"
+   }
+  ]
+ },
+ "img/chupe-de-locos.jpg": {
+  "ancho": 896,
+  "alto": 1178,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/chupe-de-locos-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/chupe-de-locos-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/chupe-de-locos-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/chupe-de-locos-800.webp"
    }
   ]
  },

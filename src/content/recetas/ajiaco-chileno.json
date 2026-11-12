@@ -17,7 +17,7 @@
   "errores": [
     {
       "error": "Las papas se me deshicieron y el caldo quedó espeso",
-      "solucion": "Usaste papas que se deshacen fácilmente. Usa papas de las que se mantienen firmes al cocinar y agrégalas al final, para que se cocinen sin deshacerse."
+      "solucion": "Usaste papas que se deshacen fácilmente o las cocinaste demasiado. Usa papas de las que se mantienen firmes al cocinar y agrégalas al final, para que se cocinen sin deshacerse."
     },
     {
       "error": "El ajiaco me quedó con sabor plano",
@@ -107,37 +107,40 @@
   ],
   "pasos_v2": [
     {
-      "texto": "Sofríe la cebolla, zanahoria, pimentón y ajo en aceite.",
+      "texto": "Sofríe la cebolla, zanahoria, pimentón y ajo en el aceite.",
       "ingredientes": [
         3,
         5,
         6,
-        4
+        4,
+        11
       ]
     },
     {
-      "texto": "Agrega la carne asada en trozos y las papas.",
+      "texto": "Agrega la carne asada en trozos y condimenta con orégano, ají de color, comino, sal y pimienta.",
       "ingredientes": [
         1,
-        2
-      ]
-    },
-    {
-      "texto": "Condimenta con orégano, ají de color, comino, sal y pimienta.",
-      "ingredientes": [
         7,
         9
       ]
     },
     {
-      "texto": "Cubre con el caldo y cocina hasta que las papas estén tiernas.",
+      "texto": "Añade las papas en cubos y cubre con el caldo. Cocina a fuego medio hasta que las papas estén tiernas.",
       "ingredientes": [
+        2,
         8
+      ],
+      "timers": [
+        {
+          "minutos": 20,
+          "etiqueta": "20 min"
+        }
       ]
     },
     {
-      "texto": "Rectifica la sal y sirve caliente.",
+      "texto": "Si quieres un toque picante, agrega el ají seco. Rectifica la sal y sirve caliente.",
       "ingredientes": [
+        10,
         9
       ]
     }
