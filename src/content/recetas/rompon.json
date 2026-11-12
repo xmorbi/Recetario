@@ -1,7 +1,14 @@
 {
   "titulo": "Rompon",
   "categoria": "bebidas",
-  "tags": ["rompon", "coñac", "leche", "crema", "yemas", "tragos"],
+  "tags": [
+    "rompon",
+    "coñac",
+    "leche",
+    "crema",
+    "yemas",
+    "tragos"
+  ],
   "imagen": null,
   "tiempo": "15 min",
   "porciones": "6 a 8 personas",
@@ -48,12 +55,25 @@
       "unidad": null,
       "nombre": "yemas",
       "escalable": true
+    },
+    {
+      "cantidad": null,
+      "unidad": null,
+      "nombre": "aceite",
+      "nota": "para sofreír",
+      "escalable": false
     }
   ],
   "pasos_v2": [
     {
       "texto": "Mezclar todos los ingredientes en la licuadora y batir a velocidad moderada.",
-      "ingredientes": [1, 2, 3, 4, 5]
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
     },
     {
       "texto": "Dejar en reposo unos 10 minutos.",

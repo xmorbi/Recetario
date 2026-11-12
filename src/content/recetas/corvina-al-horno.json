@@ -71,7 +71,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal, pimienta y tomillo",
       "nota": "al gusto",

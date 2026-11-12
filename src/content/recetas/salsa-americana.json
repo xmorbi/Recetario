@@ -1,7 +1,12 @@
 {
   "titulo": "Salsa americana",
   "categoria": "ensaladas",
-  "tags": ["salsa", "picoteo", "acompañamiento", "frio"],
+  "tags": [
+    "salsa",
+    "picoteo",
+    "acompañamiento",
+    "frio"
+  ],
   "imagen": null,
   "tiempo": "15 min",
   "porciones": "1 taza",
@@ -62,7 +67,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal y pimienta",
       "nota": "al gusto",
@@ -72,15 +77,25 @@
   "pasos_v2": [
     {
       "texto": "Escurre bien las cebollitas, las zanahorias y los pepinillos. Pícalos en trozos muy pequeños.",
-      "ingredientes": [1, 2, 3]
+      "ingredientes": [
+        1,
+        2,
+        3
+      ]
     },
     {
       "texto": "En un bol, mezcla la mayonesa, el ketchup y la mostaza hasta integrar.",
-      "ingredientes": [4, 5, 6]
+      "ingredientes": [
+        4,
+        5,
+        6
+      ]
     },
     {
       "texto": "Incorpora los encurtidos picados y mezcla bien. Salpimenta al gusto.",
-      "ingredientes": [7]
+      "ingredientes": [
+        7
+      ]
     },
     {
       "texto": "Refrigera por al menos 30 minutos para que los sabores se mezclen antes de servir.",

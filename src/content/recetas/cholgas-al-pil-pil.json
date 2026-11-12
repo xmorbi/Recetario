@@ -53,11 +53,11 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "ají verde o merkén",
       "nota": "al gusto",
-      "escalable": true
+      "escalable": false
     },
     {
       "cantidad": 0.5,

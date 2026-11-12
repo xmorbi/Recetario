@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
+import Picture from '../../components/Picture.astro';
 import {
   formatearIngredienteEstructurado,
   reemplazarMarcasIngredientes,
@@ -57,7 +58,8 @@ const recetaParaCliente = {
 };
 const recetaJSON = JSON.stringify(recetaParaCliente).replace(/<\/script/g, '<\\/script');
 
-const SITE = Astro.site ?? new URL('https://recetariochileno.netlify.app');
+// FIX: Cambio de respaldo de Netlify a Cloudflare Workers
+const SITE = Astro.site ?? new URL('https://recetario.morbidan.workers.dev');
 const url = new URL(`/recetas/${slug}/`, SITE).toString();
 const img =
   receta.imagen && receta.imagen.trim() !== ''
@@ -249,15 +251,12 @@ const ICON_LIST =
   <header class="hero-nuevo">
     <div class="hero-img-full">
       {tieneImagenPropia ? (
-        <img
-          class="hero-img-nuevo"
-          src={'/' + receta.imagen}
+        <Picture
+          src={receta.imagen}
           alt={`Plato terminado de ${receta.titulo}`}
-          loading="eager"
-          fetchpriority="high"
-          decoding="async"
-          width="1200"
-          height="675"
+          eager={true}
+          sizes="(min-width: 900px) 1000px, 100vw"
+          class="hero-img-nuevo"
         />
       ) : (
         <div

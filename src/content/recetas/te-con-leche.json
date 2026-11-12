@@ -1,7 +1,13 @@
 {
   "titulo": "Té con leche",
   "categoria": "once",
-  "tags": ["once", "bebida", "té", "tradicional", "invierno"],
+  "tags": [
+    "once",
+    "bebida",
+    "té",
+    "tradicional",
+    "invierno"
+  ],
   "imagen": null,
   "tiempo": "5 min",
   "porciones": "1 taza",
@@ -48,21 +54,27 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "azúcar",
       "nota": "1-2 cucharaditas, al gusto",
-      "escalable": true
+      "escalable": false
     }
   ],
   "pasos_v2": [
     {
       "texto": "Hierve el agua. Mientras hierve, calienta la leche aparte en una ollita o en el microondas. No debe hervir: solo calentarse hasta que salga vapor.",
-      "ingredientes": [2, 3]
+      "ingredientes": [
+        2,
+        3
+      ]
     },
     {
       "texto": "Pon la bolsita de té en la taza. Vierte el agua hirviendo sobre ella y deja reposar 3-4 minutos. Más tiempo lo pone amargo.",
-      "ingredientes": [1, 2],
+      "ingredientes": [
+        1,
+        2
+      ],
       "timers": [
         {
           "minutos": 4,
@@ -72,11 +84,15 @@
     },
     {
       "texto": "Retira la bolsita sin apretarla contra la taza (si la aprietas, sale más tanino y amarga).",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Vierte la leche caliente sobre el té. La proporción clásica chilena es 60% té, 40% leche.",
-      "ingredientes": [3]
+      "ingredientes": [
+        3
+      ]
     },
     {
       "texto": "Endulza al gusto y revuelve. Sirve inmediatamente."

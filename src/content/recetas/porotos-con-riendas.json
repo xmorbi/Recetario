@@ -1,7 +1,13 @@
 {
   "titulo": "Porotos con riendas",
   "categoria": "principales",
-  "tags": ["porotos", "pasta", "olla", "plato principal", "tradicional"],
+  "tags": [
+    "porotos",
+    "pasta",
+    "olla",
+    "plato principal",
+    "tradicional"
+  ],
   "imagen": "img/porotos-con-riendas.JPG",
   "tiempo": "50 min + remojo",
   "porciones": "6 personas",
@@ -84,7 +90,7 @@
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal y pimienta",
       "nota": "al gusto",
@@ -101,12 +107,17 @@
   "pasos_v2": [
     {
       "texto": "La noche anterior, deja los porotos remojando en abundante agua fría. Al día siguiente, escúrrelos y enjuágalos.",
-      "ingredientes": [1],
+      "ingredientes": [
+        1
+      ],
       "previo": true
     },
     {
       "texto": "En una olla grande, pon los porotos con agua fresca que los cubra por unos 3 dedos. Agrega el zapallo en cubos y cocina a fuego medio hasta que los porotos estén blandos (unos 30-40 minutos).",
-      "ingredientes": [1, 2],
+      "ingredientes": [
+        1,
+        2
+      ],
       "timers": [
         {
           "minutos": 40,
@@ -116,15 +127,29 @@
     },
     {
       "texto": "Mientras se cocinan los porotos, prepara el sofrito: en una sartén con un poco de aceite, sofríe la cebolla, el ajo y la longaniza hasta que doren. Agrega el orégano, comino y ají de color, y revuelve un minuto más.",
-      "ingredientes": [1, 3, 4, 5, 7, 8, 9, 11]
+      "ingredientes": [
+        1,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        11
+      ]
     },
     {
       "texto": "Incorpora el sofrito a la olla de porotos y mezcla bien. Ajusta la sal y pimienta.",
-      "ingredientes": [6, 10]
+      "ingredientes": [
+        6,
+        10
+      ]
     },
     {
       "texto": "Agrega los tallarines (puedes partirlos por la mitad para que sean más fáciles de comer) y cocina por 8 a 10 minutos más, hasta que los fideos estén al dente y el caldo haya espesado.",
-      "ingredientes": [6],
+      "ingredientes": [
+        6
+      ],
       "timers": [
         {
           "minutos": 10,
@@ -134,7 +159,9 @@
     },
     {
       "texto": "Sirve bien caliente en platos hondos, con un chorrito de aceite crudo por encima si te gusta.",
-      "ingredientes": [11]
+      "ingredientes": [
+        11
+      ]
     }
   ],
   "tiempo_v2": {

@@ -107,7 +107,7 @@
       "seccion": "carne y el marinado"
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal y pimienta negra",
       "nota": "al gusto",

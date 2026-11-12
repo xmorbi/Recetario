@@ -22,7 +22,7 @@
    - CORE_ASSETS incluye /favicon.svg.
    ================================================================= */
 
-const VERSION = 'v10';
+const VERSION = 'v11';
 const CACHE_CORE = `core-${VERSION}`;
 const CACHE_STATIC = `static-${VERSION}`;
 const CACHE_RECETAS = 'recetas-guardadas';

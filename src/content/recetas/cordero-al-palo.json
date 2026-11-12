@@ -96,6 +96,13 @@
       "nombre": "alambre o cordel para atar",
       "nota": "a gusto",
       "escalable": false
+    },
+    {
+      "cantidad": null,
+      "unidad": null,
+      "nombre": "aceite",
+      "nota": "para sofreír",
+      "escalable": false
     }
   ],
   "pasos_v2": [

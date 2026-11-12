@@ -100,6 +100,13 @@
       "unidad": "L",
       "nombre": "agua caliente",
       "escalable": true
+    },
+    {
+      "cantidad": null,
+      "unidad": null,
+      "nombre": "aceite",
+      "nota": "para sofreír",
+      "escalable": false
     }
   ],
   "pasos_v2": [

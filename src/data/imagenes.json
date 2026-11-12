@@ -1,0 +1,1838 @@
+{
+ "img/ajiaco.png": {
+  "ancho": 1023,
+  "alto": 726,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/ajiaco-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/ajiaco-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/ajiaco-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/ajiaco-800.webp"
+   }
+  ]
+ },
+ "img/anticuchos.jpg": {
+  "ancho": 1200,
+  "alto": 500,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/anticuchos-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/anticuchos-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/anticuchos-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/anticuchos-800.webp"
+   },
+   {
+    "w": 1200,
+    "fmt": "avif",
+    "url": "/img/opt/anticuchos-1200.avif"
+   },
+   {
+    "w": 1200,
+    "fmt": "webp",
+    "url": "/img/opt/anticuchos-1200.webp"
+   }
+  ]
+ },
+ "img/arroz-con-huevo.jpg": {
+  "ancho": 896,
+  "alto": 1195,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/arroz-con-huevo-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/arroz-con-huevo-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/arroz-con-huevo-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/arroz-con-huevo-800.webp"
+   }
+  ]
+ },
+ "img/Arroz-con-leche.jpg": {
+  "ancho": 960,
+  "alto": 541,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/arroz-con-leche-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/arroz-con-leche-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/arroz-con-leche-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/arroz-con-leche-800.webp"
+   }
+  ]
+ },
+ "img/barros-luco.jpg": {
+  "ancho": 1200,
+  "alto": 867,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/barros-luco-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/barros-luco-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/barros-luco-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/barros-luco-800.webp"
+   },
+   {
+    "w": 1200,
+    "fmt": "avif",
+    "url": "/img/opt/barros-luco-1200.avif"
+   },
+   {
+    "w": 1200,
+    "fmt": "webp",
+    "url": "/img/opt/barros-luco-1200.webp"
+   }
+  ]
+ },
+ "img/Bistec-a-lo-pobre.jpg": {
+  "ancho": 960,
+  "alto": 640,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/bistec-a-lo-pobre-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/bistec-a-lo-pobre-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/bistec-a-lo-pobre-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/bistec-a-lo-pobre-800.webp"
+   }
+  ]
+ },
+ "img/borgona.jpg": {
+  "ancho": 1200,
+  "alto": 1488,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/borgona-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/borgona-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/borgona-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/borgona-800.webp"
+   },
+   {
+    "w": 1200,
+    "fmt": "avif",
+    "url": "/img/opt/borgona-1200.avif"
+   },
+   {
+    "w": 1200,
+    "fmt": "webp",
+    "url": "/img/opt/borgona-1200.webp"
+   }
+  ]
+ },
+ "img/Brownie-con-cacao.jpg": {
+  "ancho": 960,
+  "alto": 640,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/brownie-con-cacao-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/brownie-con-cacao-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/brownie-con-cacao-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/brownie-con-cacao-800.webp"
+   }
+  ]
+ },
+ "img/Caldillo-de-congrio.JPG": {
+  "ancho": 960,
+  "alto": 640,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/caldillo-de-congrio-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/caldillo-de-congrio-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/caldillo-de-congrio-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/caldillo-de-congrio-800.webp"
+   }
+  ]
+ },
+ "img/calzones-rotos.JPG": {
+  "ancho": 960,
+  "alto": 641,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/calzones-rotos-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/calzones-rotos-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/calzones-rotos-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/calzones-rotos-800.webp"
+   }
+  ]
+ },
+ "img/Carbonada.JPG": {
+  "ancho": 960,
+  "alto": 640,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/carbonada-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/carbonada-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/carbonada-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/carbonada-800.webp"
+   }
+  ]
+ },
+ "img/carne-al-jugo-con-pure.jpg": {
+  "ancho": 960,
+  "alto": 541,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/carne-al-jugo-con-pure-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/carne-al-jugo-con-pure-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/carne-al-jugo-con-pure-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/carne-al-jugo-con-pure-800.webp"
+   }
+  ]
+ },
+ "img/carne-mechada.jpg": {
+  "ancho": 960,
+  "alto": 720,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/carne-mechada-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/carne-mechada-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/carne-mechada-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/carne-mechada-800.webp"
+   }
+  ]
+ },
+ "img/Cazuela-de-Ave-01.JPG": {
+  "ancho": 960,
+  "alto": 640,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/cazuela-de-ave-01-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/cazuela-de-ave-01-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/cazuela-de-ave-01-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/cazuela-de-ave-01-800.webp"
+   }
+  ]
+ },
+ "img/Cazuela-de-vacuno.jpg": {
+  "ancho": 960,
+  "alto": 720,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/cazuela-de-vacuno-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/cazuela-de-vacuno-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/cazuela-de-vacuno-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/cazuela-de-vacuno-800.webp"
+   }
+  ]
+ },
+ "img/Chancho-en-piedra.jpg": {
+  "ancho": 960,
+  "alto": 1280,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/chancho-en-piedra-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/chancho-en-piedra-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/chancho-en-piedra-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/chancho-en-piedra-800.webp"
+   }
+  ]
+ },
+ "img/Charquican.jpg": {
+  "ancho": 960,
+  "alto": 640,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/charquican-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/charquican-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/charquican-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/charquican-800.webp"
+   }
+  ]
+ },
+ "img/chilenitos.jpg": {
+  "ancho": 1200,
+  "alto": 800,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/chilenitos-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/chilenitos-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/chilenitos-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/chilenitos-800.webp"
+   },
+   {
+    "w": 1200,
+    "fmt": "avif",
+    "url": "/img/opt/chilenitos-1200.avif"
+   },
+   {
+    "w": 1200,
+    "fmt": "webp",
+    "url": "/img/opt/chilenitos-1200.webp"
+   }
+  ]
+ },
+ "img/chorrillana.jpg": {
+  "ancho": 960,
+  "alto": 720,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/chorrillana-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/chorrillana-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/chorrillana-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/chorrillana-800.webp"
+   }
+  ]
+ },
+ "img/chuletas-de-cerdo.jpg": {
+  "ancho": 1200,
+  "alto": 800,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/chuletas-de-cerdo-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/chuletas-de-cerdo-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/chuletas-de-cerdo-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/chuletas-de-cerdo-800.webp"
+   },
+   {
+    "w": 1200,
+    "fmt": "avif",
+    "url": "/img/opt/chuletas-de-cerdo-1200.avif"
+   },
+   {
+    "w": 1200,
+    "fmt": "webp",
+    "url": "/img/opt/chuletas-de-cerdo-1200.webp"
+   }
+  ]
+ },
+ "img/chunchules.jpg": {
+  "ancho": 896,
+  "alto": 1190,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/chunchules-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/chunchules-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/chunchules-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/chunchules-800.webp"
+   }
+  ]
+ },
+ "img/churros.jpg": {
+  "ancho": 1200,
+  "alto": 801,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/churros-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/churros-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/churros-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/churros-800.webp"
+   },
+   {
+    "w": 1200,
+    "fmt": "avif",
+    "url": "/img/opt/churros-1200.avif"
+   },
+   {
+    "w": 1200,
+    "fmt": "webp",
+    "url": "/img/opt/churros-1200.webp"
+   }
+  ]
+ },
+ "img/cola-de-mono.webp": {
+  "ancho": 820,
+  "alto": 1024,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/cola-de-mono-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/cola-de-mono-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/cola-de-mono-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/cola-de-mono-800.webp"
+   }
+  ]
+ },
+ "img/colegial-budin-de-pan.jpg": {
+  "ancho": 960,
+  "alto": 746,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/colegial-budin-de-pan-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/colegial-budin-de-pan-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/colegial-budin-de-pan-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/colegial-budin-de-pan-800.webp"
+   }
+  ]
+ },
+ "img/Corvina-al-horno.jpg": {
+  "ancho": 960,
+  "alto": 720,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/corvina-al-horno-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/corvina-al-horno-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/corvina-al-horno-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/corvina-al-horno-800.webp"
+   }
+  ]
+ },
+ "img/croquetas-de-jurel.jpg": {
+  "ancho": 896,
+  "alto": 1190,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/croquetas-de-jurel-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/croquetas-de-jurel-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/croquetas-de-jurel-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/croquetas-de-jurel-800.webp"
+   }
+  ]
+ },
+ "img/dobladitas.jpg": {
+  "ancho": 1200,
+  "alto": 740,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/dobladitas-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/dobladitas-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/dobladitas-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/dobladitas-800.webp"
+   },
+   {
+    "w": 1200,
+    "fmt": "avif",
+    "url": "/img/opt/dobladitas-1200.avif"
+   },
+   {
+    "w": 1200,
+    "fmt": "webp",
+    "url": "/img/opt/dobladitas-1200.webp"
+   }
+  ]
+ },
+ "img/Empanada-de-queso.jpg": {
+  "ancho": 960,
+  "alto": 640,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/empanada-de-queso-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/empanada-de-queso-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/empanada-de-queso-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/empanada-de-queso-800.webp"
+   }
+  ]
+ },
+ "img/empanadas-de-pera.jpg": {
+  "ancho": 800,
+  "alto": 800,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/empanadas-de-pera-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/empanadas-de-pera-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/empanadas-de-pera-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/empanadas-de-pera-800.webp"
+   }
+  ]
+ },
+ "img/Empanadas-de-pino.jpg": {
+  "ancho": 960,
+  "alto": 640,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/empanadas-de-pino-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/empanadas-de-pino-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/empanadas-de-pino-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/empanadas-de-pino-800.webp"
+   }
+  ]
+ },
+ "img/empolvados.png": {
+  "ancho": 1200,
+  "alto": 1203,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/empolvados-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/empolvados-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/empolvados-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/empolvados-800.webp"
+   },
+   {
+    "w": 1200,
+    "fmt": "avif",
+    "url": "/img/opt/empolvados-1200.avif"
+   },
+   {
+    "w": 1200,
+    "fmt": "webp",
+    "url": "/img/opt/empolvados-1200.webp"
+   }
+  ]
+ },
+ "img/Ensalada-a-la-Chilena.jpg": {
+  "ancho": 960,
+  "alto": 566,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/ensalada-a-la-chilena-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/ensalada-a-la-chilena-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/ensalada-a-la-chilena-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/ensalada-a-la-chilena-800.webp"
+   }
+  ]
+ },
+ "img/Ensalada-rusa-chilena.JPG": {
+  "ancho": 960,
+  "alto": 640,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/ensalada-rusa-chilena-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/ensalada-rusa-chilena-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/ensalada-rusa-chilena-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/ensalada-rusa-chilena-800.webp"
+   }
+  ]
+ },
+ "img/fritos-de-coliflor.jpg": {
+  "ancho": 768,
+  "alto": 1365,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/fritos-de-coliflor-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/fritos-de-coliflor-480.webp"
+   }
+  ]
+ },
+ "img/guatitas-a-la-jardinera.jpg": {
+  "ancho": 1200,
+  "alto": 799,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/guatitas-a-la-jardinera-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/guatitas-a-la-jardinera-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/guatitas-a-la-jardinera-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/guatitas-a-la-jardinera-800.webp"
+   },
+   {
+    "w": 1200,
+    "fmt": "avif",
+    "url": "/img/opt/guatitas-a-la-jardinera-1200.avif"
+   },
+   {
+    "w": 1200,
+    "fmt": "webp",
+    "url": "/img/opt/guatitas-a-la-jardinera-1200.webp"
+   }
+  ]
+ },
+ "img/guatitas.jpg": {
+  "ancho": 1000,
+  "alto": 1409,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/guatitas-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/guatitas-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/guatitas-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/guatitas-800.webp"
+   }
+  ]
+ },
+ "img/hallulla.jpg": {
+  "ancho": 960,
+  "alto": 484,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/hallulla-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/hallulla-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/hallulla-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/hallulla-800.webp"
+   }
+  ]
+ },
+ "img/Humitas.jpg": {
+  "ancho": 960,
+  "alto": 720,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/humitas-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/humitas-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/humitas-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/humitas-800.webp"
+   }
+  ]
+ },
+ "img/Leche-Asada.jpg": {
+  "ancho": 960,
+  "alto": 703,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/leche-asada-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/leche-asada-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/leche-asada-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/leche-asada-800.webp"
+   }
+  ]
+ },
+ "img/leche-con-platano.jpg": {
+  "ancho": 1200,
+  "alto": 670,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/leche-con-platano-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/leche-con-platano-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/leche-con-platano-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/leche-con-platano-800.webp"
+   },
+   {
+    "w": 1200,
+    "fmt": "avif",
+    "url": "/img/opt/leche-con-platano-1200.avif"
+   },
+   {
+    "w": 1200,
+    "fmt": "webp",
+    "url": "/img/opt/leche-con-platano-1200.webp"
+   }
+  ]
+ },
+ "img/Locos-con-mayonesa.jpg": {
+  "ancho": 960,
+  "alto": 545,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/locos-con-mayonesa-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/locos-con-mayonesa-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/locos-con-mayonesa-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/locos-con-mayonesa-800.webp"
+   }
+  ]
+ },
+ "img/Machas-a-la-parmesana.jpg": {
+  "ancho": 960,
+  "alto": 655,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/machas-a-la-parmesana-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/machas-a-la-parmesana-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/machas-a-la-parmesana-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/machas-a-la-parmesana-800.webp"
+   }
+  ]
+ },
+ "img/mariscal.jpg": {
+  "ancho": 1200,
+  "alto": 948,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/mariscal-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/mariscal-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/mariscal-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/mariscal-800.webp"
+   },
+   {
+    "w": 1200,
+    "fmt": "avif",
+    "url": "/img/opt/mariscal-1200.avif"
+   },
+   {
+    "w": 1200,
+    "fmt": "webp",
+    "url": "/img/opt/mariscal-1200.webp"
+   }
+  ]
+ },
+ "img/marraqueta.jpg": {
+  "ancho": 1200,
+  "alto": 815,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/marraqueta-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/marraqueta-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/marraqueta-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/marraqueta-800.webp"
+   },
+   {
+    "w": 1200,
+    "fmt": "avif",
+    "url": "/img/opt/marraqueta-1200.avif"
+   },
+   {
+    "w": 1200,
+    "fmt": "webp",
+    "url": "/img/opt/marraqueta-1200.webp"
+   }
+  ]
+ },
+ "img/Mote-con-Huesillo.JPG": {
+  "ancho": 960,
+  "alto": 720,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/mote-con-huesillo-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/mote-con-huesillo-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/mote-con-huesillo-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/mote-con-huesillo-800.webp"
+   }
+  ]
+ },
+ "img/og-default.jpg": {
+  "ancho": 1200,
+  "alto": 495,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/og-default-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/og-default-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/og-default-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/og-default-800.webp"
+   },
+   {
+    "w": 1200,
+    "fmt": "avif",
+    "url": "/img/opt/og-default-1200.avif"
+   },
+   {
+    "w": 1200,
+    "fmt": "webp",
+    "url": "/img/opt/og-default-1200.webp"
+   }
+  ]
+ },
+ "img/Paila-Marina.jpg": {
+  "ancho": 960,
+  "alto": 720,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/paila-marina-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/paila-marina-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/paila-marina-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/paila-marina-800.webp"
+   }
+  ]
+ },
+ "img/Pajaritos-dulces.jpg": {
+  "ancho": 960,
+  "alto": 720,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/pajaritos-dulces-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/pajaritos-dulces-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/pajaritos-dulces-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/pajaritos-dulces-800.webp"
+   }
+  ]
+ },
+ "img/Pan-amasado.jpg": {
+  "ancho": 960,
+  "alto": 720,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/pan-amasado-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/pan-amasado-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/pan-amasado-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/pan-amasado-800.webp"
+   }
+  ]
+ },
+ "img/pan-de-pascua.jpg": {
+  "ancho": 1013,
+  "alto": 675,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/pan-de-pascua-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/pan-de-pascua-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/pan-de-pascua-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/pan-de-pascua-800.webp"
+   }
+  ]
+ },
+ "img/pantrucas.JPG": {
+  "ancho": 960,
+  "alto": 540,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/pantrucas-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/pantrucas-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/pantrucas-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/pantrucas-800.webp"
+   }
+  ]
+ },
+ "img/Pastel-de-choclo.jpg": {
+  "ancho": 960,
+  "alto": 760,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/pastel-de-choclo-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/pastel-de-choclo-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/pastel-de-choclo-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/pastel-de-choclo-800.webp"
+   }
+  ]
+ },
+ "img/pavo-navideno-relleno-con-ciruelas-y-castanas.jpg": {
+  "ancho": 1200,
+  "alto": 799,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/pavo-navideno-relleno-con-ciruelas-y-castanas-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/pavo-navideno-relleno-con-ciruelas-y-castanas-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/pavo-navideno-relleno-con-ciruelas-y-castanas-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/pavo-navideno-relleno-con-ciruelas-y-castanas-800.webp"
+   },
+   {
+    "w": 1200,
+    "fmt": "avif",
+    "url": "/img/opt/pavo-navideno-relleno-con-ciruelas-y-castanas-1200.avif"
+   },
+   {
+    "w": 1200,
+    "fmt": "webp",
+    "url": "/img/opt/pavo-navideno-relleno-con-ciruelas-y-castanas-1200.webp"
+   }
+  ]
+ },
+ "img/Pebre-chileno.jpg": {
+  "ancho": 960,
+  "alto": 540,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/pebre-chileno-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/pebre-chileno-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/pebre-chileno-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/pebre-chileno-800.webp"
+   }
+  ]
+ },
+ "img/pescado-frito.jpg": {
+  "ancho": 960,
+  "alto": 720,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/pescado-frito-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/pescado-frito-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/pescado-frito-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/pescado-frito-800.webp"
+   }
+  ]
+ },
+ "img/pollo-arvejado.jpg": {
+  "ancho": 500,
+  "alto": 456,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/pollo-arvejado-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/pollo-arvejado-480.webp"
+   }
+  ]
+ },
+ "img/pollo-asado.JPG": {
+  "ancho": 960,
+  "alto": 720,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/pollo-asado-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/pollo-asado-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/pollo-asado-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/pollo-asado-800.webp"
+   }
+  ]
+ },
+ "img/porotos-con-mazamorra.png": {
+  "ancho": 960,
+  "alto": 731,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/porotos-con-mazamorra-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/porotos-con-mazamorra-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/porotos-con-mazamorra-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/porotos-con-mazamorra-800.webp"
+   }
+  ]
+ },
+ "img/porotos-con-riendas.JPG": {
+  "ancho": 960,
+  "alto": 640,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/porotos-con-riendas-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/porotos-con-riendas-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/porotos-con-riendas-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/porotos-con-riendas-800.webp"
+   }
+  ]
+ },
+ "img/porotos-granados.jpg": {
+  "ancho": 960,
+  "alto": 720,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/porotos-granados-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/porotos-granados-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/porotos-granados-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/porotos-granados-800.webp"
+   }
+  ]
+ },
+ "img/prietas.jpg": {
+  "ancho": 960,
+  "alto": 711,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/prietas-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/prietas-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/prietas-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/prietas-800.webp"
+   }
+  ]
+ },
+ "img/salchipapas.jpg": {
+  "ancho": 960,
+  "alto": 540,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/salchipapas-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/salchipapas-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/salchipapas-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/salchipapas-800.webp"
+   }
+  ]
+ },
+ "img/Salmón-al-Horno.JPG": {
+  "ancho": 960,
+  "alto": 640,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/salmon-al-horno-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/salmon-al-horno-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/salmon-al-horno-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/salmon-al-horno-800.webp"
+   }
+  ]
+ },
+ "img/Sopaipillas-pasadas.jpg": {
+  "ancho": 960,
+  "alto": 720,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/sopaipillas-pasadas-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/sopaipillas-pasadas-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/sopaipillas-pasadas-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/sopaipillas-pasadas-800.webp"
+   }
+  ]
+ },
+ "img/sopaipillas.jpg": {
+  "ancho": 960,
+  "alto": 720,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/sopaipillas-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/sopaipillas-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/sopaipillas-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/sopaipillas-800.webp"
+   }
+  ]
+ },
+ "img/Tomatican.jpg": {
+  "ancho": 960,
+  "alto": 720,
+  "variantes": [
+   {
+    "w": 480,
+    "fmt": "avif",
+    "url": "/img/opt/tomatican-480.avif"
+   },
+   {
+    "w": 480,
+    "fmt": "webp",
+    "url": "/img/opt/tomatican-480.webp"
+   },
+   {
+    "w": 800,
+    "fmt": "avif",
+    "url": "/img/opt/tomatican-800.avif"
+   },
+   {
+    "w": 800,
+    "fmt": "webp",
+    "url": "/img/opt/tomatican-800.webp"
+   }
+  ]
+ }
+}

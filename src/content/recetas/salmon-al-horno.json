@@ -57,7 +57,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal y pimienta",
       "nota": "al gusto",

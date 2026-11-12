@@ -1,7 +1,13 @@
 {
   "titulo": "Confites de Coco",
   "categoria": "dulces",
-  "tags": ["confites de coco", "coco", "leche condensada", "dulce", "aperitivo"],
+  "tags": [
+    "confites de coco",
+    "coco",
+    "leche condensada",
+    "dulce",
+    "aperitivo"
+  ],
   "imagen": null,
   "tiempo": "20 min",
   "porciones": "6 a 8 personas",
@@ -35,16 +41,28 @@
       "nombre": "leche condensada",
       "nota": "397 g",
       "escalable": true
+    },
+    {
+      "cantidad": null,
+      "unidad": null,
+      "nombre": "aceite",
+      "nota": "para sofreír",
+      "escalable": false
     }
   ],
   "pasos_v2": [
     {
       "texto": "Mezclar la leche condensada con el coco rallado.",
-      "ingredientes": [1, 2]
+      "ingredientes": [
+        1,
+        2
+      ]
     },
     {
       "texto": "Formar bolitas y revolcarlas en coco.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Ponerlas unos minutos al horno suave (150 °C) para que se sequen, sin dorar."

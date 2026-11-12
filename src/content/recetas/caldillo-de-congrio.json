@@ -105,6 +105,13 @@
       "nombre": "ají de color, orégano, comino, sal, pimienta y cilantro",
       "nota": "a gusto",
       "escalable": true
+    },
+    {
+      "cantidad": null,
+      "unidad": null,
+      "nombre": "aceite",
+      "nota": "para sofreír",
+      "escalable": false
     }
   ],
   "pasos_v2": [

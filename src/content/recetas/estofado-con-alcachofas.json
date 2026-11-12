@@ -118,6 +118,13 @@
       "nombre": "sal",
       "nota": "a gusto",
       "escalable": false
+    },
+    {
+      "cantidad": null,
+      "unidad": null,
+      "nombre": "aceite",
+      "nota": "para sofreír",
+      "escalable": false
     }
   ],
   "pasos_v2": [

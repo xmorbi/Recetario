@@ -1,7 +1,14 @@
 {
   "titulo": "Pebre chileno",
   "categoria": "ensaladas",
-  "tags": ["salsa", "picoteo", "acompañamiento", "fresco", "tradicional", "ensalada"],
+  "tags": [
+    "salsa",
+    "picoteo",
+    "acompañamiento",
+    "fresco",
+    "tradicional",
+    "ensalada"
+  ],
   "imagen": "img/Pebre-chileno.jpg",
   "tiempo": "15 min",
   "porciones": "4 personas",
@@ -77,7 +84,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal y pimienta",
       "nota": "al gusto",
@@ -90,11 +97,21 @@
     },
     {
       "texto": "En un bol, mezcla el tomate, la cebolla, el ajo, el perejil, el cilantro y el ají.",
-      "ingredientes": [1, 2, 3, 4, 5, 6]
+      "ingredientes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
     },
     {
       "texto": "Condimenta con el aceite de oliva, la sal y la pimienta. Mezcla bien.",
-      "ingredientes": [7, 8]
+      "ingredientes": [
+        7,
+        8
+      ]
     },
     {
       "texto": "Deja reposar por al menos 15 minutos para que los sabores se integren.",

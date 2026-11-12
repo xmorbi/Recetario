@@ -83,6 +83,13 @@
       "nombre": "huevos",
       "nota": "para freír al servir",
       "escalable": true
+    },
+    {
+      "cantidad": null,
+      "unidad": null,
+      "nombre": "aceite",
+      "nota": "para sofreír",
+      "escalable": false
     }
   ],
   "pasos_v2": [

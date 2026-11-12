@@ -69,7 +69,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "pimienta negra",
       "nota": "al gusto",

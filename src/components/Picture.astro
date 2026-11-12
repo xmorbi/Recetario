@@ -1,0 +1,15 @@
+---
+// src/components/Picture.astro — uso: <Picture src={receta.imagen} alt={receta.titulo} eager />
+import manifest from '../data/imagenes.json';
+const { src, alt, eager = false, sizes = '(min-width: 900px) 800px, 100vw' } = Astro.props;
+const m = manifest[src];
+const set = (fmt) => m?.variantes.filter((v) => v.fmt === fmt).map((v) => `${v.url} ${v.w}w`).join(', ');
+---
+{m ? (
+  <picture>
+    <source type="image/avif" srcset={set('avif')} sizes={sizes} />
+    <source type="image/webp" srcset={set('webp')} sizes={sizes} />
+    <img src={'/' + src} alt={alt} width={m.ancho} height={m.alto}
+      loading={eager ? 'eager' : 'lazy'} fetchpriority={eager ? 'high' : undefined} decoding="async" />
+  </picture>
+) : <img src={'/' + src} alt={alt} loading={eager ? 'eager' : 'lazy'} decoding="async" />}

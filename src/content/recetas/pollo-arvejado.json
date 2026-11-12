@@ -85,6 +85,13 @@
       "nombre": "orégano, comino, laurel, sal, pimienta y perejil",
       "nota": "a gusto",
       "escalable": true
+    },
+    {
+      "cantidad": null,
+      "unidad": null,
+      "nombre": "aceite",
+      "nota": "para sofreír",
+      "escalable": false
     }
   ],
   "pasos_v2": [

@@ -1,7 +1,14 @@
 {
   "titulo": "Salchipapas",
   "categoria": "principales",
-  "tags": ["picoteo", "papas fritas", "salchicha", "fritura", "compartir", "plato principal"],
+  "tags": [
+    "picoteo",
+    "papas fritas",
+    "salchicha",
+    "fritura",
+    "compartir",
+    "plato principal"
+  ],
   "imagen": "img/salchipapas.jpg",
   "tiempo": "25 min",
   "porciones": "4 personas",
@@ -46,7 +53,7 @@
       "escalable": true
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "ketchup, mayonesa o mostaza",
       "nota": "al gusto",
@@ -56,23 +63,35 @@
   "pasos_v2": [
     {
       "texto": "Pela y corta las papas en bastones. Lava bien para quitar el almidón y sécalas.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "Fríe las papas en abundante aceite caliente hasta que estén doradas y crujientes. Escurre y sala al gusto.",
-      "ingredientes": [1, 3]
+      "ingredientes": [
+        1,
+        3
+      ]
     },
     {
       "texto": "Corta las salchichas en rodajas o en trozos y fríelas en una sartén hasta que estén doradas.",
-      "ingredientes": [2]
+      "ingredientes": [
+        2
+      ]
     },
     {
       "texto": "Mezcla las papas fritas con las salchichas o sirve las salchichas encima de las papas.",
-      "ingredientes": [1, 2]
+      "ingredientes": [
+        1,
+        2
+      ]
     },
     {
       "texto": "Acompaña con tus salsas favoritas.",
-      "ingredientes": [4]
+      "ingredientes": [
+        4
+      ]
     }
   ],
   "tiempo_v2": {

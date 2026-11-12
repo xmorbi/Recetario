@@ -1,7 +1,13 @@
 {
   "titulo": "Locos con mayonesa",
   "categoria": "principales",
-  "tags": ["marisco", "frio", "entrada", "mayonesa", "picoteo"],
+  "tags": [
+    "marisco",
+    "frio",
+    "entrada",
+    "mayonesa",
+    "picoteo"
+  ],
   "imagen": "img/Locos-con-mayonesa.jpg",
   "tiempo": "1 h 15 min",
   "porciones": "4 personas",
@@ -59,7 +65,7 @@
       "escalable": false
     },
     {
-      "cantidad": 1,
+      "cantidad": null,
       "unidad": null,
       "nombre": "sal y pimienta",
       "nota": "al gusto",
@@ -76,7 +82,10 @@
   "pasos_v2": [
     {
       "texto": "Si usas locos frescos, lávalos y cocínalos en agua hirviendo con sal por 40-50 minutos, hasta que estén tiernos. Deja enfriar en el agua de cocción.",
-      "ingredientes": [1, 6],
+      "ingredientes": [
+        1,
+        6
+      ],
       "timers": [
         {
           "minutos": 50,
@@ -86,19 +95,34 @@
     },
     {
       "texto": "Retira los locos, córtalos en rodajas o trozos y reserva.",
-      "ingredientes": [1]
+      "ingredientes": [
+        1
+      ]
     },
     {
       "texto": "En un bol, mezcla la mayonesa con la cebolla morada, el cilantro y el jugo de limón. Salpimenta al gusto.",
-      "ingredientes": [2, 3, 4, 5, 6]
+      "ingredientes": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
     },
     {
       "texto": "Sirve los locos sobre una cama de lechuga y cúbrelos con la mayonesa preparada.",
-      "ingredientes": [1, 2, 7]
+      "ingredientes": [
+        1,
+        2,
+        7
+      ]
     },
     {
       "texto": "También puedes mezclar los locos directamente con la salsa y servir como cóctel.",
-      "ingredientes": [1, 6]
+      "ingredientes": [
+        1,
+        6
+      ]
     }
   ],
   "tiempo_v2": {
