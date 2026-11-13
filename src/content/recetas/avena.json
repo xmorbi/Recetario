@@ -2,7 +2,7 @@
   "titulo": "Avena",
   "categoria": "bebidas",
   "tags": ["avena", "desayuno", "invierno", "caliente", "simple", "saludable"],
-  "imagen": null,
+  "imagen": "img/avena.jpg",
   "tiempo": "10 min",
   "porciones": "2 personas",
   "dificultad": "fácil",

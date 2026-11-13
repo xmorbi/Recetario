@@ -2,7 +2,7 @@
   "titulo": "Barros Jarpa",
   "categoria": "sandwiches",
   "tags": ["sándwich", "callejero", "barros jarpa", "jamón", "queso", "historia", "almuerzo"],
-  "imagen": null,
+  "imagen": "img/barros-jarpa.webp",
   "tiempo": "10 min",
   "porciones": "2 sándwiches",
   "dificultad": "fácil",
